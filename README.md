@@ -1,2 +1,2 @@
 # fushigi
-kjnlkuhohiooo
+kjnlkuhohioooおお
