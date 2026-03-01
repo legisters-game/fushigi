@@ -1,2 +1,2 @@
 # fushigi
-k
+kj
