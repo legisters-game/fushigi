@@ -2,8 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://hm4tebkys0nm" path="res://1/都市3d仮.glb" id="1_noarx"]
 [ext_resource type="PackedScene" uid="uid://bcvfyiunqmt1g" path="res://character_body_3d.tscn" id="2_a0tk4"]
-[ext_resource type="PackedScene" uid="uid://5q3lbg47s4eq" path="res://307/都市3d.glb" id="3_a0tk4"]
-[ext_resource type="PackedScene" uid="uid://cc6148e1sl2ls" path="res://new folder/都市3d.glb" id="4_r3fl7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_noarx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -48,6 +46,7 @@ environment = SubResource("Environment_r3fl7")
 
 [node name="都市3d仮" parent="." unique_id=966574779 instance=ExtResource("1_noarx")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -35.094, 0)
+visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="都市3d仮" unique_id=1210629666]
 
@@ -57,12 +56,5 @@ shape = SubResource("WorldBoundaryShape3D_r3fl7")
 
 [node name="CharacterBody3D" parent="." unique_id=2029851909 instance=ExtResource("2_a0tk4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.359913, -2.9849746, 1.4641917)
-
-[node name="都市3d" parent="." unique_id=1501536199 instance=ExtResource("3_a0tk4")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -35.094, 0)
-visible = false
-
-[node name="都市3d" parent="都市3d" unique_id=1666604076 instance=ExtResource("4_r3fl7")]
-visible = false
 
 [editable path="都市3d仮"]
