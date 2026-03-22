@@ -5,8 +5,7 @@
 [resource]
 resource_name = "minecraft_block-cyan_stained_glass"
 transparency = 4
-blend_mode = 1
 albedo_texture = ExtResource("1_eit48")
 metallic = 1.0
-roughness = 0.52
+roughness = 0.5
 refraction_scale = 0.33
