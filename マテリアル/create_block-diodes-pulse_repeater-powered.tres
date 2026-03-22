@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://s4001xdlcvou"]
+
+[ext_resource type="Texture2D" uid="uid://bbmcnugbl3psn" path="res://1/都市3d仮_powered.png" id="1_k68ah"]
+
+[resource]
+resource_name = "create_block-diodes-pulse_repeater-powered"
+cull_mode = 2
+albedo_texture = ExtResource("1_k68ah")

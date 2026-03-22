@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cu0hg3mafio1l"]
+
+[ext_resource type="Texture2D" uid="uid://deja2y844gmlv" path="res://1/都市3d仮_watermill.png" id="1_jx6f4"]
+
+[resource]
+resource_name = "immersiveengineering_block-wooden_device-watermill"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_jx6f4")

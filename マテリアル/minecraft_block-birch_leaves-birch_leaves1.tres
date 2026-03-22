@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cv0tpofst0k4d"]
+
+[ext_resource type="Texture2D" uid="uid://f65mg51u1u6b" path="res://1/都市3d仮_birch_leaves1.png" id="1_roft0"]
+
+[resource]
+resource_name = "minecraft_block-birch_leaves-birch_leaves1"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_roft0")

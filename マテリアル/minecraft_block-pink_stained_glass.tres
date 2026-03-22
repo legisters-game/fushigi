@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bycasqgekhdjp"]
+
+[ext_resource type="Texture2D" uid="uid://pimedl8u2ghe" path="res://1/都市3d仮_pink_stained_glass.png" id="1_of4fy"]
+
+[resource]
+resource_name = "minecraft_block-pink_stained_glass"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_of4fy")

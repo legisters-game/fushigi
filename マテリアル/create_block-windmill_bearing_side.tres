@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dhgnotd8o2t5e"]
+
+[ext_resource type="Texture2D" uid="uid://bwiv2bm2v1ojl" path="res://1/都市3d仮_windmill_bearing_side.png" id="1_3tubf"]
+
+[resource]
+resource_name = "create_block-windmill_bearing_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_3tubf")

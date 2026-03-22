@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbc08608snn6m"]
+
+[ext_resource type="Texture2D" uid="uid://bwcyddakhpow4" path="res://1/都市3d仮_bricks_546.png" id="1_woy1y"]
+
+[resource]
+resource_name = "create_block-palettes-dark_scoria-bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_woy1y")

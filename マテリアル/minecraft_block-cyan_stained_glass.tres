@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c6ugw1qiqeex6"]
+
+[ext_resource type="Texture2D" uid="uid://cvondfxslb3ba" path="res://1/都市3d仮_cyan_stained_glass.png" id="1_eit48"]
+
+[resource]
+resource_name = "minecraft_block-cyan_stained_glass"
+transparency = 4
+blend_mode = 1
+albedo_texture = ExtResource("1_eit48")
+metallic = 1.0
+roughness = 0.52
+refraction_scale = 0.33

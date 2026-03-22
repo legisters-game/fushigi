@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c151vst3tfsy1"]
+
+[ext_resource type="Texture2D" uid="uid://dehj7oj3b0pfl" path="res://1/都市3d仮_glowstone.png" id="1_60vel"]
+
+[resource]
+resource_name = "minecraft_block-glowstone"
+cull_mode = 2
+albedo_texture = ExtResource("1_60vel")

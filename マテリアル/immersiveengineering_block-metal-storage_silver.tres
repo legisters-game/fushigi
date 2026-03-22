@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://7cvturea0xgf"]
+
+[ext_resource type="Texture2D" uid="uid://ba6u48th5t5f6" path="res://1/都市3d仮_storage_silver.png" id="1_ebbrh"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-storage_silver"
+cull_mode = 2
+albedo_texture = ExtResource("1_ebbrh")

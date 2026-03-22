@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bc1e4rg2sdhnp"]
+
+[ext_resource type="Texture2D" uid="uid://dqsoqfssyhq4x" path="res://1/都市3d仮_depot_side.png" id="1_jw4xb"]
+
+[resource]
+resource_name = "create_block-depot_side"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_jw4xb")

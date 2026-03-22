@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcp5tb8g7ybda"]
+
+[ext_resource type="Texture2D" uid="uid://bne6u1gh2hwij" path="res://1/都市3d仮_cobweb.png" id="1_vyr0d"]
+
+[resource]
+resource_name = "minecraft_block-cobweb"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_vyr0d")

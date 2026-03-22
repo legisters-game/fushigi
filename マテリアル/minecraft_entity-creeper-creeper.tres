@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rb2587w2tm7w"]
+
+[ext_resource type="Texture2D" uid="uid://bdujqy6deihfx" path="res://1/都市3d仮_creeper.png" id="1_tf48b"]
+
+[resource]
+resource_name = "minecraft_entity-creeper-creeper"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_tf48b")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://eovdssldvauf"]
+
+[ext_resource type="Texture2D" uid="uid://b3my51151q0u3" path="res://1/都市3d仮_polished_granite.png" id="1_tc0po"]
+
+[resource]
+resource_name = "minecraft_block-polished_granite"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_tc0po")

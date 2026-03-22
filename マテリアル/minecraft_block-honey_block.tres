@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cknnck7brphe1"]
+
+[ext_resource type="Texture2D" uid="uid://buujiidghgqg7" path="res://1/都市3d仮_honey_block.png" id="1_ed1fn"]
+
+[resource]
+resource_name = "minecraft_block-honey_block"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ed1fn")

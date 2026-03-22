@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ck4tqkvlqi05c"]
+
+[ext_resource type="Texture2D" uid="uid://c4lx81dohrnbo" path="res://1/都市3d仮_birch.png" id="1_m7sih"]
+
+[resource]
+resource_name = "minecraft_entity-signs-birch"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_m7sih")

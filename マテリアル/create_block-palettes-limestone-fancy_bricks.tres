@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://co15m6wm3fjc"]
+
+[ext_resource type="Texture2D" uid="uid://qw1aueaaeyem" path="res://1/都市3d仮_fancy_bricks_782.png" id="1_lk23x"]
+
+[resource]
+resource_name = "create_block-palettes-limestone-fancy_bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_lk23x")

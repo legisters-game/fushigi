@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cg85iv73uqmr2"]
+
+[ext_resource type="Texture2D" uid="uid://bhund3o7d5e38" path="res://1/都市3d仮_smooth_stone_slab_side.png" id="1_63yt3"]
+
+[resource]
+resource_name = "minecraft_block-smooth_stone_slab_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_63yt3")

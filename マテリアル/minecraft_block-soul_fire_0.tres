@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3ssa6csniy6d"]
+
+[ext_resource type="Texture2D" uid="uid://bkoy2sgdthvya" path="res://1/都市3d仮_soul_fire_0.png" id="1_sl0lg"]
+
+[resource]
+resource_name = "minecraft_block-soul_fire_0"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_sl0lg")

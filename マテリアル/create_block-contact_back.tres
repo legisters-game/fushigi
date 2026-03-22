@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b4wkrqxc0tsww"]
+
+[ext_resource type="Texture2D" uid="uid://bh350ukhh5hit" path="res://1/都市3d仮_contact_back.png" id="1_xdlvs"]
+
+[resource]
+resource_name = "create_block-contact_back"
+cull_mode = 2
+albedo_texture = ExtResource("1_xdlvs")

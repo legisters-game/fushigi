@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcu7ixuu3fh86"]
+
+[ext_resource type="Texture2D" uid="uid://c0p658y7v5iye" path="res://1/都市3d仮_command_block_back.png" id="1_mkmej"]
+
+[resource]
+resource_name = "minecraft_block-command_block_back"
+cull_mode = 2
+albedo_texture = ExtResource("1_mkmej")

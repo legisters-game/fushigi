@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cvnhia57tjyr7"]
+
+[ext_resource type="Texture2D" uid="uid://cu1kj4341hoi2" path="res://1/都市3d仮_player_nanashi4447_5fb6e1ff4ebd68ec143ca9ee0728b81940dd132baa39e9ea8533c6010c53b9f1.png" id="1_cea21"]
+
+[resource]
+resource_name = "jmc2obj_head-player_nanashi4447_5fb6e1ff4ebd68ec143ca9ee0728b8"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_cea21")

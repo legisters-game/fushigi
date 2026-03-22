@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cxmrapq38fbaa"]
+
+[ext_resource type="Texture2D" uid="uid://gkccaah0hipv" path="res://1/都市3d仮_bulb.png" id="1_l467m"]
+
+[resource]
+resource_name = "extlights_block-bulb"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_l467m")

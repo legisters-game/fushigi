@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dpgxywjprkfhc"]
+
+[ext_resource type="Texture2D" uid="uid://buens06y0qjc4" path="res://1/都市3d仮_yellow_wool.png" id="1_pstqm"]
+
+[resource]
+resource_name = "minecraft_block-yellow_wool"
+cull_mode = 2
+albedo_texture = ExtResource("1_pstqm")

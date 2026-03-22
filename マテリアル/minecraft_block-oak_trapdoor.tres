@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7mle33m2momk"]
+
+[ext_resource type="Texture2D" uid="uid://dlh3lf0fa31se" path="res://1/都市3d仮_oak_trapdoor.png" id="1_d7onu"]
+
+[resource]
+resource_name = "minecraft_block-oak_trapdoor"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_d7onu")

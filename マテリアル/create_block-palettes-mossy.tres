@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://q1kh8bnqp3uc"]
+
+[ext_resource type="Texture2D" uid="uid://cicbsuag6qblx" path="res://1/都市3d仮_mossy.png" id="1_g2f3u"]
+
+[resource]
+resource_name = "create_block-palettes-mossy"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_g2f3u")

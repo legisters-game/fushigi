@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c8pgatcnmdqaa"]
+
+[ext_resource type="Texture2D" uid="uid://dg20e1hgwh0p3" path="res://1/都市3d仮_bricks.png" id="1_gd843"]
+[ext_resource type="Texture2D" uid="uid://du317uvi4egl6" path="res://1/bricks_a.png" id="2_p4bgq"]
+
+[resource]
+resource_name = "minecraft_block-bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_gd843")
+normal_texture = ExtResource("2_p4bgq")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 64
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("2_p4bgq")
+texture_filter = 2

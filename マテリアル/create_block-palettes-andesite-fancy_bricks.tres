@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://554dm2lwf1ip"]
+
+[ext_resource type="Texture2D" uid="uid://d3wv5psbhawgv" path="res://1/都市3d仮_fancy_bricks.png" id="1_x28ob"]
+
+[resource]
+resource_name = "create_block-palettes-andesite-fancy_bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_x28ob")

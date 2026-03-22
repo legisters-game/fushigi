@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c1h1p4qwgm6ni"]
+
+[ext_resource type="Texture2D" uid="uid://b7y58ar3vate0" path="res://1/都市3d仮_player_hazedayon_2f1bd8e3f59fe6ef9b14d2866ce6165e50ebf69509d00825fdf7e5ca657b9fdb.png" id="1_52j8x"]
+
+[resource]
+resource_name = "jmc2obj_head-player_hazedayon_2f1bd8e3f59fe6ef9b14d2866ce6165e5"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_52j8x")

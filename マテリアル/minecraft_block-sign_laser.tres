@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bad6rcgudoooq"]
+
+[ext_resource type="Texture2D" uid="uid://c6egsst3dc7gy" path="res://1/都市3d仮_sign_laser.png" id="1_g0no5"]
+
+[resource]
+resource_name = "minecraft_block-sign_laser"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_g0no5")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c0m8igtdbb6bh"]
+
+[ext_resource type="Texture2D" uid="uid://b8q7iy5p077nv" path="res://1/都市3d仮_light_gray_stained_glass.png" id="1_538xs"]
+
+[resource]
+resource_name = "minecraft_block-light_gray_stained_glass"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_538xs")

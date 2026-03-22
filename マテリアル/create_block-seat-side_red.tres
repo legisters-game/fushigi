@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cm0g5hlfonpln"]
+
+[ext_resource type="Texture2D" uid="uid://b2tg2je7nlp36" path="res://1/都市3d仮_side_red.png" id="1_chhvx"]
+
+[resource]
+resource_name = "create_block-seat-side_red"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_chhvx")

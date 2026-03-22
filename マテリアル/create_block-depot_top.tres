@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://caaxfsayyuspo"]
+
+[ext_resource type="Texture2D" uid="uid://ctq67lfyca88q" path="res://1/都市3d仮_depot_top.png" id="1_3auo4"]
+
+[resource]
+resource_name = "create_block-depot_top"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_3auo4")

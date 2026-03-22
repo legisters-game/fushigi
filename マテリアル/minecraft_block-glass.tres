@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cebe1a2hayv45"]
+
+[ext_resource type="Texture2D" uid="uid://54uslhklrh8r" path="res://1/都市3d仮_glass.png" id="1_5dbj0"]
+
+[resource]
+resource_name = "minecraft_block-glass"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_5dbj0")

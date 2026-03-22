@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://hb7wyr7g23sf"]
+
+[ext_resource type="Texture2D" uid="uid://cfxmy3ivemgx3" path="res://1/都市3d仮_sheetmetal_electrum.png" id="1_0c7vl"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-sheetmetal_electrum"
+cull_mode = 2
+albedo_texture = ExtResource("1_0c7vl")

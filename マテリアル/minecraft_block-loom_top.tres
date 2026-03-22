@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dad0iksbqrquk"]
+
+[ext_resource type="Texture2D" uid="uid://cjtbhq3ti8iol" path="res://1/都市3d仮_loom_top.png" id="1_43sl4"]
+
+[resource]
+resource_name = "minecraft_block-loom_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_43sl4")

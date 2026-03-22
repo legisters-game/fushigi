@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cxxyd1b7nicoj"]
+
+[ext_resource type="Texture2D" uid="uid://bhk6mwkyxmgpr" path="res://1/都市3d仮_azure_bluet_plant.png" id="1_vyemh"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-azure_bluet_plant"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_vyemh")

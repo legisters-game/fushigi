@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dxu26riropkb"]
+
+[ext_resource type="Texture2D" uid="uid://8nrvs4f8uiut" path="res://1/都市3d仮_storage_electrum.png" id="1_2vagn"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-storage_electrum"
+cull_mode = 2
+albedo_texture = ExtResource("1_2vagn")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvacol8tdevix"]
+
+[ext_resource type="Texture2D" uid="uid://d13aq0o2elrr7" path="res://1/都市3d仮_cart_assembler_side_off.png" id="1_t5haq"]
+
+[resource]
+resource_name = "create_block-cart_assembler_side_off"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_t5haq")

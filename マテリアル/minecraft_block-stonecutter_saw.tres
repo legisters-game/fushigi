@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://brbrr4je1n76n"]
+
+[ext_resource type="Texture2D" uid="uid://daqjxu3yp38t6" path="res://1/都市3d仮_stonecutter_saw.png" id="1_u5lvx"]
+
+[resource]
+resource_name = "minecraft_block-stonecutter_saw"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_u5lvx")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c1uepcs7lg08j"]
+
+[ext_resource type="Texture2D" uid="uid://co2672wvf33wa" path="res://1/都市3d仮_birch_trapdoor.png" id="1_1apyb"]
+
+[resource]
+resource_name = "minecraft_block-birch_trapdoor"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_1apyb")

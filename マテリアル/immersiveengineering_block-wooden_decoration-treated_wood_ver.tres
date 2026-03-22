@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c365hlh6pchcl"]
+
+[ext_resource type="Texture2D" uid="uid://dnbj408swx8rs" path="res://1/都市3d仮_treated_wood_vertical.png" id="1_o0k1f"]
+
+[resource]
+resource_name = "immersiveengineering_block-wooden_decoration-treated_wood_ver"
+cull_mode = 2
+albedo_texture = ExtResource("1_o0k1f")

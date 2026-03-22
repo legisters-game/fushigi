@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ccchfqrtng8cc"]
+
+[ext_resource type="Texture2D" uid="uid://4ckd0ld28boi" path="res://1/都市3d仮_spawner.png" id="1_4lavo"]
+
+[resource]
+resource_name = "minecraft_block-spawner"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_4lavo")

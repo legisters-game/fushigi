@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://6ttokyvngxgl"]
+
+[ext_resource type="Texture2D" uid="uid://dygd02copqwmi" path="res://1/都市3d仮_paved_top.png" id="1_yo5ls"]
+
+[resource]
+resource_name = "create_block-palettes-limestone-paved_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_yo5ls")

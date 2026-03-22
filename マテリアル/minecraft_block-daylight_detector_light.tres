@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://diuvbp6ao16tv"]
+
+[ext_resource type="Texture2D" uid="uid://cwc1bpir0pvo7" path="res://1/都市3d仮_daylight_detector_light.png" id="1_lotuc"]
+
+[resource]
+resource_name = "minecraft_block-daylight_detector_light"
+cull_mode = 2
+albedo_texture = ExtResource("1_lotuc")

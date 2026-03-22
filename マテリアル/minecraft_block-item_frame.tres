@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ddjyvk6753xdd"]
+
+[ext_resource type="Texture2D" uid="uid://cmhgtm3robafs" path="res://1/都市3d仮_item_frame.png" id="1_puwg0"]
+
+[resource]
+resource_name = "minecraft_block-item_frame"
+cull_mode = 2
+albedo_texture = ExtResource("1_puwg0")

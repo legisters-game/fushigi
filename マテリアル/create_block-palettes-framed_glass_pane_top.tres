@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cgxdduf7blshv"]
+
+[ext_resource type="Texture2D" uid="uid://25bjjxshgg6n" path="res://1/都市3d仮_framed_glass_pane_top.png" id="1_go0cw"]
+
+[resource]
+resource_name = "create_block-palettes-framed_glass_pane_top"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_go0cw")

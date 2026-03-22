@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dutj8d7mj6nwl"]
+
+[ext_resource type="Texture2D" uid="uid://cgvfc1gl1sprr" path="res://1/都市3d仮_gilded_blackstone.png" id="1_u2mbt"]
+
+[resource]
+resource_name = "minecraft_block-gilded_blackstone"
+cull_mode = 2
+albedo_texture = ExtResource("1_u2mbt")

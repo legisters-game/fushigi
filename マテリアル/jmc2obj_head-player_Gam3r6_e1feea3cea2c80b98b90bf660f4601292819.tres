@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ciw7chli73rbb"]
+
+[ext_resource type="Texture2D" uid="uid://dhgqhue80poay" path="res://1/都市3d仮_player_Gam3r6_e1feea3cea2c80b98b90bf660f460129281910e380a12cfd3f14fa79f8e1c6db.png" id="1_n3vll"]
+
+[resource]
+resource_name = "jmc2obj_head-player_Gam3r6_e1feea3cea2c80b98b90bf660f4601292819"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_n3vll")

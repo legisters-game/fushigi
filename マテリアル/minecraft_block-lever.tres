@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvsjn5tjt68vx"]
+
+[ext_resource type="Texture2D" uid="uid://g63a8176hy33" path="res://1/都市3d仮_lever_496.png" id="1_o5fab"]
+
+[resource]
+resource_name = "minecraft_block-lever"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_o5fab")

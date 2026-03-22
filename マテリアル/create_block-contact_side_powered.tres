@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://6tb3hlj6wk57"]
+
+[ext_resource type="Texture2D" uid="uid://cvrgqtrfp7mvf" path="res://1/都市3d仮_contact_side_powered.png" id="1_5r1j3"]
+
+[resource]
+resource_name = "create_block-contact_side_powered"
+cull_mode = 2
+albedo_texture = ExtResource("1_5r1j3")

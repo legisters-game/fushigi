@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cebv3gj4lusee"]
+
+[ext_resource type="Texture2D" uid="uid://c3xpsparigi64" path="res://1/都市3d仮_birch_log_top.png" id="1_pwwdr"]
+
+[resource]
+resource_name = "minecraft_block-birch_log_top"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_pwwdr")

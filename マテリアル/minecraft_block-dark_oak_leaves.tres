@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bpgb6obc5do65"]
+
+[ext_resource type="Texture2D" uid="uid://cj06nt5j3cb6x" path="res://1/都市3d仮_dark_oak_leaves.png" id="1_n1via"]
+
+[resource]
+resource_name = "minecraft_block-dark_oak_leaves"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_n1via")

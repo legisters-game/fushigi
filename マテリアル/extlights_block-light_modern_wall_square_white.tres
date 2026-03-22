@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cxxpm31lblluo"]
+
+[ext_resource type="Texture2D" uid="uid://cuxxju5c5hdgq" path="res://1/都市3d仮_light_modern_wall_square_white.png" id="1_5xigr"]
+
+[resource]
+resource_name = "extlights_block-light_modern_wall_square_white"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_5xigr")

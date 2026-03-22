@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b3b4tx678ccw3"]
+
+[ext_resource type="Texture2D" uid="uid://ba2if5ofx1now" path="res://1/都市3d仮_light_lantern_square.png" id="1_2amrb"]
+
+[resource]
+resource_name = "extlights_block-light_lantern_square"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_2amrb")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://7cue66i2rts0"]
+
+[ext_resource type="Texture2D" uid="uid://cguuou4q110w2" path="res://1/都市3d仮_end_stone_bricks.png" id="1_arwl4"]
+
+[resource]
+resource_name = "minecraft_block-end_stone_bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_arwl4")

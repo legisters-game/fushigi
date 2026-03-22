@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://blr6l04qdkoja"]
+
+[ext_resource type="Texture2D" uid="uid://bth4564aq4mxb" path="res://1/都市3d仮_aluminum_wallmount.png" id="1_vqj6u"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_decoration-aluminum_wallmo"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_vqj6u")

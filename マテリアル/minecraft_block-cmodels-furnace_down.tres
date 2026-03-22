@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bw1yn4rboso32"]
+
+[ext_resource type="Texture2D" uid="uid://bq6oxgstl7cjc" path="res://1/都市3d仮_furnace_down.png" id="1_m0ayg"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-furnace_down"
+cull_mode = 2
+albedo_texture = ExtResource("1_m0ayg")

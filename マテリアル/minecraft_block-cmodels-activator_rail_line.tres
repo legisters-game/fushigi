@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://768h2n3yxyaw"]
+
+[ext_resource type="Texture2D" uid="uid://43hcp4rka7mk" path="res://1/都市3d仮_activator_rail_line.png" id="1_h7atx"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-activator_rail_line"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_h7atx")

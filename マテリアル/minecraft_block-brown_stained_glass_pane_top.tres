@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://csdooixh46yin"]
+
+[ext_resource type="Texture2D" uid="uid://cahf2qtk3i5yf" path="res://1/都市3d仮_brown_stained_glass_pane_top.png" id="1_p0wnn"]
+
+[resource]
+resource_name = "minecraft_block-brown_stained_glass_pane_top"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_p0wnn")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bjt3468ead36g"]
+
+[ext_resource type="Texture2D" uid="uid://bp2vl8wtc5pyg" path="res://1/都市3d仮_dragon.png" id="1_acyh5"]
+
+[resource]
+resource_name = "minecraft_entity-enderdragon-dragon"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_acyh5")

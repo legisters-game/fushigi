@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ntofx38gh0fh"]
+
+[ext_resource type="Texture2D" uid="uid://ju4guj7h3ri" path="res://1/都市3d仮_grass_path_side.png" id="1_drlce"]
+
+[resource]
+resource_name = "minecraft_block-grass_path_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_drlce")

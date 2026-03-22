@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvxgnmq2k5ojv"]
+
+[ext_resource type="Texture2D" uid="uid://chh8u0c12vwjy" path="res://1/都市3d仮_blast_furnace_side2.png" id="1_48j72"]
+
+[resource]
+resource_name = "minecraft_block-blast_furnace_side2"
+cull_mode = 2
+albedo_texture = ExtResource("1_48j72")

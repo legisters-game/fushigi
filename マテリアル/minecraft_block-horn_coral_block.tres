@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://crft3r2eo5dun"]
+
+[ext_resource type="Texture2D" uid="uid://c283hm158l1a7" path="res://1/都市3d仮_horn_coral_block.png" id="1_bslk0"]
+
+[resource]
+resource_name = "minecraft_block-horn_coral_block"
+cull_mode = 2
+albedo_texture = ExtResource("1_bslk0")

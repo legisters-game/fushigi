@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://y2tbu31vr3tn"]
+
+[ext_resource type="Texture2D" uid="uid://cyatayb5hfjob" path="res://1/都市3d仮_gray.png" id="1_wcbfg"]
+
+[resource]
+resource_name = "minecraft_entity-bed-gray"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_wcbfg")

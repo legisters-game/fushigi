@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dt5qg6jdrlhlb"]
+
+[ext_resource type="Texture2D" uid="uid://mht7c2hcykon" path="res://1/都市3d仮_pillar.png" id="1_ujxub"]
+
+[resource]
+resource_name = "create_block-palettes-dolomite-pillar"
+cull_mode = 2
+albedo_texture = ExtResource("1_ujxub")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0k3bp4o7hoet"]
+
+[ext_resource type="Texture2D" uid="uid://bda46lrbnchuu" path="res://1/都市3d仮_gravel.png" id="1_yhvbk"]
+
+[resource]
+resource_name = "minecraft_block-gravel"
+cull_mode = 2
+albedo_texture = ExtResource("1_yhvbk")

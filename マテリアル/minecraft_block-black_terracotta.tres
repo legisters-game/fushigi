@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b55aib078qgkr"]
+
+[ext_resource type="Texture2D" uid="uid://cwqod54hwgvs" path="res://1/都市3d仮_black_terracotta.png" id="1_5jppk"]
+
+[resource]
+resource_name = "minecraft_block-black_terracotta"
+cull_mode = 2
+albedo_texture = ExtResource("1_5jppk")

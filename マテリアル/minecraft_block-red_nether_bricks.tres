@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cad61ej3p1th6"]
+
+[ext_resource type="Texture2D" uid="uid://bicarefwwqiit" path="res://1/都市3d仮_red_nether_bricks.png" id="1_a1qmw"]
+
+[resource]
+resource_name = "minecraft_block-red_nether_bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_a1qmw")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://e0loua4jds3f"]
+
+[ext_resource type="Texture2D" uid="uid://cc5jq3bwpakon" path="res://1/都市3d仮_jukebox_top.png" id="1_lv0bi"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-jukebox_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_lv0bi")

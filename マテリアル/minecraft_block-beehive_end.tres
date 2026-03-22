@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bddfnkrimpioe"]
+
+[ext_resource type="Texture2D" uid="uid://bnx3k411v1rpm" path="res://1/都市3d仮_beehive_end.png" id="1_hb1b6"]
+
+[resource]
+resource_name = "minecraft_block-beehive_end"
+cull_mode = 2
+albedo_texture = ExtResource("1_hb1b6")

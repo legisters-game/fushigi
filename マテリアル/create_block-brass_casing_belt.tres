@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dw1svkqhh4lhn"]
+
+[ext_resource type="Texture2D" uid="uid://buivscaw08a5m" path="res://1/都市3d仮_brass_casing_belt.png" id="1_siuww"]
+
+[resource]
+resource_name = "create_block-brass_casing_belt"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_siuww")

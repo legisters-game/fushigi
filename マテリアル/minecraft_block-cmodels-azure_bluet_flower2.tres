@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbl5sm28vlbtm"]
+
+[ext_resource type="Texture2D" uid="uid://dcf57wxkbwv4f" path="res://1/都市3d仮_azure_bluet_flower2.png" id="1_op5dc"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-azure_bluet_flower2"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_op5dc")

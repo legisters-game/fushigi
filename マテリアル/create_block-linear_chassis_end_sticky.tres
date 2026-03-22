@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://w2wvcpomypl1"]
+
+[ext_resource type="Texture2D" uid="uid://cq1ddbyhro7ln" path="res://1/都市3d仮_linear_chassis_end_sticky.png" id="1_mesm5"]
+
+[resource]
+resource_name = "create_block-linear_chassis_end_sticky"
+cull_mode = 2
+albedo_texture = ExtResource("1_mesm5")

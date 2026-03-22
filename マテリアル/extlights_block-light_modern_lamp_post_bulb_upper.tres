@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://sr7pk00gp2do"]
+
+[ext_resource type="Texture2D" uid="uid://d3w7oy2yws28i" path="res://1/都市3d仮_light_modern_lamp_post_bulb_upper.png" id="1_ptyhp"]
+
+[resource]
+resource_name = "extlights_block-light_modern_lamp_post_bulb_upper"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ptyhp")

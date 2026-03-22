@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmjjybbodp3vp"]
+
+[ext_resource type="Texture2D" uid="uid://b4o7pfu607o6o" path="res://1/都市3d仮_quartz_pillar.png" id="1_3mcl1"]
+
+[resource]
+resource_name = "minecraft_block-quartz_pillar"
+cull_mode = 2
+albedo_texture = ExtResource("1_3mcl1")

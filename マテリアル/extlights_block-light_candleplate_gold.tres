@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3fjv2ssn5v2r"]
+
+[ext_resource type="Texture2D" uid="uid://dh56g3yxw3wg8" path="res://1/都市3d仮_light_candleplate_gold.png" id="1_1icmt"]
+
+[resource]
+resource_name = "extlights_block-light_candleplate_gold"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_1icmt")

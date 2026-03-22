@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bmdfiu3ae7mnl"]
+
+[ext_resource type="Texture2D" uid="uid://bado02rl33u28" path="res://1/都市3d仮_gearbox_top.png" id="1_umfux"]
+
+[resource]
+resource_name = "create_block-gearbox_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_umfux")

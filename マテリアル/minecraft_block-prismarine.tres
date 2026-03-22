@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dm8bawdbgqxxh"]
+
+[ext_resource type="Texture2D" uid="uid://4lwv768hqv20" path="res://1/都市3d仮_prismarine.png" id="1_jxweb"]
+
+[resource]
+resource_name = "minecraft_block-prismarine"
+cull_mode = 2
+albedo_texture = ExtResource("1_jxweb")

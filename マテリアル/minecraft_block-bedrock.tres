@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cv38uxns3eby6"]
+
+[ext_resource type="Texture2D" uid="uid://cfifwtnqdfi3e" path="res://1/都市3d仮_bedrock.png" id="1_py1uw"]
+
+[resource]
+resource_name = "minecraft_block-bedrock"
+cull_mode = 2
+albedo_texture = ExtResource("1_py1uw")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ba6mlctnl3r55"]
+
+[ext_resource type="Texture2D" uid="uid://ckvgfnchung3k" path="res://1/都市3d仮_gantry_shaft_powered.png" id="1_8kk3h"]
+
+[resource]
+resource_name = "create_block-gantry_shaft_powered"
+cull_mode = 2
+albedo_texture = ExtResource("1_8kk3h")

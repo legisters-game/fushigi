@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b30fnd2mb2hhy"]
+
+[ext_resource type="Texture2D" uid="uid://fdphyeelqwvr" path="res://1/都市3d仮_magenta_concrete_powder.png" id="1_677qy"]
+
+[resource]
+resource_name = "minecraft_block-magenta_concrete_powder"
+cull_mode = 2
+albedo_texture = ExtResource("1_677qy")

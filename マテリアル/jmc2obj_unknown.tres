@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cs8lbgfi62jxt"]
+
+[ext_resource type="Texture2D" uid="uid://gv6lydl1utiy" path="res://1/都市3d仮_unknown.png" id="1_lb675"]
+
+[resource]
+resource_name = "jmc2obj_unknown"
+cull_mode = 2
+albedo_texture = ExtResource("1_lb675")

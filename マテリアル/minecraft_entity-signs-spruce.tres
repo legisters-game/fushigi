@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bpubd0y1apelx"]
+
+[ext_resource type="Texture2D" uid="uid://cxycqksvx2ud5" path="res://1/都市3d仮_spruce.png" id="1_06nwj"]
+
+[resource]
+resource_name = "minecraft_entity-signs-spruce"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_06nwj")

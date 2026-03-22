@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvt8dgpftlu1e"]
+
+[ext_resource type="Texture2D" uid="uid://bw3yar73vcn6q" path="res://1/都市3d仮_light_candle_arm_two_iron.png" id="1_pg1jy"]
+
+[resource]
+resource_name = "extlights_block-light_candle_arm_two_iron"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_pg1jy")

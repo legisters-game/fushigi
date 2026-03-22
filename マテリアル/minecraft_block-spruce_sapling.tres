@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bsna33j7h6o1b"]
+
+[ext_resource type="Texture2D" uid="uid://c287ai8u8785d" path="res://1/都市3d仮_spruce_sapling.png" id="1_qugpe"]
+
+[resource]
+resource_name = "minecraft_block-spruce_sapling"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_qugpe")

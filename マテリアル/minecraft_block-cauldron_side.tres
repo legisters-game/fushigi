@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ckfxakaousuao"]
+
+[ext_resource type="Texture2D" uid="uid://m3gp7bd0sokg" path="res://1/都市3d仮_cauldron_side.png" id="1_pp80a"]
+
+[resource]
+resource_name = "minecraft_block-cauldron_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_pp80a")

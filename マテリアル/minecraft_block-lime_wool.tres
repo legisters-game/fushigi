@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dljepve15k76x"]
+
+[ext_resource type="Texture2D" uid="uid://dydl2avpigblm" path="res://1/都市3d仮_lime_wool.png" id="1_7iuwe"]
+
+[resource]
+resource_name = "minecraft_block-lime_wool"
+cull_mode = 2
+albedo_texture = ExtResource("1_7iuwe")

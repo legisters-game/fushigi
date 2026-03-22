@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bn8sdrmh545ml"]
+
+[ext_resource type="Texture2D" uid="uid://eg0jkf8016ph" path="res://1/都市3d仮_dark_oak_log.png" id="1_we4y8"]
+
+[resource]
+resource_name = "minecraft_block-dark_oak_log"
+cull_mode = 2
+albedo_texture = ExtResource("1_we4y8")

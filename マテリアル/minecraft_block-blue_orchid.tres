@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d2but188v81tr"]
+
+[ext_resource type="Texture2D" uid="uid://d26lghypw1sae" path="res://1/都市3d仮_blue_orchid.png" id="1_5tsjt"]
+
+[resource]
+resource_name = "minecraft_block-blue_orchid"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_5tsjt")

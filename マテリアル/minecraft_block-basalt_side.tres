@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://csthsj6u1kgsg"]
+
+[ext_resource type="Texture2D" uid="uid://bd228ij2nucn7" path="res://1/都市3d仮_basalt_side.png" id="1_tvmt3"]
+
+[resource]
+resource_name = "minecraft_block-basalt_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_tvmt3")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://t11wsnkdgpfd"]
+
+[ext_resource type="Texture2D" uid="uid://dw5mdqahug8qt" path="res://1/都市3d仮_lily_flower.png" id="1_w1bir"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-lily_flower"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_w1bir")

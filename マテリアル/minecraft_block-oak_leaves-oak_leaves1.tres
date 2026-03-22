@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://5gosfbeeyx4t"]
+
+[ext_resource type="Texture2D" uid="uid://cp1do6am77her" path="res://1/都市3d仮_oak_leaves1.png" id="1_q0jft"]
+
+[resource]
+resource_name = "minecraft_block-oak_leaves-oak_leaves1"
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_q0jft")
+texture_filter = 2

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dpout2fh510cq"]
+
+[ext_resource type="Texture2D" uid="uid://ddeafe3c0pdiv" path="res://1/都市3d仮_mixer_base_side.png" id="1_k0178"]
+
+[resource]
+resource_name = "create_block-mixer_base_side"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_k0178")

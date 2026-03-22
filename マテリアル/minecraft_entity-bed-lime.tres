@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b5kw5mm1t3hln"]
+
+[ext_resource type="Texture2D" uid="uid://dwwwr6xpeegsu" path="res://1/都市3d仮_lime.png" id="1_gfsek"]
+
+[resource]
+resource_name = "minecraft_entity-bed-lime"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_gfsek")

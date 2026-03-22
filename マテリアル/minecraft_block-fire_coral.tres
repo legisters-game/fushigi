@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dl4q2eyed1o8g"]
+
+[ext_resource type="Texture2D" uid="uid://qlr1iga2n7cq" path="res://1/都市3d仮_fire_coral.png" id="1_43e6x"]
+
+[resource]
+resource_name = "minecraft_block-fire_coral"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_43e6x")

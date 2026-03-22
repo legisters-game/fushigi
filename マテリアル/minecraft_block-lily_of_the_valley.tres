@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c1d5xkv73qcwy"]
+
+[ext_resource type="Texture2D" uid="uid://ds4jrensy318f" path="res://1/都市3d仮_lily_of_the_valley.png" id="1_731us"]
+
+[resource]
+resource_name = "minecraft_block-lily_of_the_valley"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_731us")

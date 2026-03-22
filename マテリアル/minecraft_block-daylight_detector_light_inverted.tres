@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://y4r5p0awfgyh"]
+
+[ext_resource type="Texture2D" uid="uid://dd8fbociy8j6x" path="res://1/都市3d仮_daylight_detector_light_inverted.png" id="1_bwb00"]
+
+[resource]
+resource_name = "minecraft_block-daylight_detector_light_inverted"
+cull_mode = 2
+albedo_texture = ExtResource("1_bwb00")

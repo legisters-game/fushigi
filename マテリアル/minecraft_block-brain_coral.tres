@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbsi4l8mlg8e6"]
+
+[ext_resource type="Texture2D" uid="uid://w0l2x0emj2ar" path="res://1/都市3d仮_brain_coral.png" id="1_2iclh"]
+
+[resource]
+resource_name = "minecraft_block-brain_coral"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_2iclh")

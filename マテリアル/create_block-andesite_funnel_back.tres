@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://h1ees4knum6r"]
+
+[ext_resource type="Texture2D" uid="uid://batncvsu8tr6y" path="res://1/都市3d仮_andesite_funnel_back.png" id="1_rurqt"]
+
+[resource]
+resource_name = "create_block-andesite_funnel_back"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_rurqt")

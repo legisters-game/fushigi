@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jj3as8dqff22"]
+
+[ext_resource type="Texture2D" uid="uid://yutoyndjya8o" path="res://1/都市3d仮_lava_still.png" id="1_psytw"]
+
+[resource]
+resource_name = "minecraft_block-lava_still"
+cull_mode = 2
+albedo_texture = ExtResource("1_psytw")

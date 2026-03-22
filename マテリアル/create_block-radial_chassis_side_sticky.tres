@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://5rxab0miushy"]
+
+[ext_resource type="Texture2D" uid="uid://bus23fadlhfjb" path="res://1/都市3d仮_radial_chassis_side_sticky.png" id="1_ued5f"]
+
+[resource]
+resource_name = "create_block-radial_chassis_side_sticky"
+cull_mode = 2
+albedo_texture = ExtResource("1_ued5f")

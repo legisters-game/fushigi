@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dnpy3xa4k6unm"]
+
+[ext_resource type="Texture2D" uid="uid://mvhtd7hi3c1m" path="res://1/都市3d仮_packed_ice.png" id="1_w4gtv"]
+
+[resource]
+resource_name = "minecraft_block-packed_ice"
+cull_mode = 2
+albedo_texture = ExtResource("1_w4gtv")

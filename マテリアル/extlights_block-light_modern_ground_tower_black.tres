@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cx8fc5ulqdeeo"]
+
+[ext_resource type="Texture2D" uid="uid://bc775bcvq07o7" path="res://1/都市3d仮_light_modern_ground_tower_black.png" id="1_m6cnd"]
+
+[resource]
+resource_name = "extlights_block-light_modern_ground_tower_black"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_m6cnd")

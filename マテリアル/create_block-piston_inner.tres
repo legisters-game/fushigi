@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cvsvgfd3ilxed"]
+
+[ext_resource type="Texture2D" uid="uid://vutyl61alqor" path="res://1/都市3d仮_piston_inner.png" id="1_bug5a"]
+
+[resource]
+resource_name = "create_block-piston_inner"
+cull_mode = 2
+albedo_texture = ExtResource("1_bug5a")

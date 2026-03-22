@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://r7y6n42es2gp"]
+
+[ext_resource type="Texture2D" uid="uid://dgxqla5tg8e3w" path="res://1/都市3d仮_dynamo_front.png" id="1_oqh08"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_device-dynamo_front"
+cull_mode = 2
+albedo_texture = ExtResource("1_oqh08")

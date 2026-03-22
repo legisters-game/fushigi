@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://s2j3u78kdh1c"]
+
+[ext_resource type="Texture2D" uid="uid://cka2e8og7fhcy" path="res://1/都市3d仮_acacia_log.png" id="1_2ym1k"]
+
+[resource]
+resource_name = "minecraft_block-acacia_log"
+cull_mode = 2
+albedo_texture = ExtResource("1_2ym1k")

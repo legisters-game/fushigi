@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6pf0xo4hms0x"]
+
+[ext_resource type="Texture2D" uid="uid://dehyu3ik6re1y" path="res://1/都市3d仮_chiseled_sandstone.png" id="1_bwhuv"]
+
+[resource]
+resource_name = "minecraft_block-chiseled_sandstone"
+cull_mode = 2
+albedo_texture = ExtResource("1_bwhuv")

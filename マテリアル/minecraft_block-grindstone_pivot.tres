@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://eogmga3einu"]
+
+[ext_resource type="Texture2D" uid="uid://cp5f5y2flmbul" path="res://1/都市3d仮_grindstone_pivot.png" id="1_tdqt2"]
+
+[resource]
+resource_name = "minecraft_block-grindstone_pivot"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_tdqt2")

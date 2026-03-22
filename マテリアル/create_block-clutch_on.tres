@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mlmxfsm522v6"]
+
+[ext_resource type="Texture2D" uid="uid://d2ymfhek7g5td" path="res://1/都市3d仮_clutch_on.png" id="1_y6f7l"]
+
+[resource]
+resource_name = "create_block-clutch_on"
+cull_mode = 2
+albedo_texture = ExtResource("1_y6f7l")

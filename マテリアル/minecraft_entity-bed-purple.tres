@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://btt3aadr5p66o"]
+
+[ext_resource type="Texture2D" uid="uid://cdi3mtduv4bv8" path="res://1/都市3d仮_purple.png" id="1_i6wru"]
+
+[resource]
+resource_name = "minecraft_entity-bed-purple"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_i6wru")

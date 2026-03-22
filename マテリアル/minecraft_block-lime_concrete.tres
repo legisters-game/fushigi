@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bo5a1o7qraqk4"]
+
+[ext_resource type="Texture2D" uid="uid://dfu5heyvvvnbj" path="res://1/都市3d仮_lime_concrete.png" id="1_tfxnv"]
+
+[resource]
+resource_name = "minecraft_block-lime_concrete"
+cull_mode = 2
+albedo_texture = ExtResource("1_tfxnv")

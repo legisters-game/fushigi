@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://csta446wb5181"]
+
+[ext_resource type="Texture2D" uid="uid://slr4pqyj7m6w" path="res://1/都市3d仮_cactus_side.png" id="1_wgivf"]
+
+[resource]
+resource_name = "minecraft_block-cactus_side"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_wgivf")

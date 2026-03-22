@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://btamxx60c8di4"]
+
+[ext_resource type="Texture2D" uid="uid://d2358p2jj6nml" path="res://1/都市3d仮_ladder.png" id="1_yuiv0"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-ladder"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_yuiv0")

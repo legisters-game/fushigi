@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c0x7hxlqdpcxw"]
+
+[ext_resource type="Texture2D" uid="uid://bao0pel8ma5f4" path="res://1/都市3d仮_axis.png" id="1_x6o8e"]
+
+[resource]
+resource_name = "create_block-axis"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_x6o8e")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bc5aoyeukcaa8"]
+
+[ext_resource type="Texture2D" uid="uid://cak32mqp6g5mf" path="res://1/都市3d仮_fire_0.png" id="1_j4ppq"]
+
+[resource]
+resource_name = "minecraft_block-fire_0"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_j4ppq")

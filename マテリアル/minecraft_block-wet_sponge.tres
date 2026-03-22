@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dkbvl208semcx"]
+
+[ext_resource type="Texture2D" uid="uid://bml5y7xa8ktav" path="res://1/都市3d仮_wet_sponge.png" id="1_xgqye"]
+
+[resource]
+resource_name = "minecraft_block-wet_sponge"
+cull_mode = 2
+albedo_texture = ExtResource("1_xgqye")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b8kjdvkygb21d"]
+
+[ext_resource type="Texture2D" uid="uid://b65d7qk3ts41t" path="res://1/都市3d仮_observer_front.png" id="1_qutre"]
+
+[resource]
+resource_name = "minecraft_block-observer_front"
+cull_mode = 2
+albedo_texture = ExtResource("1_qutre")

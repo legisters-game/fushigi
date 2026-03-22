@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dac3o2ckkhko8"]
+
+[ext_resource type="Texture2D" uid="uid://drfune617a4uf" path="res://1/都市3d仮_polished_diorite.png" id="1_be2lo"]
+
+[resource]
+resource_name = "minecraft_block-polished_diorite"
+cull_mode = 2
+albedo_texture = ExtResource("1_be2lo")

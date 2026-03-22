@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbibw7tjviws"]
+
+[ext_resource type="Texture2D" uid="uid://b2wvw8wq72p5a" path="res://1/都市3d仮_campfire_log.png" id="1_jpkn6"]
+
+[resource]
+resource_name = "minecraft_block-campfire_log"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_jpkn6")

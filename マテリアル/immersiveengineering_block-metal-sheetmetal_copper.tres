@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dij2rbqe4pe28"]
+
+[ext_resource type="Texture2D" uid="uid://dy3a1s8ni2wtj" path="res://1/都市3d仮_sheetmetal_copper.png" id="1_o1wfs"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-sheetmetal_copper"
+cull_mode = 2
+albedo_texture = ExtResource("1_o1wfs")

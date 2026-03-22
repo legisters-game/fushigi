@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dyujslp8yhoj3"]
+
+[ext_resource type="Texture2D" uid="uid://c0oyevi8pg7oh" path="res://1/都市3d仮_sequenced_gearshift.png" id="1_8sy4h"]
+
+[resource]
+resource_name = "create_block-sequenced_gearshift"
+cull_mode = 2
+albedo_texture = ExtResource("1_8sy4h")

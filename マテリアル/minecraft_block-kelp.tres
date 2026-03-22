@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d1hacnpmrlk1e"]
+
+[ext_resource type="Texture2D" uid="uid://c6i3iv7kji2h3" path="res://1/都市3d仮_kelp.png" id="1_7gh80"]
+
+[resource]
+resource_name = "minecraft_block-kelp"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_7gh80")

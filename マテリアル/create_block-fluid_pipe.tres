@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvaw32n50h10g"]
+
+[ext_resource type="Texture2D" uid="uid://dpw28vthkbu88" path="res://1/都市3d仮_fluid_pipe.png" id="1_4viem"]
+
+[resource]
+resource_name = "create_block-fluid_pipe"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_4viem")

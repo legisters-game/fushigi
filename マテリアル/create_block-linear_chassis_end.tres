@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jv37mxijy3e8"]
+
+[ext_resource type="Texture2D" uid="uid://b3tttllexd7dj" path="res://1/都市3d仮_linear_chassis_end.png" id="1_s8da6"]
+
+[resource]
+resource_name = "create_block-linear_chassis_end"
+cull_mode = 2
+albedo_texture = ExtResource("1_s8da6")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://byus2qnpppob2"]
+
+[ext_resource type="Texture2D" uid="uid://bt2rb0jdiwmi5" path="res://1/都市3d仮_bell_frame.png" id="1_pc16d"]
+
+[resource]
+resource_name = "create_block-bell_frame"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_pc16d")

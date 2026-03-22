@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://031wwwjb8ml8"]
+
+[ext_resource type="Texture2D" uid="uid://dmdli557w8fmj" path="res://1/都市3d仮_smooth_dark_log_top.png" id="1_fcpdd"]
+
+[resource]
+resource_name = "create_block-smooth_dark_log_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_fcpdd")

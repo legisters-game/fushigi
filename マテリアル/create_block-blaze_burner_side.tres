@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dkfgoy2lgyana"]
+
+[ext_resource type="Texture2D" uid="uid://cnbrneymt6cho" path="res://1/都市3d仮_blaze_burner_side.png" id="1_rnski"]
+
+[resource]
+resource_name = "create_block-blaze_burner_side"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_rnski")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ce820bi0p8ikw"]
+
+[ext_resource type="Texture2D" uid="uid://dabcfsfg8hi33" path="res://1/都市3d仮_beetroots_stage0.png" id="1_56806"]
+
+[resource]
+resource_name = "minecraft_block-beetroots_stage0"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_56806")

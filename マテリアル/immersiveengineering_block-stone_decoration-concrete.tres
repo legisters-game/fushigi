@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dd366gdv0cker"]
+
+[ext_resource type="Texture2D" uid="uid://d4ilcd8ipe5en" path="res://1/都市3d仮_concrete.png" id="1_rrxl1"]
+
+[resource]
+resource_name = "immersiveengineering_block-stone_decoration-concrete"
+cull_mode = 2
+albedo_texture = ExtResource("1_rrxl1")

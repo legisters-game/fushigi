@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bn3ype4fppedx"]
+
+[ext_resource type="Texture2D" uid="uid://3tichajo6nbv" path="res://1/都市3d仮_nether_wart_block.png" id="1_i2bsm"]
+
+[resource]
+resource_name = "minecraft_block-nether_wart_block"
+cull_mode = 2
+albedo_texture = ExtResource("1_i2bsm")

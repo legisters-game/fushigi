@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3343ymbbndp1"]
+
+[ext_resource type="Texture2D" uid="uid://ct44cail6jbvg" path="res://1/都市3d仮_potatoes_stage2.png" id="1_1y1si"]
+
+[resource]
+resource_name = "minecraft_block-potatoes_stage2"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_1y1si")

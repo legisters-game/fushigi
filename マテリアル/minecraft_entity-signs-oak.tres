@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfvkwiw1jqdpg"]
+
+[ext_resource type="Texture2D" uid="uid://j2oi5o8d065e" path="res://1/都市3d仮_oak.png" id="1_1onh4"]
+
+[resource]
+resource_name = "minecraft_entity-signs-oak"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_1onh4")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cf0eetsmhgm85"]
+
+[ext_resource type="Texture2D" uid="uid://dq6h48fbx6mr6" path="res://1/都市3d仮_wither_rose.png" id="1_0egiy"]
+
+[resource]
+resource_name = "minecraft_block-wither_rose"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_0egiy")

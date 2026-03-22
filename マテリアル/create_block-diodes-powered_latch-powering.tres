@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cubr8dq7j65w2"]
+
+[ext_resource type="Texture2D" uid="uid://d1f2e4qlprgam" path="res://1/都市3d仮_powering.png" id="1_b2bnp"]
+
+[resource]
+resource_name = "create_block-diodes-powered_latch-powering"
+cull_mode = 2
+albedo_texture = ExtResource("1_b2bnp")

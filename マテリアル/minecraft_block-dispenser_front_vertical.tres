@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://1swnrdpium74"]
+
+[ext_resource type="Texture2D" uid="uid://cpwncbx0w3fd6" path="res://1/都市3d仮_dispenser_front_vertical.png" id="1_rtpng"]
+
+[resource]
+resource_name = "minecraft_block-dispenser_front_vertical"
+cull_mode = 2
+albedo_texture = ExtResource("1_rtpng")

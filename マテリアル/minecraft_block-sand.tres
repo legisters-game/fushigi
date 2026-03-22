@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b444sqfnp5ctt"]
+
+[ext_resource type="Texture2D" uid="uid://cjt35ugaybpn3" path="res://1/都市3d仮_sand.png" id="1_yyfuh"]
+
+[resource]
+resource_name = "minecraft_block-sand"
+cull_mode = 2
+albedo_texture = ExtResource("1_yyfuh")

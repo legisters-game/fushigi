@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d211b3d1kag"]
+
+[ext_resource type="Texture2D" uid="uid://br1j8853asand" path="res://1/都市3d仮_rail_curve.png" id="1_615di"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-rail_curve"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_615di")

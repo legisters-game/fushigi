@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvo1a213xamvr"]
+
+[ext_resource type="Texture2D" uid="uid://n3qlgf7cg53t" path="res://1/都市3d仮_encased_chain_drive_end.png" id="1_0xvoc"]
+
+[resource]
+resource_name = "create_block-encased_chain_drive_end"
+cull_mode = 2
+albedo_texture = ExtResource("1_0xvoc")

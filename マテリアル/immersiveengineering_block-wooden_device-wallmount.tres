@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://de5eqe7bxeleb"]
+
+[ext_resource type="Texture2D" uid="uid://choptcjggqba5" path="res://1/都市3d仮_wallmount.png" id="1_762d0"]
+
+[resource]
+resource_name = "immersiveengineering_block-wooden_device-wallmount"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_762d0")

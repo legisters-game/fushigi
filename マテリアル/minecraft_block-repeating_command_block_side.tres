@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ywb0wl0v2uy2"]
+
+[ext_resource type="Texture2D" uid="uid://dwglq848d541r" path="res://1/都市3d仮_repeating_command_block_side.png" id="1_adh8p"]
+
+[resource]
+resource_name = "minecraft_block-repeating_command_block_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_adh8p")

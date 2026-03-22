@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dcm54xb4v775k"]
+
+[ext_resource type="Texture2D" uid="uid://cxeloskf5s0d" path="res://1/都市3d仮_dropper_front.png" id="1_k1m3l"]
+
+[resource]
+resource_name = "minecraft_block-dropper_front"
+cull_mode = 2
+albedo_texture = ExtResource("1_k1m3l")

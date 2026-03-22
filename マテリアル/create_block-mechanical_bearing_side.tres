@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://27kalbxsndle"]
+
+[ext_resource type="Texture2D" uid="uid://c1kj2y0tsijqi" path="res://1/都市3d仮_mechanical_bearing_side.png" id="1_r4h1v"]
+
+[resource]
+resource_name = "create_block-mechanical_bearing_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_r4h1v")

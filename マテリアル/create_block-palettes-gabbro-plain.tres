@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d0ee2ahnhw2fk"]
+
+[ext_resource type="Texture2D" uid="uid://c4eha8gkiohad" path="res://1/都市3d仮_plain.png" id="1_7c4ed"]
+
+[resource]
+resource_name = "create_block-palettes-gabbro-plain"
+cull_mode = 2
+albedo_texture = ExtResource("1_7c4ed")

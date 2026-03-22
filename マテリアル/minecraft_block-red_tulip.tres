@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://0mvt6h2852b6"]
+
+[ext_resource type="Texture2D" uid="uid://btk0oje37p3mj" path="res://1/都市3d仮_red_tulip.png" id="1_01y87"]
+
+[resource]
+resource_name = "minecraft_block-red_tulip"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_01y87")

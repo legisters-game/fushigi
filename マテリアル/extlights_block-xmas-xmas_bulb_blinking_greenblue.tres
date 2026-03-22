@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://tggbulp1psd1"]
+
+[ext_resource type="Texture2D" uid="uid://di82a0ywgq6ln" path="res://1/都市3d仮_xmas_bulb_blinking_greenblue.png" id="1_anm4k"]
+
+[resource]
+resource_name = "extlights_block-xmas-xmas_bulb_blinking_greenblue"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_anm4k")

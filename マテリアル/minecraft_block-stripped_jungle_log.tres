@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b1ily3a15bitk"]
+
+[ext_resource type="Texture2D" uid="uid://b0mdrvmo1nyp8" path="res://1/都市3d仮_stripped_jungle_log.png" id="1_58x54"]
+
+[resource]
+resource_name = "minecraft_block-stripped_jungle_log"
+cull_mode = 2
+albedo_texture = ExtResource("1_58x54")

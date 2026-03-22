@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cuf8ewy7kpsa1"]
+
+[ext_resource type="Texture2D" uid="uid://cqigaqh8wm5un" path="res://1/都市3d仮_water_still.png" id="1_ff14j"]
+
+[resource]
+resource_name = "minecraft_block-water_still"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ff14j")

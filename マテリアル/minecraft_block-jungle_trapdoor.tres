@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cuyc0iyngqew4"]
+
+[ext_resource type="Texture2D" uid="uid://bj4w3agk5ghb8" path="res://1/都市3d仮_jungle_trapdoor.png" id="1_ydm6w"]
+
+[resource]
+resource_name = "minecraft_block-jungle_trapdoor"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ydm6w")

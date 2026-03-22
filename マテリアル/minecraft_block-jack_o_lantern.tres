@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://da4l150uddm1b"]
+
+[ext_resource type="Texture2D" uid="uid://k0fcht6313j0" path="res://1/都市3d仮_jack_o_lantern.png" id="1_g6o71"]
+
+[resource]
+resource_name = "minecraft_block-jack_o_lantern"
+cull_mode = 2
+albedo_texture = ExtResource("1_g6o71")

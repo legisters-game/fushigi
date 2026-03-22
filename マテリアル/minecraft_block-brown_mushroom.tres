@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://2pspnthgcki2"]
+
+[ext_resource type="Texture2D" uid="uid://qyw0hpm1dx5d" path="res://1/都市3d仮_brown_mushroom.png" id="1_as4lm"]
+
+[resource]
+resource_name = "minecraft_block-brown_mushroom"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_as4lm")

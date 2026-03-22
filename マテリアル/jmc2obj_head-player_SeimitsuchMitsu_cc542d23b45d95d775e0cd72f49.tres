@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bi4vbchph7f3x"]
+
+[ext_resource type="Texture2D" uid="uid://cebnjmjmy5dvh" path="res://1/都市3d仮_player_SeimitsuchMitsu_cc542d23b45d95d775e0cd72f49cc962a61fd97553b9eb2ea4affd65f4438300.png" id="1_vcl8u"]
+
+[resource]
+resource_name = "jmc2obj_head-player_SeimitsuchMitsu_cc542d23b45d95d775e0cd72f49"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_vcl8u")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://clja4v25lrxp"]
+
+[ext_resource type="Texture2D" uid="uid://b046eq0rst4qo" path="res://1/都市3d仮_twisting_vines.png" id="1_4kf8h"]
+
+[resource]
+resource_name = "minecraft_block-twisting_vines"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_4kf8h")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ch4b1bn16cte5"]
+
+[ext_resource type="Texture2D" uid="uid://misyyr2wopdl" path="res://1/都市3d仮_light_modern_ceil_tube_black.png" id="1_irxov"]
+
+[resource]
+resource_name = "extlights_block-light_modern_ceil_tube_black"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_irxov")

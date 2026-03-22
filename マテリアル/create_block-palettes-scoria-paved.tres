@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://daep7bae46pat"]
+
+[ext_resource type="Texture2D" uid="uid://bno3hyqk26cpw" path="res://1/都市3d仮_paved_544.png" id="1_caihn"]
+
+[resource]
+resource_name = "create_block-palettes-scoria-paved"
+cull_mode = 2
+albedo_texture = ExtResource("1_caihn")

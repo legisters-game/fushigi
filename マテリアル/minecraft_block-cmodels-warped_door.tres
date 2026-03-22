@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://co8dctkgmyq4e"]
+
+[ext_resource type="Texture2D" uid="uid://dddffo7y4i246" path="res://1/都市3d仮_warped_door.png" id="1_t6sb4"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-warped_door"
+cull_mode = 2
+albedo_texture = ExtResource("1_t6sb4")

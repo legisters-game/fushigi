@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dt2ldvjh81std"]
+
+[ext_resource type="Texture2D" uid="uid://dtswqlm5w85q" path="res://1/都市3d仮_chiseled.png" id="1_l8r7u"]
+
+[resource]
+resource_name = "create_block-palettes-weathered_limestone-chiseled"
+cull_mode = 2
+albedo_texture = ExtResource("1_l8r7u")

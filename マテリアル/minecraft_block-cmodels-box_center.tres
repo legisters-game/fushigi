@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://v8v3qwxjgbao"]
+
+[ext_resource type="Texture2D" uid="uid://doo8yybihhnq1" path="res://1/都市3d仮_box_center.png" id="1_0pf32"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-box_center"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_0pf32")

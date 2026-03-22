@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://eljpbchfhbsj"]
+
+[ext_resource type="Texture2D" uid="uid://wgv131w8g374" path="res://1/都市3d仮_lever_color1.png" id="1_lqorg"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-lever_color1"
+cull_mode = 2
+albedo_texture = ExtResource("1_lqorg")

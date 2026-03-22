@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rl5mh70rf2uj"]
+
+[ext_resource type="Texture2D" uid="uid://cklmthvs3xr6" path="res://1/都市3d仮_target_top.png" id="1_3wqhn"]
+
+[resource]
+resource_name = "minecraft_block-target_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_3wqhn")

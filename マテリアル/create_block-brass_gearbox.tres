@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b1e6evqecxbmy"]
+
+[ext_resource type="Texture2D" uid="uid://bq0ym45nrm0km" path="res://1/都市3d仮_brass_gearbox.png" id="1_sp5h4"]
+
+[resource]
+resource_name = "create_block-brass_gearbox"
+cull_mode = 2
+albedo_texture = ExtResource("1_sp5h4")

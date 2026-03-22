@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rrr3wffqlfcb"]
+
+[ext_resource type="Texture2D" uid="uid://nxkfeo667hgv" path="res://1/都市3d仮_smoker_side.png" id="1_m3yxv"]
+
+[resource]
+resource_name = "minecraft_block-smoker_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_m3yxv")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://3jyvjnb8ukri"]
+
+[ext_resource type="Texture2D" uid="uid://gi12hi6qam4c" path="res://1/都市3d仮_radial_chassis_end.png" id="1_ixp1c"]
+
+[resource]
+resource_name = "create_block-radial_chassis_end"
+cull_mode = 2
+albedo_texture = ExtResource("1_ixp1c")

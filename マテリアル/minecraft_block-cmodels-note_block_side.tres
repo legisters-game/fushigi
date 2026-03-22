@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://3fi5mvs766t0"]
+
+[ext_resource type="Texture2D" uid="uid://cl0pbgnkgbti1" path="res://1/都市3d仮_note_block_side.png" id="1_j07qp"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-note_block_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_j07qp")

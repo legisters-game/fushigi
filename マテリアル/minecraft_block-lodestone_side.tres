@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://e1tuxqqjqwdv"]
+
+[ext_resource type="Texture2D" uid="uid://bryrfdfp4x1ll" path="res://1/都市3d仮_lodestone_side.png" id="1_dbrgt"]
+
+[resource]
+resource_name = "minecraft_block-lodestone_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_dbrgt")

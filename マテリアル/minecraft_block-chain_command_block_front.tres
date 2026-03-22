@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d3ful5qeql4mk"]
+
+[ext_resource type="Texture2D" uid="uid://dq85kx6x1kmba" path="res://1/都市3d仮_chain_command_block_front.png" id="1_b6n0t"]
+
+[resource]
+resource_name = "minecraft_block-chain_command_block_front"
+cull_mode = 2
+albedo_texture = ExtResource("1_b6n0t")

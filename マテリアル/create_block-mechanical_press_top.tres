@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dnrwbl0eoicwi"]
+
+[ext_resource type="Texture2D" uid="uid://cyqpdcc11ccbl" path="res://1/都市3d仮_mechanical_press_top.png" id="1_1sdco"]
+
+[resource]
+resource_name = "create_block-mechanical_press_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_1sdco")

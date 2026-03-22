@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cb60sqcicbah4"]
+
+[ext_resource type="Texture2D" uid="uid://cxu3xyaslfi12" path="res://1/都市3d仮_structure_block_load.png" id="1_mxxgb"]
+
+[resource]
+resource_name = "minecraft_block-structure_block_load"
+cull_mode = 2
+albedo_texture = ExtResource("1_mxxgb")

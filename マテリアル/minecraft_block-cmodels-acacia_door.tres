@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d3j4mvserlnpg"]
+
+[ext_resource type="Texture2D" uid="uid://r6nctdx7w2op" path="res://1/都市3d仮_acacia_door.png" id="1_ldbj4"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-acacia_door"
+cull_mode = 2
+albedo_texture = ExtResource("1_ldbj4")

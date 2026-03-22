@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c2ll626f63kmq"]
+
+[ext_resource type="Texture2D" uid="uid://83lm42f6typ7" path="res://1/都市3d仮_andesite_casing_short.png" id="1_mrpw5"]
+
+[resource]
+resource_name = "create_block-andesite_casing_short"
+cull_mode = 2
+albedo_texture = ExtResource("1_mrpw5")

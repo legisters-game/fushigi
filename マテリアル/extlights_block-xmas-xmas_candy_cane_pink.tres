@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b4ii6r2si1tn6"]
+
+[ext_resource type="Texture2D" uid="uid://b0036mvnfl7xv" path="res://1/都市3d仮_xmas_candy_cane_pink.png" id="1_ocno6"]
+
+[resource]
+resource_name = "extlights_block-xmas-xmas_candy_cane_pink"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ocno6")

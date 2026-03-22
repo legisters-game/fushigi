@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://btuopbjm2kit0"]
+
+[ext_resource type="Texture2D" uid="uid://dnlfkiyws50p7" path="res://1/都市3d仮_large_cogwheel.png" id="1_8god8"]
+
+[resource]
+resource_name = "create_block-large_cogwheel"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_8god8")

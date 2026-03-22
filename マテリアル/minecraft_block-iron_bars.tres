@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcwib4yxbhrgp"]
+
+[ext_resource type="Texture2D" uid="uid://dlicsatk33hqd" path="res://1/都市3d仮_iron_bars.png" id="1_7k25u"]
+
+[resource]
+resource_name = "minecraft_block-iron_bars"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_7k25u")

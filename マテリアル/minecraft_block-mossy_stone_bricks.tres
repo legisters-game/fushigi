@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://e3qp8wrc2d65"]
+
+[ext_resource type="Texture2D" uid="uid://bw1mmcs6jd4l0" path="res://1/都市3d仮_mossy_stone_bricks.png" id="1_gdnyx"]
+
+[resource]
+resource_name = "minecraft_block-mossy_stone_bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_gdnyx")

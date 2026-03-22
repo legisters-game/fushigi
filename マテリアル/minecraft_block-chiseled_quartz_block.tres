@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://pk6urcmskneq"]
+
+[ext_resource type="Texture2D" uid="uid://dhf5n84jeq4ed" path="res://1/都市3d仮_chiseled_quartz_block.png" id="1_fhc41"]
+
+[resource]
+resource_name = "minecraft_block-chiseled_quartz_block"
+cull_mode = 2
+albedo_texture = ExtResource("1_fhc41")

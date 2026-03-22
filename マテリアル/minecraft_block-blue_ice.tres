@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://hy88t1vjg0nc"]
+
+[ext_resource type="Texture2D" uid="uid://bd62k2jjql3vu" path="res://1/都市3d仮_blue_ice.png" id="1_jxo1m"]
+
+[resource]
+resource_name = "minecraft_block-blue_ice"
+cull_mode = 2
+albedo_texture = ExtResource("1_jxo1m")

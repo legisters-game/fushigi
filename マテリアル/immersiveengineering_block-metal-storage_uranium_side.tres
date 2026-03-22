@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ces1q3ac86ie4"]
+
+[ext_resource type="Texture2D" uid="uid://wreijk21ncbh" path="res://1/都市3d仮_storage_uranium_side.png" id="1_omcrp"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-storage_uranium_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_omcrp")

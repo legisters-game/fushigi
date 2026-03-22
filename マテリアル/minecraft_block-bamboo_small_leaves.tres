@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bdx8iyx2walhv"]
+
+[ext_resource type="Texture2D" uid="uid://bxwnke4dcd6lh" path="res://1/都市3d仮_bamboo_small_leaves.png" id="1_rld2u"]
+
+[resource]
+resource_name = "minecraft_block-bamboo_small_leaves"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_rld2u")

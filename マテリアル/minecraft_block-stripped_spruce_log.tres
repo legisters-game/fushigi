@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dt36xps3bdck2"]
+
+[ext_resource type="Texture2D" uid="uid://ytc2j3yu8ltu" path="res://1/都市3d仮_stripped_spruce_log.png" id="1_so2mp"]
+
+[resource]
+resource_name = "minecraft_block-stripped_spruce_log"
+cull_mode = 2
+albedo_texture = ExtResource("1_so2mp")

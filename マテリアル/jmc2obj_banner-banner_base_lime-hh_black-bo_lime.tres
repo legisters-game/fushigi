@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d2q80dmidw6wn"]
+
+[ext_resource type="Texture2D" uid="uid://cayayaequgwln" path="res://1/都市3d仮_banner_base_lime-hh_black-bo_lime.png" id="1_f0rcc"]
+
+[resource]
+resource_name = "jmc2obj_banner-banner_base_lime-hh_black-bo_lime"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_f0rcc")

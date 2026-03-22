@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bp2t4jickxhe1"]
+
+[ext_resource type="Texture2D" uid="uid://bh6n4g4jpgfb8" path="res://1/都市3d仮_storage_constantan.png" id="1_fioy4"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-storage_constantan"
+cull_mode = 2
+albedo_texture = ExtResource("1_fioy4")

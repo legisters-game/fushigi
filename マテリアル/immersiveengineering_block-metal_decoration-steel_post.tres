@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dupy4dfr7p3rh"]
+
+[ext_resource type="Texture2D" uid="uid://c8a5u1ficvptq" path="res://1/都市3d仮_steel_post.png" id="1_aowhr"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_decoration-steel_post"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_aowhr")

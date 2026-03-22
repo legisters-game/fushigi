@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cimjddw1l4w5t"]
+
+[ext_resource type="Texture2D" uid="uid://iagyrr20lt2q" path="res://1/都市3d仮_piston_top.png" id="1_jua0d"]
+
+[resource]
+resource_name = "minecraft_block-piston_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_jua0d")

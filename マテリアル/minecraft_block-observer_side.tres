@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bb8ouxy1gjb5l"]
+
+[ext_resource type="Texture2D" uid="uid://gtisv6kc6tj3" path="res://1/都市3d仮_observer_side.png" id="1_ynul6"]
+
+[resource]
+resource_name = "minecraft_block-observer_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_ynul6")

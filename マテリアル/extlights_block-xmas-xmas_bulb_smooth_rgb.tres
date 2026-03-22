@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c88y3c5lcbguh"]
+
+[ext_resource type="Texture2D" uid="uid://d2u5ks51rvk8s" path="res://1/都市3d仮_xmas_bulb_smooth_rgb.png" id="1_8epee"]
+
+[resource]
+resource_name = "extlights_block-xmas-xmas_bulb_smooth_rgb"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_8epee")

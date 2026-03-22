@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c6ywjeljbvwke"]
+
+[ext_resource type="Texture2D" uid="uid://o1b6cj80eplf" path="res://1/都市3d仮_purple_concrete.png" id="1_4ng1l"]
+
+[resource]
+resource_name = "minecraft_block-purple_concrete"
+cull_mode = 2
+albedo_texture = ExtResource("1_4ng1l")

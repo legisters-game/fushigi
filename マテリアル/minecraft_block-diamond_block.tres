@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bay88y2vjq3sb"]
+
+[ext_resource type="Texture2D" uid="uid://da6p6ovbg70xm" path="res://1/都市3d仮_diamond_block.png" id="1_emghh"]
+
+[resource]
+resource_name = "minecraft_block-diamond_block"
+cull_mode = 2
+albedo_texture = ExtResource("1_emghh")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bbaac7f38fgxd"]
+
+[ext_resource type="Texture2D" uid="uid://dp8oa8ygkrvpo" path="res://1/都市3d仮_oak_log_top.png" id="1_skyxg"]
+
+[resource]
+resource_name = "minecraft_block-oak_log_top"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_skyxg")

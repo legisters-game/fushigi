@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dwg3usjrtmcdo"]
+
+[ext_resource type="Texture2D" uid="uid://c3r0o2r7xoc4p" path="res://1/都市3d仮_light_beam_post_base.png" id="1_2fiau"]
+
+[resource]
+resource_name = "extlights_block-light_beam_post_base"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_2fiau")

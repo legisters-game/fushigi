@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://duex353v2uakp"]
+
+[ext_resource type="Texture2D" uid="uid://bk3j238pchwan" path="res://1/都市3d仮_jungle_log_top.png" id="1_ev753"]
+
+[resource]
+resource_name = "minecraft_block-jungle_log_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_ev753")

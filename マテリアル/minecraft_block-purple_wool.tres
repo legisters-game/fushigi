@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0q8g14gwll1c"]
+
+[ext_resource type="Texture2D" uid="uid://dr5qp3laj7cuo" path="res://1/都市3d仮_purple_wool.png" id="1_far70"]
+
+[resource]
+resource_name = "minecraft_block-purple_wool"
+cull_mode = 2
+albedo_texture = ExtResource("1_far70")

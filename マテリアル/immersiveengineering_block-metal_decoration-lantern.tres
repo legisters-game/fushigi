@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bbrri1jf358bw"]
+
+[ext_resource type="Texture2D" uid="uid://dqiea5ssijlg1" path="res://1/都市3d仮_lantern_740.png" id="1_kkp5n"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_decoration-lantern"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_kkp5n")

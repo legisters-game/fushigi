@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ry1ew2jpo5ke"]
+
+[ext_resource type="Texture2D" uid="uid://bku4dpmirmg6s" path="res://1/都市3d仮_light_shroom_stem.png" id="1_lj0sn"]
+
+[resource]
+resource_name = "extlights_block-light_shroom_stem"
+cull_mode = 2
+albedo_texture = ExtResource("1_lj0sn")

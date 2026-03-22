@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://caay6e1h25a4a"]
+
+[ext_resource type="Texture2D" uid="uid://blgjv02gbd3oq" path="res://1/都市3d仮_sandstone_bottom.png" id="1_n2r0r"]
+
+[resource]
+resource_name = "minecraft_block-sandstone_bottom"
+cull_mode = 2
+albedo_texture = ExtResource("1_n2r0r")

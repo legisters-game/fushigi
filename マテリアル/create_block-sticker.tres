@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://osaif68mpbl2"]
+
+[ext_resource type="Texture2D" uid="uid://clxpan4p25nd6" path="res://1/都市3d仮_sticker.png" id="1_gjw8a"]
+
+[resource]
+resource_name = "create_block-sticker"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_gjw8a")

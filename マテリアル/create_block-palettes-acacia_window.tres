@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cwx50e3um1sx1"]
+
+[ext_resource type="Texture2D" uid="uid://by7iv6ffqm2tw" path="res://1/都市3d仮_acacia_window.png" id="1_i433c"]
+
+[resource]
+resource_name = "create_block-palettes-acacia_window"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_i433c")

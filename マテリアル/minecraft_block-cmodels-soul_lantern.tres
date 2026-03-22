@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c62f2x6rj56l0"]
+
+[ext_resource type="Texture2D" uid="uid://b5w63rt3ayudc" path="res://1/都市3d仮_soul_lantern.png" id="1_cq4k2"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-soul_lantern"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_cq4k2")

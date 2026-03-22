@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://5iwj87ol081d"]
+
+[ext_resource type="Texture2D" uid="uid://5h8q4llvqisu" path="res://1/都市3d仮_idle_561.png" id="1_xn08q"]
+
+[resource]
+resource_name = "create_block-diodes-adjustable_pulse_repeater-idle"
+cull_mode = 2
+albedo_texture = ExtResource("1_xn08q")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cpi7q0yvvgbol"]
+
+[ext_resource type="Texture2D" uid="uid://dt3gguie5550n" path="res://1/都市3d仮_orange.png" id="1_rt0qu"]
+
+[resource]
+resource_name = "minecraft_entity-bed-orange"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_rt0qu")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://8shwij0hfx0d"]
+
+[ext_resource type="Texture2D" uid="uid://bg023tcuo3y1g" path="res://1/都市3d仮_light_lantern_crimson.png" id="1_uxs35"]
+
+[resource]
+resource_name = "extlights_block-light_lantern_crimson"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_uxs35")

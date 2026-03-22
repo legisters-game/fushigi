@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bxe14mqfeb3q4"]
+
+[ext_resource type="Texture2D" uid="uid://c82o324t5qmxk" path="res://1/都市3d仮_stone.png" id="1_qu25d"]
+
+[resource]
+resource_name = "minecraft_block-stone"
+cull_mode = 2
+albedo_texture = ExtResource("1_qu25d")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cxevf50ncjsjv"]
+
+[ext_resource type="Texture2D" uid="uid://80pi5o60wtq3" path="res://1/都市3d仮_obsidian.png" id="1_kau7d"]
+
+[resource]
+resource_name = "minecraft_block-obsidian"
+cull_mode = 2
+albedo_texture = ExtResource("1_kau7d")

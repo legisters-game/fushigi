@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dtte6ywuuj4s"]
+
+[ext_resource type="Texture2D" uid="uid://db1yowvuplha7" path="res://1/都市3d仮_piston_top_sticky.png" id="1_jk6gs"]
+
+[resource]
+resource_name = "minecraft_block-piston_top_sticky"
+cull_mode = 2
+albedo_texture = ExtResource("1_jk6gs")

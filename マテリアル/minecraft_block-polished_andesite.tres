@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbhlqdwlp8wy"]
+
+[ext_resource type="Texture2D" uid="uid://j8o54wnabm1j" path="res://1/都市3d仮_polished_andesite.png" id="1_twmv0"]
+
+[resource]
+resource_name = "minecraft_block-polished_andesite"
+cull_mode = 2
+albedo_texture = ExtResource("1_twmv0")

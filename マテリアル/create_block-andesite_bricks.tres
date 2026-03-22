@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ui16vmj2m5f6"]
+
+[ext_resource type="Texture2D" uid="uid://dolbsuvkmq57b" path="res://1/都市3d仮_andesite_bricks.png" id="1_ejwdw"]
+
+[resource]
+resource_name = "create_block-andesite_bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_ejwdw")

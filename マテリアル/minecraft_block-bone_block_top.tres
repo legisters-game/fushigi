@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dgbumy31f43q4"]
+
+[ext_resource type="Texture2D" uid="uid://djbc85unv5dui" path="res://1/都市3d仮_bone_block_top.png" id="1_lmr2x"]
+
+[resource]
+resource_name = "minecraft_block-bone_block_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_lmr2x")

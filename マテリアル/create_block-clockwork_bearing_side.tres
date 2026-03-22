@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dm0wul6rgxd35"]
+
+[ext_resource type="Texture2D" uid="uid://6oqlle8gcnh" path="res://1/都市3d仮_clockwork_bearing_side.png" id="1_0iymv"]
+
+[resource]
+resource_name = "create_block-clockwork_bearing_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_0iymv")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cyvhtdybw5bi7"]
+
+[ext_resource type="Texture2D" uid="uid://d3gqant11edmy" path="res://1/都市3d仮_crate_brass_side.png" id="1_lhdif"]
+
+[resource]
+resource_name = "create_block-crate_brass_side"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_lhdif")

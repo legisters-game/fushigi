@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bi5wiu478ww4x"]
+
+[ext_resource type="Texture2D" uid="uid://vrvfup84acnd" path="res://1/都市3d仮_crimson_planks.png" id="1_4p5du"]
+
+[resource]
+resource_name = "minecraft_block-crimson_planks"
+cull_mode = 2
+albedo_texture = ExtResource("1_4p5du")

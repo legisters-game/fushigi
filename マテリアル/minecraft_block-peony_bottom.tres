@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bnfykcumenrfh"]
+
+[ext_resource type="Texture2D" uid="uid://g0xvfsadvgsy" path="res://1/都市3d仮_peony_bottom.png" id="1_iog62"]
+
+[resource]
+resource_name = "minecraft_block-peony_bottom"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_iog62")

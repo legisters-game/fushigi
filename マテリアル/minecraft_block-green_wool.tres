@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dr4bymb36uryx"]
+
+[ext_resource type="Texture2D" uid="uid://bcwfk0olq177w" path="res://1/都市3d仮_green_wool.png" id="1_kaatp"]
+
+[resource]
+resource_name = "minecraft_block-green_wool"
+cull_mode = 2
+albedo_texture = ExtResource("1_kaatp")

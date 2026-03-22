@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ci3v2d7lhasu0"]
+
+[ext_resource type="Texture2D" uid="uid://d0hfwu8pil1j" path="res://1/都市3d仮_dead_bush.png" id="1_3teae"]
+
+[resource]
+resource_name = "minecraft_block-dead_bush"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_3teae")

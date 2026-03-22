@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://iop6v2s3hec2"]
+
+[ext_resource type="Texture2D" uid="uid://bq6wqbgva3jhm" path="res://1/都市3d仮_paved_borderless.png" id="1_vmv06"]
+
+[resource]
+resource_name = "create_block-palettes-weathered_limestone-paved_borderless"
+cull_mode = 2
+albedo_texture = ExtResource("1_vmv06")

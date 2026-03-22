@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bya7o5jwxf0va"]
+
+[ext_resource type="Texture2D" uid="uid://nsk1wr0550f4" path="res://1/都市3d仮_gearshift_on.png" id="1_g1ujl"]
+
+[resource]
+resource_name = "create_block-gearshift_on"
+cull_mode = 2
+albedo_texture = ExtResource("1_g1ujl")

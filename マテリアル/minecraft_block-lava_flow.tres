@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ykuxylvie6ht"]
+
+[ext_resource type="Texture2D" uid="uid://b78x6scg8w66t" path="res://1/都市3d仮_lava_flow.png" id="1_w3ah7"]
+
+[resource]
+resource_name = "minecraft_block-lava_flow"
+cull_mode = 2
+albedo_texture = ExtResource("1_w3ah7")

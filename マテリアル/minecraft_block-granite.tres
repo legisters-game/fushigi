@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cgmjrvbjnap6f"]
+
+[ext_resource type="Texture2D" uid="uid://rmf8m80mq7ic" path="res://1/都市3d仮_granite.png" id="1_jluje"]
+
+[resource]
+resource_name = "minecraft_block-granite"
+cull_mode = 2
+albedo_texture = ExtResource("1_jluje")

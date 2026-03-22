@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vy4ycjir6iyi"]
+
+[ext_resource type="Texture2D" uid="uid://bd4axs7j6psxl" path="res://1/都市3d仮_polished_slab.png" id="1_80myl"]
+
+[resource]
+resource_name = "create_block-palettes-weathered_limestone-polished_slab"
+cull_mode = 2
+albedo_texture = ExtResource("1_80myl")

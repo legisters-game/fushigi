@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://by2mrxi1u0n01"]
+
+[ext_resource type="Texture2D" uid="uid://cbpwvob5as03r" path="res://1/都市3d仮_pinion.png" id="1_5l6kx"]
+
+[resource]
+resource_name = "create_block-pinion"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_5l6kx")

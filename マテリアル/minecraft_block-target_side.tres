@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c0uyhaow3aqgn"]
+
+[ext_resource type="Texture2D" uid="uid://df7ccci005jb6" path="res://1/都市3d仮_target_side.png" id="1_86107"]
+
+[resource]
+resource_name = "minecraft_block-target_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_86107")

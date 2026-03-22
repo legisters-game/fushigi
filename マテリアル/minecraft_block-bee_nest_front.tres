@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dx36bsoywr0m3"]
+
+[ext_resource type="Texture2D" uid="uid://bfc6fn6545ait" path="res://1/都市3d仮_bee_nest_front.png" id="1_hx3bk"]
+
+[resource]
+resource_name = "minecraft_block-bee_nest_front"
+cull_mode = 2
+albedo_texture = ExtResource("1_hx3bk")

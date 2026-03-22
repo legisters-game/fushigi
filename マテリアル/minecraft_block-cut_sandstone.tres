@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ccmhopvoo27nb"]
+
+[ext_resource type="Texture2D" uid="uid://cjoyba1evm35h" path="res://1/都市3d仮_cut_sandstone.png" id="1_wtskt"]
+
+[resource]
+resource_name = "minecraft_block-cut_sandstone"
+cull_mode = 2
+albedo_texture = ExtResource("1_wtskt")

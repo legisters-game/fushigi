@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://clivqc4uk530d"]
+
+[ext_resource type="Texture2D" uid="uid://vpns1c2ypvlg" path="res://1/都市3d仮_rail.png" id="1_vpyie"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-rail"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_vpyie")

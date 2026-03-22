@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ccqwhf45dqg2h"]
+
+[ext_resource type="Texture2D" uid="uid://dt4lr8b5r0x7e" path="res://1/都市3d仮_dirt.png" id="1_7bag3"]
+
+[resource]
+resource_name = "minecraft_block-dirt"
+cull_mode = 2
+albedo_texture = ExtResource("1_7bag3")

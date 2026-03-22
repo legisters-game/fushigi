@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://m3fgjti5smjx"]
+
+[ext_resource type="Texture2D" uid="uid://v8myrngx6f06" path="res://1/都市3d仮_oak_sapling.png" id="1_jv587"]
+
+[resource]
+resource_name = "minecraft_block-oak_sapling"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_jv587")

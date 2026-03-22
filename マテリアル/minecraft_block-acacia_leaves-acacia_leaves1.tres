@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://du4mnu1rcvb8"]
+
+[ext_resource type="Texture2D" uid="uid://bj5dndl1x4y3k" path="res://1/都市3d仮_acacia_leaves1.png" id="1_ycsk5"]
+
+[resource]
+resource_name = "minecraft_block-acacia_leaves-acacia_leaves1"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ycsk5")

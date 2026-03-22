@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://j3x6t2188ctt"]
+
+[ext_resource type="Texture2D" uid="uid://08fcak8asvk5" path="res://1/都市3d仮_sunflower_bottom.png" id="1_2f03c"]
+
+[resource]
+resource_name = "minecraft_block-sunflower_bottom"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_2f03c")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfycya3f30p64"]
+
+[ext_resource type="Texture2D" uid="uid://dxnujsx0yol0r" path="res://1/都市3d仮_coke.png" id="1_gsnmj"]
+
+[resource]
+resource_name = "immersiveengineering_block-stone_decoration-coke"
+cull_mode = 2
+albedo_texture = ExtResource("1_gsnmj")

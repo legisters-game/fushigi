@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://50q31610xilb"]
+
+[ext_resource type="Texture2D" uid="uid://6r4qr73tt3u2" path="res://1/都市3d仮_cracked_polished_blackstone_bricks.png" id="1_apcd1"]
+
+[resource]
+resource_name = "minecraft_block-cracked_polished_blackstone_bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_apcd1")

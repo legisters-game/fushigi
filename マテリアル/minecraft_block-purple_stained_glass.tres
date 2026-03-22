@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dtmjh10uba0l2"]
+
+[ext_resource type="Texture2D" uid="uid://pfg02xand6pm" path="res://1/都市3d仮_purple_stained_glass.png" id="1_pw15x"]
+
+[resource]
+resource_name = "minecraft_block-purple_stained_glass"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_pw15x")

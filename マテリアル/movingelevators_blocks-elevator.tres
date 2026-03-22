@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bpmwl5t70f2rb"]
+
+[ext_resource type="Texture2D" uid="uid://qq8wcqsi5v3r" path="res://1/都市3d仮_elevator.png" id="1_puqep"]
+
+[resource]
+resource_name = "movingelevators_blocks-elevator"
+cull_mode = 2
+albedo_texture = ExtResource("1_puqep")

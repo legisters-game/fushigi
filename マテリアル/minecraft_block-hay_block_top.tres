@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cclvj0ln4tcn8"]
+
+[ext_resource type="Texture2D" uid="uid://5mpbmqivplma" path="res://1/都市3d仮_hay_block_top.png" id="1_vcj6k"]
+
+[resource]
+resource_name = "minecraft_block-hay_block_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_vcj6k")

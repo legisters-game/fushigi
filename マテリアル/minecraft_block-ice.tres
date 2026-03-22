@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://clhq5oph47837"]
+
+[ext_resource type="Texture2D" uid="uid://boxhv71f24ymp" path="res://1/都市3d仮_ice.png" id="1_82qtb"]
+
+[resource]
+resource_name = "minecraft_block-ice"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_82qtb")

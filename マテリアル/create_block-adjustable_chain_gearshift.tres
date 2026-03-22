@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bbf8kv2g8eoig"]
+
+[ext_resource type="Texture2D" uid="uid://d2jw2abmd2xoh" path="res://1/都市3d仮_adjustable_chain_gearshift.png" id="1_ambl5"]
+
+[resource]
+resource_name = "create_block-adjustable_chain_gearshift"
+cull_mode = 2
+albedo_texture = ExtResource("1_ambl5")

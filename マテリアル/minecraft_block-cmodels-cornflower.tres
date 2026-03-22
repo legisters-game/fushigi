@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b1o2a6q3lb3mn"]
+
+[ext_resource type="Texture2D" uid="uid://vys04umlhxl7" path="res://1/都市3d仮_cornflower.png" id="1_sb6aq"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-cornflower"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_sb6aq")

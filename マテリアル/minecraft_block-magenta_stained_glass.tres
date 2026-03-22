@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cfjfm80pc5fv3"]
+
+[ext_resource type="Texture2D" uid="uid://evahspx0yux3" path="res://1/都市3d仮_magenta_stained_glass.png" id="1_kjtrl"]
+
+[resource]
+resource_name = "minecraft_block-magenta_stained_glass"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_kjtrl")

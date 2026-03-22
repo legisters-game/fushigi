@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://73l5aiad5hp2"]
+
+[ext_resource type="Texture2D" uid="uid://c2orlh7e1ynw" path="res://1/都市3d仮_black_door.png" id="1_oex2d"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-black_door"
+cull_mode = 2
+albedo_texture = ExtResource("1_oex2d")

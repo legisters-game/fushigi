@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cerplwv77jpmi"]
+
+[ext_resource type="Texture2D" uid="uid://k1d5baq4u0d5" path="res://1/都市3d仮_end_portal_frame_top.png" id="1_dmxx4"]
+
+[resource]
+resource_name = "minecraft_block-end_portal_frame_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_dmxx4")

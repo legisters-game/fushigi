@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dni7h0yfwd5m4"]
+
+[ext_resource type="Texture2D" uid="uid://bgf2sk8sm337o" path="res://1/都市3d仮_wheat_stage_7.png" id="1_xlgek"]
+
+[resource]
+resource_name = "minecraft_block-wheat_stage_7"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_xlgek")

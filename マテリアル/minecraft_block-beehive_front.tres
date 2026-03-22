@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dn375qciu7im3"]
+
+[ext_resource type="Texture2D" uid="uid://b0183smjao8ps" path="res://1/都市3d仮_beehive_front.png" id="1_fxsmf"]
+
+[resource]
+resource_name = "minecraft_block-beehive_front"
+cull_mode = 2
+albedo_texture = ExtResource("1_fxsmf")

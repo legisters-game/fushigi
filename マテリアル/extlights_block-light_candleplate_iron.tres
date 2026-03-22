@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://8xdkt8u08kth"]
+
+[ext_resource type="Texture2D" uid="uid://xtrr3eyu2b80" path="res://1/都市3d仮_light_candleplate_iron.png" id="1_kbpvf"]
+
+[resource]
+resource_name = "extlights_block-light_candleplate_iron"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_kbpvf")

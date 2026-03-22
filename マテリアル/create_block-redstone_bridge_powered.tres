@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ck5i5wsg7mwwt"]
+
+[ext_resource type="Texture2D" uid="uid://bh8u8idtrg36h" path="res://1/都市3d仮_redstone_bridge_powered.png" id="1_meq1r"]
+
+[resource]
+resource_name = "create_block-redstone_bridge_powered"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_meq1r")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bvbeua5whd2mn"]
+
+[ext_resource type="Texture2D" uid="uid://c4wpbwevaukoc" path="res://1/都市3d仮_light_modern_wall_torch_black.png" id="1_mvue7"]
+
+[resource]
+resource_name = "extlights_block-light_modern_wall_torch_black"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_mvue7")

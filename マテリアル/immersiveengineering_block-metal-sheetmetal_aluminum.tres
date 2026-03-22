@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dcb3gfdsv5710"]
+
+[ext_resource type="Texture2D" uid="uid://8kjs5t87p1xu" path="res://1/都市3d仮_sheetmetal_aluminum.png" id="1_w8tiu"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-sheetmetal_aluminum"
+cull_mode = 2
+albedo_texture = ExtResource("1_w8tiu")

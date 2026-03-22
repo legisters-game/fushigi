@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ct2vnex2ke2ye"]
+
+[ext_resource type="Texture2D" uid="uid://dns0doh0w73i0" path="res://1/都市3d仮_light_lantern_paper_red_hanging.png" id="1_8mx37"]
+
+[resource]
+resource_name = "extlights_block-light_lantern_paper_red_hanging"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_8mx37")

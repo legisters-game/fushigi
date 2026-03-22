@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bqn7u52sr63vg"]
+
+[ext_resource type="Texture2D" uid="uid://se62dp8sex1t" path="res://1/都市3d仮_allium.png" id="1_62468"]
+
+[resource]
+resource_name = "minecraft_block-allium"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_62468")

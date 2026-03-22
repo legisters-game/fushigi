@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://03uydxpu2gml"]
+
+[ext_resource type="Texture2D" uid="uid://dsebyjxntsism" path="res://1/都市3d仮_pulley_magnet.png" id="1_gskx4"]
+
+[resource]
+resource_name = "create_block-pulley_magnet"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_gskx4")

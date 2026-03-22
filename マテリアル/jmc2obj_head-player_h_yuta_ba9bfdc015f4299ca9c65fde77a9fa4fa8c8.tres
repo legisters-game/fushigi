@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cmh86tek11fru"]
+
+[ext_resource type="Texture2D" uid="uid://c3r27uq7ocurl" path="res://1/都市3d仮_player_h_yuta_ba9bfdc015f4299ca9c65fde77a9fa4fa8c83a60608617bc36335b7513d0638f.png" id="1_bj47t"]
+
+[resource]
+resource_name = "jmc2obj_head-player_h_yuta_ba9bfdc015f4299ca9c65fde77a9fa4fa8c8"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_bj47t")

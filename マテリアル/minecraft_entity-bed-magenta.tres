@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b2nnub2oglyvy"]
+
+[ext_resource type="Texture2D" uid="uid://cmankqd3ipxgc" path="res://1/都市3d仮_magenta.png" id="1_qosrq"]
+
+[resource]
+resource_name = "minecraft_entity-bed-magenta"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_qosrq")

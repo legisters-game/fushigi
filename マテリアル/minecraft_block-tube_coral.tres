@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c8mx3pha6077d"]
+
+[ext_resource type="Texture2D" uid="uid://ccejso25b7gwm" path="res://1/都市3d仮_tube_coral.png" id="1_b1c1h"]
+
+[resource]
+resource_name = "minecraft_block-tube_coral"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_b1c1h")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://eeeki55yonfo"]
+
+[ext_resource type="Texture2D" uid="uid://damrmhxolufhk" path="res://1/都市3d仮_rose_bush_top.png" id="1_s26ad"]
+
+[resource]
+resource_name = "minecraft_block-rose_bush_top"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_s26ad")

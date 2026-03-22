@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cf757tlkbc6d7"]
+
+[ext_resource type="Texture2D" uid="uid://cpiqhef0b23dd" path="res://1/都市3d仮_birch_sapling.png" id="1_t41l8"]
+
+[resource]
+resource_name = "minecraft_block-birch_sapling"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_t41l8")

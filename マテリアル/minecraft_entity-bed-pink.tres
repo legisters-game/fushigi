@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c85pkyx6keutm"]
+
+[ext_resource type="Texture2D" uid="uid://dn6d2df36jcrw" path="res://1/都市3d仮_pink.png" id="1_a3h37"]
+
+[resource]
+resource_name = "minecraft_entity-bed-pink"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_a3h37")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bwve6u5o70esr"]
+
+[ext_resource type="Texture2D" uid="uid://drb0788m4vq7v" path="res://1/都市3d仮_cart_assembler_top.png" id="1_mq02n"]
+
+[resource]
+resource_name = "create_block-cart_assembler_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_mq02n")

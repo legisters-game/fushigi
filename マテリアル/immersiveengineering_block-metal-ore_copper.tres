@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c0kjnq8p61oht"]
+
+[ext_resource type="Texture2D" uid="uid://fic1fq1jxiuh" path="res://1/都市3d仮_ore_copper.png" id="1_25jmt"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-ore_copper"
+cull_mode = 2
+albedo_texture = ExtResource("1_25jmt")

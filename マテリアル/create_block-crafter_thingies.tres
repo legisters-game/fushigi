@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://n5yt42yjf1ms"]
+
+[ext_resource type="Texture2D" uid="uid://g82d7p80h8g4" path="res://1/都市3d仮_crafter_thingies.png" id="1_ky1e6"]
+
+[resource]
+resource_name = "create_block-crafter_thingies"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ky1e6")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbqp5qq2rt8bn"]
+
+[ext_resource type="Texture2D" uid="uid://btuyxbhwt8glt" path="res://1/都市3d仮_metal_ladder.png" id="1_blope"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_decoration-metal_ladder"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_blope")

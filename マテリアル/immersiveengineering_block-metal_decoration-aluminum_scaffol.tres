@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bukp70chwilwq"]
+
+[ext_resource type="Texture2D" uid="uid://dlnncaftnsane" path="res://1/都市3d仮_aluminum_scaffolding_open.png" id="1_du2dg"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_decoration-aluminum_scaffol"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_du2dg")

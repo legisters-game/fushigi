@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ngmr0bga6g38"]
+
+[ext_resource type="Texture2D" uid="uid://dee8n8r8lpgej" path="res://1/都市3d仮_nixie_tube.png" id="1_5v6hn"]
+
+[resource]
+resource_name = "create_block-nixie_tube"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_5v6hn")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ctlf7xwhcpxtm"]
+
+[ext_resource type="Texture2D" uid="uid://0hyfv63vtta3" path="res://1/都市3d仮_anvil.png" id="1_uv08n"]
+
+[resource]
+resource_name = "minecraft_block-anvil"
+cull_mode = 2
+albedo_texture = ExtResource("1_uv08n")

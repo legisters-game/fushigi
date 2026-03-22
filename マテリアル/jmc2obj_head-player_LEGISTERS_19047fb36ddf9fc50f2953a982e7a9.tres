@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dx5vb15r8kjkf"]
+
+[ext_resource type="Texture2D" uid="uid://d4kifvl0su8lh" path="res://1/都市3d仮_player_LEGISTERS_19047fb36ddf9fc50f2953a982e7a9fff474197c47225b0615a686243a2e7cfc.png" id="1_v3pou"]
+
+[resource]
+resource_name = "jmc2obj_head-player_LEGISTERS_19047fb36ddf9fc50f2953a982e7a9"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_v3pou")

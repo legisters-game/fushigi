@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmoxc4skuvtpt"]
+
+[ext_resource type="Texture2D" uid="uid://d3nscjjhhj4kw" path="res://1/都市3d仮_fern_bottom.png" id="1_6ighy"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-fern_bottom"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_6ighy")

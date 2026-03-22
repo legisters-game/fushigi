@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cjhycp1ejqgch"]
+
+[ext_resource type="Texture2D" uid="uid://47fgst1a2i06" path="res://1/都市3d仮_sea_pickle.png" id="1_a164b"]
+
+[resource]
+resource_name = "minecraft_block-sea_pickle"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_a164b")

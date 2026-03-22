@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dcceelltqiej"]
+
+[ext_resource type="Texture2D" uid="uid://cte4y1xef6bbd" path="res://1/都市3d仮_andesite.png" id="1_gbj55"]
+
+[resource]
+resource_name = "minecraft_block-andesite"
+cull_mode = 2
+albedo_texture = ExtResource("1_gbj55")

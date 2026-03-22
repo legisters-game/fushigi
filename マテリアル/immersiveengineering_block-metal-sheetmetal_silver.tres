@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bl88glwyc0ve4"]
+
+[ext_resource type="Texture2D" uid="uid://c0s3ly7td5ljo" path="res://1/都市3d仮_sheetmetal_silver.png" id="1_le2ln"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-sheetmetal_silver"
+cull_mode = 2
+albedo_texture = ExtResource("1_le2ln")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3pte65ogi5kv"]
+
+[ext_resource type="Texture2D" uid="uid://cgjkda7sc16v" path="res://1/都市3d仮_dead_bubble_coral_block.png" id="1_tt8ki"]
+
+[resource]
+resource_name = "minecraft_block-dead_bubble_coral_block"
+cull_mode = 2
+albedo_texture = ExtResource("1_tt8ki")

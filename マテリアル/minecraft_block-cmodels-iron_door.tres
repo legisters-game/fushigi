@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dqq61hv4t3hef"]
+
+[ext_resource type="Texture2D" uid="uid://dka7m2l7q65an" path="res://1/都市3d仮_iron_door.png" id="1_acev6"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-iron_door"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_acev6")

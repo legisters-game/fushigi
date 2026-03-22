@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dw5y6ecuon86f"]
+
+[resource]
+resource_name = "minecraft_block-melon_top"
+cull_mode = 2

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c066j2dioelbe"]
+
+[ext_resource type="Texture2D" uid="uid://1ppwshgjcmlf" path="res://1/都市3d仮_chain.png" id="1_ian3c"]
+
+[resource]
+resource_name = "minecraft_block-chain"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ian3c")

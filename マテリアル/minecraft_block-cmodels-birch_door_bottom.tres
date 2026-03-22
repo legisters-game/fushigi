@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://6bar2vaqyqbe"]
+
+[ext_resource type="Texture2D" uid="uid://cfurhhxrbqdyp" path="res://1/都市3d仮_birch_door_bottom.png" id="1_dfntv"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-birch_door_bottom"
+cull_mode = 2
+albedo_texture = ExtResource("1_dfntv")

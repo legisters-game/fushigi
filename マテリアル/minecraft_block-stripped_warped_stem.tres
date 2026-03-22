@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d4eoanwfkeq41"]
+
+[ext_resource type="Texture2D" uid="uid://ykqtjklytfle" path="res://1/都市3d仮_stripped_warped_stem.png" id="1_3qaq3"]
+
+[resource]
+resource_name = "minecraft_block-stripped_warped_stem"
+cull_mode = 2
+albedo_texture = ExtResource("1_3qaq3")

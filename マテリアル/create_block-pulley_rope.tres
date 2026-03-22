@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://712rdmoadfj4"]
+
+[ext_resource type="Texture2D" uid="uid://djhefhptal7b6" path="res://1/都市3d仮_pulley_rope.png" id="1_3hple"]
+
+[resource]
+resource_name = "create_block-pulley_rope"
+cull_mode = 2
+albedo_texture = ExtResource("1_3hple")

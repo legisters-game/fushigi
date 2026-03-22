@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dsst7xdi5sbwi"]
+
+[ext_resource type="Texture2D" uid="uid://bdpe0e1skm6me" path="res://1/都市3d仮_slime_block.png" id="1_epnh3"]
+
+[resource]
+resource_name = "minecraft_block-slime_block"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_epnh3")

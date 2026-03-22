@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://by3xnk536pi65"]
+
+[ext_resource type="Texture2D" uid="uid://busmdm4xhh73e" path="res://1/都市3d仮_jungle_leaves1.png" id="1_q7p44"]
+
+[resource]
+resource_name = "minecraft_block-jungle_leaves-jungle_leaves1"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_q7p44")

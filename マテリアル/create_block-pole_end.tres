@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dummbnp2e6y4x"]
+
+[ext_resource type="Texture2D" uid="uid://en6nkf24mlla" path="res://1/都市3d仮_pole_end.png" id="1_xww30"]
+
+[resource]
+resource_name = "create_block-pole_end"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_xww30")

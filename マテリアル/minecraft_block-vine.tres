@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bj343eeoqyyst"]
+
+[ext_resource type="Texture2D" uid="uid://b0ebhqceyv7lg" path="res://1/都市3d仮_vine.png" id="1_kmkd8"]
+
+[resource]
+resource_name = "minecraft_block-vine"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_kmkd8")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bnsym45xakub7"]
+
+[ext_resource type="Texture2D" uid="uid://dul74m3pm1yhr" path="res://1/都市3d仮_red_concrete.png" id="1_lfga8"]
+
+[resource]
+resource_name = "minecraft_block-red_concrete"
+cull_mode = 2
+albedo_texture = ExtResource("1_lfga8")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bj4er6scfplk2"]
+
+[ext_resource type="Texture2D" uid="uid://c60v070mw5e3m" path="res://1/都市3d仮_red.png" id="1_trgr4"]
+
+[resource]
+resource_name = "minecraft_entity-bed-red"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_trgr4")

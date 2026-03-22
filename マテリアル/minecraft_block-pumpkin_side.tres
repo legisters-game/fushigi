@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bjekvobqd06g0"]
+
+[ext_resource type="Texture2D" uid="uid://85kgtkfac6fh" path="res://1/都市3d仮_pumpkin_side.png" id="1_644nu"]
+
+[resource]
+resource_name = "minecraft_block-pumpkin_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_644nu")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bbmvv7qgvqa0v"]
+
+[ext_resource type="Texture2D" uid="uid://byh7emhn54i3n" path="res://1/都市3d仮_Image.png" id="1_txpv6"]
+
+[resource]
+resource_name = "minecraft_block-composter_ready"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_txpv6")

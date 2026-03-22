@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bry4fbcfyvg03"]
+
+[ext_resource type="Texture2D" uid="uid://baqgkedwe2ss0" path="res://1/都市3d仮_light_lantern_caged_hanging.png" id="1_sgfnh"]
+
+[resource]
+resource_name = "extlights_block-light_lantern_caged_hanging"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_sgfnh")

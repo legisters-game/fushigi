@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bdiew4dwkpfcj"]
+
+[ext_resource type="Texture2D" uid="uid://b1w5khh2wsq22" path="res://1/都市3d仮_lime_concrete_powder.png" id="1_52yi7"]
+
+[resource]
+resource_name = "minecraft_block-lime_concrete_powder"
+cull_mode = 2
+albedo_texture = ExtResource("1_52yi7")

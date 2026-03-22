@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ddc1fya6hc3my"]
+
+[ext_resource type="Texture2D" uid="uid://ogwjs307w4d0" path="res://1/都市3d仮_tall_grass_bottom.png" id="1_lw8k5"]
+
+[resource]
+resource_name = "minecraft_block-tall_grass_bottom"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_lw8k5")

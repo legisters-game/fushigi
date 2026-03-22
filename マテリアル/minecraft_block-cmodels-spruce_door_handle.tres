@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vgjcbgfa7is"]
+
+[ext_resource type="Texture2D" uid="uid://biwu6ckvuohii" path="res://1/都市3d仮_spruce_door_handle.png" id="1_a4i1u"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-spruce_door_handle"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_a4i1u")

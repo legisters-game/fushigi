@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b3ycjsbwv1g80"]
+
+[ext_resource type="Texture2D" uid="uid://5ks3jmj3flnv" path="res://1/都市3d仮_xmas_leaves.png" id="1_py5lp"]
+
+[resource]
+resource_name = "extlights_block-xmas-xmas_leaves"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_py5lp")

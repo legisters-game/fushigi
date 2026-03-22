@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://di7haqr8yq11n"]
+
+[ext_resource type="Texture2D" uid="uid://c62yl360wt55k" path="res://1/都市3d仮_polished_basalt_top.png" id="1_332n4"]
+
+[resource]
+resource_name = "minecraft_block-polished_basalt_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_332n4")

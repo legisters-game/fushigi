@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbvik6frtuci0"]
+
+[ext_resource type="Texture2D" uid="uid://c4ln7pnd0wxxq" path="res://1/都市3d仮_bamboo_stalk.png" id="1_u5qpc"]
+
+[resource]
+resource_name = "minecraft_block-bamboo_stalk"
+cull_mode = 2
+albedo_texture = ExtResource("1_u5qpc")

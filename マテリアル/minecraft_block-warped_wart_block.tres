@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d1q3i0d2kj0na"]
+
+[ext_resource type="Texture2D" uid="uid://bv3fb6cf0ujq0" path="res://1/都市3d仮_warped_wart_block.png" id="1_yxrn3"]
+
+[resource]
+resource_name = "minecraft_block-warped_wart_block"
+cull_mode = 2
+albedo_texture = ExtResource("1_yxrn3")

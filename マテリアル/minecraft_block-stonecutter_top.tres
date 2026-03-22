@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dt42mesj7ebb7"]
+
+[ext_resource type="Texture2D" uid="uid://ngcctqgag8cf" path="res://1/都市3d仮_stonecutter_top.png" id="1_bm2e8"]
+
+[resource]
+resource_name = "minecraft_block-stonecutter_top"
+cull_mode = 2
+albedo_texture = ExtResource("1_bm2e8")

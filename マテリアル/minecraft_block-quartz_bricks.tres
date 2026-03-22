@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dki881l8ntuyt"]
+
+[ext_resource type="Texture2D" uid="uid://hegsuy8d6oh7" path="res://1/都市3d仮_quartz_bricks.png" id="1_yl68y"]
+
+[resource]
+resource_name = "minecraft_block-quartz_bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_yl68y")

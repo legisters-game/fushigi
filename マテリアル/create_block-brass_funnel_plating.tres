@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://q1ip8mqvs23k"]
+
+[ext_resource type="Texture2D" uid="uid://cmtcj0f7gs4gj" path="res://1/都市3d仮_brass_funnel_plating.png" id="1_qr3bn"]
+
+[resource]
+resource_name = "create_block-brass_funnel_plating"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_qr3bn")

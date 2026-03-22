@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bs5trkxnrc3os"]
+
+[ext_resource type="Texture2D" uid="uid://h1v0wpgjs1hh" path="res://1/都市3d仮_brass_funnel_tall.png" id="1_w7v2o"]
+
+[resource]
+resource_name = "create_block-brass_funnel_tall"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_w7v2o")

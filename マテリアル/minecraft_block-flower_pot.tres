@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c73u3sms8mci"]
+
+[ext_resource type="Texture2D" uid="uid://cq6lfvhgmrp5t" path="res://1/都市3d仮_flower_pot.png" id="1_mtadt"]
+
+[resource]
+resource_name = "minecraft_block-flower_pot"
+cull_mode = 2
+albedo_texture = ExtResource("1_mtadt")

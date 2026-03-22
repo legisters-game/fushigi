@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://kq7oqehxmaik"]
+
+[ext_resource type="Texture2D" uid="uid://ds5o18hvho02d" path="res://1/都市3d仮_bottom.png" id="1_o17jv"]
+
+[resource]
+resource_name = "create_block-seat-bottom"
+cull_mode = 2
+albedo_texture = ExtResource("1_o17jv")

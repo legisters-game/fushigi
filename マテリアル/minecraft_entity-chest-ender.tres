@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bq0lnrmkg2l8y"]
+
+[ext_resource type="Texture2D" uid="uid://da5r4vmxaists" path="res://1/都市3d仮_ender.png" id="1_jp8mf"]
+
+[resource]
+resource_name = "minecraft_entity-chest-ender"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_jp8mf")

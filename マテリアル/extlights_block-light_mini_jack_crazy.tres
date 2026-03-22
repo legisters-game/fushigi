@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c50761axxol5j"]
+
+[ext_resource type="Texture2D" uid="uid://d268pscox28rl" path="res://1/都市3d仮_light_mini_jack_crazy.png" id="1_psu77"]
+
+[resource]
+resource_name = "extlights_block-light_mini_jack_crazy"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_psu77")

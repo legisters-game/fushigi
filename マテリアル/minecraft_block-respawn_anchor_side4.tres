@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://r84w2awxd4cg"]
+
+[ext_resource type="Texture2D" uid="uid://bishf4f0ry41e" path="res://1/都市3d仮_respawn_anchor_side4.png" id="1_swdwh"]
+
+[resource]
+resource_name = "minecraft_block-respawn_anchor_side4"
+cull_mode = 2
+albedo_texture = ExtResource("1_swdwh")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0dt3hd8iaqb1"]
+
+[ext_resource type="Texture2D" uid="uid://bh0q7hfheae83" path="res://1/都市3d仮_redstone_antenna_powered.png" id="1_lc041"]
+
+[resource]
+resource_name = "create_block-redstone_antenna_powered"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_lc041")

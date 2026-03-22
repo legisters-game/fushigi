@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cdtvoab0a0h7c"]
+
+[ext_resource type="Texture2D" uid="uid://bk60jfon7uh2x" path="res://1/都市3d仮_composter_side.png" id="1_106ew"]
+
+[resource]
+resource_name = "minecraft_block-composter_side"
+cull_mode = 2
+albedo_texture = ExtResource("1_106ew")

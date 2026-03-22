@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://deepsgdnota0e"]
+
+[ext_resource type="Texture2D" uid="uid://bfspprieguvfh" path="res://1/都市3d仮_cyan_stained_glass_pane_top.png" id="1_3q4w7"]
+
+[resource]
+resource_name = "minecraft_block-cyan_stained_glass_pane_top"
+transparency = 4
+albedo_texture = ExtResource("1_3q4w7")
+roughness = 0.18
+texture_filter = 0

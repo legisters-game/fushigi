@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bx8nsf711ccij"]
+
+[ext_resource type="Texture2D" uid="uid://wwyea6sg7r77" path="res://1/都市3d仮_portable_storage_interface.png" id="1_gn0vl"]
+
+[resource]
+resource_name = "create_block-portable_storage_interface"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_gn0vl")

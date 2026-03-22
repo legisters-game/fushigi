@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3120vfu7lp8l"]
+
+[ext_resource type="Texture2D" uid="uid://bcxsrurqvbe0d" path="res://1/都市3d仮_ore_aluminum.png" id="1_18m12"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-ore_aluminum"
+cull_mode = 2
+albedo_texture = ExtResource("1_18m12")

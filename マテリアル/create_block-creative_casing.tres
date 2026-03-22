@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ce7o35v4m8d06"]
+
+[ext_resource type="Texture2D" uid="uid://br4ultbxuperk" path="res://1/都市3d仮_creative_casing.png" id="1_24drn"]
+
+[resource]
+resource_name = "create_block-creative_casing"
+cull_mode = 2
+albedo_texture = ExtResource("1_24drn")

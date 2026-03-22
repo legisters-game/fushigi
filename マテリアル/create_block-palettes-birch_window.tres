@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d1r5vrfxuj7vo"]
+
+[ext_resource type="Texture2D" uid="uid://boas8elhiy1f7" path="res://1/都市3d仮_birch_window.png" id="1_qmnsk"]
+
+[resource]
+resource_name = "create_block-palettes-birch_window"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_qmnsk")

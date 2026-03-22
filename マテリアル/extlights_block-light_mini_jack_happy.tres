@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ca1j8sljnuwns"]
+
+[ext_resource type="Texture2D" uid="uid://cya61gmrhdxrj" path="res://1/都市3d仮_light_mini_jack_happy.png" id="1_xc7mw"]
+
+[resource]
+resource_name = "extlights_block-light_mini_jack_happy"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_xc7mw")

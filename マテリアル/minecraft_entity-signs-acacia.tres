@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b04gv0bcjj7et"]
+
+[ext_resource type="Texture2D" uid="uid://mq7n0rmc3k5p" path="res://1/都市3d仮_acacia.png" id="1_p4368"]
+
+[resource]
+resource_name = "minecraft_entity-signs-acacia"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_p4368")

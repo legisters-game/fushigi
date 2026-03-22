@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b043fx3rbqgu0"]
+
+[ext_resource type="Texture2D" uid="uid://c2wg4p7vb5cq8" path="res://1/都市3d仮_alloybrick.png" id="1_wfq1p"]
+
+[resource]
+resource_name = "immersiveengineering_block-stone_decoration-alloybrick"
+cull_mode = 2
+albedo_texture = ExtResource("1_wfq1p")

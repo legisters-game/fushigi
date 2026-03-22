@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://btevjlx0jq0f4"]
+
+[ext_resource type="Texture2D" uid="uid://deapkmoba5jv8" path="res://1/都市3d仮_crimson.png" id="1_0rp6l"]
+
+[resource]
+resource_name = "minecraft_entity-signs-crimson"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_0rp6l")

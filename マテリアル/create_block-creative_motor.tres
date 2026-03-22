@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c2hnpuol786je"]
+
+[ext_resource type="Texture2D" uid="uid://djc1hjny2d6w7" path="res://1/都市3d仮_creative_motor.png" id="1_x63gq"]
+
+[resource]
+resource_name = "create_block-creative_motor"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_x63gq")

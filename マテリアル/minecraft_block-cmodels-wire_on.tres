@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dngne4lty66v3"]
+
+[ext_resource type="Texture2D" uid="uid://h7843qstewip" path="res://1/都市3d仮_wire_on.png" id="1_52rt2"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-wire_on"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_52rt2")

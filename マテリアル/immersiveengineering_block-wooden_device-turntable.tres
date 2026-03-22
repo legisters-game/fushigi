@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b5wqyo266rt7p"]
+
+[ext_resource type="Texture2D" uid="uid://d27ddvg8rnhd7" path="res://1/都市3d仮_turntable.png" id="1_ae8co"]
+
+[resource]
+resource_name = "immersiveengineering_block-wooden_device-turntable"
+cull_mode = 2
+albedo_texture = ExtResource("1_ae8co")

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://mhkmhrkg5l03"]
+
+[ext_resource type="PackedScene" uid="uid://hm4tebkys0nm" path="res://1/都市3d仮.glb" id="1_noarx"]
+[ext_resource type="PackedScene" uid="uid://bcvfyiunqmt1g" path="res://character_body_3d.tscn" id="2_a0tk4"]
+[ext_resource type="PackedScene" uid="uid://5q3lbg47s4eq" path="res://307/都市3d.glb" id="3_a0tk4"]
+[ext_resource type="PackedScene" uid="uid://cc6148e1sl2ls" path="res://new folder/都市3d.glb" id="4_r3fl7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_noarx"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_a0tk4"]
+sky_material = SubResource("ProceduralSkyMaterial_noarx")
+
+[sub_resource type="Environment" id="Environment_r3fl7"]
+background_mode = 2
+sky = SubResource("Sky_a0tk4")
+ambient_light_source = 3
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_exposure = 1.26
+tonemap_agx_contrast = 1.23
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+sdfgi_bounce_feedback = 1.99
+sdfgi_min_cell_size = 94.65
+sdfgi_energy = 1.11
+sdfgi_probe_bias = 0.68
+glow_enabled = true
+glow_intensity = 0.78
+glow_strength = 0.78
+fog_height_density = -0.015
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_r3fl7"]
+plane = Plane(0, 0.225, 0, 0)
+
+[node name="Node3D" type="Node3D" unique_id=2085154183]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=693448937]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1401484149]
+environment = SubResource("Environment_r3fl7")
+
+[node name="都市3d仮" parent="." unique_id=966574779 instance=ExtResource("1_noarx")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -35.094, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="都市3d仮" unique_id=1210629666]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="都市3d仮/StaticBody3D" unique_id=162170007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1226737, 0)
+shape = SubResource("WorldBoundaryShape3D_r3fl7")
+
+[node name="CharacterBody3D" parent="." unique_id=2029851909 instance=ExtResource("2_a0tk4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.359913, -2.9849746, 1.4641917)
+
+[node name="都市3d" parent="." unique_id=1501536199 instance=ExtResource("3_a0tk4")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -35.094, 0)
+visible = false
+
+[node name="都市3d" parent="都市3d" unique_id=1666604076 instance=ExtResource("4_r3fl7")]
+visible = false
+
+[editable path="都市3d仮"]

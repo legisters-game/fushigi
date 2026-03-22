@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://brtl8rmxpti2x"]
+
+[ext_resource type="Texture2D" uid="uid://daytvrbnsbsni" path="res://1/都市3d仮_crafter_side.png" id="1_y5lng"]
+
+[resource]
+resource_name = "create_block-crafter_side"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_y5lng")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bed0k6401holk"]
+
+[ext_resource type="Texture2D" uid="uid://dgjekf1lsx44o" path="res://1/都市3d仮_poppy.png" id="1_8xf8a"]
+
+[resource]
+resource_name = "minecraft_block-cmodels-poppy"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_8xf8a")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bnql7ydqvh186"]
+
+[ext_resource type="Texture2D" uid="uid://c101pl1x14kjd" path="res://1/都市3d仮_thermoelectric_gen_side.png" id="1_dysbu"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_device-thermoelectric_gen_sid"
+cull_mode = 2
+albedo_texture = ExtResource("1_dysbu")

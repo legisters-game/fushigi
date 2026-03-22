@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://chibaemje44n7"]
+
+[ext_resource type="Texture2D" uid="uid://dinbvmu3jnfoj" path="res://1/都市3d仮_cracked_stone_bricks.png" id="1_1gy3q"]
+
+[resource]
+resource_name = "minecraft_block-cracked_stone_bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_1gy3q")

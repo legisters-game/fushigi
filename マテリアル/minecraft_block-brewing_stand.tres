@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dc7nn2sam7saj"]
+
+[ext_resource type="Texture2D" uid="uid://2tqjhn8ieyl7" path="res://1/都市3d仮_brewing_stand.png" id="1_fiedj"]
+
+[resource]
+resource_name = "minecraft_block-brewing_stand"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_fiedj")

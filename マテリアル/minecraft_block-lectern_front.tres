@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cso28g32y45eu"]
+
+[ext_resource type="Texture2D" uid="uid://dw8tf7wpu6r6m" path="res://1/都市3d仮_lectern_front.png" id="1_uy5h3"]
+
+[resource]
+resource_name = "minecraft_block-lectern_front"
+cull_mode = 2
+albedo_texture = ExtResource("1_uy5h3")

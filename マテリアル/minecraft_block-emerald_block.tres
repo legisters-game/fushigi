@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvcnwcllhggae"]
+
+[ext_resource type="Texture2D" uid="uid://ce34k680e8rdk" path="res://1/都市3d仮_emerald_block.png" id="1_3qoys"]
+
+[resource]
+resource_name = "minecraft_block-emerald_block"
+cull_mode = 2
+albedo_texture = ExtResource("1_3qoys")
