@@ -3,7 +3,8 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-
+const 感度:float=5
+var 視点回転:Vector2
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -26,3 +27,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	rotation_degrees.y-=視点回転.x*delta*感度
+	視点回転=Vector2.ZERO
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		var マウス:InputEventMouseMotion=event
+		視点回転=マウス.screen_relative
+	

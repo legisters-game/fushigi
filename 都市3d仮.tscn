@@ -1,5 +1,3 @@
 [gd_scene format=3 uid="uid://cy0l8nj7rrfm2"]
 
-[ext_resource type="PackedScene" uid="uid://hm4tebkys0nm" path="res://1/都市3d仮.glb" id="1_pabuj"]
-
-[node name="都市3d仮" unique_id=1304822749 instance=ExtResource("1_pabuj")]
+[node name="都市3d仮" unique_id=1304822749]
