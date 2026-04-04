@@ -231,7 +231,6 @@ sdfgi_bounce_feedback = 1.99
 sdfgi_min_cell_size = 94.65
 sdfgi_energy = 1.11
 sdfgi_probe_bias = 0.68
-glow_enabled = true
 glow_intensity = 0.78
 glow_strength = 0.78
 fog_height_density = -0.015
@@ -239,11 +238,14 @@ fog_height_density = -0.015
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_r3fl7"]
 plane = Plane(0, 0.225, 0, 0)
 
+[sub_resource type="InputEventKey" id="InputEventKey_1a2ec"]
+device = -1
+keycode = 4194305
+
 [node name="Node3D" type="Node3D" unique_id=2085154183]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=693448937]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-visible = false
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1401484149]
@@ -300,7 +302,6 @@ transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 45.87
 
 [node name="960,-592,a" type="MeshInstance3D" parent="都市3d仮/960,-592,a_Chunk" unique_id=1408343246]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
-visible = false
 mesh = ExtResource("6_yj0qq")
 
 [node name="960,-624,a_Chunk" parent="都市3d仮" unique_id=589814032 instance=ExtResource("2_1a2ec")]
@@ -577,7 +578,6 @@ transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 1.2, -7.151843, 0, 4.95931)
 
 [node name="-112,144,a" type="MeshInstance3D" parent="都市3d仮/-112,144,a_Chunk" unique_id=1146654627]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
-visible = false
 mesh = ExtResource("29_cvbb6")
 
 [node name="-112,176,a_Chunk" parent="都市3d仮" unique_id=1124898643 instance=ExtResource("2_1a2ec")]
@@ -1010,7 +1010,6 @@ transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, 0.5864461, 0, -19.222343)
 
 [node name="80,-336,a" type="MeshInstance3D" parent="都市3d仮/80,-336,a_Chunk" unique_id=1388312284]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
-visible = false
 mesh = ExtResource("65_moaka")
 
 [node name="80,-384,a_Chunk" parent="都市3d仮" unique_id=2068607649 instance=ExtResource("2_1a2ec")]
@@ -1368,6 +1367,7 @@ metadata/_edit_lock_ = true
 
 [node name="Area3D" parent="都市3d仮/176,896,a_Chunk" index="0" unique_id=250931451]
 transform = Transform3D(1.3999996, 0, 0, 0, 0.9999998, 0, 0, 0, 1.0999997, 4.539899, 0, 42.691055)
+visible = false
 
 [node name="176,896,a" type="MeshInstance3D" parent="都市3d仮/176,896,a_Chunk" unique_id=101976093]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
@@ -1506,594 +1506,1190 @@ transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("106_mrf1b")
 
 [node name="256,-32,a_Chunk" parent="都市3d仮" unique_id=1080783319 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/256,-32,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.017258, 0, -2.3404548)
 
 [node name="256,-32,a" type="MeshInstance3D" parent="都市3d仮/256,-32,a_Chunk" unique_id=1821224803]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("107_jgltv")
 
 [node name="256,-160,a_Chunk" parent="都市3d仮" unique_id=1124889705 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/256,-160,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.555, 0, 0, 0, 1, 0, 0, 0, 1, 10.909243, 0, -8.685434)
 
 [node name="256,-160,a" type="MeshInstance3D" parent="都市3d仮/256,-160,a_Chunk" unique_id=1541575083]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("108_fexos")
 
 [node name="256,-256,a_Chunk" parent="都市3d仮" unique_id=1868913244 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/256,-256,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.359766, 0, -14.328152)
 
 [node name="256,-256,a" type="MeshInstance3D" parent="都市3d仮/256,-256,a_Chunk" unique_id=1025438632]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("109_4y0c6")
 
 [node name="256,688,a_Chunk" parent="都市3d仮" unique_id=983932355 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/256,688,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.605, 5.590803, 0, 31.704926)
 
 [node name="256,688,a" type="MeshInstance3D" parent="都市3d仮/256,688,a_Chunk" unique_id=1193999548]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("110_u54e6")
 
 [node name="272,-32,a_Chunk" parent="都市3d仮" unique_id=1687363529 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/272,-32,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(0.57, 0, 0, 0, 1, 0, 0, 0, 0.81, 13.2693, 0, -3.5963078)
 
 [node name="272,-32,a" type="MeshInstance3D" parent="都市3d仮/272,-32,a_Chunk" unique_id=693508995]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("111_72b5q")
 
 [node name="272,192,a_Chunk" parent="都市3d仮" unique_id=609163735 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/272,192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.345, 9.68313, 0, 7.4686365)
 
 [node name="272,192,a" type="MeshInstance3D" parent="都市3d仮/272,192,a_Chunk" unique_id=266313785]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("112_q7ypw")
 
 [node name="304,208,a_Chunk" parent="都市3d仮" unique_id=153045177 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/304,208,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(0.59, 0, 0, 0, 1, 0, 0, 0, 0.31, 13.985649, 0, 9.98975)
 
 [node name="304,208,a" type="MeshInstance3D" parent="都市3d仮/304,208,a_Chunk" unique_id=1643443596]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("113_be20v")
 
 [node name="320,48,a_Chunk" parent="都市3d仮" unique_id=1200955800 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/320,48,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.672711, 0, -1.5412774)
 
 [node name="320,48,a" type="MeshInstance3D" parent="都市3d仮/320,48,a_Chunk" unique_id=1295980359]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("114_b0amg")
 
 [node name="320,96,a_Chunk" parent="都市3d仮" unique_id=335026937 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/320,96,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.705, 0, 0, 0, 1, 0, 0, 0, 0.615, 12.958132, 0, 3.8817315)
 
 [node name="320,96,a" type="MeshInstance3D" parent="都市3d仮/320,96,a_Chunk" unique_id=813899855]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("115_a5bcx")
 
 [node name="320,144,a_Chunk" parent="都市3d仮" unique_id=1573851782 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/320,144,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(0.99, 0, 0, 0, 1, 0, 0, 0, 0.35, 14.442331, 0, 5.708428)
 
 [node name="320,144,a" type="MeshInstance3D" parent="都市3d仮/320,144,a_Chunk" unique_id=738749643]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("116_4dyme")
 
 [node name="320,192,a_Chunk" parent="都市3d仮" unique_id=2132793895 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/320,192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(0.76, 0, 0, 0, 1, 0, 0, 0, 0.785, 13.186468, 0, 9.247652)
 
 [node name="320,192,a" type="MeshInstance3D" parent="都市3d仮/320,192,a_Chunk" unique_id=1889256227]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("117_4k1f5")
 
 [node name="336,-192,a_Chunk" parent="都市3d仮" unique_id=1409415756 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/336,-192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.017267, 0, -11.416857)
 
 [node name="336,-192,a" type="MeshInstance3D" parent="都市3d仮/336,-192,a_Chunk" unique_id=1686292725]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("118_b8u5y")
 
 [node name="336,-256,a_Chunk" parent="都市3d仮" unique_id=885357350 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/336,-256,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.69, 0, 0, 0, 1, 0, 0, 0, 1.49, 14.5564995, 0, -14.328158)
 
 [node name="336,-256,a" type="MeshInstance3D" parent="都市3d仮/336,-256,a_Chunk" unique_id=660260626]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("119_qgx4s")
 
 [node name="336,-304,a_Chunk" parent="都市3d仮" unique_id=630249839 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/336,-304,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.795, 0, 0, 0, 1, 0, 0, 0, 1.575, 14.581715, 0, -20.574203)
 
 [node name="336,-304,a" type="MeshInstance3D" parent="都市3d仮/336,-304,a_Chunk" unique_id=63901611]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("120_mvgnj")
 
 [node name="368,-32,a_Chunk" parent="都市3d仮" unique_id=1294717424 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/368,-32,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.355213, 0, -3.3005655)
 
 [node name="368,-32,a" type="MeshInstance3D" parent="都市3d仮/368,-32,a_Chunk" unique_id=1909562805]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("121_6ak6d")
 
 [node name="368,-96,a_Chunk" parent="都市3d仮" unique_id=386040233 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/368,-96,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.127327, 0, -5.308834)
 
 [node name="368,-96,a" type="MeshInstance3D" parent="都市3d仮/368,-96,a_Chunk" unique_id=371470069]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("122_61k1b")
 
 [node name="368,-128,a_Chunk" parent="都市3d仮" unique_id=725799432 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/368,-128,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.465, 0, 0, 0, 1, 0, 0, 0, 1.455, 15.308956, 0, -8.760788)
 
 [node name="368,-128,a" type="MeshInstance3D" parent="都市3d仮/368,-128,a_Chunk" unique_id=770241223]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("123_vbyfh")
 
 [node name="368,32,a_Chunk" parent="都市3d仮" unique_id=965802567 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/368,32,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.145, 0, 0, 0, 1, 0, 0, 0, 1.215, 15.01317, 0, -0.6279278)
 
 [node name="368,32,a" type="MeshInstance3D" parent="都市3d仮/368,32,a_Chunk" unique_id=1040933937]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("124_0mqsc")
 
 [node name="384,128,a_Chunk" parent="都市3d仮" unique_id=850072308 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/384,128,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.54, 0, 0, 0, 1, 0, 0, 0, 1.775, 12.729797, 0, 5.5371776)
 
 [node name="384,128,a" type="MeshInstance3D" parent="都市3d仮/384,128,a_Chunk" unique_id=1752973038]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("125_6ll8n")
 
 [node name="384,192,a_Chunk" parent="都市3d仮" unique_id=1646675569 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/384,192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.17, 12.615635, 0, 8.334311)
 
 [node name="384,192,a" type="MeshInstance3D" parent="都市3d仮/384,192,a_Chunk" unique_id=1412755408]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("126_r17jp")
 
 [node name="400,96,a_Chunk" parent="都市3d仮" unique_id=1987733948 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/400,96,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.04, 0, 0, 0, 1, 0, 0, 0, 1, 17.31878, 0, 3.1065083)
 
 [node name="400,96,a" type="MeshInstance3D" parent="都市3d仮/400,96,a_Chunk" unique_id=253196142]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("127_3qw6a")
 
 [node name="400,192,a_Chunk" parent="都市3d仮" unique_id=497710954 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/400,192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.26, 0, 0, 0, 1, 0, 0, 0, 1.585, 14.790123, 0, 7.891964)
 
 [node name="400,192,a" type="MeshInstance3D" parent="都市3d仮/400,192,a_Chunk" unique_id=1250464029]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("128_uo644")
 
 [node name="400,304,a_Chunk" parent="都市3d仮" unique_id=131399900 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/400,304,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(0.475, 0, 0, 0, 1, 0, 0, 0, 1, 17.011097, 0, 11.017256)
 
 [node name="400,304,a" type="MeshInstance3D" parent="都市3d仮/400,304,a_Chunk" unique_id=1661155880]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("129_oso6l")
 
 [node name="432,-192,a_Chunk" parent="都市3d仮" unique_id=1659713171 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/432,-192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.595, 0, 0, 0, 1, 0, 0, 0, 1.485, 19.303322, 0, -14.270871)
 
 [node name="432,-192,a" type="MeshInstance3D" parent="都市3d仮/432,-192,a_Chunk" unique_id=132689766]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("130_okx53")
 
 [node name="448,-288,a_Chunk" parent="都市3d仮" unique_id=707119810 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/448,-288,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.74, 0, 0, 0, 1, 0, 0, 0, 1.45, 19.042753, 0, -18.909588)
 
 [node name="448,-288,a" type="MeshInstance3D" parent="都市3d仮/448,-288,a_Chunk" unique_id=1823230059]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("131_hdb61")
 
 [node name="448,-432,a_Chunk" parent="都市3d仮" unique_id=1434552717 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/448,-432,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.765, 0, 0, 0, 1, 0, 0, 0, 1, 14.156271, 0, -22.90204)
 
 [node name="448,-432,a" type="MeshInstance3D" parent="都市3d仮/448,-432,a_Chunk" unique_id=1837824349]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("132_h4rsl")
 
 [node name="464,-128,a_Chunk" parent="都市3d仮" unique_id=1089035088 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/464,-128,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.35, 0, 0, 0, 1, 0, 0, 0, 1, 19.086733, 0, -9.239728)
 
 [node name="464,-128,a" type="MeshInstance3D" parent="都市3d仮/464,-128,a_Chunk" unique_id=1477264638]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("133_pamb8")
 
 [node name="464,32,a_Chunk" parent="都市3d仮" unique_id=1391566181 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/464,32,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.75, 0, 0, 0, 1, 0, 0, 0, 1.23, 19.465738, 0, -1.7696128)
 
 [node name="464,32,a" type="MeshInstance3D" parent="都市3d仮/464,32,a_Chunk" unique_id=462695821]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("134_0ie8i")
 
 [node name="480,-512,a_Chunk" parent="都市3d仮" unique_id=1361579704 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/480,-512,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.29, 0, 0, 0, 1, 0, 0, 0, 1.56, 18.540686, 0, -28.615095)
 
 [node name="480,-512,a" type="MeshInstance3D" parent="都市3d仮/480,-512,a_Chunk" unique_id=2065642529]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = ExtResource("135_nm5yw")
 
 [node name="480,96,a_Chunk" parent="都市3d仮" unique_id=1665109997 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/480,96,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.34, 0, 0, 0, 1, 0, 0, 0, 1, 21.758453, 0, 3.0254645)
 
 [node name="480,96,a" type="MeshInstance3D" parent="都市3d仮/480,96,a_Chunk" unique_id=1165865106]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("136_t2sxt")
 
 [node name="496,-48,a_Chunk" parent="都市3d仮" unique_id=1612987686 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/496,-48,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.604132, 0, -3.6692195)
 
 [node name="496,-48,a" type="MeshInstance3D" parent="都市3d仮/496,-48,a_Chunk" unique_id=2021243601]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("137_ot6du")
 
 [node name="528,-192,a_Chunk" parent="都市3d仮" unique_id=790752847 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/528,-192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.31, 0, 0, 0, 1, 0, 0, 0, 1.2, 23.879, 0, -13.528)
 
 [node name="528,-192,a" type="MeshInstance3D" parent="都市3d仮/528,-192,a_Chunk" unique_id=1509648057]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("138_dcrmj")
 
 [node name="528,-560,a_Chunk" parent="都市3d仮" unique_id=1928979506 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/528,-560,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(3.355, 0, 0, 0, 1, 0, 0, 0, 1.725, 18.117, 0, -28.534)
 
 [node name="528,-560,a" type="MeshInstance3D" parent="都市3d仮/528,-560,a_Chunk" unique_id=702790036]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("139_qkwf6")
 
 [node name="544,-16,a_Chunk" parent="都市3d仮" unique_id=1130094189 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/544,-16,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.32, 0, 0, 0, 1, 0, 0, 0, 1, 25.17944, 0, -1.5006113)
 
 [node name="544,-16,a" type="MeshInstance3D" parent="都市3d仮/544,-16,a_Chunk" unique_id=1630597897]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("140_232xb")
 
 [node name="544,-48,a_Chunk" parent="都市3d仮" unique_id=177799631 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/544,-48,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.18, 0, 0, 0, 1, 0, 0, 0, 1, 26.009798, 0, -2.8566554)
 
 [node name="544,-48,a" type="MeshInstance3D" parent="都市3d仮/544,-48,a_Chunk" unique_id=1690274790]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("141_oko6p")
 
 [node name="544,-96,a_Chunk" parent="都市3d仮" unique_id=1662934482 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/544,-96,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.26, 0, 0, 0, 1, 0, 0, 0, 1, 25.168707, 0, -5.6494856)
 
 [node name="544,-96,a" type="MeshInstance3D" parent="都市3d仮/544,-96,a_Chunk" unique_id=2036148058]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("142_kv0tr")
 
 [node name="544,32,a_Chunk" parent="都市3d仮" unique_id=278346992 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/544,32,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.4, 0, 0, 0, 1, 0, 0, 0, 1, 25.240305, 0, -1.1328821)
 
 [node name="544,32,a" type="MeshInstance3D" parent="都市3d仮/544,32,a_Chunk" unique_id=1558214913]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("143_oa3ww")
 
 [node name="560,96,a_Chunk" parent="都市3d仮" unique_id=1876711707 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/560,96,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.345, 0, 0, 0, 1, 0, 0, 0, 1, 26.672554, 0, -0.6475105)
 
 [node name="560,96,a" type="MeshInstance3D" parent="都市3d仮/560,96,a_Chunk" unique_id=1293096537]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("144_kqxut")
 
 [node name="576,320,a_Chunk" parent="都市3d仮" unique_id=1283958543 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/576,320,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.30283, 0, 9.388214)
 
 [node name="576,320,a" type="MeshInstance3D" parent="都市3d仮/576,320,a_Chunk" unique_id=334926967]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("145_i1fvb")
 
 [node name="592,-288,a_Chunk" parent="都市3d仮" unique_id=939606799 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/592,-288,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.87, 0, 0, 0, 1, 0, 0, 0, 1.13, 25.859173, 0, -17.624493)
 
 [node name="592,-288,a" type="MeshInstance3D" parent="都市3d仮/592,-288,a_Chunk" unique_id=1378003884]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("146_npnd8")
 
 [node name="592,128,a_Chunk" parent="都市3d仮" unique_id=511558232 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/592,128,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.69, 0, 0, 0, 1, 0, 0, 0, 1.365, 22.75738, 0, 4.6982965)
 
 [node name="592,128,a" type="MeshInstance3D" parent="都市3d仮/592,128,a_Chunk" unique_id=1162333566]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("147_o4yfc")
 
 [node name="592,288,a_Chunk" parent="都市3d仮" unique_id=962789133 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/592,288,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(0.895, 0, 0, 0, 1, 0, 0, 0, 1.42, 28.735828, 0, 10.520139)
 
 [node name="592,288,a" type="MeshInstance3D" parent="都市3d仮/592,288,a_Chunk" unique_id=471971056]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("148_yu5nv")
 
 [node name="608,-160,a_Chunk" parent="都市3d仮" unique_id=1055666144 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/608,-160,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.46, 0, 0, 0, 1, 0, 0, 0, 1.055, 24.490313, 0, -8.967984)
 
 [node name="608,-160,a" type="MeshInstance3D" parent="都市3d仮/608,-160,a_Chunk" unique_id=137225005]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("149_dr0vr")
 
 [node name="608,32,a_Chunk" parent="都市3d仮" unique_id=713386877 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/608,32,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.12, 0, 0, 0, 1, 0, 0, 0, 1.345, 27.327572, 0, -4.59424)
 
 [node name="608,32,a" type="MeshInstance3D" parent="都市3d仮/608,32,a_Chunk" unique_id=809619618]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("150_p1gxy")
 
 [node name="640,96,a_Chunk" parent="都市3d仮" unique_id=233347997 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/640,96,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.305, 0, 0, 0, 1, 0, 0, 0, 1, 29.1185, 0, 3.062828)
 
 [node name="640,96,a" type="MeshInstance3D" parent="都市3d仮/640,96,a_Chunk" unique_id=1778971781]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("151_rm330")
 
 [node name="640,256,a_Chunk" parent="都市3d仮" unique_id=1152777258 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/640,256,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(0.645, 0, 0, 0, 1, 0, 0, 0, 1.205, 29.898485, 0, 8.956148)
 
 [node name="640,256,a" type="MeshInstance3D" parent="都市3d仮/640,256,a_Chunk" unique_id=1711798207]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("152_uxm2j")
 
 [node name="656,-192,a_Chunk" parent="都市3d仮" unique_id=1953066771 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/656,-192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.735, 0, 0, 0, 1, 0, 0, 0, 1, 28.837353, 0, -12.527765)
 
 [node name="656,-192,a" type="MeshInstance3D" parent="都市3d仮/656,-192,a_Chunk" unique_id=211850524]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("153_8k0y7")
 
 [node name="672,-512,a_Chunk" parent="都市3d仮" unique_id=801141828 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/672,-512,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.72, 0, 0, 0, 1, 0, 0, 0, 1.255, 28.435333, 0, -30.276115)
 
 [node name="672,-512,a" type="MeshInstance3D" parent="都市3d仮/672,-512,a_Chunk" unique_id=299493862]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = ExtResource("154_l2hdh")
 
 [node name="704,-48,a_Chunk" parent="都市3d仮" unique_id=656553463 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/704,-48,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.115, 0, 0, 0, 1, 0, 0, 0, 1.345, 32.159622, 0, -4.2613134)
 
 [node name="704,-48,a" type="MeshInstance3D" parent="都市3d仮/704,-48,a_Chunk" unique_id=527596025]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("155_falve")
 
 [node name="704,-400,a_Chunk" parent="都市3d仮" unique_id=1370457436 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/704,-400,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.75, 0, 0, 0, 1, 0, 0, 0, 1.475, 27.809748, 0, -21.921692)
 
 [node name="704,-400,a" type="MeshInstance3D" parent="都市3d仮/704,-400,a_Chunk" unique_id=1361692784]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("156_fqs3m")
 
 [node name="704,-480,a_Chunk" parent="都市3d仮" unique_id=2019164707 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/704,-480,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.345, 0, 0, 0, 1, 0, 0, 0, 1.385, 26.915901, 0, -24.6337)
 
 [node name="704,-480,a" type="MeshInstance3D" parent="都市3d仮/704,-480,a_Chunk" unique_id=305845490]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("157_btfrn")
 
 [node name="704,224,a_Chunk" parent="都市3d仮" unique_id=1045518279 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/704,224,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.245, 0, 0, 0, 1, 0, 0, 0, 1, 32.610092, 0, 7.2226086)
 
 [node name="704,224,a" type="MeshInstance3D" parent="都市3d仮/704,224,a_Chunk" unique_id=222711658]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("158_mylof")
 
 [node name="704,288,a_Chunk" parent="都市3d仮" unique_id=8213351 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/704,288,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.715, 0, 0, 0, 1, 0, 0, 0, 1.205, 33.51666, 0, 13.04432)
 
 [node name="704,288,a" type="MeshInstance3D" parent="都市3d仮/704,288,a_Chunk" unique_id=1963330232]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("159_a3crp")
 
 [node name="784,32,a_Chunk" parent="都市3d仮" unique_id=2119887711 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/784,32,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.99, 0, 0, 0, 1, 0, 0, 0, 1.145, 33.88054, 0, 0)
 
 [node name="784,32,a" type="MeshInstance3D" parent="都市3d仮/784,32,a_Chunk" unique_id=1871332027]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("160_nht0l")
 
 [node name="800,-48,a_Chunk" parent="都市3d仮" unique_id=1057781896 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/800,-48,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.515, 0, 0, 0, 1, 0, 0, 0, 1.245, 38.485054, 0, -4.1281505)
 
 [node name="800,-48,a" type="MeshInstance3D" parent="都市3d仮/800,-48,a_Chunk" unique_id=1521885197]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("161_6ha4k")
 
 [node name="800,96,a_Chunk" parent="都市3d仮" unique_id=1398945140 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/800,96,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.895, 0, 0, 0, 1, 0, 0, 0, 1, 34.413513, 0, 1.9782233)
 
 [node name="800,96,a" type="MeshInstance3D" parent="都市3d仮/800,96,a_Chunk" unique_id=1369699721]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("162_7ntav")
 
 [node name="800,192,a_Chunk" parent="都市3d仮" unique_id=530832882 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/800,192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.325, 0, 0, 0, 1, 0, 0, 0, 1.4, 37.2004, 0, 7.2160797)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="800,192,a" type="MeshInstance3D" parent="都市3d仮/800,192,a_Chunk" unique_id=256743783]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("163_bj6pm")
 
 [node name="800,288,a_Chunk" parent="都市3d仮" unique_id=103836537 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/800,288,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.76, 0, 0, 0, 1, 0, 0, 0, 1.205, 39.094193, 0, 13.316607)
 
 [node name="800,288,a" type="MeshInstance3D" parent="都市3d仮/800,288,a_Chunk" unique_id=500803902]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("164_4hu7t")
 
 [node name="832,-192,a_Chunk" parent="都市3d仮" unique_id=1304470846 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/832,-192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.84, 0, 0, 0, 1, 0, 0, 0, 1.135, 36.054535, 0, -15.812866)
 
 [node name="832,-192,a" type="MeshInstance3D" parent="都市3d仮/832,-192,a_Chunk" unique_id=331547931]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("165_gb0hf")
 
 [node name="832,-288,a_Chunk" parent="都市3d仮" unique_id=1964147792 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/832,-288,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.145, 0, 0, 0, 1, 0, 0, 0, 1.13, 30.10191, 0, -16.962242)
 
 [node name="832,-288,a" type="MeshInstance3D" parent="都市3d仮/832,-288,a_Chunk" unique_id=1460974313]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("166_vv47l")
 
 [node name="832,-560,a_Chunk" parent="都市3d仮" unique_id=1545319612 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/832,-560,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(3.035, 0, 0, 0, 1, 0, 0, 0, 1.29, 19.336712, 0, -31.713009)
 
 [node name="832,-560,a" type="MeshInstance3D" parent="都市3d仮/832,-560,a_Chunk" unique_id=255164651]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("167_n1mwd")
 
 [node name="864,-48,a_Chunk" parent="都市3d仮" unique_id=250793527 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/864,-48,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.41, 0, 0, 0, 1, 0, 0, 0, 1, 41.300255, 0, -3.1121302)
 
 [node name="864,-48,a" type="MeshInstance3D" parent="都市3d仮/864,-48,a_Chunk" unique_id=347826829]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("168_usqxw")
 
 [node name="880,-480,a_Chunk" parent="都市3d仮" unique_id=284377422 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/880,-480,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.67, 0, 0, 0, 1, 0, 0, 0, 1, 38.784237, 0, -24.785862)
 
 [node name="880,-480,a" type="MeshInstance3D" parent="都市3d仮/880,-480,a_Chunk" unique_id=1716570352]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("169_5r44h")
 
 [node name="880,-512,a_Chunk" parent="都市3d仮" unique_id=424857107 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/880,-512,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.275, 0, 0, 0, 1, 0, 0, 0, 1.81, 35.261013, 0, -31.885633)
 
 [node name="880,-512,a" type="MeshInstance3D" parent="都市3d仮/880,-512,a_Chunk" unique_id=1858237401]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("170_43ww6")
 
 [node name="896,-560,a_Chunk" parent="都市3d仮" unique_id=1885166449 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/896,-560,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.31, 0, 0, 0, 1, 0, 0, 0, 1.105, 43.423687, 0, -29.621458)
 
 [node name="896,-560,a" type="MeshInstance3D" parent="都市3d仮/896,-560,a_Chunk" unique_id=991471196]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("171_ooglx")
 
 [node name="928,-192,a_Chunk" parent="都市3d仮" unique_id=349703603 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/928,-192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.67, 0, 0, 0, 1, 0, 0, 0, 1.515, 43.767914, 0, -16.353676)
 
 [node name="928,-192,a" type="MeshInstance3D" parent="都市3d仮/928,-192,a_Chunk" unique_id=218110492]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("172_7b2gh")
 
 [node name="928,32,a_Chunk" parent="都市3d仮" unique_id=681793341 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/928,32,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.775, 0, 0, 0, 1, 0, 0, 0, 1.13, 43.902233, 0, 0)
 
 [node name="928,32,a" type="MeshInstance3D" parent="都市3d仮/928,32,a_Chunk" unique_id=1467526474]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("173_hhbor")
 
 [node name="928,80,a_Chunk" parent="都市3d仮" unique_id=77606273 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/928,80,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.43, 0, 0, 0, 1, 0, 0, 0, 1.265, 41.946507, 0, 3.5954914)
 
 [node name="928,80,a" type="MeshInstance3D" parent="都市3d仮/928,80,a_Chunk" unique_id=901317530]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("174_ra81r")
 
 [node name="928,144,a_Chunk" parent="都市3d仮" unique_id=1880065792 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/928,144,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.76, 0, 0, 0, 1, 0, 0, 0, 1, 38.912636, 0, 6.1175723)
 
 [node name="928,144,a" type="MeshInstance3D" parent="都市3d仮/928,144,a_Chunk" unique_id=403882945]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("175_315ie")
 
 [node name="944,112,a_Chunk" parent="都市3d仮" unique_id=1952880926 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/944,112,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.639236, 0, 4.5942307)
 
 [node name="944,112,a" type="MeshInstance3D" parent="都市3d仮/944,112,a_Chunk" unique_id=1569627688]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("176_83b4g")
 
 [node name="960,-48,a_Chunk" parent="都市3d仮" unique_id=1001558936 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/960,-48,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.475, 0, 0, 0, 1, 0, 0, 0, 1, 43.44308, 0, -4.008898)
 
 [node name="960,-48,a" type="MeshInstance3D" parent="都市3d仮/960,-48,a_Chunk" unique_id=456005794]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("177_8yekp")
 
 [node name="960,-416,a_Chunk" parent="都市3d仮" unique_id=464922337 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/960,-416,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.395, 0, 0, 0, 1, 0, 0, 0, 1.42, 38.75275, 0, -21.140675)
 
 [node name="960,-416,a" type="MeshInstance3D" parent="都市3d仮/960,-416,a_Chunk" unique_id=88973882]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("178_xuj0p")
 
 [node name="976,192,a_Chunk" parent="都市3d仮" unique_id=988675966 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/976,192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.705, 0, 0, 0, 1, 0, 0, 0, 1, 40.312775, 0, 11.054063)
 
 [node name="976,192,a" type="MeshInstance3D" parent="都市3d仮/976,192,a_Chunk" unique_id=444209623]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("179_kvv18")
 
 [node name="976,288,a_Chunk" parent="都市3d仮" unique_id=437377115 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/976,288,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.525, 0, 0, 0, 1, 0, 0, 0, 1.345, 41.19321, 0, 12.573671)
 
 [node name="976,288,a" type="MeshInstance3D" parent="都市3d仮/976,288,a_Chunk" unique_id=1978560109]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("180_q8y7s")
 
 [node name="976,432,a_Chunk" parent="都市3d仮" unique_id=600084602 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/976,432,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.03, 0, 0, 0, 1, 0, 0, 0, 1.175, 38.54503, 0, 13.950165)
 
 [node name="976,432,a" type="MeshInstance3D" parent="都市3d仮/976,432,a_Chunk" unique_id=2107648994]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("181_htprv")
 
 [node name="992,-688,a_Chunk" parent="都市3d仮" unique_id=2059097926 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/992,-688,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6919, 0, -35.643692)
 
 [node name="992,-688,a" type="MeshInstance3D" parent="都市3d仮/992,-688,a_Chunk" unique_id=1334598206]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("182_kllfr")
 
 [node name="1008,112,a_Chunk" parent="都市3d仮" unique_id=1386532517 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1008,112,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.71, 46.08305, 0, 4.4746637)
 
 [node name="1008,112,a" type="MeshInstance3D" parent="都市3d仮/1008,112,a_Chunk" unique_id=1150623802]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("183_gh36u")
 
 [node name="1008,432,a_Chunk" parent="都市3d仮" unique_id=740663743 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1008,432,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.235, 0, 0, 0, 1, 0, 0, 0, 1, 43.58076, 0, 16.903011)
 
 [node name="1008,432,a" type="MeshInstance3D" parent="都市3d仮/1008,432,a_Chunk" unique_id=494363892]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("184_0d3bv")
 
 [node name="1040,-16,a_Chunk" parent="都市3d仮" unique_id=830444021 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1040,-16,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.46, 0, 0, 0, 1, 0, 0, 0, 0.505, 50.47679, 0, -2.863068)
 
 [node name="1040,-16,a" type="MeshInstance3D" parent="都市3d仮/1040,-16,a_Chunk" unique_id=1745667032]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("185_6a886")
 
 [node name="1040,-48,a_Chunk" parent="都市3d仮" unique_id=380862707 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1040,-48,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.84, 0, 0, 0, 1, 0, 0, 0, 0.6, 49.816185, 0, -4.0131226)
 
 [node name="1040,-48,a" type="MeshInstance3D" parent="都市3d仮/1040,-48,a_Chunk" unique_id=1883878494]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("186_siidb")
 
 [node name="1040,-272,a_Chunk" parent="都市3d仮" unique_id=124274402 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1040,-272,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.06, 0, 0, 0, 1, 0, 0, 0, 1.26, 40.890762, 0, -16.962244)
 
 [node name="1040,-272,a" type="MeshInstance3D" parent="都市3d仮/1040,-272,a_Chunk" unique_id=788526584]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = ExtResource("187_05vlm")
 
 [node name="1040,-416,a_Chunk" parent="都市3d仮" unique_id=997345143 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1040,-416,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.64, 0, 0, 0, 1, 0, 0, 0, 1, 44.019215, 0, -18.543411)
 
 [node name="1040,-416,a" type="MeshInstance3D" parent="都市3d仮/1040,-416,a_Chunk" unique_id=1935870465]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("188_26tb3")
 
 [node name="1040,80,a_Chunk" parent="都市3d仮" unique_id=954522817 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1040,80,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.46, 0, 0, 0, 1, 0, 0, 0, 0.75, 45.130363, 0, 4.633067)
 
 [node name="1040,80,a" type="MeshInstance3D" parent="都市3d仮/1040,80,a_Chunk" unique_id=1703143067]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("189_gem8x")
 
 [node name="1040,368,a_Chunk" parent="都市3d仮" unique_id=1795285846 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1040,368,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.875, 0, 0, 0, 1, 0, 0, 0, 1.27, 38.52111, 0, 16.554424)
 
 [node name="1040,368,a" type="MeshInstance3D" parent="都市3d仮/1040,368,a_Chunk" unique_id=62046361]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("190_m3xfb")
 
 [node name="1056,-192,a_Chunk" parent="都市3d仮" unique_id=1021261025 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1056,-192,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.17, 0, 0, 0, 1, 0, 0, 0, 1.37, 41.199238, 0, -19.406885)
 
 [node name="1056,-192,a" type="MeshInstance3D" parent="都市3d仮/1056,-192,a_Chunk" unique_id=1579623389]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("191_ftfwh")
 
 [node name="1056,112,a_Chunk" parent="都市3d仮" unique_id=1726412428 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1056,112,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.735, 45.562485, 0, 4.558487)
 
 [node name="1056,112,a" type="MeshInstance3D" parent="都市3d仮/1056,112,a_Chunk" unique_id=783152191]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("192_dg1vo")
 
 [node name="1056,176,a_Chunk" parent="都市3d仮" unique_id=865938072 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1056,176,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.785, 0, 0, 0, 1, 0, 0, 0, 1, 39.767284, 0, 9.397246)
 
 [node name="1056,176,a" type="MeshInstance3D" parent="都市3d仮/1056,176,a_Chunk" unique_id=1503092469]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("193_5jjy5")
 
 [node name="1056,272,a_Chunk" parent="都市3d仮" unique_id=1402189805 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1056,272,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.195, 0, 0, 0, 1, 0, 0, 0, 1.435, 36.828564, 0, 16.082298)
 
 [node name="1056,272,a" type="MeshInstance3D" parent="都市3d仮/1056,272,a_Chunk" unique_id=988416770]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("194_6q60e")
 
 [node name="1120,-224,a_Chunk" parent="都市3d仮" unique_id=802340306 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1120,-224,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.685, 0, 0, 0, 1, 0, 0, 0, 1.28, 43.57332, 0, -19.042747)
 
 [node name="1120,-224,a" type="MeshInstance3D" parent="都市3d仮/1120,-224,a_Chunk" unique_id=562079750]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("195_b24w8")
 
 [node name="1120,-352,a_Chunk" parent="都市3d仮" unique_id=14649980 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1120,-352,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.64, 0, 0, 0, 1, 0, 0, 0, 1.59, 44.259476, 0, -20.622211)
 
 [node name="1120,-352,a" type="MeshInstance3D" parent="都市3d仮/1120,-352,a_Chunk" unique_id=1967479224]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("196_yiqhb")
 
 [node name="1168,160,a_Chunk" parent="都市3d仮" unique_id=1432625169 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/1168,160,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.13, 0, 0, 0, 1, 0, 0, 0, 1, 42.986893, 0, 7.1355333)
 
 [node name="1168,160,a" type="MeshInstance3D" parent="都市3d仮/1168,160,a_Chunk" unique_id=557322332]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("197_nr5oy")
 
 [node name="1200,-16,a_Chunk" parent="都市3d仮" unique_id=943813452 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/1200,-16,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.785, 0, 0, 0, 1, 0, 0, 0, 0.355, 53.830677, 0, -2.5428972)
 
 [node name="1200,-16,a" type="MeshInstance3D" parent="都市3d仮/1200,-16,a_Chunk" unique_id=1770343448]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("198_kgu3y")
 
 [node name="1296,272,a_Chunk" parent="都市3d仮" unique_id=1870775997 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Area3D" parent="都市3d仮/1296,272,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.845, 0, 0, 0, 1, 0, 0, 0, 1, 50.238388, 0, 9.631102)
 
 [node name="1296,272,a" type="MeshInstance3D" parent="都市3d仮/1296,272,a_Chunk" unique_id=286572941]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("199_475yy")
 
 [node name="1344,-80,a_Chunk" parent="都市3d仮" unique_id=88756057 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1344,-80,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.205, 0, 0, 0, 1, 0, 0, 0, 1.21, 51.044, 0, -5.894)
 
 [node name="1344,-80,a" type="MeshInstance3D" parent="都市3d仮/1344,-80,a_Chunk" unique_id=23142067]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = ExtResource("200_cftbm")
 
 [node name="1392,-16,a_Chunk" parent="都市3d仮" unique_id=104658669 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1392,-16,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.94, 0, 0, 0, 1, 0, 0, 0, 1, 55.532272, 0, -6.550852)
 
 [node name="1392,-16,a" type="MeshInstance3D" parent="都市3d仮/1392,-16,a_Chunk" unique_id=1117943947]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("201_15wyu")
 
 [node name="1136,288,a_Chunk" parent="都市3d仮" unique_id=965589796 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/1136,288,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(2.305, 0, 0, 0, 1, 0, 0, 0, 1.24, 41.255627, 0, 9.631107)
 
 [node name="1136,288,a" type="MeshInstance3D" parent="都市3d仮/1136,288,a_Chunk" unique_id=1033915973]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("202_b7xut")
 
 [node name="256,880,a_Chunk" parent="都市3d仮" unique_id=1811579146 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/256,880,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1.405, 0, 0, 0, 1, 0, 0, 0, 1, 5.9309998, 0, 37.803596)
 
 [node name="256,880,a" type="MeshInstance3D" parent="都市3d仮/256,880,a_Chunk" unique_id=1347184848]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = ExtResource("203_6v21d")
 
 [node name="320,896,a_Chunk" parent="都市3d仮" unique_id=1781525833 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/320,896,a_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.605463, 0, 37.277275)
 
 [node name="320,896,a" type="MeshInstance3D" parent="都市3d仮/320,896,a_Chunk" unique_id=1492765128]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("204_mus2s")
 
 [node name="256,896_Chunk" parent="都市3d仮" unique_id=635064329 instance=ExtResource("2_1a2ec")]
+visible = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Area3D" parent="都市3d仮/256,896_Chunk" index="0" unique_id=250931451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7042, 0, 37.44466)
 
 [node name="256,896" type="MeshInstance3D" parent="都市3d仮/256,896_Chunk" unique_id=1195505398]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
@@ -2107,6 +2703,7 @@ shape = SubResource("WorldBoundaryShape3D_r3fl7")
 
 [node name="CharacterBody3D" parent="." unique_id=2029851909 instance=ExtResource("2_a0tk4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.359913, -2.9849746, 1.4641917)
+"キー" = SubResource("InputEventKey_1a2ec")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=387122654]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.70431, -3.2585385, 15.902341)
@@ -2215,3 +2812,102 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.70431, -3.2585385, 15.9023
 [editable path="都市3d仮/240,-432,a_Chunk"]
 [editable path="都市3d仮/240,-512,a_Chunk"]
 [editable path="都市3d仮/240,224,a_Chunk"]
+[editable path="都市3d仮/256,-32,a_Chunk"]
+[editable path="都市3d仮/256,-160,a_Chunk"]
+[editable path="都市3d仮/256,-256,a_Chunk"]
+[editable path="都市3d仮/256,688,a_Chunk"]
+[editable path="都市3d仮/272,-32,a_Chunk"]
+[editable path="都市3d仮/272,192,a_Chunk"]
+[editable path="都市3d仮/304,208,a_Chunk"]
+[editable path="都市3d仮/320,48,a_Chunk"]
+[editable path="都市3d仮/320,96,a_Chunk"]
+[editable path="都市3d仮/320,144,a_Chunk"]
+[editable path="都市3d仮/320,192,a_Chunk"]
+[editable path="都市3d仮/336,-192,a_Chunk"]
+[editable path="都市3d仮/336,-256,a_Chunk"]
+[editable path="都市3d仮/336,-304,a_Chunk"]
+[editable path="都市3d仮/368,-32,a_Chunk"]
+[editable path="都市3d仮/368,-96,a_Chunk"]
+[editable path="都市3d仮/368,-128,a_Chunk"]
+[editable path="都市3d仮/368,32,a_Chunk"]
+[editable path="都市3d仮/384,128,a_Chunk"]
+[editable path="都市3d仮/384,192,a_Chunk"]
+[editable path="都市3d仮/400,96,a_Chunk"]
+[editable path="都市3d仮/400,192,a_Chunk"]
+[editable path="都市3d仮/400,304,a_Chunk"]
+[editable path="都市3d仮/432,-192,a_Chunk"]
+[editable path="都市3d仮/448,-288,a_Chunk"]
+[editable path="都市3d仮/448,-432,a_Chunk"]
+[editable path="都市3d仮/464,-128,a_Chunk"]
+[editable path="都市3d仮/464,32,a_Chunk"]
+[editable path="都市3d仮/480,-512,a_Chunk"]
+[editable path="都市3d仮/480,96,a_Chunk"]
+[editable path="都市3d仮/496,-48,a_Chunk"]
+[editable path="都市3d仮/528,-192,a_Chunk"]
+[editable path="都市3d仮/528,-560,a_Chunk"]
+[editable path="都市3d仮/544,-16,a_Chunk"]
+[editable path="都市3d仮/544,-48,a_Chunk"]
+[editable path="都市3d仮/544,-96,a_Chunk"]
+[editable path="都市3d仮/544,32,a_Chunk"]
+[editable path="都市3d仮/560,96,a_Chunk"]
+[editable path="都市3d仮/576,320,a_Chunk"]
+[editable path="都市3d仮/592,-288,a_Chunk"]
+[editable path="都市3d仮/592,128,a_Chunk"]
+[editable path="都市3d仮/592,288,a_Chunk"]
+[editable path="都市3d仮/608,-160,a_Chunk"]
+[editable path="都市3d仮/608,32,a_Chunk"]
+[editable path="都市3d仮/640,96,a_Chunk"]
+[editable path="都市3d仮/640,256,a_Chunk"]
+[editable path="都市3d仮/656,-192,a_Chunk"]
+[editable path="都市3d仮/672,-512,a_Chunk"]
+[editable path="都市3d仮/704,-48,a_Chunk"]
+[editable path="都市3d仮/704,-400,a_Chunk"]
+[editable path="都市3d仮/704,-480,a_Chunk"]
+[editable path="都市3d仮/704,224,a_Chunk"]
+[editable path="都市3d仮/704,288,a_Chunk"]
+[editable path="都市3d仮/784,32,a_Chunk"]
+[editable path="都市3d仮/800,-48,a_Chunk"]
+[editable path="都市3d仮/800,96,a_Chunk"]
+[editable path="都市3d仮/800,192,a_Chunk"]
+[editable path="都市3d仮/800,288,a_Chunk"]
+[editable path="都市3d仮/832,-192,a_Chunk"]
+[editable path="都市3d仮/832,-288,a_Chunk"]
+[editable path="都市3d仮/832,-560,a_Chunk"]
+[editable path="都市3d仮/864,-48,a_Chunk"]
+[editable path="都市3d仮/880,-480,a_Chunk"]
+[editable path="都市3d仮/880,-512,a_Chunk"]
+[editable path="都市3d仮/896,-560,a_Chunk"]
+[editable path="都市3d仮/928,-192,a_Chunk"]
+[editable path="都市3d仮/928,32,a_Chunk"]
+[editable path="都市3d仮/928,80,a_Chunk"]
+[editable path="都市3d仮/928,144,a_Chunk"]
+[editable path="都市3d仮/944,112,a_Chunk"]
+[editable path="都市3d仮/960,-48,a_Chunk"]
+[editable path="都市3d仮/960,-416,a_Chunk"]
+[editable path="都市3d仮/976,192,a_Chunk"]
+[editable path="都市3d仮/976,288,a_Chunk"]
+[editable path="都市3d仮/976,432,a_Chunk"]
+[editable path="都市3d仮/992,-688,a_Chunk"]
+[editable path="都市3d仮/1008,112,a_Chunk"]
+[editable path="都市3d仮/1008,432,a_Chunk"]
+[editable path="都市3d仮/1040,-16,a_Chunk"]
+[editable path="都市3d仮/1040,-48,a_Chunk"]
+[editable path="都市3d仮/1040,-272,a_Chunk"]
+[editable path="都市3d仮/1040,-416,a_Chunk"]
+[editable path="都市3d仮/1040,80,a_Chunk"]
+[editable path="都市3d仮/1040,368,a_Chunk"]
+[editable path="都市3d仮/1056,-192,a_Chunk"]
+[editable path="都市3d仮/1056,112,a_Chunk"]
+[editable path="都市3d仮/1056,176,a_Chunk"]
+[editable path="都市3d仮/1056,272,a_Chunk"]
+[editable path="都市3d仮/1120,-224,a_Chunk"]
+[editable path="都市3d仮/1120,-352,a_Chunk"]
+[editable path="都市3d仮/1168,160,a_Chunk"]
+[editable path="都市3d仮/1200,-16,a_Chunk"]
+[editable path="都市3d仮/1296,272,a_Chunk"]
+[editable path="都市3d仮/1344,-80,a_Chunk"]
+[editable path="都市3d仮/1392,-16,a_Chunk"]
+[editable path="都市3d仮/1136,288,a_Chunk"]
+[editable path="都市3d仮/256,880,a_Chunk"]
+[editable path="都市3d仮/320,896,a_Chunk"]
+[editable path="都市3d仮/256,896_Chunk"]
