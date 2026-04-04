@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bw65eio5v0ca7"]
+
+[ext_resource type="Texture2D" uid="uid://c2cyafl4n2o8a" path="res://1/都市3d仮_top.png" id="1_kdbh1"]
+
+[resource]
+resource_name = "minecraft_block-melon-top"
+cull_mode = 2
+albedo_texture = ExtResource("1_kdbh1")

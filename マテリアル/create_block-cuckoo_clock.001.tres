@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b5r2bp1nmf1me"]
+
+[ext_resource type="Texture2D" uid="uid://cgw8annhkaqlx" path="res://1/都市3d仮_cuckoo_clock.png" id="1_v6ffx"]
+
+[resource]
+resource_name = "create_block-cuckoo_clock.001"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_v6ffx")

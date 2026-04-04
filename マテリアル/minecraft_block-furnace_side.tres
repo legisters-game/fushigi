@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cirn3s3pd4k5o"]
 
-[ext_resource type="Texture2D" uid="uid://bh1qrv7ujo6wm" path="res://1/都市3d仮_furnace_side_405.png" id="1_ecfpn"]
+[ext_resource type="Texture2D" uid="uid://ln7tscx4ahmf" path="res://1/都市3d仮_furnace_side_595.png" id="1_ecfpn"]
 
 [resource]
 resource_name = "minecraft_block-furnace_side"

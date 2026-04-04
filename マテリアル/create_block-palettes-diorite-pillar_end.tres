@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b82ko5buwpkbi"]
 
-[ext_resource type="Texture2D" uid="uid://d1y5at5fmdiay" path="res://1/都市3d仮_pillar_end_772.png" id="1_ya0am"]
+[ext_resource type="Texture2D" uid="uid://s18ukuxsp202" path="res://1/都市3d仮_pillar_end.png" id="1_ya0am"]
 
 [resource]
 resource_name = "create_block-palettes-diorite-pillar_end"

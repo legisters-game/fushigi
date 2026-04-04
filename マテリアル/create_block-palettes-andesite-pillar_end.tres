@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://da5vjr1mw4i1d"]
 
-[ext_resource type="Texture2D" uid="uid://cn1xa7j71x1ty" path="res://1/都市3d仮_pillar_end_774.png" id="1_ya8fv"]
+[ext_resource type="Texture2D" uid="uid://of5qavtb2q8" path="res://1/都市3d仮_pillar_end_373.png" id="1_ya8fv"]
 
 [resource]
 resource_name = "create_block-palettes-andesite-pillar_end"

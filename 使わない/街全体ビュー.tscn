@@ -1,0 +1,1430 @@
+[gd_scene format=3 uid="uid://qj3ngk6lib6c"]
+
+[ext_resource type="Script" uid="uid://jpd6grs8d0cm" path="res://使わない/街全体ビュー.gd" id="1_cxpoa"]
+[ext_resource type="ArrayMesh" uid="uid://drvqcenueut4t" path="res://街メッシュ/都市3d仮_-160,336.res" id="1_kd1jv"]
+[ext_resource type="ArrayMesh" uid="uid://c25elw15qttnk" path="res://街メッシュ/都市3d仮_-208,240.res" id="2_cxpoa"]
+[ext_resource type="ArrayMesh" uid="uid://bql6gsi4pip61" path="res://街メッシュ/都市3d仮_48,416.res" id="3_t1rrs"]
+[ext_resource type="ArrayMesh" uid="uid://mdbgfgvbalql" path="res://街メッシュ/都市3d仮_960,-592.res" id="4_sdjil"]
+[ext_resource type="ArrayMesh" uid="uid://duh5cvskayc5g" path="res://街メッシュ/都市3d仮_960,-624.res" id="5_3yrxt"]
+[ext_resource type="ArrayMesh" uid="uid://dbimbodgbdx8s" path="res://街メッシュ/都市3d仮_-16,-272_013.res" id="6_nd0yn"]
+[ext_resource type="ArrayMesh" uid="uid://cycmqcet708qq" path="res://街メッシュ/都市3d仮_-16,-384_004.res" id="7_l2jow"]
+[ext_resource type="ArrayMesh" uid="uid://b1jjp4glsmn2i" path="res://街メッシュ/都市3d仮_-16,32_002.res" id="8_bpsjp"]
+[ext_resource type="ArrayMesh" uid="uid://c1wam3shhgt3l" path="res://街メッシュ/都市3d仮_-16,80_003.res" id="9_prm0e"]
+[ext_resource type="ArrayMesh" uid="uid://b7vwt1myhojyo" path="res://街メッシュ/都市3d仮_-16,128_001.res" id="10_36ii8"]
+[ext_resource type="ArrayMesh" uid="uid://bx0styn18u32w" path="res://街メッシュ/都市3d仮_-16,384_004.res" id="11_3ghmo"]
+[ext_resource type="ArrayMesh" uid="uid://cn8pqq4wdrmfx" path="res://街メッシュ/都市3d仮_-32,-48_001.res" id="12_x541w"]
+[ext_resource type="ArrayMesh" uid="uid://cbt05jsei584n" path="res://街メッシュ/都市3d仮_-32,-160_001.res" id="13_cd8ek"]
+[ext_resource type="ArrayMesh" uid="uid://kgb4d2ggn4e0" path="res://街メッシュ/都市3d仮_-48,176_001.res" id="14_dsnsh"]
+[ext_resource type="ArrayMesh" uid="uid://cm8gkthpfujop" path="res://街メッシュ/都市3d仮_-48,224_002.res" id="15_hpjfw"]
+[ext_resource type="ArrayMesh" uid="uid://b8hcols816qh0" path="res://街メッシュ/都市3d仮_-48,304_002.res" id="16_d15a6"]
+[ext_resource type="ArrayMesh" uid="uid://bu3ihphjo1chx" path="res://街メッシュ/都市3d仮_-48,352_001.res" id="17_03cs0"]
+[ext_resource type="ArrayMesh" uid="uid://7l5vyt1p3vb1" path="res://街メッシュ/都市3d仮_-80,384_001.res" id="18_gtkls"]
+[ext_resource type="ArrayMesh" uid="uid://b2b1cn6vujuik" path="res://街メッシュ/都市3d仮_-96,416_001.res" id="19_choso"]
+[ext_resource type="ArrayMesh" uid="uid://cah2mpv270g57" path="res://街メッシュ/都市3d仮_-112,-16_001.res" id="20_m3dp3"]
+[ext_resource type="ArrayMesh" uid="uid://h0kpbnrx23ae" path="res://街メッシュ/都市3d仮_-112,-48_001.res" id="21_inp41"]
+[ext_resource type="ArrayMesh" uid="uid://dqltj0en4t86e" path="res://街メッシュ/都市3d仮_-112,-96_001.res" id="22_f0b2j"]
+[ext_resource type="ArrayMesh" uid="uid://dyw7xu5g111kq" path="res://街メッシュ/都市3d仮_-112,-176_001.res" id="23_mdchy"]
+[ext_resource type="ArrayMesh" uid="uid://wslt3ccxtbn" path="res://街メッシュ/都市3d仮_-112,-288_001.res" id="24_fivj8"]
+[ext_resource type="ArrayMesh" uid="uid://bi1cqmax2jel1" path="res://街メッシュ/都市3d仮_-112,-336_005.res" id="25_w64ks"]
+[ext_resource type="ArrayMesh" uid="uid://cij07xxjqsggq" path="res://街メッシュ/都市3d仮_-112,32_001.res" id="26_q08wh"]
+[ext_resource type="ArrayMesh" uid="uid://gun5sio23r01" path="res://街メッシュ/都市3d仮_-112,144_001.res" id="27_e2yhm"]
+[ext_resource type="ArrayMesh" uid="uid://dr6b3qm0uo1gd" path="res://街メッシュ/都市3d仮_-112,176_002.res" id="28_rdful"]
+[ext_resource type="ArrayMesh" uid="uid://bfilhipjly8f5" path="res://街メッシュ/都市3d仮_-112,224_001.res" id="29_uf686"]
+[ext_resource type="ArrayMesh" uid="uid://d3lq6xmn7fver" path="res://街メッシュ/都市3d仮_-112,304_001.res" id="30_cmi5j"]
+[ext_resource type="ArrayMesh" uid="uid://hkvhwrpkxi7k" path="res://街メッシュ/都市3d仮_-112,336_001.res" id="31_lv8qq"]
+[ext_resource type="ArrayMesh" uid="uid://dled2lv78id4k" path="res://街メッシュ/都市3d仮_-112,384_002.res" id="32_katua"]
+[ext_resource type="ArrayMesh" uid="uid://cuyuprhjcy147" path="res://街メッシュ/都市3d仮_-128,80_004.res" id="33_pchea"]
+[ext_resource type="ArrayMesh" uid="uid://bjes8mtm36a57" path="res://街メッシュ/都市3d仮_-128,464_001.res" id="34_7ensw"]
+[ext_resource type="ArrayMesh" uid="uid://dkafqwe1tfc6j" path="res://街メッシュ/都市3d仮_-144,352_001.res" id="35_13ihy"]
+[ext_resource type="ArrayMesh" uid="uid://cf5d2br8p6xt1" path="res://街メッシュ/都市3d仮_-144,416_001.res" id="36_x2ijo"]
+[ext_resource type="ArrayMesh" uid="uid://cx8f6l1q3jekv" path="res://街メッシュ/都市3d仮_-160,240_002.res" id="37_jhsij"]
+[ext_resource type="ArrayMesh" uid="uid://ct4rdtgnqjovf" path="res://街メッシュ/都市3d仮_-160,336_001.res" id="38_1jmhp"]
+[ext_resource type="ArrayMesh" uid="uid://bxvfyu3otyarf" path="res://街メッシュ/都市3d仮_-176,144_001.res" id="39_ph8t3"]
+[ext_resource type="ArrayMesh" uid="uid://ccbhmjkimyfvi" path="res://街メッシュ/都市3d仮_-192,160_001.res" id="40_mop1l"]
+[ext_resource type="ArrayMesh" uid="uid://dtbnexlqiarxf" path="res://街メッシュ/都市3d仮_-192,176_001.res" id="41_qjc4l"]
+[ext_resource type="ArrayMesh" uid="uid://briappxttxqlk" path="res://街メッシュ/都市3d仮_-208,224_003.res" id="42_k746o"]
+[ext_resource type="ArrayMesh" uid="uid://dl13ise647gmh" path="res://街メッシュ/都市3d仮_-224,304_001.res" id="43_m11kq"]
+[ext_resource type="ArrayMesh" uid="uid://be6gwlh72ga7k" path="res://街メッシュ/都市3d仮_0,384.res" id="44_kgeh1"]
+[ext_resource type="ArrayMesh" uid="uid://dhu6bw577vbtw" path="res://街メッシュ/都市3d仮_0,816_001.res" id="45_obmo1"]
+[ext_resource type="ArrayMesh" uid="uid://dc5bkttf2qk5l" path="res://街メッシュ/都市3d仮_0,896_001.res" id="46_tc1ql"]
+[ext_resource type="ArrayMesh" uid="uid://dhbwpymk3u3it" path="res://街メッシュ/都市3d仮_16,-544_002.res" id="47_es3aj"]
+[ext_resource type="ArrayMesh" uid="uid://r5m2g5exvxbr" path="res://街メッシュ/都市3d仮_16,-560_002.res" id="48_cxy88"]
+[ext_resource type="ArrayMesh" uid="uid://cqtd81yrh4b05" path="res://街メッシュ/都市3d仮_32,-176_001.res" id="49_h26ei"]
+[ext_resource type="ArrayMesh" uid="uid://hb0g1j2r1uex" path="res://街メッシュ/都市3d仮_32,208_001.res" id="50_bu1ao"]
+[ext_resource type="ArrayMesh" uid="uid://ctc2boijcuubm" path="res://街メッシュ/都市3d仮_48,240_001.res" id="51_7xmp6"]
+[ext_resource type="ArrayMesh" uid="uid://c46cv26qtoi7o" path="res://街メッシュ/都市3d仮_48,304_001.res" id="52_5h3p4"]
+[ext_resource type="ArrayMesh" uid="uid://d2ocfs70exw3y" path="res://街メッシュ/都市3d仮_48,352_001.res" id="53_ky06s"]
+[ext_resource type="ArrayMesh" uid="uid://bu1ju644je7a3" path="res://街メッシュ/都市3d仮_48,560_001.res" id="54_fr3nt"]
+[ext_resource type="ArrayMesh" uid="uid://btv5ywqba325m" path="res://街メッシュ/都市3d仮_64,32_001.res" id="55_drcxe"]
+[ext_resource type="ArrayMesh" uid="uid://b2yxbqa22sgct" path="res://街メッシュ/都市3d仮_64,96.res" id="56_470i1"]
+[ext_resource type="ArrayMesh" uid="uid://b81nkv3r08x6b" path="res://街メッシュ/都市3d仮_64,128_001.res" id="57_ijg16"]
+[ext_resource type="ArrayMesh" uid="uid://q5vigckp6vmo" path="res://街メッシュ/都市3d仮_64,624_001.res" id="58_ervqa"]
+[ext_resource type="ArrayMesh" uid="uid://c7c5xyctjwpeo" path="res://街メッシュ/都市3d仮_64,896_001.res" id="59_qovqu"]
+[ext_resource type="ArrayMesh" uid="uid://c1jgukd8u7ljh" path="res://街メッシュ/都市3d仮_80,-48.res" id="60_1mrvk"]
+[ext_resource type="ArrayMesh" uid="uid://cvtpk20kiijec" path="res://街メッシュ/都市3d仮_80,-144_001.res" id="61_ee7vn"]
+[ext_resource type="ArrayMesh" uid="uid://2g2xq1ydljki" path="res://街メッシュ/都市3d仮_80,-272_001.res" id="62_di63e"]
+[ext_resource type="ArrayMesh" uid="uid://dbvpe83o5xjof" path="res://街メッシュ/都市3d仮_80,-336_001.res" id="63_y0dux"]
+[ext_resource type="ArrayMesh" uid="uid://dvmx11gcwqetu" path="res://街メッシュ/都市3d仮_80,-384_001.res" id="64_dh2yg"]
+[ext_resource type="ArrayMesh" uid="uid://bmw1xfbpryw4h" path="res://街メッシュ/都市3d仮_80,448_001.res" id="65_jc175"]
+[ext_resource type="ArrayMesh" uid="uid://bqfkmr2dv018i" path="res://街メッシュ/都市3d仮_96,208_001.res" id="66_fgcoa"]
+[ext_resource type="ArrayMesh" uid="uid://cc5r5i4yxxlsg" path="res://街メッシュ/都市3d仮_112,336_001.res" id="67_3x2sp"]
+[ext_resource type="ArrayMesh" uid="uid://cql8mv5g4ulih" path="res://街メッシュ/都市3d仮_112,416_001.res" id="68_tkebb"]
+[ext_resource type="ArrayMesh" uid="uid://dq12eckeh8i5q" path="res://街メッシュ/都市3d仮_112,448_001.res" id="69_xjoqd"]
+[ext_resource type="ArrayMesh" uid="uid://suxysyuou4lo" path="res://街メッシュ/都市3d仮_128,560_001.res" id="70_igbad"]
+[ext_resource type="ArrayMesh" uid="uid://w0rv45wvotb" path="res://街メッシュ/都市3d仮_128,704_002.res" id="71_bgyoj"]
+[ext_resource type="ArrayMesh" uid="uid://brb32nly13fwq" path="res://街メッシュ/都市3d仮_128,816_001.res" id="72_aqydv"]
+[ext_resource type="ArrayMesh" uid="uid://bdc65n7wd77d0" path="res://街メッシュ/都市3d仮_144,-224_001.res" id="73_sduiu"]
+[ext_resource type="ArrayMesh" uid="uid://bybgtb5h77xcs" path="res://街メッシュ/都市3d仮_144,-272_001.res" id="74_fiee8"]
+[ext_resource type="ArrayMesh" uid="uid://bicoy6v1qajvd" path="res://街メッシュ/都市3d仮_144,-400_001.res" id="75_nd4kl"]
+[ext_resource type="ArrayMesh" uid="uid://bs06xrfujliwb" path="res://街メッシュ/都市3d仮_144,272_mtl.res" id="76_oel6i"]
+[ext_resource type="ArrayMesh" uid="uid://b4ev2jopqch13" path="res://街メッシュ/都市3d仮_144,304_001.res" id="77_et1b8"]
+[ext_resource type="ArrayMesh" uid="uid://cbhlcr1k8dfik" path="res://街メッシュ/都市3d仮_144,368_001.res" id="78_dyr5p"]
+[ext_resource type="ArrayMesh" uid="uid://cwljyo7t22c0g" path="res://街メッシュ/都市3d仮_160,208_001.res" id="79_gvmk1"]
+[ext_resource type="ArrayMesh" uid="uid://dg2uf47fvk8ib" path="res://街メッシュ/都市3d仮_176,-32_001.res" id="80_yq1de"]
+[ext_resource type="ArrayMesh" uid="uid://nigovfcc4mll" path="res://街メッシュ/都市3d仮_176,-48_001.res" id="81_vi8yf"]
+[ext_resource type="ArrayMesh" uid="uid://bwho6kvbjqqn4" path="res://街メッシュ/都市3d仮_176,-96_001.res" id="82_vbsjn"]
+[ext_resource type="ArrayMesh" uid="uid://cwyvg1ofcknyi" path="res://街メッシュ/都市3d仮_176,-176_001.res" id="83_b1byj"]
+[ext_resource type="ArrayMesh" uid="uid://c787e5pgo3m0p" path="res://街メッシュ/都市3d仮_176,-224_001.res" id="84_gmqdy"]
+[ext_resource type="ArrayMesh" uid="uid://ct3mjxwelxdxj" path="res://街メッシュ/都市3d仮_176,-304_001.res" id="85_yen80"]
+[ext_resource type="ArrayMesh" uid="uid://bk74tlufhvpug" path="res://街メッシュ/都市3d仮_176,-400_001.res" id="86_rxax5"]
+[ext_resource type="ArrayMesh" uid="uid://b3u4emvnjtp2k" path="res://街メッシュ/都市3d仮_176,-496_001.res" id="87_jl3x1"]
+[ext_resource type="ArrayMesh" uid="uid://c3ydouycahy14" path="res://街メッシュ/都市3d仮_176,-544_002.res" id="88_irv6c"]
+[ext_resource type="ArrayMesh" uid="uid://buvwh17s3ah2v" path="res://街メッシュ/都市3d仮_176,32_002.res" id="89_5rng2"]
+[ext_resource type="ArrayMesh" uid="uid://d0i6jdm6vuwxh" path="res://街メッシュ/都市3d仮_176,96_001.res" id="90_retd8"]
+[ext_resource type="ArrayMesh" uid="uid://bnlwwfsa65ib2" path="res://街メッシュ/都市3d仮_176,816_001.res" id="91_ut5cq"]
+[ext_resource type="ArrayMesh" uid="uid://b2buo0wp7nugm" path="res://街メッシュ/都市3d仮_176,848_001.res" id="92_5fplq"]
+[ext_resource type="ArrayMesh" uid="uid://dt7ursqy8404e" path="res://街メッシュ/都市3d仮_176,896_001.res" id="93_squgg"]
+[ext_resource type="ArrayMesh" uid="uid://b4eo2sqxwssgm" path="res://街メッシュ/都市3d仮_192,976_001.res" id="94_qgjfb"]
+[ext_resource type="ArrayMesh" uid="uid://cmnjv4bbaktcg" path="res://街メッシュ/都市3d仮_208,-192_001.res" id="95_qbum1"]
+[ext_resource type="ArrayMesh" uid="uid://bc24q460cmlm4" path="res://街メッシュ/都市3d仮_208,-272_001.res" id="96_pro7f"]
+[ext_resource type="ArrayMesh" uid="uid://tadtlayvy4" path="res://街メッシュ/都市3d仮_208,96_001.res" id="97_ufkak"]
+[ext_resource type="ArrayMesh" uid="uid://3gu0l6v4y45m" path="res://街メッシュ/都市3d仮_208,128_001.res" id="98_so3g2"]
+[ext_resource type="ArrayMesh" uid="uid://2h6ktpj02ugs" path="res://街メッシュ/都市3d仮_208,208_001.res" id="99_cvn5i"]
+[ext_resource type="ArrayMesh" uid="uid://p5aymn512sd8" path="res://街メッシュ/都市3d仮_208,256_001.res" id="100_q28ig"]
+[ext_resource type="ArrayMesh" uid="uid://bub1ldqn0247n" path="res://街メッシュ/都市3d仮_240,-304_001.res" id="101_opu6d"]
+[ext_resource type="ArrayMesh" uid="uid://yokiv8f4byem" path="res://街メッシュ/都市3d仮_240,-432_001.res" id="102_d6lgg"]
+[ext_resource type="ArrayMesh" uid="uid://d2nd53ddvfau5" path="res://街メッシュ/都市3d仮_240,-512_001.res" id="103_7g6pp"]
+[ext_resource type="ArrayMesh" uid="uid://bdbk4srwomgr7" path="res://街メッシュ/都市3d仮_240,224_001.res" id="104_64wuw"]
+[ext_resource type="ArrayMesh" uid="uid://bo6shkf3kuhh3" path="res://街メッシュ/都市3d仮_256,-32_001.res" id="105_n6suj"]
+[ext_resource type="ArrayMesh" uid="uid://51370gdqifvk" path="res://街メッシュ/都市3d仮_256,-160_001.res" id="106_2dhpa"]
+[ext_resource type="ArrayMesh" uid="uid://dklxutx5lj2yc" path="res://街メッシュ/都市3d仮_256,-256_001.res" id="107_sre3o"]
+[ext_resource type="ArrayMesh" uid="uid://b2onwkcp45iog" path="res://街メッシュ/都市3d仮_256,688_001.res" id="108_vmv0o"]
+[ext_resource type="ArrayMesh" uid="uid://b7gfglwhyygyk" path="res://街メッシュ/都市3d仮_272,-32_001.res" id="109_murea"]
+[ext_resource type="ArrayMesh" uid="uid://xioac7gyetl1" path="res://街メッシュ/都市3d仮_272,192_001.res" id="110_5d8cs"]
+[ext_resource type="ArrayMesh" uid="uid://chekilvbaqslx" path="res://街メッシュ/都市3d仮_304,208_001.res" id="111_q5a02"]
+[ext_resource type="ArrayMesh" uid="uid://xey15ox0gmcc" path="res://街メッシュ/都市3d仮_320,48_001.res" id="112_iiwsi"]
+[ext_resource type="ArrayMesh" uid="uid://dp1ydbe22l3bq" path="res://街メッシュ/都市3d仮_320,96_001.res" id="113_cuk80"]
+[ext_resource type="ArrayMesh" uid="uid://b3x11n38w18sl" path="res://街メッシュ/都市3d仮_320,144_001.res" id="114_evdey"]
+[ext_resource type="ArrayMesh" uid="uid://bfa3rk4bvukkj" path="res://街メッシュ/都市3d仮_320,192_001.res" id="115_twlme"]
+[ext_resource type="ArrayMesh" uid="uid://cwh2b7l84kfto" path="res://街メッシュ/都市3d仮_336,-192_002.res" id="116_lpcn8"]
+[ext_resource type="ArrayMesh" uid="uid://cp0px011mbinb" path="res://街メッシュ/都市3d仮_336,-256_001.res" id="117_pgodo"]
+[ext_resource type="ArrayMesh" uid="uid://ct030klx3lm3f" path="res://街メッシュ/都市3d仮_336,-304_002.res" id="118_ak80a"]
+[ext_resource type="ArrayMesh" uid="uid://dgaa7k0ow51na" path="res://街メッシュ/都市3d仮_368,-32_001.res" id="119_qgu2d"]
+[ext_resource type="ArrayMesh" uid="uid://0qygigomsusm" path="res://街メッシュ/都市3d仮_368,-96_001.res" id="120_xcp0y"]
+[ext_resource type="ArrayMesh" uid="uid://ddd87h1604dq7" path="res://街メッシュ/都市3d仮_368,-128_001.res" id="121_frrbp"]
+[ext_resource type="ArrayMesh" uid="uid://c8ej0vac0rp35" path="res://街メッシュ/都市3d仮_368,32_001.res" id="122_xi1ko"]
+[ext_resource type="ArrayMesh" uid="uid://btr58sxm726dy" path="res://街メッシュ/都市3d仮_384,128_001.res" id="123_sup3h"]
+[ext_resource type="ArrayMesh" uid="uid://biwiyphahf5t3" path="res://街メッシュ/都市3d仮_384,192_001.res" id="124_br2mj"]
+[ext_resource type="ArrayMesh" uid="uid://cg8safq6tgdmd" path="res://街メッシュ/都市3d仮_400,96_001.res" id="125_ciqdc"]
+[ext_resource type="ArrayMesh" uid="uid://b5ibo0418ex2r" path="res://街メッシュ/都市3d仮_400,192_001.res" id="126_bs37v"]
+[ext_resource type="ArrayMesh" uid="uid://qgw45q7hra36" path="res://街メッシュ/都市3d仮_400,304_001.res" id="127_w8lx3"]
+[ext_resource type="ArrayMesh" uid="uid://dndutftf7rii1" path="res://街メッシュ/都市3d仮_432,-192_001.res" id="128_gkxbs"]
+[ext_resource type="ArrayMesh" uid="uid://v7ujxoy2grni" path="res://街メッシュ/都市3d仮_448,-288_001.res" id="129_sd01e"]
+[ext_resource type="ArrayMesh" uid="uid://cy4tynbahra4d" path="res://街メッシュ/都市3d仮_448,-432_001.res" id="130_lngao"]
+[ext_resource type="ArrayMesh" uid="uid://dcigmc710386a" path="res://街メッシュ/都市3d仮_464,-128_001.res" id="131_mrsve"]
+[ext_resource type="ArrayMesh" uid="uid://13q38f6lipww" path="res://街メッシュ/都市3d仮_464,32_001.res" id="132_wqvk1"]
+[ext_resource type="ArrayMesh" uid="uid://dqbh5p1pska78" path="res://街メッシュ/都市3d仮_480,-512_002.res" id="133_xe2y0"]
+[ext_resource type="ArrayMesh" uid="uid://c1e3mhhlmik4x" path="res://街メッシュ/都市3d仮_480,96_001.res" id="134_aaqct"]
+[ext_resource type="ArrayMesh" uid="uid://1ijfucpg4fjl" path="res://街メッシュ/都市3d仮_496,-48_001.res" id="135_ndh4k"]
+[ext_resource type="ArrayMesh" uid="uid://grp4irhvo14e" path="res://街メッシュ/都市3d仮_528,-192_001.res" id="136_rtndg"]
+[ext_resource type="ArrayMesh" uid="uid://clmv6s5jpam68" path="res://街メッシュ/都市3d仮_528,-560_001.res" id="137_uh4y3"]
+[ext_resource type="ArrayMesh" uid="uid://cslxkljt62c54" path="res://街メッシュ/都市3d仮_544,-16_001.res" id="138_au7bf"]
+[ext_resource type="ArrayMesh" uid="uid://d3xd0rj46flmt" path="res://街メッシュ/都市3d仮_544,-48_001.res" id="139_7qel8"]
+[ext_resource type="ArrayMesh" uid="uid://bbd81vfqdc0sd" path="res://街メッシュ/都市3d仮_544,-96.res" id="140_mstyt"]
+[ext_resource type="ArrayMesh" uid="uid://b6p3n4j8eats8" path="res://街メッシュ/都市3d仮_544,32_001.res" id="141_p116t"]
+[ext_resource type="ArrayMesh" uid="uid://dl8ocm6ospuqp" path="res://街メッシュ/都市3d仮_560,96_001.res" id="142_6vf0k"]
+[ext_resource type="ArrayMesh" uid="uid://c4gak464j5vhl" path="res://街メッシュ/都市3d仮_576,320_001.res" id="143_3w2ef"]
+[ext_resource type="ArrayMesh" uid="uid://dme21hcyp0n7h" path="res://街メッシュ/都市3d仮_592,-288_001.res" id="144_r4wq7"]
+[ext_resource type="ArrayMesh" uid="uid://b8u6cd2wi702y" path="res://街メッシュ/都市3d仮_592,128_001.res" id="145_xqjfc"]
+[ext_resource type="ArrayMesh" uid="uid://dvliyxcqba3iw" path="res://街メッシュ/都市3d仮_592,288_001.res" id="146_xucen"]
+[ext_resource type="ArrayMesh" uid="uid://nuh1x32okk7v" path="res://街メッシュ/都市3d仮_608,-160_001.res" id="147_ddxju"]
+[ext_resource type="ArrayMesh" uid="uid://c5b1avt0cool" path="res://街メッシュ/都市3d仮_608,32_001.res" id="148_k2svb"]
+[ext_resource type="ArrayMesh" uid="uid://c3vi22qtfgm85" path="res://街メッシュ/都市3d仮_640,96_001.res" id="149_yhab1"]
+[ext_resource type="ArrayMesh" uid="uid://0etu8fk4328w" path="res://街メッシュ/都市3d仮_640,256_001.res" id="150_nk2ie"]
+[ext_resource type="ArrayMesh" uid="uid://b5v1051bmf81k" path="res://街メッシュ/都市3d仮_656,-192_001.res" id="151_olhg7"]
+[ext_resource type="ArrayMesh" uid="uid://dv0vvbeir2260" path="res://街メッシュ/都市3d仮_672,-512_001.res" id="152_uq0su"]
+[ext_resource type="ArrayMesh" uid="uid://y6hw0gdy7um" path="res://街メッシュ/都市3d仮_704,-48_001.res" id="153_lmgv1"]
+[ext_resource type="ArrayMesh" uid="uid://dhucqlsav5oc8" path="res://街メッシュ/都市3d仮_704,-400_001.res" id="154_jhfcr"]
+[ext_resource type="ArrayMesh" uid="uid://bm16eo6lv5xld" path="res://街メッシュ/都市3d仮_704,-480_001.res" id="155_palg4"]
+[ext_resource type="ArrayMesh" uid="uid://bc87wgsst0nqn" path="res://街メッシュ/都市3d仮_704,224_001.res" id="156_pla48"]
+[ext_resource type="ArrayMesh" uid="uid://cnrfvltlj3dxb" path="res://街メッシュ/都市3d仮_704,288_001.res" id="157_b0nrg"]
+[ext_resource type="ArrayMesh" uid="uid://ddrvxxq3mv0df" path="res://街メッシュ/都市3d仮_784,32_001.res" id="158_mrneq"]
+[ext_resource type="ArrayMesh" uid="uid://y7yxg6wwh005" path="res://街メッシュ/都市3d仮_800,-48_001.res" id="159_ihaa3"]
+[ext_resource type="ArrayMesh" uid="uid://htd3gc8irwe7" path="res://街メッシュ/都市3d仮_800,96_001.res" id="160_lkpcm"]
+[ext_resource type="ArrayMesh" uid="uid://bwgw3h5q4ijk6" path="res://街メッシュ/都市3d仮_800,192_001.res" id="161_4j6e5"]
+[ext_resource type="ArrayMesh" uid="uid://c0m2sq2ucm5it" path="res://街メッシュ/都市3d仮_800,288_001.res" id="162_52tql"]
+[ext_resource type="ArrayMesh" uid="uid://xxn7yrl8yd3g" path="res://街メッシュ/都市3d仮_832,-192_001.res" id="163_p4iwl"]
+[ext_resource type="ArrayMesh" uid="uid://81h8gnk3jpo4" path="res://街メッシュ/都市3d仮_832,-288_001.res" id="164_gawls"]
+[ext_resource type="ArrayMesh" uid="uid://csbv4b0kun5ip" path="res://街メッシュ/都市3d仮_832,-560_001.res" id="165_j20tl"]
+[ext_resource type="ArrayMesh" uid="uid://udvmt7ceq60f" path="res://街メッシュ/都市3d仮_864,-48_001.res" id="166_78ra5"]
+[ext_resource type="ArrayMesh" uid="uid://dm6i8bjswmiyf" path="res://街メッシュ/都市3d仮_880,-480_001.res" id="167_qfity"]
+[ext_resource type="ArrayMesh" uid="uid://7mmk702s43iy" path="res://街メッシュ/都市3d仮_880,-512_001.res" id="168_8y04c"]
+[ext_resource type="ArrayMesh" uid="uid://bf0lpr6anatwc" path="res://街メッシュ/都市3d仮_896,-560.res" id="169_desyn"]
+[ext_resource type="ArrayMesh" uid="uid://cnp8k20o52nqd" path="res://街メッシュ/都市3d仮_928,-192_002.res" id="170_e4sia"]
+[ext_resource type="ArrayMesh" uid="uid://carcynwsi837a" path="res://街メッシュ/都市3d仮_928,32_001.res" id="171_h5c6j"]
+[ext_resource type="ArrayMesh" uid="uid://d3nxiaqes7mi" path="res://街メッシュ/都市3d仮_928,80_001.res" id="172_0i6lp"]
+[ext_resource type="ArrayMesh" uid="uid://c78u65sujfa3e" path="res://街メッシュ/都市3d仮_928,144_002.res" id="173_b3f66"]
+[ext_resource type="ArrayMesh" uid="uid://71a473ay5yws" path="res://街メッシュ/都市3d仮_944,112_001.res" id="174_r2m0h"]
+[ext_resource type="ArrayMesh" uid="uid://2qlux74wwwyw" path="res://街メッシュ/都市3d仮_960,-48_001.res" id="175_kqanb"]
+[ext_resource type="ArrayMesh" uid="uid://b1yfiu2gf48qd" path="res://街メッシュ/都市3d仮_960,-416_001.res" id="176_8em4e"]
+[ext_resource type="ArrayMesh" uid="uid://cyg6gaqdfs2n5" path="res://街メッシュ/都市3d仮_976,192_001.res" id="177_tan55"]
+[ext_resource type="ArrayMesh" uid="uid://dp0tjehtp33st" path="res://街メッシュ/都市3d仮_976,288_001.res" id="178_alpis"]
+[ext_resource type="ArrayMesh" uid="uid://b6vatp3ajhc2v" path="res://街メッシュ/都市3d仮_976,432_001.res" id="179_0iw1i"]
+[ext_resource type="ArrayMesh" uid="uid://cocervqq6t6hi" path="res://街メッシュ/都市3d仮_992,-688_001.res" id="180_teyse"]
+[ext_resource type="ArrayMesh" uid="uid://chuudxbavl2k3" path="res://街メッシュ/都市3d仮_1008,112_001.res" id="181_b1y33"]
+[ext_resource type="ArrayMesh" uid="uid://crwnf8gbsnkdy" path="res://街メッシュ/都市3d仮_1008,432_001.res" id="182_x8id4"]
+[ext_resource type="ArrayMesh" uid="uid://dqfsdv1p2qnr0" path="res://街メッシュ/都市3d仮_1040,-16_001.res" id="183_kqecn"]
+[ext_resource type="ArrayMesh" uid="uid://b3vre2d8c5uvl" path="res://街メッシュ/都市3d仮_1040,-48_001.res" id="184_ouwuc"]
+[ext_resource type="ArrayMesh" uid="uid://svp5pwwpsmsx" path="res://街メッシュ/都市3d仮_1040,-272_001.res" id="185_ebk75"]
+[ext_resource type="ArrayMesh" uid="uid://d4cjebmbyr653" path="res://街メッシュ/都市3d仮_1040,-416_001.res" id="186_cdbcx"]
+[ext_resource type="ArrayMesh" uid="uid://rpntgt05le2k" path="res://街メッシュ/都市3d仮_1040,80_001.res" id="187_milgx"]
+[ext_resource type="ArrayMesh" uid="uid://cvkyqk2qemewm" path="res://街メッシュ/都市3d仮_1040,368_001.res" id="188_p2rrb"]
+[ext_resource type="ArrayMesh" uid="uid://bqrvsbb6tbs5e" path="res://街メッシュ/都市3d仮_1056,-192_001.res" id="189_7mf20"]
+[ext_resource type="ArrayMesh" uid="uid://b53mkb4xrlpot" path="res://街メッシュ/都市3d仮_1056,112_001.res" id="190_6nujc"]
+[ext_resource type="ArrayMesh" uid="uid://67kjh613f174" path="res://街メッシュ/都市3d仮_1056,176_001.res" id="191_k5w8m"]
+[ext_resource type="ArrayMesh" uid="uid://cr0y8ghngnqer" path="res://街メッシュ/都市3d仮_1056,272_001.res" id="192_qo2qh"]
+[ext_resource type="ArrayMesh" uid="uid://cn5symd8q2f47" path="res://街メッシュ/都市3d仮_1120,-224_001.res" id="193_uxja5"]
+[ext_resource type="ArrayMesh" uid="uid://dddvh67ndsg1e" path="res://街メッシュ/都市3d仮_1120,-352_001.res" id="194_wl1do"]
+[ext_resource type="ArrayMesh" uid="uid://d1xaxm0llib5f" path="res://街メッシュ/都市3d仮_1168,160_001.res" id="195_rylhf"]
+[ext_resource type="ArrayMesh" uid="uid://byn5768wac7q2" path="res://街メッシュ/都市3d仮_1200,-16_002.res" id="196_iye7k"]
+[ext_resource type="ArrayMesh" uid="uid://dihenbeby3jq8" path="res://街メッシュ/都市3d仮_1296,272_001.res" id="197_cxaxm"]
+[ext_resource type="ArrayMesh" uid="uid://cm4t16mgiehf" path="res://街メッシュ/都市3d仮_1344,-80_002.res" id="198_now7c"]
+[ext_resource type="ArrayMesh" uid="uid://drvdsfwvhloew" path="res://街メッシュ/都市3d仮_1392,-16_001.res" id="199_tdblc"]
+[ext_resource type="ArrayMesh" uid="uid://d3hu0t75vhhnb" path="res://街メッシュ/都市3d仮_1136,288.res" id="200_geiva"]
+[ext_resource type="ArrayMesh" uid="uid://c2qfc44jxvc7a" path="res://街メッシュ/都市3d仮_256,880.res" id="201_a5871"]
+[ext_resource type="ArrayMesh" uid="uid://bbbwfxutphug0" path="res://街メッシュ/都市3d仮_320,896.res" id="202_ul74v"]
+[ext_resource type="ArrayMesh" uid="uid://cya5a8ekamnce" path="res://街メッシュ/都市3d仮_256,896.res" id="203_pc88w"]
+
+[node name="Node3D" type="Node3D" unique_id=2135928172]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_cxpoa")
+
+[node name="街全体ビュー" type="Node3D" parent="." unique_id=1204237089]
+
+[node name="-160,336_Chunk" type="Node3D" parent="街全体ビュー" unique_id=831453377]
+
+[node name="-160,336" type="MeshInstance3D" parent="街全体ビュー/-160,336_Chunk" unique_id=1527893314]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("1_kd1jv")
+
+[node name="-208,240,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1504049662]
+
+[node name="-208,240,a" type="MeshInstance3D" parent="街全体ビュー/-208,240,a_Chunk" unique_id=2035255532]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("2_cxpoa")
+
+[node name="48,416,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1595378242]
+
+[node name="48,416,a" type="MeshInstance3D" parent="街全体ビュー/48,416,a_Chunk" unique_id=1490758707]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("3_t1rrs")
+
+[node name="960,-592,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1575965078]
+
+[node name="960,-592,a" type="MeshInstance3D" parent="街全体ビュー/960,-592,a_Chunk" unique_id=466924868]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("4_sdjil")
+
+[node name="960,-624,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2076853956]
+
+[node name="960,-624,a" type="MeshInstance3D" parent="街全体ビュー/960,-624,a_Chunk" unique_id=2071049909]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("5_3yrxt")
+
+[node name="-16,-272,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2132954200]
+
+[node name="-16,-272,a" type="MeshInstance3D" parent="街全体ビュー/-16,-272,a_Chunk" unique_id=1342424561]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("6_nd0yn")
+
+[node name="-16,-384,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1711222182]
+
+[node name="-16,-384,a" type="MeshInstance3D" parent="街全体ビュー/-16,-384,a_Chunk" unique_id=1441747734]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("7_l2jow")
+
+[node name="-16,32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1608890101]
+
+[node name="-16,32,a" type="MeshInstance3D" parent="街全体ビュー/-16,32,a_Chunk" unique_id=676476692]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("8_bpsjp")
+
+[node name="-16,80,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=243961795]
+
+[node name="-16,80,a" type="MeshInstance3D" parent="街全体ビュー/-16,80,a_Chunk" unique_id=1507505272]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("9_prm0e")
+
+[node name="-16,128_a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1594971026]
+
+[node name="-16,128_a" type="MeshInstance3D" parent="街全体ビュー/-16,128_a_Chunk" unique_id=814277640]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("10_36ii8")
+
+[node name="-16,384,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=215501174]
+
+[node name="-16,384,a" type="MeshInstance3D" parent="街全体ビュー/-16,384,a_Chunk" unique_id=218775513]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("11_3ghmo")
+
+[node name="-32,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2049573693]
+
+[node name="-32,-48,a" type="MeshInstance3D" parent="街全体ビュー/-32,-48,a_Chunk" unique_id=1492525000]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("12_x541w")
+
+[node name="-32,-160,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=333008434]
+
+[node name="-32,-160,a" type="MeshInstance3D" parent="街全体ビュー/-32,-160,a_Chunk" unique_id=1641933431]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("13_cd8ek")
+
+[node name="-48,176,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=624849858]
+
+[node name="-48,176,a" type="MeshInstance3D" parent="街全体ビュー/-48,176,a_Chunk" unique_id=389156654]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("14_dsnsh")
+
+[node name="-48,224,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=840809152]
+
+[node name="-48,224,a" type="MeshInstance3D" parent="街全体ビュー/-48,224,a_Chunk" unique_id=271121761]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("15_hpjfw")
+
+[node name="-48,304,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1980707039]
+
+[node name="-48,304,a" type="MeshInstance3D" parent="街全体ビュー/-48,304,a_Chunk" unique_id=603267359]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("16_d15a6")
+
+[node name="-48,352,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=512475890]
+
+[node name="-48,352,a" type="MeshInstance3D" parent="街全体ビュー/-48,352,a_Chunk" unique_id=1885547200]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("17_03cs0")
+
+[node name="-80,384,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=551148341]
+
+[node name="-80,384,a" type="MeshInstance3D" parent="街全体ビュー/-80,384,a_Chunk" unique_id=1383719760]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("18_gtkls")
+
+[node name="-96,416,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1263502277]
+
+[node name="-96,416,a" type="MeshInstance3D" parent="街全体ビュー/-96,416,a_Chunk" unique_id=365263050]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("19_choso")
+
+[node name="-112,-16,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2060405999]
+
+[node name="-112,-16,a" type="MeshInstance3D" parent="街全体ビュー/-112,-16,a_Chunk" unique_id=324610689]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("20_m3dp3")
+
+[node name="-112,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=738684261]
+
+[node name="-112,-48,a" type="MeshInstance3D" parent="街全体ビュー/-112,-48,a_Chunk" unique_id=966774474]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("21_inp41")
+
+[node name="-112,-96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=408212591]
+
+[node name="-112,-96,a" type="MeshInstance3D" parent="街全体ビュー/-112,-96,a_Chunk" unique_id=428119270]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("22_f0b2j")
+
+[node name="-112,-176,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=509032014]
+
+[node name="-112,-176,a" type="MeshInstance3D" parent="街全体ビュー/-112,-176,a_Chunk" unique_id=400546725]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("23_mdchy")
+
+[node name="-112,-288,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1199243271]
+
+[node name="-112,-288,a" type="MeshInstance3D" parent="街全体ビュー/-112,-288,a_Chunk" unique_id=1869510711]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("24_fivj8")
+
+[node name="-112,-336,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=34921896]
+
+[node name="-112,-336,a" type="MeshInstance3D" parent="街全体ビュー/-112,-336,a_Chunk" unique_id=614280437]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("25_w64ks")
+
+[node name="-112,32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=988370136]
+
+[node name="-112,32,a" type="MeshInstance3D" parent="街全体ビュー/-112,32,a_Chunk" unique_id=1871704044]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("26_q08wh")
+
+[node name="-112,144,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1098704323]
+
+[node name="-112,144,a" type="MeshInstance3D" parent="街全体ビュー/-112,144,a_Chunk" unique_id=2013184684]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("27_e2yhm")
+
+[node name="-112,176,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=870713792]
+
+[node name="-112,176,a" type="MeshInstance3D" parent="街全体ビュー/-112,176,a_Chunk" unique_id=1861791466]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("28_rdful")
+
+[node name="-112,224,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1926964816]
+
+[node name="-112,224,a" type="MeshInstance3D" parent="街全体ビュー/-112,224,a_Chunk" unique_id=1138509943]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("29_uf686")
+
+[node name="-112,304,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2096228968]
+
+[node name="-112,304,a" type="MeshInstance3D" parent="街全体ビュー/-112,304,a_Chunk" unique_id=1459714538]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("30_cmi5j")
+
+[node name="-112,336,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1660142968]
+
+[node name="-112,336,a" type="MeshInstance3D" parent="街全体ビュー/-112,336,a_Chunk" unique_id=952359740]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("31_lv8qq")
+
+[node name="-112,384,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=728698362]
+
+[node name="-112,384,a" type="MeshInstance3D" parent="街全体ビュー/-112,384,a_Chunk" unique_id=151744084]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("32_katua")
+
+[node name="-128,80,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1253047484]
+
+[node name="-128,80,a" type="MeshInstance3D" parent="街全体ビュー/-128,80,a_Chunk" unique_id=182228551]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("33_pchea")
+
+[node name="-128,464,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=886650671]
+
+[node name="-128,464,a" type="MeshInstance3D" parent="街全体ビュー/-128,464,a_Chunk" unique_id=718824481]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("34_7ensw")
+
+[node name="-144,352,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=516569985]
+
+[node name="-144,352,a" type="MeshInstance3D" parent="街全体ビュー/-144,352,a_Chunk" unique_id=279837088]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("35_13ihy")
+
+[node name="-144,416,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1592605206]
+
+[node name="-144,416,a" type="MeshInstance3D" parent="街全体ビュー/-144,416,a_Chunk" unique_id=1384286104]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("36_x2ijo")
+
+[node name="-160,240,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2103792013]
+
+[node name="-160,240,a" type="MeshInstance3D" parent="街全体ビュー/-160,240,a_Chunk" unique_id=911408786]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("37_jhsij")
+
+[node name="-160,336,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=446650055]
+
+[node name="-160,336,a" type="MeshInstance3D" parent="街全体ビュー/-160,336,a_Chunk" unique_id=10255275]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("38_1jmhp")
+
+[node name="-176,144,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=295828121]
+
+[node name="-176,144,a" type="MeshInstance3D" parent="街全体ビュー/-176,144,a_Chunk" unique_id=1347637988]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("39_ph8t3")
+
+[node name="-192,160,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=673627379]
+
+[node name="-192,160,a" type="MeshInstance3D" parent="街全体ビュー/-192,160,a_Chunk" unique_id=1130859313]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("40_mop1l")
+
+[node name="-192,176,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1062381100]
+
+[node name="-192,176,a" type="MeshInstance3D" parent="街全体ビュー/-192,176,a_Chunk" unique_id=100329872]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("41_qjc4l")
+
+[node name="-208,224,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=347084307]
+
+[node name="-208,224,a" type="MeshInstance3D" parent="街全体ビュー/-208,224,a_Chunk" unique_id=2026163293]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("42_k746o")
+
+[node name="-224,304,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2101938027]
+
+[node name="-224,304,a" type="MeshInstance3D" parent="街全体ビュー/-224,304,a_Chunk" unique_id=195523885]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("43_m11kq")
+
+[node name="0,384,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1264442534]
+
+[node name="0,384,a" type="MeshInstance3D" parent="街全体ビュー/0,384,a_Chunk" unique_id=711342819]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("44_kgeh1")
+
+[node name="0,816,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=481748278]
+
+[node name="0,816,a" type="MeshInstance3D" parent="街全体ビュー/0,816,a_Chunk" unique_id=1863213714]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("45_obmo1")
+
+[node name="0,896,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=128375162]
+
+[node name="0,896,a" type="MeshInstance3D" parent="街全体ビュー/0,896,a_Chunk" unique_id=1565752639]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("46_tc1ql")
+
+[node name="16,-544,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=663939911]
+
+[node name="16,-544,a" type="MeshInstance3D" parent="街全体ビュー/16,-544,a_Chunk" unique_id=2115339861]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("47_es3aj")
+
+[node name="16,-560,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=167393471]
+
+[node name="16,-560,a" type="MeshInstance3D" parent="街全体ビュー/16,-560,a_Chunk" unique_id=1220979101]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("48_cxy88")
+
+[node name="32,-176,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1928907211]
+
+[node name="32,-176,a" type="MeshInstance3D" parent="街全体ビュー/32,-176,a_Chunk" unique_id=1157509582]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("49_h26ei")
+
+[node name="32,208,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=616737700]
+
+[node name="32,208,a" type="MeshInstance3D" parent="街全体ビュー/32,208,a_Chunk" unique_id=1115293142]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("50_bu1ao")
+
+[node name="48,240,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1430015932]
+
+[node name="48,240,a" type="MeshInstance3D" parent="街全体ビュー/48,240,a_Chunk" unique_id=468744478]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("51_7xmp6")
+
+[node name="48,304,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=230234776]
+
+[node name="48,304,a" type="MeshInstance3D" parent="街全体ビュー/48,304,a_Chunk" unique_id=1219748470]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("52_5h3p4")
+
+[node name="48,352,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=816040563]
+
+[node name="48,352,a" type="MeshInstance3D" parent="街全体ビュー/48,352,a_Chunk" unique_id=5274341]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("53_ky06s")
+
+[node name="48,560,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=889071561]
+
+[node name="48,560,a" type="MeshInstance3D" parent="街全体ビュー/48,560,a_Chunk" unique_id=928104929]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("54_fr3nt")
+
+[node name="64,32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2146960164]
+
+[node name="64,32,a" type="MeshInstance3D" parent="街全体ビュー/64,32,a_Chunk" unique_id=912217104]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("55_drcxe")
+
+[node name="64,96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1926214734]
+
+[node name="64,96,a" type="MeshInstance3D" parent="街全体ビュー/64,96,a_Chunk" unique_id=859895051]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("56_470i1")
+
+[node name="64,128,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=206340842]
+
+[node name="64,128,a" type="MeshInstance3D" parent="街全体ビュー/64,128,a_Chunk" unique_id=1096792583]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("57_ijg16")
+
+[node name="64,624,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1955076809]
+
+[node name="64,624,a" type="MeshInstance3D" parent="街全体ビュー/64,624,a_Chunk" unique_id=1765270488]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("58_ervqa")
+
+[node name="64,896,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1312376784]
+
+[node name="64,896,a" type="MeshInstance3D" parent="街全体ビュー/64,896,a_Chunk" unique_id=491511407]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("59_qovqu")
+
+[node name="80,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=629246605]
+
+[node name="80,-48,a" type="MeshInstance3D" parent="街全体ビュー/80,-48,a_Chunk" unique_id=1246595644]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("60_1mrvk")
+
+[node name="80,-144,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=10100246]
+
+[node name="80,-144,a" type="MeshInstance3D" parent="街全体ビュー/80,-144,a_Chunk" unique_id=184117358]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("61_ee7vn")
+
+[node name="80,-272,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1104993096]
+
+[node name="80,-272,a" type="MeshInstance3D" parent="街全体ビュー/80,-272,a_Chunk" unique_id=1186450308]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("62_di63e")
+
+[node name="80,-336,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=856988462]
+
+[node name="80,-336,a" type="MeshInstance3D" parent="街全体ビュー/80,-336,a_Chunk" unique_id=883979612]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("63_y0dux")
+
+[node name="80,-384,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1569127325]
+
+[node name="80,-384,a" type="MeshInstance3D" parent="街全体ビュー/80,-384,a_Chunk" unique_id=1905465800]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("64_dh2yg")
+
+[node name="80,448,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=733293736]
+
+[node name="80,448,a" type="MeshInstance3D" parent="街全体ビュー/80,448,a_Chunk" unique_id=1887497115]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("65_jc175")
+
+[node name="96,208,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=125754195]
+
+[node name="96,208,a" type="MeshInstance3D" parent="街全体ビュー/96,208,a_Chunk" unique_id=614966527]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("66_fgcoa")
+
+[node name="112,336,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1796199179]
+
+[node name="112,336,a" type="MeshInstance3D" parent="街全体ビュー/112,336,a_Chunk" unique_id=976819627]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("67_3x2sp")
+
+[node name="112,416,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1216315475]
+
+[node name="112,416,a" type="MeshInstance3D" parent="街全体ビュー/112,416,a_Chunk" unique_id=1962657272]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("68_tkebb")
+
+[node name="112,448,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=80361484]
+
+[node name="112,448,a" type="MeshInstance3D" parent="街全体ビュー/112,448,a_Chunk" unique_id=916706137]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("69_xjoqd")
+
+[node name="128,560,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1555687823]
+
+[node name="128,560,a" type="MeshInstance3D" parent="街全体ビュー/128,560,a_Chunk" unique_id=723270302]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("70_igbad")
+
+[node name="128,704,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=557334748]
+
+[node name="128,704,a" type="MeshInstance3D" parent="街全体ビュー/128,704,a_Chunk" unique_id=550172609]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("71_bgyoj")
+
+[node name="128,816,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=372788525]
+
+[node name="128,816,a" type="MeshInstance3D" parent="街全体ビュー/128,816,a_Chunk" unique_id=1137261819]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("72_aqydv")
+
+[node name="144,-224,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1039470841]
+
+[node name="144,-224,a" type="MeshInstance3D" parent="街全体ビュー/144,-224,a_Chunk" unique_id=1786972444]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("73_sduiu")
+
+[node name="144,-272,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1395093593]
+
+[node name="144,-272,a" type="MeshInstance3D" parent="街全体ビュー/144,-272,a_Chunk" unique_id=145026549]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("74_fiee8")
+
+[node name="144,-400,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1015169996]
+
+[node name="144,-400,a" type="MeshInstance3D" parent="街全体ビュー/144,-400,a_Chunk" unique_id=228286451]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("75_nd4kl")
+
+[node name="144,272,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=23386337]
+
+[node name="144,272,a" type="MeshInstance3D" parent="街全体ビュー/144,272,a_Chunk" unique_id=1701343448]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("76_oel6i")
+
+[node name="144,304,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1822051859]
+
+[node name="144,304,a" type="MeshInstance3D" parent="街全体ビュー/144,304,a_Chunk" unique_id=109882511]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("77_et1b8")
+
+[node name="144,368,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=89970386]
+
+[node name="144,368,a" type="MeshInstance3D" parent="街全体ビュー/144,368,a_Chunk" unique_id=889008630]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("78_dyr5p")
+
+[node name="160,208,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=445044937]
+
+[node name="160,208,a" type="MeshInstance3D" parent="街全体ビュー/160,208,a_Chunk" unique_id=192322548]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("79_gvmk1")
+
+[node name="176,-32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=749508646]
+
+[node name="176,-32,a" type="MeshInstance3D" parent="街全体ビュー/176,-32,a_Chunk" unique_id=1100268682]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("80_yq1de")
+
+[node name="176,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2045820540]
+
+[node name="176,-48,a" type="MeshInstance3D" parent="街全体ビュー/176,-48,a_Chunk" unique_id=801654781]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("81_vi8yf")
+
+[node name="176,-96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=539981663]
+
+[node name="176,-96,a" type="MeshInstance3D" parent="街全体ビュー/176,-96,a_Chunk" unique_id=1522869249]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("82_vbsjn")
+
+[node name="176,-176,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=582315874]
+
+[node name="176,-176,a" type="MeshInstance3D" parent="街全体ビュー/176,-176,a_Chunk" unique_id=1530617835]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("83_b1byj")
+
+[node name="176,-224,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=241423120]
+
+[node name="176,-224,a" type="MeshInstance3D" parent="街全体ビュー/176,-224,a_Chunk" unique_id=423983189]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("84_gmqdy")
+
+[node name="176,-304,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1255493121]
+
+[node name="176,-304,a" type="MeshInstance3D" parent="街全体ビュー/176,-304,a_Chunk" unique_id=1430061903]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("85_yen80")
+
+[node name="176,-400,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1771730126]
+
+[node name="176,-400,a" type="MeshInstance3D" parent="街全体ビュー/176,-400,a_Chunk" unique_id=581052021]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("86_rxax5")
+
+[node name="176,-496,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1234523253]
+
+[node name="176,-496,a" type="MeshInstance3D" parent="街全体ビュー/176,-496,a_Chunk" unique_id=1405551941]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("87_jl3x1")
+
+[node name="176,-544,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=471202161]
+
+[node name="176,-544,a" type="MeshInstance3D" parent="街全体ビュー/176,-544,a_Chunk" unique_id=844756046]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("88_irv6c")
+
+[node name="176,32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=244195235]
+
+[node name="176,32,a" type="MeshInstance3D" parent="街全体ビュー/176,32,a_Chunk" unique_id=295139420]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("89_5rng2")
+
+[node name="176,96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2020056559]
+
+[node name="176,96,a" type="MeshInstance3D" parent="街全体ビュー/176,96,a_Chunk" unique_id=1555952415]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("90_retd8")
+
+[node name="176,816,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=687160226]
+
+[node name="176,816,a" type="MeshInstance3D" parent="街全体ビュー/176,816,a_Chunk" unique_id=1672551499]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("91_ut5cq")
+
+[node name="176,848,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=468645439]
+
+[node name="176,848,a" type="MeshInstance3D" parent="街全体ビュー/176,848,a_Chunk" unique_id=725855386]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("92_5fplq")
+
+[node name="176,896,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1837011856]
+
+[node name="176,896,a" type="MeshInstance3D" parent="街全体ビュー/176,896,a_Chunk" unique_id=2015250619]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("93_squgg")
+
+[node name="192,976,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1661364202]
+
+[node name="192,976,a" type="MeshInstance3D" parent="街全体ビュー/192,976,a_Chunk" unique_id=962398524]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("94_qgjfb")
+
+[node name="208,-192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=915455608]
+
+[node name="208,-192,a" type="MeshInstance3D" parent="街全体ビュー/208,-192,a_Chunk" unique_id=385042507]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("95_qbum1")
+
+[node name="208,-272,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1991470367]
+
+[node name="208,-272,a" type="MeshInstance3D" parent="街全体ビュー/208,-272,a_Chunk" unique_id=247493870]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("96_pro7f")
+
+[node name="208,96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1450179763]
+
+[node name="208,96,a" type="MeshInstance3D" parent="街全体ビュー/208,96,a_Chunk" unique_id=1314281487]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("97_ufkak")
+
+[node name="208,128,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=479006046]
+
+[node name="208,128,a" type="MeshInstance3D" parent="街全体ビュー/208,128,a_Chunk" unique_id=1858949525]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("98_so3g2")
+
+[node name="208,208,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1440637228]
+
+[node name="208,208,a" type="MeshInstance3D" parent="街全体ビュー/208,208,a_Chunk" unique_id=768334383]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("99_cvn5i")
+
+[node name="208,256,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=861960879]
+
+[node name="208,256,a" type="MeshInstance3D" parent="街全体ビュー/208,256,a_Chunk" unique_id=237651427]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("100_q28ig")
+
+[node name="240,-304,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=444592049]
+
+[node name="240,-304,a" type="MeshInstance3D" parent="街全体ビュー/240,-304,a_Chunk" unique_id=1500295817]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("101_opu6d")
+
+[node name="240,-432,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=342794809]
+
+[node name="240,-432,a" type="MeshInstance3D" parent="街全体ビュー/240,-432,a_Chunk" unique_id=1246824043]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("102_d6lgg")
+
+[node name="240,-512,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=977604964]
+
+[node name="240,-512,a" type="MeshInstance3D" parent="街全体ビュー/240,-512,a_Chunk" unique_id=1289926740]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("103_7g6pp")
+
+[node name="240,224,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1819523824]
+
+[node name="240,224,a" type="MeshInstance3D" parent="街全体ビュー/240,224,a_Chunk" unique_id=1920727897]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("104_64wuw")
+
+[node name="256,-32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1138058622]
+
+[node name="256,-32,a" type="MeshInstance3D" parent="街全体ビュー/256,-32,a_Chunk" unique_id=1596693802]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("105_n6suj")
+
+[node name="256,-160,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=218275977]
+
+[node name="256,-160,a" type="MeshInstance3D" parent="街全体ビュー/256,-160,a_Chunk" unique_id=385774188]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("106_2dhpa")
+
+[node name="256,-256,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1771651456]
+
+[node name="256,-256,a" type="MeshInstance3D" parent="街全体ビュー/256,-256,a_Chunk" unique_id=578223281]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("107_sre3o")
+
+[node name="256,688,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=944635963]
+
+[node name="256,688,a" type="MeshInstance3D" parent="街全体ビュー/256,688,a_Chunk" unique_id=704882596]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("108_vmv0o")
+
+[node name="272,-32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=895924410]
+
+[node name="272,-32,a" type="MeshInstance3D" parent="街全体ビュー/272,-32,a_Chunk" unique_id=2122269933]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("109_murea")
+
+[node name="272,192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1122149583]
+
+[node name="272,192,a" type="MeshInstance3D" parent="街全体ビュー/272,192,a_Chunk" unique_id=620737511]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("110_5d8cs")
+
+[node name="304,208,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1743201642]
+
+[node name="304,208,a" type="MeshInstance3D" parent="街全体ビュー/304,208,a_Chunk" unique_id=1091654882]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("111_q5a02")
+
+[node name="320,48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=462695469]
+
+[node name="320,48,a" type="MeshInstance3D" parent="街全体ビュー/320,48,a_Chunk" unique_id=880747190]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("112_iiwsi")
+
+[node name="320,96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=621577527]
+
+[node name="320,96,a" type="MeshInstance3D" parent="街全体ビュー/320,96,a_Chunk" unique_id=2093623509]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("113_cuk80")
+
+[node name="320,144,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1798288076]
+
+[node name="320,144,a" type="MeshInstance3D" parent="街全体ビュー/320,144,a_Chunk" unique_id=124999999]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("114_evdey")
+
+[node name="320,192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=883002670]
+
+[node name="320,192,a" type="MeshInstance3D" parent="街全体ビュー/320,192,a_Chunk" unique_id=1859977676]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("115_twlme")
+
+[node name="336,-192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1576231904]
+
+[node name="336,-192,a" type="MeshInstance3D" parent="街全体ビュー/336,-192,a_Chunk" unique_id=556569368]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("116_lpcn8")
+
+[node name="336,-256,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=257712583]
+
+[node name="336,-256,a" type="MeshInstance3D" parent="街全体ビュー/336,-256,a_Chunk" unique_id=1741037207]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("117_pgodo")
+
+[node name="336,-304,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=722147030]
+
+[node name="336,-304,a" type="MeshInstance3D" parent="街全体ビュー/336,-304,a_Chunk" unique_id=1638464641]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("118_ak80a")
+
+[node name="368,-32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=290040159]
+
+[node name="368,-32,a" type="MeshInstance3D" parent="街全体ビュー/368,-32,a_Chunk" unique_id=758253399]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("119_qgu2d")
+
+[node name="368,-96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1255752894]
+
+[node name="368,-96,a" type="MeshInstance3D" parent="街全体ビュー/368,-96,a_Chunk" unique_id=1952559151]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("120_xcp0y")
+
+[node name="368,-128,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=708508092]
+
+[node name="368,-128,a" type="MeshInstance3D" parent="街全体ビュー/368,-128,a_Chunk" unique_id=967606277]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("121_frrbp")
+
+[node name="368,32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1465937319]
+
+[node name="368,32,a" type="MeshInstance3D" parent="街全体ビュー/368,32,a_Chunk" unique_id=585770397]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("122_xi1ko")
+
+[node name="384,128,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=789910531]
+
+[node name="384,128,a" type="MeshInstance3D" parent="街全体ビュー/384,128,a_Chunk" unique_id=1279116615]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("123_sup3h")
+
+[node name="384,192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1166144944]
+
+[node name="384,192,a" type="MeshInstance3D" parent="街全体ビュー/384,192,a_Chunk" unique_id=454841140]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("124_br2mj")
+
+[node name="400,96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1261179940]
+
+[node name="400,96,a" type="MeshInstance3D" parent="街全体ビュー/400,96,a_Chunk" unique_id=977175269]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("125_ciqdc")
+
+[node name="400,192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=447503653]
+
+[node name="400,192,a" type="MeshInstance3D" parent="街全体ビュー/400,192,a_Chunk" unique_id=1895223787]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("126_bs37v")
+
+[node name="400,304,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1758060677]
+
+[node name="400,304,a" type="MeshInstance3D" parent="街全体ビュー/400,304,a_Chunk" unique_id=334600479]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("127_w8lx3")
+
+[node name="432,-192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1568185807]
+
+[node name="432,-192,a" type="MeshInstance3D" parent="街全体ビュー/432,-192,a_Chunk" unique_id=2016277787]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("128_gkxbs")
+
+[node name="448,-288,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1046811150]
+
+[node name="448,-288,a" type="MeshInstance3D" parent="街全体ビュー/448,-288,a_Chunk" unique_id=572240390]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("129_sd01e")
+
+[node name="448,-432,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=981896336]
+
+[node name="448,-432,a" type="MeshInstance3D" parent="街全体ビュー/448,-432,a_Chunk" unique_id=1145798953]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("130_lngao")
+
+[node name="464,-128,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2055351266]
+
+[node name="464,-128,a" type="MeshInstance3D" parent="街全体ビュー/464,-128,a_Chunk" unique_id=1323124797]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("131_mrsve")
+
+[node name="464,32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=161806180]
+
+[node name="464,32,a" type="MeshInstance3D" parent="街全体ビュー/464,32,a_Chunk" unique_id=1473660822]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("132_wqvk1")
+
+[node name="480,-512,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=820558183]
+
+[node name="480,-512,a" type="MeshInstance3D" parent="街全体ビュー/480,-512,a_Chunk" unique_id=1087965224]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("133_xe2y0")
+
+[node name="480,96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1292328358]
+
+[node name="480,96,a" type="MeshInstance3D" parent="街全体ビュー/480,96,a_Chunk" unique_id=853127610]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("134_aaqct")
+
+[node name="496,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1795803213]
+
+[node name="496,-48,a" type="MeshInstance3D" parent="街全体ビュー/496,-48,a_Chunk" unique_id=1832053552]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("135_ndh4k")
+
+[node name="528,-192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1773472484]
+
+[node name="528,-192,a" type="MeshInstance3D" parent="街全体ビュー/528,-192,a_Chunk" unique_id=1072509029]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("136_rtndg")
+
+[node name="528,-560,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1738771005]
+
+[node name="528,-560,a" type="MeshInstance3D" parent="街全体ビュー/528,-560,a_Chunk" unique_id=2574960]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("137_uh4y3")
+
+[node name="544,-16,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=123227511]
+
+[node name="544,-16,a" type="MeshInstance3D" parent="街全体ビュー/544,-16,a_Chunk" unique_id=418509833]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("138_au7bf")
+
+[node name="544,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1718542868]
+
+[node name="544,-48,a" type="MeshInstance3D" parent="街全体ビュー/544,-48,a_Chunk" unique_id=1532299674]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("139_7qel8")
+
+[node name="544,-96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=737602601]
+
+[node name="544,-96,a" type="MeshInstance3D" parent="街全体ビュー/544,-96,a_Chunk" unique_id=447935741]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("140_mstyt")
+
+[node name="544,32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=501032220]
+
+[node name="544,32,a" type="MeshInstance3D" parent="街全体ビュー/544,32,a_Chunk" unique_id=324901934]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("141_p116t")
+
+[node name="560,96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1831333466]
+
+[node name="560,96,a" type="MeshInstance3D" parent="街全体ビュー/560,96,a_Chunk" unique_id=745911024]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("142_6vf0k")
+
+[node name="576,320,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1776263551]
+
+[node name="576,320,a" type="MeshInstance3D" parent="街全体ビュー/576,320,a_Chunk" unique_id=48521056]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("143_3w2ef")
+
+[node name="592,-288,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2113135549]
+
+[node name="592,-288,a" type="MeshInstance3D" parent="街全体ビュー/592,-288,a_Chunk" unique_id=648617723]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("144_r4wq7")
+
+[node name="592,128,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1883830810]
+
+[node name="592,128,a" type="MeshInstance3D" parent="街全体ビュー/592,128,a_Chunk" unique_id=1149688167]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("145_xqjfc")
+
+[node name="592,288,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=459378319]
+
+[node name="592,288,a" type="MeshInstance3D" parent="街全体ビュー/592,288,a_Chunk" unique_id=1755064618]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("146_xucen")
+
+[node name="608,-160,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1929637498]
+
+[node name="608,-160,a" type="MeshInstance3D" parent="街全体ビュー/608,-160,a_Chunk" unique_id=1217743833]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("147_ddxju")
+
+[node name="608,32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1451271204]
+
+[node name="608,32,a" type="MeshInstance3D" parent="街全体ビュー/608,32,a_Chunk" unique_id=787404791]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("148_k2svb")
+
+[node name="640,96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2024104458]
+
+[node name="640,96,a" type="MeshInstance3D" parent="街全体ビュー/640,96,a_Chunk" unique_id=310221379]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("149_yhab1")
+
+[node name="640,256,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1385731052]
+
+[node name="640,256,a" type="MeshInstance3D" parent="街全体ビュー/640,256,a_Chunk" unique_id=603897567]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("150_nk2ie")
+
+[node name="656,-192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1418285244]
+
+[node name="656,-192,a" type="MeshInstance3D" parent="街全体ビュー/656,-192,a_Chunk" unique_id=1624489396]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("151_olhg7")
+
+[node name="672,-512,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=162005223]
+
+[node name="672,-512,a" type="MeshInstance3D" parent="街全体ビュー/672,-512,a_Chunk" unique_id=263254040]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("152_uq0su")
+
+[node name="704,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2142669548]
+
+[node name="704,-48,a" type="MeshInstance3D" parent="街全体ビュー/704,-48,a_Chunk" unique_id=766461312]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("153_lmgv1")
+
+[node name="704,-400,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1304428428]
+
+[node name="704,-400,a" type="MeshInstance3D" parent="街全体ビュー/704,-400,a_Chunk" unique_id=482298040]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("154_jhfcr")
+
+[node name="704,-480,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=40851423]
+
+[node name="704,-480,a" type="MeshInstance3D" parent="街全体ビュー/704,-480,a_Chunk" unique_id=1041659858]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("155_palg4")
+
+[node name="704,224,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1177831572]
+
+[node name="704,224,a" type="MeshInstance3D" parent="街全体ビュー/704,224,a_Chunk" unique_id=533231355]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("156_pla48")
+
+[node name="704,288,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2063378224]
+
+[node name="704,288,a" type="MeshInstance3D" parent="街全体ビュー/704,288,a_Chunk" unique_id=1854766862]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("157_b0nrg")
+
+[node name="784,32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=63382485]
+
+[node name="784,32,a" type="MeshInstance3D" parent="街全体ビュー/784,32,a_Chunk" unique_id=534355311]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("158_mrneq")
+
+[node name="800,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=874847881]
+
+[node name="800,-48,a" type="MeshInstance3D" parent="街全体ビュー/800,-48,a_Chunk" unique_id=442111870]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("159_ihaa3")
+
+[node name="800,96,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=831150683]
+
+[node name="800,96,a" type="MeshInstance3D" parent="街全体ビュー/800,96,a_Chunk" unique_id=339411079]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("160_lkpcm")
+
+[node name="800,192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=875363436]
+
+[node name="800,192,a" type="MeshInstance3D" parent="街全体ビュー/800,192,a_Chunk" unique_id=1019018415]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("161_4j6e5")
+
+[node name="800,288,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=689449760]
+
+[node name="800,288,a" type="MeshInstance3D" parent="街全体ビュー/800,288,a_Chunk" unique_id=121126666]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("162_52tql")
+
+[node name="832,-192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=983630126]
+
+[node name="832,-192,a" type="MeshInstance3D" parent="街全体ビュー/832,-192,a_Chunk" unique_id=1911800814]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("163_p4iwl")
+
+[node name="832,-288,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1841187714]
+
+[node name="832,-288,a" type="MeshInstance3D" parent="街全体ビュー/832,-288,a_Chunk" unique_id=508558602]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("164_gawls")
+
+[node name="832,-560,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=94369520]
+
+[node name="832,-560,a" type="MeshInstance3D" parent="街全体ビュー/832,-560,a_Chunk" unique_id=289145658]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("165_j20tl")
+
+[node name="864,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1728936729]
+
+[node name="864,-48,a" type="MeshInstance3D" parent="街全体ビュー/864,-48,a_Chunk" unique_id=84681639]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("166_78ra5")
+
+[node name="880,-480,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=444775941]
+
+[node name="880,-480,a" type="MeshInstance3D" parent="街全体ビュー/880,-480,a_Chunk" unique_id=760580425]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("167_qfity")
+
+[node name="880,-512,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1834094212]
+
+[node name="880,-512,a" type="MeshInstance3D" parent="街全体ビュー/880,-512,a_Chunk" unique_id=1969874511]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("168_8y04c")
+
+[node name="896,-560,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=335542311]
+
+[node name="896,-560,a" type="MeshInstance3D" parent="街全体ビュー/896,-560,a_Chunk" unique_id=1136535946]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("169_desyn")
+
+[node name="928,-192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=39012403]
+
+[node name="928,-192,a" type="MeshInstance3D" parent="街全体ビュー/928,-192,a_Chunk" unique_id=1630149295]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("170_e4sia")
+
+[node name="928,32,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1566608757]
+
+[node name="928,32,a" type="MeshInstance3D" parent="街全体ビュー/928,32,a_Chunk" unique_id=2092793642]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("171_h5c6j")
+
+[node name="928,80,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1959436948]
+
+[node name="928,80,a" type="MeshInstance3D" parent="街全体ビュー/928,80,a_Chunk" unique_id=428260060]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("172_0i6lp")
+
+[node name="928,144,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1621260425]
+
+[node name="928,144,a" type="MeshInstance3D" parent="街全体ビュー/928,144,a_Chunk" unique_id=1839072788]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("173_b3f66")
+
+[node name="944,112,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1038076553]
+
+[node name="944,112,a" type="MeshInstance3D" parent="街全体ビュー/944,112,a_Chunk" unique_id=158127916]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("174_r2m0h")
+
+[node name="960,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=613335862]
+
+[node name="960,-48,a" type="MeshInstance3D" parent="街全体ビュー/960,-48,a_Chunk" unique_id=803926217]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("175_kqanb")
+
+[node name="960,-416,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2050831829]
+
+[node name="960,-416,a" type="MeshInstance3D" parent="街全体ビュー/960,-416,a_Chunk" unique_id=1514392591]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("176_8em4e")
+
+[node name="976,192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=619441604]
+
+[node name="976,192,a" type="MeshInstance3D" parent="街全体ビュー/976,192,a_Chunk" unique_id=177419530]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("177_tan55")
+
+[node name="976,288,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=484512988]
+
+[node name="976,288,a" type="MeshInstance3D" parent="街全体ビュー/976,288,a_Chunk" unique_id=199352268]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("178_alpis")
+
+[node name="976,432,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1522595847]
+
+[node name="976,432,a" type="MeshInstance3D" parent="街全体ビュー/976,432,a_Chunk" unique_id=151765426]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("179_0iw1i")
+
+[node name="992,-688,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=797194150]
+
+[node name="992,-688,a" type="MeshInstance3D" parent="街全体ビュー/992,-688,a_Chunk" unique_id=1490144602]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("180_teyse")
+
+[node name="1008,112,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=2025263064]
+
+[node name="1008,112,a" type="MeshInstance3D" parent="街全体ビュー/1008,112,a_Chunk" unique_id=1983187770]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("181_b1y33")
+
+[node name="1008,432,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=928482132]
+
+[node name="1008,432,a" type="MeshInstance3D" parent="街全体ビュー/1008,432,a_Chunk" unique_id=1790844000]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("182_x8id4")
+
+[node name="1040,-16,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1048420605]
+
+[node name="1040,-16,a" type="MeshInstance3D" parent="街全体ビュー/1040,-16,a_Chunk" unique_id=640193753]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("183_kqecn")
+
+[node name="1040,-48,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=636885489]
+
+[node name="1040,-48,a" type="MeshInstance3D" parent="街全体ビュー/1040,-48,a_Chunk" unique_id=2118765339]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("184_ouwuc")
+
+[node name="1040,-272,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1422313613]
+
+[node name="1040,-272,a" type="MeshInstance3D" parent="街全体ビュー/1040,-272,a_Chunk" unique_id=1846411487]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("185_ebk75")
+
+[node name="1040,-416,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=194579701]
+
+[node name="1040,-416,a" type="MeshInstance3D" parent="街全体ビュー/1040,-416,a_Chunk" unique_id=196117329]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("186_cdbcx")
+
+[node name="1040,80,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=8493261]
+
+[node name="1040,80,a" type="MeshInstance3D" parent="街全体ビュー/1040,80,a_Chunk" unique_id=1547983324]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("187_milgx")
+
+[node name="1040,368,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=181993841]
+
+[node name="1040,368,a" type="MeshInstance3D" parent="街全体ビュー/1040,368,a_Chunk" unique_id=1623682668]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("188_p2rrb")
+
+[node name="1056,-192,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1208920168]
+
+[node name="1056,-192,a" type="MeshInstance3D" parent="街全体ビュー/1056,-192,a_Chunk" unique_id=1260924626]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("189_7mf20")
+
+[node name="1056,112,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1220662126]
+
+[node name="1056,112,a" type="MeshInstance3D" parent="街全体ビュー/1056,112,a_Chunk" unique_id=2036290479]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("190_6nujc")
+
+[node name="1056,176,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=26142501]
+
+[node name="1056,176,a" type="MeshInstance3D" parent="街全体ビュー/1056,176,a_Chunk" unique_id=1042275892]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("191_k5w8m")
+
+[node name="1056,272,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=59641808]
+
+[node name="1056,272,a" type="MeshInstance3D" parent="街全体ビュー/1056,272,a_Chunk" unique_id=1803116869]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("192_qo2qh")
+
+[node name="1120,-224,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1520160083]
+
+[node name="1120,-224,a" type="MeshInstance3D" parent="街全体ビュー/1120,-224,a_Chunk" unique_id=1897082550]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("193_uxja5")
+
+[node name="1120,-352,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1934137089]
+
+[node name="1120,-352,a" type="MeshInstance3D" parent="街全体ビュー/1120,-352,a_Chunk" unique_id=724279676]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("194_wl1do")
+
+[node name="1168,160,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=239025096]
+
+[node name="1168,160,a" type="MeshInstance3D" parent="街全体ビュー/1168,160,a_Chunk" unique_id=1638116562]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("195_rylhf")
+
+[node name="1200,-16,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=661195226]
+
+[node name="1200,-16,a" type="MeshInstance3D" parent="街全体ビュー/1200,-16,a_Chunk" unique_id=2071108188]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("196_iye7k")
+
+[node name="1296,272,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1929290567]
+
+[node name="1296,272,a" type="MeshInstance3D" parent="街全体ビュー/1296,272,a_Chunk" unique_id=1808137506]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("197_cxaxm")
+
+[node name="1344,-80,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1496770661]
+
+[node name="1344,-80,a" type="MeshInstance3D" parent="街全体ビュー/1344,-80,a_Chunk" unique_id=2140770165]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("198_now7c")
+
+[node name="1392,-16,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=564573608]
+
+[node name="1392,-16,a" type="MeshInstance3D" parent="街全体ビュー/1392,-16,a_Chunk" unique_id=1224136168]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("199_tdblc")
+
+[node name="1136,288,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1318506434]
+
+[node name="1136,288,a" type="MeshInstance3D" parent="街全体ビュー/1136,288,a_Chunk" unique_id=1389506335]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("200_geiva")
+
+[node name="256,880,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=226491306]
+
+[node name="256,880,a" type="MeshInstance3D" parent="街全体ビュー/256,880,a_Chunk" unique_id=1200745590]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("201_a5871")
+
+[node name="320,896,a_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1144103965]
+
+[node name="320,896,a" type="MeshInstance3D" parent="街全体ビュー/320,896,a_Chunk" unique_id=58300454]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("202_ul74v")
+
+[node name="256,896_Chunk" type="Node3D" parent="街全体ビュー" unique_id=1715317020]
+
+[node name="256,896" type="MeshInstance3D" parent="街全体ビュー/256,896_Chunk" unique_id=1551400260]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+mesh = ExtResource("203_pc88w")

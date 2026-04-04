@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://omeg85ws75ns"]
+
+[ext_resource type="Texture2D" uid="uid://cg1pitx20p3ll" path="res://1/都市3d仮_oxeye_daisy_767.png" id="1_h0ua2"]
+
+[resource]
+resource_name = "minecraft_block-oxeye_daisy"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_h0ua2")

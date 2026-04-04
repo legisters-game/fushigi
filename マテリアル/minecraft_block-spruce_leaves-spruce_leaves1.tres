@@ -4,14 +4,6 @@
 
 [resource]
 resource_name = "minecraft_block-spruce_leaves-spruce_leaves1"
-transparency = 3
-alpha_hash_scale = 0.0
-alpha_antialiasing_mode = 0
+transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_g1xlh")
-rim = 0.08
-heightmap_scale = -2.341
-backlight_enabled = true
-backlight_texture = ExtResource("1_g1xlh")
-texture_filter = 2
-stencil_flags = 2

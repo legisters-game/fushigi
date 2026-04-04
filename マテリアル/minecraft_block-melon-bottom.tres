@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cnr2yfrgjh2gc"]
+
+[ext_resource type="Texture2D" uid="uid://cjwyi3glxokrt" path="res://1/都市3d仮_bottom_803.png" id="1_te2l5"]
+
+[resource]
+resource_name = "minecraft_block-melon-bottom"
+cull_mode = 2
+albedo_texture = ExtResource("1_te2l5")

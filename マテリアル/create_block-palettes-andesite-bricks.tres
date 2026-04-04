@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bdq72nwjnylr7"]
 
-[ext_resource type="Texture2D" uid="uid://d8ty2svfh6jg" path="res://1/都市3d仮_bricks_167.png" id="1_8dl8h"]
+[ext_resource type="Texture2D" uid="uid://cmheoogm086y0" path="res://1/都市3d仮_bricks_375.png" id="1_8dl8h"]
 
 [resource]
 resource_name = "create_block-palettes-andesite-bricks"

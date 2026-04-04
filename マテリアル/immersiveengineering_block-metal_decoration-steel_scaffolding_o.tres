@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dyy3t8gbibifl"]
+
+[ext_resource type="Texture2D" uid="uid://rqg8j7vqrbwh" path="res://1/都市3d仮_steel_scaffolding_open.png" id="1_h3vxj"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_decoration-steel_scaffolding_o"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_h3vxj")

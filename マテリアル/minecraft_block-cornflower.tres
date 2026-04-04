@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b3yjfkdmqr4bw"]
 
-[ext_resource type="Texture2D" uid="uid://dknrfbx00ayj0" path="res://1/都市3d仮_cornflower_548.png" id="1_3yhvp"]
+[ext_resource type="Texture2D" uid="uid://b7wpj1vy00wwt" path="res://1/都市3d仮_cornflower_749.png" id="1_3yhvp"]
 
 [resource]
 resource_name = "minecraft_block-cornflower"

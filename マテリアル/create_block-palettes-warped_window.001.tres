@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dcqqissjbtit3"]
+
+[ext_resource type="Texture2D" uid="uid://es7h3aonwbjy" path="res://1/都市3d仮_warped_window.png" id="1_44g1g"]
+
+[resource]
+resource_name = "create_block-palettes-warped_window.001"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_44g1g")

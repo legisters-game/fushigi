@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ckkyfk3k8yum1"]
+
+[ext_resource type="Texture2D" uid="uid://bi38e16j4uwxp" path="res://1/都市3d仮_mail.png" id="1_8w8lw"]
+
+[resource]
+resource_name = "cfm_item-mail.001"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_8w8lw")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://quhk7w3fuwg4"]
+
+[ext_resource type="Texture2D" uid="uid://ciienj1lrqvsn" path="res://1/都市3d仮_banner_base_yellow.png" id="1_f4a14"]
+
+[resource]
+resource_name = "jmc2obj_banner-banner_base_yellow.001"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_f4a14")

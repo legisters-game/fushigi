@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://j3hky7sw4p1n"]
+
+[ext_resource type="Texture2D" uid="uid://doobyi851ge1t" path="res://1/都市3d仮_player_HPXHead_7cdeec3343ba4473936a168794d4d44892a524799620c243e25f94d01a9b30d1.png" id="1_imwko"]
+
+[resource]
+resource_name = "jmc2obj_head-player_HPXHead_7cdeec3343ba4473936a168794d4d44892"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_imwko")

@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://c2nhop7w6ppq7"]
 
-[ext_resource type="Texture2D" uid="uid://dq6qpk1oaosh0" path="res://1/都市3d仮_idle_597.png" id="1_hiiiq"]
+[ext_resource type="Texture2D" uid="uid://btu3i2ka32u7g" path="res://1/都市3d仮_idle_463.png" id="1_hiiiq"]
 
 [resource]
 resource_name = "create_block-diodes-pulse_repeater-idle"

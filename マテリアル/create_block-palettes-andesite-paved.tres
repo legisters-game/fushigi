@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://c1i3g7vxifqfa"]
 
-[ext_resource type="Texture2D" uid="uid://uwscgscixks5" path="res://1/都市3d仮_paved_776.png" id="1_qm265"]
+[ext_resource type="Texture2D" uid="uid://c6eujpsg1yl4i" path="res://1/都市3d仮_paved.png" id="1_qm265"]
 
 [resource]
 resource_name = "create_block-palettes-andesite-paved"

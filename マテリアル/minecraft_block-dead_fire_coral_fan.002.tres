@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cu8cb4x4xsrlg"]
+
+[ext_resource type="Texture2D" uid="uid://bwckb7nily5e5" path="res://1/都市3d仮_dead_fire_coral_fan.png" id="1_ktkbt"]
+
+[resource]
+resource_name = "minecraft_block-dead_fire_coral_fan.002"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ktkbt")

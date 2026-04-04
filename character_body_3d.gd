@@ -2,10 +2,13 @@ extends CharacterBody3D
 
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 3
 const 感度:float=5
 var 視点回転:Vector2
 
+func _ready() -> void:
+	pass
+	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():

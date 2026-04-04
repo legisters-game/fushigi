@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://pa6cw4v2e6lx"]
+
+[ext_resource type="Texture2D" uid="uid://cklryc12rvsnb" path="res://1/都市3d仮_side_3.png" id="1_3bxxl"]
+
+[resource]
+resource_name = "minecraft_block-melon-side_3"
+cull_mode = 2
+albedo_texture = ExtResource("1_3bxxl")

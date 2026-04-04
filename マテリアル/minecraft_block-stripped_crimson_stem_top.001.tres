@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bn0owlnaw056w"]
+
+[ext_resource type="Texture2D" uid="uid://omuhq1nbrc82" path="res://1/都市3d仮_stripped_crimson_stem_top.png" id="1_px0a3"]
+
+[resource]
+resource_name = "minecraft_block-stripped_crimson_stem_top.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_px0a3")

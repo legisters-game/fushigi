@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bu4olbv21gh73"]
+
+[ext_resource type="Texture2D" uid="uid://b15g6cc683g8b" path="res://1/都市3d仮_coil_hv_top.png" id="1_7fgq6"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_decoration-coil_hv_top.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_7fgq6")

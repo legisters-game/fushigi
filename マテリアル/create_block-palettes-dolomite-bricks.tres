@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://d4gjrdctf3s5c"]
 
-[ext_resource type="Texture2D" uid="uid://qx74qt2rccv5" path="res://1/都市3d仮_bricks_780.png" id="1_4cibw"]
+[ext_resource type="Texture2D" uid="uid://ddaup18yor0q1" path="res://1/都市3d仮_bricks_385.png" id="1_4cibw"]
 
 [resource]
 resource_name = "create_block-palettes-dolomite-bricks"

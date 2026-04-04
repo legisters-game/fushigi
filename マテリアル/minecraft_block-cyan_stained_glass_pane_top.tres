@@ -5,6 +5,5 @@
 [resource]
 resource_name = "minecraft_block-cyan_stained_glass_pane_top"
 transparency = 4
+cull_mode = 2
 albedo_texture = ExtResource("1_3q4w7")
-roughness = 0.18
-texture_filter = 0

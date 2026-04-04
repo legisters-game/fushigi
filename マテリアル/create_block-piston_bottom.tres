@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bby0qodunyw23"]
 
-[ext_resource type="Texture2D" uid="uid://biudu5vqp72qa" path="res://1/都市3d仮_piston_bottom.png" id="1_u3vvm"]
+[ext_resource type="Texture2D" uid="uid://k3g247aunwaw" path="res://1/都市3d仮_piston_bottom_689.png" id="1_u3vvm"]
 
 [resource]
 resource_name = "create_block-piston_bottom"

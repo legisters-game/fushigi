@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dhg1ieuqdowr4"]
+
+[ext_resource type="Texture2D" uid="uid://bvj1oriwcqhkc" path="res://1/都市3d仮_light_blue_shulker_box.png" id="1_55sp3"]
+
+[resource]
+resource_name = "minecraft_block-light_blue_shulker_box.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_55sp3")

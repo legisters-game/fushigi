@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmex0ouxmfrm"]
+
+[ext_resource type="Texture2D" uid="uid://iwivaiw6rpq5" path="res://1/都市3d仮_heavy_engineering.png" id="1_fw0o1"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_decoration-heavy_engineerin"
+cull_mode = 2
+albedo_texture = ExtResource("1_fw0o1")

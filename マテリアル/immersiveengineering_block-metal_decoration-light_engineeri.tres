@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dg520cw7ic4kj"]
+
+[ext_resource type="Texture2D" uid="uid://bfullc8m11gxl" path="res://1/都市3d仮_light_engineering.png" id="1_uleax"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_decoration-light_engineeri"
+cull_mode = 2
+albedo_texture = ExtResource("1_uleax")

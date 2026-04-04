@@ -1,16 +1,9 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cmms4pwttgonv"]
 
 [ext_resource type="Texture2D" uid="uid://dahaujrav4ke4" path="res://1/都市3d仮_spruce_trapdoor.png" id="1_jah65"]
-[ext_resource type="Texture2D" uid="uid://fhlhgxhjdujq" path="res://1/spruce_trapdoor_a.png" id="2_mvr66"]
 
 [resource]
 resource_name = "minecraft_block-spruce_trapdoor"
-transparency = 3
-alpha_hash_scale = 0.0
-alpha_antialiasing_mode = 0
+transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_jah65")
-heightmap_enabled = true
-heightmap_texture = ExtResource("2_mvr66")
-texture_filter = 0
-grow_amount = 0.005

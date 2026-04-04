@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cukax37ntwqle"]
+
+[ext_resource type="Script" uid="uid://dwcncdbysb1f5" path="res://街チャンク処理/パーツ/透明壁.gd" id="1_bcux1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bcux1"]
+size = Vector3(1, 0.99365234, 1)
+
+[node name="透明壁" type="CollisionShape3D" unique_id=491570466]
+shape = SubResource("BoxShape3D_bcux1")
+debug_color = Color(0.96, 0, 0.304, 0.42)
+script = ExtResource("1_bcux1")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://nwecg0wi37i8"]
+
+[ext_resource type="Texture2D" uid="uid://bmxq6mqjeq0hc" path="res://1/都市3d仮_crimson_stem_top.png" id="1_hiciv"]
+
+[resource]
+resource_name = "minecraft_block-crimson_stem_top.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_hiciv")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dyeco4a7vgl6h"]
+
+[ext_resource type="Texture2D" uid="uid://cbqkbpp1h7pc" path="res://1/都市3d仮_redstone_engineering.png" id="1_mhv3n"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal_decoration-redstone_engineer"
+cull_mode = 2
+albedo_texture = ExtResource("1_mhv3n")

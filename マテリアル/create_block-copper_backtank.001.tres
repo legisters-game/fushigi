@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dguhgsjb3mq7i"]
+
+[ext_resource type="Texture2D" uid="uid://b8jwti0bfs7lb" path="res://1/都市3d仮_copper_backtank.png" id="1_7k8dm"]
+
+[resource]
+resource_name = "create_block-copper_backtank.001"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_7k8dm")

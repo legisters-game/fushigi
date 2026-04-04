@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cy1sm8tj6b2n2"]
+
+[ext_resource type="Script" uid="uid://bur4pd7u753e8" path="res://街チャンク処理/パーツ/当たり判定制御.gd" id="1_3b3tq"]
+
+[node name="当たり判定制御" type="Area3D" unique_id=956151749]
+monitorable = false
+script = ExtResource("1_3b3tq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

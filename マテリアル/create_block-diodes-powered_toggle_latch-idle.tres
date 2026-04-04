@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dxhr3ohsdrv8w"]
 
-[ext_resource type="Texture2D" uid="uid://c1vag2xxaw5fw" path="res://1/都市3d仮_idle_490.png" id="1_2gs46"]
+[ext_resource type="Texture2D" uid="uid://bhnx4le03j3qa" path="res://1/都市3d仮_idle_477.png" id="1_2gs46"]
 
 [resource]
 resource_name = "create_block-diodes-powered_toggle_latch-idle"

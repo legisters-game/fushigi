@@ -11,7 +11,7 @@ func _post_import(scene: Node):
 			scene.remove_child(child)
 			
 			# 2. チャンクノードを生成
-			var チャンクノード: Node3D = 関節シーン.instantiate()
+			var チャンクノード: Node3D = Node3D.new()
 			チャンクノード.name = child.name + "_Chunk" # 名前重複を避けるため
 			
 			# 3. シーンに追加

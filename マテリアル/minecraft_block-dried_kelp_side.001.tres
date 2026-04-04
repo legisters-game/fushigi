@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://t1bx5lo4vtjb"]
+
+[ext_resource type="Texture2D" uid="uid://cwa1qfah21f2g" path="res://1/都市3d仮_dried_kelp_side.png" id="1_c1eu2"]
+
+[resource]
+resource_name = "minecraft_block-dried_kelp_side.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_c1eu2")

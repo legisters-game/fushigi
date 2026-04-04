@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cpfddv45vk7ih"]
+
+[ext_resource type="Texture2D" uid="uid://bkjq6ydgdfcyl" path="res://1/都市3d仮_storage_nickel.png" id="1_wj1kf"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-storage_nickel.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_wj1kf")

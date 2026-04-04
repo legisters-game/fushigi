@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ue07d8yaqtdw"]
 
-[ext_resource type="Texture2D" uid="uid://do8xu8iakyfme" path="res://1/都市3d仮_polished_slab_786.png" id="1_3xirw"]
+[ext_resource type="Texture2D" uid="uid://bqlyx15i041fi" path="res://1/都市3d仮_polished_slab_393.png" id="1_3xirw"]
 
 [resource]
 resource_name = "create_block-palettes-limestone-polished_slab"

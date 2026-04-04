@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://8h5m7el7akyq"]
+
+[ext_resource type="Texture2D" uid="uid://cfdvsxqpqhmyi" path="res://1/都市3d仮_storage_uranium_top.png" id="1_vi57p"]
+
+[resource]
+resource_name = "immersiveengineering_block-metal-storage_uranium_top.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_vi57p")

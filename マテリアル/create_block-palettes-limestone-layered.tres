@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://byuojcq3rvlru"]
 
-[ext_resource type="Texture2D" uid="uid://dr8n60gor2hif" path="res://1/都市3d仮_layered_783.png" id="1_4ayuq"]
+[ext_resource type="Texture2D" uid="uid://vgrru2qme833" path="res://1/都市3d仮_layered.png" id="1_4ayuq"]
 
 [resource]
 resource_name = "create_block-palettes-limestone-layered"

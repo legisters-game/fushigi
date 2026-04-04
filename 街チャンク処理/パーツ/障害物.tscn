@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b7cnnr2hisbqy"]
+
+[ext_resource type="Script" uid="uid://cl6jbhkmwt4oo" path="res://街チャンク処理/パーツ/障害物.gd" id="1_qhpic"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qhpic"]
+
+[node name="障害物" type="CollisionShape3D" unique_id=1008151706]
+shape = SubResource("BoxShape3D_qhpic")
+debug_color = Color(0, 0.96, 0.08, 0.42)
+script = ExtResource("1_qhpic")
