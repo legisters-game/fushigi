@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bbfh83jgah2q1"]
+
+[node name="グローバルイルミネーション" type="VoxelGI" unique_id=754016580]
+subdiv = 0

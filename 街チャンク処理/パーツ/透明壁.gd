@@ -1,4 +1,5 @@
 @tool
+class_name 透明壁コリジョン
 extends CollisionShape3D
 
 

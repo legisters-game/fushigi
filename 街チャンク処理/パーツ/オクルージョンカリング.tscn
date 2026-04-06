@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://uknsp7tmjptt"]
+
+[ext_resource type="Script" uid="uid://b7vq8rq86srh6" path="res://街チャンク処理/パーツ/オクルージョンカリング.gd" id="1_lllv7"]
+
+[node name="オクルージョンカリング" type="OccluderInstance3D" unique_id=1955116240]
+script = ExtResource("1_lllv7")

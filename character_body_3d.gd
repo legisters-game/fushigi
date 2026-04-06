@@ -8,9 +8,11 @@ const 感度:float=5
 var 視点回転:Vector2
 
 func _ready() -> void:
+	if Engine.is_editor_hint():return
 	pass
 	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 func _physics_process(delta: float) -> void:
+	if Engine.is_editor_hint():return
 	# Add the gravity.
 	if not is_on_floor()and not 飛行:
 		velocity += get_gravity() * delta
@@ -33,11 +35,12 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		velocity.y = direction.y * SPEED
+		if 飛行:
+			velocity.y = direction.y * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-		velocity.y = move_toward(velocity.y, 0, SPEED)
+		#velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
 	rotation_degrees.y-=視点回転.x*delta*感度
 	視点回転=Vector2.ZERO
@@ -45,6 +48,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 func _input(event: InputEvent) -> void:
+	if Engine.is_editor_hint():return
 	if event is InputEventMouseMotion:
 		var マウス:InputEventMouseMotion=event
 		視点回転=マウス.screen_relative

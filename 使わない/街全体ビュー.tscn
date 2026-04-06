@@ -205,7 +205,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bbbwfxutphug0" path="res://街メッシュ/都市3d仮_320,896.res" id="202_ul74v"]
 [ext_resource type="ArrayMesh" uid="uid://cya5a8ekamnce" path="res://街メッシュ/都市3d仮_256,896.res" id="203_pc88w"]
 
-[node name="Node3D" type="Node3D" unique_id=2135928172]
+[node name="街全体ビュー" type="Node3D" unique_id=2135928172]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 script = ExtResource("1_cxpoa")
 
