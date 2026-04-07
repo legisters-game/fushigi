@@ -6,7 +6,9 @@ extends Node3D
 var 全体表示:bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	return
+	for i in get_children():
+		print(i.name)
 	#process_mode=Node.PROCESS_MODE_DISABLED
 
 func okq():
