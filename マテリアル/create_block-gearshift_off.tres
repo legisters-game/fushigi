@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-gearshift_off"
-cull_mode = 2
 albedo_texture = ExtResource("1_wtobw")
+texture_filter = 2

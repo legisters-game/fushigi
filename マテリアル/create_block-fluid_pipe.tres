@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-fluid_pipe"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_4viem")
+texture_filter = 2

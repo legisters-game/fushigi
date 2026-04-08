@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-palettes-framed_glass_pane_top"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_go0cw")
+texture_filter = 2

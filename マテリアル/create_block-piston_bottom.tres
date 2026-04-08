@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-piston_bottom"
-cull_mode = 2
 albedo_texture = ExtResource("1_u3vvm")
+texture_filter = 2

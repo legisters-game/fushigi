@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-seat-top_red"
-cull_mode = 2
 albedo_texture = ExtResource("1_ocae1")
+texture_filter = 2

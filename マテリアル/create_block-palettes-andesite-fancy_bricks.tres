@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-palettes-andesite-fancy_bricks"
-cull_mode = 2
 albedo_texture = ExtResource("1_x28ob")
+texture_filter = 2

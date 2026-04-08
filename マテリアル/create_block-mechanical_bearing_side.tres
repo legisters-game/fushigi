@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-mechanical_bearing_side"
-cull_mode = 2
 albedo_texture = ExtResource("1_r4h1v")
+texture_filter = 2

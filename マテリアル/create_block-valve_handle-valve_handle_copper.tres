@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-valve_handle-valve_handle_copper"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_u8745")
+texture_filter = 2

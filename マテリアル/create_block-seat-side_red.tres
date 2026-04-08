@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-seat-side_red"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_chhvx")
+texture_filter = 2

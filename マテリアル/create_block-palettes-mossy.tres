@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-palettes-mossy"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_g2f3u")
+texture_filter = 2

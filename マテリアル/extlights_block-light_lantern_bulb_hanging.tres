@@ -5,5 +5,5 @@
 [resource]
 resource_name = "extlights_block-light_lantern_bulb_hanging"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_gwqkw")
+texture_filter = 2

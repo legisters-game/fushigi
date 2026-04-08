@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-palettes-andesite-paved"
-cull_mode = 2
 albedo_texture = ExtResource("1_qm265")
+texture_filter = 2

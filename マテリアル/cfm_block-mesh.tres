@@ -5,5 +5,5 @@
 [resource]
 resource_name = "cfm_block-mesh"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_6h0ux")
+texture_filter = 2

@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-palettes-acacia_window"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_i433c")
+texture_filter = 2

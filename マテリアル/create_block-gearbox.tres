@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-gearbox"
-cull_mode = 2
 albedo_texture = ExtResource("1_a0h07")
+texture_filter = 2

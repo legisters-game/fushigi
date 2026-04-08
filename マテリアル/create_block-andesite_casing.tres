@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-andesite_casing"
-cull_mode = 2
 albedo_texture = ExtResource("1_8y6oq")
+texture_filter = 2

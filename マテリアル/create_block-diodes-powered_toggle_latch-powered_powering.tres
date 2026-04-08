@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-diodes-powered_toggle_latch-powered_powering"
-cull_mode = 2
 albedo_texture = ExtResource("1_2hwsx")
+texture_filter = 2

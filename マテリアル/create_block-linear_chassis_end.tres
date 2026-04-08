@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-linear_chassis_end"
-cull_mode = 2
 albedo_texture = ExtResource("1_s8da6")
+texture_filter = 2

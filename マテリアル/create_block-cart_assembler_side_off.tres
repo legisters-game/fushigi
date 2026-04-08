@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-cart_assembler_side_off"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_t5haq")
+texture_filter = 2

@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-palettes-limestone-polished"
-cull_mode = 2
 albedo_texture = ExtResource("1_rd0kl")
+texture_filter = 2

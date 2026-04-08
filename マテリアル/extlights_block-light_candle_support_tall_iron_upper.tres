@@ -5,5 +5,5 @@
 [resource]
 resource_name = "extlights_block-light_candle_support_tall_iron_upper"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_ts1kj")
+texture_filter = 2

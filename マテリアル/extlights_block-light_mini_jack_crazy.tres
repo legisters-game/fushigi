@@ -5,5 +5,4 @@
 [resource]
 resource_name = "extlights_block-light_mini_jack_crazy"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_psu77")

@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-gantry_shaft_powered"
-cull_mode = 2
 albedo_texture = ExtResource("1_8kk3h")
+texture_filter = 2

@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-radial_chassis_side_sticky"
-cull_mode = 2
 albedo_texture = ExtResource("1_ued5f")
+texture_filter = 2

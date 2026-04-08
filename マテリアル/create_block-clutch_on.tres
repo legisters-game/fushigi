@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-clutch_on"
-cull_mode = 2
 albedo_texture = ExtResource("1_y6f7l")
+texture_filter = 2
