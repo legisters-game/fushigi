@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-palettes-ornate_iron_window_pane_top"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_hxh1b")
+texture_filter = 2

@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-chute_diagonal"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_24dmo")
+texture_filter = 2

@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-andesite_funnel_neutral"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_3ku0r")
+texture_filter = 2

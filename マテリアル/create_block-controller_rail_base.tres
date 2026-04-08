@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-controller_rail_base"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_ycco1")
+texture_filter = 2

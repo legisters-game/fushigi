@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-diodes-pulse_repeater-idle"
-cull_mode = 2
 albedo_texture = ExtResource("1_hiiiq")
+texture_filter = 2

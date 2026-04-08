@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-encased_chain_drive"
-cull_mode = 2
 albedo_texture = ExtResource("1_hqg3i")
+texture_filter = 2

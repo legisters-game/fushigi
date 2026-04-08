@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-palettes-weathered_limestone-chiseled"
-cull_mode = 2
 albedo_texture = ExtResource("1_l8r7u")
+texture_filter = 2

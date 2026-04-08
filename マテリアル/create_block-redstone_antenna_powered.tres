@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-redstone_antenna_powered"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_lc041")
+texture_filter = 2

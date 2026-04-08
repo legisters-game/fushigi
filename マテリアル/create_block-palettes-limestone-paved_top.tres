@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-palettes-limestone-paved_top"
-cull_mode = 2
 albedo_texture = ExtResource("1_yo5ls")
+texture_filter = 2

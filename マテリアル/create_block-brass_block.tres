@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-brass_block"
-cull_mode = 2
 albedo_texture = ExtResource("1_4ho8y")
+texture_filter = 2

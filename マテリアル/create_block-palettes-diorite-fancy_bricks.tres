@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-palettes-diorite-fancy_bricks"
-cull_mode = 2
 albedo_texture = ExtResource("1_2l5ix")
+texture_filter = 2

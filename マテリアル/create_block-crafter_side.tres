@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-crafter_side"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_y5lng")
+texture_filter = 2

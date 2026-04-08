@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-palettes-andesite-pillar_end"
-cull_mode = 2
 albedo_texture = ExtResource("1_ya8fv")
+texture_filter = 2

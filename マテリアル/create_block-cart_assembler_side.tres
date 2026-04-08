@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-cart_assembler_side"
-cull_mode = 2
 albedo_texture = ExtResource("1_nbmym")
+texture_filter = 2

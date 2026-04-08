@@ -5,5 +5,5 @@
 [resource]
 resource_name = "extlights_block-light_candleplate_gold"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_1icmt")
+texture_filter = 2

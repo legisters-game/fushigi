@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-contact_side_powered"
-cull_mode = 2
 albedo_texture = ExtResource("1_5r1j3")
+texture_filter = 2

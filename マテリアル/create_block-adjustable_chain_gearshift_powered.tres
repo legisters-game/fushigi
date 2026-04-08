@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-adjustable_chain_gearshift_powered"
-cull_mode = 2
 albedo_texture = ExtResource("1_qq5mu")
+texture_filter = 2

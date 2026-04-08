@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-crafter_top"
-cull_mode = 2
 albedo_texture = ExtResource("1_chjpf")
+texture_filter = 2

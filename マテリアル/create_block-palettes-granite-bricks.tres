@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-palettes-granite-bricks"
-cull_mode = 2
 albedo_texture = ExtResource("1_tatf6")
+texture_filter = 2

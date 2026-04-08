@@ -5,5 +5,5 @@
 [resource]
 resource_name = "create_block-depot_top"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_3auo4")
+texture_filter = 2

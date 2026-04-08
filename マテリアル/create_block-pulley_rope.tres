@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-pulley_rope"
-cull_mode = 2
 albedo_texture = ExtResource("1_3hple")
+texture_filter = 2

@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-mechanical_press_top"
-cull_mode = 2
 albedo_texture = ExtResource("1_1sdco")
+texture_filter = 2

@@ -5,5 +5,5 @@
 [resource]
 resource_name = "extlights_block-light_lantern_paper_red_hanging"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_8mx37")
+texture_filter = 2

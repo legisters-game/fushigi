@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "create_block-sequenced_gearshift"
-cull_mode = 2
 albedo_texture = ExtResource("1_8sy4h")
+texture_filter = 2
