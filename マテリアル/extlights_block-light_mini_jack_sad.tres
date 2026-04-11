@@ -5,5 +5,7 @@
 [resource]
 resource_name = "extlights_block-light_mini_jack_sad"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_gk1v0")
+emission_enabled = true
+emission_texture = ExtResource("1_gk1v0")
+texture_filter = 2

@@ -6,4 +6,6 @@
 resource_name = "extlights_block-light_lamp_bulb"
 transparency = 4
 albedo_texture = ExtResource("1_vjh5j")
+emission_enabled = true
+emission_texture = ExtResource("1_vjh5j")
 texture_filter = 2

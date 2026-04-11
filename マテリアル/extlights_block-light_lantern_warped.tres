@@ -6,4 +6,6 @@
 resource_name = "extlights_block-light_lantern_warped"
 transparency = 4
 albedo_texture = ExtResource("1_06otb")
+emission_enabled = true
+emission_texture = ExtResource("1_06otb")
 texture_filter = 2

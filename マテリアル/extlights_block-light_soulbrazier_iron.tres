@@ -5,5 +5,7 @@
 [resource]
 resource_name = "extlights_block-light_soulbrazier_iron"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_ikryy")
+emission_enabled = true
+emission_texture = ExtResource("1_ikryy")
+texture_filter = 2

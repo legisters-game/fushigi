@@ -6,4 +6,6 @@
 resource_name = "extlights_block-light_lantern_caged"
 transparency = 4
 albedo_texture = ExtResource("1_ci82y")
+emission_enabled = true
+emission_texture = ExtResource("1_ci82y")
 texture_filter = 2
