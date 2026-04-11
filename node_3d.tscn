@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://mhkmhrkg5l03"]
 
 [ext_resource type="PackedScene" uid="uid://coeftm18in8r8" path="res://街チャンク処理/チャンクルート.tscn" id="2_1a2ec"]
-[ext_resource type="PackedScene" uid="uid://bcvfyiunqmt1g" path="res://character_body_3d.tscn" id="2_a0tk4"]
 [ext_resource type="Script" uid="uid://lqi2iwbsxfdj" path="res://1/都市3d仮.gd" id="2_r3fl7"]
 [ext_resource type="Script" uid="uid://dunk7b3n3p2st" path="res://街チャンク処理/パーツ/街メッシュルート.gd" id="4_ccj11"]
 [ext_resource type="ArrayMesh" uid="uid://c25elw15qttnk" path="res://街メッシュ/都市3d仮_-208,240.res" id="4_ir4n0"]
@@ -206,6 +205,8 @@
 [ext_resource type="ArrayMesh" uid="uid://c2qfc44jxvc7a" path="res://街メッシュ/都市3d仮_256,880.res" id="203_6v21d"]
 [ext_resource type="ArrayMesh" uid="uid://bbbwfxutphug0" path="res://街メッシュ/都市3d仮_320,896.res" id="204_mus2s"]
 [ext_resource type="ArrayMesh" uid="uid://cya5a8ekamnce" path="res://街メッシュ/都市3d仮_256,896.res" id="205_3bsgd"]
+[ext_resource type="PackedScene" uid="uid://buwi56bftrlec" path="res://エンティティ/プレイヤー/プレイヤー.tscn" id="207_ccj11"]
+[ext_resource type="PackedScene" uid="uid://nfkdvrm1gp82" path="res://カメラ/カメラ制御.tscn" id="208_ir4n0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_noarx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -237,10 +238,6 @@ fog_height_density = -0.015
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_r3fl7"]
 plane = Plane(0, 0.225, 0, 0)
-
-[sub_resource type="InputEventKey" id="InputEventKey_1a2ec"]
-device = -1
-keycode = 4194305
 
 [node name="Node3D" type="Node3D" unique_id=2085154183]
 
@@ -2890,10 +2887,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 46.78842, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1226737, 0)
 shape = SubResource("WorldBoundaryShape3D_r3fl7")
 
-[node name="CharacterBody3D" parent="." unique_id=2029851909 instance=ExtResource("2_a0tk4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.450073, -2.9849746, 165.21754)
-"飛行" = true
-"キー" = SubResource("InputEventKey_1a2ec")
+[node name="エンティティ" parent="." unique_id=1396265163 instance=ExtResource("207_ccj11")]
+
+[node name="カメラ制御" parent="." unique_id=629122187 node_paths=PackedStringArray("目標") instance=ExtResource("208_ir4n0")]
+transform = Transform3D(1, 0, 0, 0, 0.76040596, -0.64944804, 0, 0.64944804, 0.76040596, 0, 0, 0)
+"目標" = NodePath("../エンティティ")
+"速さ" = 5.0
 
 [editable path="都市3d仮/-208,240,a_Chunk"]
 [editable path="都市3d仮/48,416,a_Chunk"]
@@ -3097,3 +3096,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.450073, -2.9849746, 165.21
 [editable path="都市3d仮/256,880,a_Chunk"]
 [editable path="都市3d仮/320,896,a_Chunk"]
 [editable path="都市3d仮/256,896_Chunk"]
+[editable path="エンティティ"]

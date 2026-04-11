@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://buwi56bftrlec"]
+
+[ext_resource type="PackedScene" uid="uid://bx0148bfj82t3" path="res://エンティティ/エンティティ.tscn" id="1_dffgq"]
+[ext_resource type="Script" uid="uid://cfl7e116f7ftg" path="res://プレイヤー.gd" id="2_adn76"]
+[ext_resource type="PackedScene" uid="uid://cjqrr87u4k4o8" path="res://エンティティ/モンレッコウ.glb" id="3_adn76"]
+
+[node name="エンティティ" unique_id=1396265163 instance=ExtResource("1_dffgq")]
+script = ExtResource("2_adn76")
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=57884629]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.799, 0)
+
+[node name="CollisionShape3D2" parent="." index="1" unique_id=644918341]
+transform = Transform3D(-1, -8.742277e-08, 3.82137e-15, 0, -4.371138e-08, -0.9999999, 8.742278e-08, -0.9999999, 4.371138e-08, 1.7115537e-08, 0.56381184, 0.4)
+
+[node name="モンレッコウ" parent="原点" parent_id_path=PackedInt32Array(1394227668) index="0" unique_id=765048948 instance=ExtResource("3_adn76")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.04319197, 0)
+
+[node name="カメラ基準点" parent="." index="3" unique_id=1770975331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3644382, 0)
