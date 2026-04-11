@@ -5,5 +5,7 @@
 [resource]
 resource_name = "extlights_block-light_modern_ground_panel_black"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_t1x6e")
+emission_enabled = true
+emission_texture = ExtResource("1_t1x6e")
+texture_filter = 2

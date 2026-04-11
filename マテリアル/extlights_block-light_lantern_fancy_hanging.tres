@@ -6,4 +6,6 @@
 resource_name = "extlights_block-light_lantern_fancy_hanging"
 transparency = 4
 albedo_texture = ExtResource("1_pqblh")
+emission_enabled = true
+emission_texture = ExtResource("1_pqblh")
 texture_filter = 2

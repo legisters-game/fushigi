@@ -5,5 +5,7 @@
 [resource]
 resource_name = "extlights_block-xmas-xmas_bulb"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_ivts8")
+emission_enabled = true
+emission_texture = ExtResource("1_ivts8")
+texture_filter = 2

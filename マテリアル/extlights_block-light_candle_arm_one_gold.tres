@@ -6,4 +6,6 @@
 resource_name = "extlights_block-light_candle_arm_one_gold"
 transparency = 4
 albedo_texture = ExtResource("1_uouas")
+emission_enabled = true
+emission_texture = ExtResource("1_uouas")
 texture_filter = 2

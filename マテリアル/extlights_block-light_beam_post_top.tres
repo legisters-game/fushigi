@@ -6,4 +6,6 @@
 resource_name = "extlights_block-light_beam_post_top"
 transparency = 4
 albedo_texture = ExtResource("1_naa77")
+emission_enabled = true
+emission_texture = ExtResource("1_naa77")
 texture_filter = 2

@@ -4,5 +4,7 @@
 
 [resource]
 resource_name = "extlights_block-light_shroom_stem"
-cull_mode = 2
 albedo_texture = ExtResource("1_lj0sn")
+emission_enabled = true
+emission_texture = ExtResource("1_lj0sn")
+texture_filter = 2

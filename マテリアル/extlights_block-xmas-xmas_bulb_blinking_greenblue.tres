@@ -5,5 +5,7 @@
 [resource]
 resource_name = "extlights_block-xmas-xmas_bulb_blinking_greenblue"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_anm4k")
+emission_enabled = true
+emission_texture = ExtResource("1_anm4k")
+texture_filter = 2
