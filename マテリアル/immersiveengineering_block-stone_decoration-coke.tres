@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "immersiveengineering_block-stone_decoration-coke"
-cull_mode = 2
 albedo_texture = ExtResource("1_gsnmj")
+texture_filter = 2

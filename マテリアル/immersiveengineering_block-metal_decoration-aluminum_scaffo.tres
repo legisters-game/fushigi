@@ -5,5 +5,5 @@
 [resource]
 resource_name = "immersiveengineering_block-metal_decoration-aluminum_scaffo"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_lodpy")
+texture_filter = 2

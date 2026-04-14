@@ -5,5 +5,5 @@
 [resource]
 resource_name = "immersiveengineering_block-wooden_device-wallmount"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_762d0")
+texture_filter = 2

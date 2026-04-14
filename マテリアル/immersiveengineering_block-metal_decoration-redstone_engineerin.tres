@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "immersiveengineering_block-metal_decoration-redstone_engineerin"
-cull_mode = 2
 albedo_texture = ExtResource("1_a8cqn")
+texture_filter = 2

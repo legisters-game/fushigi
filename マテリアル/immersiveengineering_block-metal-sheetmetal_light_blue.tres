@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "immersiveengineering_block-metal-sheetmetal_light_blue"
-cull_mode = 2
 albedo_texture = ExtResource("1_7cwgl")
+texture_filter = 2

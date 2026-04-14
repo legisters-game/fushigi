@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "immersiveengineering_block-stone_decoration-alloybrick"
-cull_mode = 2
 albedo_texture = ExtResource("1_wfq1p")
+texture_filter = 2

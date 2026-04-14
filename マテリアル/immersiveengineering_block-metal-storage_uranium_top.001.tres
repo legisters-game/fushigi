@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "immersiveengineering_block-metal-storage_uranium_top.001"
-cull_mode = 2
 albedo_texture = ExtResource("1_vi57p")
+texture_filter = 2

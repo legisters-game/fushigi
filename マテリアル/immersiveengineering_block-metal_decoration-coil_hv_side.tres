@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "immersiveengineering_block-metal_decoration-coil_hv_side"
-cull_mode = 2
 albedo_texture = ExtResource("1_o6tvu")
+texture_filter = 2
