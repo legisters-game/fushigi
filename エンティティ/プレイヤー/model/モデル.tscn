@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://c5aj3vsg6e2nr"]
+
+[ext_resource type="PackedScene" uid="uid://cvpme4myxq5q8" path="res://エンティティ/プレイヤー/model/モデル.glb" id="1_nojbi"]
+[ext_resource type="Script" uid="uid://cgchvyb6y0r2n" path="res://エンティティ/プレイヤー/model/モデル.gd" id="2_ndam1"]
+[ext_resource type="Animation" uid="uid://de4s8hj4ykwcp" path="res://エンティティ/Take 001.res" id="2_nojbi"]
+[ext_resource type="Animation" uid="uid://6ncv0ggjs6g4" path="res://エンティティ/プレイヤー/anim/走り.res" id="2_p7ol4"]
+[ext_resource type="Animation" uid="uid://5y37bx40r325" path="res://エンティティ/プレイヤー/anim/走り右.res" id="3_ndam1"]
+[ext_resource type="Animation" uid="uid://bfbullgbeevdx" path="res://エンティティ/プレイヤー/anim/走り左.res" id="4_8p6ld"]
+[ext_resource type="Animation" uid="uid://c6g82yflknvi7" path="res://エンティティ/プレイヤー/anim/後ろ走り.res" id="5_34knu"]
+[ext_resource type="Animation" uid="uid://bshs6g4o4jqxn" path="res://エンティティ/プレイヤー/anim/アイドル.res" id="7_3b3cp"]
+[ext_resource type="Animation" uid="uid://bwyyav1m150yr" path="res://エンティティ/プレイヤー/anim/歩き.res" id="8_5q221"]
+[ext_resource type="Animation" uid="uid://bpq424ddbaku5" path="res://エンティティ/プレイヤー/anim/右.res" id="9_k5bhv"]
+[ext_resource type="Animation" uid="uid://lnlraenlpg0h" path="res://エンティティ/プレイヤー/anim/左.res" id="10_c6itu"]
+[ext_resource type="Animation" uid="uid://bg8itygwa1285" path="res://エンティティ/プレイヤー/anim/後ろ.res" id="11_vk68u"]
+
+[sub_resource type="Animation" id="Animation_5quw4"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a0tiu"]
+_data = {
+&"D前": ExtResource("2_p7ol4"),
+&"D右": ExtResource("3_ndam1"),
+&"D左": ExtResource("4_8p6ld"),
+&"D後": ExtResource("5_34knu"),
+&"Take 001": ExtResource("2_nojbi"),
+&"new_animation": SubResource("Animation_5quw4"),
+&"アイドル": ExtResource("7_3b3cp"),
+&"前": ExtResource("8_5q221"),
+&"右": ExtResource("9_k5bhv"),
+&"左": ExtResource("10_c6itu"),
+&"後": ExtResource("11_vk68u")
+}
+
+[node name="モデル" unique_id=652042102 node_paths=PackedStringArray("メッシュ親") instance=ExtResource("1_nojbi")]
+script = ExtResource("2_ndam1")
+"メッシュ親" = NodePath("R-G MC Rig MoCap v1_0/GeneralSkeleton")
+
+[node name="GeneralSkeleton" parent="R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1643866658) index="0" unique_id=1817473087]
+bones/1/rotation = Quaternion(0.1161505, 0.12447653, 0.019467557, 0.9852085)
+bones/11/rotation = Quaternion(0.06848299, -0.052034963, -0.02834124, 0.9958913)
+bones/12/rotation = Quaternion(-0.029622518, 0.0158497, 0.011286923, 0.9993718)
+bones/13/rotation = Quaternion(-0.17151313, -0.057675913, 0.007567356, 0.983463)
+bones/41/rotation = Quaternion(-0.02925225, 0.015847346, 0.0101893945, 0.9993946)
+bones/42/rotation = Quaternion(0.4898924, -0.49468827, -0.54500884, -0.46717715)
+bones/43/rotation = Quaternion(-0.1210614, 0.8937843, -0.42618468, -0.06971689)
+bones/44/rotation = Quaternion(0.5105401, 0.48923308, -0.51053977, 0.48923302)
+bones/45/rotation = Quaternion(-0.11013825, -0.60218775, -0.14921905, 0.7765135)
+bones/46/rotation = Quaternion(0.46796685, 0.5028817, 0.56558937, -0.45631754)
+bones/47/rotation = Quaternion(-0.29690883, 0.7345713, -0.4436452, -0.41884267)
+bones/48/rotation = Quaternion(0.4176243, -0.57060516, 0.41762382, 0.57060516)
+bones/49/rotation = Quaternion(-0.010584591, 0.6459861, -0.036261763, 0.76241404)
+bones/51/rotation = Quaternion(-0.042125568, 0.009501211, 0.99789685, -0.048343126)
+bones/52/rotation = Quaternion(0.010899802, 0.952608, -0.29422224, 0.076501235)
+bones/53/rotation = Quaternion(0.04055558, 0.43019062, 0.898944, -0.07204796)
+bones/54/rotation = Quaternion(-0.053618096, 0.45654425, -0.8870965, 0.041859645)
+
+[node name="R_Pupils_001" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=277851414]
+transform = Transform3D(0.01633741, 0.06610423, -0.9976788, -0.999217, 0.03704053, -0.013908379, 0.03603506, 0.997125, 0.06665762, -0.019796122, 0.929281, 0.473259)
+visible = false
+
+[node name="L_Pupils_001" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=1324149372]
+transform = Transform3D(0.01633741, 0.06610423, -0.9976788, -0.999217, 0.03704053, -0.013908379, 0.03603506, 0.997125, 0.06665762, 0.1627791, 0.93182623, 0.46106064)
+visible = false
+
+[node name="head" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=1857764922]
+transform = Transform3D(0.9976788, -0.01633741, 0.06610423, 0.013908379, 0.999217, 0.03704053, -0.06665762, -0.03603506, 0.997125, 0.041974116, 0.69061995, 0.23783973)
+
+[node name="Eye_001" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=271822625]
+visible = false
+
+[node name="L_Iris" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1662521947]
+visible = false
+
+[node name="R_Iris" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=1369473367]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1180611621]
+libraries/ = SubResource("AnimationLibrary_a0tiu")

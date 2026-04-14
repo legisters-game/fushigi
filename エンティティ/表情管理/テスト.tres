@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="表情オブジェクト" format=3 uid="uid://dxc3q8ueweiqs"]
+
+[ext_resource type="Script" uid="uid://bw6rnc83gmof4" path="res://エンティティ/表情管理/表情オブジェクト.gd" id="1_s7ir4"]
+
+[resource]
+script = ExtResource("1_s7ir4")
+metadata/_custom_type_script = "uid://bw6rnc83gmof4"

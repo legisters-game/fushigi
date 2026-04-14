@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 	現在位置=lerp(現在位置,目標.カメラ基準.global_position,delta*速さ)
 	global_position=現在位置
 	rotation_degrees.y-=視点回転.x*delta*感度
-	rotation_degrees.x=clampf(rotation_degrees.x+視点回転.y*delta*感度*0.7,-15,38)
+	rotation_degrees.x=clampf(rotation_degrees.x-視点回転.y*delta*感度*0.7,-15,38)
 	視点回転=Vector2.ZERO
 
 func _input(event: InputEvent) -> void:

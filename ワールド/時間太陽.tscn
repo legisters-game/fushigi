@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://g3hku684m62q"]
+
+[ext_resource type="Script" uid="uid://l236g2j8yldk" path="res://ワールド/時間太陽.gd" id="1_n5qdj"]
+
+[node name="時間太陽" type="DirectionalLight3D" unique_id=858381750]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(1, 0.94, 0.9, 1)
+light_energy = 1.863
+shadow_enabled = true
+script = ExtResource("1_n5qdj")
+day_length = 3600.0
+top = Color(0.3355, 0.42487502, 0.55, 1)
+ho = Color(0.44889998, 0.533655, 0.67, 1)
+"夕top" = Color(0.78, 0.247, 0, 1)
+"夕ho" = Color(0.9637049, 0.5214896, 0.13095093, 1)
+"夜top" = Color(0.10573531, 0.14276025, 0.1962409, 1)
+"夜ho" = Color(0.102, 0.14446668, 0.2, 1)
+"真夜top" = Color(0.051999997, 0.07119999, 0.1, 1)
+"真夜ho" = Color(0.05, 0.07083334, 0.1, 1)

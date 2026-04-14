@@ -2,19 +2,82 @@
 
 [ext_resource type="PackedScene" uid="uid://bx0148bfj82t3" path="res://エンティティ/エンティティ.tscn" id="1_dffgq"]
 [ext_resource type="Script" uid="uid://cfl7e116f7ftg" path="res://プレイヤー.gd" id="2_adn76"]
-[ext_resource type="PackedScene" uid="uid://cjqrr87u4k4o8" path="res://エンティティ/モンレッコウ.glb" id="3_adn76"]
+[ext_resource type="PackedScene" uid="uid://c5aj3vsg6e2nr" path="res://エンティティ/プレイヤー/model/モデル.tscn" id="3_adn76"]
+[ext_resource type="Texture2D" uid="uid://70jmgomtcsjd" path="res://エンティティ/プレイヤー/model/6380439c17d3666d_8.png" id="4_0vtdg"]
 
-[node name="エンティティ" unique_id=1396265163 instance=ExtResource("1_dffgq")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adn76"]
+albedo_color = Color(1, 0.01999998, 0.01999998, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_adn76"]
+size = Vector3(7.9606323, 4.2734375, 7.874756)
+
+[node name="エンティティ" unique_id=1396265163 node_paths=PackedStringArray("顔") instance=ExtResource("1_dffgq")]
 script = ExtResource("2_adn76")
+SPEED = 5.5
+rotation_speed = 5.0
+"顔" = NodePath("原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/Face")
 
 [node name="CollisionShape3D" parent="." index="0" unique_id=57884629]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.799, 0)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.83489835, 0)
 
 [node name="CollisionShape3D2" parent="." index="1" unique_id=644918341]
 transform = Transform3D(-1, -8.742277e-08, 3.82137e-15, 0, -4.371138e-08, -0.9999999, 8.742278e-08, -0.9999999, 4.371138e-08, 1.7115537e-08, 0.56381184, 0.4)
 
-[node name="モンレッコウ" parent="原点" parent_id_path=PackedInt32Array(1394227668) index="0" unique_id=765048948 instance=ExtResource("3_adn76")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.04319197, 0)
+[node name="モデル" parent="原点" parent_id_path=PackedInt32Array(1394227668) index="0" unique_id=652042102 instance=ExtResource("3_adn76")]
+transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0.5933438, 0)
+"スキン" = ExtResource("4_0vtdg")
+
+[node name="GeneralSkeleton" parent="原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(652042102, 1643866658) index="0" unique_id=1817473087]
+bones/1/rotation = Quaternion(0.09150193, 0.0688834, -0.02566643, 0.993088)
+bones/11/rotation = Quaternion(0.0581661, 0.030859705, 0.00418048, 0.99782115)
+bones/12/rotation = Quaternion(-0.010911296, 0.008703154, 0.012925388, 0.9998191)
+bones/13/rotation = Quaternion(-0.16606754, -0.08760868, 0.020367382, 0.98200387)
+bones/41/rotation = Quaternion(-0.011616043, 0.008761966, 0.012309449, 0.9998184)
+bones/42/rotation = Quaternion(0.48517266, -0.4993445, -0.5439285, -0.4684063)
+bones/43/rotation = Quaternion(0.015547017, 0.8280139, -0.53144735, 0.17808735)
+bones/44/rotation = Quaternion(0.5528405, 0.44087172, -0.55284, 0.44087148)
+bones/45/rotation = Quaternion(-0.1427901, -0.7669196, -0.09541136, 0.61833817)
+bones/46/rotation = Quaternion(0.468683, 0.48447418, 0.60442626, -0.42460573)
+bones/47/rotation = Quaternion(-0.24658753, 0.7971004, -0.5035277, -0.22424369)
+bones/48/rotation = Quaternion(0.46512666, -0.5325951, 0.4651262, 0.532595)
+bones/49/rotation = Quaternion(-0.09926554, 0.5203839, 0.078621745, 0.84449136)
+bones/51/rotation = Quaternion(-0.04423697, -0.030436296, 0.9981279, -0.02928544)
+bones/52/rotation = Quaternion(0.038667038, 0.65945065, -0.7503138, -0.025668697)
+bones/53/rotation = Quaternion(0.009154175, 0.35829484, 0.9334184, 0.016467806)
+bones/54/rotation = Quaternion(0.04800639, 0.9755095, -0.21005403, 0.04420245)
+
+[node name="R_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=277851414]
+transform = Transform3D(0.035921782, 0.028370991, -0.9989518, -0.99825364, 0.047925025, -0.034535572, 0.046895027, 0.998448, 0.030043006, -0.032204967, 0.9400788, 0.43792698)
+
+[node name="L_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=1324149372]
+transform = Transform3D(0.035921782, 0.028370991, -0.9989518, -0.99825364, 0.047925025, -0.034535572, 0.046895027, 0.998448, 0.030043006, 0.1506032, 0.9463988, 0.43242908)
+
+[node name="head" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=1857764922]
+transform = Transform3D(0.9989518, -0.035921782, 0.028370991, 0.034535572, 0.99825364, 0.047925025, -0.030043006, -0.046895027, 0.998448, 0.04322055, 0.70055985, 0.20740896)
+
+[node name="Eye_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=271822625]
+material_override = SubResource("StandardMaterial3D_adn76")
 
 [node name="カメラ基準点" parent="." index="3" unique_id=1770975331]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3644382, 0)
+
+[node name="AnimationTree" parent="." index="5" unique_id=436607949]
+root_node = NodePath("../原点/モデル")
+anim_player = NodePath("../原点/モデル/AnimationPlayer")
+"parameters/動き/blend_position" = Vector2(0, 2)
+
+[node name="当たり判定有効範囲" type="CharacterBody3D" parent="." index="6" unique_id=1683957236]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="当たり判定有効範囲" index="0" unique_id=981019445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02633667, 1.6367188, -0.0357666)
+shape = SubResource("BoxShape3D_adn76")
+
+[node name="Timer" type="Timer" parent="." index="8" unique_id=1168371618]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="原点/モデル"]

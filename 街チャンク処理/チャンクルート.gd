@@ -13,7 +13,7 @@ func _ready() -> void:
 	デバッグ(true)
 	保存パス = name.replace("_Chunk", "")+".tscn"
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is CharacterBody3D:
+	if body and body.name=="当たり判定有効範囲":
 		show()
 		デバッグ(false)
 		処理有無制御(true)
@@ -21,7 +21,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
-	if body is CharacterBody3D:
+	if body and body.name=="当たり判定有効範囲":
 		処理有無制御(false)
 		デバッグ(true)
 		#hide()アニメーションの都合上処理有無制御で制御

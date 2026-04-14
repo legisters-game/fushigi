@@ -12,11 +12,11 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node3D) -> void:
-	if body is CharacterBody3D:
+	if body and body.name=="当たり判定有効範囲":
 		プロセス制御(true)
 
 func _on_body_exited(body: Node3D) -> void:
-	if body is CharacterBody3D:
+	if body and body.name=="当たり判定有効範囲":
 		プロセス制御(false)
 		
 func プロセス制御(ブール:bool)->void:

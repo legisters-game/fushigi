@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://crcuk3dnf7i7g"]
+
+[ext_resource type="PackedScene" uid="uid://cjqrr87u4k4o8" path="res://エンティティ/モンレッコウ.glb" id="1_8x4ih"]
+[ext_resource type="Animation" uid="uid://dcb4dgcl403y8" path="res://エンティティ/mixamo_com.res" id="2_4hbdt"]
+[ext_resource type="Animation" uid="uid://de4s8hj4ykwcp" path="res://エンティティ/Take 001.res" id="2_ejgq6"]
+[ext_resource type="Animation" uid="uid://6ncv0ggjs6g4" path="res://エンティティ/プレイヤー/anim/走り.res" id="2_f5hvp"]
+[ext_resource type="Animation" uid="uid://c6g82yflknvi7" path="res://エンティティ/プレイヤー/anim/後ろ走り.res" id="3_dls7m"]
+[ext_resource type="Animation" uid="uid://5y37bx40r325" path="res://エンティティ/プレイヤー/anim/走り右.res" id="3_ftewl"]
+[ext_resource type="Animation" uid="uid://bwyyav1m150yr" path="res://エンティティ/プレイヤー/anim/歩き.res" id="4_ejgq6"]
+[ext_resource type="Animation" uid="uid://bfbullgbeevdx" path="res://エンティティ/プレイヤー/anim/走り左.res" id="4_to8kc"]
+[ext_resource type="Animation" uid="uid://4glbcrl7gd5s" path="res://エンティティ/プレイヤー/anim/アイドル.res" id="8_to8kc"]
+[ext_resource type="Animation" uid="uid://bpq424ddbaku5" path="res://エンティティ/プレイヤー/anim/右.res" id="9_xociw"]
+[ext_resource type="Animation" uid="uid://lnlraenlpg0h" path="res://エンティティ/プレイヤー/anim/左.res" id="10_0n8hw"]
+[ext_resource type="Animation" uid="uid://bg8itygwa1285" path="res://エンティティ/プレイヤー/anim/後ろ.res" id="11_28emc"]
+
+[sub_resource type="Animation" id="Animation_ejgq6"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ljttq"]
+_data = {
+&"D前": ExtResource("2_f5hvp"),
+&"D右": ExtResource("3_ftewl"),
+&"D左": ExtResource("4_to8kc"),
+&"D後": ExtResource("3_dls7m"),
+&"Take 001": ExtResource("2_ejgq6"),
+&"mixamo_com": ExtResource("2_4hbdt"),
+&"new_animation": SubResource("Animation_ejgq6"),
+&"アイドル": ExtResource("8_to8kc"),
+&"前": ExtResource("4_ejgq6"),
+&"右": ExtResource("9_xociw"),
+&"左": ExtResource("10_0n8hw"),
+&"後": ExtResource("11_28emc")
+}
+
+[node name="モンレッコウ" unique_id=765048948 instance=ExtResource("1_8x4ih")]
+
+[node name="GeneralSkeleton" parent="metarig" parent_id_path=PackedInt32Array(1338711957) index="0" unique_id=851286628]
+bones/0/position = Vector3(0.004165436, 0.91415644, 0.004872214)
+bones/0/rotation = Quaternion(-0.03167718, -0.024751885, -0.08361624, 0.9956868)
+bones/1/rotation = Quaternion(-0.032948237, -0.008026304, 0.08582544, 0.9957329)
+bones/2/rotation = Quaternion(0.0137505075, -0.0012344945, 0.022781856, 0.99964523)
+bones/3/rotation = Quaternion(0.014052118, -0.003094006, 0.022257205, 0.99964875)
+bones/4/rotation = Quaternion(0.0451839, -0.00092621276, -0.053858817, 0.9975254)
+bones/5/rotation = Quaternion(-0.088197105, -0.010719801, 0.0047349543, 0.9960341)
+bones/6/rotation = Quaternion(0.51358986, 0.46995246, 0.57775044, -0.42611587)
+bones/7/rotation = Quaternion(-0.081760325, 0.774293, -0.6274934, 0.0061486)
+bones/8/rotation = Quaternion(0.13303997, -0.69447863, 0.13303988, 0.6944785)
+bones/9/rotation = Quaternion(0.056465432, 0.7940464, 0.022885723, 0.6047961)
+bones/11/rotation = Quaternion(0.10819252, 0.0042931885, -0.050817937, 0.992821)
+bones/12/rotation = Quaternion(0.12155487, 0.004208744, 0.020989897, 0.9923539)
+bones/13/rotation = Quaternion(0.0905044, 7.450581e-08, -0.010922135, 0.9958362)
+bones/15/rotation = Quaternion(0.091909245, -0.0011110455, 0.0011387765, 0.9957661)
+bones/16/rotation = Quaternion(0.14157943, -1.6391277e-07, -0.017085731, 0.9897794)
+bones/17/rotation = Quaternion(0.21578658, -2.0861629e-07, -0.026041005, 0.9760933)
+bones/19/rotation = Quaternion(0.038093105, -0.00016118586, -0.0003413558, 0.9992742)
+bones/20/rotation = Quaternion(0.12348291, -1.4901163e-08, -0.0149018485, 0.9922349)
+bones/21/rotation = Quaternion(0.14728314, -2.0861629e-07, -0.017774137, 0.9889347)
+bones/23/rotation = Quaternion(0.093195446, -0.0011504443, 0.0012430252, 0.9956465)
+bones/24/rotation = Quaternion(0.11183126, -2.0861623e-07, -0.013495712, 0.99363554)
+bones/25/rotation = Quaternion(0.13527763, 8.940698e-08, -0.016325327, 0.9906733)
+bones/29/rotation = Quaternion(0.52962244, -0.45520127, -0.57179034, -0.43052042)
+bones/30/rotation = Quaternion(0.03166148, 0.84892, -0.52227247, 0.07459232)
+bones/31/rotation = Quaternion(0.17040919, 0.68626577, -0.1704091, 0.6862659)
+bones/32/rotation = Quaternion(0.010031216, -0.80241567, -0.005223608, 0.59665847)
+bones/34/rotation = Quaternion(0.12957345, -0.0005577206, 0.020041822, 0.9913671)
+bones/35/rotation = Quaternion(0.12464084, 1.7881393e-07, 0.015189588, 0.99208564)
+bones/36/rotation = Quaternion(0.19196604, 1.0430813e-07, 0.023394316, 0.98112273)
+bones/38/rotation = Quaternion(0.1717231, -0.00037367642, 0.023067862, 0.9848751)
+bones/39/rotation = Quaternion(0.09671791, 1.4901161e-07, 0.011786729, 0.9952421)
+bones/40/rotation = Quaternion(0.1652769, 0.10274537, 0.037952006, 0.9801463)
+bones/42/rotation = Quaternion(0.11696534, 0.00012332201, 0.013206124, 0.9930482)
+bones/43/rotation = Quaternion(0.116270736, 8.940695e-08, 0.0141694825, 0.9931165)
+bones/44/rotation = Quaternion(0.21940395, 0.036099404, 0.03502509, 0.97433674)
+bones/46/rotation = Quaternion(0.18966375, -0.001922518, 0.032999128, 0.9812926)
+bones/47/rotation = Quaternion(0.089718945, 5.9604638e-08, 0.010933875, 0.9959071)
+bones/48/rotation = Quaternion(0.13261156, 2.9802322e-08, 0.016160995, 0.99103636)
+bones/54/rotation = Quaternion(0.05952354, 0.12608896, 0.9847798, -0.10376588)
+bones/55/rotation = Quaternion(-0.013364041, 0.9515432, -0.3000948, 0.06580417)
+bones/56/rotation = Quaternion(-0.013932366, 0.5938216, -0.8043034, 0.016674832)
+bones/57/rotation = Quaternion(-0.07015367, 0.021887764, 0.99354404, -0.08642705)
+bones/58/rotation = Quaternion(-0.0013089034, 0.9881875, -0.14477743, -0.050232965)
+bones/59/rotation = Quaternion(0.008649209, 0.64383054, -0.7646744, 0.026084833)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1368124381]
+libraries/ = SubResource("AnimationLibrary_ljttq")
+autoplay = &"前"
