@@ -5,5 +5,5 @@
 [resource]
 resource_name = "immersiveengineering_block-metal_decoration-aluminum_wallmoun"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_0v6w4")
+texture_filter = 2

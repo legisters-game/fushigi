@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "immersiveengineering_block-wooden_decoration-treated_wood_ho"
-cull_mode = 2
 albedo_texture = ExtResource("1_n8kqr")
+texture_filter = 2

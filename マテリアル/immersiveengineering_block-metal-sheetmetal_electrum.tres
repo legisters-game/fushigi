@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "immersiveengineering_block-metal-sheetmetal_electrum"
-cull_mode = 2
 albedo_texture = ExtResource("1_0c7vl")
+texture_filter = 2

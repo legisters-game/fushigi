@@ -5,5 +5,5 @@
 [resource]
 resource_name = "immersiveengineering_block-metal_decoration-aluminum_scaffol"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_du2dg")
+texture_filter = 2

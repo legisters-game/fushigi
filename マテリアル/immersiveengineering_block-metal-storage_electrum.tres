@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "immersiveengineering_block-metal-storage_electrum"
-cull_mode = 2
 albedo_texture = ExtResource("1_2vagn")
+texture_filter = 2

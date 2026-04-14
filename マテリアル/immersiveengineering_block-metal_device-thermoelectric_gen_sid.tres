@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "immersiveengineering_block-metal_device-thermoelectric_gen_sid"
-cull_mode = 2
 albedo_texture = ExtResource("1_dysbu")
+texture_filter = 2
