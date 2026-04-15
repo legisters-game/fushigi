@@ -12,6 +12,7 @@ class_name 時間太陽
 @export_color_no_alpha var 真夜top:Color
 @export_color_no_alpha var 真夜ho:Color
 @export var 雲:NoiseTexture2D
+var 論理日:int=0
 
 enum 時間{真昼,夕,夜,真夜,朝}
 # 現在の時間（0.0 〜 1.0 の間をループ）
@@ -20,6 +21,7 @@ var 時間辞書:Dictionary[int,float]={時間.真昼:0.0,時間.夕:0.24,時間
 var シグナル:Dictionary={"夜":false,"真夜":false,"朝":false,"真昼":false,"夕":false}
 
 func _ready() -> void:
+	time=時間辞書[時間.真夜]
 	return
 	夕()
 	await  get_tree().create_timer(10).timeout
@@ -27,8 +29,10 @@ func _ready() -> void:
 func _process(delta):
 	# 時間を更新
 	time += delta / day_length
+	if いつ()==時間.夜 or いつ()==時間.真夜: time += delta / day_length*1.2
 	if time > 1.0:
 		time = 0.0
+		論理日+=1
 	
 	# 1. 太陽の角度を回転させる（X軸回転）
 	# time 0.0 = 正午 / 0.25 = 日没 / 0.5 = 真夜中 / 0.75 = 日の出
@@ -93,8 +97,8 @@ func 朝()->void:
 	シグナル["真昼"]=false
 	var アニメ:Tween=get_tree().create_tween()
 	var マテリアル:ProceduralSkyMaterial=get_world_3d().environment.sky.sky_material
-	アニメ.tween_property(self,"light_energy",1,5.5).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
-	アニメ.tween_property(get_world_3d().environment,"background_energy_multiplier",0.8,5.5).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	アニメ.tween_property(self,"light_energy",1.7,5.5).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	アニメ.tween_property(get_world_3d().environment,"background_energy_multiplier",1,5.5).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
 	アニメ.parallel().tween_property(マテリアル,"sky_top_color",top,3.5).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
 	アニメ.parallel().tween_property(マテリアル,"sky_horizon_color",ho,3.5).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
 	アニメ.parallel().tween_property(マテリアル,"sky_cover_modulate",Color(1.0, 1.0, 1.0, 0),3.5).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
@@ -106,7 +110,7 @@ func 真昼()->void:
 	シグナル["夕"]=false
 	var アニメ:Tween=get_tree().create_tween()
 	var マテリアル:ProceduralSkyMaterial=get_world_3d().environment.sky.sky_material
-	アニメ.tween_property(self,"light_energy",1.3,5.5).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	アニメ.tween_property(self,"light_energy",1.8,5.5).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
 	
 
 func 夕()->void:
@@ -144,3 +148,12 @@ func いつ()->時間:
 		return 時間.真昼
 	else:
 		return 時間.真昼
+		
+func 日付()->int:
+	if time>時間辞書[時間.朝]:
+		return 論理日+1
+	return 論理日
+
+
+func _on_timer_timeout() -> void:
+	print(日付())

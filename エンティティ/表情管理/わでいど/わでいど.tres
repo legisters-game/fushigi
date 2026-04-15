@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="表情オブジェクト" format=3 uid="uid://nbbmunmsweld"]
+
+[ext_resource type="Script" uid="uid://bw6rnc83gmof4" path="res://エンティティ/表情管理/表情オブジェクト.gd" id="1_hdjsk"]
+[ext_resource type="Texture2D" uid="uid://cnxnh3thxnpn7" path="res://エンティティ/表情管理/わでいど/わでいど両目.png" id="2_oydyo"]
+[ext_resource type="Texture2D" uid="uid://cvsrjmeyxolxs" path="res://エンティティ/表情管理/わでいど/わでいど右.png" id="3_hhsbm"]
+[ext_resource type="Texture2D" uid="uid://d0pqxyhoktkfo" path="res://エンティティ/表情管理/わでいど/わでいど右目.png" id="4_khr2j"]
+[ext_resource type="Texture2D" uid="uid://de6f0q40q1faa" path="res://エンティティ/表情管理/わでいど/わでいど右目右.png" id="5_fpsrq"]
+[ext_resource type="Texture2D" uid="uid://dbohkwf15tnea" path="res://エンティティ/表情管理/わでいど/わでいど右目左.png" id="6_840em"]
+[ext_resource type="Texture2D" uid="uid://7i3bngxp0i70" path="res://エンティティ/表情管理/わでいど/わでいど左.png" id="7_13uy5"]
+[ext_resource type="Texture2D" uid="uid://bhqs43mwv4jwh" path="res://エンティティ/表情管理/わでいど/わでいど左目.png" id="8_5htcg"]
+[ext_resource type="Texture2D" uid="uid://cje528y4w26jn" path="res://エンティティ/表情管理/わでいど/わでいど左目右.png" id="9_b4g0p"]
+[ext_resource type="Texture2D" uid="uid://bkv56hbeixcdi" path="res://エンティティ/表情管理/わでいど/わでいど左目左.png" id="10_8dwx1"]
+[ext_resource type="Texture2D" uid="uid://c55qafle272gq" path="res://エンティティ/表情管理/わでいど/わでいど.png" id="11_x3g6e"]
+[ext_resource type="Texture2D" uid="uid://bjkcoi83wgt2h" path="res://エンティティ/表情管理/わでいど/わでいど閉.png" id="12_savkn"]
+
+[resource]
+script = ExtResource("1_hdjsk")
+"通常" = ExtResource("11_x3g6e")
+"右" = ExtResource("3_hhsbm")
+"右目" = ExtResource("4_khr2j")
+"右目右" = ExtResource("5_fpsrq")
+"右目左" = ExtResource("6_840em")
+"左" = ExtResource("7_13uy5")
+"左目" = ExtResource("8_5htcg")
+"左目右" = ExtResource("9_b4g0p")
+"左目左" = ExtResource("10_8dwx1")
+"閉" = ExtResource("12_savkn")
+"両目" = ExtResource("2_oydyo")
+metadata/_custom_type_script = "uid://bw6rnc83gmof4"

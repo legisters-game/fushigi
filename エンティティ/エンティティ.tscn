@@ -100,9 +100,13 @@ _data = {
 &"後": SubResource("Animation_pvq0m")
 }
 
-[node name="エンティティ" type="CharacterBody3D" unique_id=1396265163 node_paths=PackedStringArray("アニメツリー")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_o2cbv"]
+size = Vector3(1, 1, 0.43151855)
+
+[node name="エンティティ" type="CharacterBody3D" unique_id=1396265163 node_paths=PackedStringArray("アニメツリー", "攻撃判定")]
 script = ExtResource("1_o2cbv")
 "アニメツリー" = NodePath("AnimationTree")
+"攻撃判定" = NodePath("Area3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=57884629]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83489835, 0)
@@ -129,3 +133,10 @@ anim_player = NodePath("../AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1647498285]
 libraries/ = SubResource("AnimationLibrary_wjo2g")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=15864578]
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=544046227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56912047, -0.57268906)
+shape = SubResource("BoxShape3D_o2cbv")

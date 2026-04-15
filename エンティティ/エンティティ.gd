@@ -6,6 +6,7 @@ class_name エンティティ
 @export var アニメツリー:AnimationTree
 @export var 顔:MeshInstance3D
 @export var 表情データ:表情オブジェクト
+@export var 攻撃判定:Area3D
 var アニメベクター:Vector2
 var カメラ基準:Marker3D
 
@@ -13,6 +14,7 @@ var カメラ基準:Marker3D
 
 
 var 体力:int
+var 防御力:float
 #var input_dir: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
@@ -50,8 +52,8 @@ func apply_rotation(delta:float):
 func learn_angle(from:float, to:float, weight:float):
 	return lerp_angle(from, to, weight)
 
-func update_animations(velocity: Vector3,デルタ:float):
-	var local_vel = global_transform.basis.inverse() * velocity*7.0*2
+func update_animations(velocitys: Vector3,デルタ:float)->void:
+	var local_vel = global_transform.basis.inverse() * velocitys*7.0*2
 	
 	# ここで「歩きの速度」を基準にする
 	# 例：walk_speed = 3.0, run_speed = 6.0 の場合
@@ -72,8 +74,22 @@ func 表情切り替え(切り替え表情:表情オブジェクト.表情)->voi
 	if 表情データ.取得(切り替え表情):
 		上書きマテリアル.albedo_texture=表情データ.取得(切り替え表情)
 		顔.set_surface_override_material(0,上書きマテリアル)
+
+
+
+func 攻撃する()->void:
+	if 攻撃判定:
+		攻撃判定.monitoring=true
+		for i in 攻撃判定.get_overlapping_bodies():
+			if i is エンティティ:
+				var 対象:エンティティ=i
+
+func 攻撃ヒット(被対象:エンティティ,ダメージ数:int)->void:
+	if 被対象:
+		被対象.ダメージ(ダメージ数)
+
 func ダメージ(ダメージ数:int)->void:
-	体力-=ダメージ数
+	体力-=int(ダメージ数-(防御力*ダメージ数)/100)
 	if 体力<=0:
 		死亡()
 

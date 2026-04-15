@@ -17,3 +17,9 @@ ho = Color(0.44889998, 0.533655, 0.67, 1)
 "夜ho" = Color(0.102, 0.14446668, 0.2, 1)
 "真夜top" = Color(0.051999997, 0.07119999, 0.1, 1)
 "真夜ho" = Color(0.05, 0.07083334, 0.1, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=1635664931]
+wait_time = 60.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

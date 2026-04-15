@@ -25,11 +25,19 @@ func _process(_delta):
 	
 	# 3. 入力をワールド座標系（絶対方向）のベクトルに変換してEntityに渡す
 	move_direction = (cam_forward * -input_v2.y + cam_right * input_v2.x).normalized()
-
-
+	
+	if Input.is_action_just_pressed("W"):
+		pass
+	
+	
+	
+	
 func _on_timer_timeout() -> void:
 	if (1==randi_range(0,3)):
 		表情切り替え(表情オブジェクト.表情.閉)
 		await get_tree().create_timer(0.1).timeout
 		表情切り替え(表情オブジェクト.表情.通常)
+
+
+
 	

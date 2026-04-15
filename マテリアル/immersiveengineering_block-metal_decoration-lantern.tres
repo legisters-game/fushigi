@@ -6,4 +6,6 @@
 resource_name = "immersiveengineering_block-metal_decoration-lantern"
 transparency = 4
 albedo_texture = ExtResource("1_kkp5n")
+emission_enabled = true
+emission_texture = ExtResource("1_kkp5n")
 texture_filter = 2
