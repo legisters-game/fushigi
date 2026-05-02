@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d2upvuci7wdjv"]
+
+[ext_resource type="Script" uid="uid://dn4r7tcunfatf" path="res://ワールド/npc制御.gd" id="1_tlxb1"]
+
+[node name="NPC制御" type="Node3D" unique_id=2005143416]
+script = ExtResource("1_tlxb1")

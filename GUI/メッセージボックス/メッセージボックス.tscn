@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://s36hn6agtol7"]
+
+[ext_resource type="Script" uid="uid://dxlygfaqrs3de" path="res://GUI/メッセージボックス/メッセージボックス.gd" id="1_foudw"]
+[ext_resource type="Texture2D" uid="uid://djbdqdm20duue" path="res://GUI/メッセージボックス/IMG_1771.png" id="2_w7gw6"]
+[ext_resource type="PackedScene" uid="uid://bx25rw0tgdvca" path="res://GUI/メッセージボックス/選択肢.tscn" id="3_74yma"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w7gw6"]
+line_spacing = -8.115
+
+[sub_resource type="LabelSettings" id="LabelSettings_74yma"]
+font_size = 22
+outline_size = 5
+outline_color = Color(0, 1, 0.16666651, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3.835, 1)
+
+[node name="メッセージボックス" type="Control" unique_id=1796908698 node_paths=PackedStringArray("メッセージラベル", "名前", "選択肢1", "選択肢2", "選択肢3")]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -412.805
+offset_top = -209.26001
+offset_right = 412.805
+offset_bottom = -69.529785
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_foudw")
+"メッセージラベル" = NodePath("テクスチャ枠/メッセージ枠/メッセージ")
+"名前" = NodePath("テクスチャ枠/名前")
+"選択肢1" = NodePath("VBoxContainer/選択肢ボタン1")
+"選択肢2" = NodePath("VBoxContainer/選択肢ボタン2")
+"選択肢3" = NodePath("VBoxContainer/選択肢ボタン3")
+
+[node name="テクスチャ枠" type="TextureRect" parent="." unique_id=466928240]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -411.52
+offset_top = -141.44
+offset_right = 411.52
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_w7gw6")
+expand_mode = 5
+
+[node name="メッセージ枠" type="Control" parent="テクスチャ枠" unique_id=752039985]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 67.675
+offset_top = 29.47
+offset_right = -45.36499
+offset_bottom = -36.97
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="メッセージ" type="Label" parent="テクスチャ枠/メッセージ枠" unique_id=425764658]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.805
+offset_top = -1.79
+offset_right = -18.195007
+offset_bottom = -1.7900009
+grow_horizontal = 2
+grow_vertical = 2
+text = "ああああああああああああああああああああああああああああああああああああああああああああああああああああaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ"
+label_settings = SubResource("LabelSettings_w7gw6")
+autowrap_mode = 1
+
+[node name="ボタン" type="Label" parent="テクスチャ枠/メッセージ枠" unique_id=2046223416]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Enter"
+horizontal_alignment = 2
+
+[node name="名前" type="Label" parent="テクスチャ枠" unique_id=1345841248]
+layout_mode = 1
+offset_left = 9.519989
+offset_top = -2.6799927
+offset_right = 91.51999
+offset_bottom = 28.320007
+text = "レクレイス"
+label_settings = SubResource("LabelSettings_74yma")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1000664554]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -118.15497
+offset_top = -75.71
+offset_right = 11.845032
+offset_bottom = -7.709999
+grow_horizontal = 0
+alignment = 2
+
+[node name="選択肢ボタン1" parent="VBoxContainer" unique_id=2000619224 instance=ExtResource("3_74yma")]
+layout_mode = 2
+
+[node name="選択肢ボタン2" parent="VBoxContainer" unique_id=943668577 instance=ExtResource("3_74yma")]
+layout_mode = 2
+
+[node name="選択肢ボタン3" parent="VBoxContainer" unique_id=1228976749 instance=ExtResource("3_74yma")]
+layout_mode = 2
+
+[connection signal="ログ進行" from="." to="." method="_on_ログ進行"]
+[connection signal="pressed" from="VBoxContainer/選択肢ボタン1" to="." method="_on_選択肢ボタン1_pressed"]
+[connection signal="pressed" from="VBoxContainer/選択肢ボタン2" to="." method="_on_選択肢ボタン2_pressed"]
+[connection signal="pressed" from="VBoxContainer/選択肢ボタン3" to="." method="_on_選択肢ボタン3_pressed"]

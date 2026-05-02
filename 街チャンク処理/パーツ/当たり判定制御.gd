@@ -6,6 +6,7 @@ class_name チャンク当たり判定制御
 # Called when the node enters the scene tree for the first time.
 @export var オクルージョンノード:OccluderInstance3D
 func _ready() -> void:
+	if Engine.is_editor_hint():return
 	プロセス制御(false)
 
 

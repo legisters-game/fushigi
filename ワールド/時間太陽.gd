@@ -17,16 +17,20 @@ var 論理日:int=0
 enum 時間{真昼,夕,夜,真夜,朝}
 # 現在の時間（0.0 〜 1.0 の間をループ）
 var time: float = 0.0
+var ストップ:bool
 var 時間辞書:Dictionary[int,float]={時間.真昼:0.0,時間.夕:0.24,時間.夜:0.26,時間.真夜:0.35,時間.朝:0.73}
 var シグナル:Dictionary={"夜":false,"真夜":false,"朝":false,"真昼":false,"夕":false}
 
 func _ready() -> void:
-	time=時間辞書[時間.真夜]
+	#time=時間辞書[時間.真夜]
+	while true:
+		await  get_tree().create_timer(1).timeout
+		#print(time)
 	return
 	夕()
-	await  get_tree().create_timer(10).timeout
 	朝()
 func _process(delta):
+	if ストップ:return
 	# 時間を更新
 	time += delta / day_length
 	if いつ()==時間.夜 or いつ()==時間.真夜: time += delta / day_length*1.2

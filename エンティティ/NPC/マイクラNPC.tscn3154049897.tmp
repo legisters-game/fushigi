@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dqniwtybwknaw"]
+
+[ext_resource type="PackedScene" uid="uid://bx0148bfj82t3" path="res://エンティティ/エンティティ.tscn" id="1_waywn"]
+[ext_resource type="PackedScene" uid="uid://c5aj3vsg6e2nr" path="res://エンティティ/プレイヤー/model/モデル.tscn" id="2_ca5t0"]
+[ext_resource type="Script" uid="uid://bkcxmvt0fctaj" path="res://エンティティ/NPC/マイクラnpc.gd" id="2_vkgpt"]
+
+[node name="エンティティ" unique_id=1396265163 node_paths=PackedStringArray("nav_agent") instance=ExtResource("1_waywn")]
+script = ExtResource("2_vkgpt")
+nav_agent = NodePath("NavigationAgent3D")
+
+[node name="モデル" parent="原点" parent_id_path=PackedInt32Array(1394227668) index="0" unique_id=652042102 instance=ExtResource("2_ca5t0")]
+transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0.5933438, 0)
+
+[node name="GeneralSkeleton" parent="原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(652042102, 448480155) index="0" unique_id=1428764608]
+bones/1/rotation = Quaternion(0, 0, 0, 1)
+bones/11/position = Vector3(6.7632505e-10, 1.1600177e-07, 5.7771066e-11)
+bones/11/rotation = Quaternion(-0.021671245, -0.027598131, -0.08366705, 0.99587584)
+bones/12/rotation = Quaternion(-0.034642436, -0.014894677, 0.021954454, 0.99904764)
+bones/13/rotation = Quaternion(-0.04622009, 0.005390393, 0.007843723, 0.998886)
+bones/41/rotation = Quaternion(-0.03477193, -0.01453215, 0.021737916, 0.99905324)
+bones/42/rotation = Quaternion(0.5364326, -0.45193022, -0.5562073, -0.4456822)
+bones/43/rotation = Quaternion(0.04524131, 0.8381513, -0.53033096, 0.11918393)
+bones/44/rotation = Quaternion(0.16739267, 0.68700784, -0.16739231, 0.68700784)
+bones/45/rotation = Quaternion(0.01093298, -0.79810196, -0.0051826234, 0.6024009)
+bones/46/rotation = Quaternion(0.51937497, 0.46726975, 0.5653147, -0.43855205)
+bones/47/rotation = Quaternion(-0.14012277, 0.76094913, -0.6332214, -0.018786065)
+bones/48/rotation = Quaternion(0.12573239, -0.69583863, 0.12573251, 0.69583863)
+bones/49/rotation = Quaternion(0.07405807, 0.798632, 0.02705732, 0.5966325)
+bones/51/rotation = Quaternion(-0.0701533, 0.030957295, 0.9932896, -0.08657976)
+bones/52/rotation = Quaternion(-0.0033120627, 0.989593, -0.13611966, -0.046543296)
+bones/53/rotation = Quaternion(0.057898782, 0.13697414, 0.98354447, -0.10259707)
+bones/54/rotation = Quaternion(-0.013112933, 0.9518857, -0.2965238, 0.07625885)
+
+[node name="R_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=240953983]
+transform = Transform3D(-0.118636236, -0.048350554, -0.99175996, -0.97199357, 0.20972034, 0.106047384, 0.20286477, 0.9765651, -0.07187687, 0.05096589, 1.0038291, 0.12710889)
+
+[node name="L_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=1044549964]
+transform = Transform3D(-0.118636236, -0.048350554, -0.99175996, -0.97199357, 0.20972034, 0.106047384, 0.20286477, 0.9765651, -0.07187687, 0.23245797, 0.9844225, 0.14026235)
+
+[node name="head" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=1515726997]
+transform = Transform3D(0.99175996, 0.118636236, -0.048350554, -0.106047384, 0.97199357, 0.20972034, 0.07187687, -0.20286477, 0.9765651, 0.10853106, 0.72122324, -0.054597072)
+
+[node name="AnimationTree" parent="." index="5" unique_id=436607949]
+root_node = NodePath("../原点/モデル")
+anim_player = NodePath("../原点/モデル/AnimationPlayer")
+"parameters/動き/blend_position" = Vector2(0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="8" unique_id=1913402360]
+target_desired_distance = 0.1
+debug_enabled = true
+
+[editable path="原点/モデル"]

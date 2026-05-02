@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dv74ch5bbw7ri"]
+
+[ext_resource type="Script" uid="uid://corthfgnxfcnw" path="res://レベル/ツール/街レベルゲート.gd" id="1_qwiar"]
+[ext_resource type="PackedScene" uid="uid://b7xx3vq08qd12" path="res://アクションガイド/ガイドボタン.tscn" id="2_wwlly"]
+
+[node name="街レベルゲート" type="StaticBody3D" unique_id=1014627570]
+script = ExtResource("1_qwiar")
+
+[node name="会話ガイドボタン" parent="." unique_id=1392688736 instance=ExtResource("2_wwlly")]
+transform = Transform3D(1.167694, -0.091778725, 0.11023214, 0.115598194, 1.137406, -0.2775373, -0.084920734, 0.286298, 1.1379386, 0, 0, 0)

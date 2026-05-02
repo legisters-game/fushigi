@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="NPCスケジューラ" format=3 uid="uid://dfxbw5q8iera5"]
+
+[ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="1_wjldk"]
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="2_tvflv"]
+
+[sub_resource type="Resource" id="Resource_wjldk"]
+script = ExtResource("1_wjldk")
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[sub_resource type="Resource" id="Resource_tvflv"]
+script = ExtResource("1_wjldk")
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[resource]
+script = ExtResource("2_tvflv")
+"スケジュールリスト" = Array[ExtResource("1_wjldk")]([SubResource("Resource_wjldk"), SubResource("Resource_tvflv")])
+metadata/_custom_type_script = "uid://d4j8xlv2dxato"

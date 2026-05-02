@@ -7,17 +7,20 @@ class_name エンティティ
 @export var 顔:MeshInstance3D
 @export var 表情データ:表情オブジェクト
 @export var 攻撃判定:Area3D
+
 var アニメベクター:Vector2
 var カメラ基準:Marker3D
+var 指定回転:bool
+var 目標回転:float
 
-
-
+var 重力無効:bool
 
 var 体力:int
 var 防御力:float
 #var input_dir: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
+	
 	体力=最大体力
 	カメラ基準=get_node("カメラ基準点")
 
@@ -32,13 +35,15 @@ func _physics_process(delta: float):
 # 移動の計算
 func apply_movement(delta:float):
 	# 重力処理（簡略化）
-	if not is_on_floor():
+	if not is_on_floor() :
 		velocity.y -= 9.8 * delta
 	
 	# move_direction（絶対座標系）に基づいて速度を設定
 	var target_vel = move_direction * SPEED
 	velocity.x = target_vel.x
 	velocity.z = target_vel.z
+	if 重力無効:
+		velocity.y = target_vel.y
 
 # 回転の計算（進んでいる方向を向く）
 func apply_rotation(delta:float):
@@ -47,20 +52,33 @@ func apply_rotation(delta:float):
 		var target_angle:float = atan2(move_direction.x, move_direction.z)
 		# 現在の回転を目標の回転へ補完（スムーズに回転させる）
 		rotation.y = learn_angle(rotation.y, target_angle, rotation_speed * delta)
+		指定回転=false
+	elif 指定回転:
+		rotation.y = learn_angle(rotation.y, 目標回転, rotation_speed * delta*0.5)
+
+		if abs(angle_difference(rotation.y,目標回転))<=0.01:
+			print(angle_difference(rotation.y,目標回転))
+			rotation.y=目標回転
+			指定回転=false
+			
+func 回転指定(目標:float)->void:
+	指定回転=true
+	目標回転=目標
+
 
 # lerp_angleのヘルパー（Godot 4標準関数ですが明示的に）
 func learn_angle(from:float, to:float, weight:float):
 	return lerp_angle(from, to, weight)
 
 func update_animations(velocitys: Vector3,デルタ:float)->void:
-	var local_vel = global_transform.basis.inverse() * velocitys*7.0*2
+	var local_vel = global_transform.basis.inverse() * velocitys*SPEED*2
 	
 	# ここで「歩きの速度」を基準にする
 	# 例：walk_speed = 3.0, run_speed = 6.0 の場合
 	# スティック全倒しで blend_pos は 2.0 になる
 	
-	var x_ratio:float = local_vel.x / (7.0)
-	var y_ratio:float = local_vel.z / (7.0)
+	var x_ratio:float = local_vel.x / (SPEED)
+	var y_ratio:float = local_vel.z / (SPEED)
 	var blend_pos:Vector2 = Vector2(x_ratio, y_ratio)
 	アニメベクター=lerp(アニメベクター,blend_pos,デルタ*11)
 	アニメツリー.set("parameters/動き/blend_position", アニメベクター)

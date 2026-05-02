@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bx25rw0tgdvca"]
+
+[ext_resource type="Script" uid="uid://d00cw13chpuob" path="res://GUI/メッセージボックス/選択肢.gd" id="1_q51f1"]
+
+[sub_resource type="Gradient" id="Gradient_r3e8j"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_q51f1"]
+gradient = SubResource("Gradient_r3e8j")
+width = 130
+height = 20
+
+[sub_resource type="Gradient" id="Gradient_q51f1"]
+interpolation_mode = 2
+colors = PackedColorArray(2.0813425, 0.18802008, 0.18802008, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rx6m0"]
+gradient = SubResource("Gradient_q51f1")
+width = 130
+height = 20
+fill_to = Vector2(0.9939759, 1)
+
+[node name="選択肢ボタン" type="TextureButton" unique_id=2000619224 node_paths=PackedStringArray("ラベル")]
+custom_minimum_size = Vector2(130, 20)
+offset_right = 100.0
+offset_bottom = 20.0
+texture_normal = SubResource("GradientTexture2D_q51f1")
+texture_hover = SubResource("GradientTexture2D_rx6m0")
+texture_focused = SubResource("GradientTexture2D_rx6m0")
+stretch_mode = 0
+script = ExtResource("1_q51f1")
+"ラベル" = NodePath("選択肢")
+
+[node name="選択肢" type="Label" parent="." unique_id=189286243]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+clip_text = true
+
+[node name="キー原点" type="Control" parent="." unique_id=31564699]
+anchors_preset = 0
+
+[node name="キー" type="Label" parent="キー原点" unique_id=358696211]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1.0
+offset_bottom = 23.0
+grow_horizontal = 0
+horizontal_alignment = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

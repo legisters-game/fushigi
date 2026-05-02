@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dqniwtybwknaw"]
+
+[ext_resource type="PackedScene" uid="uid://bx0148bfj82t3" path="res://エンティティ/エンティティ.tscn" id="1_waywn"]
+[ext_resource type="PackedScene" uid="uid://c5aj3vsg6e2nr" path="res://エンティティ/プレイヤー/model/モデル.tscn" id="2_ca5t0"]
+[ext_resource type="Script" uid="uid://bkcxmvt0fctaj" path="res://エンティティ/NPC/マイクラnpc.gd" id="2_vkgpt"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_vkgpt"]
+[ext_resource type="PackedScene" uid="uid://b7xx3vq08qd12" path="res://アクションガイド/ガイドボタン.tscn" id="5_2i2rm"]
+
+[node name="エンティティ" unique_id=1396265163 node_paths=PackedStringArray("nav_agent", "アクションポイント", "顔") instance=ExtResource("1_waywn")]
+script = ExtResource("2_vkgpt")
+nav_agent = NodePath("NavigationAgent3D")
+"デフォルトセリフ" = Array[ExtResource("3_vkgpt")]([])
+"キャラ" = 0
+"アクションポイント" = NodePath("原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head/会話ガイドボタン")
+"顔" = NodePath("原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head/Head")
+
+[node name="CollisionShape3D2" parent="." index="1" unique_id=644918341]
+transform = Transform3D(-1, -8.742277e-08, 3.8213705e-15, 0, -4.3711385e-08, -0.9999999, 8.742278e-08, -0.9999999, 4.3711385e-08, 0, 0.564, 0.392)
+
+[node name="モデル" parent="原点" parent_id_path=PackedInt32Array(1394227668) index="0" unique_id=652042102 instance=ExtResource("2_ca5t0")]
+transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0.5933438, 0)
+visibility_parent = NodePath("../../MeshInstance3D")
+
+[node name="GeneralSkeleton" parent="原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(652042102, 448480155) index="0" unique_id=1428764608]
+bones/1/rotation = Quaternion(0, 0, 0, 1)
+bones/11/position = Vector3(1.978838e-10, 1.15965754e-07, 1.199638e-09)
+bones/11/rotation = Quaternion(-0.022110676, -0.024611618, -0.08155383, 0.99611974)
+bones/12/rotation = Quaternion(-0.04255481, -0.011849983, 0.020276833, 0.9988181)
+bones/13/rotation = Quaternion(-0.041759215, -0.0011556961, 0.004676791, 0.9991162)
+bones/41/rotation = Quaternion(-0.04249725, -0.011672423, 0.020323716, 0.99882174)
+bones/42/rotation = Quaternion(0.5374819, -0.45385474, -0.54432607, -0.4569884)
+bones/43/rotation = Quaternion(0.084968515, 0.8237774, -0.54987615, 0.10866214)
+bones/44/rotation = Quaternion(0.16679041, 0.68715423, -0.1667905, 0.68715423)
+bones/45/rotation = Quaternion(-0.00027585225, -0.7982299, -0.01784743, 0.6020886)
+bones/46/rotation = Quaternion(0.518217, 0.46946436, 0.5612957, -0.44272062)
+bones/47/rotation = Quaternion(-0.17401949, 0.7454749, -0.64332026, -0.011116447)
+bones/48/rotation = Quaternion(0.12543291, -0.69589263, 0.12543279, 0.69589275)
+bones/49/rotation = Quaternion(0.057293028, 0.7812632, 0.051393747, 0.6194385)
+bones/51/rotation = Quaternion(-0.06927867, 0.024830544, 0.9935374, -0.08641408)
+bones/52/rotation = Quaternion(-0.00248021, 0.98925936, -0.13635199, -0.052610766)
+bones/53/rotation = Quaternion(0.057245433, 0.1298527, 0.98441845, -0.10383495)
+bones/54/rotation = Quaternion(-0.009338263, 0.95354486, -0.2947924, 0.061339915)
+
+[node name="R_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=240953983]
+transform = Transform3D(-0.12289752, -0.048265845, -0.99124503, -0.9699428, 0.21721232, 0.109679855, 0.21001685, 0.97493035, -0.07350996, 0.050114907, 1.0049683, 0.118319035)
+
+[node name="L_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=1044549964]
+transform = Transform3D(-0.12289752, -0.048265845, -0.99124503, -0.9699428, 0.21721232, 0.109679855, 0.21001685, 0.97493035, -0.07350996, 0.23151274, 0.98489684, 0.13177131)
+
+[node name="head" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=1515726997]
+transform = Transform3D(0.99124503, 0.12289752, -0.048265845, -0.109679855, 0.9699428, 0.21721232, 0.07350996, -0.21001685, 0.97493035, 0.106637314, 0.720773, -0.06122243)
+
+[node name="会話ガイドボタン" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="3" unique_id=1392688736 instance=ExtResource("5_2i2rm")]
+transform = Transform3D(1.167694, -0.091778725, 0.11023214, 0.115598194, 1.137406, -0.2775373, -0.084920734, 0.286298, 1.1379386, -0.06088526, 0.62453675, 0.01783581)
+
+[node name="AnimationTree" parent="." index="5" unique_id=436607949]
+root_node = NodePath("../原点/モデル")
+anim_player = NodePath("../原点/モデル/AnimationPlayer")
+"parameters/動き/blend_position" = Vector2(0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="8" unique_id=1913402360]
+path_desired_distance = 2.0
+target_desired_distance = 0.1
+path_postprocessing = 2
+debug_enabled = true
+
+[editable path="原点/モデル"]

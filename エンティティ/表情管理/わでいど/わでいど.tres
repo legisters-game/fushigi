@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="表情オブジェクト" format=3 uid="uid://nbbmunmsweld"]
 
-[ext_resource type="Script" uid="uid://bw6rnc83gmof4" path="res://エンティティ/表情管理/表情オブジェクト.gd" id="1_hdjsk"]
+[ext_resource type="Script" uid="uid://bw6rnc83gmof4" path="res://拡張リソース/表情オブジェクト.gd" id="1_hdjsk"]
 [ext_resource type="Texture2D" uid="uid://cnxnh3thxnpn7" path="res://エンティティ/表情管理/わでいど/わでいど両目.png" id="2_oydyo"]
 [ext_resource type="Texture2D" uid="uid://cvsrjmeyxolxs" path="res://エンティティ/表情管理/わでいど/わでいど右.png" id="3_hhsbm"]
 [ext_resource type="Texture2D" uid="uid://d0pqxyhoktkfo" path="res://エンティティ/表情管理/わでいど/わでいど右目.png" id="4_khr2j"]

@@ -62,6 +62,7 @@ min_space = Vector2(-2, -2)
 max_space = Vector2(2, 2)
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ye2gd"]
+reset = false
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_bsp01"]
@@ -129,7 +130,7 @@ mesh = SubResource("CapsuleMesh_o2cbv")
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=436607949]
 tree_root = SubResource("AnimationNodeStateMachine_bsp01")
 anim_player = NodePath("../AnimationPlayer")
-"parameters/動き/blend_position" = Vector2(-0.582878, -0.71090055)
+"parameters/動き/blend_position" = Vector2(0.0064308643, 1.3933649)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1647498285]
 libraries/ = SubResource("AnimationLibrary_wjo2g")

@@ -1,9 +1,22 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cuf8ewy7kpsa1"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cuf8ewy7kpsa1"]
 
-[ext_resource type="Texture2D" uid="uid://cqigaqh8wm5un" path="res://1/都市3d仮_water_still.png" id="1_ff14j"]
+[ext_resource type="Shader" uid="uid://m8l1534hjva5" path="res://ワールド/海.gdshader" id="1_ff14j"]
 
 [resource]
 resource_name = "minecraft_block-water_still"
-transparency = 4
-cull_mode = 2
-albedo_texture = ExtResource("1_ff14j")
+render_priority = 0
+shader = ExtResource("1_ff14j")
+shader_parameter/base_tint_color = Color(0, 0.6299998, 0.9, 1)
+shader_parameter/deep_color = Color(0, 0.1, 0.2, 1)
+shader_parameter/sea_height = 0.001
+shader_parameter/sea_speed = 1.0
+shader_parameter/sea_freq = 0.215
+shader_parameter/refraction_strength = -0.02
+shader_parameter/noise_scale = 3.0
+shader_parameter/noise_speed = 0.5
+shader_parameter/roughness = 0.05
+shader_parameter/specular = 1.77
+shader_parameter/reflection_strength = 0.0
+shader_parameter/fresnel_power = 5.0
+shader_parameter/specular_intensity = 1.5
+shader_parameter/specular_sharpness = 64.0

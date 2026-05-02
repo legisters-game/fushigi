@@ -1,9 +1,16 @@
 extends Node3D
+class_name 追尾カメラクラス
 @export var 目標:エンティティ
 @export var 速さ:float=30
 @export var 感度:float=5
 var 現在位置:Vector3
 var 視点回転:Vector2
+var 角最大変数:float=38
+const 角最大:float=38
+const 角最大ロック:float=15
+var 角最小変数:float=-15
+const 角最小:float=-15
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,7 +25,7 @@ func _physics_process(delta: float) -> void:
 	現在位置=lerp(現在位置,目標.カメラ基準.global_position,delta*速さ)
 	global_position=現在位置
 	rotation_degrees.y-=視点回転.x*delta*感度
-	rotation_degrees.x=clampf(rotation_degrees.x-視点回転.y*delta*感度*0.7,-15,38)
+	rotation_degrees.x=clampf(rotation_degrees.x-視点回転.y*delta*感度*0.7,角最小変数,角最大変数)
 	視点回転=Vector2.ZERO
 
 func _input(event: InputEvent) -> void:
@@ -36,3 +43,17 @@ func マウスチェンジ()->void:
 		Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 	else:
 		Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+		
+func 会話中視点角ロック(有効:bool,対象:エンティティ=null)->void:
+	if 有効:
+		角最大変数=角最大ロック
+		if 対象:
+			look_at(対象.get_node("カメラ基準点").global_position)
+			match randi_range(0,1):
+				0:
+					rotation_degrees.y-=70
+				1:
+					rotation_degrees.y+=70
+			rotation_degrees.x=角最大ロック
+	else:
+		角最大変数=角最大

@@ -5,8 +5,6 @@ extends OccluderInstance3D
 @export_tool_button("設定準備","TransitionEndAuto") var 設定ボタン=設定準備
 @export_tool_button("設定完了","TransitionEndAutoBig") var 設定ボタン2=設定完了
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
 
 
 

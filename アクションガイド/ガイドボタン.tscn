@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b7xx3vq08qd12"]
+
+[ext_resource type="Script" uid="uid://i1gcy1onfaod" path="res://アクションガイド/ガイドボタン.gd" id="1_bk2gg"]
+
+[sub_resource type="Gradient" id="Gradient_vkgpt"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2i2rm"]
+gradient = SubResource("Gradient_vkgpt")
+width = 20
+height = 20
+
+[sub_resource type="InputEventAction" id="InputEventAction_bk2gg"]
+action = &"会話"
+
+[node name="会話ガイドボタン" type="Sprite3D" unique_id=1392688736]
+transform = Transform3D(1.1676939, -0.09177879, 0.11023216, 0.11559819, 1.137406, -0.27753732, -0.084920734, 0.286298, 1.1379386, 0, 0, 0)
+cast_shadow = 0
+gi_mode = 0
+billboard = 1
+transparent = false
+no_depth_test = true
+render_priority = -2
+texture = SubResource("GradientTexture2D_2i2rm")
+script = ExtResource("1_bk2gg")
+"アクション" = SubResource("InputEventAction_bk2gg")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1360441595]
+billboard = 1
+no_depth_test = true
+text = "a"
