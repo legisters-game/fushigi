@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://s36hn6agtol7"]
 
 [ext_resource type="Script" uid="uid://dxlygfaqrs3de" path="res://GUI/メッセージボックス/メッセージボックス.gd" id="1_foudw"]
-[ext_resource type="Texture2D" uid="uid://djbdqdm20duue" path="res://GUI/メッセージボックス/IMG_1771.png" id="2_w7gw6"]
+[ext_resource type="Texture2D" uid="uid://dwv7bpt2rs3uo" path="res://GUI/メッセージボックス/115.png" id="2_74yma"]
 [ext_resource type="PackedScene" uid="uid://bx25rw0tgdvca" path="res://GUI/メッセージボックス/選択肢.tscn" id="3_74yma"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_w7gw6"]
@@ -46,7 +46,7 @@ offset_top = -141.44
 offset_right = 411.52
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("2_w7gw6")
+texture = ExtResource("2_74yma")
 expand_mode = 5
 
 [node name="メッセージ枠" type="Control" parent="テクスチャ枠" unique_id=752039985]
@@ -54,10 +54,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 67.675
-offset_top = 29.47
-offset_right = -45.36499
-offset_bottom = -36.97
+offset_left = 13.605
+offset_top = 61.635
+offset_right = -18.974915
+offset_bottom = -14.700012
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -92,11 +92,11 @@ horizontal_alignment = 2
 
 [node name="名前" type="Label" parent="テクスチャ枠" unique_id=1345841248]
 layout_mode = 1
-offset_left = 9.519989
-offset_top = -2.6799927
-offset_right = 91.51999
-offset_bottom = 28.320007
-text = "レクレイス"
+offset_left = 6.925
+offset_top = 18.855
+offset_right = 165.925
+offset_bottom = 52.48
+text = "レクレイスなのだ！"
 label_settings = SubResource("LabelSettings_74yma")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1000664554]
@@ -105,9 +105,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -118.15497
-offset_top = -75.71
+offset_top = -43.86
 offset_right = 11.845032
-offset_bottom = -7.709999
+offset_bottom = 24.14
 grow_horizontal = 0
 alignment = 2
 

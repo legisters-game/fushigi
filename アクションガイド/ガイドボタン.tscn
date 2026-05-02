@@ -1,13 +1,7 @@
 [gd_scene format=3 uid="uid://b7xx3vq08qd12"]
 
+[ext_resource type="Texture2D" uid="uid://bebhu47mui7mx" path="res://アクションガイド/Frame 18.png" id="1_8dwdb"]
 [ext_resource type="Script" uid="uid://i1gcy1onfaod" path="res://アクションガイド/ガイドボタン.gd" id="1_bk2gg"]
-
-[sub_resource type="Gradient" id="Gradient_vkgpt"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_2i2rm"]
-gradient = SubResource("Gradient_vkgpt")
-width = 20
-height = 20
 
 [sub_resource type="InputEventAction" id="InputEventAction_bk2gg"]
 action = &"会話"
@@ -20,7 +14,7 @@ billboard = 1
 transparent = false
 no_depth_test = true
 render_priority = -2
-texture = SubResource("GradientTexture2D_2i2rm")
+texture = ExtResource("1_8dwdb")
 script = ExtResource("1_bk2gg")
 "アクション" = SubResource("InputEventAction_bk2gg")
 
