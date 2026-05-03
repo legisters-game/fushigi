@@ -39,8 +39,20 @@ func ルート特定()->Variant:
 	return
 
 
+func 真のルート特定()->Variant:
+	var ルート:Node=self
+	for i:int in range(4):
+		ルート=ルート.get_parent()
+		if ルート is NavigationRegion3D:
+			return ルート
+	return
+
 func 範囲コリジョン生成():
 	var ルートノード:MeshInstance3D=ルート特定()
+	var 真のルート:NavigationRegion3D=真のルート特定()
+	if not 真のルート:
+		printerr("NavigationRegion3Dを特定できませんでした。第四親までにナビノードを割り当ててください。")
+		return
 	if not ルートノード:
 		printerr("MeshInstance3Dを特定できませんでした。第三親までに街のメッシュを割り当ててください。")
 		return
@@ -64,13 +76,13 @@ func 範囲コリジョン生成():
 	var static_body:StaticBody3D = StaticBody3D.new()
 	ルートノード.add_child(static_body)
 	static_body.position = aabb.get_center()
-	static_body.owner=ルートノード
+	static_body.owner=真のルート
 	static_body.add_child(collision_node)
-	collision_node.owner=ルートノード
+	collision_node.owner=真のルート
 	var 位置:Vector3=collision_node.global_position
 	static_body.remove_child(collision_node)
 	add_child(collision_node)
-	collision_node.owner=ルートノード
+	collision_node.owner=真のルート
 	collision_node.global_position=位置
 	collision_node.name="処理範囲内"
 	static_body.queue_free()
@@ -79,7 +91,11 @@ func 範囲コリジョン生成():
 
 func 地形当たり判定生成()->void:
 	var ルートノード:MeshInstance3D=ルート特定()
+	var 真のルート:NavigationRegion3D=真のルート特定()
 	var コリジョン親:StaticBody3D
+	if not 真のルート:
+		printerr("NavigationRegion3Dを特定できませんでした。第四親までにナビノードを割り当ててください。")
+		return
 	if not ルートノード:
 		printerr("MeshInstance3Dを特定できませんでした。第三親までに街のメッシュを割り当ててください。")
 		return
@@ -98,7 +114,7 @@ func 地形当たり判定生成()->void:
 	if not コリジョン親:
 		コリジョン親=StaticBody3D.new()
 		add_child(コリジョン親)
-		コリジョン親.owner=ルートノード
+		コリジョン親.owner=真のルート
 		コリジョン親.name="地形当たり判定"
 	else:
 		if コリジョン親.has_node("地形コリジョン"):
@@ -106,7 +122,7 @@ func 地形当たり判定生成()->void:
 			return
 	var collision_node:CollisionShape3D = CollisionShape3D.new()
 	ルートノード.add_child(collision_node)
-	collision_node.owner=ルートノード
+	collision_node.owner=真のルート
 	collision_node.shape = ルートノード.mesh.create_trimesh_shape()
 	var 保存先:String="res://街チャンク処理/街コリジョン/"+ルートノード.name.trim_suffix(",a")+".tres"
 	#collision_node.shape.take_over_path(保存先)
@@ -136,7 +152,7 @@ func 地形当たり判定生成()->void:
 	ルートノード.remove_child(collision_node)
 	コリジョン親.add_child(collision_node)
 	collision_node.global_position=位置
-	collision_node.owner=ルートノード
+	collision_node.owner=真のルート
 	collision_node.name="地形コリジョン"
 	print_rich("[color=green]街の当たり判定を設定しました！[/color]")
 	

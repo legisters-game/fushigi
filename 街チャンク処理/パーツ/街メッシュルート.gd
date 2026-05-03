@@ -5,13 +5,24 @@ extends MeshInstance3D
 @export_tool_button("全ての設定が\n行えているかチェック","FileList")var チェック:Variant=チェック開始
 @export_flags("地形判定無し","透明壁無し","高画質無し","平面で障害物無し")var メタ情報:int=0
 enum {地形判定無し=1,透明壁無し=2,高画質無し=4,平面で障害物無し=8}
+var オーナー:NavigationRegion3D
 
 func _ready() -> void:
+	scale=Vector3(16,16,16)
+	position=Vector3.ZERO
+	rotation_degrees=Vector3(90,0,0)
+	get_parent().position=Vector3.ZERO
+	get_parent().scale=Vector3(1,1,1)
+	get_parent().rotation_degrees=Vector3.ZERO
 	if has_node("街全体ビュー"):
 		get_node("街全体ビュー").queue_free()
 	for i:StaticBody3D in find_children("地形当たり判定","StaticBody3D"):
 		i.collision_mask=3
 		i.collision_layer=3
+	if get_parent() is NavigationRegion3D:
+		オーナー=get_parent()
+	else:
+		printerr("依存関係が壊れています。\nNavigationRegion3Dの子にMeshInstance3D(私もとい、街メッシュルート.gd)が来るようにしてください。")
 
 func 街切り替え()->void:
 	if has_node("街全体ビュー"):
@@ -22,7 +33,7 @@ func 街切り替え()->void:
 	var シーン:PackedScene=load("res://使わない/街全体ビュー.tscn")
 	var ノード:Node=シーン.instantiate()
 	add_child(ノード)
-	ノード.owner=self
+	ノード.owner=オーナー
 	print_rich("[color=green]完了！！[/color]")
 	
 func チェック開始()->void:
@@ -36,6 +47,7 @@ func チェック開始()->void:
 		if not 当たり判定制御ノード:
 			printerr("地形当たり判定が無い")
 			エラー=true
+		
 
 		for i:Node in get_children():
 			var ヒット:Node=has_type_recursive(i,OccluderInstance3D)
@@ -91,6 +103,13 @@ func チェック開始()->void:
 					printerr("生成されたコリジョンが消えている")
 					エラー=true
 					break
+				if コリジョン.get_parent() is StaticBody3D:
+					if コリジョン.get_parent().name!="地形当たり判定":
+						コリジョン.get_parent().name="地形当たり判定"
+						print_rich("[color=green]報告:[/color]  地形当たり判定に相当するノードの名前が異なっていた為修正しました。")
+				else:
+					printerr("地形コリジョンの親が「地形当たり判定」ではない")
+					エラー=true
 				rename_resource_keep_links(コリジョン.shape,"res://街チャンク処理/街コリジョン/"+name.trim_suffix(",a")+".tres")
 				if 当たり判定制御ノード:
 					if not has_name_recursive(当たり判定制御ノード,"地形コリジョン"):
@@ -101,10 +120,11 @@ func チェック開始()->void:
 							var 位置:Vector3=親スタ.global_position
 							親スタ.get_parent().remove_child(親スタ)
 							当たり判定制御ノード.add_child(親スタ)
-							親スタ.owner=self
+							親スタ.owner=オーナー
 							親スタ.global_position=位置
+							親スタ.name="地形当たり判定"
 							親スタ.add_child(コリジョン)
-							コリジョン.owner=self
+							コリジョン.owner=オーナー
 							コリジョン.global_position=位置2
 							
 							print_rich("[color=green]報告:[/color]  当たり判定制御に地形のノードが居ないので移動させました。")
@@ -115,8 +135,34 @@ func チェック開始()->void:
 					printerr("地形の当たり判定があるなら「当たり判定制御」も必要です。")
 					エラー=true
 			else:
-				printerr("グローバルイルミネーションが無い")
+				printerr("地形コリジョンが無い")
 				エラー=true
+				
+	if not メタ情報 & 地形判定無し and not メタ情報 & 平面で障害物無し and not メタ情報 & 透明壁無し:
+		for i:Node in get_children():
+			var ヒット:Node=has_name_recursive(i,"当たり判定制御")
+			if ヒット:
+				var エリア:Area3D=ヒット
+				var ヒット2:Node=has_name_recursive(エリア,"処理範囲内")
+				if ヒット2:
+					var 処理範囲:CollisionShape3D=ヒット2
+					var 正常処理範囲=エリア.find_child("処理範囲内",false)
+					if 正常処理範囲:
+						pass
+					else:
+						var 位置:Vector3=処理範囲.global_position
+						処理範囲.get_parent().remove_child(処理範囲)
+						エリア.add_child(処理範囲)
+						処理範囲.owner=オーナー
+						処理範囲.global_position=位置
+						print_rich("[color=green]報告:[/color]  当たり判定制御に処理範囲内ノードが居ないので移動させました。")
+				else:
+					printerr("処理範囲内(CollisionShape3D)が無い")
+					エラー=true
+			else:
+				printerr("当たり判定制御(Area3D)が無い")
+				エラー=true
+	
 	if not エラー:
 		print_rich("[color=green]問題無しと判断しました！[/color]")
 	
