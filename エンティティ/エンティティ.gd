@@ -39,7 +39,7 @@ func apply_movement(delta:float):
 		velocity.y -= 9.8 * delta
 	
 	# move_direction（絶対座標系）に基づいて速度を設定
-	var target_vel = move_direction * SPEED
+	var target_vel = move_direction * SPEED*delta*700
 	velocity.x = target_vel.x
 	velocity.z = target_vel.z
 	if 重力無効:

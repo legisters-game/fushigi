@@ -8,23 +8,23 @@
 [ext_resource type="Script" uid="uid://dunk7b3n3p2st" path="res://街チャンク処理/パーツ/街メッシュルート.gd" id="4_ccj11"]
 [ext_resource type="PackedScene" uid="uid://dtgbsqm4sngsn" path="res://街チャンク処理/街シーン/48,416,a.tscn" id="5_1a2ec"]
 [ext_resource type="PackedScene" uid="uid://bh3s5v0cvlcvg" path="res://街チャンク処理/街シーン/-208,240,a.tscn" id="6_d3wty"]
-[ext_resource type="ArrayMesh" uid="uid://duh5cvskayc5g" path="res://街メッシュ/都市3d仮_960,-624.res" id="7_obnk4"]
-[ext_resource type="ArrayMesh" uid="uid://dbimbodgbdx8s" path="res://街メッシュ/都市3d仮_-16,-272_013.res" id="8_dd1lt"]
 [ext_resource type="PackedScene" uid="uid://br38yngpr0p67" path="res://街チャンク処理/街シーン/960,-592,a.tscn" id="9_d3wty"]
-[ext_resource type="ArrayMesh" uid="uid://cycmqcet708qq" path="res://街メッシュ/都市3d仮_-16,-384_004.res" id="9_ea88r"]
-[ext_resource type="ArrayMesh" uid="uid://b1jjp4glsmn2i" path="res://街メッシュ/都市3d仮_-16,32_002.res" id="10_3hun0"]
-[ext_resource type="ArrayMesh" uid="uid://c1wam3shhgt3l" path="res://街メッシュ/都市3d仮_-16,80_003.res" id="11_oechf"]
-[ext_resource type="ArrayMesh" uid="uid://b7vwt1myhojyo" path="res://街メッシュ/都市3d仮_-16,128_001.res" id="12_77ide"]
-[ext_resource type="ArrayMesh" uid="uid://bx0styn18u32w" path="res://街メッシュ/都市3d仮_-16,384_004.res" id="13_q3cen"]
-[ext_resource type="ArrayMesh" uid="uid://cn8pqq4wdrmfx" path="res://街メッシュ/都市3d仮_-32,-48_001.res" id="14_ym7tp"]
-[ext_resource type="ArrayMesh" uid="uid://cbt05jsei584n" path="res://街メッシュ/都市3d仮_-32,-160_001.res" id="15_0ma11"]
-[ext_resource type="ArrayMesh" uid="uid://kgb4d2ggn4e0" path="res://街メッシュ/都市3d仮_-48,176_001.res" id="16_yn86y"]
-[ext_resource type="ArrayMesh" uid="uid://cm8gkthpfujop" path="res://街メッシュ/都市3d仮_-48,224_002.res" id="17_g3783"]
-[ext_resource type="ArrayMesh" uid="uid://b8hcols816qh0" path="res://街メッシュ/都市3d仮_-48,304_002.res" id="18_yoow5"]
-[ext_resource type="ArrayMesh" uid="uid://bu3ihphjo1chx" path="res://街メッシュ/都市3d仮_-48,352_001.res" id="19_d3wty"]
-[ext_resource type="ArrayMesh" uid="uid://7l5vyt1p3vb1" path="res://街メッシュ/都市3d仮_-80,384_001.res" id="20_rt7qk"]
-[ext_resource type="ArrayMesh" uid="uid://b2b1cn6vujuik" path="res://街メッシュ/都市3d仮_-96,416_001.res" id="21_3os03"]
+[ext_resource type="PackedScene" uid="uid://mls8d7i8mhdr" path="res://街チャンク処理/街シーン/960,-624,a.tscn" id="9_rt7qk"]
+[ext_resource type="PackedScene" uid="uid://dhf60otjcqsb1" path="res://街チャンク処理/街シーン/-16,-272,a.tscn" id="10_d3wty"]
+[ext_resource type="PackedScene" uid="uid://wcdfeyq2cfjt" path="res://街チャンク処理/街シーン/-16,-384,a.tscn" id="11_d3wty"]
+[ext_resource type="PackedScene" uid="uid://bt4xut7233kjb" path="res://街チャンク処理/街シーン/-16,32,a.tscn" id="12_d3wty"]
+[ext_resource type="PackedScene" uid="uid://dw0bnjmnt54w6" path="res://街チャンク処理/街シーン/-16,80,a.tscn" id="13_d3wty"]
+[ext_resource type="PackedScene" uid="uid://bqm4hubdaju14" path="res://街チャンク処理/街シーン/-16,128,a.tscn" id="14_d3wty"]
+[ext_resource type="PackedScene" uid="uid://dhucnciss0fhf" path="res://街チャンク処理/街シーン/-16,384,a.tscn" id="15_d3wty"]
+[ext_resource type="PackedScene" uid="uid://c3mipwm572p2d" path="res://街チャンク処理/街シーン/-32,-48,a.tscn" id="16_d3wty"]
+[ext_resource type="PackedScene" uid="uid://crvlbtw5k81ug" path="res://街チャンク処理/街シーン/-32,-160,a.tscn" id="17_d3wty"]
+[ext_resource type="PackedScene" uid="uid://bk360tcruf8di" path="res://街チャンク処理/街シーン/-48,176,a.tscn" id="18_d3wty"]
+[ext_resource type="PackedScene" uid="uid://bm5vq4elaritk" path="res://街チャンク処理/街シーン/-48,224,a.tscn" id="19_rt7qk"]
+[ext_resource type="PackedScene" uid="uid://ddj0yb7r76c2d" path="res://街チャンク処理/街シーン/-48,304,a.tscn" id="20_d3wty"]
+[ext_resource type="PackedScene" uid="uid://cs51a6qt8gb31" path="res://街チャンク処理/街シーン/-48,352,a.tscn" id="21_d3wty"]
 [ext_resource type="ArrayMesh" uid="uid://cah2mpv270g57" path="res://街メッシュ/都市3d仮_-112,-16_001.res" id="22_2efxv"]
+[ext_resource type="PackedScene" uid="uid://dmbpaj1fsyjud" path="res://街チャンク処理/街シーン/-80,384,a.tscn" id="22_d3wty"]
+[ext_resource type="PackedScene" uid="uid://vyptu2dsqbnt" path="res://街チャンク処理/街シーン/-96,416,a.tscn" id="23_d3wty"]
 [ext_resource type="ArrayMesh" uid="uid://h0kpbnrx23ae" path="res://街メッシュ/都市3d仮_-112,-48_001.res" id="23_hqijh"]
 [ext_resource type="ArrayMesh" uid="uid://dqltj0en4t86e" path="res://街メッシュ/都市3d仮_-112,-96_001.res" id="24_hacum"]
 [ext_resource type="ArrayMesh" uid="uid://dyw7xu5g111kq" path="res://街メッシュ/都市3d仮_-112,-176_001.res" id="25_p4e3c"]
@@ -677,7 +677,7 @@ subdivide_width = 20
 subdivide_depth = 20
 center_offset = Vector3(0, 0.622, 0)
 
-[node name="Node3D" type="Node3D" unique_id=2085154183]
+[node name="Node3d" type="Node3D" unique_id=2085154183]
 script = ExtResource("1_yoow5")
 
 [node name="時間太陽" parent="." unique_id=858381750 instance=ExtResource("1_g3783")]
@@ -694,6 +694,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35.094, 0)
 script = ExtResource("2_r3fl7")
 
 [node name="-208,240,a_Chunk" parent="都市3d仮" unique_id=813687930 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -704,6 +705,7 @@ visible = true
 [node name="-208,240,a" parent="都市3d仮/-208,240,a_Chunk" unique_id=147443474 instance=ExtResource("6_d3wty")]
 
 [node name="48,416,a_Chunk" parent="都市3d仮" unique_id=1614083986 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -717,6 +719,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4477173, 9, 1.8522263)
 [node name="48,416,a" parent="都市3d仮/48,416,a_Chunk" unique_id=1114862213 instance=ExtResource("5_1a2ec")]
 
 [node name="960,-592,a_Chunk" parent="都市3d仮" unique_id=1560124847 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -727,6 +730,7 @@ visible = true
 [node name="960,-592,a" parent="都市3d仮/960,-592,a_Chunk" unique_id=712171784 instance=ExtResource("9_d3wty")]
 
 [node name="960,-624,a_Chunk" parent="都市3d仮" unique_id=589814032 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -734,14 +738,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 759.1647, 0, -528.7712)
 visible = true
 
-[node name="960,-624,a" type="NavigationRegion3D" parent="都市3d仮/960,-624,a_Chunk" unique_id=319581184]
-
-[node name="960,-624,a" type="MeshInstance3D" parent="都市3d仮/960,-624,a_Chunk/960,-624,a" unique_id=325867501]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("7_obnk4")
-script = ExtResource("4_ccj11")
+[node name="960,-624,a" parent="都市3d仮/960,-624,a_Chunk" unique_id=832556516 instance=ExtResource("9_rt7qk")]
 
 [node name="-16,-272,a_Chunk" parent="都市3d仮" unique_id=1592792100 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -749,14 +749,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(18, 0, 0, 0, 17, 0, 0, 0, 17.5, -39.692455, 0, -250.85646)
 visible = true
 
-[node name="-16,-272,a" type="NavigationRegion3D" parent="都市3d仮/-16,-272,a_Chunk" unique_id=856226268]
-
-[node name="-16,-272,a" type="MeshInstance3D" parent="都市3d仮/-16,-272,a_Chunk/-16,-272,a" unique_id=1507673139]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("8_dd1lt")
-script = ExtResource("4_ccj11")
+[node name="-16,-272,a" parent="都市3d仮/-16,-272,a_Chunk" unique_id=2000313830 instance=ExtResource("10_d3wty")]
 
 [node name="-16,-384,a_Chunk" parent="都市3d仮" unique_id=1829434235 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -764,14 +760,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(18, 0, 0, 0, 17, 0, 0, 0, 18, -60.33257, 0, -361.99564)
 visible = true
 
-[node name="-16,-384,a" type="NavigationRegion3D" parent="都市3d仮/-16,-384,a_Chunk" unique_id=1710571215]
-
-[node name="-16,-384,a" type="MeshInstance3D" parent="都市3d仮/-16,-384,a_Chunk/-16,-384,a" unique_id=1940450222]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("9_ea88r")
-script = ExtResource("4_ccj11")
+[node name="-16,-384,a" parent="都市3d仮/-16,-384,a_Chunk" unique_id=297633928 instance=ExtResource("11_d3wty")]
 
 [node name="-16,32,a_Chunk" parent="都市3d仮" unique_id=1245351471 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -779,14 +771,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(18.1, 0, 0, 0, 17, 0, 0, 0, 18.1, -28.578741, 0, 0)
 visible = true
 
-[node name="-16,32,a" type="NavigationRegion3D" parent="都市3d仮/-16,32,a_Chunk" unique_id=1077849161]
-
-[node name="-16,32,a" type="MeshInstance3D" parent="都市3d仮/-16,32,a_Chunk/-16,32,a" unique_id=1622163912]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("10_3hun0")
-script = ExtResource("4_ccj11")
+[node name="-16,32,a" parent="都市3d仮/-16,32,a_Chunk" unique_id=488772531 instance=ExtResource("12_d3wty")]
 
 [node name="-16,80,a_Chunk" parent="都市3d仮" unique_id=163177105 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -794,29 +782,21 @@ metadata/_edit_lock_ = true
 transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.5, -59.51767, 0, 52.51559)
 visible = true
 
-[node name="-16,80,a" type="NavigationRegion3D" parent="都市3d仮/-16,80,a_Chunk" unique_id=1418562090]
+[node name="-16,80,a" parent="都市3d仮/-16,80,a_Chunk" unique_id=1052373097 instance=ExtResource("13_d3wty")]
 
-[node name="-16,80,a" type="MeshInstance3D" parent="都市3d仮/-16,80,a_Chunk/-16,80,a" unique_id=14670138]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("11_oechf")
-script = ExtResource("4_ccj11")
-
-[node name="-16,128_a_Chunk" parent="都市3d仮" unique_id=2054577899 instance=ExtResource("2_1a2ec")]
+[node name="-16,128,a_Chunk" parent="都市3d仮" unique_id=2054577899 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="Area3D" parent="都市3d仮/-16,128_a_Chunk" index="0" unique_id=250931451]
+[node name="Area3D" parent="都市3d仮/-16,128,a_Chunk" index="0" unique_id=250931451]
 transform = Transform3D(18.1, 0, 0, 0, 17, 0, 0, 0, 18.1, -35.01014, 0, 84.02425)
 visible = true
 
-[node name="-16,128_a" type="NavigationRegion3D" parent="都市3d仮/-16,128_a_Chunk" unique_id=1671921876]
-
-[node name="-16,128_a" type="MeshInstance3D" parent="都市3d仮/-16,128_a_Chunk/-16,128_a" unique_id=727999150]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("12_77ide")
-script = ExtResource("4_ccj11")
+[node name="-16,128,a" parent="都市3d仮/-16,128,a_Chunk" unique_id=140550774 instance=ExtResource("14_d3wty")]
 
 [node name="-16,384,a_Chunk" parent="都市3d仮" unique_id=1550958948 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -824,14 +804,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -21.006266, 0, 287.08517)
 visible = true
 
-[node name="-16,384,a" type="NavigationRegion3D" parent="都市3d仮/-16,384,a_Chunk" unique_id=221672807]
-
-[node name="-16,384,a" type="MeshInstance3D" parent="都市3d仮/-16,384,a_Chunk/-16,384,a" unique_id=202628417]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("13_q3cen")
-script = ExtResource("4_ccj11")
+[node name="-16,384,a" parent="都市3d仮/-16,384,a_Chunk" unique_id=1702240329 instance=ExtResource("15_d3wty")]
 
 [node name="-32,-48,a_Chunk" parent="都市3d仮" unique_id=586005128 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -839,14 +815,10 @@ metadata/_edit_group_ = true
 transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.5, -59.892456, 0, -84.39394)
 visible = true
 
-[node name="-32,-48,a" type="NavigationRegion3D" parent="都市3d仮/-32,-48,a_Chunk" unique_id=92543708]
-
-[node name="-32,-48,a" type="MeshInstance3D" parent="都市3d仮/-32,-48,a_Chunk/-32,-48,a" unique_id=199457353]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("14_ym7tp")
-script = ExtResource("4_ccj11")
+[node name="-32,-48,a" parent="都市3d仮/-32,-48,a_Chunk" unique_id=1063822771 instance=ExtResource("16_d3wty")]
 
 [node name="-32,-160,a_Chunk" parent="都市3d仮" unique_id=521279250 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -854,14 +826,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(17.2, 0, 0, 0, 17, 0, 0, 0, 17.2, -63.976517, 0, -189.20702)
 visible = true
 
-[node name="-32,-160,a" type="NavigationRegion3D" parent="都市3d仮/-32,-160,a_Chunk" unique_id=463001567]
-
-[node name="-32,-160,a" type="MeshInstance3D" parent="都市3d仮/-32,-160,a_Chunk/-32,-160,a" unique_id=1793315884]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("15_0ma11")
-script = ExtResource("4_ccj11")
+[node name="-32,-160,a" parent="都市3d仮/-32,-160,a_Chunk" unique_id=388423120 instance=ExtResource("17_d3wty")]
 
 [node name="-48,176,a_Chunk" parent="都市3d仮" unique_id=1962266675 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -869,14 +837,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(18, 0, 0, 0, 17, 0, 0, 0, 18.2, -69.42134, 0, 103.4513)
 visible = true
 
-[node name="-48,176,a" type="NavigationRegion3D" parent="都市3d仮/-48,176,a_Chunk" unique_id=1886234543]
-
-[node name="-48,176,a" type="MeshInstance3D" parent="都市3d仮/-48,176,a_Chunk/-48,176,a" unique_id=1759230033]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("16_yn86y")
-script = ExtResource("4_ccj11")
+[node name="-48,176,a" parent="都市3d仮/-48,176,a_Chunk" unique_id=1072650553 instance=ExtResource("18_d3wty")]
 
 [node name="-48,224,a_Chunk" parent="都市3d仮" unique_id=1593426226 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -884,12 +848,7 @@ metadata/_edit_lock_ = true
 transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.5, -61.253994, 0, 151.09334)
 visible = true
 
-[node name="-48,224,a" type="NavigationRegion3D" parent="都市3d仮/-48,224,a_Chunk" unique_id=459629783]
-
-[node name="-48,224,a" type="MeshInstance3D" parent="都市3d仮/-48,224,a_Chunk/-48,224,a" unique_id=1001040095]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("17_g3783")
-script = ExtResource("4_ccj11")
+[node name="-48,224,a" parent="都市3d仮/-48,224,a_Chunk" unique_id=1030997326 instance=ExtResource("19_rt7qk")]
 
 [node name="-48,304,a_Chunk" parent="都市3d仮" unique_id=2009027836 instance=ExtResource("2_1a2ec")]
 metadata/_edit_group_ = true
@@ -899,14 +858,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(17.3, 0, 0, 0, 17, 0, 0, 0, 17, -59.8925, 0, 210.985)
 visible = true
 
-[node name="-48,304,a" type="NavigationRegion3D" parent="都市3d仮/-48,304,a_Chunk" unique_id=2055038292]
-
-[node name="-48,304,a" type="MeshInstance3D" parent="都市3d仮/-48,304,a_Chunk/-48,304,a" unique_id=1885508548]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("18_yoow5")
-script = ExtResource("4_ccj11")
+[node name="-48,304,a" parent="都市3d仮/-48,304,a_Chunk" unique_id=184333235 instance=ExtResource("20_d3wty")]
 
 [node name="-48,352,a_Chunk" parent="都市3d仮" unique_id=831246932 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -914,14 +869,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(17.8, 0, 0, 0, 17, 0, 0, 0, 17.5, -67.65822, 0, 254.45357)
 visible = true
 
-[node name="-48,352,a" type="NavigationRegion3D" parent="都市3d仮/-48,352,a_Chunk" unique_id=1843988733]
-
-[node name="-48,352,a" type="MeshInstance3D" parent="都市3d仮/-48,352,a_Chunk/-48,352,a" unique_id=77328327]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("19_d3wty")
-script = ExtResource("4_ccj11")
+[node name="-48,352,a" parent="都市3d仮/-48,352,a_Chunk" unique_id=1993311077 instance=ExtResource("21_d3wty")]
 
 [node name="-80,384,a_Chunk" parent="都市3d仮" unique_id=640152410 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -929,12 +880,7 @@ metadata/_edit_lock_ = true
 transform = Transform3D(18.9, 0, 0, 0, 17, 0, 0, 0, 18.9, -98.03006, 0, 290.58905)
 visible = true
 
-[node name="-80,384,a" type="NavigationRegion3D" parent="都市3d仮/-80,384,a_Chunk" unique_id=1665660779]
-
-[node name="-80,384,a" type="MeshInstance3D" parent="都市3d仮/-80,384,a_Chunk/-80,384,a" unique_id=1776597880]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("20_rt7qk")
-script = ExtResource("4_ccj11")
+[node name="-80,384,a" parent="都市3d仮/-80,384,a_Chunk" unique_id=71804751 instance=ExtResource("22_d3wty")]
 
 [node name="-96,416,a_Chunk" parent="都市3d仮" unique_id=1820649292 instance=ExtResource("2_1a2ec")]
 metadata/_edit_group_ = true
@@ -944,14 +890,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -106.418045, 0, 315.4195)
 visible = true
 
-[node name="-96,416,a" type="NavigationRegion3D" parent="都市3d仮/-96,416,a_Chunk" unique_id=628447498]
-
-[node name="-96,416,a" type="MeshInstance3D" parent="都市3d仮/-96,416,a_Chunk/-96,416,a" unique_id=1703796340]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("21_3os03")
-script = ExtResource("4_ccj11")
+[node name="-96,416,a" parent="都市3d仮/-96,416,a_Chunk" unique_id=1904693265 instance=ExtResource("23_d3wty")]
 
 [node name="-112,-16,a_Chunk" parent="都市3d仮" unique_id=1499226329 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -967,6 +909,7 @@ mesh = ExtResource("22_2efxv")
 script = ExtResource("4_ccj11")
 
 [node name="-112,-48,a_Chunk" parent="都市3d仮" unique_id=1827088952 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -982,6 +925,7 @@ mesh = ExtResource("23_hqijh")
 script = ExtResource("4_ccj11")
 
 [node name="-112,-96,a_Chunk" parent="都市3d仮" unique_id=497520712 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -997,6 +941,7 @@ mesh = ExtResource("24_hacum")
 script = ExtResource("4_ccj11")
 
 [node name="-112,-176,a_Chunk" parent="都市3d仮" unique_id=1663969970 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1012,6 +957,7 @@ mesh = ExtResource("25_p4e3c")
 script = ExtResource("4_ccj11")
 
 [node name="-112,-288,a_Chunk" parent="都市3d仮" unique_id=272231424 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1027,6 +973,7 @@ mesh = ExtResource("26_2pwil")
 script = ExtResource("4_ccj11")
 
 [node name="-112,-336,a_Chunk" parent="都市3d仮" unique_id=1818497409 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1042,6 +989,7 @@ mesh = ExtResource("27_3sm0g")
 script = ExtResource("4_ccj11")
 
 [node name="-112,32,a_Chunk" parent="都市3d仮" unique_id=1462911372 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1057,6 +1005,7 @@ mesh = ExtResource("28_hpbgj")
 script = ExtResource("4_ccj11")
 
 [node name="-112,144,a_Chunk" parent="都市3d仮" unique_id=983004064 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1072,6 +1021,7 @@ mesh = ExtResource("29_cvbb6")
 script = ExtResource("4_ccj11")
 
 [node name="-112,176,a_Chunk" parent="都市3d仮" unique_id=1124898643 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1087,6 +1037,7 @@ mesh = ExtResource("30_sou7e")
 script = ExtResource("4_ccj11")
 
 [node name="-112,224,a_Chunk" parent="都市3d仮" unique_id=481503273 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1102,6 +1053,7 @@ mesh = ExtResource("31_o4spe")
 script = ExtResource("4_ccj11")
 
 [node name="-112,304,a_Chunk" parent="都市3d仮" unique_id=1275198259 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1117,6 +1069,7 @@ mesh = ExtResource("32_mp3km")
 script = ExtResource("4_ccj11")
 
 [node name="-112,336,a_Chunk" parent="都市3d仮" unique_id=2049733412 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1132,6 +1085,7 @@ mesh = ExtResource("33_ajunh")
 script = ExtResource("4_ccj11")
 
 [node name="-112,384,a_Chunk" parent="都市3d仮" unique_id=21479124 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1147,6 +1101,7 @@ mesh = ExtResource("34_um0fc")
 script = ExtResource("4_ccj11")
 
 [node name="-128,80,a_Chunk" parent="都市3d仮" unique_id=1562378538 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1162,6 +1117,7 @@ mesh = ExtResource("35_m5ov1")
 script = ExtResource("4_ccj11")
 
 [node name="-128,464,a_Chunk" parent="都市3d仮" unique_id=657012754 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1177,6 +1133,7 @@ mesh = ExtResource("36_puxww")
 script = ExtResource("4_ccj11")
 
 [node name="-144,352,a_Chunk" parent="都市3d仮" unique_id=192563905 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1192,6 +1149,7 @@ mesh = ExtResource("37_at6bu")
 script = ExtResource("4_ccj11")
 
 [node name="-144,416,a_Chunk" parent="都市3d仮" unique_id=1046451911 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1207,6 +1165,7 @@ mesh = ExtResource("38_sq4f7")
 script = ExtResource("4_ccj11")
 
 [node name="-160,240,a_Chunk" parent="都市3d仮" unique_id=2019624958 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1222,6 +1181,7 @@ mesh = ExtResource("39_fmuun")
 script = ExtResource("4_ccj11")
 
 [node name="-160,336,a_Chunk" parent="都市3d仮" unique_id=178491970 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1237,6 +1197,7 @@ mesh = ExtResource("40_c68h2")
 script = ExtResource("4_ccj11")
 
 [node name="-176,144,a_Chunk" parent="都市3d仮" unique_id=1325697007 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1252,6 +1213,7 @@ mesh = ExtResource("41_f35fv")
 script = ExtResource("4_ccj11")
 
 [node name="-192,160,a_Chunk" parent="都市3d仮" unique_id=1217038387 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1267,6 +1229,7 @@ mesh = ExtResource("42_t1sbq")
 script = ExtResource("4_ccj11")
 
 [node name="-192,176,a_Chunk" parent="都市3d仮" unique_id=1135344361 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1282,6 +1245,7 @@ mesh = ExtResource("43_ju38t")
 script = ExtResource("4_ccj11")
 
 [node name="-208,224,a_Chunk" parent="都市3d仮" unique_id=316582972 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1297,6 +1261,7 @@ mesh = ExtResource("44_xw7ej")
 script = ExtResource("4_ccj11")
 
 [node name="-224,304,a_Chunk" parent="都市3d仮" unique_id=273878566 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1311,6 +1276,7 @@ mesh = ExtResource("45_mr8ws")
 script = ExtResource("4_ccj11")
 
 [node name="0,384,a_Chunk" parent="都市3d仮" unique_id=850423343 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1325,6 +1291,7 @@ mesh = ExtResource("46_he545")
 script = ExtResource("4_ccj11")
 
 [node name="0,816,a_Chunk" parent="都市3d仮" unique_id=693092080 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1339,6 +1306,7 @@ mesh = ExtResource("47_u5mj1")
 script = ExtResource("4_ccj11")
 
 [node name="0,896,a_Chunk" parent="都市3d仮" unique_id=510909678 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1353,6 +1321,7 @@ mesh = ExtResource("48_vbk2w")
 script = ExtResource("4_ccj11")
 
 [node name="16,-544,a_Chunk" parent="都市3d仮" unique_id=75775568 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1367,6 +1336,7 @@ mesh = ExtResource("49_hhwog")
 script = ExtResource("4_ccj11")
 
 [node name="16,-560,a_Chunk" parent="都市3d仮" unique_id=386824257 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1381,6 +1351,7 @@ mesh = ExtResource("50_qf3qn")
 script = ExtResource("4_ccj11")
 
 [node name="32,-176,a_Chunk" parent="都市3d仮" unique_id=1562346606 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1395,6 +1366,7 @@ mesh = ExtResource("51_yp7n5")
 script = ExtResource("4_ccj11")
 
 [node name="32,208,a_Chunk" parent="都市3d仮" unique_id=13215967 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1409,6 +1381,7 @@ mesh = ExtResource("52_2888h")
 script = ExtResource("4_ccj11")
 
 [node name="48,240,a_Chunk" parent="都市3d仮" unique_id=1635728934 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1423,6 +1396,7 @@ mesh = ExtResource("53_hfy6f")
 script = ExtResource("4_ccj11")
 
 [node name="48,304,a_Chunk" parent="都市3d仮" unique_id=757137442 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1437,6 +1411,7 @@ mesh = ExtResource("54_g6cbg")
 script = ExtResource("4_ccj11")
 
 [node name="48,352,a_Chunk" parent="都市3d仮" unique_id=1880711816 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1451,6 +1426,7 @@ mesh = ExtResource("55_v3uoy")
 script = ExtResource("4_ccj11")
 
 [node name="48,560,a_Chunk" parent="都市3d仮" unique_id=58847388 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1465,6 +1441,7 @@ mesh = ExtResource("56_gbglm")
 script = ExtResource("4_ccj11")
 
 [node name="64,32,a_Chunk" parent="都市3d仮" unique_id=856437720 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1479,6 +1456,7 @@ mesh = ExtResource("57_sjegn")
 script = ExtResource("4_ccj11")
 
 [node name="64,96,a_Chunk" parent="都市3d仮" unique_id=978966648 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1493,6 +1471,7 @@ mesh = ExtResource("58_ex4wg")
 script = ExtResource("4_ccj11")
 
 [node name="64,128,a_Chunk" parent="都市3d仮" unique_id=71516331 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1507,6 +1486,7 @@ mesh = ExtResource("59_0ndob")
 script = ExtResource("4_ccj11")
 
 [node name="64,624,a_Chunk" parent="都市3d仮" unique_id=952521327 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1521,6 +1501,7 @@ mesh = ExtResource("60_vu7yh")
 script = ExtResource("4_ccj11")
 
 [node name="64,896,a_Chunk" parent="都市3d仮" unique_id=776776357 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1535,6 +1516,7 @@ mesh = ExtResource("61_jt36q")
 script = ExtResource("4_ccj11")
 
 [node name="80,-48,a_Chunk" parent="都市3d仮" unique_id=422558314 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1549,6 +1531,7 @@ mesh = ExtResource("62_7g2fc")
 script = ExtResource("4_ccj11")
 
 [node name="80,-144,a_Chunk" parent="都市3d仮" unique_id=903665396 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1563,6 +1546,7 @@ mesh = ExtResource("63_nnr25")
 script = ExtResource("4_ccj11")
 
 [node name="80,-272,a_Chunk" parent="都市3d仮" unique_id=1587544644 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1577,6 +1561,7 @@ mesh = ExtResource("64_2v6xx")
 script = ExtResource("4_ccj11")
 
 [node name="80,-336,a_Chunk" parent="都市3d仮" unique_id=400731761 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1591,6 +1576,7 @@ mesh = ExtResource("65_moaka")
 script = ExtResource("4_ccj11")
 
 [node name="80,-384,a_Chunk" parent="都市3d仮" unique_id=2068607649 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1605,6 +1591,7 @@ mesh = ExtResource("66_h70fj")
 script = ExtResource("4_ccj11")
 
 [node name="80,448,a_Chunk" parent="都市3d仮" unique_id=488680537 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1620,6 +1607,7 @@ mesh = ExtResource("67_45ycu")
 script = ExtResource("4_ccj11")
 
 [node name="96,208,a_Chunk" parent="都市3d仮" unique_id=582061811 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1634,6 +1622,7 @@ mesh = ExtResource("68_iis3d")
 script = ExtResource("4_ccj11")
 
 [node name="112,336,a_Chunk" parent="都市3d仮" unique_id=143416214 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1648,6 +1637,7 @@ mesh = ExtResource("69_6pprb")
 script = ExtResource("4_ccj11")
 
 [node name="112,416,a_Chunk" parent="都市3d仮" unique_id=1132272998 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1662,6 +1652,7 @@ mesh = ExtResource("70_6abld")
 script = ExtResource("4_ccj11")
 
 [node name="112,448,a_Chunk" parent="都市3d仮" unique_id=1209408721 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1676,6 +1667,7 @@ mesh = ExtResource("71_mi53l")
 script = ExtResource("4_ccj11")
 
 [node name="128,560,a_Chunk" parent="都市3d仮" unique_id=362530258 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1690,6 +1682,7 @@ mesh = ExtResource("72_ao5pl")
 script = ExtResource("4_ccj11")
 
 [node name="128,704,a_Chunk" parent="都市3d仮" unique_id=818971405 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1704,6 +1697,7 @@ mesh = ExtResource("73_nww4j")
 script = ExtResource("4_ccj11")
 
 [node name="128,816,a_Chunk" parent="都市3d仮" unique_id=356733409 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1718,6 +1712,7 @@ mesh = ExtResource("74_njmd6")
 script = ExtResource("4_ccj11")
 
 [node name="144,-224,a_Chunk" parent="都市3d仮" unique_id=1815147628 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1732,6 +1727,7 @@ mesh = ExtResource("75_n82nm")
 script = ExtResource("4_ccj11")
 
 [node name="144,-272,a_Chunk" parent="都市3d仮" unique_id=845167578 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1746,6 +1742,7 @@ mesh = ExtResource("76_12anq")
 script = ExtResource("4_ccj11")
 
 [node name="144,-400,a_Chunk" parent="都市3d仮" unique_id=1795464716 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1760,6 +1757,7 @@ mesh = ExtResource("77_0spwi")
 script = ExtResource("4_ccj11")
 
 [node name="144,272,a_Chunk" parent="都市3d仮" unique_id=2018730883 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1774,6 +1772,7 @@ mesh = ExtResource("78_os6nl")
 script = ExtResource("4_ccj11")
 
 [node name="144,304,a_Chunk" parent="都市3d仮" unique_id=383895843 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1788,6 +1787,7 @@ mesh = ExtResource("79_dk0p6")
 script = ExtResource("4_ccj11")
 
 [node name="144,368,a_Chunk" parent="都市3d仮" unique_id=2142476614 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1802,6 +1802,7 @@ mesh = ExtResource("80_m6bti")
 script = ExtResource("4_ccj11")
 
 [node name="160,208,a_Chunk" parent="都市3d仮" unique_id=904900102 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1816,6 +1817,7 @@ mesh = ExtResource("81_2hrhu")
 script = ExtResource("4_ccj11")
 
 [node name="176,-32,a_Chunk" parent="都市3d仮" unique_id=1209413866 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1830,6 +1832,7 @@ mesh = ExtResource("82_cy3w8")
 script = ExtResource("4_ccj11")
 
 [node name="176,-48,a_Chunk" parent="都市3d仮" unique_id=1955993281 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1844,6 +1847,7 @@ mesh = ExtResource("83_trsdl")
 script = ExtResource("4_ccj11")
 
 [node name="176,-96,a_Chunk" parent="都市3d仮" unique_id=1930076453 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1858,6 +1862,7 @@ mesh = ExtResource("84_73ov8")
 script = ExtResource("4_ccj11")
 
 [node name="176,-176,a_Chunk" parent="都市3d仮" unique_id=1575259501 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1872,6 +1877,7 @@ mesh = ExtResource("85_bud4u")
 script = ExtResource("4_ccj11")
 
 [node name="176,-224,a_Chunk" parent="都市3d仮" unique_id=1717906270 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1886,6 +1892,7 @@ mesh = ExtResource("86_ogql3")
 script = ExtResource("4_ccj11")
 
 [node name="176,-304,a_Chunk" parent="都市3d仮" unique_id=681016539 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1900,6 +1907,7 @@ mesh = ExtResource("87_d4ff0")
 script = ExtResource("4_ccj11")
 
 [node name="176,-400,a_Chunk" parent="都市3d仮" unique_id=1098606311 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1914,6 +1922,7 @@ mesh = ExtResource("88_i5fvc")
 script = ExtResource("4_ccj11")
 
 [node name="176,-496,a_Chunk" parent="都市3d仮" unique_id=858813364 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1928,6 +1937,7 @@ mesh = ExtResource("89_qswdo")
 script = ExtResource("4_ccj11")
 
 [node name="176,-544,a_Chunk" parent="都市3d仮" unique_id=881427928 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1942,6 +1952,7 @@ mesh = ExtResource("90_8m2nx")
 script = ExtResource("4_ccj11")
 
 [node name="176,32,a_Chunk" parent="都市3d仮" unique_id=996229841 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1956,6 +1967,7 @@ mesh = ExtResource("91_pq3si")
 script = ExtResource("4_ccj11")
 
 [node name="176,96,a_Chunk" parent="都市3d仮" unique_id=755558108 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1970,6 +1982,7 @@ mesh = ExtResource("92_475x2")
 script = ExtResource("4_ccj11")
 
 [node name="176,816,a_Chunk" parent="都市3d仮" unique_id=1806465253 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1984,6 +1997,7 @@ mesh = ExtResource("93_5fpvf")
 script = ExtResource("4_ccj11")
 
 [node name="176,848,a_Chunk" parent="都市3d仮" unique_id=1811376551 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -1998,6 +2012,7 @@ mesh = ExtResource("94_qnflp")
 script = ExtResource("4_ccj11")
 
 [node name="176,896,a_Chunk" parent="都市3d仮" unique_id=450494991 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2012,6 +2027,7 @@ mesh = ExtResource("95_xv8sq")
 script = ExtResource("4_ccj11")
 
 [node name="192,976,a_Chunk" parent="都市3d仮" unique_id=2147384881 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2026,6 +2042,7 @@ mesh = ExtResource("96_vonql")
 script = ExtResource("4_ccj11")
 
 [node name="208,-192,a_Chunk" parent="都市3d仮" unique_id=2094406491 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2040,6 +2057,7 @@ mesh = ExtResource("97_fac6y")
 script = ExtResource("4_ccj11")
 
 [node name="208,-272,a_Chunk" parent="都市3d仮" unique_id=1763740721 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2054,6 +2072,7 @@ mesh = ExtResource("98_u515l")
 script = ExtResource("4_ccj11")
 
 [node name="208,96,a_Chunk" parent="都市3d仮" unique_id=202347896 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2068,6 +2087,7 @@ mesh = ExtResource("99_rgcuu")
 script = ExtResource("4_ccj11")
 
 [node name="208,128,a_Chunk" parent="都市3d仮" unique_id=1317752215 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2082,6 +2102,7 @@ mesh = ExtResource("100_dqcmv")
 script = ExtResource("4_ccj11")
 
 [node name="208,208,a_Chunk" parent="都市3d仮" unique_id=2090464451 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2096,6 +2117,7 @@ mesh = ExtResource("101_i7evw")
 script = ExtResource("4_ccj11")
 
 [node name="208,256,a_Chunk" parent="都市3d仮" unique_id=1460970762 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2110,6 +2132,7 @@ mesh = ExtResource("102_irhgf")
 script = ExtResource("4_ccj11")
 
 [node name="240,-304,a_Chunk" parent="都市3d仮" unique_id=782932575 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2124,6 +2147,7 @@ mesh = ExtResource("103_ocede")
 script = ExtResource("4_ccj11")
 
 [node name="240,-432,a_Chunk" parent="都市3d仮" unique_id=738640188 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2138,6 +2162,7 @@ mesh = ExtResource("104_snq0y")
 script = ExtResource("4_ccj11")
 
 [node name="240,-512,a_Chunk" parent="都市3d仮" unique_id=373986201 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2152,6 +2177,7 @@ mesh = ExtResource("105_ehdlk")
 script = ExtResource("4_ccj11")
 
 [node name="240,224,a_Chunk" parent="都市3d仮" unique_id=594112953 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2166,6 +2192,7 @@ mesh = ExtResource("106_mrf1b")
 script = ExtResource("4_ccj11")
 
 [node name="256,-32,a_Chunk" parent="都市3d仮" unique_id=1080783319 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2180,6 +2207,7 @@ mesh = ExtResource("107_jgltv")
 script = ExtResource("4_ccj11")
 
 [node name="256,-160,a_Chunk" parent="都市3d仮" unique_id=1124889705 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2194,6 +2222,7 @@ mesh = ExtResource("108_fexos")
 script = ExtResource("4_ccj11")
 
 [node name="256,-256,a_Chunk" parent="都市3d仮" unique_id=1868913244 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2208,6 +2237,7 @@ mesh = ExtResource("109_4y0c6")
 script = ExtResource("4_ccj11")
 
 [node name="256,688,a_Chunk" parent="都市3d仮" unique_id=983932355 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2222,6 +2252,7 @@ mesh = ExtResource("110_u54e6")
 script = ExtResource("4_ccj11")
 
 [node name="272,-32,a_Chunk" parent="都市3d仮" unique_id=1687363529 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2236,6 +2267,7 @@ mesh = ExtResource("111_72b5q")
 script = ExtResource("4_ccj11")
 
 [node name="272,192,a_Chunk" parent="都市3d仮" unique_id=609163735 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2250,6 +2282,7 @@ mesh = ExtResource("112_q7ypw")
 script = ExtResource("4_ccj11")
 
 [node name="304,208,a_Chunk" parent="都市3d仮" unique_id=153045177 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2264,6 +2297,7 @@ mesh = ExtResource("113_be20v")
 script = ExtResource("4_ccj11")
 
 [node name="320,48,a_Chunk" parent="都市3d仮" unique_id=1200955800 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2278,6 +2312,7 @@ mesh = ExtResource("114_b0amg")
 script = ExtResource("4_ccj11")
 
 [node name="320,96,a_Chunk" parent="都市3d仮" unique_id=335026937 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2292,6 +2327,7 @@ mesh = ExtResource("115_a5bcx")
 script = ExtResource("4_ccj11")
 
 [node name="320,144,a_Chunk" parent="都市3d仮" unique_id=1573851782 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2306,6 +2342,7 @@ mesh = ExtResource("116_4dyme")
 script = ExtResource("4_ccj11")
 
 [node name="320,192,a_Chunk" parent="都市3d仮" unique_id=2132793895 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2320,6 +2357,7 @@ mesh = ExtResource("117_4k1f5")
 script = ExtResource("4_ccj11")
 
 [node name="336,-192,a_Chunk" parent="都市3d仮" unique_id=1409415756 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2334,6 +2372,7 @@ mesh = ExtResource("118_b8u5y")
 script = ExtResource("4_ccj11")
 
 [node name="336,-256,a_Chunk" parent="都市3d仮" unique_id=885357350 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2348,6 +2387,7 @@ mesh = ExtResource("119_qgx4s")
 script = ExtResource("4_ccj11")
 
 [node name="336,-304,a_Chunk" parent="都市3d仮" unique_id=630249839 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2362,6 +2402,7 @@ mesh = ExtResource("120_mvgnj")
 script = ExtResource("4_ccj11")
 
 [node name="368,-32,a_Chunk" parent="都市3d仮" unique_id=1294717424 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2376,6 +2417,7 @@ mesh = ExtResource("121_6ak6d")
 script = ExtResource("4_ccj11")
 
 [node name="368,-96,a_Chunk" parent="都市3d仮" unique_id=386040233 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2390,6 +2432,7 @@ mesh = ExtResource("122_61k1b")
 script = ExtResource("4_ccj11")
 
 [node name="368,-128,a_Chunk" parent="都市3d仮" unique_id=725799432 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2404,6 +2447,7 @@ mesh = ExtResource("123_vbyfh")
 script = ExtResource("4_ccj11")
 
 [node name="368,32,a_Chunk" parent="都市3d仮" unique_id=965802567 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2418,6 +2462,7 @@ mesh = ExtResource("124_0mqsc")
 script = ExtResource("4_ccj11")
 
 [node name="384,128,a_Chunk" parent="都市3d仮" unique_id=850072308 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2432,6 +2477,7 @@ mesh = ExtResource("125_6ll8n")
 script = ExtResource("4_ccj11")
 
 [node name="384,192,a_Chunk" parent="都市3d仮" unique_id=1646675569 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2446,6 +2492,7 @@ mesh = ExtResource("126_r17jp")
 script = ExtResource("4_ccj11")
 
 [node name="400,96,a_Chunk" parent="都市3d仮" unique_id=1987733948 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2460,6 +2507,7 @@ mesh = ExtResource("127_3qw6a")
 script = ExtResource("4_ccj11")
 
 [node name="400,192,a_Chunk" parent="都市3d仮" unique_id=497710954 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2474,6 +2522,7 @@ mesh = ExtResource("128_uo644")
 script = ExtResource("4_ccj11")
 
 [node name="400,304,a_Chunk" parent="都市3d仮" unique_id=131399900 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2488,6 +2537,7 @@ mesh = ExtResource("129_oso6l")
 script = ExtResource("4_ccj11")
 
 [node name="432,-192,a_Chunk" parent="都市3d仮" unique_id=1659713171 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2502,6 +2552,7 @@ mesh = ExtResource("130_okx53")
 script = ExtResource("4_ccj11")
 
 [node name="448,-288,a_Chunk" parent="都市3d仮" unique_id=707119810 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2516,6 +2567,7 @@ mesh = ExtResource("131_hdb61")
 script = ExtResource("4_ccj11")
 
 [node name="448,-432,a_Chunk" parent="都市3d仮" unique_id=1434552717 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2530,6 +2582,7 @@ mesh = ExtResource("132_h4rsl")
 script = ExtResource("4_ccj11")
 
 [node name="464,-128,a_Chunk" parent="都市3d仮" unique_id=1089035088 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2544,6 +2597,7 @@ mesh = ExtResource("133_pamb8")
 script = ExtResource("4_ccj11")
 
 [node name="464,32,a_Chunk" parent="都市3d仮" unique_id=1391566181 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2558,6 +2612,7 @@ mesh = ExtResource("134_0ie8i")
 script = ExtResource("4_ccj11")
 
 [node name="480,-512,a_Chunk" parent="都市3d仮" unique_id=1361579704 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2572,6 +2627,7 @@ mesh = ExtResource("135_nm5yw")
 script = ExtResource("4_ccj11")
 
 [node name="480,96,a_Chunk" parent="都市3d仮" unique_id=1665109997 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2586,6 +2642,7 @@ mesh = ExtResource("136_t2sxt")
 script = ExtResource("4_ccj11")
 
 [node name="496,-48,a_Chunk" parent="都市3d仮" unique_id=1612987686 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2600,6 +2657,7 @@ mesh = ExtResource("137_ot6du")
 script = ExtResource("4_ccj11")
 
 [node name="528,-192,a_Chunk" parent="都市3d仮" unique_id=790752847 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2614,6 +2672,7 @@ mesh = ExtResource("138_dcrmj")
 script = ExtResource("4_ccj11")
 
 [node name="528,-560,a_Chunk" parent="都市3d仮" unique_id=1928979506 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2628,6 +2687,7 @@ mesh = ExtResource("139_qkwf6")
 script = ExtResource("4_ccj11")
 
 [node name="544,-16,a_Chunk" parent="都市3d仮" unique_id=1130094189 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2642,6 +2702,7 @@ mesh = ExtResource("140_232xb")
 script = ExtResource("4_ccj11")
 
 [node name="544,-48,a_Chunk" parent="都市3d仮" unique_id=177799631 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2656,6 +2717,7 @@ mesh = ExtResource("141_oko6p")
 script = ExtResource("4_ccj11")
 
 [node name="544,-96,a_Chunk" parent="都市3d仮" unique_id=1662934482 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2670,6 +2732,7 @@ mesh = ExtResource("142_kv0tr")
 script = ExtResource("4_ccj11")
 
 [node name="544,32,a_Chunk" parent="都市3d仮" unique_id=278346992 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2684,6 +2747,7 @@ mesh = ExtResource("143_oa3ww")
 script = ExtResource("4_ccj11")
 
 [node name="560,96,a_Chunk" parent="都市3d仮" unique_id=1876711707 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2698,6 +2762,7 @@ mesh = ExtResource("144_kqxut")
 script = ExtResource("4_ccj11")
 
 [node name="576,320,a_Chunk" parent="都市3d仮" unique_id=1283958543 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2712,6 +2777,7 @@ mesh = ExtResource("145_i1fvb")
 script = ExtResource("4_ccj11")
 
 [node name="592,-288,a_Chunk" parent="都市3d仮" unique_id=939606799 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2726,6 +2792,7 @@ mesh = ExtResource("146_npnd8")
 script = ExtResource("4_ccj11")
 
 [node name="592,128,a_Chunk" parent="都市3d仮" unique_id=511558232 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2740,6 +2807,7 @@ mesh = ExtResource("147_o4yfc")
 script = ExtResource("4_ccj11")
 
 [node name="592,288,a_Chunk" parent="都市3d仮" unique_id=962789133 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2754,6 +2822,7 @@ mesh = ExtResource("148_yu5nv")
 script = ExtResource("4_ccj11")
 
 [node name="608,-160,a_Chunk" parent="都市3d仮" unique_id=1055666144 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2768,6 +2837,7 @@ mesh = ExtResource("149_dr0vr")
 script = ExtResource("4_ccj11")
 
 [node name="608,32,a_Chunk" parent="都市3d仮" unique_id=713386877 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2782,6 +2852,7 @@ mesh = ExtResource("150_p1gxy")
 script = ExtResource("4_ccj11")
 
 [node name="640,96,a_Chunk" parent="都市3d仮" unique_id=233347997 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2796,6 +2867,7 @@ mesh = ExtResource("151_rm330")
 script = ExtResource("4_ccj11")
 
 [node name="640,256,a_Chunk" parent="都市3d仮" unique_id=1152777258 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2810,6 +2882,7 @@ mesh = ExtResource("152_uxm2j")
 script = ExtResource("4_ccj11")
 
 [node name="656,-192,a_Chunk" parent="都市3d仮" unique_id=1953066771 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2824,6 +2897,7 @@ mesh = ExtResource("153_8k0y7")
 script = ExtResource("4_ccj11")
 
 [node name="672,-512,a_Chunk" parent="都市3d仮" unique_id=801141828 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2838,6 +2912,7 @@ mesh = ExtResource("154_l2hdh")
 script = ExtResource("4_ccj11")
 
 [node name="704,-48,a_Chunk" parent="都市3d仮" unique_id=656553463 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2852,6 +2927,7 @@ mesh = ExtResource("155_falve")
 script = ExtResource("4_ccj11")
 
 [node name="704,-400,a_Chunk" parent="都市3d仮" unique_id=1370457436 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2866,6 +2942,7 @@ mesh = ExtResource("156_fqs3m")
 script = ExtResource("4_ccj11")
 
 [node name="704,-480,a_Chunk" parent="都市3d仮" unique_id=2019164707 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2880,6 +2957,7 @@ mesh = ExtResource("157_btfrn")
 script = ExtResource("4_ccj11")
 
 [node name="704,224,a_Chunk" parent="都市3d仮" unique_id=1045518279 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2894,6 +2972,7 @@ mesh = ExtResource("158_mylof")
 script = ExtResource("4_ccj11")
 
 [node name="704,288,a_Chunk" parent="都市3d仮" unique_id=8213351 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2908,6 +2987,7 @@ mesh = ExtResource("159_a3crp")
 script = ExtResource("4_ccj11")
 
 [node name="784,32,a_Chunk" parent="都市3d仮" unique_id=2119887711 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2922,6 +3002,7 @@ mesh = ExtResource("160_nht0l")
 script = ExtResource("4_ccj11")
 
 [node name="800,-48,a_Chunk" parent="都市3d仮" unique_id=1057781896 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2936,6 +3017,7 @@ mesh = ExtResource("161_6ha4k")
 script = ExtResource("4_ccj11")
 
 [node name="800,96,a_Chunk" parent="都市3d仮" unique_id=1398945140 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2950,6 +3032,7 @@ mesh = ExtResource("162_7ntav")
 script = ExtResource("4_ccj11")
 
 [node name="800,192,a_Chunk" parent="都市3d仮" unique_id=530832882 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2966,6 +3049,7 @@ mesh = ExtResource("163_bj6pm")
 script = ExtResource("4_ccj11")
 
 [node name="800,288,a_Chunk" parent="都市3d仮" unique_id=103836537 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -2980,6 +3064,7 @@ mesh = ExtResource("164_4hu7t")
 script = ExtResource("4_ccj11")
 
 [node name="832,-192,a_Chunk" parent="都市3d仮" unique_id=1304470846 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2994,6 +3079,7 @@ mesh = ExtResource("165_gb0hf")
 script = ExtResource("4_ccj11")
 
 [node name="832,-288,a_Chunk" parent="都市3d仮" unique_id=1964147792 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3008,6 +3094,7 @@ mesh = ExtResource("166_vv47l")
 script = ExtResource("4_ccj11")
 
 [node name="832,-560,a_Chunk" parent="都市3d仮" unique_id=1545319612 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3022,6 +3109,7 @@ mesh = ExtResource("167_n1mwd")
 script = ExtResource("4_ccj11")
 
 [node name="864,-48,a_Chunk" parent="都市3d仮" unique_id=250793527 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3036,6 +3124,7 @@ mesh = ExtResource("168_usqxw")
 script = ExtResource("4_ccj11")
 
 [node name="880,-480,a_Chunk" parent="都市3d仮" unique_id=284377422 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3051,6 +3140,7 @@ mesh = ExtResource("169_5r44h")
 script = ExtResource("4_ccj11")
 
 [node name="880,-512,a_Chunk" parent="都市3d仮" unique_id=424857107 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3066,6 +3156,7 @@ mesh = ExtResource("170_43ww6")
 script = ExtResource("4_ccj11")
 
 [node name="896,-560,a_Chunk" parent="都市3d仮" unique_id=1885166449 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3080,6 +3171,7 @@ mesh = ExtResource("171_ooglx")
 script = ExtResource("4_ccj11")
 
 [node name="928,-192,a_Chunk" parent="都市3d仮" unique_id=349703603 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3094,6 +3186,7 @@ mesh = ExtResource("172_7b2gh")
 script = ExtResource("4_ccj11")
 
 [node name="928,32,a_Chunk" parent="都市3d仮" unique_id=681793341 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -3108,6 +3201,7 @@ mesh = ExtResource("173_hhbor")
 script = ExtResource("4_ccj11")
 
 [node name="928,80,a_Chunk" parent="都市3d仮" unique_id=77606273 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3122,6 +3216,7 @@ mesh = ExtResource("174_ra81r")
 script = ExtResource("4_ccj11")
 
 [node name="928,144,a_Chunk" parent="都市3d仮" unique_id=1880065792 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3136,6 +3231,7 @@ mesh = ExtResource("175_315ie")
 script = ExtResource("4_ccj11")
 
 [node name="944,112,a_Chunk" parent="都市3d仮" unique_id=1952880926 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3150,6 +3246,7 @@ mesh = ExtResource("176_83b4g")
 script = ExtResource("4_ccj11")
 
 [node name="960,-48,a_Chunk" parent="都市3d仮" unique_id=1001558936 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3164,6 +3261,7 @@ mesh = ExtResource("177_8yekp")
 script = ExtResource("4_ccj11")
 
 [node name="960,-416,a_Chunk" parent="都市3d仮" unique_id=464922337 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3178,6 +3276,7 @@ mesh = ExtResource("178_xuj0p")
 script = ExtResource("4_ccj11")
 
 [node name="976,192,a_Chunk" parent="都市3d仮" unique_id=988675966 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3192,6 +3291,7 @@ mesh = ExtResource("179_kvv18")
 script = ExtResource("4_ccj11")
 
 [node name="976,288,a_Chunk" parent="都市3d仮" unique_id=437377115 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3206,6 +3306,7 @@ mesh = ExtResource("180_q8y7s")
 script = ExtResource("4_ccj11")
 
 [node name="976,432,a_Chunk" parent="都市3d仮" unique_id=600084602 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3220,6 +3321,7 @@ mesh = ExtResource("181_htprv")
 script = ExtResource("4_ccj11")
 
 [node name="992,-688,a_Chunk" parent="都市3d仮" unique_id=2059097926 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3234,6 +3336,7 @@ mesh = ExtResource("182_kllfr")
 script = ExtResource("4_ccj11")
 
 [node name="1008,112,a_Chunk" parent="都市3d仮" unique_id=1386532517 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3248,6 +3351,7 @@ mesh = ExtResource("183_gh36u")
 script = ExtResource("4_ccj11")
 
 [node name="1008,432,a_Chunk" parent="都市3d仮" unique_id=740663743 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3262,6 +3366,7 @@ mesh = ExtResource("184_0d3bv")
 script = ExtResource("4_ccj11")
 
 [node name="1040,-16,a_Chunk" parent="都市3d仮" unique_id=830444021 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3276,6 +3381,7 @@ mesh = ExtResource("185_6a886")
 script = ExtResource("4_ccj11")
 
 [node name="1040,-48,a_Chunk" parent="都市3d仮" unique_id=380862707 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3290,6 +3396,7 @@ mesh = ExtResource("186_siidb")
 script = ExtResource("4_ccj11")
 
 [node name="1040,-272,a_Chunk" parent="都市3d仮" unique_id=124274402 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3304,6 +3411,7 @@ mesh = ExtResource("187_05vlm")
 script = ExtResource("4_ccj11")
 
 [node name="1040,-416,a_Chunk" parent="都市3d仮" unique_id=997345143 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3318,6 +3426,7 @@ mesh = ExtResource("188_26tb3")
 script = ExtResource("4_ccj11")
 
 [node name="1040,80,a_Chunk" parent="都市3d仮" unique_id=954522817 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3332,6 +3441,7 @@ mesh = ExtResource("189_gem8x")
 script = ExtResource("4_ccj11")
 
 [node name="1040,368,a_Chunk" parent="都市3d仮" unique_id=1795285846 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3346,6 +3456,7 @@ mesh = ExtResource("190_m3xfb")
 script = ExtResource("4_ccj11")
 
 [node name="1056,-192,a_Chunk" parent="都市3d仮" unique_id=1021261025 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3360,6 +3471,7 @@ mesh = ExtResource("191_ftfwh")
 script = ExtResource("4_ccj11")
 
 [node name="1056,112,a_Chunk" parent="都市3d仮" unique_id=1726412428 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3374,6 +3486,7 @@ mesh = ExtResource("192_dg1vo")
 script = ExtResource("4_ccj11")
 
 [node name="1056,176,a_Chunk" parent="都市3d仮" unique_id=865938072 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3388,6 +3501,7 @@ mesh = ExtResource("193_5jjy5")
 script = ExtResource("4_ccj11")
 
 [node name="1056,272,a_Chunk" parent="都市3d仮" unique_id=1402189805 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3402,6 +3516,7 @@ mesh = ExtResource("194_6q60e")
 script = ExtResource("4_ccj11")
 
 [node name="1120,-224,a_Chunk" parent="都市3d仮" unique_id=802340306 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3416,6 +3531,7 @@ mesh = ExtResource("195_b24w8")
 script = ExtResource("4_ccj11")
 
 [node name="1120,-352,a_Chunk" parent="都市3d仮" unique_id=14649980 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3430,6 +3546,7 @@ mesh = ExtResource("196_yiqhb")
 script = ExtResource("4_ccj11")
 
 [node name="1168,160,a_Chunk" parent="都市3d仮" unique_id=1432625169 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -3444,6 +3561,7 @@ mesh = ExtResource("197_nr5oy")
 script = ExtResource("4_ccj11")
 
 [node name="1200,-16,a_Chunk" parent="都市3d仮" unique_id=943813452 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -3458,6 +3576,7 @@ mesh = ExtResource("198_kgu3y")
 script = ExtResource("4_ccj11")
 
 [node name="1296,272,a_Chunk" parent="都市3d仮" unique_id=1870775997 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -3472,6 +3591,7 @@ mesh = ExtResource("199_475yy")
 script = ExtResource("4_ccj11")
 
 [node name="1344,-80,a_Chunk" parent="都市3d仮" unique_id=88756057 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3486,6 +3606,7 @@ mesh = ExtResource("200_cftbm")
 script = ExtResource("4_ccj11")
 
 [node name="1392,-16,a_Chunk" parent="都市3d仮" unique_id=104658669 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3500,6 +3621,7 @@ mesh = ExtResource("201_15wyu")
 script = ExtResource("4_ccj11")
 
 [node name="1136,288,a_Chunk" parent="都市3d仮" unique_id=965589796 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3514,6 +3636,7 @@ mesh = ExtResource("202_b7xut")
 script = ExtResource("4_ccj11")
 
 [node name="256,880,a_Chunk" parent="都市3d仮" unique_id=1811579146 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3528,6 +3651,7 @@ mesh = ExtResource("203_6v21d")
 script = ExtResource("4_ccj11")
 
 [node name="320,896,a_Chunk" parent="都市3d仮" unique_id=1781525833 instance=ExtResource("2_1a2ec")]
+visible = false
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -3541,16 +3665,16 @@ transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0
 mesh = ExtResource("204_mus2s")
 script = ExtResource("4_ccj11")
 
-[node name="256,896_Chunk" parent="都市3d仮" unique_id=635064329 instance=ExtResource("2_1a2ec")]
+[node name="256,896,a_Chunk" parent="都市3d仮" unique_id=635064329 instance=ExtResource("2_1a2ec")]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="Area3D" parent="都市3d仮/256,896_Chunk" index="0" unique_id=250931451]
+[node name="Area3D" parent="都市3d仮/256,896,a_Chunk" index="0" unique_id=250931451]
 transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 155.2672, 0, 599.11456)
 
-[node name="256,896" type="NavigationRegion3D" parent="都市3d仮/256,896_Chunk" unique_id=819347841]
+[node name="256,896,a" type="NavigationRegion3D" parent="都市3d仮/256,896,a_Chunk" unique_id=819347841]
 
-[node name="256,896" type="MeshInstance3D" parent="都市3d仮/256,896_Chunk/256,896" unique_id=1195505398]
+[node name="256,896,a" type="MeshInstance3D" parent="都市3d仮/256,896,a_Chunk/256,896,a" unique_id=1195505398]
 transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
 mesh = ExtResource("205_3bsgd")
 script = ExtResource("4_ccj11")
@@ -3565,36 +3689,39 @@ shape = SubResource("WorldBoundaryShape3D_r3fl7")
 [node name="レベル" type="Node3D" parent="." unique_id=14615443]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35.094, 0)
 
-[node name="プレイヤー" parent="." unique_id=1396265163 instance=ExtResource("207_ccj11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 720.6125, 14.818058, -483.1048)
+[node name="プレイヤー" parent="." unique_id=1396265163 node_paths=PackedStringArray("レベル制御", "メッセージボックス") instance=ExtResource("207_ccj11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.905624, 14.818058, 204.21402)
+"レベル制御" = NodePath("..")
+"メッセージボックス" = NodePath("../Control/メッセージボックス")
+metadata/_edit_group_ = true
 
 [node name="GeneralSkeleton" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1396265163, 652042102, 231553116) index="0" unique_id=1885119474]
-bones/11/position = Vector3(5.191471e-10, 1.158067e-07, 7.498678e-11)
-bones/11/rotation = Quaternion(-0.033211995, -0.022574648, -0.0837802, 0.9956748)
-bones/12/rotation = Quaternion(0.00047609356, -0.0050065406, 0.022295242, 0.9997389)
-bones/13/rotation = Quaternion(-0.0745291, -0.009492528, 0.0066620526, 0.9971515)
-bones/41/rotation = Quaternion(0.00065042544, -0.006110693, 0.02209205, 0.99973714)
-bones/42/rotation = Quaternion(0.5301831, -0.45602664, -0.5668858, -0.43541494)
-bones/43/rotation = Quaternion(0.034839388, 0.84462404, -0.5267252, 0.0892025)
-bones/44/rotation = Quaternion(0.16802403, 0.6868537, -0.16802359, 0.6868537)
-bones/45/rotation = Quaternion(0.012929879, -0.8011292, -0.005004388, 0.5983309)
-bones/46/rotation = Quaternion(0.5142583, 0.47156686, 0.56927186, -0.4348479)
-bones/47/rotation = Quaternion(-0.09988031, 0.76490283, -0.63635397, -0.0011050906)
-bones/48/rotation = Quaternion(0.12915495, -0.69521147, 0.12915501, 0.6952116)
-bones/49/rotation = Quaternion(0.058434013, 0.79309976, 0.03135247, 0.6054711)
-bones/51/rotation = Quaternion(-0.07028015, 0.024013666, 0.99343336, -0.08703091)
-bones/52/rotation = Quaternion(-0.00047193904, 0.98768234, -0.14703584, -0.053514566)
-bones/53/rotation = Quaternion(0.05902477, 0.12819105, 0.9845456, -0.103697725)
-bones/54/rotation = Quaternion(-0.013400697, 0.95124006, -0.30135435, 0.064407706)
+bones/11/position = Vector3(2.3123825e-10, 1.1575006e-07, -1.5851678e-09)
+bones/11/rotation = Quaternion(-0.03630689, -0.013480804, -0.08363981, 0.9957433)
+bones/12/rotation = Quaternion(0.007510559, -0.0044837547, 0.022769287, 0.9997026)
+bones/13/rotation = Quaternion(-0.08619462, -0.016280906, 0.0043484326, 0.99613583)
+bones/41/rotation = Quaternion(0.0077943066, -0.005798753, 0.022313574, 0.9997039)
+bones/42/rotation = Quaternion(0.52517223, -0.4634107, -0.56065655, -0.44171128)
+bones/43/rotation = Quaternion(-0.003276159, 0.8495396, -0.519601, 0.09103063)
+bones/44/rotation = Quaternion(0.17071642, 0.6861894, -0.17071624, 0.6861894)
+bones/45/rotation = Quaternion(0.02117683, -0.81094706, 0.008655575, 0.5846723)
+bones/46/rotation = Quaternion(0.5153477, 0.4688898, 0.57455444, -0.42947224)
+bones/47/rotation = Quaternion(-0.081133895, 0.7767807, -0.62452036, -0.0018651569)
+bones/48/rotation = Quaternion(0.1341788, -0.6942593, 0.1341786, 0.6942595)
+bones/49/rotation = Quaternion(0.06300722, 0.78798336, 0.031693947, 0.6116436)
+bones/51/rotation = Quaternion(-0.06192588, 0.031492174, 0.9940971, -0.08333283)
+bones/52/rotation = Quaternion(-0.013009305, 0.9862174, -0.15143572, -0.065371975)
+bones/53/rotation = Quaternion(0.04599875, 0.13472772, 0.9830386, -0.11561911)
+bones/54/rotation = Quaternion(0.02154041, 0.9512294, -0.30489358, 0.04169717)
 
 [node name="R_Pupils_001" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(-0.11842328, -0.050162278, -0.99169546, -0.97006875, 0.21907109, 0.1047596, 0.2119968, 0.9744186, -0.07460397, 0.049034167, 1.0067731, 0.13270158)
+transform = Transform3D(-0.11994797, -0.043298658, -0.9918354, -0.9663522, 0.2340717, 0.10664774, 0.2275429, 0.97125477, -0.069918185, 0.049955755, 1.0097615, 0.12848736)
 
 [node name="L_Pupils_001" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(-0.11842328, -0.050162278, -0.99169546, -0.97006875, 0.21907109, 0.1047596, 0.2119968, 0.9744186, -0.07460397, 0.23051444, 0.9876021, 0.14635408)
+transform = Transform3D(-0.11994797, -0.043298658, -0.9918354, -0.9663522, 0.2340717, 0.10664774, 0.2275429, 0.97125477, -0.069918185, 0.23146163, 0.9902449, 0.14128236)
 
 [node name="head" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.99169546, 0.11842328, -0.050162278, -0.1047596, 0.97006875, 0.21907109, 0.07460397, -0.2119968, 0.9744186, 0.10707766, 0.72246766, -0.046178993)
+transform = Transform3D(0.9918354, 0.11994797, -0.043298658, -0.10664774, 0.9663522, 0.2340717, 0.069918185, -0.2275429, 0.97125477, 0.106013566, 0.7225822, -0.046391085)
 
 [node name="_設定" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
 surface_material_override/0 = SubResource("StandardMaterial3D_d3wty")
@@ -3670,32 +3797,32 @@ SPEED = 5.5
 "スキン" = ExtResource("216_yn86y")
 
 [node name="GeneralSkeleton" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1008160958, 652042102, 231553116) index="0" unique_id=1885119474]
-bones/11/position = Vector3(5.191471e-10, 1.158067e-07, 7.498678e-11)
-bones/11/rotation = Quaternion(-0.033211995, -0.022574648, -0.0837802, 0.9956748)
-bones/12/rotation = Quaternion(0.00047609356, -0.0050065406, 0.022295242, 0.9997389)
-bones/13/rotation = Quaternion(-0.0745291, -0.009492528, 0.0066620526, 0.9971515)
-bones/41/rotation = Quaternion(0.00065042544, -0.006110693, 0.02209205, 0.99973714)
-bones/42/rotation = Quaternion(0.5301831, -0.45602664, -0.5668858, -0.43541494)
-bones/43/rotation = Quaternion(0.034839388, 0.84462404, -0.5267252, 0.0892025)
-bones/44/rotation = Quaternion(0.16802403, 0.6868537, -0.16802359, 0.6868537)
-bones/45/rotation = Quaternion(0.012929879, -0.8011292, -0.005004388, 0.5983309)
-bones/46/rotation = Quaternion(0.5142583, 0.47156686, 0.56927186, -0.4348479)
-bones/47/rotation = Quaternion(-0.09988031, 0.76490283, -0.63635397, -0.0011050906)
-bones/48/rotation = Quaternion(0.12915495, -0.69521147, 0.12915501, 0.6952116)
-bones/49/rotation = Quaternion(0.058434013, 0.79309976, 0.03135247, 0.6054711)
-bones/51/rotation = Quaternion(-0.07028015, 0.024013666, 0.99343336, -0.08703091)
-bones/52/rotation = Quaternion(-0.00047193904, 0.98768234, -0.14703584, -0.053514566)
-bones/53/rotation = Quaternion(0.05902477, 0.12819105, 0.9845456, -0.103697725)
-bones/54/rotation = Quaternion(-0.013400697, 0.95124006, -0.30135435, 0.064407706)
+bones/11/position = Vector3(2.3123825e-10, 1.1575006e-07, -1.5851678e-09)
+bones/11/rotation = Quaternion(-0.03630689, -0.013480804, -0.08363981, 0.9957433)
+bones/12/rotation = Quaternion(0.007510559, -0.0044837547, 0.022769287, 0.9997026)
+bones/13/rotation = Quaternion(-0.08619462, -0.016280906, 0.0043484326, 0.99613583)
+bones/41/rotation = Quaternion(0.0077943066, -0.005798753, 0.022313574, 0.9997039)
+bones/42/rotation = Quaternion(0.52517223, -0.4634107, -0.56065655, -0.44171128)
+bones/43/rotation = Quaternion(-0.003276159, 0.8495396, -0.519601, 0.09103063)
+bones/44/rotation = Quaternion(0.17071642, 0.6861894, -0.17071624, 0.6861894)
+bones/45/rotation = Quaternion(0.02117683, -0.81094706, 0.008655575, 0.5846723)
+bones/46/rotation = Quaternion(0.5153477, 0.4688898, 0.57455444, -0.42947224)
+bones/47/rotation = Quaternion(-0.081133895, 0.7767807, -0.62452036, -0.0018651569)
+bones/48/rotation = Quaternion(0.1341788, -0.6942593, 0.1341786, 0.6942595)
+bones/49/rotation = Quaternion(0.06300722, 0.78798336, 0.031693947, 0.6116436)
+bones/51/rotation = Quaternion(-0.06192588, 0.031492174, 0.9940971, -0.08333283)
+bones/52/rotation = Quaternion(-0.013009305, 0.9862174, -0.15143572, -0.065371975)
+bones/53/rotation = Quaternion(0.04599875, 0.13472772, 0.9830386, -0.11561911)
+bones/54/rotation = Quaternion(0.02154041, 0.9512294, -0.30489358, 0.04169717)
 
 [node name="R_Pupils_001" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(-0.11842328, -0.050162278, -0.99169546, -0.97006875, 0.21907109, 0.1047596, 0.2119968, 0.9744186, -0.07460397, 0.049034167, 1.0067731, 0.13270158)
+transform = Transform3D(-0.11994797, -0.043298658, -0.9918354, -0.9663522, 0.2340717, 0.10664774, 0.2275429, 0.97125477, -0.069918185, 0.049955755, 1.0097615, 0.12848736)
 
 [node name="L_Pupils_001" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(-0.11842328, -0.050162278, -0.99169546, -0.97006875, 0.21907109, 0.1047596, 0.2119968, 0.9744186, -0.07460397, 0.23051444, 0.9876021, 0.14635408)
+transform = Transform3D(-0.11994797, -0.043298658, -0.9918354, -0.9663522, 0.2340717, 0.10664774, 0.2275429, 0.97125477, -0.069918185, 0.23146163, 0.9902449, 0.14128236)
 
 [node name="head" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.99169546, 0.11842328, -0.050162278, -0.1047596, 0.97006875, 0.21907109, 0.07460397, -0.2119968, 0.9744186, 0.10707766, 0.72246766, -0.046178993)
+transform = Transform3D(0.9918354, 0.11994797, -0.043298658, -0.10664774, 0.9663522, 0.2340717, 0.069918185, -0.2275429, 0.97125477, 0.106013566, 0.7225822, -0.046391085)
 
 [node name="_設定" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
 surface_material_override/0 = SubResource("StandardMaterial3D_c68h2")
@@ -3824,7 +3951,7 @@ script = ExtResource("218_ym7tp")
 [editable path="都市3d仮/-16,-384,a_Chunk"]
 [editable path="都市3d仮/-16,32,a_Chunk"]
 [editable path="都市3d仮/-16,80,a_Chunk"]
-[editable path="都市3d仮/-16,128_a_Chunk"]
+[editable path="都市3d仮/-16,128,a_Chunk"]
 [editable path="都市3d仮/-16,384,a_Chunk"]
 [editable path="都市3d仮/-32,-48,a_Chunk"]
 [editable path="都市3d仮/-32,-160,a_Chunk"]
@@ -4017,7 +4144,7 @@ script = ExtResource("218_ym7tp")
 [editable path="都市3d仮/1136,288,a_Chunk"]
 [editable path="都市3d仮/256,880,a_Chunk"]
 [editable path="都市3d仮/320,896,a_Chunk"]
-[editable path="都市3d仮/256,896_Chunk"]
+[editable path="都市3d仮/256,896,a_Chunk"]
 [editable path="プレイヤー"]
 [editable path="プレイヤー/原点/モデル"]
 [editable path="NPC制御/エンティティ2"]

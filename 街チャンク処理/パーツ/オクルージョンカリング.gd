@@ -7,7 +7,8 @@ extends OccluderInstance3D
 # Called when the node enters the scene tree for the first time.
 
 
-
+func _ready() -> void:
+	show()
 
 func 設定準備()->void:
 	var ルート:MeshInstance3D
