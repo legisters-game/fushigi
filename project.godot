@@ -13,6 +13,7 @@ config_version=5
 config/name="不思議な未開の地から"
 run/main_scene="res://node_3d.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
+run/low_processor_mode=true
 config/icon="res://icon.svg"
 
 [autoload]
@@ -118,3 +119,4 @@ common/physics_ticks_per_second=738
 
 rendering_device/driver.windows="d3d12"
 occlusion_culling/use_occlusion_culling=true
+mesh_lod/lod_change/threshold_pixels=1024.0
