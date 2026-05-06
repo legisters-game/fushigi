@@ -17,12 +17,20 @@ var 重力無効:bool
 
 var 体力:int
 var 防御力:float
+
+
+var 簡易目的地: Vector3 = Vector3.ZERO
+var 簡易移動中: bool = false
+var 簡易到着許容距離: float = 0.5
+var 簡易中強制歩き:bool
+
 #var input_dir: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	
 	体力=最大体力
 	カメラ基準=get_node("カメラ基準点")
+	#簡易目的地へ移動(Vector3(100,20,200))
 
 var move_direction: Vector3 = Vector3.ZERO
 
@@ -37,9 +45,23 @@ func apply_movement(delta:float):
 	# 重力処理（簡略化）
 	if not is_on_floor() :
 		velocity.y -= 9.8 * delta
+		
+	if 簡易移動中:
+		# 水平方向の距離を計算（高さYを無視する場合）
+		var current_pos = global_transform.origin
+		var target_pos = 簡易目的地
+		target_pos.y = current_pos.y # 高さは無視して平面で距離判定
+		
+		if current_pos.distance_to(target_pos) > 簡易到着許容距離:
+			# 目的地への方向ベクトルを計算
+			move_direction = (target_pos - current_pos).normalized()
+		else:
+			# 到着した場合
+			簡易移動停止()
 	
 	# move_direction（絶対座標系）に基づいて速度を設定
-	var target_vel = move_direction * SPEED*delta*700
+	if 簡易中強制歩き:move_direction = move_direction/2.0
+	var target_vel = move_direction * SPEED#*delta*30#*70
 	velocity.x = target_vel.x
 	velocity.z = target_vel.z
 	if 重力無効:
@@ -113,3 +135,14 @@ func ダメージ(ダメージ数:int)->void:
 
 func 死亡()->void:
 	queue_free()
+
+
+func 簡易目的地へ移動(目標地点: Vector3,歩き:bool=false) -> void:
+	簡易中強制歩き=歩き
+	簡易目的地 = 目標地点
+	簡易移動中 = true
+	
+func 簡易移動停止() -> void:
+	簡易移動中 = false
+	簡易中強制歩き=false
+	move_direction = Vector3.ZERO

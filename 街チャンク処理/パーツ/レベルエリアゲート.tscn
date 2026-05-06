@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dmgy0ytqbirrn"]
+
+[ext_resource type="Script" uid="uid://bcr5kg7vy06g6" path="res://街チャンク処理/パーツ/レベルエリアゲート.gd" id="1_n4gbv"]
+
+[node name="レベルゲート" type="Area3D" unique_id=1487963978]
+script = ExtResource("1_n4gbv")
+"移動時間" = 0.1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

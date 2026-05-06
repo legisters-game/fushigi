@@ -67,8 +67,9 @@ func チェック開始()->void:
 				break
 			
 			else:
-				printerr("オクルージョンカリングが無い")
-				エラー=true
+				if not メタ情報 & 平面で障害物無し:
+					printerr("オクルージョンカリングが無い")
+					エラー=true
 	if not メタ情報 & 透明壁無し:
 		for i:Node in get_children():
 			var ヒット:Node=has_type_recursive(i,透明壁コリジョン)

@@ -9,6 +9,7 @@ var 保持:Node3D
 var 出現済み:bool
 var 解放された:bool=true
 var 保存パス:String
+var 内部保存パス:String
 
 var ロード中パス: String = ""
 var ロード中: bool = false
@@ -16,6 +17,11 @@ var ロード中: bool = false
 var ナビ生成済み:NavigationMesh
 
 func _ready() -> void:
+	内部保存パス = "res://街チャンク処理/街シーン/"+name.replace("_Chunk", "")+".tscn"
+	if ResourceLoader.exists(内部保存パス,"PackedScene"):
+		for i in get_children():
+			if i is NavigationRegion3D:
+				i.queue_free()
 	if Engine.is_editor_hint():
 		return
 		for i in get_children():
@@ -117,6 +123,15 @@ func 真処理有無制御(有無:bool)->void:
 			
 			
 			
+		if ResourceLoader.exists(内部保存パス,"PackedScene"):
+			var err = ResourceLoader.load_threaded_request(内部保存パス)
+			if err == OK:
+				ロード中パス = 内部保存パス
+				ロード中 = true
+				print("内部から")
+				return
+			
+
 			
 		var err = ResourceLoader.load_threaded_request(full_path)
 		if err == OK:

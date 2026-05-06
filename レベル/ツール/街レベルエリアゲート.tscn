@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dugv7335puobc"]
+
+[ext_resource type="Script" uid="uid://bppub8nqf5mwg" path="res://レベル/ツール/街レベルエリアゲート.gd" id="1_8ohbc"]
+
+[node name="街レベルエリアゲート" type="Area3D" unique_id=904484294]
+script = ExtResource("1_8ohbc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

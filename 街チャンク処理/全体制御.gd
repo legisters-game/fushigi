@@ -9,11 +9,13 @@ func _ready() -> void:
 
 func レベル移動(レベル:String, 番号:int=0)->void:
 	#シーンの演出
+	get_node("プレイヤー").レベル移動中=true
 	get_node("プレイヤー").移動操作ロック=true
 	get_node("プレイヤー").move_direction=Vector3.ZERO
 	get_node("Control/画面フェード").フェードアウト()
-	await get_tree().create_timer(1).timeout
 	都市プレイヤー座標=get_node("プレイヤー").global_position
+	await get_tree().create_timer(1).timeout
+	get_node("プレイヤー").簡易移動停止()
 	var レベルシーン:PackedScene=load(レベル)
 	var レベルルート:レベル基礎クラス=レベルシーン.instantiate()
 	for i in get_node("レベル").get_children():
@@ -26,16 +28,19 @@ func レベル移動(レベル:String, 番号:int=0)->void:
 	get_node("Control/画面フェード").フェードイン()
 	await get_tree().create_timer(2).timeout
 	get_node("プレイヤー").移動操作ロック=false
+	get_node("プレイヤー").レベル移動中=false
 	
 func 単純ワープ(ワープ先マーカー:Marker3D)->void:
 	get_node("プレイヤー").global_position=ワープ先マーカー.global_position
-
+	get_node("プレイヤー").簡易移動停止()
 
 func 都市戻り(プレイヤー座標マーカー:Marker3D=null)->void:
+	get_node("プレイヤー").レベル移動中=true
 	get_node("プレイヤー").移動操作ロック=true
 	get_node("プレイヤー").move_direction=Vector3.ZERO
 	get_node("Control/画面フェード").フェードアウト()
 	await get_tree().create_timer(1).timeout
+	get_node("プレイヤー").簡易移動停止()
 	if プレイヤー座標マーカー:
 		都市プレイヤー座標=プレイヤー座標マーカー.global_position
 	for i in get_node("レベル").get_children():
@@ -46,5 +51,6 @@ func 都市戻り(プレイヤー座標マーカー:Marker3D=null)->void:
 	get_node("Control/画面フェード").フェードイン()
 	await get_tree().create_timer(2).timeout
 	get_node("プレイヤー").移動操作ロック=false
+	get_node("プレイヤー").レベル移動中=false
 	
 	

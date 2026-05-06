@@ -6,6 +6,17 @@ class_name プレイヤークラス
 @export var メッセージボックス:メッセージボックスクラス
 
 var 移動操作ロック:bool
+var 操作ロック前位置:Vector3
+#レベル制御で制御
+var レベル移動中:bool
+func _ready() -> void:
+	super()
+	while true:
+		await get_tree().create_timer(0.1).timeout
+		if not 移動操作ロック:
+			操作ロック前位置=global_position
+		
+
 
 func _unhandled_input(_event):
 	if 移動操作ロック:return
