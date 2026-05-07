@@ -118,4 +118,3 @@ ui_down={
 
 rendering_device/driver.windows="d3d12"
 occlusion_culling/use_occlusion_culling=true
-mesh_lod/lod_change/threshold_pixels=1024.0

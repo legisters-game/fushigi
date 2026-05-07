@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://duhw76lq7dgfk"]
+
+[ext_resource type="ArrayMesh" uid="uid://suxysyuou4lo" path="res://街メッシュ/都市3d仮_128,560_001.res" id="1_l0yfm"]
+[ext_resource type="Script" uid="uid://dunk7b3n3p2st" path="res://街チャンク処理/パーツ/街メッシュルート.gd" id="2_etbmp"]
+[ext_resource type="PackedScene" uid="uid://cy1sm8tj6b2n2" path="res://街チャンク処理/パーツ/当たり判定制御.tscn" id="3_auuol"]
+[ext_resource type="Shape3D" uid="uid://ih6mi2vo7dm6" path="res://街チャンク処理/街コリジョン/128,560.tres" id="4_og2c1"]
+[ext_resource type="PackedScene" uid="uid://cukax37ntwqle" path="res://街チャンク処理/パーツ/透明壁.tscn" id="5_udqol"]
+[ext_resource type="PackedScene" uid="uid://uknsp7tmjptt" path="res://街チャンク処理/パーツ/オクルージョンカリング.tscn" id="6_55fxs"]
+[ext_resource type="ArrayOccluder3D" uid="uid://4i6xvdfcbw4n" path="res://街チャンク処理/街オクルージョン/128,560.occ" id="7_vxk8a"]
+[ext_resource type="PackedScene" uid="uid://bbfh83jgah2q1" path="res://街チャンク処理/パーツ/グローバルイルミネーション.tscn" id="8_dy813"]
+[ext_resource type="VoxelGIData" uid="uid://5mkmxrqrdu3n" path="res://街チャンク処理/街GI/128,560,グローバルイルミネーション_data.res" id="9_7u1mo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c85bl"]
+size = Vector3(4, 5.6000004, 1.1500001)
+
+[node name="128,560,a" type="NavigationRegion3D" unique_id=164232182]
+
+[node name="128,560,a" type="MeshInstance3D" parent="." unique_id=1394765090]
+transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
+mesh = ExtResource("1_l0yfm")
+script = ExtResource("2_etbmp")
+
+[node name="中心" type="Node3D" parent="128,560,a" unique_id=1947789847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1482544, 25.31864, -3.433036)
+
+[node name="当たり判定制御" parent="128,560,a/中心" unique_id=956151749 node_paths=PackedStringArray("オクルージョンノード") instance=ExtResource("3_auuol")]
+"オクルージョンノード" = NodePath("../128,560,a_oc")
+
+[node name="処理範囲内" type="CollisionShape3D" parent="128,560,a/中心/当たり判定制御" unique_id=1204687016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2267456, -0.14364052, -0.11696386)
+shape = SubResource("BoxShape3D_c85bl")
+
+[node name="地形当たり判定" type="StaticBody3D" parent="128,560,a/中心/当たり判定制御" unique_id=1449430226]
+
+[node name="地形コリジョン" type="CollisionShape3D" parent="128,560,a/中心/当たり判定制御/地形当たり判定" unique_id=871624843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1482544, -25.31864, 3.433036)
+shape = ExtResource("4_og2c1")
+
+[node name="壁" type="StaticBody3D" parent="128,560,a/中心/当たり判定制御" unique_id=627557882]
+
+[node name="透明壁" parent="128,560,a/中心/当たり判定制御/壁" unique_id=491570466 instance=ExtResource("5_udqol")]
+transform = Transform3D(0.78, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.83366346, 2.4037418, -0.14518595)
+
+[node name="透明壁2" parent="128,560,a/中心/当たり判定制御/壁" unique_id=1623018939 instance=ExtResource("5_udqol")]
+transform = Transform3D(0.50245804, 0.38243818, -1.8767267e-08, -0.5966035, 0.32208854, 4.2338613e-09, 1.19557e-08, 5.813641e-09, 1, -0.09036398, 1.912447, -0.14518595)
+
+[node name="透明壁3" parent="128,560,a/中心/当たり判定制御/壁" unique_id=401516452 instance=ExtResource("5_udqol")]
+transform = Transform3D(0.78, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.13275671, 2.2054825, -0.14518595)
+
+[node name="透明壁4" parent="128,560,a/中心/当たり判定制御/壁" unique_id=505972144 instance=ExtResource("5_udqol")]
+transform = Transform3D(0.94, 0, 0, 0, 0.5, 0, 0, 0, 1, 0.4953928, 1.3545895, -0.14518595)
+
+[node name="透明壁5" parent="128,560,a/中心/当たり判定制御/壁" unique_id=1251555274 instance=ExtResource("5_udqol")]
+transform = Transform3D(0.38, 0, 0, 0, 1.085, 0, 0, 0, 1, 0.821713, 0.5853615, -0.14518595)
+
+[node name="透明壁6" parent="128,560,a/中心/当たり判定制御/壁" unique_id=1952772508 instance=ExtResource("5_udqol")]
+transform = Transform3D(1.705, 0, 0, 0, 0.21, 0, 0, 0, 1, 0.33082056, 0.105257034, -0.14518595)
+
+[node name="透明壁7" parent="128,560,a/中心/当たり判定制御/壁" unique_id=974288599 instance=ExtResource("5_udqol")]
+transform = Transform3D(1.23, 0, 0, 0, 1.17, 0, 0, 0, 1, -0.38750434, -1.2799625, -0.14518261)
+
+[node name="透明壁8" parent="128,560,a/中心/当たり判定制御/壁" unique_id=594490214 instance=ExtResource("5_udqol")]
+transform = Transform3D(1.57, 0, 0, 0, 1.425, 0, 0, 0, 1, 0.96095896, -1.8359451, -0.1451819)
+
+[node name="透明壁9" parent="128,560,a/中心/当たり判定制御/壁" unique_id=635713728 instance=ExtResource("5_udqol")]
+transform = Transform3D(0.415, 0, 0, 0, 0.64, 0, 0, 0, 1, 2.0853696, -2.4013653, -0.14518142)
+
+[node name="透明壁10" parent="128,560,a/中心/当たり判定制御/壁" unique_id=589347811 instance=ExtResource("5_udqol")]
+transform = Transform3D(2.89, 0, 0, 0, 0.305, 0, 0, 0, 1, 0.44340086, -2.814743, -0.14518118)
+
+[node name="128,560,a_oc" parent="128,560,a/中心" unique_id=1955116240 instance=ExtResource("6_55fxs")]
+occluder = ExtResource("7_vxk8a")
+
+[node name="グローバルイルミネーション" parent="128,560,a/中心" unique_id=754016580 instance=ExtResource("8_dy813")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.2291956, -0.1437664, -0.11438751)
+size = Vector3(64.20261, 89.815155, 18.664307)
+data = ExtResource("9_7u1mo")
