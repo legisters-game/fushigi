@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 "キーマッピング"="*uid://g56d2ygckd3m"
+"データロガー"="*uid://cud65q62xktlh"
 
 [display]
 
@@ -28,6 +29,7 @@ window/stretch/aspect="ignore"
 
 [editor]
 
+movie_writer/movie_file="C:/Users/takum/OneDrive/ドキュメント/move/a.avi"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
@@ -116,5 +118,4 @@ ui_down={
 
 [rendering]
 
-rendering_device/driver.windows="d3d12"
 occlusion_culling/use_occlusion_culling=true

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://wbmk2wqebi6g"]
+
+[ext_resource type="ArrayMesh" uid="uid://b2onwkcp45iog" path="res://街メッシュ/都市3d仮_256,688_001.res" id="1_2x6xw"]
+[ext_resource type="Script" uid="uid://dunk7b3n3p2st" path="res://街チャンク処理/パーツ/街メッシュルート.gd" id="2_nqfrg"]
+[ext_resource type="PackedScene" uid="uid://cy1sm8tj6b2n2" path="res://街チャンク処理/パーツ/当たり判定制御.tscn" id="3_8pt5v"]
+[ext_resource type="Shape3D" uid="uid://dyixysvh2f8x0" path="res://街チャンク処理/街コリジョン/256,688.tres" id="4_b0uh3"]
+[ext_resource type="PackedScene" uid="uid://bbfh83jgah2q1" path="res://街チャンク処理/パーツ/グローバルイルミネーション.tscn" id="5_q7lnf"]
+[ext_resource type="VoxelGIData" uid="uid://bxdfk7v1uaaxw" path="res://街チャンク処理/街GI/256,688,グローバルイルミネーション_data.res" id="6_7wcxs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_le7kp"]
+size = Vector3(6.3999996, 3.2000008, 1)
+
+[node name="256,688,a" type="NavigationRegion3D" unique_id=789160359]
+
+[node name="256,688,a" type="MeshInstance3D" parent="." unique_id=1131428951]
+transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
+mesh = ExtResource("1_2x6xw")
+script = ExtResource("2_nqfrg")
+"メタ情報" = 10
+
+[node name="中心" type="Node3D" parent="256,688,a" unique_id=1759351656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.013023, 32.327755, -3.1469512)
+
+[node name="当たり判定制御" parent="256,688,a/中心" unique_id=956151749 instance=ExtResource("3_8pt5v")]
+
+[node name="処理範囲内" type="CollisionShape3D" parent="256,688,a/中心/当たり判定制御" unique_id=454926292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43802357, 0.44724655, -0.3280487)
+shape = SubResource("BoxShape3D_le7kp")
+
+[node name="地形当たり判定" type="StaticBody3D" parent="256,688,a/中心/当たり判定制御" unique_id=544544766]
+
+[node name="地形コリジョン" type="CollisionShape3D" parent="256,688,a/中心/当たり判定制御/地形当たり判定" unique_id=1378974667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.013023, -32.327755, 3.1469512)
+shape = ExtResource("4_b0uh3")
+
+[node name="グローバルイルミネーション" parent="256,688,a/中心" unique_id=754016580 instance=ExtResource("5_q7lnf")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.43218994, 0.44559097, -0.3994522)
+size = Vector3(103.728516, 51.913147, 15.008057)
+data = ExtResource("6_7wcxs")

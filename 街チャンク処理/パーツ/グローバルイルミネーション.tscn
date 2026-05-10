@@ -1,4 +1,7 @@
 [gd_scene format=3 uid="uid://bbfh83jgah2q1"]
 
+[ext_resource type="Script" uid="uid://bckpajhum4a6l" path="res://街チャンク処理/パーツ/グローバルイルミネーション.gd" id="1_njmhd"]
+
 [node name="グローバルイルミネーション" type="VoxelGI" unique_id=754016580]
 subdiv = 0
+script = ExtResource("1_njmhd")

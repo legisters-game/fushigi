@@ -298,6 +298,7 @@ func _ロード完了処理(packed_scene: PackedScene):
 	if packed_scene and 解放された:
 		var instance = packed_scene.instantiate()
 		add_child(instance)
+		print(instance.name,"エラー箇所")
 		解放された = false
 		
 		# ナビメッシュの設定やアニメーション開始

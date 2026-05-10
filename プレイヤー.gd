@@ -11,6 +11,18 @@ var 操作ロック前位置:Vector3
 var レベル移動中:bool
 func _ready() -> void:
 	super()
+	return
+	移動操作ロック=true
+	global_position.z=-692.289
+	global_position.x=-374.894
+	while global_position.x<=1258.081:
+		var アニメ:Tween=get_tree().create_tween()
+		アニメ.bind_node(self)
+		アニメ.tween_property(self,"global_position",Vector3(global_position.x,global_position.y,761.289),10)
+		await アニメ.finished
+		global_position.z=-692.289
+		global_position.x+=25
+		
 	while true:
 		await get_tree().create_timer(0.1).timeout
 		if not 移動操作ロック:

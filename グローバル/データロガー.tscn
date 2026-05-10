@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c61ollpgw3rut"]
+
+[ext_resource type="Script" uid="uid://cud65q62xktlh" path="res://グローバル/データロガー.gd" id="1_dofkw"]
+
+[node name="データロガー" type="Node" unique_id=459459472]
+script = ExtResource("1_dofkw")

@@ -23,7 +23,15 @@ func _ready() -> void:
 		オーナー=get_parent()
 	else:
 		printerr("依存関係が壊れています。\nNavigationRegion3Dの子にMeshInstance3D(私もとい、街メッシュルート.gd)が来るようにしてください。")
-
+	if not Engine.is_editor_hint():
+		var u:VoxelGI=has_type_recursive(self, VoxelGI)
+		if u:
+			pass
+			#u.subdiv=VoxelGI.SUBDIV_64
+			#u.bake()
+			#u.hide()
+	
+	
 func 街切り替え()->void:
 	if has_node("街全体ビュー"):
 		get_node("街全体ビュー").queue_free()

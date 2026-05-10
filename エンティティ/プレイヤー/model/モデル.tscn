@@ -165,7 +165,6 @@ shadow_mesh = SubResource("ArrayMesh_ts0b3")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rpajb"]
 resource_name = "Skin"
 transparency = 4
-cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("3_34knu")
 roughness = 0.9
@@ -785,7 +784,7 @@ motion_scale = 1.1920929e-07
 bones/0/name = "Root"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.732, 0)
-bones/0/enabled = true
+bones/0/enabled = false
 bones/0/position = Vector3(0, -0.732, 0)
 bones/0/rotation = Quaternion(0, 0, 0, 1)
 bones/0/scale = Vector3(1, 1, 1)
@@ -794,7 +793,7 @@ bones/1/parent = 0
 bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.563135e-15, 0.7319999, -1.040231e-14)
 bones/1/enabled = true
 bones/1/position = Vector3(5.563135e-15, 0.7319999, -1.040231e-14)
-bones/1/rotation = Quaternion(0, 0, 0, 1)
+bones/1/rotation = Quaternion(-4.927839e-11, 3.3891032e-13, -8.6006945e-17, 1)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "Root_Third"
 bones/2/parent = 1
@@ -1231,6 +1230,7 @@ transform = Transform3D(-0.977, 0, -1.475229e-07, 0, 0.977, 0, 1.475229e-07, 0, 
 mesh = ExtResource("4_5q221")
 
 [node name="Body" type="MeshInstance3D" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" unique_id=1191555467]
+gi_mode = 2
 mesh = SubResource("ArrayMesh_8dna3")
 skin = SubResource("Skin_wtu2m")
 skeleton = NodePath("..")
