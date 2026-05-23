@@ -5,5 +5,5 @@
 [resource]
 resource_name = "jmc2obj_head-player_SeimitsuchMitsu_cc542d23b45d95d775e0cd72f4"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_3a5ni")
+texture_filter = 2
