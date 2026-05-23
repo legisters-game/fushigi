@@ -22,8 +22,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not ターゲット or ターゲット.is_empty():return
+	
 	if ターゲット.get(ターゲット番号)==null:
 		ターゲット番号=0
+	if typeof(ターゲット.get(ターゲット番号))==TYPE_NIL:
+		#print(ターゲット.get(ターゲット番号))
+		return
 	if 目的対象!=ターゲット番号:
 		切り替え中=true
 		イージング補間用=0
@@ -41,8 +45,9 @@ func _process(delta: float) -> void:
 			切り替え中=false
 			イージング補間用=0
 		#ease(-1,目的位置)
-		print(動的目的位置)
+		#print(動的目的位置)
 	else:
+		print("a")
 		動的目的位置=ターゲット[ターゲット番号].global_position
 	var diff:Vector3 = global_position - 動的目的位置
 	if diff.length() > 0.01:

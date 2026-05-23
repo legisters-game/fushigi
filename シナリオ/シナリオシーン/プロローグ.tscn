@@ -3,92 +3,90 @@
 [ext_resource type="PackedScene" uid="uid://blg0wki80emvo" path="res://シナリオ/演出基盤.tscn" id="1_axwyn"]
 [ext_resource type="Script" uid="uid://du5mb7ejod7ix" path="res://シナリオ/シナリオシーン/演出仮.gd" id="2_vj5kn"]
 [ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_vj5kn"]
-[ext_resource type="ArrayMesh" uid="uid://dehkcdr852q25" path="res://dfsae.res" id="5_11wke"]
+[ext_resource type="PackedScene" uid="uid://c0mhksd1gr5ic" path="res://シナリオ/演出カメラ.tscn" id="4_fvwph"]
+[ext_resource type="Texture2D" uid="uid://70jmgomtcsjd" path="res://エンティティ/プレイヤー/model/6380439c17d3666d_8.png" id="5_11wke"]
 [ext_resource type="PackedScene" uid="uid://bs8n5xvhfrqsw" path="res://エンティティ/演出用/演出モデル.tscn" id="5_fvwph"]
+[ext_resource type="Resource" uid="uid://nbbmunmsweld" path="res://エンティティ/表情管理/わでいど/わでいど.tres" id="7_ljke7"]
 
 [sub_resource type="Resource" id="Resource_fvwph"]
 script = ExtResource("3_vj5kn")
-"セリフ" = "こんにちわ"
+"セリフ" = "ここはどこだ？"
+"表情" = 10
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_11wke"]
+script = ExtResource("3_vj5kn")
+"セリフ" = "誰か…"
+"表情" = 3
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_ljke7"]
 script = ExtResource("3_vj5kn")
-"セリフ" = "アニメーション"
+"セリフ" = "誰も居ない…"
+"表情" = 2
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_ionig"]
 script = ExtResource("3_vj5kn")
-"セリフ" = "終わったら
+"セリフ" = "急いで探しに行かなきゃ！！
 "
+"表情" = 9
 metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_11wke"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_fvwph"]
-sky_material = SubResource("ProceduralSkyMaterial_11wke")
-
-[sub_resource type="Environment" id="Environment_ljke7"]
-background_mode = 2
-sky = SubResource("Sky_fvwph")
-tonemap_mode = 2
-glow_enabled = true
 
 [sub_resource type="Animation" id="Animation_mxkh7"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("演出カメラ:position")
+tracks/0/path = NodePath("オブジェクト中心/レクレイス:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-18.487823, 17.469559, 0)]
+"values": [Vector3(-15.403301, 0, -10.977747)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("演出カメラ:ターゲット番号")
+tracks/1/path = NodePath("オブジェクト中心/レクレイス:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
+"update": 0,
+"values": [Vector3(0, 0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Marker3D2:position")
+tracks/2/path = NodePath("演出カメラ:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.001),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-13.20069, 14.874027, -1.1605093)]
+"values": [Vector3(-16.749218, 17.469559, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Marker3D2:rotation")
+tracks/3/path = NodePath("演出カメラ2:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.001),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, -3.4644785, 0)]
+"values": [Vector3(-15.464661, 16.655098, -10.223977)]
 }
 
 [sub_resource type="Animation" id="Animation_axwyn"]
 resource_name = "new_animation"
-length = 10.0
+length = 13.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -96,28 +94,28 @@ tracks/0/path = NodePath(".:セリフ表示")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.23333333, 3.5666666, 3.6666665, 5.1, 5.366667, 5.5, 8.204698, 8.338031, 9.966667),
+"times": PackedFloat32Array(0.10665636, 1.4891641, 4.4773993, 5.586455, 6.283179, 9, 9.48506, 9.971096, 12.487539),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
-"args": ["システム", 0],
+"args": ["レクレイス", 0],
 "method": &"セリフ呼び出し"
 }, {
 "args": [],
 "method": &"停止ポイント設定"
 }, {
-"args": ["システム", 1],
+"args": ["レクレイス", 1],
 "method": &"セリフ呼び出し"
 }, {
 "args": [],
 "method": &"停止ポイント設定"
 }, {
-"args": ["", 2],
+"args": ["レクレイス", 2],
 "method": &"セリフ呼び出し"
 }, {
 "args": [],
 "method": &"停止ポイント設定"
 }, {
-"args": ["", 2],
+"args": ["レクレイス", 3],
 "method": &"セリフ呼び出し"
 }, {
 "args": [],
@@ -127,75 +125,109 @@ tracks/0/keys = {
 "method": &"演出終了"
 }]
 }
-tracks/1/type = "value"
+tracks/1/type = "animation"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("演出カメラ:position")
+tracks/1/path = NodePath("オブジェクト中心/レクレイス/AnimationPlayer")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.0560632, 9.310619),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(-18.487823, 17.469559, 0), Vector3(-16.933, 17.26, -7.17), Vector3(-11.938, 19.99, 1.915)]
+"clips": PackedStringArray("アイドル", "前", "アイドル", "前", "D前"),
+"times": PackedFloat32Array(0, 1.6087977, 4.1296697, 9.208216, 10.020111)
 }
-tracks/2/type = "method"
+tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("演出カメラ")
+tracks/2/path = NodePath("オブジェクト中心/レクレイス:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.043333344),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"make_current"
-}]
+"times": PackedFloat32Array(0, 1.5707946, 4.1423373, 9.247381, 10.007442, 12.997019),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-15.403301, 0, -10.977747), Vector3(-15.403301, 0, -10.977747), Vector3(-15.403301, 0, -6.118933), Vector3(-15.403301, 0, -6.118933), Vector3(-15.403, 0, -4.808), Vector3(-15.403, 0, 12.709)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("演出カメラ:ターゲット番号")
-tracks/3/interp = 0
+tracks/3/path = NodePath("オブジェクト中心/レクレイス:rotation")
+tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.2, 1.2000388, 3.3988283, 8.304222),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0.012667698, 5.662461, 6.789886, 7.4739423, 9, 9.842762),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0, 1, 0, 1]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, -0.27052602, 0), Vector3(0, -0.27052602, 0), Vector3(0, 0.57595867, 0), Vector3(0, 0, 0)]
 }
-tracks/4/type = "animation"
+tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("オブジェクト中心/演出モデル/AnimationPlayer")
+tracks/4/path = NodePath("演出カメラ:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"clips": PackedStringArray("前", "[stop]"),
-"times": PackedFloat32Array(0.029999994, 1.35)
+"times": PackedFloat32Array(0.012667693, 1.1020898, 1.3681114, 1.6721362, 2.7995613, 4.1170015, 5.586455, 9.982146),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-16.749218, 17.469559, 0), Vector3(-12.197959, 17.469559, 0), Vector3(-23.568, 15.495, -3.345), Vector3(-23.568, 15.495, -3.345), Vector3(-23.568, 15.495, -3.345), Vector3(-22.983, 17.61, -8.92), Vector3(-16.783, 15.035, -2.425), Vector3(-16.783, 15.035, -2.425)]
 }
-tracks/5/type = "animation"
+tracks/5/type = "method"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("オブジェクト中心/演出モデル/AnimationPlayer")
+tracks/5/path = NodePath("演出カメラ")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"clips": PackedStringArray("D左"),
-"times": PackedFloat32Array(1.92)
+"times": PackedFloat32Array(0, 1.5707946, 5.624458, 9.032068),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}, {
+"args": [],
+"method": &"make_current"
+}, {
+"args": [],
+"method": &"make_current"
+}, {
+"args": [],
+"method": &"make_current"
+}]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("オブジェクト中心/演出モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton")
+tracks/6/path = NodePath("演出カメラ2:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
+"times": PackedFloat32Array(0.012667698, 3.6736324, 4.1423373, 5.6877966, 5.814473, 8.791381),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-15.464661, 16.655098, -10.223977), Vector3(-15.464661, 16.655098, -10.223977), Vector3(-15.55, 16.72, -5.194), Vector3(-15.55, 16.72, -5.194), Vector3(-16.51, 17.2, -8.579), Vector3(-16.51, 17.2, -7.154)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("演出カメラ2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.2667698, 4.283679, 7.955314, 9.992817),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}, {
+"args": [],
+"method": &"make_current"
+}, {
+"args": [],
+"method": &"make_current"
+}, {
+"args": [],
+"method": &"make_current"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vj5kn"]
@@ -206,56 +238,27 @@ _data = {
 
 [node name="演出基盤" unique_id=854987473 instance=ExtResource("1_axwyn")]
 script = ExtResource("2_vj5kn")
-"表示チャンク" = Array[String](["uid://ds33rh2lhch8x", "uid://bbrefskxpv2dt", "uid://bi6ek0ydp23eu"])
-"セリフ集" = Array[ExtResource("3_vj5kn")]([SubResource("Resource_fvwph"), SubResource("Resource_ljke7"), SubResource("Resource_ionig")])
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="0" unique_id=694742726]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1" unique_id=27292230]
-environment = SubResource("Environment_ljke7")
+"表示チャンク" = Array[String](["uid://bbrefskxpv2dt", "uid://bt4xut7233kjb", "uid://bbrefskxpv2dt", "uid://ds33rh2lhch8x", "uid://dw0bnjmnt54w6", "uid://c2na1am0h184b"])
+"セリフ集" = Array[ExtResource("3_vj5kn")]([SubResource("Resource_fvwph"), SubResource("Resource_11wke"), SubResource("Resource_ljke7"), SubResource("Resource_ionig")])
 
 [node name="AnimationPlayer" parent="." index="2" unique_id=341811062]
 libraries/ = SubResource("AnimationLibrary_vj5kn")
 
 [node name="演出カメラ" parent="." index="3" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
-transform = Transform3D(0.9414841, 0.19998339, -0.27131966, 0, 0.8049657, 0.5933214, 0.33705744, -0.55860263, 0.7578623, -18.487823, 17.469559, 0)
-"ターゲット" = [NodePath("../Marker3D"), NodePath("../Marker3D2")]
+transform = Transform3D(0.99203, 0.010512894, -0.12556261, 0, 0.9965133, 0.08343438, 0.12600194, -0.08276941, 0.98857105, -16.749218, 17.469559, 0)
+"ターゲット" = [NodePath("../オブジェクト中心/レクレイス/Marker3D")]
 "切り替え時間" = 1.0
 
-[node name="Marker3D" type="Marker3D" parent="." index="4" unique_id=876075619]
-transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, -17.313385, 14.9012985, -3.2804947)
+[node name="演出カメラ2" parent="." index="4" unique_id=1747915640 node_paths=PackedStringArray("ターゲット") instance=ExtResource("4_fvwph")]
+transform = Transform3D(0.98671037, 0.033627775, -0.15897124, 0, 0.9783507, 0.20695415, 0.16248901, -0.20420381, 0.9653487, -15.464661, 16.655098, -10.223977)
+"ターゲット" = [NodePath("../オブジェクト中心/レクレイス/Marker3D")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Marker3D" index="0" unique_id=1843381606]
-gi_mode = 0
-mesh = ExtResource("5_11wke")
+[node name="レクレイス" parent="オブジェクト中心" parent_id_path=PackedInt32Array(610700827) index="0" unique_id=1106972114 instance=ExtResource("5_fvwph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.403301, 0, -10.977747)
+"スキン" = ExtResource("5_11wke")
+"表情データ" = ExtResource("7_ljke7")
 
-[node name="Marker3D2" type="Marker3D" parent="." index="5" unique_id=2134399443]
-transform = Transform3D(-0.94832367, 0, 0.31730458, 0, 1, 0, -0.31730458, 0, -0.94832367, -13.20069, 14.874027, -1.1605093)
+[node name="Marker3D" type="Marker3D" parent="オブジェクト中心/レクレイス" index="2" unique_id=2060169887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6648617, 0.38116646)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Marker3D2" index="0" unique_id=580176105]
-mesh = ExtResource("5_11wke")
-
-[node name="演出モデル" parent="オブジェクト中心" parent_id_path=PackedInt32Array(610700827) index="0" unique_id=1106972114 instance=ExtResource("5_fvwph")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.356, 0, -3.558)
-
-[node name="R_Pupils_001" parent="オブジェクト中心/演出モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" parent_id_path=PackedInt32Array(1106972114, 1885119474) index="0" unique_id=793088975]
-transform = Transform3D(0.03912118, 0.05277776, -0.99783975, -0.9988422, 0.030044615, -0.03757136, 0.02799669, 0.99815416, 0.053892046, -0.03793621, 0.92427135, 0.4802074)
-
-[node name="L_Pupils_001" parent="オブジェクト中心/演出モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" parent_id_path=PackedInt32Array(1106972114, 1885119474) index="1" unique_id=718024765]
-transform = Transform3D(0.03912118, 0.05277776, -0.99783975, -0.9988422, 0.030044615, -0.03757136, 0.02799669, 0.99815416, 0.053892046, 0.14466846, 0.9311468, 0.47034517)
-
-[node name="head" parent="オブジェクト中心/演出モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" parent_id_path=PackedInt32Array(1106972114, 1885119474) index="2" unique_id=526805165]
-transform = Transform3D(0.99783975, -0.03912118, 0.05277776, 0.03757136, 0.9988422, 0.030044615, -0.053892046, -0.02799669, 0.99815416, 0.032300673, 0.6891234, 0.24362946)
-
-[node name="右揺れ" parent="オブジェクト中心/演出モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" parent_id_path=PackedInt32Array(1106972114, 1885119474) index="17" unique_id=946272334]
-external_force = Vector3(0.04393043, -0.03992001, 0)
-
-[node name="左揺れ" parent="オブジェクト中心/演出モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" parent_id_path=PackedInt32Array(1106972114, 1885119474) index="18" unique_id=811419599]
-external_force = Vector3(-0.04374168, -0.039331906, 0)
-
-[node name="顔揺れ" parent="オブジェクト中心/演出モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" parent_id_path=PackedInt32Array(1106972114, 1885119474) index="19" unique_id=1749632102]
-external_force = Vector3(-0.029393168, 0.07394298, 0.048886027)
-
-[editable path="オブジェクト中心/演出モデル"]
+[editable path="オブジェクト中心/レクレイス"]

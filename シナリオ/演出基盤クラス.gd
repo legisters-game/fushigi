@@ -8,6 +8,7 @@ signal 演出完了通知()
 @export_tool_button("街表示")var 調整用=調整用街表示.bind(false)
 @export_file("*.tscn") var 表示チャンク:Array[String]
 @export var セリフ集: Array[セリフオブジェクト]
+@export var  削除対象:Array[Node]
 
 @onready var アニメーション: AnimationPlayer = $AnimationPlayer
 @onready var カメラ: Camera3D = $"演出カメラ"
@@ -25,13 +26,15 @@ func _ready() -> void:
 	if not Engine.is_editor_hint() and not get_parent() is Node3D:
 		print(get_parent())
 		調整用街表示(true)
+		for デバッグ用削除ノード:Node in 削除対象:
+			デバッグ用削除ノード.queue_free()
 	for i:String in 表示チャンク:
 		var チャンク名:String=ResourceUID.uid_to_path(i)
 		if チャンク名.containsn(",a."):
 			#チャンク名=チャンク名.get_file()
 			チャンク名=チャンク名.get_file().split(".")[0]+"_Chunk"
 			表示リスト.append(チャンク名)
-			#print(チャンク名)
+			print(i)
 	if not Engine.is_editor_hint():
 		if 都市ルート:
 			for アクセスノード名:String in 表示リスト:
@@ -40,6 +43,7 @@ func _ready() -> void:
 					チャンクルート.強制表示()
 					一時チャンク解放用.append(チャンクルート)
 					
+	print(表示リスト)
 
 
 
@@ -67,7 +71,7 @@ func セリフ表示(誰: String, 内容: セリフオブジェクト):
 	if 誰!="":ボックス.名前.text = 誰
 	else:誰=ボックス.名前.text
 	ボックス.メッセージラベル.text = 内容.セリフ
-	var 対象:エンティティ=エンティティ取得(誰)
+	var 対象:Node3D=エンティティ取得(誰)
 	if 対象:
 		対象.表情切り替え(内容.表情)
 
@@ -87,8 +91,9 @@ func 停止ポイント設定():
 	停止準備完了 = true
 	アニメーション.pause() # ここでアニメが止まる
 
-func エンティティ取得(名前:String)->エンティティ:
-	return null
+func エンティティ取得(名前:String):
+	return $"オブジェクト中心".get_node(名前)
+
 
 # アニメーションの最後や、特定のタイミングで呼び出す
 func 演出終了():
@@ -104,8 +109,18 @@ func 調整用街表示(デバッグ=false)->void:
 	await  get_tree().create_timer(0.01).timeout
 	var シーン:PackedScene=load("res://使わない/街全体ビュー.tscn")
 	var ノード:デバッグ用街シーン=シーン.instantiate()
-	ノード.set("デバッグ",デバッグ)
 	add_child(ノード)
+	ノード.set("デバッグ",デバッグ)
+	if Engine.is_editor_hint():
+		var アタッチスクリプト:Script= load("res://使わない/演出チャンク定義ツール.gd")
+		#前提として子ノードは1つしか存在しないはずのため↓
+		for 子ノード:Node3D in ノード.get_children()[0].get_children():
+			var メッシュ:MeshInstance3D=子ノード.get_children()[0]
+			if メッシュ is MeshInstance3D:
+				メッシュ.set_script(アタッチスクリプト)
+				メッシュ.set("演出基盤",self)
+				メッシュ.owner=self
+	#シーンとして保存させないため↓
 	#ノード.owner=self
 	ノード.position.y=-35.094
 	ノード.rotation_degrees.x=0
@@ -116,7 +131,6 @@ func 調整用街表示(デバッグ=false)->void:
 		for チャンクルート:Node3D in 街全体.get_children():
 			if not 表示リスト.has(チャンクルート.name):
 				チャンクルート.queue_free()
-			
 	
 	print_rich("[color=green]完了！！[/color]")
 	

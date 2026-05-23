@@ -139,7 +139,9 @@ func シナリオ演出実行(演出パス: String):
 		
 		if has_node("都市3d仮") and not 演出インスタンス.表示リスト.is_empty():
 			#await get_tree().create_timer(0.1).timeout
-			await 読み込み完了シグナル
+			await get_tree().process_frame
+			if not 読み込み中チャンク.is_empty():
+				await 読み込み完了シグナル
 		# 実行！
 		演出インスタンス.演出開始()
 

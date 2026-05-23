@@ -213,7 +213,7 @@ script = ExtResource("1_cxpoa")
 
 [node name="-160,336_Chunk" type="Node3D" parent="街全体ビュー" unique_id=831453377]
 
-[node name="-160,336" type="MeshInstance3D" parent="街全体ビュー/-160,336_Chunk" unique_id=1527893314]
+[node name="-160,336,a" type="MeshInstance3D" parent="街全体ビュー/-160,336_Chunk" unique_id=1527893314]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = ExtResource("1_kd1jv")
 
