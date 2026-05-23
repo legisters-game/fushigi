@@ -1,8 +1,16 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ckn3xcvpf4t1t"]
 
 [ext_resource type="Texture2D" uid="uid://bgqkw555u558t" path="res://1/都市3d仮_acacia_planks.png" id="1_ancyp"]
+[ext_resource type="Texture2D" uid="uid://pt755etv38u1" path="res://マテリアル/鏡面反射/acacia_planks_n.png" id="2_gub2h"]
 
 [resource]
 resource_name = "minecraft_block-acacia_planks"
-cull_mode = 2
 albedo_texture = ExtResource("1_ancyp")
+ao_enabled = true
+ao_texture = ExtResource("2_gub2h")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("2_gub2h")
+texture_filter = 2

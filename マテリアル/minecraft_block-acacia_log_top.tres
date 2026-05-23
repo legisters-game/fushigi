@@ -1,8 +1,21 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bte07vlttthum"]
 
 [ext_resource type="Texture2D" uid="uid://tq2stgknv0fd" path="res://1/都市3d仮_acacia_log_top.png" id="1_ny7um"]
+[ext_resource type="Texture2D" uid="uid://dyslcovw6lrkw" path="res://マテリアル/鏡面反射/acacia_log_top_n.png" id="2_eh8hp"]
+[ext_resource type="Texture2D" uid="uid://dfa3yos074g1r" path="res://マテリアル/立体補間/acacia_log_top_a.png" id="3_bg1wu"]
 
 [resource]
 resource_name = "minecraft_block-acacia_log_top"
-cull_mode = 2
 albedo_texture = ExtResource("1_ny7um")
+roughness = 0.5
+roughness_texture = ExtResource("3_bg1wu")
+roughness_texture_channel = 1
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_eh8hp")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_bg1wu")
+texture_filter = 2

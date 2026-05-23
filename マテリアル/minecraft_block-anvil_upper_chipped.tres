@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "minecraft_block-anvil_upper_chipped"
-cull_mode = 2
 albedo_texture = ExtResource("1_we3s0")
+texture_filter = 2

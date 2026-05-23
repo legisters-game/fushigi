@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "jmc2obj_unknown"
-cull_mode = 2
 albedo_texture = ExtResource("1_lb675")
+texture_filter = 2

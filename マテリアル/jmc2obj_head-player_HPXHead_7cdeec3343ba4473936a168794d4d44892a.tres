@@ -5,5 +5,5 @@
 [resource]
 resource_name = "jmc2obj_head-player_HPXHead_7cdeec3343ba4473936a168794d4d44892a"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_lqs0p")
+texture_filter = 2
