@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b3guj3xr1as0a"]
 
 [ext_resource type="Script" uid="uid://d3p1f4c6v7kfq" path="res://GUI/画面フェード/画面フェード.gd" id="1_m8cob"]
+[ext_resource type="Texture2D" uid="uid://bebhu47mui7mx" path="res://アクションガイド/Frame 18.png" id="2_e0xp5"]
 
 [sub_resource type="Animation" id="Animation_e0xp5"]
 length = 0.001
@@ -100,6 +101,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=753730156]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("2_e0xp5")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=406942275]
 libraries/ = SubResource("AnimationLibrary_t2rcv")
-autoplay = &"フェードイン"

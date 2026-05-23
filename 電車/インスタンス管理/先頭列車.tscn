@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cq7xmps5vwqtp"]
+
+[ext_resource type="PackedScene" uid="uid://dyytkhqvljkho" path="res://電車/先頭列車.tscn" id="1_foou7"]
+[ext_resource type="PackedScene" uid="uid://dm3ahtnsoqcmh" path="res://電車/ドア/ドア機構.tscn" id="2_jxfld"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jxfld"]
+size = Vector3(3.2436066, 3.3189087, 19.006647)
+
+[node name="先頭列車" unique_id=716878262 instance=ExtResource("1_foou7")]
+
+[node name="CollisionShape3D" parent="プレイヤー位置有効範囲" parent_id_path=PackedInt32Array(370888862) index="0" unique_id=1199804702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008293152, 1.8946838, 8.637578)
+shape = SubResource("BoxShape3D_jxfld")
+
+[node name="ドア機構" parent="ドア制御右" parent_id_path=PackedInt32Array(101494060) index="0" unique_id=1763182443 instance=ExtResource("2_jxfld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6389933, 0.16311646, 2.768878)
+
+[node name="ドア機構2" parent="ドア制御右" parent_id_path=PackedInt32Array(101494060) index="1" unique_id=351725512 instance=ExtResource("2_jxfld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6389933, 0.16311646, 8.491505)
+
+[node name="ドア機構3" parent="ドア制御右" parent_id_path=PackedInt32Array(101494060) index="2" unique_id=495722600 instance=ExtResource("2_jxfld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6389933, 0.16311646, 14.215266)
+
+[node name="ドア機構" parent="ドア制御左" parent_id_path=PackedInt32Array(1661580122) index="0" unique_id=98687666 instance=ExtResource("2_jxfld")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.6306963, 0.16311646, 2.768878)
+
+[node name="ドア機構2" parent="ドア制御左" parent_id_path=PackedInt32Array(1661580122) index="1" unique_id=1337509400 instance=ExtResource("2_jxfld")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.6306963, 0.16311646, 8.491505)
+
+[node name="ドア機構3" parent="ドア制御左" parent_id_path=PackedInt32Array(1661580122) index="2" unique_id=522133827 instance=ExtResource("2_jxfld")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.6306963, 0.16311646, 14.215266)

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c0mhksd1gr5ic"]
+
+[ext_resource type="Script" uid="uid://c2x5wkdagp6xq" path="res://シナリオ/演出カメラ.gd" id="1_vhfxw"]
+
+[node name="演出カメラ" type="Camera3D" unique_id=1454396540]
+script = ExtResource("1_vhfxw")
+"イージング" = -1.0

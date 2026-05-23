@@ -22,8 +22,19 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if not 目標:
 		return
-	現在位置=lerp(現在位置,目標.カメラ基準.global_position,delta*速さ)
-	global_position=現在位置
+		
+	var local_current = get_parent().to_local(global_position)
+	var local_target = get_parent().to_local(目標.カメラ基準.global_position)
+	
+	# ローカル空間の中でだけ、なめらかに追従させる
+	var local_next = lerp(local_current, local_target, delta * 速さ)
+	
+	# 最終的な位置をグローバルに変換して適用
+	global_position = get_parent().to_global(local_next)
+	
+	
+	#現在位置=lerp(現在位置,目標.カメラ基準.global_position,delta*速さ)
+	#global_position=現在位置
 	rotation_degrees.y-=視点回転.x*delta*感度
 	rotation_degrees.x=clampf(rotation_degrees.x-視点回転.y*delta*感度*0.7,角最小変数,角最大変数)
 	視点回転=Vector2.ZERO

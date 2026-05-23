@@ -17,7 +17,7 @@ size = Vector3(2.4, 3.1999989, 1.75)
 [sub_resource type="BoxShape3D" id="BoxShape3D_pa8dj"]
 size = Vector3(0.3857422, 1, 1.5844421)
 
-[node name="ナビゲーション" type="NavigationRegion3D" unique_id=1459783342]
+[node name="48,416,a" type="NavigationRegion3D" unique_id=1459783342]
 
 [node name="48,416,a" type="MeshInstance3D" parent="." unique_id=1114862213]
 transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)

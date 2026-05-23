@@ -19,15 +19,20 @@ func _ready():
 	if config.load(SAVE_PATH)!=OK:
 		print("えらーー")
 		全保存()
+	
 	フラグ追加("初期")
 
 func _exit_tree() -> void:
 	全保存()
 
+
 # --- フラグ管理 (文字列があるかないか) ---
 func フラグ追加(フラグ名: String):
 	config.set_value("フラグ", フラグ名, true)
-	config.save(SAVE_PATH)
+	#config.save(SAVE_PATH)
+
+func フラグ消去(フラグ名: String):
+	config.erase_section_key("フラグ", フラグ名)
 
 func フラグあるか(フラグ名: String) -> bool:
 	return config.has_section_key("フラグ", フラグ名)

@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://blg0wki80emvo"]
+
+[ext_resource type="Script" uid="uid://bci5ib4p0xavb" path="res://シナリオ/演出基盤クラス.gd" id="1_r4pe8"]
+[ext_resource type="PackedScene" uid="uid://c0mhksd1gr5ic" path="res://シナリオ/演出カメラ.tscn" id="2_8tjtt"]
+
+[sub_resource type="Animation" id="Animation_8tjtt"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_r4pe8"]
+resource_name = "開始"
+length = 10.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:セリフ管理")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(6.91),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"演出終了"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("演出カメラ")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8tjtt"]
+_data = {
+&"RESET": SubResource("Animation_8tjtt"),
+&"開始": SubResource("Animation_r4pe8")
+}
+
+[node name="演出基盤" type="Node3D" unique_id=854987473]
+script = ExtResource("1_r4pe8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=341811062]
+libraries/ = SubResource("AnimationLibrary_8tjtt")
+
+[node name="演出カメラ" parent="." unique_id=1454396540 instance=ExtResource("2_8tjtt")]
+
+[node name="オブジェクト中心" type="Node3D" parent="." unique_id=610700827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.9103565, 0)

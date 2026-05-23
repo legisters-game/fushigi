@@ -22,10 +22,11 @@ func _on_body_exited(body: Node3D) -> void:
 		
 func プロセス制御(ブール:bool)->void:
 	for i:Node3D in get_children():
-		if ブール:
+		if ブール and not データロガー.フラグあるか("電車乗車"):
 			i.process_mode=Node.PROCESS_MODE_INHERIT
 			if オクルージョンノード:オクルージョンノード.process_mode=Node.PROCESS_MODE_INHERIT
 		else:
+			print(データロガー.フラグあるか("電車乗車"))
 			i.process_mode=Node.PROCESS_MODE_DISABLED
 			if オクルージョンノード:オクルージョンノード.process_mode=Node.PROCESS_MODE_DISABLED
 			

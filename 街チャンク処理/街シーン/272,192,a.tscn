@@ -31,6 +31,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.038951874, 0.21179008, -0.
 shape = SubResource("BoxShape3D_vvuyh")
 
 [node name="地形当たり判定" type="StaticBody3D" parent="272,192,a/中心/当たり判定制御" unique_id=170824672]
+collision_layer = 3
+collision_mask = 3
 
 [node name="地形コリジョン" type="CollisionShape3D" parent="272,192,a/中心/当たり判定制御/地形当たり判定" unique_id=654650989]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.014952, -6.96321, 3.3808453)

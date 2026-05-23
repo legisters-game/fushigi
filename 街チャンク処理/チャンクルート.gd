@@ -14,7 +14,12 @@ var 内部保存パス:String
 var ロード中パス: String = ""
 var ロード中: bool = false
 
+
+
 var ナビ生成済み:NavigationMesh
+var 強制表示中:bool
+var 理論表示中:bool
+signal 強制表示解除シグナル
 
 func _ready() -> void:
 	内部保存パス = "res://街チャンク処理/街シーン/"+name.replace("_Chunk", "")+".tscn"
@@ -82,15 +87,18 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		デバッグ(false)
 		#処理有無制御(true)
 		真処理有無制御(true)
+		理論表示中=true
 		#add_child(保持)
 		
 
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body and body.name=="当たり判定有効範囲":
-		真処理有無制御(false)
+		if not 強制表示中:
+			真処理有無制御(false)
 		#処理有無制御(false)
-		デバッグ(true)
+			デバッグ(true)
+		理論表示中=false
 		#remove_child(保持)
 		#hide()アニメーションの都合上処理有無制御で制御
 
@@ -119,6 +127,10 @@ func 真処理有無制御(有無:bool)->void:
 					メッシュノード.transparency=1
 					アニメ.bind_node(メッシュノード)
 					アニメ.tween_property(メッシュノード,"transparency",0,1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+					await アニメ.finished
+					if get_parent().get_parent() is レベル制御クラス:
+						get_parent().get_parent().読み込み完了(name)
+			
 			return
 			
 			
@@ -128,7 +140,7 @@ func 真処理有無制御(有無:bool)->void:
 			if err == OK:
 				ロード中パス = 内部保存パス
 				ロード中 = true
-				print("内部から")
+				get_parent().get_parent().読み込み追加(name)
 				return
 			
 
@@ -139,6 +151,8 @@ func 真処理有無制御(有無:bool)->void:
 			ロード中 = true
 			# print("別スレッドでロード開始: ", name)
 	else:
+		if get_parent().get_parent() is レベル制御クラス:
+			get_parent().get_parent().読み込み完了(name)
 		if ロード中:
 			# ロード中のフラグを下ろすだけで、完了時の add_child をスキップさせる
 			ロード中 = false
@@ -175,70 +189,6 @@ func 真処理有無制御(有無:bool)->void:
 				ナビ生成済み=null
 
 
-func 処理有無制御(有無:bool)->void:
-	var 親:NavigationRegion3D
-	for a in get_children():
-		if a is NavigationRegion3D:
-			親=a
-			break
-	if not 親:return
-	for i:Node in 親.get_children():
-		if i is MeshInstance3D:
-			var ノード:MeshInstance3D=i
-			if 有無:
-				ノード.process_mode=Node.PROCESS_MODE_INHERIT
-				ノード.transparency=1
-				var アニメ:Tween=get_tree().create_tween()
-				アニメ.bind_node(ノード)
-				アニメ.tween_property(ノード,"transparency",0,1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
-				出現済み=true
-			else:
-				出現済み=false
-				var アニメ:Tween=get_tree().create_tween()
-				アニメ.bind_node(ノード)
-				アニメ.tween_property(ノード,"transparency",1,1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
-				await アニメ.finished
-				if 出現済み:
-					return
-				ノード.process_mode=Node.PROCESS_MODE_DISABLED
-				hide()
-	for i in get_children():
-			if i is NavigationRegion3D:
-				if 有無 and not ナビ生成済み:
-					#外部保存されているか
-					var path="user://nv/"+str(name)+".res"
-					var nav_mesh = ResourceLoader.load(path) as NavigationMesh
-					if nav_mesh:
-						#されてたら読み込み
-						i.navigation_mesh=nav_mesh
-					else:
-						#されてなければ、ベイク書き込み
-						i.navigation_mesh=ナビメッシュ.duplicate()
-					#i.navigation_mesh.border_size=0
-					#i.navigation_mesh.cell_size=0.25
-					#i.navigation_mesh.cell_height=0.01
-					#i.navigation_mesh.agent_max_climb=0.55
-					#i.navigation_mesh.border_size=0
-						i.navigation_mesh.agent_height=2.1
-				#await get_tree().create_timer(randi_range(1,60)).tim
-						i.bake_navigation_mesh()
-						
-						var error = ResourceSaver.save(i.navigation_mesh, path)
-						if error == OK:
-							pass
-							#print("ナビメッシュの保存に成功しました: ", path)
-						else:
-							print("保存エラー: ", error)
-						
-					
-				elif 有無 and ナビ生成済み:
-					i.navigation_mesh=ナビ生成済み
-				else:
-					ナビ生成済み=i.navigation_mesh
-					i.navigation_mesh=null
-					await get_tree().create_timer(10).timeout
-					ナビ生成済み=null
-
 func デバッグ(ブール:bool)->void:
 	if not デバッグあり:
 		return
@@ -251,7 +201,13 @@ func デバッグ(ブール:bool)->void:
 				
 func 強制表示():
 	show()
-
+	真処理有無制御(true)
+	強制表示中=true
+	
+func 強制表示解除():
+	強制表示中=false
+	if not 理論表示中:
+		真処理有無制御(false)
 
 func set_owner_recursive(node: Node, root: Node):
 	for child in node.get_children():
@@ -280,7 +236,7 @@ func _process(_delta: float) -> void:
 		match status:
 			ResourceLoader.THREAD_LOAD_LOADED:
 				# ロード完了
-				print("台無し")
+				#print("台無し")
 				var packed_scene = ResourceLoader.load_threaded_get(ロード中パス) as PackedScene
 				if ロード中: # 待機中に 有無:false が走っていないか最終チェック
 					_ロード完了処理(packed_scene)
@@ -300,7 +256,6 @@ func _ロード完了処理(packed_scene: PackedScene):
 		add_child(instance)
 		print(instance.name,"エラー箇所")
 		解放された = false
-		
 		# ナビメッシュの設定やアニメーション開始
 		# （元の「for i in get_children():」以降のナビベイク・Tween処理をここに移動）
 		セットアップ完了通知(instance)
@@ -357,3 +312,6 @@ func セットアップ完了通知(_instance):
 			メッシュノード.transparency=1
 			アニメ.bind_node(メッシュノード)
 			アニメ.tween_property(メッシュノード,"transparency",0,1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+			await アニメ.finished
+			if get_parent().get_parent() is レベル制御クラス:
+				get_parent().get_parent().読み込み完了(name)
