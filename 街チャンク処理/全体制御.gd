@@ -8,9 +8,16 @@ var 読み込みチャンクシグナル有効:bool
 
 signal 読み込み完了シグナル
 signal レベル読み込み完了シグナル
+@export  var 実験:ミッションデータ
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	await get_tree().create_timer(1).timeout
+	データロガー.ミッションフラグ追加(実験)
+	データロガー.全保存()
+	
+	
 	ディメンション=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.ディメンション,"オープンワールド")
+	
 	if ディメンション!="オープンワールド":
 		レベル移動(ディメンション,0,true)
 		
@@ -25,8 +32,9 @@ func _ready() -> void:
 		get_tree().get_first_node_in_group("プレイヤー").プレイヤーロード()
 		get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
 	
-	await  get_tree().create_timer(3).timeout
-	シナリオ演出実行("res://シナリオ/シナリオシーン/プロローグ.tscn")
+	await  get_tree().create_timer(2).timeout
+	if !データロガー.フラグあるか("最初の演出完了"):
+		シナリオ演出実行("res://シナリオ/シナリオシーン/プロローグ1目覚め.tscn")
 	
 	while true:
 		await get_tree().create_timer(50).timeout
@@ -118,11 +126,13 @@ func シナリオ演出実行(演出パス: String):
 	var 演出リソース: = load(演出パス)
 	if not 演出リソース:
 		return
-		
+	
 	var 演出インスタンス:Node = 演出リソース.instantiate()
 	
 	# 型チェック（演出基盤クラスを継承しているか）
 	if 演出インスタンス is 演出基盤クラス:
+		get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードアウト()
+		
 		if has_node("都市3d仮"):
 			演出インスタンス.都市ルート=get_node("都市3d仮")
 			
@@ -139,13 +149,30 @@ func シナリオ演出実行(演出パス: String):
 		
 		if has_node("都市3d仮") and not 演出インスタンス.表示リスト.is_empty():
 			#await get_tree().create_timer(0.1).timeout
-			await get_tree().process_frame
+			#await get_tree().process_frame
+			#await get_tree().process_frame
+			#await get_tree().process_frame
 			if not 読み込み中チャンク.is_empty():
+				get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードイン待機(self)
 				await 読み込み完了シグナル
+			else:
+				await get_tree().create_timer(1).timeout
+				get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードイン()
 		# 実行！
+		get_tree().get_first_node_in_group("UI").ムービー中非表示()
+		get_node("NPC制御").hide()
+		get_tree().get_first_node_in_group("プレイヤー").hide()
 		演出インスタンス.演出開始()
 
 func _演出終了後の後処理(インスタンス: 演出基盤クラス):
 	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
 	インスタンス.queue_free()
+	get_node("NPC制御").show()
+	get_tree().get_first_node_in_group("プレイヤー").show()
+	get_tree().get_first_node_in_group("UI").ムービー終了表示()
+	if インスタンス.再生後発生ミッション and !インスタンス.再生後発生ミッション.is_empty():
+		for i:ミッションデータ in インスタンス.再生後発生ミッション:
+			データロガー.ミッションフラグ追加(i)
+			
+		get_tree().get_first_node_in_group("UI").get_node("ミッションマネージャー").ミッション更新()
 	# プレイヤーのカメラをメインに戻す処理などをここに書く

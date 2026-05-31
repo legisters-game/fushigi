@@ -53,6 +53,7 @@ func _unhandled_input(_event):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = 3
 		#get_node("Camera3D").current=true
+
 func _process(_delta):
 	#global_position=追尾物.global_position
 	# 1. キー入力を取得 (Vector2)
@@ -93,6 +94,8 @@ func _process(_delta):
 					break
 			elif i is 街レベルゲート:
 				レベル制御.都市戻り(i.アクセスマーカー)
+			elif i is ミッション進行するやつ:
+				i.プラスいち()
 	elif Input.is_action_just_pressed("チャンク"):
 		var コライダー:Object=get_node("RayCast3D").get_collider()
 		if コライダー.name=="地形当たり判定":

@@ -94,7 +94,7 @@ tracks/0/path = NodePath(".:セリフ表示")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.10665636, 1.4891641, 4.4773993, 5.586455, 6.283179, 9, 9.48506, 9.971096, 12.487539),
+"times": PackedFloat32Array(0.10665636, 1.4891641, 4.4773993, 5.586455, 6.283179, 9, 9.48506, 9.971096, 12.581876),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": ["レクレイス", 0],
@@ -121,7 +121,7 @@ tracks/0/keys = {
 "args": [],
 "method": &"停止ポイント設定"
 }, {
-"args": [],
+"args": [true],
 "method": &"演出終了"
 }]
 }
@@ -238,20 +238,12 @@ _data = {
 
 [node name="演出基盤" unique_id=854987473 instance=ExtResource("1_axwyn")]
 script = ExtResource("2_vj5kn")
-"表示チャンク" = Array[String](["uid://bbrefskxpv2dt", "uid://bt4xut7233kjb", "uid://bbrefskxpv2dt", "uid://ds33rh2lhch8x", "uid://dw0bnjmnt54w6", "uid://c2na1am0h184b"])
+"表示チャンク" = Array[String](["uid://bbrefskxpv2dt", "uid://ds33rh2lhch8x", "uid://bt4xut7233kjb", "uid://dw0bnjmnt54w6", "uid://cp2b2rs1p22yt", "uid://c3mipwm572p2d"])
 "セリフ集" = Array[ExtResource("3_vj5kn")]([SubResource("Resource_fvwph"), SubResource("Resource_11wke"), SubResource("Resource_ljke7"), SubResource("Resource_ionig")])
+"再生後フラグ" = "最初の演出完了"
 
 [node name="AnimationPlayer" parent="." index="2" unique_id=341811062]
 libraries/ = SubResource("AnimationLibrary_vj5kn")
-
-[node name="演出カメラ" parent="." index="3" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
-transform = Transform3D(0.99203, 0.010512894, -0.12556261, 0, 0.9965133, 0.08343438, 0.12600194, -0.08276941, 0.98857105, -16.749218, 17.469559, 0)
-"ターゲット" = [NodePath("../オブジェクト中心/レクレイス/Marker3D")]
-"切り替え時間" = 1.0
-
-[node name="演出カメラ2" parent="." index="4" unique_id=1747915640 node_paths=PackedStringArray("ターゲット") instance=ExtResource("4_fvwph")]
-transform = Transform3D(0.98671037, 0.033627775, -0.15897124, 0, 0.9783507, 0.20695415, 0.16248901, -0.20420381, 0.9653487, -15.464661, 16.655098, -10.223977)
-"ターゲット" = [NodePath("../オブジェクト中心/レクレイス/Marker3D")]
 
 [node name="レクレイス" parent="オブジェクト中心" parent_id_path=PackedInt32Array(610700827) index="0" unique_id=1106972114 instance=ExtResource("5_fvwph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.403301, 0, -10.977747)
@@ -260,5 +252,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.403301, 0, -10.977747)
 
 [node name="Marker3D" type="Marker3D" parent="オブジェクト中心/レクレイス" index="2" unique_id=2060169887]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6648617, 0.38116646)
+
+[node name="演出カメラ" parent="オブジェクト中心" parent_id_path=PackedInt32Array(610700827) index="1" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
+transform = Transform3D(0.99202996, 0.10439505, -0.07055612, 0, 0.55996054, 0.8285193, 0.12600195, -0.821916, 0.55549765, -16.749218, 17.469557, 0)
+"ターゲット" = [NodePath("../レクレイス/Marker3D")]
+"切り替え時間" = 1.0
+
+[node name="演出カメラ2" parent="." index="4" unique_id=1747915640 node_paths=PackedStringArray("ターゲット") instance=ExtResource("4_fvwph")]
+transform = Transform3D(0.98671037, 0.033627775, -0.15897124, 0, 0.9783507, 0.20695415, 0.16248901, -0.20420381, 0.9653487, -15.464661, 16.655098, -10.223977)
+"ターゲット" = [NodePath("../オブジェクト中心/レクレイス/Marker3D")]
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 
 [editable path="オブジェクト中心/レクレイス"]

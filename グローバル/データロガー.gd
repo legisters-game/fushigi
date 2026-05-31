@@ -47,6 +47,59 @@ func プレイヤーステート保存(stat_type: プレイヤーデータ, valu
 func プレイヤーステート取得(stat_type: プレイヤーデータ, default_value: Variant = 0) -> Variant:
 	return config.get_value("プレイヤー", str(stat_type), default_value)
 
+
+func ミッションオブジェクト取得(ミッション用フラグ名:String)->ミッションデータ:
+	var 辞書:Dictionary
+	辞書["完了後フラグ"]=""
+	辞書["条件フラグ"]=""
+	辞書["条件数"]=0
+	辞書["表示用条件"]=""
+	if config.get_value("ミッションフラグ", ミッション用フラグ名,null):
+		辞書=config.get_value("ミッションフラグ", ミッション用フラグ名,null)
+	#オブジェクトで返す
+	var オブジェクト:ミッションデータ=ミッションデータ.new()
+	オブジェクト.初期化(ミッション用フラグ名,辞書)
+	return オブジェクト
+
+func ミッションフラグ追加(ミッションオブジェクト:ミッションデータ)->void:
+	if config.has_section("ミッションフラグ")and config.has_section_key("ミッションフラグ",ミッションオブジェクト.ミッション名):
+		print("すでに追加済み")
+		return
+	var 辞書:Dictionary
+
+	辞書.set("完了後フラグ",ミッションオブジェクト.完了後フラグ)
+	辞書.set("条件フラグ",ミッションオブジェクト.条件フラグ)
+	辞書.set("条件数",ミッションオブジェクト.条件数)
+	辞書.set("表示用条件",ミッションオブジェクト.表示用条件)
+	#ミッションオブジェクト.
+	config.set_value("ミッションフラグ",ミッションオブジェクト.ミッション名,辞書)
+	if get_tree().get_first_node_in_group("UI"):
+		get_tree().get_first_node_in_group("UI").get_node("ミッションマネージャー").ミッション取得()
+	else:
+		print("ミッションをスクリプトで更新失敗")
+	
+func ミッションフラグ消去(ミッション用フラグ名:String)->void:
+	config.erase_section_key("ミッションフラグ", ミッション用フラグ名)
+	
+func ミッション条件取得(ミッション条件フラグ:String)->int:
+	return config.get_value("ミッション条件フラグ", ミッション条件フラグ, 0)
+
+func ミッション条件フラグ保存(ミッション条件フラグ:String,値:int)->void:
+	#なんだこれ
+	if config.has_section_key("ミッション条件フラグ",ミッション条件フラグ):
+		config.set_value("ミッション条件フラグ",ミッション条件フラグ, 値)
+		get_tree().get_first_node_in_group("UI").get_node("ミッションマネージャー").ミッション進行度更新()
+
+func ミッション条件フラグ追加(ミッション条件フラグ:String)->void:
+	if !config.has_section_key("ミッション条件フラグ",ミッション条件フラグ):
+		config.set_value("ミッション条件フラグ",ミッション条件フラグ, 0)
+
+func ミッション条件フラグ消去(ミッション条件フラグ:String)->void:
+	config.erase_section_key("ミッション条件フラグ", ミッション条件フラグ)
+	
+
+
+	
 # セーブ実行
 func 全保存():
 	config.save(SAVE_PATH)

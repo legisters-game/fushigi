@@ -33,7 +33,7 @@ func _process(delta):
 	if ストップ:return
 	# 時間を更新
 	time += delta / day_length
-	if いつ()==時間.夜 or いつ()==時間.真夜: time += delta / day_length*1.2
+	if いつ()==時間.夜 or いつ()==時間.真夜: time += (delta / day_length)*2.2
 	if time > 1.0:
 		time = 0.0
 		論理日+=1

@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 		#ease(-1,目的位置)
 		#print(動的目的位置)
 	else:
-		print("a")
+		#print("a")
 		動的目的位置=ターゲット[ターゲット番号].global_position
 	var diff:Vector3 = global_position - 動的目的位置
 	if diff.length() > 0.01:

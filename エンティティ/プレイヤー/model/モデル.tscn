@@ -166,7 +166,7 @@ resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("3_34knu")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8dna3"]
@@ -585,6 +585,7 @@ metadata/extras = {
 resource_name = "Skin.004"
 transparency = 4
 cull_mode = 2
+diffuse_mode = 2
 albedo_texture = ExtResource("3_34knu")
 roughness = 0.9
 texture_filter = 2
@@ -724,7 +725,6 @@ metadata/extras = {
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j486i"]
 resource_name = "Skin.003"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("3_34knu")
 roughness = 0.9
 texture_filter = 2

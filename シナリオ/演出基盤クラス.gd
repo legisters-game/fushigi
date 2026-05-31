@@ -9,9 +9,12 @@ signal 演出完了通知()
 @export_file("*.tscn") var 表示チャンク:Array[String]
 @export var セリフ集: Array[セリフオブジェクト]
 @export var  削除対象:Array[Node]
-
+@export var 再生後フラグ:String
+@export var 再生後発生ミッション:Array[ミッションデータ]
+@export var プレイヤー再生前ワープ:bool
+@export var プレイヤー再生後ワープ:bool
 @onready var アニメーション: AnimationPlayer = $AnimationPlayer
-@onready var カメラ: Camera3D = $"演出カメラ"
+@onready var カメラ: Camera3D = $"オブジェクト中心/演出カメラ"
 
 var 都市ルート:オープンワールド管理クラス
 var 表示リスト:Array[String]
@@ -23,18 +26,13 @@ func _ready() -> void:
 		var 街ノード:Node3D=get_node("街全体ビュー")
 		remove_child(街ノード)
 		街ノード.queue_free()
-	if not Engine.is_editor_hint() and not get_parent() is Node3D:
-		print(get_parent())
-		調整用街表示(true)
-		for デバッグ用削除ノード:Node in 削除対象:
-			デバッグ用削除ノード.queue_free()
 	for i:String in 表示チャンク:
 		var チャンク名:String=ResourceUID.uid_to_path(i)
 		if チャンク名.containsn(",a."):
 			#チャンク名=チャンク名.get_file()
 			チャンク名=チャンク名.get_file().split(".")[0]+"_Chunk"
 			表示リスト.append(チャンク名)
-			print(i)
+			#print(i)
 	if not Engine.is_editor_hint():
 		if 都市ルート:
 			for アクセスノード名:String in 表示リスト:
@@ -42,7 +40,13 @@ func _ready() -> void:
 					var チャンクルート:チャンク管理クラス=都市ルート.get_node(アクセスノード名)
 					チャンクルート.強制表示()
 					一時チャンク解放用.append(チャンクルート)
-					
+		if not get_parent() is Node3D:
+			#print(get_parent())
+			await  調整用街表示(true)
+			演出開始()
+		else:
+			for デバッグ用削除ノード:Node in 削除対象:
+				デバッグ用削除ノード.queue_free()
 	print(表示リスト)
 
 
@@ -57,6 +61,8 @@ func 演出開始():
 		カメラ.make_current()
 	if アニメーション:
 		アニメーション.play("開始")
+	if プレイヤー再生前ワープ and get_tree().get_first_node_in_group("プレイヤー"):
+		get_tree().get_first_node_in_group("プレイヤー").global_position=$"オブジェクト中心/プレイヤー開始位置".global_position
 
 func セリフ呼び出し(誰: String,番号: int):
 	セリフ表示(誰, セリフ集[番号])
@@ -88,6 +94,8 @@ func セリフ表示(誰: String, 内容: セリフオブジェクト):
 	アニメーション.play()
 
 func 停止ポイント設定():
+	if not get_parent() is Node3D:
+		return
 	停止準備完了 = true
 	アニメーション.pause() # ここでアニメが止まる
 
@@ -96,8 +104,29 @@ func エンティティ取得(名前:String):
 
 
 # アニメーションの最後や、特定のタイミングで呼び出す
-func 演出終了():
+func 演出終了(フェードアウト有効:bool=false):
+	if フェードアウト有効:
+		if get_tree().get_first_node_in_group("UI"):
+			var フェードアウト:画面フェードクラス = get_tree().get_first_node_in_group("UI").get_node("画面フェード")
+			フェードアウト.フェードアウト()
+			await get_tree().create_timer(1).timeout
+			フェードアウト.フェードイン()
 	演出完了通知.emit()
+	if プレイヤー再生後ワープ and get_tree().get_first_node_in_group("プレイヤー"):
+		get_tree().get_first_node_in_group("プレイヤー").global_position=$"オブジェクト中心/プレイヤー終了位置".global_position
+	if 再生後フラグ!="":
+		データロガー.フラグ追加(再生後フラグ)
+		データロガー.全保存()
+	
+
+func フェード(アウト:bool=false)->void:
+	if get_tree().get_first_node_in_group("UI"):
+		var フェードアウト:画面フェードクラス = get_tree().get_first_node_in_group("UI").get_node("画面フェード")
+		if アウト:
+			フェードアウト.フェードアウト()
+		else:
+			フェードアウト.フェードイン()
+
 
 
 func 調整用街表示(デバッグ=false)->void:
@@ -109,8 +138,8 @@ func 調整用街表示(デバッグ=false)->void:
 	await  get_tree().create_timer(0.01).timeout
 	var シーン:PackedScene=load("res://使わない/街全体ビュー.tscn")
 	var ノード:デバッグ用街シーン=シーン.instantiate()
-	add_child(ノード)
 	ノード.set("デバッグ",デバッグ)
+	add_child(ノード)
 	if Engine.is_editor_hint():
 		var アタッチスクリプト:Script= load("res://使わない/演出チャンク定義ツール.gd")
 		#前提として子ノードは1つしか存在しないはずのため↓
@@ -133,6 +162,8 @@ func 調整用街表示(デバッグ=false)->void:
 				チャンクルート.queue_free()
 	
 	print_rich("[color=green]完了！！[/color]")
+	
+
 	
 func _exit_tree() -> void:
 	for チャンクルート in 一時チャンク解放用:

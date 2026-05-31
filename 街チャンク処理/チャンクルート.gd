@@ -122,7 +122,7 @@ func 真処理有無制御(有無:bool)->void:
 					if e is MeshInstance3D:
 						メッシュノード=e
 						break
-				if メッシュノード:
+				if メッシュノード and メッシュノード.transparency!=0:
 					var アニメ:Tween=get_tree().create_tween()
 					メッシュノード.transparency=1
 					アニメ.bind_node(メッシュノード)
