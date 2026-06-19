@@ -104,8 +104,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.505, 16.045, 0)
 curve = SubResource("Curve3D_8rf30")
 
 [node name="先頭列車" parent="Node3D/Path3D" unique_id=716878262 instance=ExtResource("6_sj3gr")]
-transform = Transform3D(-0.659674, -3.8618103e-07, 0.7515519, 0, 1, 5.1384484e-07, -0.7515519, 3.3897004e-07, -0.659674, -101.6984, 2.861023e-05, 94.92622)
-progress = 1660.2117
+transform = Transform3D(-0.74052936, -3.9765874e-07, 0.672024, 0, 1, 5.9173294e-07, -0.672024, 4.3819563e-07, -0.74052936, -138.77774, 0, 129.23639)
+progress = 2.431514
 
 [node name="プレイヤー相対位置" type="Node3D" parent="." unique_id=1414897882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 0, 0, 0)

@@ -165,3 +165,6 @@ func 簡易移動停止() -> void:
 	簡易移動中 = false
 	簡易中強制歩き=false
 	move_direction = Vector3.ZERO
+	
+func アニメーション中に付き重力無効(する:bool=true)->void:
+	重力無効=する

@@ -6,6 +6,8 @@ class_name ミッションデータ
 @export var 条件フラグ:String
 @export var 条件数:int
 @export_multiline() var 表示用条件:String
+@export var サブ:bool
+@export var 優先度:int
 
 func 初期化(_name: String,辞書:Dictionary) -> void:
 	ミッション名 = _name

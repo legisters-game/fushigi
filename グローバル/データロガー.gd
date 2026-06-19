@@ -2,7 +2,7 @@ extends Node
 
 const SAVE_PATH = "user://save_game.cfg"
 var config = ConfigFile.new()
-
+var ディメンションセーブロック:bool=false
 # 【ステータスの定義】
 # これにより、DataManager.P_HP のように数値（int）として扱える
 enum プレイヤーデータ {
@@ -11,8 +11,9 @@ enum プレイヤーデータ {
 	攻撃力,
 	防御力,
 	ディメンション,
+	ディメンション階層,
 	座標,
-	回転座標
+	回転座標,
 }
 
 func _ready():
@@ -42,6 +43,7 @@ func フラグあるか(フラグ名: String) -> bool:
 func プレイヤーステート保存(stat_type: プレイヤーデータ, value: Variant)->void:
 	# config内部では "0", "1" といったキーで保存されるが
 	# 外側からは Enum の名前でアクセスしている状態になる
+	if ディメンションセーブロック:return
 	config.set_value("プレイヤー", str(stat_type), value)
 
 func プレイヤーステート取得(stat_type: プレイヤーデータ, default_value: Variant = 0) -> Variant:

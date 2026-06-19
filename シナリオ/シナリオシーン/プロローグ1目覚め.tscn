@@ -47,8 +47,8 @@ metadata/_custom_type_script = "uid://4uxnotone8su"
 [sub_resource type="Resource" id="Resource_k4qth"]
 script = ExtResource("3_c6ncj")
 "ミッション名" = "ここはどこ？"
-"完了後フラグ" = "住人を見つける完了"
-"条件フラグ" = "住人見つける"
+"完了後フラグ" = "オープニング再生済"
+"条件フラグ" = "街を探索する"
 "条件数" = 1
 "表示用条件" = "街の住人を見つける"
 metadata/_custom_type_script = "uid://bjjvp7rx64bcv"
@@ -262,7 +262,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0, 3, 5.1, 9.310758, 15.72013),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.973, 1.092, 0.755), Vector3(-0.973, 1.092, 0.755), Vector3(-0.9729996, 1.2689686, 0.7550049), Vector3(0.042, 1.599, 1.21), Vector3(-0.158, 1.694, 0.85)]
+"values": [Vector3(-0.973, 1.092, 0.755), Vector3(-0.973, 1.092, 0.755), Vector3(-0.9729996, 1.2689686, 0.7550049), Vector3(0.042, 1.479, 0.735), Vector3(-0.068, 1.469, 0.635)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -295,6 +295,7 @@ _data = {
 [node name="演出基盤" unique_id=854987473 instance=ExtResource("1_jtjba")]
 "表示チャンク" = Array[String](["uid://b151ytpjybj7k", "uid://c2vpwnve678y7", "uid://bdncegnplxomx", "uid://bq2ts8tlgy1x1", "uid://cjat1ca4vn7b", "uid://bm5vq4elaritk", "uid://ddj0yb7r76c2d", "uid://bk360tcruf8di", "uid://omr7pjhgsjc6"])
 "セリフ集" = Array[ExtResource("2_vnx6e")]([SubResource("Resource_gml4g"), SubResource("Resource_g0iw0"), SubResource("Resource_he367"), SubResource("Resource_c6ncj"), SubResource("Resource_ioj3v"), SubResource("Resource_ddr2e")])
+"再生前条件フラグ加算数" = 0
 "再生後フラグ" = "最初の演出完了"
 "再生後発生ミッション" = Array[ExtResource("3_c6ncj")]([SubResource("Resource_k4qth")])
 "プレイヤー再生前ワープ" = true
@@ -306,7 +307,7 @@ libraries/ = SubResource("AnimationLibrary_vo1ma")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.887024, 14.9103565, 140.87599)
 
 [node name="レクレイス" parent="オブジェクト中心" index="0" unique_id=1106972114 instance=ExtResource("2_vo1ma")]
-transform = Transform3D(0.8971425, 0, 0.4417406, 0, 0.99999994, 0, -0.4417406, 0, 0.8971425, 0, -0.50578594, -0.7270508)
+transform = Transform3D(0.89714247, 0, 0.4417406, 0, 0.99999994, 0, -0.44174057, 0, 0.8971425, 0, -0.50578594, -0.7270508)
 "スキン" = ExtResource("3_cdcwc")
 "表情データ" = ExtResource("5_he367")
 
@@ -314,16 +315,16 @@ transform = Transform3D(0.8971425, 0, 0.4417406, 0, 0.99999994, 0, -0.4417406, 0
 libraries/mixamo = SubResource("AnimationLibrary_bslyf")
 
 [node name="レクレイス顔" type="Marker3D" parent="オブジェクト中心/レクレイス" index="2" unique_id=886319654]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05050683, 1.6187656, 2.9802322e-08)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051, 1.414, 0)
 
 [node name="演出カメラ2" parent="オブジェクト中心/レクレイス" index="3" unique_id=1454396540 node_paths=PackedStringArray("ターゲット") instance=ExtResource("9_gml4g")]
-transform = Transform3D(0.9712053, 0.020405427, -0.23737027, 0, 0.99632555, 0.085648656, 0.23824571, -0.083182424, 0.96763647, 0.19044495, 1.6882553, 0.9208641)
+transform = Transform3D(-0.0947887, -0.711344, 0.69642353, 0, 0.69957316, 0.7145611, -0.9954977, 0.067732304, -0.06631163, 0.19044495, 1.6882553, 0.9208641)
 "ターゲット" = [NodePath("../レクレイス顔"), NodePath("../../寝顔")]
 "ターゲット番号" = 1
 "切り替え時間" = 1.0
 
 [node name="演出カメラ" parent="オブジェクト中心" index="1" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
-transform = Transform3D(-0.35841867, -0.33964163, 0.8695858, 0, 0.931472, 0.363813, -0.9335609, 0.1303974, -0.33385694, 1.7105255, 2.4936428, -1.0187073)
+transform = Transform3D(-0.15959243, -0.6761827, 0.7192407, 0, 0.728579, 0.6849618, -0.987183, 0.109314725, -0.11627568, 1.7105255, 2.4936428, -1.0187073)
 "ターゲット" = [NodePath("../レクレイス/レクレイス顔")]
 
 [node name="寝顔" type="Marker3D" parent="オブジェクト中心" index="2" unique_id=1489523084]

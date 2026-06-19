@@ -3,4 +3,7 @@
 [ext_resource type="Script" uid="uid://cyrdelmnk5b0j" path="res://街チャンク処理/パーツ/フラグ判断エリア判定.gd" id="1_j2106"]
 
 [node name="フラグ判断エリア判定" type="Area3D" unique_id=319550223]
+monitorable = false
 script = ExtResource("1_j2106")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

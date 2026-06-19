@@ -27,8 +27,11 @@ func _ready() -> void:
 	if 追尾物:
 		global_position=追尾物.global_position
 	#get_parent().force_update_cache()
+	操作ロック前位置=global_position
 	while true:
 		await get_tree().create_timer(2).timeout
+		if not 移動操作ロック:
+			操作ロック前位置=global_position
 		プレイヤーセーブ()
 	
 	return
@@ -90,12 +93,18 @@ func _process(_delta):
 				break
 			elif i is レベルゲート:
 				if i.アクセスレベル!="":
-					レベル制御.レベル移動(i.アクセスレベル,i.アクセス番号)
+					レベル制御.レベル移動(i.アクセスレベル,i.アクセス番号,i.階層)
 					break
 			elif i is 街レベルゲート:
 				レベル制御.都市戻り(i.アクセスマーカー)
+				break
 			elif i is ミッション進行するやつ:
 				i.プラスいち()
+				break
+			else:
+				if i.has_method("実行"):
+					i.実行()
+					break
 	elif Input.is_action_just_pressed("チャンク"):
 		var コライダー:Object=get_node("RayCast3D").get_collider()
 		if コライダー.name=="地形当たり判定":
@@ -108,8 +117,11 @@ func _on_timer_timeout() -> void:
 		await get_tree().create_timer(0.1).timeout
 		表情切り替え(表情オブジェクト.表情.通常)
 
-
+func アニメーション中に付き重力無効(する:bool=true)->void:
+	super(する)
+	移動操作ロック=する
 func プレイヤーセーブ()->void:
+	
 	super()
 	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.ディメンション,レベル制御.ディメンション返し())
-	
+	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.ディメンション階層,レベル制御.ディメンション階層返し())

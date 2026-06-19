@@ -7,6 +7,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 light_color = Color(1, 0.94, 0.9, 1)
 light_energy = 1.863
 shadow_enabled = true
+shadow_opacity = 0.8
 script = ExtResource("1_n5qdj")
 day_length = 3600.0
 top = Color(0.3355, 0.42487502, 0.55, 1)

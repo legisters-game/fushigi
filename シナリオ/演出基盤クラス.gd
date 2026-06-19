@@ -9,10 +9,16 @@ signal 演出完了通知()
 @export_file("*.tscn") var 表示チャンク:Array[String]
 @export var セリフ集: Array[セリフオブジェクト]
 @export var  削除対象:Array[Node]
+@export var 再生前条件更新フラグ名:String
+@export var 再生前条件フラグ加算数:int
+@export var 条件フラグ加算から上書き:bool
+
+
 @export var 再生後フラグ:String
 @export var 再生後発生ミッション:Array[ミッションデータ]
 @export var プレイヤー再生前ワープ:bool
 @export var プレイヤー再生後ワープ:bool
+
 @onready var アニメーション: AnimationPlayer = $AnimationPlayer
 @onready var カメラ: Camera3D = $"オブジェクト中心/演出カメラ"
 
@@ -35,6 +41,11 @@ func _ready() -> void:
 			#print(i)
 	if not Engine.is_editor_hint():
 		if 都市ルート:
+			if 再生前条件更新フラグ名!="":
+				if 条件フラグ加算から上書き:
+					データロガー.ミッション条件フラグ保存(再生前条件更新フラグ名,再生前条件フラグ加算数)
+				else:
+					データロガー.ミッション条件フラグ保存(再生前条件更新フラグ名,データロガー.ミッション条件取得(再生前条件更新フラグ名)+再生前条件フラグ加算数)
 			for アクセスノード名:String in 表示リスト:
 				if 都市ルート.has_node(アクセスノード名):
 					var チャンクルート:チャンク管理クラス=都市ルート.get_node(アクセスノード名)

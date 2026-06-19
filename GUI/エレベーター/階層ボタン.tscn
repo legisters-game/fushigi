@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cysalgnd8ap6g"]
+
+[ext_resource type="Script" uid="uid://c80u2o348yvsh" path="res://GUI/エレベーター/階層ボタン.gd" id="1_eray5"]
+
+[node name="Button" type="Button" unique_id=1765940994]
+text = "１階："
+script = ExtResource("1_eray5")

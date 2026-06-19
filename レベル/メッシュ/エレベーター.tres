@@ -1,0 +1,150 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://d4irbtlxdj1bv"]
+
+[ext_resource type="Material" uid="uid://bnsym45xakub7" path="res://マテリアル/minecraft_block-red_concrete.tres" id="1_l0drn"]
+[ext_resource type="Material" uid="uid://de683lpwl8sc8" path="res://マテリアル/extlights_block-light_modern_ceil_square_black.tres" id="2_l0drn"]
+[ext_resource type="Material" uid="uid://mlofpfcau47" path="res://マテリアル/movingelevators_blocks-display.tres" id="3_7lpvd"]
+[ext_resource type="Material" uid="uid://cspnqicxpusf4" path="res://マテリアル/minecraft_block-yellow_concrete.tres" id="4_l0drn"]
+[ext_resource type="Material" uid="uid://bpmwl5t70f2rb" path="res://マテリアル/movingelevators_blocks-elevator.tres" id="5_s21ms"]
+[ext_resource type="Material" uid="uid://b35a5bmxoucjr" path="res://マテリアル/minecraft_block-orange_concrete.tres" id="6_7lpvd"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u7g40"]
+_surfaces = [{
+"aabb": AABB(-0.15528631, -0.17554568, -0.25047338, 0.3499999, 0.3499999, 0.20000003),
+"format": 34896613377,
+"index_count": 192,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQAAAAFAAMAAQAEAAYABgAEAAUAAQAGAAIAAgAGAAcAAgAHAAgACQACAAgACQAKAAIABgAFAAsAAAALAAUACgALAAAACQAMAAoACgAMAAsACQANAAwADgAGAAwADgAMAA8AEAANABEAEAASAA0AEwAPABIAEwASABQAEwAUABUAFgAPABMAEwAVABcAFgAYAA8AGQAOABgAFQAaABkAFQAZABsAHAAaAB0AHAAHABoAGwAZAB4AGQAYAB4AGwAeAB8AHwAXABsAHwAeABgAHwAWABcAHwAYABYAIAAYABYAIAAhABgAFgAYACIAFgAiACMAIwAiACQAIwAkACUAJQAmACAAGAAnACIAGAALACcAJQAoACYAKAAkACkAKgApACcAKAApACsAKgAnACwALAAnAAsALAALAAAAAAALAC0AAAAtAC4ALgArACoALgAvACsAKAArAC8AKAAvACYALwAtACEALwAhACYA"),
+"name": "minecraft_block-red_concrete",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("bNuSJP//AAAAAAAA//8AAAAAkiT//wAAbNsAAP//AAAAAAAAAAAAAGzbAAAAAAAAAACSJAAAAAAAALZtAAAAAAAAtm3//wAAkiS2bf//AACSJJIk//8AAGzbkiQAAAAAkiSSJAAAAACSJLZtAAAAAAAAbNsAAAAAkiRs2wAAAACSJEiS/38AAJIktm3/fwAAkiRIkgAAAACSJGzb//8AAJIkSJL//wAAAABIkv//AABs22zb//8AAAAAbNv//wAAbNts2wAAAAAAAP//AAAAAAAASJIAAAAAAAD/////AAAAALZt/38AAAAASJL/fwAAbNv//wAAAABs2/////8AAGzb2rb//wAAbNvatgAAAAD//2zbAAAAAP//bNv//wAA///atgAAAAD//9q2//8AAGzb2rb/PwAA//+SJAAAAAD//9q2/z8AAP//JEkAAAAA//8kSf//AAD//yRJ/z8AAP//kiT//wAAbNskSQAAAABs2yRJ//8AAGzbJEn/PwAA")
+}, {
+"aabb": AABB(-0.093286514, -0.11354588, -0.25047338, 0.2249999, 0.2249999, 0.006000027),
+"format": 34896613377,
+"index_count": 144,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQAAwAEAAEAAgAFAAAABQADAAAAAgAEAAYAAgAGAAUAAwAHAAQABgAEAAcABQAHAAMABgAHAAUACAAJAAoACAALAAkACgAJAAwACwAMAAkACgANAAgADQALAAgACgAMAA4ACgAOAA0ACwAPAAwADgAMAA8ADQAPAAsADgAPAA0AEAARABIAEAATABEAEgARABQAFAARABMAFQAQABIAFQATABAAEgAUABYAFQASABYAFAATABcAFQAXABMAFgAUABcAFgAXABUAGAAZABoAGAAbABkAGgAZABwAHAAZABsAHQAYABoAHQAbABgAGgAcAB4AHQAaAB4AHAAbAB8AHQAfABsAHgAcAB8AHgAfAB0A"),
+"name": "extlights_block-light_modern_ceil_square_black",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("AAD/////AABxHP//AAAAAHEc/////wAAAAD//wAAAABxHI3jAAAAAAAAjeP//wAAcRyN4///AAAAAI3jAAAAAI3j/////wAA/////wAAAAD///////8AAI3j//8AAAAA//+N4wAAAACN443j//8AAP//jeP//wAAjeON4wAAAABxHAAA//8AAAAAAAAAAAAAAAAAAP//AABxHAAAAAAAAAAAcRwAAAAAcRxxHP//AAAAAHEc//8AAHEccRwAAAAA//8AAP//AACN4wAAAAAAAI3jAAD//wAA//8AAAAAAACN43EcAAAAAP//cRz//wAAjeNxHP//AAD//3EcAAAAAA==")
+}, {
+"aabb": AABB(-0.15528631, -0.025545582, -0.15047334, 0.049999714, 0.049999714, 0.049999982),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"name": "movingelevators_blocks-display",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD//wAAAAAAAP//AAD//wAA/////wAAAAAAAAAA//8AAAAA//8AAAAAAAD/////AAAAAAAAAAAAAA==")
+}, {
+"aabb": AABB(-0.1052866, -0.12554596, -0.050473347, 0.3000002, 0.25, 0.049999997),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAUABAAFAAYABwAEAAgABwAIAAkACgADAAcACwADAAoACwAMAAMACgAHAA0ADQAHAA4ADwALAAoADwAKAA0ADwAMAAsADQAOAA8ADwAOAAwA"),
+"name": "minecraft_block-yellow_concrete",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAzMwAAAABU1QAAAAAAAFTVMzMAAAAAAAAAAAAAAAAAAMzMAAAAAP//MzMAAAAA///MzAAAAAAAAP//AAAAAFTVzMwAAAAAVNX//wAAAAAAAAAA//8AAP//AAD//wAA//8AAAAAAAAAAP////8AAP////8AAAAA////////AAA=")
+}, {
+"aabb": AABB(-0.15528631, -0.025545582, -0.10047336, 0.049999714, 0.049999714, 0.050000012),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAQAEAAMAAAAFAAEAAAAGAAUAAAAHAAYA"),
+"name": "movingelevators_blocks-elevator",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAAAAAAA//8AAAAA/////wAAAAD//wAAAAAAAAAAAAAAAP//AAD//wAA//8AAAAAAAD/////AAAAAA==")
+}, {
+"aabb": AABB(-0.1052866, -0.12554596, -0.30047333, 0.25, 0.25, 0.049999952),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAAAEAAEAAwACAAUABQACAAEABgAAAAMABQAGAAMABgAEAAAABQABAAcABQAHAAYABwABAAQABwAEAAYA"),
+"name": "minecraft_block-orange_concrete",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAD//wAAAAAAAP////8AAAAAAAD/////AAAAAAAAAAAAAP///////wAAAAAAAP//AAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "エレベーター_エレベーター"
+_surfaces = [{
+"aabb": AABB(-0.15528631, -0.17554568, -0.25047338, 0.3499999, 0.3499999, 0.20000003),
+"attribute_data": PackedByteArray("VRWZmVSV/39UlZmZVRX/f/9/mZmp6jIzqeqZmf9/MjP/f5mZVJUyM1SVmZn/fzIz/3+ZmVSVMjNUlZmZ/38yM1UVmZlUlTIzVJWZmVUVMjP/f5mZ////f///mZn/f/9//38ys1SV/39UlTKz/3//f/9/MrNUlf9/VJUys/9//39VFZmZVJX/f1SVmZlVFf9//3/MzFSV/39UlczM/3//f/9///9Ulf9/VJX///9//3//f///VJX/f1SV////f/9//3+Zmf///3///5mZ/3//f/9/mZlUlTIzVJWZmf9/MjP/f5mZVJXMTFSVmZn/f8xM/3+Zmf//MjP//5mZ/38yM6pqmZlUlTIzVJWZmapqMjP/f5mZVJVmZlSVmZn/f2ZmqmqZmVSVMjNUlZmZqmoyM/9/mZlUlcxMVJWZmf9/zEz/f5mZqqoyM6qqmZn/fzIz/3+ZmVSVZmZUlZmZ/39mZv9/mZn/vzIz/7+Zmf9/MjP/f5mZVJUyM1SVmZn/fzIzqiqZmVSVMjNUlZmZqioyM/9/mZlUlTIzVJWZmf9/MjP/f5mZ/7//f/+/mZn/f/9//3+ZmVSVMjNUlZmZ/38yM/9/mZlUlTIzVJWZmf9/MjP/f5mZVJUyM1SVmZn/fzIzVFWZmVSV/39UlZmZVFX/f/9/mZlUlTIzVJWZmf9/MjM="),
+"format": 34896613399,
+"index_count": 192,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0AYABhAGIAYABjAGEAZABlAGYAZABnAGUAaABpAGoAaABrAGkAbABtAG4AbABvAG0AcABxAHIAcABzAHEAdAB1AHYAdAB3AHUAeAB5AHoAeAB7AHkAfAB9AH4AfAB/AH0A"),
+"material": ExtResource("1_l0drn"),
+"name": "minecraft_block-red_concrete",
+"primitive": 3,
+"uv_scale": Vector4(12, 10, 0, 0),
+"vertex_count": 128,
+"vertex_data": PackedByteArray("bNuSJP////8AAAAA/////wAAkiT/////bNsAAP////+SJJIk////v2zbkiQAAP+/bNuSJP///7+SJJIkAAD/vwAAAAD//1TVAACSJAAAVNUAAJIk//9U1QAAAAAAAFTVbNuSJP//VNVs2wAAAABU1WzbAAD//1TVbNuSJAAAVNVs2wAA/////wAAAAAAAP//AAAAAP////9s2wAAAAD//wAAkiQAAP//bNsAAAAA//9s25IkAAD//wAAAAAAAP//kiS2bf////8AAJIk/////wAAtm3/////kiSSJP////+SJGzb/////wAASJL/////AABs2/////+SJEiS/////2zb////////AABs2/////8AAP///////2zbbNv////////atv8///9s2yRJ/z///2zb2rb/P/////8kSf8///8AAGzbAAD//5IkkiQAAP//kiRs2wAA//8AAJIkAAD//2zbbNsAAP////+SJAAA/////2zbAAD//2zbkiQAAP//AAD//wAA//9s22zbAAD//2zb//8AAP//AABs2wAA/////5Ik/////2zbkiQAAP//bNuSJP///////5IkAAD//2zbJEn///+///8kSf8//7///yRJ////v2zbJEn/P/+/AAD//////79s2///AAD/v2zb//////+/AAD//wAA/7+SJLZt//9U1ZIkkiQAAFTVkiSSJP//VNWSJLZtAABU1ZIkSJL/f1TVkiS2bQAAVNWSJLZt/39U1ZIkSJIAAFTVkiRs2///VNWSJEiSAABU1ZIkSJL//1TVkiRs2wAAVNX//9q2/////2zb2rb/P///bNvatv///////9q2/z///wAAkiT//1TVAAC2bQAAVNUAALZt//9U1QAAkiQAAFTVAAC2bf9/VNUAAEiSAABU1QAASJL/f1TVAAC2bQAAVNUAAEiS//9U1QAA//8AAFTVAAD/////VNUAAEiSAABU1WzbbNv///+///9s2wAA/7///2zb////v2zbbNsAAP+/bNts2/////+SJGzbAAD//5IkbNv/////bNts2wAA//9s25Ik//9U1WzbJEkAAFTVbNskSf//VNVs25IkAABU1WzbJEn/P1TVbNvatgAAVNVs29q2/z9U1WzbJEkAAFTVbNvatv//VNVs22zbAABU1WzbbNv//1TVbNvatgAAVNVs2/////9U1WzbbNsAAFTVbNts2///VNVs2///AABU1f//JEn//1TV//+SJAAAVNX//5Ik//9U1f//JEkAAFTV///atv8/VNX//yRJAABU1f//JEn/P1TV///atgAAVNX//2zb//9U1f//2rYAAFTV///atv//VNX//2zbAABU1f9//3//f/9//3//f/9//3////9/////f////3////9/VNVU1VTVVNVU1VTVVNVU1aqqVFWqqlRVqqpUVaqqVFX/f/8//3//P/9//z//f/8/////f////3////9/////f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3////9/////f////3////9/////f////3////9/////f////3////9/////f////3//f/8//3//P/9//z//f/8/////f////3////9/////f////3////9/////f////3+qqlRVqqpUVaqqVFWqqlRVqqpUVaqqVFWqqlRVqqpUVaqqVFWqqlRVqqpUVaqqVFX/f/8//3//P/9//z//f/8/VNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTV////f////3////9/////f/9//z//f/8//3//P/9//z9U1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNWqqlRVqqpUVaqqVFWqqlRVqqpUVaqqVFWqqlRVqqpUVaqqVFWqqlRVqqpUVaqqVFWqqlRVqqpUVaqqVFWqqlRV")
+}, {
+"aabb": AABB(-0.093286514, -0.11354588, -0.25047338, 0.2249999, 0.2249999, 0.006000027),
+"attribute_data": PackedByteArray("/7//T////z////9P/7//P/+//0////8/////T/+//z//P/9P/3//P/9//0//P/8//z//T/9//z//f/9P/z//P/9/AAD/v/8//78AAP9//z//fwAA/7//P/+/AAD/f/8//38AAP+//z//vwAA/3//P/9/AAD/v/8//78AAP9//z//P/9P/3//P/9//0//P/8//z//T/9//z//f/9P/z//P/9/AAD/P/8//z8AAP9//z//fwAA/z//P/8/AAD/f/8//38AAP8//z//PwAA/3//P/9/AAD/P/8//z8AAP9//z//f/9P/7//P/+//0//f/8//3//T/+//z//v/9P/3//PwAA/0//P/8//z//TwAA/z8AAP9P/z//P/8//08AAP8//7//T////z////9P/7//P/+//0////8/////T/+//z8AAP9P/z//P/8//08AAP8/AAD/T/8//z//P/9PAAD/P/9//0//v/8//7//T/9//z//f/9P/7//P/+//0//f/8/"),
+"format": 34896613399,
+"index_count": 144,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0A"),
+"material": ExtResource("2_l0drn"),
+"name": "extlights_block-light_modern_ceil_square_black",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 96,
+"vertex_data": PackedByteArray("AAD//////79xHP//AAD/v3Ec//////+/AAD//wAA/7+N4///////v/////8AAP+//////////7+N4///AAD/v3EcAAD/////AAAAAAAA//8AAAAA/////3EcAAAAAP////8AAP////+N4wAAAAD//43jAAD///////8AAAAA//9xHHEc//8AAAAAAAD//wAAAABxHP//AABxHAAA//8AAP//cRz//wAAjeMAAP//AACN43Ec//8AAP//AAD//wAAcRz/////AAAAAI3j//8AAAAA/////wAAcRyN4///AAD///////8AAI3jjeP//wAAjeP/////AAD//43j//8AAHEcjeP/////AACN4wAA//8AAI3j/////3EcjeMAAP////+N4/////+N443jAAD//43jjeP///////+N4wAA//8AAHEcAAD//3EcAAAAAP//cRxxHAAA//8AAAAAAAD//43jcRwAAP////8AAAAA/////3EcAAD//43jAAAAAP//AAD//wAA//9xHI3jAAD//3Ec//8AAP//AACN4wAA//+N4///AAD/////jeMAAP///////wAA//+N443jAAD//43jAAD//1TVjeNxHAAAVNWN43Ec//9U1Y3jAAAAAFTVjeON4///VNWN4///AABU1Y3j/////1TVjeON4wAAVNX//3Ec//9U1f//AAAAAFTV//8AAP//VNX//3EcAABU1f///////1TV//+N4wAAVNX//43j//9U1f////8AAFTVAABxHP///79xHHEcAAD/v3EccRz///+/AABxHAAA/7+N43Ec////v///cRwAAP+///9xHP///7+N43EcAAD/v3EccRz//1TVcRwAAAAAVNVxHAAA//9U1XEccRwAAFTVcRz/////VNVxHI3jAABU1XEcjeP//1TVcRz//wAAVNUAAAAA//9U1QAAcRwAAFTVAABxHP//VNUAAAAAAABU1QAAjeP//1TVAAD//wAAVNUAAP////9U1QAAjeMAAFTV////f////3////9/////f////3////9/////f////3//f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//P/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9///9U1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1aqqVFWqqlRVqqpUVaqqVFWqqlRVqqpUVaqqVFWqqlRV////f////3////9/////f////3////9/////f////3+qqlRVqqpUVaqqVFWqqlRVqqpUVaqqVFWqqlRVqqpUVVTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTV")
+}, {
+"aabb": AABB(-0.15528631, -0.025545582, -0.15047334, 0.049999714, 0.049999714, 0.049999982),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAAAA/////wAA/////wAAAAA="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": ExtResource("3_7lpvd"),
+"name": "movingelevators_blocks-display",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////VNX//wAAAABU1f//AAD//1TV/////wAAVNUAAAAA//9U1QAA//8AAFTVAAD/////VNUAAAAAAABU1aqqVFWqqlRVqqpUVaqqVFVU1VTVVNVU1VTVVNVU1VTV")
+}, {
+"aabb": AABB(-0.1052866, -0.12554596, -0.050473347, 0.3000002, 0.25, 0.049999997),
+"attribute_data": PackedByteArray("/3+Zmanq/3+p6pmZ/3//f/9/zMz///9////MzP9//3//f5mZqer/f6nqmZn/f/9/VRX//1SV/39Ulf//VRX/f1UVmZlUlf9/VJWZmVUV/3//f5mZqer/f6nqmZn/f/9//3+Zmf///3///5mZ/3//f6oqmZlUlf9/VJWZmaoq/38="),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0A"),
+"material": ExtResource("4_l0drn"),
+"name": "minecraft_block-yellow_concrete",
+"primitive": 3,
+"uv_scale": Vector4(12, 10, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("AAAzMwAA//9U1QAAAAD//1TVMzMAAP//AAAAAAAA//8AAMzMAAD/////MzMAAP/////MzAAA//8AADMzAAD//wAA//8AAP//VNXMzAAA//9U1f//AAD//wAAzMwAAP////////////8AAAAA/////wAA//////////8AAP///////wAA/////wAAAAAAAP//AAAAAP///////wAAAAD//wAAAAD//1TVAAD//wAAVNUAAP////9U1QAAAAAAAFTVAAD//////7//////AAD/v/////////+/AAD//wAA/7////////9U1f//AAAAAFTV//8AAP//VNX/////AABU1f///3////9/////f////3////9/////f////3////9/////f////3////9/////f/9//3//f/9//3//f/9//3//f/8//3//P/9//z//f/8/VNVU1VTVVNVU1VTVVNVU1f///3////9/////f////3+qqlRVqqpUVaqqVFWqqlRV")
+}, {
+"aabb": AABB(-0.15528631, -0.025545582, -0.10047336, 0.049999714, 0.049999714, 0.050000012),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAAAA/////wAA/////wAAAAAAAP////8AAP////8AAAAA"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkA"),
+"material": ExtResource("5_s21ms"),
+"name": "movingelevators_blocks-elevator",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("//////////8AAAAA/////wAA//////////8AAP////////////9U1f//AAAAAFTV//8AAP//VNX/////AABU1QAAAAD//1TVAAD//wAAVNUAAP////9U1QAAAAAAAFTV/3//f/9//3//f/9//3//f6qqVFWqqlRVqqpUVaqqVFVU1VTVVNVU1VTVVNVU1VTV")
+}, {
+"aabb": AABB(-0.1052866, -0.12554596, -0.30047333, 0.25, 0.25, 0.049999952),
+"attribute_data": PackedByteArray("/3///////3///////3//f5kZ//+Zmf9/mZn//5kZ/3+ZGZmZmZn/f5mZmZmZGf9//3+Zmf///3///5mZ/3//f/9/mZn///9///+Zmf9//3+ZGZmZmZn/f5mZmZmZGf9/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": ExtResource("6_7lpvd"),
+"name": "minecraft_block-orange_concrete",
+"primitive": 3,
+"uv_scale": Vector4(10, 10, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//wAA/////wAAAAD///////8AAP//AAAAAAAA/////////////wAAAAD/////AAD//////////wAA////////AAD/////AAAAAAAA//8AAAAA////////AAAAAP//AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAP//////v/////8AAP+//////////78AAP//AAD/v////////1TV//8AAAAAVNX//wAA//9U1f////8AAFTV////f////3////9/////f/9//3//f/9//3//f/9//3//f/8//3//P/9//z//f/8/VNVU1VTVVNVU1VTVVNVU1f///3////9/////f////3+qqlRVqqpUVaqqVFWqqlRV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_u7g40")

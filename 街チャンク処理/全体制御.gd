@@ -3,6 +3,8 @@ class_name レベル制御クラス
 var 都市プレイヤー座標:Vector3
 #var 全体都市:Node3D
 var ディメンション:String
+var ディメンション階層:int
+
 var 読み込み中チャンク:Array[String]
 var 読み込みチャンクシグナル有効:bool
 
@@ -17,9 +19,11 @@ func _ready() -> void:
 	
 	
 	ディメンション=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.ディメンション,"オープンワールド")
+	ディメンション階層=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.ディメンション階層,0)
 	
 	if ディメンション!="オープンワールド":
-		レベル移動(ディメンション,0,true)
+		レベル移動(ディメンション,0,ディメンション階層,true)
+		
 		
 		await レベル読み込み完了シグナル
 		get_tree().get_first_node_in_group("プレイヤー").プレイヤーロード()
@@ -40,7 +44,7 @@ func _ready() -> void:
 		await get_tree().create_timer(50).timeout
 		データロガー.全保存()
 
-func レベル移動(レベル:String, 番号:int=0,フェードアウトオフ:bool=false)->void:
+func レベル移動(レベル:String, 番号:int=0,階層:int=0,フェードアウトオフ:bool=false)->void:
 	#シーンの演出
 	get_tree().get_first_node_in_group("プレイヤー").レベル移動中=true
 	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=true
@@ -52,20 +56,31 @@ func レベル移動(レベル:String, 番号:int=0,フェードアウトオフ:
 	get_tree().get_first_node_in_group("プレイヤー").簡易移動停止()
 	var レベルシーン:PackedScene=load(レベル)
 	var レベルルート:レベル基礎クラス=レベルシーン.instantiate()
-	for i in get_node("レベル").get_children():
+	for i:Node in get_node("レベル").get_children():
 		i.queue_free()
 	get_node("レベル").add_child(レベルルート)
+	レベルルート.階層有効(階層)
+	#エレベーターの場合
+	if レベルルート is エレベーターレベルクラス:
+		レベルルート.初期化(番号)
+		番号=0
+		データロガー.ディメンションセーブロック=true
+	else:
+		データロガー.ディメンションセーブロック=false
+	
 	if has_node("都市3d仮"):
 		var 全体都市=get_node("都市3d仮")
 		remove_child(全体都市)
 	単純ワープ(レベルルート.テレポート先[番号])
 	レベル読み込み完了シグナル.emit()
 	ディメンション=レベル
+	ディメンション階層=階層
 	get_tree().get_first_node_in_group("プレイヤー").プレイヤーセーブ()
 	データロガー.全保存()
 	get_node("Control/画面フェード").フェードイン()
 	await get_tree().create_timer(2).timeout
 	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
+	get_tree().get_first_node_in_group("プレイヤー").操作ロック前位置=get_tree().get_first_node_in_group("プレイヤー").global_position
 	get_tree().get_first_node_in_group("プレイヤー").レベル移動中=false
 	
 func 単純ワープ(ワープ先マーカー:Marker3D)->void:
@@ -101,6 +116,8 @@ func 都市戻り(プレイヤー座標マーカー:Marker3D=null)->void:
 func ディメンション返し()->String:
 	return ディメンション
 
+func ディメンション階層返し()->int:
+	return ディメンション階層
 
 	
 func 読み込みチャンクシグナル送信スタート()->void:
@@ -141,7 +158,7 @@ func シナリオ演出実行(演出パス: String):
 		get_tree().get_first_node_in_group("プレイヤー").move_direction=Vector3.ZERO
 		
 
-		add_child(演出インスタンス)
+		get_node("演出ルート").add_child(演出インスタンス)
 			
 		# 演出完了時の後処理を接続
 		演出インスタンス.演出完了通知.connect(_演出終了後の後処理.bind(演出インスタンス))
@@ -155,10 +172,11 @@ func シナリオ演出実行(演出パス: String):
 			if not 読み込み中チャンク.is_empty():
 				get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードイン待機(self)
 				await 読み込み完了シグナル
-			else:
-				await get_tree().create_timer(1).timeout
-				get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードイン()
+		elif has_node("都市3d仮") and 演出インスタンス.表示リスト.is_empty():
+			await get_tree().create_timer(1).timeout
+			get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードイン()
 		# 実行！
+		#await get_tree().create_timer(0.1).timeout
 		get_tree().get_first_node_in_group("UI").ムービー中非表示()
 		get_node("NPC制御").hide()
 		get_tree().get_first_node_in_group("プレイヤー").hide()
