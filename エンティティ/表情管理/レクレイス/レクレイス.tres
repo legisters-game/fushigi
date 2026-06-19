@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="表情オブジェクト" format=3 uid="uid://b5nx0soieo1qd"]
+
+[ext_resource type="Script" uid="uid://bw6rnc83gmof4" path="res://拡張リソース/表情オブジェクト.gd" id="1_hvc3v"]
+[ext_resource type="Texture2D" uid="uid://diy1qbve8cgei" path="res://エンティティ/表情管理/レクレイス/レクレイス.png" id="2_0jdro"]
+[ext_resource type="Texture2D" uid="uid://b8x1qq5pcekrn" path="res://エンティティ/表情管理/レクレイス/レクレイス閉.png" id="3_xo26o"]
+
+[resource]
+script = ExtResource("1_hvc3v")
+"通常" = ExtResource("2_0jdro")
+"閉" = ExtResource("3_xo26o")
+metadata/_custom_type_script = "uid://bw6rnc83gmof4"

@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://d0qsrg3veh0yn"]
+
+[ext_resource type="Script" uid="uid://bkyis8py715oh" path="res://街チャンク処理/全体制御.gd" id="1_fu3hw"]
+[ext_resource type="PackedScene" uid="uid://6jh6664vjvwy" path="res://街チャンク処理/都市3d仮.tscn" id="1_p3qju"]
+[ext_resource type="PackedScene" uid="uid://buwi56bftrlec" path="res://エンティティ/プレイヤー/プレイヤー.tscn" id="2_lgdby"]
+[ext_resource type="PackedScene" uid="uid://nfkdvrm1gp82" path="res://カメラ/カメラ制御.tscn" id="3_5dlex"]
+[ext_resource type="Script" uid="uid://ck32fe4yvp4h8" path="res://GUI/時間.gd" id="5_10o88"]
+[ext_resource type="PackedScene" uid="uid://s36hn6agtol7" path="res://GUI/メッセージボックス/メッセージボックス.tscn" id="6_4x66x"]
+[ext_resource type="PackedScene" uid="uid://cq7xmps5vwqtp" path="res://電車/インスタンス管理/先頭列車.tscn" id="6_sj3gr"]
+[ext_resource type="PackedScene" uid="uid://b3guj3xr1as0a" path="res://GUI/画面フェード/画面フェード.tscn" id="7_sj3gr"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6sw3j"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_8rf30"]
+sky_material = SubResource("ProceduralSkyMaterial_6sw3j")
+
+[sub_resource type="Environment" id="Environment_prypv"]
+background_mode = 2
+sky = SubResource("Sky_8rf30")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="Curve3D" id="Curve3D_8rf30"]
+closed = true
+bake_interval = 212.42
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -139.98555, 0, 128.90813, 0, 0, 0, 0, 0, 0, 59.42362, 0, 182.5351, 0, 0, 0, 0, 0, 0, 167.07495, 0, 161.26605, 0, 0, 0, 0, 0, 0, 263.91937, 0, 60.29, 0, 0, 0, 0, 0, 0, 261.98328, 0, -61.39289, 0, 0, 0, 0, 0, 0, 194.38977, 0, -226.99146, 0, 0, 0, 0, 0, 0, 25.378147, 0, -124.950905, 0, 0, 0, 0, 0, 0, -121.62793, 0, -202.37607, 0, 0, 0, 0, 0, 0, -241.45375, 0, -29.371078, 0, 0, 0, 0, 0, 0, -190.35954, 0, 72.18383, 0, 0, 0, 0, 0, 0, -113.52529, 4.386902e-05, 47.4091, 0, 0, 0, 0, 0, 0, -58.029697, 4.386902e-05, 47.66224, 0, 0, 0, 0, 0, 0, -76.14374, 4.386902e-05, 66.20506, 0, 0, 0, 0, 0, 0, -67.44446, 4.386902e-05, 68.606476, 0, 0, 0, 0, 0, 0, -78.77005, 4.386902e-05, 74.99303),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 15
+
+[node name="電車実験" type="Node3D" unique_id=1134364023]
+script = ExtResource("1_fu3hw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1340935828]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1770362208]
+environment = SubResource("Environment_prypv")
+
+[node name="都市3d仮" parent="." unique_id=1006423857 instance=ExtResource("1_p3qju")]
+
+[node name="Control" type="Control" parent="." unique_id=48858334 groups=["UI"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="時間" type="Control" parent="Control" unique_id=1568317424]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -255.59003
+offset_top = -50.0
+offset_right = -5.5892334
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("5_10o88")
+
+[node name="ProgressBar" type="HSlider" parent="Control/時間" unique_id=1920656608]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+max_value = 1000.0
+editable = false
+
+[node name="Label" type="Label" parent="Control/時間" unique_id=79838171]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "時間"
+horizontal_alignment = 1
+
+[node name="メッセージボックス" parent="Control" unique_id=1796908698 instance=ExtResource("6_4x66x")]
+layout_mode = 1
+
+[node name="画面フェード" parent="Control" unique_id=298488208 instance=ExtResource("7_sj3gr")]
+layout_mode = 1
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1867969318]
+
+[node name="Path3D" type="Path3D" parent="Node3D" unique_id=2027480841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.505, 16.045, 0)
+curve = SubResource("Curve3D_8rf30")
+
+[node name="先頭列車" parent="Node3D/Path3D" unique_id=716878262 instance=ExtResource("6_sj3gr")]
+transform = Transform3D(-0.74052936, -3.9765874e-07, 0.672024, 0, 1, 5.9173294e-07, -0.672024, 4.3819563e-07, -0.74052936, -138.77774, 0, 129.23639)
+progress = 2.431514
+
+[node name="プレイヤー相対位置" type="Node3D" parent="." unique_id=1414897882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 0, 0, 0)
+
+[node name="プレイヤー" parent="プレイヤー相対位置" unique_id=1396265163 node_paths=PackedStringArray("レベル制御", "メッセージボックス", "追尾物") groups=["プレイヤー"] instance=ExtResource("2_lgdby")]
+"レベル制御" = NodePath("../..")
+"メッセージボックス" = NodePath("../../Control/メッセージボックス")
+"追尾物" = NodePath("../../Node3D/Path3D/先頭列車/MeshInstance3D")
+
+[node name="カメラ制御" parent="プレイヤー相対位置" unique_id=629122187 node_paths=PackedStringArray("目標") instance=ExtResource("3_5dlex")]
+transform = Transform3D(1, 0, 0, 0, 0.76040614, -0.6494482, 0, 0.6494482, 0.76040614, 0, 0, 0)
+"目標" = NodePath("../プレイヤー")
+"速さ" = 5.0
+"感度" = 9.0
+
+[editable path="Node3D/Path3D/先頭列車"]

@@ -108,6 +108,7 @@ size = Vector3(1, 1, 0.43151855)
 script = ExtResource("1_o2cbv")
 "アニメツリー" = NodePath("AnimationTree")
 "攻撃判定" = NodePath("Area3D")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=57884629]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83489835, 0)

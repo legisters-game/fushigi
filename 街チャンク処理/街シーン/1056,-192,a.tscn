@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dunk7b3n3p2st" path="res://街チャンク処理/パーツ/街メッシュルート.gd" id="2_efdy3"]
 [ext_resource type="PackedScene" uid="uid://cy1sm8tj6b2n2" path="res://街チャンク処理/パーツ/当たり判定制御.tscn" id="3_gpubx"]
 [ext_resource type="Shape3D" uid="uid://wrqcf2204fhl" path="res://街チャンク処理/街コリジョン/1056,-192.tres" id="4_4t1y2"]
+[ext_resource type="PackedScene" uid="uid://cukax37ntwqle" path="res://街チャンク処理/パーツ/透明壁.tscn" id="5_rq40v"]
 [ext_resource type="PackedScene" uid="uid://bbfh83jgah2q1" path="res://街チャンク処理/パーツ/グローバルイルミネーション.tscn" id="5_s0nr2"]
 [ext_resource type="VoxelGIData" uid="uid://ctk28nv6onaja" path="res://街チャンク処理/街GI/1056,-192,グローバルイルミネーション_data.res" id="6_owlfk"]
 [ext_resource type="PackedScene" uid="uid://uknsp7tmjptt" path="res://街チャンク処理/パーツ/オクルージョンカリング.tscn" id="7_4drcf"]
@@ -31,10 +32,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55628204, 0.052614212, -0.0
 shape = SubResource("BoxShape3D_fb7ve")
 
 [node name="地形当たり判定" type="StaticBody3D" parent="1056,-192,a/中心/当たり判定制御" unique_id=42008574]
+collision_layer = 3
+collision_mask = 3
 
 [node name="地形コリジョン" type="CollisionShape3D" parent="1056,-192,a/中心/当たり判定制御/地形当たり判定" unique_id=687661539]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.61872, 11.752614, 3.4770176)
 shape = ExtResource("4_4t1y2")
+
+[node name="壁" type="StaticBody3D" parent="1056,-192,a/中心/当たり判定制御" unique_id=850970089]
+
+[node name="透明壁" parent="1056,-192,a/中心/当たり判定制御/壁" unique_id=491570466 instance=ExtResource("5_rq40v")]
+transform = Transform3D(6.17, 0, 0, 0, 0.17, 0, 0, 0, 1, -0.115501404, 2.0586958, -0.33997202)
+
+[node name="透明壁2" parent="1056,-192,a/中心/当たり判定制御/壁" unique_id=1280023256 instance=ExtResource("5_rq40v")]
+transform = Transform3D(2.35, 0, 0, 0, 1.91, 0, 0, 0, 1, 4.0298157, 1.229187, -0.33997202)
+
+[node name="透明壁3" parent="1056,-192,a/中心/当たり判定制御/壁" unique_id=1051127845 instance=ExtResource("5_rq40v")]
+transform = Transform3D(1.62, 0, 0, 0, 1.91, 0, 0, 0, 1, 3.6658897, -2.6698952, -0.33997083)
 
 [node name="グローバルイルミネーション" parent="1056,-192,a/中心" unique_id=754016580 instance=ExtResource("5_s0nr2")]
 transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.56002426, 0, -0.048757553)

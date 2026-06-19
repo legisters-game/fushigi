@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://dm3ahtnsoqcmh"]
+
+[ext_resource type="ArrayMesh" uid="uid://csodhmdeqkhcs" path="res://電車/モデル/Express 1000_右前ドア.obj" id="1_35ls0"]
+[ext_resource type="Script" uid="uid://dur11wac84ycl" path="res://電車/ドア/ドア機構.gd" id="1_s1jm8"]
+[ext_resource type="ArrayMesh" uid="uid://cjjn8mus7c2oo" path="res://電車/モデル/Express 1000_左前ドア.obj" id="2_s1jm8"]
+[ext_resource type="ArrayMesh" uid="uid://djro1s4vwnisg" path="res://電車/モデル/Express 1000_貫通扉.obj" id="3_6tie1"]
+[ext_resource type="ArrayMesh" uid="uid://b0ped83v5sg5x" path="res://電車/モデル/Express 1000_車体.obj" id="4_ail0y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1jm8"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_s1jm8"]
+points = PackedVector3Array(-133, 202.14151, -161.77936, -133, 211.03073, -161.78488, -136, 202.14151, -161.77936, -133, 14.060143, -161.78488, -133, 211.05002, -216.79097, -136, 211.03073, -161.78488, -136, 14.060143, -161.78488, -133, 14.060143, -216.79097, -133.05139, 211.05002, -217.1837, -136, 211.05002, -216.79097, -136, 14.060143, -216.79097, -133.05139, 14.060143, -217.1837, -133.20116, 211.05002, -217.54326, -135.9492, 211.05002, -217.1837, -135.9492, 14.060143, -217.1837, -133.20116, 14.060143, -217.54326, -133.4396, 211.05002, -217.85303, -135.79913, 211.05002, -217.54326, -135.79913, 14.060143, -217.54326, -133.4396, 14.060143, -217.85303, -133.75029, 211.05002, -218.09088, -135.56068, 211.05002, -217.85303, -135.56068, 14.060143, -217.85303, -133.75029, 14.060143, -218.09088, -134.11208, 211.05002, -218.24023, -135.25029, 211.05002, -218.09088, -135.25029, 14.060143, -218.09088, -134.11208, 14.060143, -218.24023, -134.50029, 211.05002, -218.29002, -134.8885, 211.05002, -218.24023, -134.8885, 14.060143, -218.24023, -134.50029, 14.060143, -218.29002)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6tie1"]
+points = PackedVector3Array(136, 202.14151, -161.77936, 136, 211.03073, -161.78488, 133, 202.14151, -161.77936, 136, 14.060143, -161.78488, 136, 211.05002, -216.79097, 133, 211.03073, -161.78488, 133, 14.060143, -161.78488, 136, 14.060143, -216.79097, 135.94861, 211.05002, -217.1837, 133, 211.05002, -216.79097, 133, 14.060143, -216.79097, 135.94861, 14.060143, -217.1837, 135.79884, 211.05002, -217.54326, 133.0508, 211.05002, -217.1837, 133.0508, 14.060143, -217.1837, 135.79884, 14.060143, -217.54326, 135.5604, 211.05002, -217.85303, 133.20087, 211.05002, -217.54326, 133.20087, 14.060143, -217.54326, 135.5604, 14.060143, -217.85303, 135.24971, 211.05002, -218.09088, 133.43932, 211.05002, -217.85303, 133.43932, 14.060143, -217.85303, 135.24971, 14.060143, -218.09088, 134.88792, 211.05002, -218.24023, 133.74971, 211.05002, -218.09088, 133.74971, 14.060143, -218.09088, 134.88792, 14.060143, -218.24023, 134.49971, 211.05002, -218.29002, 134.1115, 211.05002, -218.24023, 134.1115, 14.060143, -218.24023, 134.49971, 14.060143, -218.29002)
+
+[sub_resource type="Animation" id="Animation_35ls0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("右:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("左:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s1jm8"]
+resource_name = "閉"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("右:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -0.6552931), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("左:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.6750166), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6tie1"]
+resource_name = "開"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("右:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.6552931)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("左:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.6750166)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ail0y"]
+_data = {
+&"RESET": SubResource("Animation_35ls0"),
+&"閉": SubResource("Animation_s1jm8"),
+&"開": SubResource("Animation_6tie1")
+}
+
+[node name="ドア機構" type="Node3D" unique_id=1763182443]
+script = ExtResource("1_s1jm8")
+
+[node name="右" type="Node3D" parent="." unique_id=71287300]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="右" unique_id=437998645]
+transform = Transform3D(-0.012, 0, -1.0490733e-09, 0, 0.012, 0, 1.0490733e-09, 0, -0.012, -1.614, -0.167, -2.619)
+material_override = SubResource("StandardMaterial3D_s1jm8")
+mesh = ExtResource("1_35ls0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="右" unique_id=1581335397]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="右/StaticBody3D" unique_id=1202587355]
+transform = Transform3D(-0.012, 0, -1.0490733e-09, 0, 0.012, 0, 1.0490733e-09, 0, -0.012, -1.614, -0.167, -2.619)
+shape = SubResource("ConvexPolygonShape3D_s1jm8")
+
+[node name="左" type="Node3D" parent="." unique_id=743677228]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="左" unique_id=397411179]
+transform = Transform3D(0.012, 0, 0, 0, 0.012, 0, 0, 0, 0.012, -1.613, -0.167, 2.619)
+material_override = SubResource("StandardMaterial3D_s1jm8")
+mesh = ExtResource("2_s1jm8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="左" unique_id=563640756]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="左/StaticBody3D" unique_id=34092864]
+transform = Transform3D(0.012, 0, 0, 0, 0.012, 0, 0, 0, 0.012, -1.613, -0.167, 2.619)
+shape = SubResource("ConvexPolygonShape3D_6tie1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=612393429]
+transform = Transform3D(0.012, 0, 0, 0, 0.012, 0, 0, 0, 0.012, 0, 0, 0)
+visible = false
+mesh = ExtResource("3_6tie1")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1350351140]
+transform = Transform3D(0.012, 0, 0, 0, 0.012, 0, 0, 0, 0.012, -1.607532, -0.18336248, 2.625738)
+visible = false
+mesh = ExtResource("4_ail0y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=653773268]
+libraries/ = SubResource("AnimationLibrary_ail0y")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

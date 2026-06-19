@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://brq6hdb6c3yre"]
+
+[ext_resource type="PackedScene" uid="uid://dqniwtybwknaw" path="res://エンティティ/NPC/マイクラNPC.tscn" id="1_ls3pr"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="2_i04yl"]
+[ext_resource type="Texture2D" uid="uid://c55qafle272gq" path="res://エンティティ/表情管理/わでいど/わでいど.png" id="2_o67te"]
+[ext_resource type="Resource" uid="uid://nbbmunmsweld" path="res://エンティティ/表情管理/わでいど/わでいど.tres" id="3_o67te"]
+[ext_resource type="Script" uid="uid://hoy7ntcb8lpl" path="res://拡張リソース/セリフ分岐オブジェクト.gd" id="3_pja2d"]
+[ext_resource type="Script" uid="uid://c63nudia22pk" path="res://拡張リソース/new_script.gd" id="4_3aagx"]
+
+[sub_resource type="Resource" id="Resource_o4spe"]
+script = ExtResource("2_i04yl")
+"セリフ" = "d"
+"表情" = 1
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_mp3km"]
+script = ExtResource("2_i04yl")
+"セリフ" = "dada"
+"表情" = 8
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_yn86y"]
+script = ExtResource("2_i04yl")
+"セリフ" = "a"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_3os03"]
+script = ExtResource("2_i04yl")
+"セリフ" = "次で終わる"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_2efxv"]
+script = ExtResource("4_3aagx")
+"セリフ" = "ラスト"
+metadata/_custom_type_script = "uid://c63nudia22pk"
+
+[sub_resource type="Resource" id="Resource_hqijh"]
+script = ExtResource("3_pja2d")
+"セリフ" = "３番目の条件分岐
+でもデータ無し
+"
+metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
+
+[sub_resource type="Resource" id="Resource_hacum"]
+script = ExtResource("2_i04yl")
+"セリフ" = "ああああ"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_p4e3c"]
+script = ExtResource("2_i04yl")
+"セリフ" = "ああ"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_2pwil"]
+script = ExtResource("3_pja2d")
+"選択肢" = Array[String](["終了", "条件", "メッセージ"])
+"選択1セリフ" = Array[ExtResource("2_i04yl")]([SubResource("Resource_3os03"), SubResource("Resource_2efxv")])
+"選択2セリフ" = Array[ExtResource("2_i04yl")]([SubResource("Resource_hqijh")])
+"選択3セリフ" = Array[ExtResource("2_i04yl")]([SubResource("Resource_hacum"), SubResource("Resource_p4e3c")])
+"セリフ" = "スクラッチチャーンス
+１終了
+２また条件
+３メッセージ"
+metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
+
+[sub_resource type="Resource" id="Resource_yoow5"]
+script = ExtResource("2_i04yl")
+"セリフ" = "b"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_d3wty"]
+script = ExtResource("2_i04yl")
+"セリフ" = "c"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_g3783"]
+script = ExtResource("3_pja2d")
+"選択肢" = Array[String](["あ", "ｂ", "ｃ"])
+"選択1セリフ" = Array[ExtResource("2_i04yl")]([SubResource("Resource_yn86y"), SubResource("Resource_2pwil")])
+"選択2セリフ" = Array[ExtResource("2_i04yl")]([SubResource("Resource_yoow5")])
+"選択3セリフ" = Array[ExtResource("2_i04yl")]([SubResource("Resource_d3wty")])
+"セリフ" = "選択肢1:a
+2:b
+3:c"
+metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
+
+[sub_resource type="Resource" id="Resource_rt7qk"]
+script = ExtResource("2_i04yl")
+"セリフ" = "どうだったかな？"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[node name="わでいど" unique_id=1396265163 instance=ExtResource("1_ls3pr")]
+"デフォルトセリフ" = Array[ExtResource("2_i04yl")]([SubResource("Resource_o4spe"), SubResource("Resource_mp3km"), SubResource("Resource_g3783"), SubResource("Resource_rt7qk")])
+
+[node name="モデル" parent="原点" parent_id_path=PackedInt32Array(1394227668) index="0" unique_id=652042102]
+"スキン" = ExtResource("2_o67te")
+"表情データ" = ExtResource("3_o67te")
+
+[node name="GeneralSkeleton" parent="原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(652042102, 231553116) index="0" unique_id=1885119474]
+bones/11/position = Vector3(2.510487e-10, 1.1601355e-07, -1.3564009e-09)
+bones/11/rotation = Quaternion(-0.021866199, -0.023367044, -0.08302021, 0.9960339)
+bones/12/rotation = Quaternion(-0.032110106, -0.013815053, 0.021101285, 0.9991661)
+bones/13/rotation = Quaternion(-0.053380422, -0.0055629737, 0.010857344, 0.9984998)
+bones/41/rotation = Quaternion(-0.032125812, -0.013855203, 0.02087719, 0.9991697)
+bones/42/rotation = Quaternion(0.5385057, -0.45481688, -0.53424233, -0.46662456)
+bones/43/rotation = Quaternion(0.06611794, 0.8204553, -0.5570683, 0.11025673)
+bones/44/rotation = Quaternion(0.167819, 0.68690383, -0.16781852, 0.68690383)
+bones/45/rotation = Quaternion(0.003289357, -0.80516994, -0.013200565, 0.5928882)
+bones/46/rotation = Quaternion(0.5205068, 0.46816903, 0.5566433, -0.44725698)
+bones/47/rotation = Quaternion(-0.17202814, 0.74636745, -0.6428926, -0.0055907755)
+bones/48/rotation = Quaternion(0.12910178, -0.6952214, 0.12910166, 0.6952213)
+bones/49/rotation = Quaternion(0.059457935, 0.7765375, 0.05334737, 0.62498665)
+bones/51/rotation = Quaternion(-0.06156964, 0.038374733, 0.9938545, -0.083605744)
+bones/52/rotation = Quaternion(-0.013512936, 0.9883023, -0.13710095, -0.065417565)
+bones/53/rotation = Quaternion(0.04713494, 0.14248364, 0.98202574, -0.11446519)
+bones/54/rotation = Quaternion(0.017983306, 0.9533717, -0.29584685, 0.0568663)
+
+[node name="R_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
+transform = Transform3D(-0.11287498, -0.05892636, -0.9918603, -0.9705078, 0.22054255, 0.097342625, 0.21301135, 0.97359574, -0.08208222, 0.04632473, 1.0057144, 0.12448556)
+
+[node name="L_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
+transform = Transform3D(-0.11287498, -0.05892636, -0.9918603, -0.9705078, 0.22054255, 0.097342625, 0.21301135, 0.97359574, -0.08208222, 0.22783513, 0.9879007, 0.13950658)
+
+[node name="head" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
+transform = Transform3D(0.9918603, 0.11287498, -0.05892636, -0.097342625, 0.9705078, 0.22054255, 0.08208222, -0.21301135, 0.97359574, 0.10776106, 0.721504, -0.053410187)
+
+[editable path="原点/モデル"]

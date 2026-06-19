@@ -2,11 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://g3hku684m62q" path="res://ワールド/時間太陽.tscn" id="1_g3783"]
 [ext_resource type="Script" uid="uid://bkyis8py715oh" path="res://街チャンク処理/全体制御.gd" id="1_yoow5"]
-[ext_resource type="PackedScene" uid="uid://coeftm18in8r8" path="res://街チャンク処理/チャンクルート.tscn" id="2_1a2ec"]
-[ext_resource type="Script" uid="uid://lqi2iwbsxfdj" path="res://1/都市3d仮.gd" id="2_r3fl7"]
+[ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="2_lggff"]
 [ext_resource type="Texture2D" uid="uid://tw5f5apsusr5" path="res://ワールド/星テクスチャ.tres" id="2_yoow5"]
-[ext_resource type="Script" uid="uid://dunk7b3n3p2st" path="res://街チャンク処理/パーツ/街メッシュルート.gd" id="4_ccj11"]
-[ext_resource type="ArrayMesh" uid="uid://b3vre2d8c5uvl" path="res://街メッシュ/都市3d仮_1040,-48_001.res" id="186_siidb"]
+[ext_resource type="PackedScene" uid="uid://6jh6664vjvwy" path="res://街チャンク処理/都市3d仮.tscn" id="4_ealrb"]
+[ext_resource type="PackedScene" uid="uid://brq6hdb6c3yre" path="res://エンティティ/NPC/インスタンス/わでいど.tscn" id="12_ealrb"]
+[ext_resource type="Script" uid="uid://d0hqsc7rgmj0w" path="res://GUI/コントロールルート.gd" id="14_s0gvp"]
+[ext_resource type="PackedScene" uid="uid://cswg3m17ndvd0" path="res://GUI/ミッションマネージャー/ミッションマネージャー.tscn" id="15_jsnrv"]
 [ext_resource type="PackedScene" uid="uid://buwi56bftrlec" path="res://エンティティ/プレイヤー/プレイヤー.tscn" id="207_ccj11"]
 [ext_resource type="PackedScene" uid="uid://nfkdvrm1gp82" path="res://カメラ/カメラ制御.tscn" id="208_ir4n0"]
 [ext_resource type="Texture2D" uid="uid://70jmgomtcsjd" path="res://エンティティ/プレイヤー/model/6380439c17d3666d_8.png" id="209_yj0qq"]
@@ -16,12 +17,19 @@
 [ext_resource type="Script" uid="uid://hoy7ntcb8lpl" path="res://拡張リソース/セリフ分岐オブジェクト.gd" id="214_yn86y"]
 [ext_resource type="Script" uid="uid://c63nudia22pk" path="res://拡張リソース/new_script.gd" id="215_g3783"]
 [ext_resource type="Script" uid="uid://ck32fe4yvp4h8" path="res://GUI/時間.gd" id="216_77ide"]
-[ext_resource type="Resource" uid="uid://nbbmunmsweld" path="res://エンティティ/表情管理/わでいど/わでいど.tres" id="216_g3783"]
 [ext_resource type="Texture2D" uid="uid://c55qafle272gq" path="res://エンティティ/表情管理/わでいど/わでいど.png" id="216_yn86y"]
 [ext_resource type="PackedScene" uid="uid://s36hn6agtol7" path="res://GUI/メッセージボックス/メッセージボックス.tscn" id="217_0ma11"]
 [ext_resource type="Material" uid="uid://d0o42plhu13eh" path="res://ワールド/水.tres" id="217_q3cen"]
 [ext_resource type="Script" uid="uid://bpjov1hossksk" path="res://ワールド/海.gd" id="218_ym7tp"]
 [ext_resource type="PackedScene" uid="uid://b3guj3xr1as0a" path="res://GUI/画面フェード/画面フェード.tscn" id="221_d3wty"]
+
+[sub_resource type="Resource" id="Resource_s0gvp"]
+script = ExtResource("2_lggff")
+"ミッション名" = "テスト1"
+"完了後フラグ" = "テスト1完了"
+"条件フラグ" = "いるか君誤字数"
+"条件数" = 5
+metadata/_custom_type_script = "uid://bjjvp7rx64bcv"
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_noarx"]
 sky_top_color = Color(0.28599998, 0.43766668, 0.65, 1)
@@ -39,176 +47,22 @@ background_energy_multiplier = 0.8
 sky = SubResource("Sky_a0tk4")
 reflected_light_source = 2
 tonemap_mode = 3
+tonemap_exposure = 1.2
 tonemap_agx_contrast = 1.23
 ssr_enabled = true
 ssao_enabled = true
+ssao_radius = 6.02
+ssao_intensity = 5.06
 ssil_enabled = true
+ssil_radius = 0.92
+ssil_intensity = 2.38
+ssil_sharpness = 1.0
 sdfgi_enabled = true
-sdfgi_use_occlusion = true
-sdfgi_bounce_feedback = 1.99
-sdfgi_min_cell_size = 94.65
-sdfgi_energy = 1.11
-sdfgi_probe_bias = 0.68
-glow_intensity = 0.78
-glow_strength = 0.78
+sdfgi_min_cell_size = 0.15625
 fog_depth_curve = 1.035265
 fog_depth_end = 105.7
 volumetric_fog_sky_affect = 0.671
 adjustment_enabled = true
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_r3fl7"]
-plane = Plane(0, 0.225, 0, 0)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0gvp"]
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxd74"]
-resource_name = "R_eye_color"
-cull_mode = 2
-albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhlwf"]
-resource_name = "L_eye_color"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5t8nk"]
-resource_name = "material_0"
-transparency = 2
-alpha_scissor_threshold = 0.05
-alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("209_yj0qq")
-texture_filter = 0
-texture_repeat = false
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3e5s"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nu31w"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obt1j"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2yde8"]
-resource_name = "Skin_Head_only"
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_id0nj"]
-resource_name = "Mouse"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1q667"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ype4i"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riyl1"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pb8dk"]
-resource_name = "Skin"
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_color = Color(0, 0, 0, 1)
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mu51"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmvb8"]
-resource_name = "Skin.004"
-transparency = 4
-cull_mode = 2
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4i7mf"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3s0n5"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpkl4"]
-resource_name = "Pupils(右目)"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4s1x"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf4ct"]
-resource_name = "Skin.003"
-transparency = 4
-cull_mode = 2
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
 
 [sub_resource type="Resource" id="Resource_o4spe"]
 script = ExtResource("214_oechf")
@@ -292,54 +146,53 @@ script = ExtResource("214_oechf")
 "セリフ" = "どうだったかな？"
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5w2ad"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0gvp"]
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8p5mg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxd74"]
 resource_name = "R_eye_color"
 cull_mode = 2
 albedo_texture = ExtResource("216_yn86y")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsgk7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhlwf"]
 resource_name = "L_eye_color"
 cull_mode = 2
 albedo_texture = ExtResource("216_yn86y")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72tv7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5t8nk"]
 resource_name = "material_0"
-transparency = 2
-alpha_scissor_threshold = 0.05
-alpha_antialiasing_mode = 0
+transparency = 4
 albedo_texture = ExtResource("216_yn86y")
+metallic_specular = 0.0
 texture_filter = 0
 texture_repeat = false
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6a8j"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3e5s"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7uix"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nu31w"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hyfj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obt1j"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8d0ks"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2yde8"]
 resource_name = "Skin_Head_only"
 transparency = 4
 cull_mode = 2
@@ -348,37 +201,37 @@ albedo_texture = ExtResource("216_yn86y")
 roughness = 0.9
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kg7c"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_id0nj"]
 resource_name = "Mouse"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwdad"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1q667"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykyjb"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ype4i"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sivbr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riyl1"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4yprr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pb8dk"]
 resource_name = "Pupils(左目)"
 cull_mode = 2
 albedo_color = Color(0, 0, 0, 1)
@@ -387,39 +240,40 @@ metallic = 1.0
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ofy4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mu51"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a41ck"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmvb8"]
 resource_name = "Skin.004"
 transparency = 4
 cull_mode = 2
+diffuse_mode = 2
 albedo_texture = ExtResource("216_yn86y")
 roughness = 0.9
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alien"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4i7mf"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8jhw1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3s0n5"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if4ww"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpkl4"]
 resource_name = "Pupils(右目)"
 cull_mode = 2
 vertex_color_use_as_albedo = true
@@ -429,18 +283,17 @@ metallic = 1.0
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brp11"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4s1x"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
+metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvobo"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf4ct"]
 resource_name = "Skin.003"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("216_yn86y")
 roughness = 0.9
 texture_filter = 2
@@ -454,1601 +307,183 @@ subdivide_width = 20
 subdivide_depth = 20
 center_offset = Vector3(0, 0.622, 0)
 
-[node name="Node3d" type="Node3D" unique_id=2085154183]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5w2ad"]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8p5mg"]
+resource_name = "R_eye_color"
+cull_mode = 2
+albedo_texture = ExtResource("209_yj0qq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsgk7"]
+resource_name = "L_eye_color"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72tv7"]
+resource_name = "material_0"
+transparency = 4
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6a8j"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7uix"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hyfj"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8d0ks"]
+resource_name = "Skin_Head_only"
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+roughness = 0.9
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kg7c"]
+resource_name = "Mouse"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwdad"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykyjb"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sivbr"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4yprr"]
+resource_name = "Skin"
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("209_yj0qq")
+roughness = 0.9
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ofy4"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a41ck"]
+resource_name = "Skin.004"
+transparency = 4
+cull_mode = 2
+diffuse_mode = 2
+albedo_texture = ExtResource("209_yj0qq")
+roughness = 0.9
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alien"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8jhw1"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if4ww"]
+resource_name = "Pupils(右目)"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brp11"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvobo"]
+resource_name = "Skin.003"
+transparency = 4
+albedo_texture = ExtResource("209_yj0qq")
+roughness = 0.9
+texture_filter = 2
+
+[node name="Node3d" type="Node3D" unique_id=2085154183 groups=["全体制御"]]
 script = ExtResource("1_yoow5")
+"実験" = SubResource("Resource_s0gvp")
 
 [node name="時間太陽" parent="." unique_id=858381750 instance=ExtResource("1_g3783")]
 transform = Transform3D(-0.013962182, 0.7511909, 0.6599374, -5.7699182e-08, -0.6600017, 0.7512641, 0.99990255, 0.010489249, 0.009215107, 0, 0, 0)
-light_bake_mode = 1
+light_indirect_energy = 1.5
+shadow_opacity = 0.89
+directional_shadow_split_1 = 0.092
+directional_shadow_split_2 = 0.239
 directional_shadow_blend_splits = true
-day_length = 1200.0
+directional_shadow_max_distance = 176.5
+day_length = 5400.0
 top = Color(0.28599998, 0.43766668, 0.65, 1)
 "夜top" = Color(0, 0, 0, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1401484149]
 environment = SubResource("Environment_r3fl7")
 
-[node name="都市3d仮" type="Node3D" parent="." unique_id=402202774]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35.094, 0)
-script = ExtResource("2_r3fl7")
-
-[node name="-208,240,a_Chunk" parent="都市3d仮" unique_id=813687930 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-208,240,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -194.08075, 0, 194.13571)
-visible = true
-
-[node name="48,416,a_Chunk" parent="都市3d仮" unique_id=1614083986 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/48,416,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 18, 0, 0, 278.0398)
-visible = true
-
-[node name="CollisionShape3D" parent="都市3d仮/48,416,a_Chunk/Area3D" index="0" unique_id=976036301]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4477173, 9, 1.8522263)
-
-[node name="960,-592,a_Chunk" parent="都市3d仮" unique_id=1560124847 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/960,-592,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 733.9911, 0, -490.0512)
-visible = true
-
-[node name="960,-624,a_Chunk" parent="都市3d仮" unique_id=589814032 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/960,-624,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 759.1647, 0, -528.7712)
-visible = true
-
-[node name="-16,-272,a_Chunk" parent="都市3d仮" unique_id=1592792100 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-16,-272,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18, 0, 0, 0, 17, 0, 0, 0, 17.5, -39.692455, 0, -250.85646)
-visible = true
-
-[node name="-16,-384,a_Chunk" parent="都市3d仮" unique_id=1829434235 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-16,-384,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18, 0, 0, 0, 17, 0, 0, 0, 18, -60.33257, 0, -361.99564)
-visible = true
-
-[node name="-16,32,a_Chunk" parent="都市3d仮" unique_id=1245351471 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-16,32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.1, 0, 0, 0, 17, 0, 0, 0, 18.1, -28.578741, 0, 0)
-visible = true
-
-[node name="-16,80,a_Chunk" parent="都市3d仮" unique_id=163177105 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-16,80,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.5, -59.51767, 0, 52.51559)
-visible = true
-
-[node name="-16,128,a_Chunk" parent="都市3d仮" unique_id=2054577899 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-16,128,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.1, 0, 0, 0, 17, 0, 0, 0, 18.1, -35.01014, 0, 84.02425)
-visible = true
-
-[node name="-16,384,a_Chunk" parent="都市3d仮" unique_id=1550958948 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-16,384,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -21.006266, 0, 287.08517)
-visible = true
-
-[node name="-32,-48,a_Chunk" parent="都市3d仮" unique_id=586005128 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/-32,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.5, -59.892456, 0, -84.39394)
-visible = true
-
-[node name="-32,-160,a_Chunk" parent="都市3d仮" unique_id=521279250 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-32,-160,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.2, 0, 0, 0, 17, 0, 0, 0, 17.2, -63.976517, 0, -189.20702)
-visible = true
-
-[node name="-48,176,a_Chunk" parent="都市3d仮" unique_id=1962266675 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-48,176,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18, 0, 0, 0, 17, 0, 0, 0, 18.2, -69.42134, 0, 103.4513)
-visible = true
-
-[node name="-48,224,a_Chunk" parent="都市3d仮" unique_id=1593426226 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-48,224,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.5, -61.253994, 0, 151.09334)
-visible = true
-
-[node name="-48,304,a_Chunk" parent="都市3d仮" unique_id=2009027836 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-48,304,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.3, 0, 0, 0, 17, 0, 0, 0, 17, -59.8925, 0, 210.985)
-visible = true
-
-[node name="-48,352,a_Chunk" parent="都市3d仮" unique_id=831246932 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-48,352,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.8, 0, 0, 0, 17, 0, 0, 0, 17.5, -67.65822, 0, 254.45357)
-visible = true
-
-[node name="-80,384,a_Chunk" parent="都市3d仮" unique_id=640152410 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-80,384,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.9, 0, 0, 0, 17, 0, 0, 0, 18.9, -98.03006, 0, 290.58905)
-visible = true
-
-[node name="-96,416,a_Chunk" parent="都市3d仮" unique_id=1820649292 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-96,416,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -106.418045, 0, 315.4195)
-visible = true
-
-[node name="-112,-16,a_Chunk" parent="都市3d仮" unique_id=1499226329 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,-16,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -145.43008, 0, -33.017315)
-visible = true
-
-[node name="-112,-48,a_Chunk" parent="都市3d仮" unique_id=1827088952 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 18, -107.400925, 0, -63.563786)
-visible = true
-
-[node name="-112,-96,a_Chunk" parent="都市3d仮" unique_id=497520712 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,-96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.5, -132.03653, 0, -132.03658)
-visible = true
-
-[node name="-112,-176,a_Chunk" parent="都市3d仮" unique_id=1663969970 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,-176,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.8, -124.70251, 0, -210.4354)
-visible = true
-
-[node name="-112,-288,a_Chunk" parent="都市3d仮" unique_id=272231424 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,-288,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.4, 0, 0, 0, 17, 0, 0, 0, 17.6, -101.3117, 0, -257.19437)
-visible = true
-
-[node name="-112,-336,a_Chunk" parent="都市3d仮" unique_id=1818497409 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,-336,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.4, 0, 0, 0, 17, 0, 0, 0, 18, -103.041695, 0, -334.4658)
-visible = true
-
-[node name="-112,32,a_Chunk" parent="都市3d仮" unique_id=1462911372 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.2, 0, 0, 0, 17, 0, 0, 0, 18, -99.39586, 0, 0)
-visible = true
-
-[node name="-112,144,a_Chunk" parent="都市3d仮" unique_id=983004064 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,144,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.2, 0, 0, 0, 17, 0, 0, 0, 17.2, -114.42949, 0, 79.34896)
-visible = true
-
-[node name="-112,176,a_Chunk" parent="都市3d仮" unique_id=1124898643 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,176,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.6, 0, 0, 0, 17, 0, 0, 0, 18, -70.63079, 0, 32.15712)
-visible = true
-
-[node name="-112,224,a_Chunk" parent="都市3d仮" unique_id=481503273 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,224,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -119.17051, 0, 150.38187)
-visible = true
-
-[node name="-112,304,a_Chunk" parent="都市3d仮" unique_id=1275198259 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,304,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18, 0, 0, 0, 17, 0, 0, 0, 17.1, -64.31428, 0, 207.12971)
-visible = true
-
-[node name="-112,336,a_Chunk" parent="都市3d仮" unique_id=2049733412 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,336,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -111.6042, 0, 253.47382)
-visible = true
-
-[node name="-112,384,a_Chunk" parent="都市3d仮" unique_id=21479124 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-112,384,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.4, 0, 0, 0, 17, 0, 0, 0, 17.2, -95.52557, 0, 253.47382)
-visible = true
-
-[node name="-128,80,a_Chunk" parent="都市3d仮" unique_id=1562378538 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-128,80,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17.3, -107.866714, 0, 4.0645475)
-visible = true
-
-[node name="-128,464,a_Chunk" parent="都市3d仮" unique_id=657012754 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-128,464,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -112.41211, 0, 298.6674)
-visible = true
-
-[node name="-144,352,a_Chunk" parent="都市3d仮" unique_id=192563905 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-144,352,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -140.4262, 0, 237.88611)
-visible = true
-
-[node name="-144,416,a_Chunk" parent="都市3d仮" unique_id=1046451911 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-144,416,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.7, -91.17226, 0, 310.195)
-visible = true
-
-[node name="-160,240,a_Chunk" parent="都市3d仮" unique_id=2019624958 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-160,240,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.3, 0, 0, 0, 17, 0, 0, 0, 17, -152.2734, 0, 158.89397)
-visible = true
-
-[node name="-160,336,a_Chunk" parent="都市3d仮" unique_id=178491970 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/-160,336,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.4, 0, 0, 0, 17, 0, 0, 0, 17.8, -116.3331, 0, 226.99136)
-visible = true
-
-[node name="-176,144,a_Chunk" parent="都市3d仮" unique_id=1325697007 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-176,144,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.6, 0, 0, 0, 17, 0, 0, 0, 18, -115.858734, 0, 32.61208)
-visible = true
-
-[node name="-192,160,a_Chunk" parent="都市3d仮" unique_id=1217038387 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/-192,160,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -169.22935, 0, 113.20862)
-visible = true
-
-[node name="-192,176,a_Chunk" parent="都市3d仮" unique_id=1135344361 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-192,176,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(16.57, 0, 0, 0, 17, 0, 0, 0, 16.535, -164.56316, 0, 130.71681)
-visible = true
-
-[node name="-208,224,a_Chunk" parent="都市3d仮" unique_id=316582972 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-208,224,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -140.92377, 0, 138.08647)
-visible = true
-
-[node name="-224,304,a_Chunk" parent="都市3d仮" unique_id=273878566 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/-224,304,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -177.06087, 0, 203.93793)
-
-[node name="0,384,a_Chunk" parent="都市3d仮" unique_id=850423343 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/0,384,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(16.46, 0, 0, 0, 17, 0, 0, 0, 16.28, -8.76812, 0, 287.09384)
-
-[node name="0,816,a_Chunk" parent="都市3d仮" unique_id=693092080 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/0,816,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.5, -40.478695, 0, 569.89984)
-
-[node name="0,896,a_Chunk" parent="都市3d仮" unique_id=510909678 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/0,896,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.6, 0, 0, 0, 17, 0, 0, 0, 17.6, -13.770076, 0, 653.18243)
-
-[node name="16,-544,a_Chunk" parent="都市3d仮" unique_id=75775568 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/16,-544,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, -10.6925535, 0, -443.6002)
-
-[node name="16,-560,a_Chunk" parent="都市3d仮" unique_id=386824257 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/16,-560,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.7, 0, 0, 0, 17, 0, 0, 0, 17.7, 126.97598, 0, -517.1137)
-
-[node name="32,-176,a_Chunk" parent="都市3d仮" unique_id=1562346606 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/32,-176,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 0, 0, -204.75748)
-
-[node name="32,208,a_Chunk" parent="都市3d仮" unique_id=13215967 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/32,208,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.6, 0, 0, 0, 17, 0, 0, 0, 17.3, 0, 0, 107.91153)
-
-[node name="48,240,a_Chunk" parent="都市3d仮" unique_id=1635728934 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/48,240,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 0, 0, 175.5524)
-
-[node name="48,304,a_Chunk" parent="都市3d仮" unique_id=757137442 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/48,304,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.2, 0, 0, 0, 17, 0, 0, 0, 17.5, 0, 0, 206.61208)
-
-[node name="48,352,a_Chunk" parent="都市3d仮" unique_id=1880711816 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/48,352,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.2, 0, 0, 0, 17, 0, 0, 0, 17.3, 0, 0, 258.46152)
-
-[node name="48,560,a_Chunk" parent="都市3d仮" unique_id=58847388 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/48,560,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.3, 0, 0, 0, 17, 0, 0, 0, 17.3, 22.406746, 0, 392.65033)
-
-[node name="64,32,a_Chunk" parent="都市3d仮" unique_id=856437720 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/64,32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.2, 0, 0, 0, 17, 0, 0, 0, 17.2, 25.379116, 0, 0)
-
-[node name="64,96,a_Chunk" parent="都市3d仮" unique_id=978966648 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/64,96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 24.577633, 0, 57.68049)
-
-[node name="64,128,a_Chunk" parent="都市3d仮" unique_id=71516331 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/64,128,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 11.031315, 0, 95.14496)
-
-[node name="64,624,a_Chunk" parent="都市3d仮" unique_id=952521327 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/64,624,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.5, 26.199396, 0, 460.49258)
-
-[node name="64,896,a_Chunk" parent="都市3d仮" unique_id=776776357 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/64,896,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.8, 0, 0, 0, 17, 0, 0, 0, 17.8, 46.968666, 0, 646.81323)
-
-[node name="80,-48,a_Chunk" parent="都市3d仮" unique_id=422558314 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/80,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.2, 0, 0, 0, 17, 0, 0, 0, 17.2, 0, 0, -70.97586)
-
-[node name="80,-144,a_Chunk" parent="都市3d仮" unique_id=903665396 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/80,-144,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 0, 0, -138.66153)
-
-[node name="80,-272,a_Chunk" parent="都市3d仮" unique_id=1587544644 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/80,-272,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.4, 0, 0, 0, 17, 0, 0, 0, 17.3, 30.234535, 0, -266.89728)
-
-[node name="80,-336,a_Chunk" parent="都市3d仮" unique_id=400731761 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/80,-336,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.3, 0, 0, 0, 17, 0, 0, 0, 17.3, 9.383138, 0, -307.5575)
-
-[node name="80,-384,a_Chunk" parent="都市3d仮" unique_id=2068607649 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/80,-384,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.5, 29.61938, 0, -383.07718)
-
-[node name="80,448,a_Chunk" parent="都市3d仮" unique_id=488680537 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/80,448,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 18.08, 21.909714, 0, 334.90646)
-visible = true
-
-[node name="96,208,a_Chunk" parent="都市3d仮" unique_id=582061811 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/96,208,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17.23, 65.72942, 0, 123.633644)
-
-[node name="112,336,a_Chunk" parent="都市3d仮" unique_id=143416214 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/112,336,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 42.34755, 0, 228.38858)
-
-[node name="112,416,a_Chunk" parent="都市3d仮" unique_id=1132272998 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/112,416,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17.41, 68.37238, 0, 303.87717)
-
-[node name="112,448,a_Chunk" parent="都市3d仮" unique_id=1209408721 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/112,448,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 73.78624, 0, 336.46542)
-
-[node name="128,560,a_Chunk" parent="都市3d仮" unique_id=362530258 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/128,560,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.105, 0, 0, 0, 17, 0, 0, 0, 17.345, 47.22316, 0, 387.6238)
-
-[node name="128,704,a_Chunk" parent="都市3d仮" unique_id=818971405 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/128,704,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.494999, 0, 0, 0, 17, 0, 0, 0, 17.98, 69.85096, 0, 547.8466)
-
-[node name="128,816,a_Chunk" parent="都市3d仮" unique_id=356733409 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/128,816,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.43, 0, 0, 0, 17, 0, 0, 0, 17.7, 45.668667, 0, 622.7802)
-
-[node name="144,-224,a_Chunk" parent="都市3d仮" unique_id=1815147628 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/144,-224,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.285, 0, 0, 0, 17, 0, 0, 0, 17.215, 78.939835, 0, -194.40413)
-
-[node name="144,-272,a_Chunk" parent="都市3d仮" unique_id=845167578 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/144,-272,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 90.903404, 0, -228.85114)
-
-[node name="144,-400,a_Chunk" parent="都市3d仮" unique_id=1795464716 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/144,-400,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.64, 0, 0, 0, 17, 0, 0, 0, 17.56, 92.25079, 0, -377.24036)
-
-[node name="144,272,a_Chunk" parent="都市3d仮" unique_id=2018730883 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/144,272,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 80.67271, 0, 190.8696)
-
-[node name="144,304,a_Chunk" parent="都市3d仮" unique_id=383895843 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/144,304,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 101.03061, 0, 224.135)
-
-[node name="144,368,a_Chunk" parent="都市3d仮" unique_id=2142476614 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/144,368,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.5, 0, 0, 0, 17, 0, 0, 0, 17.1, 83.68413, 0, 281.73648)
-
-[node name="160,208,a_Chunk" parent="都市3d仮" unique_id=904900102 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/160,208,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.6, 0, 0, 0, 17, 0, 0, 0, 17.2, 111.26687, 0, 125.69027)
-
-[node name="176,-32,a_Chunk" parent="都市3d仮" unique_id=1209413866 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,-32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(22.145, 0, 0, 0, 17, 0, 0, 0, 20.34, 50.989746, 0, -46.83639)
-visible = true
-
-[node name="176,-48,a_Chunk" parent="都市3d仮" unique_id=1955993281 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 106.53607, 0, -76.412544)
-
-[node name="176,-96,a_Chunk" parent="都市3d仮" unique_id=1930076453 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,-96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.135, 0, 0, 0, 17, 0, 0, 0, 17.085, 108.70114, 0, -111.62543)
-
-[node name="176,-176,a_Chunk" parent="都市3d仮" unique_id=1575259501 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,-176,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.205, 0, 0, 0, 17, 0, 0, 0, 17, 89.5659, 0, -170.74812)
-
-[node name="176,-224,a_Chunk" parent="都市3d仮" unique_id=1717906270 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,-224,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 125.63251, 0, -214.04051)
-
-[node name="176,-304,a_Chunk" parent="都市3d仮" unique_id=681016539 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,-304,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17.305, 102.656235, 0, -289.79016)
-
-[node name="176,-400,a_Chunk" parent="都市3d仮" unique_id=1098606311 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,-400,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 132.93292, 0, -337.04242)
-
-[node name="176,-496,a_Chunk" parent="都市3d仮" unique_id=858813364 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,-496,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.24, 0, 0, 0, 17, 0, 0, 0, 17.26, 108.192726, 0, -413.64444)
-
-[node name="176,-544,a_Chunk" parent="都市3d仮" unique_id=881427928 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/176,-544,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.64, 0, 0, 0, 17, 0, 0, 0, 17, 89.60187, 0, -465.73383)
-
-[node name="176,32,a_Chunk" parent="都市3d仮" unique_id=996229841 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 103.501236, 0, -26.273981)
-
-[node name="176,96,a_Chunk" parent="都市3d仮" unique_id=755558108 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/176,96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.24, 0, 0, 0, 17, 0, 0, 0, 17, 94.22387, 0, 57.983986)
-
-[node name="176,816,a_Chunk" parent="都市3d仮" unique_id=1806465253 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,816,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 87.7736, 0, 611.119)
-
-[node name="176,848,a_Chunk" parent="都市3d仮" unique_id=1811376551 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,848,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.69, 0, 0, 0, 17, 0, 0, 0, 17.205, 40.84725, 0, 675.8696)
-
-[node name="176,896,a_Chunk" parent="都市3d仮" unique_id=450494991 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/176,896,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.4, 0, 0, 0, 17, 0, 0, 0, 17.1, 72.63838, 0, 683.0569)
-visible = true
-
-[node name="192,976,a_Chunk" parent="都市3d仮" unique_id=2147384881 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/192,976,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.52, 0, 0, 0, 17, 0, 0, 0, 17.445, 82.31151, 0, 682.4568)
-
-[node name="208,-192,a_Chunk" parent="都市3d仮" unique_id=2094406491 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/208,-192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.52, 0, 0, 0, 17, 0, 0, 0, 17, 151.29788, 0, -202.72984)
-
-[node name="208,-272,a_Chunk" parent="都市3d仮" unique_id=1763740721 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/208,-272,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 167.28171, 0, -223.77104)
-
-[node name="208,96,a_Chunk" parent="都市3d仮" unique_id=202347896 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/208,96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17.46, 162.56235, 0, 16.1003)
-
-[node name="208,128,a_Chunk" parent="都市3d仮" unique_id=1317752215 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/208,128,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.79, 0, 0, 0, 17, 0, 0, 0, 17, 91.067184, 0, 91.067215)
-
-[node name="208,208,a_Chunk" parent="都市3d仮" unique_id=2090464451 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/208,208,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17.24, 143.9449, 0, 94.984055)
-
-[node name="208,256,a_Chunk" parent="都市3d仮" unique_id=1460970762 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/208,256,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.43, 0, 0, 0, 17, 0, 0, 0, 17.275, 120.200645, 0, 140.89072)
-
-[node name="240,-304,a_Chunk" parent="都市3d仮" unique_id=782932575 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/240,-304,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.255, 0, 0, 0, 17, 0, 0, 0, 17.615, 166.37997, 0, -320.20688)
-
-[node name="240,-432,a_Chunk" parent="都市3d仮" unique_id=738640188 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/240,-432,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.11, 0, 0, 0, 17, 0, 0, 0, 17.28, 158.23834, 0, -390.80554)
-
-[node name="240,-512,a_Chunk" parent="都市3d仮" unique_id=373986201 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/240,-512,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.345, 0, 0, 0, 17, 0, 0, 0, 17.265, 156.01215, 0, -426.10825)
-visible = true
-
-[node name="240,224,a_Chunk" parent="都市3d仮" unique_id=594112953 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/240,224,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 149.01056, 0, 168.10701)
-
-[node name="256,-32,a_Chunk" parent="都市3d仮" unique_id=1080783319 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/256,-32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 176.27612, 0, -37.447277)
-
-[node name="256,-160,a_Chunk" parent="都市3d仮" unique_id=1124889705 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/256,-160,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.555, 0, 0, 0, 17, 0, 0, 0, 17, 174.54788, 0, -138.96695)
-
-[node name="256,-256,a_Chunk" parent="都市3d仮" unique_id=1868913244 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/256,-256,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 181.75626, 0, -229.25043)
-
-[node name="256,688,a_Chunk" parent="都市3d仮" unique_id=983932355 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/256,688,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17.605, 89.45285, 0, 507.2788)
-
-[node name="272,-32,a_Chunk" parent="都市3d仮" unique_id=1687363529 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/272,-32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(16.57, 0, 0, 0, 17, 0, 0, 0, 16.81, 212.3088, 0, -57.540924)
-
-[node name="272,192,a_Chunk" parent="都市3d仮" unique_id=609163735 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/272,192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.3, 0, 0, 0, 17, 0, 0, 0, 17.345, 154.93008, 0, 119.498184)
-
-[node name="304,208,a_Chunk" parent="都市3d仮" unique_id=153045177 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/304,208,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(16.59, 0, 0, 0, 17, 0, 0, 0, 16.31, 223.77039, 0, 159.836)
-
-[node name="320,48,a_Chunk" parent="都市3d仮" unique_id=1200955800 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/320,48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 202.76338, 0, -24.660439)
-
-[node name="320,96,a_Chunk" parent="都市3d仮" unique_id=335026937 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/320,96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.705, 0, 0, 0, 17, 0, 0, 0, 16.615, 207.33011, 0, 62.107704)
-
-[node name="320,144,a_Chunk" parent="都市3d仮" unique_id=1573851782 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/320,144,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(16.99, 0, 0, 0, 17, 0, 0, 0, 16.35, 231.0773, 0, 91.33485)
-
-[node name="320,192,a_Chunk" parent="都市3d仮" unique_id=2132793895 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/320,192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(16.76, 0, 0, 0, 17, 0, 0, 0, 16.785, 210.98349, 0, 147.96243)
-
-[node name="336,-192,a_Chunk" parent="都市3d仮" unique_id=1409415756 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/336,-192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 176.27628, 0, -182.66971)
-
-[node name="336,-256,a_Chunk" parent="都市3d仮" unique_id=885357350 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/336,-256,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.69, 0, 0, 0, 17, 0, 0, 0, 17.49, 232.90399, 0, -229.25053)
-
-[node name="336,-304,a_Chunk" parent="都市3d仮" unique_id=630249839 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/336,-304,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.795, 0, 0, 0, 17, 0, 0, 0, 17.575, 233.30743, 0, -329.18726)
-
-[node name="368,-32,a_Chunk" parent="都市3d仮" unique_id=1294717424 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/368,-32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 197.68341, 0, -52.809048)
-
-[node name="368,-96,a_Chunk" parent="都市3d仮" unique_id=386040233 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/368,-96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 242.03723, 0, -84.941345)
-
-[node name="368,-128,a_Chunk" parent="都市3d仮" unique_id=725799432 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/368,-128,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.465, 0, 0, 0, 17, 0, 0, 0, 17.455, 244.9433, 0, -140.1726)
-
-[node name="368,32,a_Chunk" parent="都市3d仮" unique_id=965802567 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/368,32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.145, 0, 0, 0, 17, 0, 0, 0, 17.215, 240.21072, 0, -10.0468445)
-
-[node name="384,128,a_Chunk" parent="都市3d仮" unique_id=850072308 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/384,128,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.54, 0, 0, 0, 17, 0, 0, 0, 17.775, 203.67676, 0, 88.59484)
-
-[node name="384,192,a_Chunk" parent="都市3d仮" unique_id=1646675569 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/384,192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17.17, 201.85016, 0, 133.34897)
-
-[node name="400,96,a_Chunk" parent="都市3d仮" unique_id=1987733948 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/400,96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.04, 0, 0, 0, 17, 0, 0, 0, 17, 277.1005, 0, 49.704132)
-
-[node name="400,192,a_Chunk" parent="都市3d仮" unique_id=497710954 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/400,192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.26, 0, 0, 0, 17, 0, 0, 0, 17.585, 236.64197, 0, 126.27142)
-
-[node name="400,304,a_Chunk" parent="都市3d仮" unique_id=131399900 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/400,304,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(16.475, 0, 0, 0, 17, 0, 0, 0, 17, 272.17755, 0, 176.2761)
-
-[node name="432,-192,a_Chunk" parent="都市3d仮" unique_id=1659713171 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/432,-192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.595, 0, 0, 0, 17, 0, 0, 0, 17.485, 308.85315, 0, -228.33394)
-
-[node name="448,-288,a_Chunk" parent="都市3d仮" unique_id=707119810 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/448,-288,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.74, 0, 0, 0, 17, 0, 0, 0, 17.45, 304.68405, 0, -302.5534)
-
-[node name="448,-432,a_Chunk" parent="都市3d仮" unique_id=1434552717 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/448,-432,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(20.25, 0, 0, 0, 17, 0, 0, 0, 17, 226.50034, 0, -366.43265)
-
-[node name="464,-128,a_Chunk" parent="都市3d仮" unique_id=1089035088 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/464,-128,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.35, 0, 0, 0, 17, 0, 0, 0, 17, 305.38773, 0, -147.83565)
-
-[node name="464,32,a_Chunk" parent="都市3d仮" unique_id=1391566181 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/464,32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.75, 0, 0, 0, 17, 0, 0, 0, 17.23, 311.4518, 0, -28.313805)
-
-[node name="480,-512,a_Chunk" parent="都市3d仮" unique_id=1361579704 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/480,-512,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(21.83, 0, 0, 0, 17, 0, 0, 0, 20.06, 296.65097, 0, -457.84152)
-
-[node name="480,96,a_Chunk" parent="都市3d仮" unique_id=1665109997 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/480,96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.34, 0, 0, 0, 17, 0, 0, 0, 17, 348.13525, 0, 48.407433)
-
-[node name="496,-48,a_Chunk" parent="都市3d仮" unique_id=1612987686 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/496,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 393.6661, 0, -58.70751)
-
-[node name="528,-192,a_Chunk" parent="都市3d仮" unique_id=790752847 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/528,-192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(19.15, 0, 0, 0, 17, 0, 0, 0, 19.61, 382.064, 0, -216.448)
-
-[node name="528,-560,a_Chunk" parent="都市3d仮" unique_id=1928979506 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/528,-560,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(32.285, 0, 0, 0, 17, 0, 0, 0, 26.29, 289.872, 0, -456.544)
-visible = true
-
-[node name="544,-16,a_Chunk" parent="都市3d仮" unique_id=1130094189 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/544,-16,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.32, 0, 0, 0, 17, 0, 0, 0, 17, 402.87103, 0, -24.00978)
-
-[node name="544,-48,a_Chunk" parent="都市3d仮" unique_id=177799631 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/544,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.18, 0, 0, 0, 17, 0, 0, 0, 17, 416.15677, 0, -45.706486)
-
-[node name="544,-96,a_Chunk" parent="都市3d仮" unique_id=1662934482 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/544,-96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.26, 0, 0, 0, 17, 0, 0, 0, 17, 402.6993, 0, -90.39177)
-
-[node name="544,32,a_Chunk" parent="都市3d仮" unique_id=278346992 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/544,32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.4, 0, 0, 0, 17, 0, 0, 0, 17, 403.84488, 0, -18.126114)
-
-[node name="560,96,a_Chunk" parent="都市3d仮" unique_id=1876711707 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/560,96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.345, 0, 0, 0, 17, 0, 0, 0, 17, 426.76086, 0, -10.360168)
-
-[node name="576,320,a_Chunk" parent="都市3d仮" unique_id=1283958543 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/576,320,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 388.84528, 0, 150.21143)
-
-[node name="592,-288,a_Chunk" parent="都市3d仮" unique_id=939606799 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/592,-288,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(24.42, 0, 0, 0, 17, 0, 0, 0, 23.19, 413.74677, 0, -281.99188)
-visible = true
-
-[node name="592,128,a_Chunk" parent="都市3d仮" unique_id=511558232 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/592,128,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.69, 0, 0, 0, 17, 0, 0, 0, 17.365, 364.11807, 0, 75.172745)
-
-[node name="592,288,a_Chunk" parent="都市3d仮" unique_id=962789133 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/592,288,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(16.895, 0, 0, 0, 17, 0, 0, 0, 17.42, 459.77325, 0, 168.32222)
-
-[node name="608,-160,a_Chunk" parent="都市3d仮" unique_id=1055666144 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/608,-160,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.46, 0, 0, 0, 17, 0, 0, 0, 17.055, 391.845, 0, -143.48775)
-
-[node name="608,32,a_Chunk" parent="都市3d仮" unique_id=713386877 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/608,32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.12, 0, 0, 0, 17, 0, 0, 0, 17.345, 437.24115, 0, -73.50784)
-
-[node name="640,96,a_Chunk" parent="都市3d仮" unique_id=233347997 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/640,96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.305, 0, 0, 0, 17, 0, 0, 0, 17, 465.896, 0, 49.00525)
-
-[node name="640,256,a_Chunk" parent="都市3d仮" unique_id=1152777258 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/640,256,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(16.645, 0, 0, 0, 17, 0, 0, 0, 17.205, 478.37576, 0, 143.29837)
-
-[node name="656,-192,a_Chunk" parent="都市3d仮" unique_id=1953066771 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/656,-192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.735, 0, 0, 0, 17, 0, 0, 0, 17, 461.39764, 0, -200.44424)
-
-[node name="672,-512,a_Chunk" parent="都市3d仮" unique_id=801141828 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/672,-512,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.72, 0, 0, 0, 17, 0, 0, 0, 17.255, 454.96533, 0, -484.41785)
-
-[node name="704,-48,a_Chunk" parent="都市3d仮" unique_id=656553463 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/704,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.115, 0, 0, 0, 17, 0, 0, 0, 17.345, 514.55396, 0, -68.181015)
-
-[node name="704,-400,a_Chunk" parent="都市3d仮" unique_id=1370457436 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/704,-400,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.75, 0, 0, 0, 17, 0, 0, 0, 17.475, 444.95596, 0, -350.74707)
-
-[node name="704,-480,a_Chunk" parent="都市3d仮" unique_id=2019164707 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/704,-480,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.345, 0, 0, 0, 17, 0, 0, 0, 17.385, 430.65442, 0, -394.1392)
-
-[node name="704,224,a_Chunk" parent="都市3d仮" unique_id=1045518279 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/704,224,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.245, 0, 0, 0, 17, 0, 0, 0, 17, 521.7615, 0, 115.56174)
-
-[node name="704,288,a_Chunk" parent="都市3d仮" unique_id=8213351 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/704,288,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.715, 0, 0, 0, 17, 0, 0, 0, 17.205, 536.26654, 0, 208.70912)
-
-[node name="784,32,a_Chunk" parent="都市3d仮" unique_id=2119887711 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/784,32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.99, 0, 0, 0, 17, 0, 0, 0, 17.145, 542.0886, 0, 0)
-
-[node name="800,-48,a_Chunk" parent="都市3d仮" unique_id=1057781896 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/800,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.515, 0, 0, 0, 17, 0, 0, 0, 17.245, 615.76086, 0, -66.05041)
-
-[node name="800,96,a_Chunk" parent="都市3d仮" unique_id=1398945140 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/800,96,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.895, 0, 0, 0, 17, 0, 0, 0, 17, 550.6162, 0, 31.651573)
-
-[node name="800,192,a_Chunk" parent="都市3d仮" unique_id=530832882 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/800,192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.325, 0, 0, 0, 17, 0, 0, 0, 17.4, 595.2064, 0, 115.457275)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="800,288,a_Chunk" parent="都市3d仮" unique_id=103836537 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/800,288,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.76, 0, 0, 0, 17, 0, 0, 0, 17.205, 625.5071, 0, 213.06572)
-
-[node name="832,-192,a_Chunk" parent="都市3d仮" unique_id=1304470846 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/832,-192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.84, 0, 0, 0, 17, 0, 0, 0, 17.135, 576.87256, 0, -253.00586)
-
-[node name="832,-288,a_Chunk" parent="都市3d仮" unique_id=1964147792 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/832,-288,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.145, 0, 0, 0, 17, 0, 0, 0, 17.13, 481.63055, 0, -271.39587)
-
-[node name="832,-560,a_Chunk" parent="都市3d仮" unique_id=1545319612 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/832,-560,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(24.675, 0, 0, 0, 17, 0, 0, 0, 24.375, 529.9702, 0, -478.4046)
-
-[node name="864,-48,a_Chunk" parent="都市3d仮" unique_id=250793527 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/864,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.41, 0, 0, 0, 17, 0, 0, 0, 17, 660.8041, 0, -49.794083)
-
-[node name="880,-480,a_Chunk" parent="都市3d仮" unique_id=284377422 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/880,-480,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.67, 0, 0, 0, 17, 0, 0, 0, 17, 620.5478, 0, -396.5738)
-visible = true
-
-[node name="880,-512,a_Chunk" parent="都市3d仮" unique_id=424857107 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/880,-512,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(21.08, 0, 0, 0, 17, 0, 0, 0, 17.81, 564.1762, 0, -510.17014)
-visible = true
-
-[node name="896,-560,a_Chunk" parent="都市3d仮" unique_id=1885166449 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/896,-560,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.31, 0, 0, 0, 17, 0, 0, 0, 17.105, 694.779, 0, -473.94333)
-
-[node name="928,-192,a_Chunk" parent="都市3d仮" unique_id=349703603 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/928,-192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.67, 0, 0, 0, 17, 0, 0, 0, 17.515, 700.2866, 0, -261.6588)
-
-[node name="928,32,a_Chunk" parent="都市3d仮" unique_id=681793341 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/928,32,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.775, 0, 0, 0, 17, 0, 0, 0, 17.13, 702.4357, 0, 0)
-
-[node name="928,80,a_Chunk" parent="都市3d仮" unique_id=77606273 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/928,80,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.43, 0, 0, 0, 17, 0, 0, 0, 17.265, 671.1441, 0, 57.527863)
-
-[node name="928,144,a_Chunk" parent="都市3d仮" unique_id=1880065792 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/928,144,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.76, 0, 0, 0, 17, 0, 0, 0, 17, 622.6022, 0, 97.88116)
-
-[node name="944,112,a_Chunk" parent="都市3d仮" unique_id=1952880926 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/944,112,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 746.2278, 0, 73.50769)
-
-[node name="960,-48,a_Chunk" parent="都市3d仮" unique_id=1001558936 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/960,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.475, 0, 0, 0, 17, 0, 0, 0, 17, 695.0893, 0, -64.142365)
-
-[node name="960,-416,a_Chunk" parent="都市3d仮" unique_id=464922337 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/960,-416,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.395, 0, 0, 0, 17, 0, 0, 0, 17.42, 620.044, 0, -338.2508)
-
-[node name="976,192,a_Chunk" parent="都市3d仮" unique_id=988675966 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/976,192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.705, 0, 0, 0, 17, 0, 0, 0, 17, 645.0044, 0, 176.865)
-
-[node name="976,288,a_Chunk" parent="都市3d仮" unique_id=437377115 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/976,288,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.525, 0, 0, 0, 17, 0, 0, 0, 17.345, 659.0914, 0, 201.17874)
-
-[node name="976,432,a_Chunk" parent="都市3d仮" unique_id=600084602 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/976,432,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.03, 0, 0, 0, 17, 0, 0, 0, 17.175, 616.72046, 0, 223.20264)
-
-[node name="992,-688,a_Chunk" parent="都市3d仮" unique_id=2059097926 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/992,-688,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 779.0704, 0, -570.2991)
-
-[node name="1008,112,a_Chunk" parent="都市3d仮" unique_id=1386532517 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1008,112,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 16.71, 737.3288, 0, 71.59462)
-
-[node name="1008,432,a_Chunk" parent="都市3d仮" unique_id=740663743 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1008,432,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.235, 0, 0, 0, 17, 0, 0, 0, 17, 697.2922, 0, 270.44818)
-
-[node name="1040,-16,a_Chunk" parent="都市3d仮" unique_id=830444021 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1040,-16,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.46, 0, 0, 0, 17, 0, 0, 0, 16.505, 807.62866, 0, -45.80909)
-
-[node name="1040,-48,a_Chunk" parent="都市3d仮" unique_id=380862707 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1040,-48,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.84, 0, 0, 0, 17, 0, 0, 0, 16.6, 797.05896, 0, -64.20996)
-
-[node name="1040,-48,a" type="NavigationRegion3D" parent="都市3d仮/1040,-48,a_Chunk" unique_id=2077687905]
-
-[node name="1040,-48,a" type="MeshInstance3D" parent="都市3d仮/1040,-48,a_Chunk/1040,-48,a" unique_id=1883878494]
-transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
-mesh = ExtResource("186_siidb")
-script = ExtResource("4_ccj11")
-
-[node name="1040,-272,a_Chunk" parent="都市3d仮" unique_id=124274402 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1040,-272,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.06, 0, 0, 0, 17, 0, 0, 0, 17.26, 654.2522, 0, -271.3959)
-
-[node name="1040,-416,a_Chunk" parent="都市3d仮" unique_id=997345143 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1040,-416,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.64, 0, 0, 0, 17, 0, 0, 0, 17, 704.30743, 0, -296.69458)
-
-[node name="1040,80,a_Chunk" parent="都市3d仮" unique_id=954522817 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1040,80,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.46, 0, 0, 0, 17, 0, 0, 0, 16.75, 722.0858, 0, 74.129074)
-
-[node name="1040,368,a_Chunk" parent="都市3d仮" unique_id=1795285846 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1040,368,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.875, 0, 0, 0, 17, 0, 0, 0, 17.27, 616.33777, 0, 264.8708)
-
-[node name="1056,-192,a_Chunk" parent="都市3d仮" unique_id=1021261025 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1056,-192,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.17, 0, 0, 0, 17, 0, 0, 0, 17.37, 659.1878, 0, -310.51016)
-
-[node name="1056,112,a_Chunk" parent="都市3d仮" unique_id=1726412428 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1056,112,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 16.735, 728.99976, 0, 72.93579)
-
-[node name="1056,176,a_Chunk" parent="都市3d仮" unique_id=865938072 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1056,176,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.785, 0, 0, 0, 17, 0, 0, 0, 17, 636.27655, 0, 150.35594)
-
-[node name="1056,272,a_Chunk" parent="都市3d仮" unique_id=1402189805 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1056,272,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.195, 0, 0, 0, 17, 0, 0, 0, 17.435, 589.257, 0, 257.31677)
-
-[node name="1120,-224,a_Chunk" parent="都市3d仮" unique_id=802340306 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1120,-224,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.685, 0, 0, 0, 17, 0, 0, 0, 17.28, 697.1731, 0, -304.68396)
-
-[node name="1120,-352,a_Chunk" parent="都市3d仮" unique_id=14649980 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1120,-352,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.64, 0, 0, 0, 17, 0, 0, 0, 17.59, 708.1516, 0, -329.95538)
-
-[node name="1168,160,a_Chunk" parent="都市3d仮" unique_id=1432625169 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/1168,160,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.130001, 0, 0, 0, 17, 0, 0, 0, 17, 687.7903, 0, 114.16853)
-
-[node name="1200,-16,a_Chunk" parent="都市3d仮" unique_id=943813452 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/1200,-16,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.785, 0, 0, 0, 17, 0, 0, 0, 16.355, 861.29083, 0, -40.686356)
-
-[node name="1296,272,a_Chunk" parent="都市3d仮" unique_id=1870775997 instance=ExtResource("2_1a2ec")]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="Area3D" parent="都市3d仮/1296,272,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.845, 0, 0, 0, 17, 0, 0, 0, 17, 803.8142, 0, 154.09763)
-
-[node name="1344,-80,a_Chunk" parent="都市3d仮" unique_id=88756057 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1344,-80,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.205, 0, 0, 0, 17, 0, 0, 0, 17.21, 816.704, 0, -94.304)
-
-[node name="1392,-16,a_Chunk" parent="都市3d仮" unique_id=104658669 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1392,-16,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.94, 0, 0, 0, 17, 0, 0, 0, 17, 888.51636, 0, -104.81363)
-
-[node name="1136,288,a_Chunk" parent="都市3d仮" unique_id=965589796 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/1136,288,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(18.305, 0, 0, 0, 17, 0, 0, 0, 17.24, 660.09, 0, 154.09772)
-
-[node name="256,880,a_Chunk" parent="都市3d仮" unique_id=1811579146 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/256,880,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17.405, 0, 0, 0, 17, 0, 0, 0, 17, 94.895996, 0, 604.85754)
-
-[node name="320,896,a_Chunk" parent="都市3d仮" unique_id=1781525833 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/320,896,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 137.68741, 0, 596.4364)
-
-[node name="256,896,a_Chunk" parent="都市3d仮" unique_id=635064329 instance=ExtResource("2_1a2ec")]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Area3D" parent="都市3d仮/256,896,a_Chunk" index="0" unique_id=250931451]
-transform = Transform3D(17, 0, 0, 0, 17, 0, 0, 0, 17, 155.2672, 0, 599.11456)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="都市3d仮" unique_id=1210629666]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 46.78842, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="都市3d仮/StaticBody3D" unique_id=162170007]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1226737, 0)
-shape = SubResource("WorldBoundaryShape3D_r3fl7")
+[node name="都市3d仮" parent="." unique_id=1006423857 instance=ExtResource("4_ealrb")]
 
 [node name="レベル" type="Node3D" parent="." unique_id=14615443]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35.094, 0)
 
-[node name="プレイヤー" parent="." unique_id=1396265163 node_paths=PackedStringArray("レベル制御", "メッセージボックス") instance=ExtResource("207_ccj11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 463.544, 25.048, -93.229)
-"レベル制御" = NodePath("..")
-"メッセージボックス" = NodePath("../Control/メッセージボックス")
-metadata/_edit_group_ = true
-
-[node name="GeneralSkeleton" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1396265163, 652042102, 231553116) index="0" unique_id=1885119474]
-bones/1/rotation = Quaternion(0, 0, 0, 1)
-bones/11/position = Vector3(1.153041e-08, 1.1521508e-07, 1.8755408e-09)
-bones/11/rotation = Quaternion(-0.03526544, -0.13238114, 0.045691002, 0.9895171)
-bones/12/rotation = Quaternion(0.021988073, -0.0070037884, -0.020701356, 0.9995194)
-bones/13/rotation = Quaternion(-0.09390716, 0.019672766, 0.0026180188, 0.99538314)
-bones/41/rotation = Quaternion(0.022105042, -0.0054659904, -0.020455241, 0.9995315)
-bones/42/rotation = Quaternion(0.5186749, -0.4649797, -0.57901376, -0.42369002)
-bones/43/rotation = Quaternion(-0.052645933, 0.8167743, -0.5680287, 0.086323075)
-bones/44/rotation = Quaternion(0.17420444, 0.6853122, -0.17420414, 0.6853122)
-bones/45/rotation = Quaternion(0.016715243, -0.8136386, 0.0039933603, 0.581117)
-bones/46/rotation = Quaternion(0.52016926, 0.45558533, 0.6004198, -0.40169886)
-bones/47/rotation = Quaternion(-0.036040135, 0.8570756, -0.51347923, -0.021489222)
-bones/48/rotation = Quaternion(0.14974211, -0.6910698, 0.14974208, 0.69106966)
-bones/49/rotation = Quaternion(0.08942726, 0.80913734, -0.026355086, 0.5801766)
-bones/51/rotation = Quaternion(-0.073018834, 0.13314106, 0.98331165, 0.10019948)
-bones/52/rotation = Quaternion(0.009838985, 0.956463, -0.2837991, 0.06737932)
-bones/53/rotation = Quaternion(0.016662309, 0.077231675, 0.9904821, 0.112707645)
-bones/54/rotation = Quaternion(-0.004469892, 0.975246, -0.20721968, 0.077041924)
-
-[node name="R_Pupils_001" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(0.009303559, -0.24347295, -0.96986306, -0.9776454, 0.20152698, -0.059969235, 0.21005446, 0.9487401, -0.23615536, -0.18138316, 0.9985578, 0.1208125)
-
-[node name="L_Pupils_001" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(0.009303559, -0.24347295, -0.96986306, -0.9776454, 0.20152698, -0.059969235, 0.21005446, 0.9487401, -0.23615536, -0.003898235, 1.0095321, 0.1640289)
-
-[node name="head" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.96986306, -0.009303559, -0.24347295, 0.059969235, 0.9776454, 0.20152698, 0.23615536, -0.21005446, 0.9487401, -0.049152613, 0.7288939, -0.040411994)
-
-[node name="_設定" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
-surface_material_override/0 = SubResource("StandardMaterial3D_s0gvp")
-
-[node name="Eye_001" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
-surface_material_override/0 = SubResource("StandardMaterial3D_vxd74")
-surface_material_override/1 = SubResource("StandardMaterial3D_dhlwf")
-
-[node name="Head" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="2" unique_id=1097678551]
-surface_material_override/0 = SubResource("StandardMaterial3D_5t8nk")
-
-[node name="Body" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
-surface_material_override/0 = SubResource("StandardMaterial3D_j3e5s")
-
-[node name="Body_Layer" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
-surface_material_override/0 = SubResource("StandardMaterial3D_nu31w")
-
-[node name="Face" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
-surface_material_override/0 = SubResource("StandardMaterial3D_obt1j")
-surface_material_override/1 = SubResource("StandardMaterial3D_2yde8")
-surface_material_override/2 = SubResource("StandardMaterial3D_id0nj")
-
-[node name="Head_Layer" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="6" unique_id=1719889094]
-surface_material_override/0 = SubResource("StandardMaterial3D_1q667")
-
-[node name="L_Arm" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
-surface_material_override/0 = SubResource("StandardMaterial3D_ype4i")
-
-[node name="L_Arm_Layer" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
-surface_material_override/0 = SubResource("StandardMaterial3D_riyl1")
-
-[node name="L_Iris" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
-surface_material_override/0 = SubResource("StandardMaterial3D_pb8dk")
-
-[node name="L_Leg" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
-surface_material_override/0 = SubResource("StandardMaterial3D_2mu51")
-
-[node name="L_Leg_Layer" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
-surface_material_override/0 = SubResource("StandardMaterial3D_vmvb8")
-
-[node name="R_Arm" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
-surface_material_override/0 = SubResource("StandardMaterial3D_4i7mf")
-
-[node name="R_Arm_Layer" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
-surface_material_override/0 = SubResource("StandardMaterial3D_3s0n5")
-
-[node name="R_Iris" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
-surface_material_override/0 = SubResource("StandardMaterial3D_qpkl4")
-
-[node name="R_Leg" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
-surface_material_override/0 = SubResource("StandardMaterial3D_g4s1x")
-
-[node name="R_Leg_Layer" parent="プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
-surface_material_override/0 = SubResource("StandardMaterial3D_pf4ct")
-
 [node name="カメラ制御" parent="." unique_id=629122187 node_paths=PackedStringArray("目標") instance=ExtResource("208_ir4n0")]
 transform = Transform3D(1, 0, 0, 0, 0.76040596, -0.64944804, 0, 0.64944804, 0.76040596, 0, 19.363379, 0)
-"目標" = NodePath("../プレイヤー")
+"目標" = NodePath("../プレイヤー位置/プレイヤー")
 "速さ" = 5.0
 "感度" = 9.0
 
@@ -2056,104 +491,110 @@ transform = Transform3D(1, 0, 0, 0, 0.76040596, -0.64944804, 0, 0.64944804, 0.76
 "太陽" = NodePath("../時間太陽")
 "メッセージボックス" = NodePath("../Control/メッセージボックス")
 
-[node name="エンティティ2" parent="NPC制御" unique_id=1008160958 instance=ExtResource("211_obnk4")]
+[node name="わでいどｐｐ" parent="NPC制御" unique_id=1008160958 instance=ExtResource("211_obnk4")]
+process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.49048, 14.818058, 317.92023)
+visible = false
 "デフォルトセリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_o4spe"), SubResource("Resource_mp3km"), SubResource("Resource_g3783"), SubResource("Resource_rt7qk")])
 SPEED = 5.5
-"表情データ" = ExtResource("216_g3783")
 
-[node name="モデル" parent="NPC制御/エンティティ2/原点" parent_id_path=PackedInt32Array(1008160958, 1394227668) index="0" unique_id=652042102]
+[node name="モデル" parent="NPC制御/わでいどｐｐ/原点" parent_id_path=PackedInt32Array(1008160958, 1394227668) index="0" unique_id=652042102]
 "スキン" = ExtResource("216_yn86y")
 
-[node name="GeneralSkeleton" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1008160958, 652042102, 231553116) index="0" unique_id=1885119474]
-bones/11/position = Vector3(1.153041e-08, 1.1521508e-07, 1.8755408e-09)
-bones/11/rotation = Quaternion(-0.03526544, -0.13238114, 0.045691002, 0.9895171)
-bones/12/rotation = Quaternion(0.021988073, -0.0070037884, -0.020701356, 0.9995194)
-bones/13/rotation = Quaternion(-0.09390716, 0.019672766, 0.0026180188, 0.99538314)
-bones/41/rotation = Quaternion(0.022105042, -0.0054659904, -0.020455241, 0.9995315)
-bones/42/rotation = Quaternion(0.5186749, -0.4649797, -0.57901376, -0.42369002)
-bones/43/rotation = Quaternion(-0.052645933, 0.8167743, -0.5680287, 0.086323075)
-bones/44/rotation = Quaternion(0.17420444, 0.6853122, -0.17420414, 0.6853122)
-bones/45/rotation = Quaternion(0.016715243, -0.8136386, 0.0039933603, 0.581117)
-bones/46/rotation = Quaternion(0.52016926, 0.45558533, 0.6004198, -0.40169886)
-bones/47/rotation = Quaternion(-0.036040135, 0.8570756, -0.51347923, -0.021489222)
-bones/48/rotation = Quaternion(0.14974211, -0.6910698, 0.14974208, 0.69106966)
-bones/49/rotation = Quaternion(0.08942726, 0.80913734, -0.026355086, 0.5801766)
-bones/51/rotation = Quaternion(-0.073018834, 0.13314106, 0.98331165, 0.10019948)
-bones/52/rotation = Quaternion(0.009838985, 0.956463, -0.2837991, 0.06737932)
-bones/53/rotation = Quaternion(0.016662309, 0.077231675, 0.9904821, 0.112707645)
-bones/54/rotation = Quaternion(-0.004469892, 0.975246, -0.20721968, 0.077041924)
+[node name="GeneralSkeleton" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1008160958, 652042102, 231553116) index="0" unique_id=1885119474]
+bones/11/position = Vector3(-5.1916293e-10, 1.1574029e-07, -3.995266e-10)
+bones/11/rotation = Quaternion(-0.03372703, -0.018558042, -0.08381385, 0.9957376)
+bones/12/rotation = Quaternion(0.0156225115, 4.3199805e-05, 0.023297371, 0.9996065)
+bones/13/rotation = Quaternion(-0.10312063, -0.01769493, 0.009433813, 0.9944667)
+bones/41/rotation = Quaternion(0.016035954, -0.0016699262, 0.022612581, 0.99961436)
+bones/42/rotation = Quaternion(0.5302701, -0.45414773, -0.5724699, -0.4299324)
+bones/43/rotation = Quaternion(0.03016029, 0.8538314, -0.5145576, 0.07275256)
+bones/44/rotation = Quaternion(0.17083502, 0.6861599, -0.1708346, 0.6861599)
+bones/45/rotation = Quaternion(0.011498659, -0.80175525, -0.0036610789, 0.5975307)
+bones/46/rotation = Quaternion(0.5126036, 0.47036493, 0.579509, -0.42445698)
+bones/47/rotation = Quaternion(-0.0766995, 0.777555, -0.6240994, 0.005040754)
+bones/48/rotation = Quaternion(0.13174258, -0.6947259, 0.1317427, 0.69472575)
+bones/49/rotation = Quaternion(0.054486, 0.78664154, 0.029109735, 0.6143118)
+bones/51/rotation = Quaternion(-0.06272945, 0.025339177, 0.99380225, -0.08820485)
+bones/52/rotation = Quaternion(-0.011133459, 0.9872482, -0.14738692, -0.05911201)
+bones/53/rotation = Quaternion(0.052101657, 0.13072754, 0.9833322, -0.115123846)
+bones/54/rotation = Quaternion(0.005595192, 0.95129097, -0.3040842, 0.050469205)
 
-[node name="R_Pupils_001" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(0.009303559, -0.24347295, -0.96986306, -0.9776454, 0.20152698, -0.059969235, 0.21005446, 0.9487401, -0.23615536, -0.18138316, 0.9985578, 0.1208125)
+[node name="R_Pupils_001" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
+transform = Transform3D(-0.110787265, -0.047015242, -0.99273145, -0.96447974, 0.2461035, 0.095979095, 0.23980218, 0.9681026, -0.072610386, 0.046716474, 1.0119501, 0.13491215)
 
-[node name="L_Pupils_001" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(0.009303559, -0.24347295, -0.96986306, -0.9776454, 0.20152698, -0.059969235, 0.21005446, 0.9487401, -0.23615536, -0.003898235, 1.0095321, 0.1640289)
+[node name="L_Pupils_001" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
+transform = Transform3D(-0.110787265, -0.047015242, -0.99273145, -0.96447974, 0.2461035, 0.095979095, 0.23980218, 0.9681026, -0.072610386, 0.22838631, 0.99438596, 0.14819983)
 
-[node name="head" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.96986306, -0.009303559, -0.24347295, 0.059969235, 0.9776454, 0.20152698, 0.23615536, -0.21005446, 0.9487401, -0.049152613, 0.7288939, -0.040411994)
+[node name="head" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
+transform = Transform3D(0.99273145, 0.110787265, -0.047015242, -0.095979095, 0.96447974, 0.2461035, 0.072610386, -0.23980218, 0.9681026, 0.10584684, 0.7231113, -0.03618022)
 
-[node name="_設定" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
-surface_material_override/0 = SubResource("StandardMaterial3D_5w2ad")
+[node name="_設定" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
+surface_material_override/0 = SubResource("StandardMaterial3D_s0gvp")
 
-[node name="Eye_001" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
-surface_material_override/0 = SubResource("StandardMaterial3D_8p5mg")
-surface_material_override/1 = SubResource("StandardMaterial3D_dsgk7")
+[node name="Eye_001" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
+surface_material_override/0 = SubResource("StandardMaterial3D_vxd74")
+surface_material_override/1 = SubResource("StandardMaterial3D_dhlwf")
 
-[node name="Head" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="2" unique_id=1097678551]
-surface_material_override/0 = SubResource("StandardMaterial3D_72tv7")
+[node name="Head" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="2" unique_id=1097678551]
+surface_material_override/0 = SubResource("StandardMaterial3D_5t8nk")
 
-[node name="Body" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
-surface_material_override/0 = SubResource("StandardMaterial3D_x6a8j")
+[node name="Body" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
+surface_material_override/0 = SubResource("StandardMaterial3D_j3e5s")
 
-[node name="Body_Layer" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
-surface_material_override/0 = SubResource("StandardMaterial3D_s7uix")
+[node name="Body_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
+surface_material_override/0 = SubResource("StandardMaterial3D_nu31w")
 
-[node name="Face" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
-surface_material_override/0 = SubResource("StandardMaterial3D_4hyfj")
-surface_material_override/1 = SubResource("StandardMaterial3D_8d0ks")
-surface_material_override/2 = SubResource("StandardMaterial3D_8kg7c")
+[node name="Face" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
+surface_material_override/0 = SubResource("StandardMaterial3D_obt1j")
+surface_material_override/1 = SubResource("StandardMaterial3D_2yde8")
+surface_material_override/2 = SubResource("StandardMaterial3D_id0nj")
 
-[node name="Head_Layer" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="6" unique_id=1719889094]
-surface_material_override/0 = SubResource("StandardMaterial3D_wwdad")
+[node name="Head_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="6" unique_id=1719889094]
+surface_material_override/0 = SubResource("StandardMaterial3D_1q667")
 
-[node name="L_Arm" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
-surface_material_override/0 = SubResource("StandardMaterial3D_ykyjb")
+[node name="L_Arm" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
+surface_material_override/0 = SubResource("StandardMaterial3D_ype4i")
 
-[node name="L_Arm_Layer" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
-surface_material_override/0 = SubResource("StandardMaterial3D_sivbr")
+[node name="L_Arm_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
+surface_material_override/0 = SubResource("StandardMaterial3D_riyl1")
 
-[node name="L_Iris" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
-surface_material_override/0 = SubResource("StandardMaterial3D_4yprr")
+[node name="L_Iris" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
+surface_material_override/0 = SubResource("StandardMaterial3D_pb8dk")
 
-[node name="L_Leg" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
-surface_material_override/0 = SubResource("StandardMaterial3D_1ofy4")
+[node name="L_Leg" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
+surface_material_override/0 = SubResource("StandardMaterial3D_2mu51")
 
-[node name="L_Leg_Layer" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
-surface_material_override/0 = SubResource("StandardMaterial3D_a41ck")
+[node name="L_Leg_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
+surface_material_override/0 = SubResource("StandardMaterial3D_vmvb8")
 
-[node name="R_Arm" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
-surface_material_override/0 = SubResource("StandardMaterial3D_alien")
+[node name="R_Arm" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
+surface_material_override/0 = SubResource("StandardMaterial3D_4i7mf")
 
-[node name="R_Arm_Layer" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
-surface_material_override/0 = SubResource("StandardMaterial3D_8jhw1")
+[node name="R_Arm_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
+surface_material_override/0 = SubResource("StandardMaterial3D_3s0n5")
 
-[node name="R_Iris" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
-surface_material_override/0 = SubResource("StandardMaterial3D_if4ww")
+[node name="R_Iris" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
+surface_material_override/0 = SubResource("StandardMaterial3D_qpkl4")
 
-[node name="R_Leg" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
-surface_material_override/0 = SubResource("StandardMaterial3D_brp11")
+[node name="R_Leg" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
+surface_material_override/0 = SubResource("StandardMaterial3D_g4s1x")
 
-[node name="R_Leg_Layer" parent="NPC制御/エンティティ2/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
-surface_material_override/0 = SubResource("StandardMaterial3D_dvobo")
+[node name="R_Leg_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
+surface_material_override/0 = SubResource("StandardMaterial3D_pf4ct")
 
-[node name="Control" type="Control" parent="." unique_id=42835933]
+[node name="わでいど" parent="NPC制御" unique_id=1396265163 instance=ExtResource("12_ealrb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.49048, 14.818058, 317.92023)
+
+[node name="Control" type="Control" parent="." unique_id=42835933 node_paths=PackedStringArray("ムービー中非表示リスト") groups=["UI"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("14_s0gvp")
+"ムービー中非表示リスト" = [NodePath("時間"), NodePath("ミッションマネージャー")]
 
 [node name="時間" type="Control" parent="Control" unique_id=843232092 node_paths=PackedStringArray("太陽")]
 layout_mode = 1
@@ -2198,8 +639,11 @@ horizontal_alignment = 1
 
 [node name="メッセージボックス" parent="Control" unique_id=1796908698 node_paths=PackedStringArray("プレイヤー", "追尾カメラ") instance=ExtResource("217_0ma11")]
 layout_mode = 1
-"プレイヤー" = NodePath("../../プレイヤー")
+"プレイヤー" = NodePath("../../プレイヤー位置/プレイヤー")
 "追尾カメラ" = NodePath("../../カメラ制御")
+
+[node name="ミッションマネージャー" parent="Control" unique_id=1051933576 instance=ExtResource("15_jsnrv")]
+layout_mode = 1
 
 [node name="画面フェード" parent="Control" unique_id=298488208 instance=ExtResource("221_d3wty")]
 layout_mode = 1
@@ -2210,211 +654,100 @@ visible = false
 mesh = SubResource("PlaneMesh_um0fc")
 surface_material_override/0 = ExtResource("217_q3cen")
 script = ExtResource("218_ym7tp")
-"プレイヤー" = NodePath("../プレイヤー")
+"プレイヤー" = NodePath("../プレイヤー位置/プレイヤー")
 
-[editable path="都市3d仮/-208,240,a_Chunk"]
-[editable path="都市3d仮/48,416,a_Chunk"]
-[editable path="都市3d仮/960,-592,a_Chunk"]
-[editable path="都市3d仮/960,-624,a_Chunk"]
-[editable path="都市3d仮/-16,-272,a_Chunk"]
-[editable path="都市3d仮/-16,-384,a_Chunk"]
-[editable path="都市3d仮/-16,32,a_Chunk"]
-[editable path="都市3d仮/-16,80,a_Chunk"]
-[editable path="都市3d仮/-16,128,a_Chunk"]
-[editable path="都市3d仮/-16,384,a_Chunk"]
-[editable path="都市3d仮/-32,-48,a_Chunk"]
-[editable path="都市3d仮/-32,-160,a_Chunk"]
-[editable path="都市3d仮/-48,176,a_Chunk"]
-[editable path="都市3d仮/-48,224,a_Chunk"]
-[editable path="都市3d仮/-48,304,a_Chunk"]
-[editable path="都市3d仮/-48,352,a_Chunk"]
-[editable path="都市3d仮/-80,384,a_Chunk"]
-[editable path="都市3d仮/-96,416,a_Chunk"]
-[editable path="都市3d仮/-112,-16,a_Chunk"]
-[editable path="都市3d仮/-112,-48,a_Chunk"]
-[editable path="都市3d仮/-112,-96,a_Chunk"]
-[editable path="都市3d仮/-112,-176,a_Chunk"]
-[editable path="都市3d仮/-112,-288,a_Chunk"]
-[editable path="都市3d仮/-112,-336,a_Chunk"]
-[editable path="都市3d仮/-112,32,a_Chunk"]
-[editable path="都市3d仮/-112,144,a_Chunk"]
-[editable path="都市3d仮/-112,176,a_Chunk"]
-[editable path="都市3d仮/-112,224,a_Chunk"]
-[editable path="都市3d仮/-112,304,a_Chunk"]
-[editable path="都市3d仮/-112,336,a_Chunk"]
-[editable path="都市3d仮/-112,384,a_Chunk"]
-[editable path="都市3d仮/-128,80,a_Chunk"]
-[editable path="都市3d仮/-128,464,a_Chunk"]
-[editable path="都市3d仮/-144,352,a_Chunk"]
-[editable path="都市3d仮/-144,416,a_Chunk"]
-[editable path="都市3d仮/-160,240,a_Chunk"]
-[editable path="都市3d仮/-160,336,a_Chunk"]
-[editable path="都市3d仮/-176,144,a_Chunk"]
-[editable path="都市3d仮/-192,160,a_Chunk"]
-[editable path="都市3d仮/-192,176,a_Chunk"]
-[editable path="都市3d仮/-208,224,a_Chunk"]
-[editable path="都市3d仮/-224,304,a_Chunk"]
-[editable path="都市3d仮/0,384,a_Chunk"]
-[editable path="都市3d仮/0,816,a_Chunk"]
-[editable path="都市3d仮/0,896,a_Chunk"]
-[editable path="都市3d仮/16,-544,a_Chunk"]
-[editable path="都市3d仮/16,-560,a_Chunk"]
-[editable path="都市3d仮/32,-176,a_Chunk"]
-[editable path="都市3d仮/32,208,a_Chunk"]
-[editable path="都市3d仮/48,240,a_Chunk"]
-[editable path="都市3d仮/48,304,a_Chunk"]
-[editable path="都市3d仮/48,352,a_Chunk"]
-[editable path="都市3d仮/48,560,a_Chunk"]
-[editable path="都市3d仮/64,32,a_Chunk"]
-[editable path="都市3d仮/64,96,a_Chunk"]
-[editable path="都市3d仮/64,128,a_Chunk"]
-[editable path="都市3d仮/64,624,a_Chunk"]
-[editable path="都市3d仮/64,896,a_Chunk"]
-[editable path="都市3d仮/80,-48,a_Chunk"]
-[editable path="都市3d仮/80,-144,a_Chunk"]
-[editable path="都市3d仮/80,-272,a_Chunk"]
-[editable path="都市3d仮/80,-336,a_Chunk"]
-[editable path="都市3d仮/80,-384,a_Chunk"]
-[editable path="都市3d仮/80,448,a_Chunk"]
-[editable path="都市3d仮/96,208,a_Chunk"]
-[editable path="都市3d仮/112,336,a_Chunk"]
-[editable path="都市3d仮/112,416,a_Chunk"]
-[editable path="都市3d仮/112,448,a_Chunk"]
-[editable path="都市3d仮/128,560,a_Chunk"]
-[editable path="都市3d仮/128,704,a_Chunk"]
-[editable path="都市3d仮/128,816,a_Chunk"]
-[editable path="都市3d仮/144,-224,a_Chunk"]
-[editable path="都市3d仮/144,-272,a_Chunk"]
-[editable path="都市3d仮/144,-400,a_Chunk"]
-[editable path="都市3d仮/144,272,a_Chunk"]
-[editable path="都市3d仮/144,304,a_Chunk"]
-[editable path="都市3d仮/144,368,a_Chunk"]
-[editable path="都市3d仮/160,208,a_Chunk"]
-[editable path="都市3d仮/176,-32,a_Chunk"]
-[editable path="都市3d仮/176,-48,a_Chunk"]
-[editable path="都市3d仮/176,-96,a_Chunk"]
-[editable path="都市3d仮/176,-176,a_Chunk"]
-[editable path="都市3d仮/176,-224,a_Chunk"]
-[editable path="都市3d仮/176,-304,a_Chunk"]
-[editable path="都市3d仮/176,-400,a_Chunk"]
-[editable path="都市3d仮/176,-496,a_Chunk"]
-[editable path="都市3d仮/176,-544,a_Chunk"]
-[editable path="都市3d仮/176,32,a_Chunk"]
-[editable path="都市3d仮/176,96,a_Chunk"]
-[editable path="都市3d仮/176,816,a_Chunk"]
-[editable path="都市3d仮/176,848,a_Chunk"]
-[editable path="都市3d仮/176,896,a_Chunk"]
-[editable path="都市3d仮/192,976,a_Chunk"]
-[editable path="都市3d仮/208,-192,a_Chunk"]
-[editable path="都市3d仮/208,-272,a_Chunk"]
-[editable path="都市3d仮/208,96,a_Chunk"]
-[editable path="都市3d仮/208,128,a_Chunk"]
-[editable path="都市3d仮/208,208,a_Chunk"]
-[editable path="都市3d仮/208,256,a_Chunk"]
-[editable path="都市3d仮/240,-304,a_Chunk"]
-[editable path="都市3d仮/240,-432,a_Chunk"]
-[editable path="都市3d仮/240,-512,a_Chunk"]
-[editable path="都市3d仮/240,224,a_Chunk"]
-[editable path="都市3d仮/256,-32,a_Chunk"]
-[editable path="都市3d仮/256,-160,a_Chunk"]
-[editable path="都市3d仮/256,-256,a_Chunk"]
-[editable path="都市3d仮/256,688,a_Chunk"]
-[editable path="都市3d仮/272,-32,a_Chunk"]
-[editable path="都市3d仮/272,192,a_Chunk"]
-[editable path="都市3d仮/304,208,a_Chunk"]
-[editable path="都市3d仮/320,48,a_Chunk"]
-[editable path="都市3d仮/320,96,a_Chunk"]
-[editable path="都市3d仮/320,144,a_Chunk"]
-[editable path="都市3d仮/320,192,a_Chunk"]
-[editable path="都市3d仮/336,-192,a_Chunk"]
-[editable path="都市3d仮/336,-256,a_Chunk"]
-[editable path="都市3d仮/336,-304,a_Chunk"]
-[editable path="都市3d仮/368,-32,a_Chunk"]
-[editable path="都市3d仮/368,-96,a_Chunk"]
-[editable path="都市3d仮/368,-128,a_Chunk"]
-[editable path="都市3d仮/368,32,a_Chunk"]
-[editable path="都市3d仮/384,128,a_Chunk"]
-[editable path="都市3d仮/384,192,a_Chunk"]
-[editable path="都市3d仮/400,96,a_Chunk"]
-[editable path="都市3d仮/400,192,a_Chunk"]
-[editable path="都市3d仮/400,304,a_Chunk"]
-[editable path="都市3d仮/432,-192,a_Chunk"]
-[editable path="都市3d仮/448,-288,a_Chunk"]
-[editable path="都市3d仮/448,-432,a_Chunk"]
-[editable path="都市3d仮/464,-128,a_Chunk"]
-[editable path="都市3d仮/464,32,a_Chunk"]
-[editable path="都市3d仮/480,-512,a_Chunk"]
-[editable path="都市3d仮/480,96,a_Chunk"]
-[editable path="都市3d仮/496,-48,a_Chunk"]
-[editable path="都市3d仮/528,-192,a_Chunk"]
-[editable path="都市3d仮/528,-560,a_Chunk"]
-[editable path="都市3d仮/544,-16,a_Chunk"]
-[editable path="都市3d仮/544,-48,a_Chunk"]
-[editable path="都市3d仮/544,-96,a_Chunk"]
-[editable path="都市3d仮/544,32,a_Chunk"]
-[editable path="都市3d仮/560,96,a_Chunk"]
-[editable path="都市3d仮/576,320,a_Chunk"]
-[editable path="都市3d仮/592,-288,a_Chunk"]
-[editable path="都市3d仮/592,128,a_Chunk"]
-[editable path="都市3d仮/592,288,a_Chunk"]
-[editable path="都市3d仮/608,-160,a_Chunk"]
-[editable path="都市3d仮/608,32,a_Chunk"]
-[editable path="都市3d仮/640,96,a_Chunk"]
-[editable path="都市3d仮/640,256,a_Chunk"]
-[editable path="都市3d仮/656,-192,a_Chunk"]
-[editable path="都市3d仮/672,-512,a_Chunk"]
-[editable path="都市3d仮/704,-48,a_Chunk"]
-[editable path="都市3d仮/704,-400,a_Chunk"]
-[editable path="都市3d仮/704,-480,a_Chunk"]
-[editable path="都市3d仮/704,224,a_Chunk"]
-[editable path="都市3d仮/704,288,a_Chunk"]
-[editable path="都市3d仮/784,32,a_Chunk"]
-[editable path="都市3d仮/800,-48,a_Chunk"]
-[editable path="都市3d仮/800,96,a_Chunk"]
-[editable path="都市3d仮/800,192,a_Chunk"]
-[editable path="都市3d仮/800,288,a_Chunk"]
-[editable path="都市3d仮/832,-192,a_Chunk"]
-[editable path="都市3d仮/832,-288,a_Chunk"]
-[editable path="都市3d仮/832,-560,a_Chunk"]
-[editable path="都市3d仮/864,-48,a_Chunk"]
-[editable path="都市3d仮/880,-480,a_Chunk"]
-[editable path="都市3d仮/880,-512,a_Chunk"]
-[editable path="都市3d仮/896,-560,a_Chunk"]
-[editable path="都市3d仮/928,-192,a_Chunk"]
-[editable path="都市3d仮/928,32,a_Chunk"]
-[editable path="都市3d仮/928,80,a_Chunk"]
-[editable path="都市3d仮/928,144,a_Chunk"]
-[editable path="都市3d仮/944,112,a_Chunk"]
-[editable path="都市3d仮/960,-48,a_Chunk"]
-[editable path="都市3d仮/960,-416,a_Chunk"]
-[editable path="都市3d仮/976,192,a_Chunk"]
-[editable path="都市3d仮/976,288,a_Chunk"]
-[editable path="都市3d仮/976,432,a_Chunk"]
-[editable path="都市3d仮/992,-688,a_Chunk"]
-[editable path="都市3d仮/1008,112,a_Chunk"]
-[editable path="都市3d仮/1008,432,a_Chunk"]
-[editable path="都市3d仮/1040,-16,a_Chunk"]
-[editable path="都市3d仮/1040,-48,a_Chunk"]
-[editable path="都市3d仮/1040,-272,a_Chunk"]
-[editable path="都市3d仮/1040,-416,a_Chunk"]
-[editable path="都市3d仮/1040,80,a_Chunk"]
-[editable path="都市3d仮/1040,368,a_Chunk"]
-[editable path="都市3d仮/1056,-192,a_Chunk"]
-[editable path="都市3d仮/1056,112,a_Chunk"]
-[editable path="都市3d仮/1056,176,a_Chunk"]
-[editable path="都市3d仮/1056,272,a_Chunk"]
-[editable path="都市3d仮/1120,-224,a_Chunk"]
-[editable path="都市3d仮/1120,-352,a_Chunk"]
-[editable path="都市3d仮/1168,160,a_Chunk"]
-[editable path="都市3d仮/1200,-16,a_Chunk"]
-[editable path="都市3d仮/1296,272,a_Chunk"]
-[editable path="都市3d仮/1344,-80,a_Chunk"]
-[editable path="都市3d仮/1392,-16,a_Chunk"]
-[editable path="都市3d仮/1136,288,a_Chunk"]
-[editable path="都市3d仮/256,880,a_Chunk"]
-[editable path="都市3d仮/320,896,a_Chunk"]
-[editable path="都市3d仮/256,896,a_Chunk"]
-[editable path="プレイヤー"]
-[editable path="プレイヤー/原点/モデル"]
-[editable path="NPC制御/エンティティ2"]
-[editable path="NPC制御/エンティティ2/原点/モデル"]
+[node name="プレイヤー位置" type="RemoteTransform3D" parent="." unique_id=154085013]
+
+[node name="プレイヤー" parent="プレイヤー位置" unique_id=1999271142 node_paths=PackedStringArray("レベル制御", "メッセージボックス") groups=["プレイヤー"] instance=ExtResource("207_ccj11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.15866, 25.048, 237.73334)
+"レベル制御" = NodePath("../..")
+"メッセージボックス" = NodePath("../../Control/メッセージボックス")
+
+[node name="GeneralSkeleton" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1999271142, 652042102, 231553116) index="0" unique_id=1885119474]
+bones/11/position = Vector3(7.0264115e-09, 1.17869455e-07, -2.7504785e-10)
+bones/11/rotation = Quaternion(-0.010398011, -0.041880816, -0.018819815, 0.99889123)
+bones/12/rotation = Quaternion(-0.027509356, -0.010919121, 0.0014002133, 0.999561)
+bones/13/rotation = Quaternion(-0.07893349, 0.004544965, 0.0037547548, 0.99686253)
+bones/41/rotation = Quaternion(-0.027439466, -0.010884144, 0.0017492636, 0.99956274)
+bones/42/rotation = Quaternion(0.5220328, -0.46501726, -0.5670255, -0.435572)
+bones/43/rotation = Quaternion(0.03753776, 0.81484425, -0.56939834, 0.10200603)
+bones/44/rotation = Quaternion(0.16832492, 0.6867802, -0.1683245, 0.68678)
+bones/45/rotation = Quaternion(0.017169718, -0.79652935, -0.011515092, 0.6042464)
+bones/46/rotation = Quaternion(0.5158849, 0.47122145, 0.563877, -0.4402908)
+bones/47/rotation = Quaternion(-0.08625898, 0.81503, -0.5719357, -0.034278583)
+bones/48/rotation = Quaternion(0.12721659, -0.69556874, 0.12721597, 0.695569)
+bones/49/rotation = Quaternion(0.0690126, 0.7870336, 0.008734467, 0.6129757)
+bones/51/rotation = Quaternion(-0.054834887, 0.047257464, 0.99734414, 0.008036949)
+bones/52/rotation = Quaternion(0.0036815954, 0.99140376, -0.11594665, -0.060510766)
+bones/53/rotation = Quaternion(0.029431269, 0.075708814, 0.99666107, 0.008302435)
+bones/54/rotation = Quaternion(-0.0009933911, 0.9839493, -0.15628435, 0.086128525)
+
+[node name="R_Pupils_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
+transform = Transform3D(-0.04832004, -0.08670539, -0.9950614, -0.97195864, 0.23361504, 0.026841953, 0.230134, 0.9684556, -0.09556235, -0.054224722, 1.0128073, 0.13753876)
+
+[node name="L_Pupils_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
+transform = Transform3D(-0.04832004, -0.08670539, -0.9950614, -0.97195864, 0.23361504, 0.026841953, 0.230134, 0.9684556, -0.09556235, 0.1278715, 1.0078951, 0.15502664)
+
+[node name="head" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
+transform = Transform3D(0.9950614, 0.04832004, -0.08670539, -0.026841953, 0.97195864, 0.23361504, 0.09556235, -0.230134, 0.9684556, 0.029013745, 0.7303479, -0.03417307)
+
+[node name="_設定" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
+surface_material_override/0 = SubResource("StandardMaterial3D_5w2ad")
+
+[node name="Eye_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
+surface_material_override/0 = SubResource("StandardMaterial3D_8p5mg")
+surface_material_override/1 = SubResource("StandardMaterial3D_dsgk7")
+
+[node name="Head" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="2" unique_id=1097678551]
+surface_material_override/0 = SubResource("StandardMaterial3D_72tv7")
+
+[node name="Body" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
+surface_material_override/0 = SubResource("StandardMaterial3D_x6a8j")
+
+[node name="Body_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
+surface_material_override/0 = SubResource("StandardMaterial3D_s7uix")
+
+[node name="Face" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
+surface_material_override/0 = SubResource("StandardMaterial3D_4hyfj")
+surface_material_override/1 = SubResource("StandardMaterial3D_8d0ks")
+surface_material_override/2 = SubResource("StandardMaterial3D_8kg7c")
+
+[node name="Head_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="6" unique_id=1719889094]
+surface_material_override/0 = SubResource("StandardMaterial3D_wwdad")
+
+[node name="L_Arm" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
+surface_material_override/0 = SubResource("StandardMaterial3D_ykyjb")
+
+[node name="L_Arm_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
+surface_material_override/0 = SubResource("StandardMaterial3D_sivbr")
+
+[node name="L_Iris" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
+surface_material_override/0 = SubResource("StandardMaterial3D_4yprr")
+
+[node name="L_Leg" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
+surface_material_override/0 = SubResource("StandardMaterial3D_1ofy4")
+
+[node name="L_Leg_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
+surface_material_override/0 = SubResource("StandardMaterial3D_a41ck")
+
+[node name="R_Arm" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
+surface_material_override/0 = SubResource("StandardMaterial3D_alien")
+
+[node name="R_Arm_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
+surface_material_override/0 = SubResource("StandardMaterial3D_8jhw1")
+
+[node name="R_Iris" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
+surface_material_override/0 = SubResource("StandardMaterial3D_if4ww")
+
+[node name="R_Leg" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
+surface_material_override/0 = SubResource("StandardMaterial3D_brp11")
+
+[node name="R_Leg_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
+surface_material_override/0 = SubResource("StandardMaterial3D_dvobo")
+
+[node name="演出ルート" type="Node3D" parent="." unique_id=460926654]
+
+[editable path="NPC制御/わでいどｐｐ"]
+[editable path="NPC制御/わでいどｐｐ/原点/モデル"]
+[editable path="プレイヤー位置/プレイヤー"]
+[editable path="プレイヤー位置/プレイヤー/原点/モデル"]

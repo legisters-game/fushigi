@@ -1,15 +1,19 @@
 @tool
 extends Node3D
-
+class_name オープンワールド管理クラス
 @export_flags("Fire", "Water", "Earth", "Wind","ds") var spell_elements: = 0
 @export_tool_button("全体表示", "Callable") var hello_action = okq
 var 全体表示:bool
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	return
 	for i in get_children():
 		print(i.name)
 	#process_mode=Node.PROCESS_MODE_DISABLED
+
+
 
 func okq():
 	if not 全体表示:

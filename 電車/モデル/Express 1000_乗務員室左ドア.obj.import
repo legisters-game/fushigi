@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://fk3ims1csniu"
+path="res://.godot/imported/Express 1000_乗務員室左ドア.obj-ebca36915ceed964d1e2978db876bd55.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Express 1000_乗務員室左ドア.obj-ebca36915ceed964d1e2978db876bd55.mesh"]
+
+source_file="res://電車/モデル/Express 1000_乗務員室左ドア.obj"
+dest_files=["res://.godot/imported/Express 1000_乗務員室左ドア.obj-ebca36915ceed964d1e2978db876bd55.mesh", "res://.godot/imported/Express 1000_乗務員室左ドア.obj-ebca36915ceed964d1e2978db876bd55.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://sn1p3prkqs7b"]
+
+[ext_resource type="Script" uid="uid://c6v45dru6a3cj" path="res://シナリオ/演出用プレイヤー上書き.gd" id="1_onaeg"]
+
+[node name="演出用プレイヤー上書き" type="RemoteTransform3D" unique_id=601787656]
+update_rotation = false
+update_scale = false
+script = ExtResource("1_onaeg")

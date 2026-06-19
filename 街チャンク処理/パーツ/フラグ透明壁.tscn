@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://3cb21agtmo25"]
+
+[ext_resource type="Script" uid="uid://dw6vp1sq3q4sr" path="res://街チャンク処理/パーツ/フラグ透明壁.gd" id="1_m1d7n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m1d7n"]
+size = Vector3(0.6, 0.6, 0.6)
+
+[node name="透明壁" type="StaticBody3D" unique_id=879801436]
+script = ExtResource("1_m1d7n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2034441549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28519487, 0)
+shape = SubResource("BoxShape3D_m1d7n")
+debug_color = Color(1, 0, 0, 0.41960785)

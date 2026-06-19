@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cswg3m17ndvd0"]
+
+[ext_resource type="Script" uid="uid://i4hj6qvyrvlk" path="res://GUI/ミッションマネージャー/ミッションマネージャー.gd" id="1_uaq21"]
+[ext_resource type="PackedScene" uid="uid://cei4qic4p05mj" path="res://GUI/ミッションマネージャー/ミッションセル.tscn" id="2_kbkjo"]
+
+[node name="ミッションマネージャー" type="Control" unique_id=1051933576]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_uaq21")
+"ミッションセルパック" = ExtResource("2_kbkjo")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=1462732119]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 60.0
+
+[node name="Control3" type="Control" parent="VBoxContainer" unique_id=170466893]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1874742985]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="VBoxContainer" unique_id=283961249]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2

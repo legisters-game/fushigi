@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://dmbek8jwtnvaw"]
+
+[ext_resource type="Script" uid="uid://wi5tiv3q5m6a" path="res://レベル/レベル基礎.gd" id="1_0xusk"]
+[ext_resource type="ArrayMesh" uid="uid://dr6b3qm0uo1gd" path="res://街メッシュ/都市3d仮_-112,176_002.res" id="2_bfig4"]
+[ext_resource type="Script" uid="uid://dunk7b3n3p2st" path="res://街チャンク処理/パーツ/街メッシュルート.gd" id="3_pahlj"]
+[ext_resource type="PackedScene" uid="uid://uknsp7tmjptt" path="res://街チャンク処理/パーツ/オクルージョンカリング.tscn" id="4_w0h1u"]
+[ext_resource type="ArrayOccluder3D" uid="uid://dxoj4pkdc7kt3" path="res://街チャンク処理/街オクルージョン/-112,176.occ" id="5_3n34v"]
+[ext_resource type="Shape3D" uid="uid://cs26v14hv30ox" path="res://街チャンク処理/街コリジョン/-112,176.tres" id="6_yv2u3"]
+[ext_resource type="PackedScene" uid="uid://dunmrlgfjvq0t" path="res://レベル/ツール/ライト.tscn" id="7_pahlj"]
+[ext_resource type="PackedScene" uid="uid://dv74ch5bbw7ri" path="res://レベル/ツール/街レベルゲート.tscn" id="8_3n34v"]
+[ext_resource type="PackedScene" uid="uid://dugv7335puobc" path="res://レベル/ツール/街レベルエリアゲート.tscn" id="8_w0h1u"]
+[ext_resource type="PackedScene" uid="uid://dmgy0ytqbirrn" path="res://街チャンク処理/パーツ/レベルエリアゲート.tscn" id="10_yv2u3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yv2u3"]
+size = Vector3(1, 1.9438477, 0.41552734)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3n34v"]
+size = Vector3(0.24609375, 0.111206055, 0.27075195)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vl8wc"]
+size = Vector3(1.9782715, 0.53515625, 2.937378)
+
+[node name="マンション" type="Node3D" unique_id=1557217192 node_paths=PackedStringArray("テレポート先", "階層処理切り替え用ノード")]
+script = ExtResource("1_0xusk")
+"テレポート先" = [NodePath("-112,176,a/中心/一階/出入口"), NodePath("-112,176,a/中心/一階/エレベーター出口"), NodePath("-112,176,a/中心/二階/エレベーター出口2階")]
+"階層処理切り替え用ノード" = [NodePath("-112,176,a/中心/一階"), NodePath("-112,176,a/中心/一階"), NodePath("-112,176,a/中心/二階")]
+
+[node name="-112,176,a" type="NavigationRegion3D" parent="." unique_id=1748681392]
+
+[node name="-112,176,a" type="MeshInstance3D" parent="-112,176,a" unique_id=1543700358]
+transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, 0, 0, 0)
+mesh = ExtResource("2_bfig4")
+script = ExtResource("3_pahlj")
+
+[node name="中心" type="Node3D" parent="-112,176,a" unique_id=1159664327]
+
+[node name="-112,176,a_oc" parent="-112,176,a/中心" unique_id=1955116240 instance=ExtResource("4_w0h1u")]
+transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, -125.14282, 51.911133, 127.92385)
+occluder = ExtResource("5_3n34v")
+
+[node name="地形当たり判定" type="StaticBody3D" parent="-112,176,a/中心" unique_id=1863677020]
+transform = Transform3D(16, 0, 0, 0, -6.993822e-07, -16, 0, 16, -6.993822e-07, -125.14282, 51.911133, 127.92385)
+collision_layer = 3
+collision_mask = 3
+
+[node name="地形コリジョン" type="CollisionShape3D" parent="-112,176,a/中心/地形当たり判定" unique_id=1458483907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8214264, -7.9952407, 3.244446)
+shape = ExtResource("6_yv2u3")
+
+[node name="一階" type="Node3D" parent="-112,176,a/中心" unique_id=1337550271]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -125.14282, 50.78541, 127.92385)
+
+[node name="ライト" type="Node3D" parent="-112,176,a/中心/一階" unique_id=1938149083]
+process_mode = 4
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 0, 0, 0)
+
+[node name="中廊下" type="Node3D" parent="-112,176,a/中心/一階/ライト" unique_id=1744239163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.56050444, -0.16681767)
+
+[node name="ライト" parent="-112,176,a/中心/一階/ライト/中廊下" unique_id=741540008 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2097702, 0.069190025, -0.0032217503)
+
+[node name="ライト2" parent="-112,176,a/中心/一階/ライト/中廊下" unique_id=1359457493 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24071503, 0.069190025, -0.0032217503)
+
+[node name="ライト3" parent="-112,176,a/中心/一階/ライト/中廊下" unique_id=2016773613 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5884228, 0.069190025, -0.0032217503)
+
+[node name="左エリア" type="Node3D" parent="-112,176,a/中心/一階/ライト" unique_id=61435322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.102581, 0, -0.1449809)
+
+[node name="ライト4" parent="-112,176,a/中心/一階/ライト/左エリア" unique_id=431024397 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18116283, -0.44685602, -0.025058508)
+
+[node name="ライト5" parent="-112,176,a/中心/一階/ライト/左エリア" unique_id=1412064820 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18116283, -0.14755297, -0.025058508)
+
+[node name="ライト6" parent="-112,176,a/中心/一階/ライト/左エリア" unique_id=1547543570 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18116283, 0.17560339, -0.025058508)
+
+[node name="ライト7" parent="-112,176,a/中心/一階/ライト/左エリア" unique_id=1824553118 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28353643, 0.17759943, -0.025058746)
+
+[node name="エントランス" type="Node3D" parent="-112,176,a/中心/一階/ライト" unique_id=447642154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.97354317, -0.13680267, -0.14792824)
+
+[node name="ライト" parent="-112,176,a/中心/一階/ライト/エントランス" unique_id=1003583754 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15736961, 0.15343142, -0.039214134)
+
+[node name="ライト7" parent="-112,176,a/中心/一階/ライト/エントランス" unique_id=122301880 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5234585, 0.15343142, -0.039214134)
+
+[node name="ライト2" parent="-112,176,a/中心/一階/ライト/エントランス" unique_id=644504879 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14773083, -0.13205957, -0.035761356)
+
+[node name="ライト3" parent="-112,176,a/中心/一階/ライト/エントランス" unique_id=376988052 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09568119, -0.13205957, -0.035761356)
+
+[node name="ライト4" parent="-112,176,a/中心/一階/ライト/エントランス" unique_id=1296734102 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09568119, 0.1403017, -0.035761356)
+
+[node name="ライト5" parent="-112,176,a/中心/一階/ライト/エントランス" unique_id=1223444295 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5118141, 0.1403017, -0.035761356)
+
+[node name="ライト6" parent="-112,176,a/中心/一階/ライト/エントランス" unique_id=1845284591 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5118141, -0.34227705, -0.035761356)
+
+[node name="出入口" type="Marker3D" parent="-112,176,a/中心/一階" unique_id=1428242199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.41838, -9.364487, -0.04956436)
+
+[node name="出入口出口" type="Marker3D" parent="-112,176,a/中心/一階/出入口" unique_id=62237265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.805359, 0)
+
+[node name="勝手口出口" type="Marker3D" parent="-112,176,a/中心/一階" unique_id=1802643983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.35299, 7.862007, 0.7559929)
+
+[node name="エレベーター出口" type="Marker3D" parent="-112,176,a/中心/一階" unique_id=721796088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.475769, 2.273201, -0.08522797)
+
+[node name="街レベルゲート" parent="-112,176,a/中心/一階" unique_id=1014627570 node_paths=PackedStringArray("アクセスマーカー") instance=ExtResource("8_3n34v")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 16.340866, 5.7575455, -1.8619423)
+"アクセスマーカー" = NodePath("../勝手口出口")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/一階/街レベルゲート" unique_id=1021755595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000541687, -1.0200958, 0.29223633)
+shape = SubResource("BoxShape3D_yv2u3")
+
+[node name="街レベルエリアゲート" parent="-112,176,a/中心/一階" unique_id=904484294 node_paths=PackedStringArray("脱出先アクセスマーカー") instance=ExtResource("8_w0h1u")]
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -24.292023, -12.392853, 0)
+"脱出先アクセスマーカー" = NodePath("../出入口/出入口出口")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/一階/街レベルエリアゲート" unique_id=1299429374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01171875, 0.00975132, -0.07336426)
+shape = SubResource("BoxShape3D_3n34v")
+
+[node name="エレベーターゲート" parent="-112,176,a/中心/一階" unique_id=1487963978 instance=ExtResource("10_yv2u3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.470047, 2.9392776, 0)
+"アクセスレベル" = "res://レベル/エレベーター/インスタンス/マンションエレベーター.tscn"
+"アクセス番号" = 1
+"移動時間" = 0.25
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/一階/エレベーターゲート" unique_id=1012999308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3062744, 0.23242188, -0.96875)
+shape = SubResource("BoxShape3D_vl8wc")
+
+[node name="Marker3D" type="Marker3D" parent="-112,176,a/中心/一階/エレベーターゲート" unique_id=503184970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0312195, -7.6293945e-06)
+
+[node name="二階" type="Node3D" parent="-112,176,a/中心" unique_id=563372489]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -125.14282, 57.204308, 127.92385)
+
+[node name="ライト" type="Node3D" parent="-112,176,a/中心/二階" unique_id=823803587]
+process_mode = 4
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 0, 0, 0)
+
+[node name="キール部屋" type="Marker3D" parent="-112,176,a/中心/二階" unique_id=1247367835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.636368, -0.8295975, -0.04956436)
+
+[node name="エレベーター出口2階" type="Marker3D" parent="-112,176,a/中心/二階" unique_id=641055650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.475769, 2.273201, -0.08522797)
+
+[node name="街レベルゲート" parent="-112,176,a/中心/二階" unique_id=437996489 instance=ExtResource("8_3n34v")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 16.340866, 5.7575455, -1.8619423)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/街レベルゲート" unique_id=1972310386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000541687, -1.0200958, 0.29223633)
+shape = SubResource("BoxShape3D_yv2u3")
+
+[node name="街レベルエリアゲート" parent="-112,176,a/中心/二階" unique_id=878428954 instance=ExtResource("8_w0h1u")]
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -24.292023, -12.392853, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/街レベルエリアゲート" unique_id=2080970129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01171875, 0.00975132, -0.07336426)
+shape = SubResource("BoxShape3D_3n34v")
+
+[node name="エレベーターゲート" parent="-112,176,a/中心/二階" unique_id=1526894831 instance=ExtResource("10_yv2u3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.470047, 2.9392776, 0)
+"アクセスレベル" = "res://レベル/エレベーター/インスタンス/マンションエレベーター.tscn"
+"アクセス番号" = 2
+"移動時間" = 0.25
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/エレベーターゲート" unique_id=1770990550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3062744, 0.23242188, -0.96875)
+shape = SubResource("BoxShape3D_vl8wc")
+
+[node name="Marker3D" type="Marker3D" parent="-112,176,a/中心/二階/エレベーターゲート" unique_id=86959665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0312195, -7.6293945e-06)

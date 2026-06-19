@@ -1,0 +1,296 @@
+[gd_scene format=3 uid="uid://cm1gt7h8k3pwr"]
+
+[ext_resource type="PackedScene" uid="uid://blg0wki80emvo" path="res://シナリオ/演出基盤.tscn" id="1_axwyn"]
+[ext_resource type="Script" uid="uid://du5mb7ejod7ix" path="res://シナリオ/シナリオシーン/演出仮.gd" id="2_vj5kn"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_vj5kn"]
+[ext_resource type="PackedScene" uid="uid://c0mhksd1gr5ic" path="res://シナリオ/演出カメラ.tscn" id="4_fvwph"]
+[ext_resource type="AudioStream" uid="uid://d4hrm6tyxapre" path="res://シナリオ/シナリオシーン/プロローグ/Tomorrow_Land.mp3" id="4_mfuy4"]
+[ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="4_oqs1q"]
+[ext_resource type="Texture2D" uid="uid://70jmgomtcsjd" path="res://エンティティ/プレイヤー/model/6380439c17d3666d_8.png" id="5_11wke"]
+[ext_resource type="PackedScene" uid="uid://bs8n5xvhfrqsw" path="res://エンティティ/演出用/演出モデル.tscn" id="5_fvwph"]
+[ext_resource type="AudioStream" uid="uid://bl1n4p5262d6c" path="res://シナリオ/シナリオシーン/プロローグ/オープニングフル尺.mp3" id="5_im40r"]
+[ext_resource type="Resource" uid="uid://nbbmunmsweld" path="res://エンティティ/表情管理/わでいど/わでいど.tres" id="7_ljke7"]
+[ext_resource type="PackedScene" uid="uid://sn1p3prkqs7b" path="res://シナリオ/演出用プレイヤー上書き.tscn" id="8_ionig"]
+
+[sub_resource type="Resource" id="Resource_11wke"]
+script = ExtResource("3_vj5kn")
+"セリフ" = "おー、開けてきたね"
+"表情" = 3
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_xkjm8"]
+script = ExtResource("4_oqs1q")
+"ミッション名" = "ここはどこ？"
+"完了後フラグ" = "オープニング再生済"
+"条件フラグ" = "住人を見つける"
+"条件数" = 1
+"表示用条件" = "街の住人を見つける"
+metadata/_custom_type_script = "uid://bjjvp7rx64bcv"
+
+[sub_resource type="Animation" id="Animation_mxkh7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("オブジェクト中心/レクレイス:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("オブジェクト中心/演出カメラ:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.8135986, 3.2928333, 11.7969055)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("オブジェクト中心/街全体紹介用/演出カメラ2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.062057495, -2.659729, 9.07621)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("オブジェクト中心/街全体紹介用:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 4.4044704, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("オブジェクト中心/街全体紹介用:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_axwyn"]
+resource_name = "new_animation"
+length = 155.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:セリフ表示")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4.3, 6.7, 154.11534),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": ["レクレイス", 0],
+"method": &"セリフ呼び出し"
+}, {
+"args": [],
+"method": &"停止ポイント設定"
+}, {
+"args": [true],
+"method": &"演出終了"
+}]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("オブジェクト中心/レクレイス/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("前", "アイドル"),
+"times": PackedFloat32Array(0, 3.9996696)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("オブジェクト中心/レクレイス:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(0.73204285, 1),
+"update": 0,
+"values": [Vector3(0, 0, 5.125), Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("オブジェクト中心/演出カメラ:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.3, 6.7),
+"transitions": PackedFloat32Array(0.65975386, 1.1095694, 1),
+"update": 0,
+"values": [Vector3(-0.354, 3.293, 8.752), Vector3(-0.354, 2.063, 2.562), Vector3(-0.354, 2.063, 2.232)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("オブジェクト中心/街全体紹介用/演出用プレイヤー上書き")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.87),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [true],
+"method": &"プレイヤー位置上書き有効"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("オブジェクト中心/街全体紹介用/演出カメラ2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6.8, 10, 141.44382, 149.56293),
+"transitions": PackedFloat32Array(1, 1, 1, 1.5157168, 1),
+"update": 0,
+"values": [Vector3(-0.062057495, -2.659729, 9.07621), Vector3(-0.062057495, -2.659729, 9.07621), Vector3(-0.062, 10.13, 26.736), Vector3(-0.06199646, 10.130014, 26.7359), Vector3(0.423, 2.96, 15.431)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("オブジェクト中心/街全体紹介用:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 6.8, 9, 10, 30, 34.9, 40.0667, 60.1, 63.2667, 66.5333, 90, 98.4667, 110.1333, 115.6333, 120.2, 124.7, 132.8333, 138.9, 150),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 4.4044704, 0), Vector3(0, 4.4044704, 0), Vector3(0, 4.4041467, -46.61938), Vector3(0, 4.404, -67.81), Vector3(0, 17.509, -516.375), Vector3(100.696, 2.5636816, -617.27026), Vector3(149.07, -4.616, -665.74), Vector3(718.17, -4.616, -665.74), Vector3(723.7243, 10.521596, -582.86017), Vector3(730.805, 14.349, -477.205), Vector3(896.81, 14.349, 78.69), Vector3(796.342, 18.198, 192.08), Vector3(570.425, 26.854, 78.69), Vector3(422.4557, 26.854, 49.15542), Vector3(240.65, 26.854, -52.3), Vector3(117.285, 14.899, 9.93), Vector3(112.72, 14.899, 172.36), Vector3(129.085, 14.326, 328.755), Vector3(126.385, 8.674, 480.955)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("オブジェクト中心/街全体紹介用/演出カメラ2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(6.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("オブジェクト中心/街全体紹介用:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(6.8, 9, 10, 29.855736, 36.8, 40.0667, 60.1, 64.40035, 66.5333, 75.4, 90, 110.1333, 120.2, 124.7, 132.8333, 141.4864, 149.92741),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, -0.6894051, 0), Vector3(-0.2443461, -2.565634, 0), Vector3(-0.2443461, -1.9285889, 0), Vector3(0.13962634, -2.5743606, 0), Vector3(0.13962634, -3.8920841, 0), Vector3(-0.003924653, -4.224518, 0), Vector3(-0.27925268, -4.660029, 0), Vector3(0.034906585, -4.103269, 0), Vector3(-0.27925268, -5.4105206, 0), Vector3(-0.44505897, -6.4926248, 0), Vector3(-0.44505897, -9.049532, 0), Vector3(-0.034906585, -10.838494, 0), Vector3(-0.034906585, -12.208578, 0), Vector3(0.034906585, -9.494591, 0), Vector3(0.41015238, -9.398598, 0)]
+}
+tracks/9/type = "audio"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AudioStreamPlayer")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"clips": [{
+"end_offset": 8.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_mfuy4")
+}, {
+"end_offset": 110.823685,
+"start_offset": 31.470001,
+"stream": ExtResource("5_im40r")
+}],
+"times": PackedFloat32Array(6.3752, 97.077614)
+}
+tracks/9/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vj5kn"]
+_data = {
+&"RESET": SubResource("Animation_mxkh7"),
+&"開始": SubResource("Animation_axwyn")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ionig"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mfuy4"]
+
+[node name="演出基盤" unique_id=854987473 instance=ExtResource("1_axwyn")]
+script = ExtResource("2_vj5kn")
+"セリフ集" = Array[ExtResource("3_vj5kn")]([SubResource("Resource_11wke")])
+"再生前条件更新フラグ名" = "街を探索する"
+"再生前条件フラグ加算数" = 1
+"条件フラグ加算から上書き" = true
+"再生後フラグ" = "オープニング再生済"
+"再生後発生ミッション" = Array[ExtResource("4_oqs1q")]([SubResource("Resource_xkjm8")])
+"プレイヤー再生後ワープ" = true
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=341811062]
+libraries/ = SubResource("AnimationLibrary_vj5kn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3" unique_id=337026543]
+volume_db = -15.0
+
+[node name="オブジェクト中心" parent="." index="4" unique_id=610700827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89.657455, 14.9103565, 118.79608)
+
+[node name="レクレイス" parent="オブジェクト中心" index="0" unique_id=1106972114 instance=ExtResource("5_fvwph")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+"スキン" = ExtResource("5_11wke")
+"表情データ" = ExtResource("7_ljke7")
+
+[node name="Marker3D" type="Marker3D" parent="オブジェクト中心/レクレイス" index="2" unique_id=2060169887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6648617, 0.38116646)
+
+[node name="演出カメラ" parent="オブジェクト中心" index="1" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
+transform = Transform3D(0.99612254, 0.032998882, -0.081553146, 0, 0.92698926, 0.37508798, 0.087976374, -0.37363362, 0.92339486, -1.8135986, 3.2928333, 11.7969055)
+"ターゲット" = [NodePath("../レクレイス/Marker3D")]
+"切り替え時間" = 1.0
+
+[node name="プレイヤー終了位置" parent="オブジェクト中心" index="3" unique_id=1054089237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.620514, 0, -43.66082)
+
+[node name="街全体紹介用" type="Marker3D" parent="オブジェクト中心" index="4" unique_id=1549613727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.4044704, 0)
+
+[node name="演出用プレイヤー上書き" parent="オブジェクト中心/街全体紹介用" index="0" unique_id=601787656 instance=ExtResource("8_ionig")]
+
+[node name="演出カメラ2" parent="オブジェクト中心/街全体紹介用" index="1" unique_id=1747915640 node_paths=PackedStringArray("ターゲット") instance=ExtResource("4_fvwph")]
+transform = Transform3D(0.99997663, -0.0019227073, -0.006561309, 0, 0.9596457, -0.28121188, 0.00683722, 0.2812053, 0.95962334, -0.062057495, -2.659729, 9.07621)
+"ターゲット" = [NodePath("..")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="オブジェクト中心/街全体紹介用" index="2" unique_id=485104480]
+visible = false
+material_override = SubResource("StandardMaterial3D_ionig")
+mesh = SubResource("CylinderMesh_mfuy4")
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+
+[editable path="オブジェクト中心/レクレイス"]

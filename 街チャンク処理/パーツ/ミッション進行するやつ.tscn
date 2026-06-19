@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c6bhck6xe5xnq"]
+
+[ext_resource type="Script" uid="uid://behvj45tav8hp" path="res://街チャンク処理/パーツ/ミッション進行するやつ.gd" id="1_3o1ub"]
+[ext_resource type="ArrayMesh" uid="uid://dehkcdr852q25" path="res://dfsae.res" id="2_f6bij"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3o1ub"]
+size = Vector3(0.17468262, 0.49975586, 0.14801025)
+
+[node name="ミッション進行するやつ" type="StaticBody3D" unique_id=758979045]
+script = ExtResource("1_3o1ub")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=45502562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1035156e-05, 0.20837402, 0.0030212402)
+shape = SubResource("BoxShape3D_3o1ub")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1026099507]
+transform = Transform3D(0.215, 0, 0, 0, 0.215, 0, 0, 0, 0.215, 0, 0, 0)
+mesh = ExtResource("2_f6bij")

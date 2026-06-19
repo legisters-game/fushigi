@@ -31,6 +31,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06843758, -0.5501156, -0.8
 shape = SubResource("BoxShape3D_muu0i")
 
 [node name="地形当たり判定" type="StaticBody3D" parent="464,-128,a/中心/当たり判定制御" unique_id=544593498]
+collision_layer = 3
+collision_mask = 3
 
 [node name="地形コリジョン" type="CollisionShape3D" parent="464,-128,a/中心/当たり判定制御/地形当たり判定" unique_id=22732574]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.843437, 7.474884, 3.0187032)
@@ -70,6 +72,12 @@ transform = Transform3D(0.8, 0, 0, 0, 0.17, 0, 0, 0, 2.065, -1.9680195, -2.08384
 
 [node name="透明壁11" parent="464,-128,a/中心/当たり判定制御/壁" unique_id=1031706707 instance=ExtResource("5_hiaff")]
 transform = Transform3D(2.37, 0, 0, 0, 0.17, 0, 0, 0, 2.065, -0.44443703, -2.0668135, -0.7812216)
+
+[node name="透明壁12" parent="464,-128,a/中心/当たり判定制御/壁" unique_id=1560925730 instance=ExtResource("5_hiaff")]
+transform = Transform3D(0.25544003, -0.036968805, 2.9381052e-08, 0.23189522, 0.04072232, 1.134722e-08, -1.0136463e-08, 6.240973e-10, 1, -1.1357269, -0.06233692, -0.4515066)
+
+[node name="透明壁13" parent="464,-128,a/中心/当たり判定制御/壁" unique_id=1724306831 instance=ExtResource("5_hiaff")]
+transform = Transform3D(0.18856788, -0.034990977, 1.4566709e-08, 0.06664949, 0.09899813, 2.4985702e-09, -2.9133418e-09, 2.6235059e-10, 1, -1.3321419, -0.2148323, -0.4515066)
 
 [node name="464,-128,a_oc" parent="464,-128,a/中心" unique_id=1955116240 instance=ExtResource("6_hiaff")]
 occluder = ExtResource("7_muu0i")

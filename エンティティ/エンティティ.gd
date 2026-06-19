@@ -4,8 +4,9 @@ class_name エンティティ
 @export var SPEED = 7.0
 @export var rotation_speed: float = 10.0
 @export var アニメツリー:AnimationTree
-@export var 顔:MeshInstance3D
-@export var 表情データ:表情オブジェクト
+#@export var 顔:MeshInstance3D
+#@export var 表情データ:表情オブジェクト
+@export var モデル:Node3D
 @export var 攻撃判定:Area3D
 
 var アニメベクター:Vector2
@@ -44,7 +45,7 @@ func _physics_process(delta: float):
 func apply_movement(delta:float):
 	# 重力処理（簡略化）
 	if not is_on_floor() :
-		velocity.y -= 9.8 * delta
+		velocity.y -= 10 * delta
 		
 	if 簡易移動中:
 		# 水平方向の距離を計算（高さYを無視する場合）
@@ -73,14 +74,14 @@ func apply_rotation(delta:float):
 		# 進みたい方向への角度を計算
 		var target_angle:float = atan2(move_direction.x, move_direction.z)
 		# 現在の回転を目標の回転へ補完（スムーズに回転させる）
-		rotation.y = learn_angle(rotation.y, target_angle, rotation_speed * delta)
+		global_rotation.y = learn_angle(global_rotation.y, target_angle, rotation_speed * delta)
 		指定回転=false
 	elif 指定回転:
-		rotation.y = learn_angle(rotation.y, 目標回転, rotation_speed * delta*0.5)
+		global_rotation.y = learn_angle(global_rotation.y, 目標回転, rotation_speed * delta*0.5)
 
-		if abs(angle_difference(rotation.y,目標回転))<=0.01:
-			print(angle_difference(rotation.y,目標回転))
-			rotation.y=目標回転
+		if abs(angle_difference(global_rotation.y,目標回転))<=0.01:
+			print(angle_difference(global_rotation.y,目標回転))
+			global_rotation.y=目標回転
 			指定回転=false
 			
 func 回転指定(目標:float)->void:
@@ -106,14 +107,15 @@ func update_animations(velocitys: Vector3,デルタ:float)->void:
 	アニメツリー.set("parameters/動き/blend_position", アニメベクター)
 
 func 表情切り替え(切り替え表情:表情オブジェクト.表情)->void:
-	if not 顔 or not 表情データ or  not 顔.mesh:return
-	var マテリアル:StandardMaterial3D=顔.mesh.surface_get_material(0)
-	if not マテリアル:
-		return
-	var 上書きマテリアル:StandardMaterial3D=マテリアル.duplicate()
-	if 表情データ.取得(切り替え表情):
-		上書きマテリアル.albedo_texture=表情データ.取得(切り替え表情)
-		顔.set_surface_override_material(0,上書きマテリアル)
+	if モデル:
+		モデル.表情切り替え(切り替え表情)
+#	if not 顔 or not 表情データ or  not 顔.mesh:return
+#	var マテリアル:StandardMaterial3D=顔.mesh.surface_get_material(0)
+#	if not マテリアル:
+#		return
+##	if 表情データ.取得(切り替え表情):
+#		上書きマテリアル.albedo_texture=表情データ.取得(切り替え表情)
+#		顔.set_surface_override_material(0,上書きマテリアル)
 
 
 
@@ -136,13 +138,33 @@ func ダメージ(ダメージ数:int)->void:
 func 死亡()->void:
 	queue_free()
 
+func プレイヤーセーブ()->void:
+	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.体力,体力)
+	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.最大体力,最大体力)
+	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.攻撃力,0)
+	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.防御力,0)
+	#データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.ディメンション,0)
+	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.座標,global_position)
+	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.回転座標,global_rotation_degrees)
+	
+func プレイヤーロード()->void:
+	体力=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.体力)
+	最大体力=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.最大体力)
+	#体力=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.体力)
+	#体力=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.体力)
+	#データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.ディメンション,0)
+	global_position=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.座標,Vector3.ZERO)
+	global_rotation_degrees=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.回転座標,Vector3.ZERO)
 
 func 簡易目的地へ移動(目標地点: Vector3,歩き:bool=false) -> void:
 	簡易中強制歩き=歩き
 	簡易目的地 = 目標地点
 	簡易移動中 = true
-	
+
 func 簡易移動停止() -> void:
 	簡易移動中 = false
 	簡易中強制歩き=false
 	move_direction = Vector3.ZERO
+	
+func アニメーション中に付き重力無効(する:bool=true)->void:
+	重力無効=する

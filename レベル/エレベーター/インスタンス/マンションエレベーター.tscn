@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://blp8upsfvx70g"]
+
+[ext_resource type="PackedScene" uid="uid://ge1t4sqcd141" path="res://レベル/エレベーター/エレベーター.tscn" id="1_blslc"]
+[ext_resource type="Material" uid="uid://df61x3gy2jgkj" path="res://マテリアル/minecraft_block-quartz_block.tres" id="2_25scg"]
+
+[node name="マンションエレベーター" unique_id=1237990882 instance=ExtResource("1_blslc")]
+"階層" = Array[String](["res://レベル/マンション/マンション.tscn", "res://レベル/マンション/マンション.tscn"])
+"アクセス番号" = Array[int]([1, 2])
+
+[node name="エレベーター" parent="." index="0" unique_id=88429695]
+surface_material_override/0 = ExtResource("2_25scg")
+surface_material_override/3 = ExtResource("2_25scg")
+surface_material_override/5 = ExtResource("2_25scg")

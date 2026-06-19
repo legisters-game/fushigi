@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://cei4qic4p05mj"]
+
+[ext_resource type="Script" uid="uid://cwulfmfqehgno" path="res://GUI/ミッションマネージャー/ミッション表示セル.gd" id="1_8fkbq"]
+[ext_resource type="Texture2D" uid="uid://boxhv71f24ymp" path="res://1/都市3d仮_ice.png" id="2_xs714"]
+
+[sub_resource type="FontVariation" id="FontVariation_skrkn"]
+variation_embolden = 1.15
+
+[sub_resource type="LabelSettings" id="LabelSettings_kbkjo"]
+font = SubResource("FontVariation_skrkn")
+font_size = 34
+font_color = Color(1, 0.99883336, 0.93, 1)
+outline_size = 6
+outline_color = Color(0.86, 0, 0, 1)
+shadow_size = 11
+shadow_color = Color(2.055, 1.5749999, 0.13501221, 0.69803923)
+shadow_offset = Vector2(2.24, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_skrkn"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_skrkn"]
+offsets = PackedFloat32Array(0.008333334, 0.43055555, 0.67777777, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kbkjo"]
+gradient = SubResource("Gradient_skrkn")
+width = 100
+height = 32
+fill = 1
+fill_from = Vector2(0.517094, 0.491453)
+fill_to = Vector2(1, 1)
+
+[node name="Control" type="Control" unique_id=1993534428]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8fkbq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=678604977]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -25.0
+offset_right = 150.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xs714")
+expand_mode = 1
+
+[node name="ミッション名" type="Label" parent="TextureRect" unique_id=779398089]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 23.0
+text = "いるか君の誤字を救え！！"
+horizontal_alignment = 1
+
+[node name="達成条件" type="Label" parent="TextureRect/ミッション名" unique_id=1625750603]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -5.2800007
+offset_right = 31.0
+offset_bottom = 17.720005
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "uhuihuhuoi"
+horizontal_alignment = 1
+
+[node name="進行状況" type="ProgressBar" parent="." unique_id=1625833335]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.8199997
+offset_bottom = -0.8199997
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 6
+max_value = 1.0
+step = 1.0
+show_percentage = false
+
+[node name="完了メッセージ" type="Label" parent="." unique_id=76602742]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.5
+offset_right = 37.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.06632251
+scale = Vector2(1e-05, 1e-05)
+pivot_offset_ratio = Vector2(0.5, 0.495)
+text = "Complete!!"
+label_settings = SubResource("LabelSettings_kbkjo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="発光演出" type="TextureRect" parent="完了メッセージ" unique_id=489337375]
+self_modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_skrkn")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -16.0
+offset_right = 50.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 16)
+texture = SubResource("GradientTexture2D_kbkjo")
+expand_mode = 1
+stretch_mode = 5
