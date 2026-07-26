@@ -7,6 +7,9 @@
 [resource]
 resource_name = "minecraft_block-acacia_log"
 albedo_texture = ExtResource("1_2ym1k")
+metallic = 1.0
+metallic_texture = ExtResource("2_a0m22")
+metallic_texture_channel = 1
 roughness_texture = ExtResource("3_hs501")
 roughness_texture_channel = 1
 bent_normal_enabled = true

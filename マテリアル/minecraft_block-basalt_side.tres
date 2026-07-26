@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://csthsj6u1kgsg"]
 
 [ext_resource type="Texture2D" uid="uid://bd228ij2nucn7" path="res://1/都市3d仮_basalt_side.png" id="1_tvmt3"]
+[ext_resource type="Texture2D" uid="uid://c7tebpbf4pisn" path="res://マテリアル/鏡面反射/basalt_side_n.png" id="2_lx8iv"]
+[ext_resource type="Texture2D" uid="uid://bco3hp64c6jjr" path="res://マテリアル/立体補間/basalt_side_a.png" id="3_7bu1c"]
 
 [resource]
 resource_name = "minecraft_block-basalt_side"
-cull_mode = 2
 albedo_texture = ExtResource("1_tvmt3")
+metallic = 1.0
+metallic_texture = ExtResource("2_lx8iv")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_7bu1c")
+ao_enabled = true
+ao_texture = ExtResource("2_lx8iv")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_7bu1c")
+texture_filter = 2

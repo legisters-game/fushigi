@@ -1,8 +1,20 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cv38uxns3eby6"]
 
 [ext_resource type="Texture2D" uid="uid://cfifwtnqdfi3e" path="res://1/都市3d仮_bedrock.png" id="1_py1uw"]
+[ext_resource type="Texture2D" uid="uid://dkt8dola3ulrt" path="res://マテリアル/鏡面反射/bedrock_n.png" id="2_731kl"]
+[ext_resource type="Texture2D" uid="uid://cd04dxh6ndp5s" path="res://マテリアル/立体補間/bedrock_a.png" id="3_4ibpm"]
 
 [resource]
 resource_name = "minecraft_block-bedrock"
-cull_mode = 2
 albedo_texture = ExtResource("1_py1uw")
+metallic = 1.0
+metallic_texture = ExtResource("2_731kl")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_4ibpm")
+ao_enabled = true
+ao_texture = ExtResource("2_731kl")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_4ibpm")
+texture_filter = 2

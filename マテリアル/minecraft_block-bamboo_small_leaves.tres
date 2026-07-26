@@ -7,3 +7,4 @@ resource_name = "minecraft_block-bamboo_small_leaves"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_rld2u")
+texture_filter = 2
