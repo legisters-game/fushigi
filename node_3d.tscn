@@ -477,6 +477,7 @@ top = Color(0.28599998, 0.43766668, 0.65, 1)
 environment = SubResource("Environment_r3fl7")
 
 [node name="都市3d仮" parent="." unique_id=1006423857 instance=ExtResource("4_ealrb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.691729, -27.543821, -12.179876)
 
 [node name="レベル" type="Node3D" parent="." unique_id=14615443]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35.094, 0)
@@ -664,32 +665,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.15866, 25.048, 237.73334)
 "メッセージボックス" = NodePath("../../Control/メッセージボックス")
 
 [node name="GeneralSkeleton" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1999271142, 652042102, 231553116) index="0" unique_id=1885119474]
-bones/11/position = Vector3(7.0264115e-09, 1.17869455e-07, -2.7504785e-10)
-bones/11/rotation = Quaternion(-0.010398011, -0.041880816, -0.018819815, 0.99889123)
-bones/12/rotation = Quaternion(-0.027509356, -0.010919121, 0.0014002133, 0.999561)
-bones/13/rotation = Quaternion(-0.07893349, 0.004544965, 0.0037547548, 0.99686253)
-bones/41/rotation = Quaternion(-0.027439466, -0.010884144, 0.0017492636, 0.99956274)
-bones/42/rotation = Quaternion(0.5220328, -0.46501726, -0.5670255, -0.435572)
-bones/43/rotation = Quaternion(0.03753776, 0.81484425, -0.56939834, 0.10200603)
-bones/44/rotation = Quaternion(0.16832492, 0.6867802, -0.1683245, 0.68678)
-bones/45/rotation = Quaternion(0.017169718, -0.79652935, -0.011515092, 0.6042464)
-bones/46/rotation = Quaternion(0.5158849, 0.47122145, 0.563877, -0.4402908)
-bones/47/rotation = Quaternion(-0.08625898, 0.81503, -0.5719357, -0.034278583)
-bones/48/rotation = Quaternion(0.12721659, -0.69556874, 0.12721597, 0.695569)
-bones/49/rotation = Quaternion(0.0690126, 0.7870336, 0.008734467, 0.6129757)
-bones/51/rotation = Quaternion(-0.054834887, 0.047257464, 0.99734414, 0.008036949)
-bones/52/rotation = Quaternion(0.0036815954, 0.99140376, -0.11594665, -0.060510766)
-bones/53/rotation = Quaternion(0.029431269, 0.075708814, 0.99666107, 0.008302435)
-bones/54/rotation = Quaternion(-0.0009933911, 0.9839493, -0.15628435, 0.086128525)
+bones/1/rotation = Quaternion(-0.030201802, -0.007725072, 0.08581095, 0.9958236)
+bones/11/position = Vector3(5.188318e-10, 1.15837175e-07, 6.6086736e-10)
+bones/11/rotation = Quaternion(-0.03131776, -0.024751553, -0.08360969, 0.9956988)
+bones/12/rotation = Quaternion(0.010655427, -0.0017348897, 0.02256656, 0.99968714)
+bones/13/rotation = Quaternion(-0.087814346, -0.009588008, 0.0043370575, 0.99608135)
+bones/41/rotation = Quaternion(0.010952112, -0.0034637994, 0.022161527, 0.9996884)
+bones/42/rotation = Quaternion(0.5296108, -0.45547834, -0.5710594, -0.43121114)
+bones/43/rotation = Quaternion(0.03268307, 0.84848815, -0.5226442, 0.07643861)
+bones/44/rotation = Quaternion(0.16972558, 0.68643516, -0.1697254, 0.68643516)
+bones/45/rotation = Quaternion(0.008959897, -0.80166, -0.0063258554, 0.59767973)
+bones/46/rotation = Quaternion(0.51375157, 0.46966293, 0.57780945, -0.42615995)
+bones/47/rotation = Quaternion(-0.085758075, 0.77455753, -0.6266362, 0.0057701766)
+bones/48/rotation = Quaternion(0.13249102, -0.6945834, 0.13249129, 0.6945833)
+bones/49/rotation = Quaternion(0.0567556, 0.79254925, 0.023493245, 0.6067063)
+bones/51/rotation = Quaternion(-0.07006216, 0.021947768, 0.99354064, -0.08652499)
+bones/52/rotation = Quaternion(-0.0011947708, 0.9882417, -0.1443877, -0.050290417)
+bones/53/rotation = Quaternion(0.059268422, 0.12618186, 0.9847964, -0.103641406)
+bones/54/rotation = Quaternion(-0.013281293, 0.951598, -0.29993922, 0.06573671)
 
 [node name="R_Pupils_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(-0.04832004, -0.08670539, -0.9950614, -0.97195864, 0.23361504, 0.026841953, 0.230134, 0.9684556, -0.09556235, -0.054224722, 1.0128073, 0.13753876)
+transform = Transform3D(0.040099926, -0.10505955, -0.9936572, -0.96152747, 0.2664204, -0.06697195, 0.27176657, 0.958114, -0.090334184, -0.12572832, 1.0082366, 0.08095038)
 
 [node name="L_Pupils_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(-0.04832004, -0.08670539, -0.9950614, -0.97195864, 0.23361504, 0.026841953, 0.230134, 0.9684556, -0.09556235, 0.1278715, 1.0078951, 0.15502664)
+transform = Transform3D(0.040099926, -0.10505955, -0.9936572, -0.96152747, 0.2664204, -0.06697195, 0.27176657, 0.958114, -0.090334184, 0.056110926, 1.0204924, 0.09748151)
 
 [node name="head" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.9950614, 0.04832004, -0.08670539, -0.026841953, 0.97195864, 0.23361504, 0.09556235, -0.230134, 0.9684556, 0.029013745, 0.7303479, -0.03417307)
+transform = Transform3D(0.9936572, -0.040099926, -0.10505955, 0.06697195, 0.96152747, 0.2664204, 0.090334184, -0.27176657, 0.958114, -0.01777295, 0.7272723, -0.07905442)
 
 [node name="_設定" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
 surface_material_override/0 = SubResource("StandardMaterial3D_5w2ad")
