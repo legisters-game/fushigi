@@ -1,9 +1,25 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://c1uepcs7lg08j"]
 
 [ext_resource type="Texture2D" uid="uid://co2672wvf33wa" path="res://1/都市3d仮_birch_trapdoor.png" id="1_1apyb"]
+[ext_resource type="Texture2D" uid="uid://bp585fmhgqsxy" path="res://マテリアル/鏡面反射/birch_trapdoor_n.png" id="2_v6btk"]
+[ext_resource type="Texture2D" uid="uid://dvgjwssrggcny" path="res://マテリアル/立体補間/birch_trapdoor_a.png" id="3_bhi4c"]
 
 [resource]
 resource_name = "minecraft_block-birch_trapdoor"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_1apyb")
+metallic = 1.0
+metallic_texture = ExtResource("2_v6btk")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_bhi4c")
+ao_enabled = true
+ao_texture = ExtResource("2_v6btk")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_bhi4c")
+texture_filter = 2

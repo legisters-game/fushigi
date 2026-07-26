@@ -4,5 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-blackstone"
-cull_mode = 2
 albedo_texture = ExtResource("1_mtxwm")
+metallic = 1.0
+bent_normal_enabled = true
+texture_filter = 2

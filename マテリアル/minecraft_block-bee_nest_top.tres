@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "minecraft_block-bee_nest_top"
-cull_mode = 2
 albedo_texture = ExtResource("1_sgw3t")
+texture_filter = 2

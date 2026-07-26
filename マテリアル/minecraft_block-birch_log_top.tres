@@ -1,9 +1,24 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cebv3gj4lusee"]
 
 [ext_resource type="Texture2D" uid="uid://c3xpsparigi64" path="res://1/都市3d仮_birch_log_top.png" id="1_pwwdr"]
+[ext_resource type="Texture2D" uid="uid://dls2nl0pcx5ja" path="res://マテリアル/鏡面反射/birch_log_top_n.png" id="2_g3upq"]
+[ext_resource type="Texture2D" uid="uid://bppkio6bicjfg" path="res://マテリアル/立体補間/birch_log_a.png" id="3_06k7x"]
 
 [resource]
 resource_name = "minecraft_block-birch_log_top"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_pwwdr")
+metallic = 1.0
+metallic_texture = ExtResource("2_g3upq")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_06k7x")
+ao_enabled = true
+ao_texture = ExtResource("2_g3upq")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_06k7x")

@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "minecraft_block-beehive_end"
-cull_mode = 2
 albedo_texture = ExtResource("1_hb1b6")
+texture_filter = 2

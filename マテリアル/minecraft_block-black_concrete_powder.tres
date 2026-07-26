@@ -4,5 +4,6 @@
 
 [resource]
 resource_name = "minecraft_block-black_concrete_powder"
-cull_mode = 2
 albedo_texture = ExtResource("1_qynq3")
+metallic = 1.0
+texture_filter = 2
