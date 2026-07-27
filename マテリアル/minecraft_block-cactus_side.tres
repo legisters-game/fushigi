@@ -1,9 +1,24 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://csta446wb5181"]
 
 [ext_resource type="Texture2D" uid="uid://slr4pqyj7m6w" path="res://1/都市3d仮_cactus_side.png" id="1_wgivf"]
+[ext_resource type="Texture2D" uid="uid://bhsbd4ffctdd" path="res://マテリアル/鏡面反射/cactus_side_n.png" id="2_ts37q"]
+[ext_resource type="Texture2D" uid="uid://hbdifr31h05u" path="res://マテリアル/立体補間/cactus_side_a.png" id="3_hcqyx"]
 
 [resource]
 resource_name = "minecraft_block-cactus_side"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_wgivf")
+metallic = 1.0
+metallic_texture = ExtResource("2_ts37q")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_hcqyx")
+ao_enabled = true
+ao_texture = ExtResource("2_ts37q")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_hcqyx")
+texture_filter = 2

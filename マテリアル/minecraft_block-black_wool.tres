@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://buy5ul5uo6vln"]
 
 [ext_resource type="Texture2D" uid="uid://ciek8fhbp2sq5" path="res://1/都市3d仮_black_wool.png" id="1_f8s2l"]
+[ext_resource type="Texture2D" uid="uid://bc0t4n44awsg8" path="res://マテリアル/鏡面反射/black_wool_n.png" id="2_rlkir"]
+[ext_resource type="Texture2D" uid="uid://cwg6wm0fn7s7t" path="res://マテリアル/立体補間/black_wool_a.png" id="3_hdjsv"]
 
 [resource]
 resource_name = "minecraft_block-black_wool"
-cull_mode = 2
 albedo_texture = ExtResource("1_f8s2l")
+metallic = 1.0
+metallic_texture = ExtResource("2_rlkir")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_hdjsv")
+ao_enabled = true
+ao_texture = ExtResource("2_rlkir")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_hdjsv")
+texture_filter = 2
