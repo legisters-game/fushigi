@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="NPCスケジューラ" format=3 uid="uid://d2mlfpv0ko2vg"]
+
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="1_l01kl"]
+[ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="2_tn7f7"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_r20ey"]
+
+[sub_resource type="Resource" id="Resource_ioj3v"]
+script = ExtResource("3_r20ey")
+"セリフ" = "おう、温泉行こうや"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_6tkqi"]
+script = ExtResource("2_tn7f7")
+"名前" = "温泉行く前待機"
+"終了時間" = 1.0
+"セリフ" = Array[ExtResource("3_r20ey")]([SubResource("Resource_ioj3v")])
+"ディメンション" = "uid://dmbek8jwtnvaw"
+"ディメンションオブジェクト番号" = 1
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[resource]
+script = ExtResource("1_l01kl")
+"スケジュールリスト" = Array[ExtResource("2_tn7f7")]([SubResource("Resource_6tkqi")])
+metadata/_custom_type_script = "uid://d4j8xlv2dxato"

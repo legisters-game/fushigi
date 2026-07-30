@@ -40,7 +40,10 @@ func _ready() -> void:
 			表示リスト.append(チャンク名)
 			#print(i)
 	if not Engine.is_editor_hint():
-		if 都市ルート:
+		hide()
+		#var デバッグモード:bool=true
+		if 都市ルート or get_tree().get_first_node_in_group("全体制御") and get_tree().get_first_node_in_group("全体制御").レベルルート:
+			#デバッグモード=false
 			if 再生前条件更新フラグ名!="":
 				if 条件フラグ加算から上書き:
 					データロガー.ミッション条件フラグ保存(再生前条件更新フラグ名,再生前条件フラグ加算数)
@@ -51,14 +54,32 @@ func _ready() -> void:
 					var チャンクルート:チャンク管理クラス=都市ルート.get_node(アクセスノード名)
 					チャンクルート.強制表示()
 					一時チャンク解放用.append(チャンクルート)
+			#再生後のフラグではあるが、ブチ切り対策のため、再生前に持ってきている。
+			if 再生後フラグ!="":
+				データロガー.フラグ追加(再生後フラグ)
+				データロガー.全保存()
+			if 再生後発生ミッション and !再生後発生ミッション.is_empty():
+				for i:ミッションデータ in 再生後発生ミッション:
+					データロガー.ミッションフラグ追加(i)
 		if not get_parent() is Node3D:
 			#print(get_parent())
 			await  調整用街表示(true)
+			show()
 			演出開始()
 		else:
 			for デバッグ用削除ノード:Node in 削除対象:
 				デバッグ用削除ノード.queue_free()
 	print(表示リスト)
+	var スキップカウンター:int=0
+	while true and not Engine.is_editor_hint():
+		await get_tree().create_timer(0.1).timeout
+		if Input.is_action_pressed("アニメーションスキップ"):
+			スキップカウンター+=1
+		else:
+			スキップカウンター=0
+		if スキップカウンター>10:
+			演出終了()
+			break
 
 
 
@@ -68,6 +89,7 @@ func アニメーション再開():
 
 # 子クラスでこの関数をオーバーライドして中身を書く
 func 演出開始():
+	show()
 	if カメラ:
 		カメラ.make_current()
 	if アニメーション:
@@ -116,6 +138,7 @@ func エンティティ取得(名前:String):
 
 # アニメーションの最後や、特定のタイミングで呼び出す
 func 演出終了(フェードアウト有効:bool=false):
+	get_tree().get_first_node_in_group("UI").get_node("メッセージボックス").強制終了()
 	if フェードアウト有効:
 		if get_tree().get_first_node_in_group("UI"):
 			var フェードアウト:画面フェードクラス = get_tree().get_first_node_in_group("UI").get_node("画面フェード")
@@ -162,7 +185,7 @@ func 調整用街表示(デバッグ=false)->void:
 				メッシュ.owner=self
 	#シーンとして保存させないため↓
 	#ノード.owner=self
-	ノード.position.y=-35.094
+	ノード.position.y=-50
 	ノード.rotation_degrees.x=0
 	ノード.scale=Vector3(16,16,16)
 	

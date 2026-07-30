@@ -8,6 +8,7 @@ class_name ミッションデータ
 @export_multiline() var 表示用条件:String
 @export var サブ:bool
 @export var 優先度:int
+@export var キャラセリフ上書きリスト:Dictionary[スケジュール管理クラス.NPC,NPCスケジューラ]
 
 func 初期化(_name: String,辞書:Dictionary) -> void:
 	ミッション名 = _name
@@ -15,6 +16,9 @@ func 初期化(_name: String,辞書:Dictionary) -> void:
 	条件フラグ=辞書["条件フラグ"]
 	条件数=辞書["条件数"]
 	表示用条件=辞書["表示用条件"]
+	if 辞書.has("スケジュール") and 辞書["スケジュール"]is Dictionary:
+		キャラセリフ上書きリスト=辞書["スケジュール"]
+	
 	データロガー.ミッション条件フラグ追加(条件フラグ)
 	
 

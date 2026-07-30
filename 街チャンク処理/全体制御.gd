@@ -3,6 +3,7 @@ class_name レベル制御クラス
 var 都市プレイヤー座標:Vector3
 #var 全体都市:Node3D
 var ディメンション:String
+var レベルルート:レベル基礎クラス
 var ディメンション階層:int
 
 var 読み込み中チャンク:Array[String]
@@ -13,7 +14,7 @@ signal レベル読み込み完了シグナル
 @export  var 実験:ミッションデータ
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	await get_tree().create_timer(1).timeout
+	#await get_tree().create_timer(1).timeout
 	データロガー.ミッションフラグ追加(実験)
 	データロガー.全保存()
 	
@@ -38,7 +39,7 @@ func _ready() -> void:
 	
 	await  get_tree().create_timer(2).timeout
 	if !データロガー.フラグあるか("最初の演出完了"):
-		シナリオ演出実行("res://シナリオ/シナリオシーン/プロローグ1目覚め.tscn")
+		シナリオ演出実行("res://シナリオ/シナリオシーン/プロローグ1目覚め/プロローグ1目覚め.tscn")
 	
 	while true:
 		await get_tree().create_timer(50).timeout
@@ -55,10 +56,11 @@ func レベル移動(レベル:String, 番号:int=0,階層:int=0,フェードア
 	await get_tree().create_timer(1).timeout
 	get_tree().get_first_node_in_group("プレイヤー").簡易移動停止()
 	var レベルシーン:PackedScene=load(レベル)
-	var レベルルート:レベル基礎クラス=レベルシーン.instantiate()
+	レベルルート=レベルシーン.instantiate()
 	for i:Node in get_node("レベル").get_children():
 		i.queue_free()
 	get_node("レベル").add_child(レベルルート)
+	レベルルート=レベルルート
 	レベルルート.階層有効(階層)
 	#エレベーターの場合
 	if レベルルート is エレベーターレベルクラス:
@@ -83,9 +85,19 @@ func レベル移動(レベル:String, 番号:int=0,階層:int=0,フェードア
 	get_tree().get_first_node_in_group("プレイヤー").操作ロック前位置=get_tree().get_first_node_in_group("プレイヤー").global_position
 	get_tree().get_first_node_in_group("プレイヤー").レベル移動中=false
 	
-func 単純ワープ(ワープ先マーカー:Marker3D)->void:
+func 単純ワープ(ワープ先マーカー:Marker3D,フェードアウト:bool=false)->void:
+	if フェードアウト:
+		get_node("Control/画面フェード").フェードアウト()
+		get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=true
+		await get_tree().create_timer(1).timeout
+		
 	get_tree().get_first_node_in_group("プレイヤー").global_position=ワープ先マーカー.global_position
 	get_tree().get_first_node_in_group("プレイヤー").簡易移動停止()
+	if フェードアウト:
+		get_node("Control/画面フェード").フェードイン()
+		await get_tree().create_timer(1).timeout
+		get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
+
 
 func 都市戻り(プレイヤー座標マーカー:Marker3D=null)->void:
 	get_tree().get_first_node_in_group("プレイヤー").レベル移動中=true
@@ -107,10 +119,12 @@ func 都市戻り(プレイヤー座標マーカー:Marker3D=null)->void:
 	データロガー.全保存()
 	読み込みチャンクシグナル送信スタート()
 	get_node("Control/画面フェード").フェードイン待機(self)
-	#await get_tree().create_timer(0.1).timeout
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(0.1).timeout
+	get_tree().get_first_node_in_group("プレイヤー").global_position=都市プレイヤー座標
+	await get_tree().create_timer(1.8).timeout
 	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
 	get_tree().get_first_node_in_group("プレイヤー").レベル移動中=false
+
 	
 
 func ディメンション返し()->String:
@@ -174,6 +188,9 @@ func シナリオ演出実行(演出パス: String):
 				await 読み込み完了シグナル
 		elif has_node("都市3d仮") and 演出インスタンス.表示リスト.is_empty():
 			await get_tree().create_timer(1).timeout
+			get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードイン()
+		else:
+			await get_tree().create_timer(1.2).timeout
 			get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードイン()
 		# 実行！
 		#await get_tree().create_timer(0.1).timeout

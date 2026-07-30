@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://fy1ltcmmrt1k" path="res://レベル/ツール/ライト.gd" id="1_v08fb"]
 
 [node name="ライト" type="OmniLight3D" unique_id=741540008]
-light_energy = 0.8
 light_bake_mode = 1
-omni_range = 10.0
+omni_range = 8.0
 script = ExtResource("1_v08fb")

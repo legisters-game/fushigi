@@ -2,20 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diy1qbve8cgei"
-path="res://.godot/imported/レクレイス.png-7ccdc7624ef4d95c1dbcdb02b927e016.ctex"
+uid="uid://cceyedro08ca7"
+path.s3tc="res://.godot/imported/slim minecraft body_diamond.png-3c433bab919984a0bba6eff990194bf5.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "7fe63ce610e35d8aea87b945f3fffd55"
 }
 
 [deps]
 
-source_file="res://エンティティ/表情管理/レクレイス/レクレイス.png"
-dest_files=["res://.godot/imported/レクレイス.png-7ccdc7624ef4d95c1dbcdb02b927e016.ctex"]
+source_file="res://エンティティ/プレイヤー/model/slim minecraft body_diamond.png"
+dest_files=["res://.godot/imported/slim minecraft body_diamond.png-3c433bab919984a0bba6eff990194bf5.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

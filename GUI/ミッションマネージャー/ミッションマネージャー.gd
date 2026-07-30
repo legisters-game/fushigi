@@ -49,3 +49,23 @@ func ミッション取得()->Dictionary[String,ミッションデータ]:
 		#get_node("VBoxContainer/HBoxContainer/Control").初期化(空辞書[i].ミッション名,空辞書[i].表示用条件,空辞書[i].条件数)
 		
 	return 空辞書
+
+
+func キャラスケジュール取得(NPC番号:スケジュール管理クラス.NPC)->Array[NPCスケジューラ]:
+	var ソート前リスト:Array
+	for ミッション:ミッションデータ in ミッション達.values():
+		var スケジュール:NPCスケジューラ
+		if ミッション.キャラセリフ上書きリスト and ミッション.キャラセリフ上書きリスト.has(NPC番号):
+			スケジュール=ミッション.キャラセリフ上書きリスト[NPC番号]
+		if スケジュール:
+			ソート前リスト.append([スケジュール,ミッション.優先度])
+
+	ソート前リスト.sort_custom(func(a, b): return a[1] < b[1])
+	
+	var 結果: Array[NPCスケジューラ] = []
+	for リスト: Array in ソート前リスト:
+		結果.append(リスト[0])
+
+	return 結果
+	
+	

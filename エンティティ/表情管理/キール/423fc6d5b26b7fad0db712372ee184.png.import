@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diy1qbve8cgei"
-path="res://.godot/imported/レクレイス.png-7ccdc7624ef4d95c1dbcdb02b927e016.ctex"
+uid="uid://eejhiqboaihk"
+path="res://.godot/imported/423fc6d5b26b7fad0db712372ee184.png-abecb91806488988788d5b7852a5808a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://エンティティ/表情管理/レクレイス/レクレイス.png"
-dest_files=["res://.godot/imported/レクレイス.png-7ccdc7624ef4d95c1dbcdb02b927e016.ctex"]
+source_file="res://エンティティ/表情管理/キール/423fc6d5b26b7fad0db712372ee184.png"
+dest_files=["res://.godot/imported/423fc6d5b26b7fad0db712372ee184.png-abecb91806488988788d5b7852a5808a.ctex"]
 
 [params]
 

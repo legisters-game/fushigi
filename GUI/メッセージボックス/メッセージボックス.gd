@@ -48,12 +48,19 @@ func 表示(誰:String,メッセージ内容:Array[セリフオブジェクト])
 		相手NPC.表情切り替え(表情オブジェクト.表情.通常)
 		相手NPC.会話前回転戻し()
 		相手NPC.停止=false
+		相手NPC.モデル.顔ボーン.target_node=NodePath()
 	相手NPC=null
 	プレイヤー.移動操作ロック=false
 	if 追尾カメラ:
 		追尾カメラ.会話中視点角ロック(false)
 	hide()
 
+func 強制終了()->void:
+	while  visible:
+		中断=true
+		ログ進行.emit(0)
+		await get_tree().create_timer(0.01).timeout
+		hide()
 
 func 分岐回帰ログ表示(分岐セリフ:セリフ分岐オブジェクト)->void:
 	match 分岐セリフ.選択肢.size():

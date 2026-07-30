@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://70jmgomtcsjd" path="res://エンティティ/プレイヤー/model/6380439c17d3666d_8.png" id="5_11wke"]
 [ext_resource type="PackedScene" uid="uid://bs8n5xvhfrqsw" path="res://エンティティ/演出用/演出モデル.tscn" id="5_fvwph"]
 [ext_resource type="AudioStream" uid="uid://bl1n4p5262d6c" path="res://シナリオ/シナリオシーン/プロローグ/オープニングフル尺.mp3" id="5_im40r"]
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="5_xkjm8"]
+[ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="6_x1gaa"]
 [ext_resource type="Resource" uid="uid://nbbmunmsweld" path="res://エンティティ/表情管理/わでいど/わでいど.tres" id="7_ljke7"]
 [ext_resource type="PackedScene" uid="uid://sn1p3prkqs7b" path="res://シナリオ/演出用プレイヤー上書き.tscn" id="8_ionig"]
 
@@ -18,6 +20,26 @@ script = ExtResource("3_vj5kn")
 "表情" = 3
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
+[sub_resource type="Resource" id="Resource_jsnrv"]
+script = ExtResource("3_vj5kn")
+"セリフ" = "おう、座れや。"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_lggff"]
+script = ExtResource("6_x1gaa")
+"名前" = "お"
+"終了時間" = 1.0
+"目的置" = Vector3(-3.5060577, -0.0710907, -0.5016556)
+"セリフ" = Array[ExtResource("3_vj5kn")]([SubResource("Resource_jsnrv")])
+"ディメンション" = "uid://dmbek8jwtnvaw"
+"ディメンションオブジェクト番号" = 1
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[sub_resource type="Resource" id="Resource_n5jst"]
+script = ExtResource("5_xkjm8")
+"スケジュールリスト" = Array[ExtResource("6_x1gaa")]([SubResource("Resource_lggff")])
+metadata/_custom_type_script = "uid://d4j8xlv2dxato"
+
 [sub_resource type="Resource" id="Resource_xkjm8"]
 script = ExtResource("4_oqs1q")
 "ミッション名" = "ここはどこ？"
@@ -25,6 +47,9 @@ script = ExtResource("4_oqs1q")
 "条件フラグ" = "住人を見つける"
 "条件数" = 1
 "表示用条件" = "街の住人を見つける"
+"キャラセリフ上書きリスト" = Dictionary[int, ExtResource("5_xkjm8")]({
+0: SubResource("Resource_n5jst")
+})
 metadata/_custom_type_script = "uid://bjjvp7rx64bcv"
 
 [sub_resource type="Animation" id="Animation_mxkh7"]
@@ -133,7 +158,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 4),
 "transitions": PackedFloat32Array(0.73204285, 1),
 "update": 0,
-"values": [Vector3(0, 0, 5.125), Vector3(0, 0, 0)]
+"values": [Vector3(0, -14.906, 5.125), Vector3(0, -14.906, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -145,7 +170,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 4.3, 6.7),
 "transitions": PackedFloat32Array(0.65975386, 1.1095694, 1),
 "update": 0,
-"values": [Vector3(-0.354, 3.293, 8.752), Vector3(-0.354, 2.063, 2.562), Vector3(-0.354, 2.063, 2.232)]
+"values": [Vector3(-0.354, -11.613, 8.752), Vector3(-0.354, -12.843, 2.562), Vector3(-0.354, -12.843, 2.232)]
 }
 tracks/4/type = "method"
 tracks/4/imported = false
@@ -171,7 +196,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 6.8, 10, 141.44382, 149.56293),
 "transitions": PackedFloat32Array(1, 1, 1, 1.5157168, 1),
 "update": 0,
-"values": [Vector3(-0.062057495, -2.659729, 9.07621), Vector3(-0.062057495, -2.659729, 9.07621), Vector3(-0.062, 10.13, 26.736), Vector3(-0.06199646, 10.130014, 26.7359), Vector3(0.423, 2.96, 15.431)]
+"values": [Vector3(-0.062, -17.566, 9.076), Vector3(-0.062, -17.566, 9.076), Vector3(-0.062, -4.776, 26.736), Vector3(-0.062, -4.776, 26.736), Vector3(0.423, 0.769, 15.431)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -183,7 +208,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0, 6.8, 9, 10, 30, 34.9, 40.0667, 60.1, 63.2667, 66.5333, 90, 98.4667, 110.1333, 115.6333, 120.2, 124.7, 132.8333, 138.9, 150),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 4.4044704, 0), Vector3(0, 4.4044704, 0), Vector3(0, 4.4041467, -46.61938), Vector3(0, 4.404, -67.81), Vector3(0, 17.509, -516.375), Vector3(100.696, 2.5636816, -617.27026), Vector3(149.07, -4.616, -665.74), Vector3(718.17, -4.616, -665.74), Vector3(723.7243, 10.521596, -582.86017), Vector3(730.805, 14.349, -477.205), Vector3(896.81, 14.349, 78.69), Vector3(796.342, 18.198, 192.08), Vector3(570.425, 26.854, 78.69), Vector3(422.4557, 26.854, 49.15542), Vector3(240.65, 26.854, -52.3), Vector3(117.285, 14.899, 9.93), Vector3(112.72, 14.899, 172.36), Vector3(129.085, 14.326, 328.755), Vector3(126.385, 8.674, 480.955)]
+"values": [Vector3(0, 4.4044704, 0), Vector3(0, 4.4044704, 0), Vector3(0, 4.4041467, -46.61938), Vector3(0, 4.404, -67.81), Vector3(0, 17.509, -516.375), Vector3(100.696, 2.5636816, -617.27026), Vector3(149.07, -4.616, -665.74), Vector3(718.17, -4.616, -665.74), Vector3(723.7243, 10.521596, -582.86017), Vector3(730.805, 14.349, -477.205), Vector3(896.81, 14.349, 78.69), Vector3(796.342, 18.198, 192.08), Vector3(570.425, 26.854, 78.69), Vector3(422.4557, 26.854, 49.15542), Vector3(240.65, 26.854, -52.3), Vector3(117.285, 14.899, 9.93), Vector3(112.72, 14.899, 172.36), Vector3(129.085, 14.326, 328.755), Vector3(126.385, -5.746, 480.955)]
 }
 tracks/7/type = "method"
 tracks/7/imported = false
@@ -270,7 +295,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6648617, 0.38116646)
 
 [node name="演出カメラ" parent="オブジェクト中心" index="1" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
-transform = Transform3D(0.99612254, 0.032998882, -0.081553146, 0, 0.92698926, 0.37508798, 0.087976374, -0.37363362, 0.92339486, -1.8135986, 3.2928333, 11.7969055)
+transform = Transform3D(0.98909205, 0.019308165, -0.14602792, 0, 0.99137163, 0.13108154, 0.14729889, -0.12965171, 0.98055774, -1.8135986, 3.2928333, 11.7969055)
 "ターゲット" = [NodePath("../レクレイス/Marker3D")]
 "切り替え時間" = 1.0
 

@@ -5,19 +5,17 @@
 [ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="2_lggff"]
 [ext_resource type="Texture2D" uid="uid://tw5f5apsusr5" path="res://ワールド/星テクスチャ.tres" id="2_yoow5"]
 [ext_resource type="PackedScene" uid="uid://6jh6664vjvwy" path="res://街チャンク処理/都市3d仮.tscn" id="4_ealrb"]
-[ext_resource type="PackedScene" uid="uid://brq6hdb6c3yre" path="res://エンティティ/NPC/インスタンス/わでいど.tscn" id="12_ealrb"]
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="8_vxd74"]
+[ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="9_dhlwf"]
+[ext_resource type="PackedScene" uid="uid://wedomua7c4xx" path="res://エンティティ/NPC/インスタンス/キール.tscn" id="11_jsnrv"]
 [ext_resource type="Script" uid="uid://d0hqsc7rgmj0w" path="res://GUI/コントロールルート.gd" id="14_s0gvp"]
 [ext_resource type="PackedScene" uid="uid://cswg3m17ndvd0" path="res://GUI/ミッションマネージャー/ミッションマネージャー.tscn" id="15_jsnrv"]
 [ext_resource type="PackedScene" uid="uid://buwi56bftrlec" path="res://エンティティ/プレイヤー/プレイヤー.tscn" id="207_ccj11"]
 [ext_resource type="PackedScene" uid="uid://nfkdvrm1gp82" path="res://カメラ/カメラ制御.tscn" id="208_ir4n0"]
 [ext_resource type="Texture2D" uid="uid://70jmgomtcsjd" path="res://エンティティ/プレイヤー/model/6380439c17d3666d_8.png" id="209_yj0qq"]
 [ext_resource type="PackedScene" uid="uid://d2upvuci7wdjv" path="res://ワールド/npc制御.tscn" id="211_dd1lt"]
-[ext_resource type="PackedScene" uid="uid://dqniwtybwknaw" path="res://エンティティ/NPC/マイクラNPC.tscn" id="211_obnk4"]
 [ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="214_oechf"]
-[ext_resource type="Script" uid="uid://hoy7ntcb8lpl" path="res://拡張リソース/セリフ分岐オブジェクト.gd" id="214_yn86y"]
-[ext_resource type="Script" uid="uid://c63nudia22pk" path="res://拡張リソース/new_script.gd" id="215_g3783"]
 [ext_resource type="Script" uid="uid://ck32fe4yvp4h8" path="res://GUI/時間.gd" id="216_77ide"]
-[ext_resource type="Texture2D" uid="uid://c55qafle272gq" path="res://エンティティ/表情管理/わでいど/わでいど.png" id="216_yn86y"]
 [ext_resource type="PackedScene" uid="uid://s36hn6agtol7" path="res://GUI/メッセージボックス/メッセージボックス.tscn" id="217_0ma11"]
 [ext_resource type="Material" uid="uid://d0o42plhu13eh" path="res://ワールド/水.tres" id="217_q3cen"]
 [ext_resource type="Script" uid="uid://bpjov1hossksk" path="res://ワールド/海.gd" id="218_ym7tp"]
@@ -31,20 +29,19 @@ script = ExtResource("2_lggff")
 "条件数" = 5
 metadata/_custom_type_script = "uid://bjjvp7rx64bcv"
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_noarx"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6dblj"]
 sky_top_color = Color(0.28599998, 0.43766668, 0.65, 1)
 sky_horizon_color = Color(0.44889998, 0.533655, 0.67, 1)
 sky_cover = ExtResource("2_yoow5")
 sky_cover_modulate = Color(1, 1, 1, 0)
 sun_angle_max = 17.09
 
-[sub_resource type="Sky" id="Sky_a0tk4"]
-sky_material = SubResource("ProceduralSkyMaterial_noarx")
+[sub_resource type="Sky" id="Sky_s0gvp"]
+sky_material = SubResource("ProceduralSkyMaterial_6dblj")
 
-[sub_resource type="Environment" id="Environment_r3fl7"]
+[sub_resource type="Environment" id="Environment_s0gvp"]
 background_mode = 2
-background_energy_multiplier = 0.8
-sky = SubResource("Sky_a0tk4")
+sky = SubResource("Sky_s0gvp")
 reflected_light_source = 2
 tonemap_mode = 3
 tonemap_exposure = 1.2
@@ -54,9 +51,6 @@ ssao_enabled = true
 ssao_radius = 6.02
 ssao_intensity = 5.06
 ssil_enabled = true
-ssil_radius = 0.92
-ssil_intensity = 2.38
-ssil_sharpness = 1.0
 sdfgi_enabled = true
 sdfgi_min_cell_size = 0.15625
 fog_depth_curve = 1.035265
@@ -64,239 +58,25 @@ fog_depth_end = 105.7
 volumetric_fog_sky_affect = 0.671
 adjustment_enabled = true
 
-[sub_resource type="Resource" id="Resource_o4spe"]
+[sub_resource type="Resource" id="Resource_jsnrv"]
 script = ExtResource("214_oechf")
-"セリフ" = "d"
-"表情" = 1
+"セリフ" = "こんにちは"
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
-[sub_resource type="Resource" id="Resource_mp3km"]
-script = ExtResource("214_oechf")
-"セリフ" = "dada"
-"表情" = 8
-metadata/_custom_type_script = "uid://4uxnotone8su"
+[sub_resource type="Resource" id="Resource_lggff"]
+script = ExtResource("9_dhlwf")
+"名前" = "お"
+"終了時間" = 1.0
+"目的置" = Vector3(-3.5060577, -0.0710907, -0.5016556)
+"セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_jsnrv")])
+"ディメンション" = "uid://dmbek8jwtnvaw"
+"ディメンションオブジェクト番号" = 1
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
 
-[sub_resource type="Resource" id="Resource_yn86y"]
-script = ExtResource("214_oechf")
-"セリフ" = "a"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_3os03"]
-script = ExtResource("214_oechf")
-"セリフ" = "次で終わる"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_2efxv"]
-script = ExtResource("215_g3783")
-"セリフ" = "ラスト"
-metadata/_custom_type_script = "uid://c63nudia22pk"
-
-[sub_resource type="Resource" id="Resource_hqijh"]
-script = ExtResource("214_yn86y")
-"セリフ" = "３番目の条件分岐
-でもデータ無し
-"
-metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
-
-[sub_resource type="Resource" id="Resource_hacum"]
-script = ExtResource("214_oechf")
-"セリフ" = "ああああ"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_p4e3c"]
-script = ExtResource("214_oechf")
-"セリフ" = "ああ"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_2pwil"]
-script = ExtResource("214_yn86y")
-"選択肢" = Array[String](["終了", "条件", "メッセージ"])
-"選択1セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_3os03"), SubResource("Resource_2efxv")])
-"選択2セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_hqijh")])
-"選択3セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_hacum"), SubResource("Resource_p4e3c")])
-"セリフ" = "スクラッチチャーンス
-１終了
-２また条件
-３メッセージ"
-metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
-
-[sub_resource type="Resource" id="Resource_yoow5"]
-script = ExtResource("214_oechf")
-"セリフ" = "b"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_d3wty"]
-script = ExtResource("214_oechf")
-"セリフ" = "c"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_g3783"]
-script = ExtResource("214_yn86y")
-"選択肢" = Array[String](["あ", "ｂ", "ｃ"])
-"選択1セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_yn86y"), SubResource("Resource_2pwil")])
-"選択2セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_yoow5")])
-"選択3セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_d3wty")])
-"セリフ" = "選択肢1:a
-2:b
-3:c"
-metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
-
-[sub_resource type="Resource" id="Resource_rt7qk"]
-script = ExtResource("214_oechf")
-"セリフ" = "どうだったかな？"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0gvp"]
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxd74"]
-resource_name = "R_eye_color"
-cull_mode = 2
-albedo_texture = ExtResource("216_yn86y")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhlwf"]
-resource_name = "L_eye_color"
-cull_mode = 2
-albedo_texture = ExtResource("216_yn86y")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5t8nk"]
-resource_name = "material_0"
-transparency = 4
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 0
-texture_repeat = false
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3e5s"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nu31w"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obt1j"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2yde8"]
-resource_name = "Skin_Head_only"
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_id0nj"]
-resource_name = "Mouse"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1q667"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ype4i"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riyl1"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pb8dk"]
-resource_name = "Pupils(左目)"
-cull_mode = 2
-albedo_color = Color(0, 0, 0, 1)
-albedo_texture = ExtResource("216_yn86y")
-metallic = 1.0
-emission_enabled = true
-emission = Color(1, 1, 1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mu51"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmvb8"]
-resource_name = "Skin.004"
-transparency = 4
-cull_mode = 2
-diffuse_mode = 2
-albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4i7mf"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3s0n5"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpkl4"]
-resource_name = "Pupils(右目)"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_color = Color(0, 0, 0, 1)
-albedo_texture = ExtResource("216_yn86y")
-metallic = 1.0
-emission_enabled = true
-emission = Color(1, 1, 1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4s1x"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("216_yn86y")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf4ct"]
-resource_name = "Skin.003"
-transparency = 4
-albedo_texture = ExtResource("216_yn86y")
-roughness = 0.9
-texture_filter = 2
+[sub_resource type="Resource" id="Resource_vxd74"]
+script = ExtResource("8_vxd74")
+"スケジュールリスト" = Array[ExtResource("9_dhlwf")]([SubResource("Resource_lggff")])
+metadata/_custom_type_script = "uid://d4j8xlv2dxato"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajunh"]
 
@@ -307,22 +87,18 @@ subdivide_width = 20
 subdivide_depth = 20
 center_offset = Vector3(0, 0.622, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5w2ad"]
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8p5mg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jsnrv"]
 resource_name = "R_eye_color"
 cull_mode = 2
 albedo_texture = ExtResource("209_yj0qq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsgk7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lggff"]
 resource_name = "L_eye_color"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("209_yj0qq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72tv7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0gvp"]
 resource_name = "material_0"
 transparency = 4
 albedo_texture = ExtResource("209_yj0qq")
@@ -330,70 +106,7 @@ metallic_specular = 0.0
 texture_filter = 0
 texture_repeat = false
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6a8j"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7uix"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hyfj"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8d0ks"]
-resource_name = "Skin_Head_only"
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kg7c"]
-resource_name = "Mouse"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwdad"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykyjb"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sivbr"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4yprr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxd74"]
 resource_name = "Skin"
 transparency = 4
 cull_mode = 2
@@ -403,59 +116,11 @@ albedo_texture = ExtResource("209_yj0qq")
 roughness = 0.9
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ofy4"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a41ck"]
-resource_name = "Skin.004"
-transparency = 4
-cull_mode = 2
-diffuse_mode = 2
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alien"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8jhw1"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if4ww"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhlwf"]
 resource_name = "Pupils(右目)"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brp11"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvobo"]
-resource_name = "Skin.003"
-transparency = 4
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
 
 [node name="Node3d" type="Node3D" unique_id=2085154183 groups=["全体制御"]]
 script = ExtResource("1_yoow5")
@@ -474,117 +139,27 @@ top = Color(0.28599998, 0.43766668, 0.65, 1)
 "夜top" = Color(0, 0, 0, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1401484149]
-environment = SubResource("Environment_r3fl7")
+environment = SubResource("Environment_s0gvp")
 
 [node name="都市3d仮" parent="." unique_id=1006423857 instance=ExtResource("4_ealrb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
 
 [node name="レベル" type="Node3D" parent="." unique_id=14615443]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35.094, 0)
 
-[node name="カメラ制御" parent="." unique_id=629122187 node_paths=PackedStringArray("目標") instance=ExtResource("208_ir4n0")]
+[node name="カメラ制御" parent="." unique_id=629122187 node_paths=PackedStringArray("目標") groups=["追尾カメラ"] instance=ExtResource("208_ir4n0")]
 transform = Transform3D(1, 0, 0, 0, 0.76040596, -0.64944804, 0, 0.64944804, 0.76040596, 0, 19.363379, 0)
 "目標" = NodePath("../プレイヤー位置/プレイヤー")
 "速さ" = 5.0
 "感度" = 9.0
 
-[node name="NPC制御" parent="." unique_id=2005143416 node_paths=PackedStringArray("太陽", "メッセージボックス") instance=ExtResource("211_dd1lt")]
+[node name="NPC制御" parent="." unique_id=2005143416 node_paths=PackedStringArray("太陽", "メッセージボックス") groups=["NPC制御"] instance=ExtResource("211_dd1lt")]
+"全体スケジュール" = Dictionary[int, ExtResource("8_vxd74")]({
+0: SubResource("Resource_vxd74")
+})
 "太陽" = NodePath("../時間太陽")
 "メッセージボックス" = NodePath("../Control/メッセージボックス")
 
-[node name="わでいどｐｐ" parent="NPC制御" unique_id=1008160958 instance=ExtResource("211_obnk4")]
-process_mode = 4
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.49048, 14.818058, 317.92023)
-visible = false
-"デフォルトセリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_o4spe"), SubResource("Resource_mp3km"), SubResource("Resource_g3783"), SubResource("Resource_rt7qk")])
-SPEED = 5.5
-
-[node name="モデル" parent="NPC制御/わでいどｐｐ/原点" parent_id_path=PackedInt32Array(1008160958, 1394227668) index="0" unique_id=652042102]
-"スキン" = ExtResource("216_yn86y")
-
-[node name="GeneralSkeleton" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1008160958, 652042102, 231553116) index="0" unique_id=1885119474]
-bones/11/position = Vector3(-5.1916293e-10, 1.1574029e-07, -3.995266e-10)
-bones/11/rotation = Quaternion(-0.03372703, -0.018558042, -0.08381385, 0.9957376)
-bones/12/rotation = Quaternion(0.0156225115, 4.3199805e-05, 0.023297371, 0.9996065)
-bones/13/rotation = Quaternion(-0.10312063, -0.01769493, 0.009433813, 0.9944667)
-bones/41/rotation = Quaternion(0.016035954, -0.0016699262, 0.022612581, 0.99961436)
-bones/42/rotation = Quaternion(0.5302701, -0.45414773, -0.5724699, -0.4299324)
-bones/43/rotation = Quaternion(0.03016029, 0.8538314, -0.5145576, 0.07275256)
-bones/44/rotation = Quaternion(0.17083502, 0.6861599, -0.1708346, 0.6861599)
-bones/45/rotation = Quaternion(0.011498659, -0.80175525, -0.0036610789, 0.5975307)
-bones/46/rotation = Quaternion(0.5126036, 0.47036493, 0.579509, -0.42445698)
-bones/47/rotation = Quaternion(-0.0766995, 0.777555, -0.6240994, 0.005040754)
-bones/48/rotation = Quaternion(0.13174258, -0.6947259, 0.1317427, 0.69472575)
-bones/49/rotation = Quaternion(0.054486, 0.78664154, 0.029109735, 0.6143118)
-bones/51/rotation = Quaternion(-0.06272945, 0.025339177, 0.99380225, -0.08820485)
-bones/52/rotation = Quaternion(-0.011133459, 0.9872482, -0.14738692, -0.05911201)
-bones/53/rotation = Quaternion(0.052101657, 0.13072754, 0.9833322, -0.115123846)
-bones/54/rotation = Quaternion(0.005595192, 0.95129097, -0.3040842, 0.050469205)
-
-[node name="R_Pupils_001" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(-0.110787265, -0.047015242, -0.99273145, -0.96447974, 0.2461035, 0.095979095, 0.23980218, 0.9681026, -0.072610386, 0.046716474, 1.0119501, 0.13491215)
-
-[node name="L_Pupils_001" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(-0.110787265, -0.047015242, -0.99273145, -0.96447974, 0.2461035, 0.095979095, 0.23980218, 0.9681026, -0.072610386, 0.22838631, 0.99438596, 0.14819983)
-
-[node name="head" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.99273145, 0.110787265, -0.047015242, -0.095979095, 0.96447974, 0.2461035, 0.072610386, -0.23980218, 0.9681026, 0.10584684, 0.7231113, -0.03618022)
-
-[node name="_設定" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
-surface_material_override/0 = SubResource("StandardMaterial3D_s0gvp")
-
-[node name="Eye_001" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
-surface_material_override/0 = SubResource("StandardMaterial3D_vxd74")
-surface_material_override/1 = SubResource("StandardMaterial3D_dhlwf")
-
-[node name="Head" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="2" unique_id=1097678551]
-surface_material_override/0 = SubResource("StandardMaterial3D_5t8nk")
-
-[node name="Body" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
-surface_material_override/0 = SubResource("StandardMaterial3D_j3e5s")
-
-[node name="Body_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
-surface_material_override/0 = SubResource("StandardMaterial3D_nu31w")
-
-[node name="Face" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
-surface_material_override/0 = SubResource("StandardMaterial3D_obt1j")
-surface_material_override/1 = SubResource("StandardMaterial3D_2yde8")
-surface_material_override/2 = SubResource("StandardMaterial3D_id0nj")
-
-[node name="Head_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="6" unique_id=1719889094]
-surface_material_override/0 = SubResource("StandardMaterial3D_1q667")
-
-[node name="L_Arm" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
-surface_material_override/0 = SubResource("StandardMaterial3D_ype4i")
-
-[node name="L_Arm_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
-surface_material_override/0 = SubResource("StandardMaterial3D_riyl1")
-
-[node name="L_Iris" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
-surface_material_override/0 = SubResource("StandardMaterial3D_pb8dk")
-
-[node name="L_Leg" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
-surface_material_override/0 = SubResource("StandardMaterial3D_2mu51")
-
-[node name="L_Leg_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
-surface_material_override/0 = SubResource("StandardMaterial3D_vmvb8")
-
-[node name="R_Arm" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
-surface_material_override/0 = SubResource("StandardMaterial3D_4i7mf")
-
-[node name="R_Arm_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
-surface_material_override/0 = SubResource("StandardMaterial3D_3s0n5")
-
-[node name="R_Iris" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
-surface_material_override/0 = SubResource("StandardMaterial3D_qpkl4")
-
-[node name="R_Leg" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
-surface_material_override/0 = SubResource("StandardMaterial3D_g4s1x")
-
-[node name="R_Leg_Layer" parent="NPC制御/わでいどｐｐ/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
-surface_material_override/0 = SubResource("StandardMaterial3D_pf4ct")
-
-[node name="わでいど" parent="NPC制御" unique_id=1396265163 instance=ExtResource("12_ealrb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.49048, 14.818058, 317.92023)
+[node name="キール" parent="NPC制御" unique_id=1396265163 instance=ExtResource("11_jsnrv")]
 
 [node name="Control" type="Control" parent="." unique_id=42835933 node_paths=PackedStringArray("ムービー中非表示リスト") groups=["UI"]]
 layout_mode = 3
@@ -663,91 +238,58 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.15866, 25.048, 237.73334)
 "レベル制御" = NodePath("../..")
 "メッセージボックス" = NodePath("../../Control/メッセージボックス")
 
+[node name="CollisionShape3D" parent="プレイヤー位置/プレイヤー" index="0" unique_id=57884629]
+visible = true
+
+[node name="CollisionShape3D2" parent="プレイヤー位置/プレイヤー" index="1" unique_id=644918341]
+visible = true
+
 [node name="GeneralSkeleton" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1999271142, 652042102, 231553116) index="0" unique_id=1885119474]
-bones/11/position = Vector3(7.0264115e-09, 1.17869455e-07, -2.7504785e-10)
-bones/11/rotation = Quaternion(-0.010398011, -0.041880816, -0.018819815, 0.99889123)
-bones/12/rotation = Quaternion(-0.027509356, -0.010919121, 0.0014002133, 0.999561)
-bones/13/rotation = Quaternion(-0.07893349, 0.004544965, 0.0037547548, 0.99686253)
-bones/41/rotation = Quaternion(-0.027439466, -0.010884144, 0.0017492636, 0.99956274)
-bones/42/rotation = Quaternion(0.5220328, -0.46501726, -0.5670255, -0.435572)
-bones/43/rotation = Quaternion(0.03753776, 0.81484425, -0.56939834, 0.10200603)
-bones/44/rotation = Quaternion(0.16832492, 0.6867802, -0.1683245, 0.68678)
-bones/45/rotation = Quaternion(0.017169718, -0.79652935, -0.011515092, 0.6042464)
-bones/46/rotation = Quaternion(0.5158849, 0.47122145, 0.563877, -0.4402908)
-bones/47/rotation = Quaternion(-0.08625898, 0.81503, -0.5719357, -0.034278583)
-bones/48/rotation = Quaternion(0.12721659, -0.69556874, 0.12721597, 0.695569)
-bones/49/rotation = Quaternion(0.0690126, 0.7870336, 0.008734467, 0.6129757)
-bones/51/rotation = Quaternion(-0.054834887, 0.047257464, 0.99734414, 0.008036949)
-bones/52/rotation = Quaternion(0.0036815954, 0.99140376, -0.11594665, -0.060510766)
-bones/53/rotation = Quaternion(0.029431269, 0.075708814, 0.99666107, 0.008302435)
-bones/54/rotation = Quaternion(-0.0009933911, 0.9839493, -0.15628435, 0.086128525)
+bones/11/position = Vector3(1.2020663e-08, 1.1531696e-07, 1.0111177e-09)
+bones/11/rotation = Quaternion(-0.028141197, -0.13353893, 0.040069155, 0.9898333)
+bones/12/rotation = Quaternion(0.003327483, -0.0076338183, -0.020495558, 0.99975526)
+bones/13/rotation = Quaternion(-0.080480576, 0.017881047, 0.005774417, 0.9965791)
+bones/41/rotation = Quaternion(0.0033390247, -0.0068004173, -0.020591559, 0.9997593)
+bones/42/rotation = Quaternion(0.518613, -0.46973294, -0.5633069, -0.43940508)
+bones/43/rotation = Quaternion(-0.0021697325, 0.7997967, -0.593918, 0.0870744)
+bones/44/rotation = Quaternion(0.17312522, 0.6855857, -0.17312519, 0.68558556)
+bones/45/rotation = Quaternion(0.020275377, -0.798261, -0.0062110536, 0.60193825)
+bones/46/rotation = Quaternion(0.52062947, 0.4603445, 0.5845308, -0.41875017)
+bones/47/rotation = Quaternion(-0.07582736, 0.83935523, -0.5377457, -0.023722813)
+bones/48/rotation = Quaternion(0.1401796, -0.6930725, 0.1401796, 0.69307274)
+bones/49/rotation = Quaternion(0.07795374, 0.7982966, -0.004109498, 0.5971842)
+bones/51/rotation = Quaternion(-0.06961224, 0.14079668, 0.9831907, 0.09309434)
+bones/52/rotation = Quaternion(0.010084759, 0.9588683, -0.27674142, 0.062322877)
+bones/53/rotation = Quaternion(0.014758441, 0.09047501, 0.98992026, 0.107956)
+bones/54/rotation = Quaternion(-0.00656008, 0.9746339, -0.20948526, 0.078498125)
 
 [node name="R_Pupils_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(-0.04832004, -0.08670539, -0.9950614, -0.97195864, 0.23361504, 0.026841953, 0.230134, 0.9684556, -0.09556235, -0.054224722, 1.0128073, 0.13753876)
+transform = Transform3D(0.0026115067, -0.24932039, -0.96841747, -0.9785621, 0.19879502, -0.05381892, 0.20593478, 0.94779736, -0.24345633, -0.1708004, 0.9992683, 0.11919878)
 
 [node name="L_Pupils_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(-0.04832004, -0.08670539, -0.9950614, -0.97195864, 0.23361504, 0.026841953, 0.230134, 0.9684556, -0.09556235, 0.1278715, 1.0078951, 0.15502664)
+transform = Transform3D(0.0026115067, -0.24932039, -0.96841747, -0.9785621, 0.19879502, -0.05381892, 0.20593478, 0.94779736, -0.24345633, 0.00641999, 1.0091171, 0.16375126)
 
 [node name="head" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.9950614, 0.04832004, -0.08670539, -0.026841953, 0.97195864, 0.23361504, 0.09556235, -0.230134, 0.9684556, 0.029013745, 0.7303479, -0.03417307)
-
-[node name="_設定" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
-surface_material_override/0 = SubResource("StandardMaterial3D_5w2ad")
+transform = Transform3D(0.96841747, -0.0026115067, -0.24932039, 0.05381892, 0.9785621, 0.19879502, 0.24345633, -0.20593478, 0.94779736, -0.038822234, 0.7295917, -0.042211287)
 
 [node name="Eye_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
-surface_material_override/0 = SubResource("StandardMaterial3D_8p5mg")
-surface_material_override/1 = SubResource("StandardMaterial3D_dsgk7")
+surface_material_override/0 = SubResource("StandardMaterial3D_jsnrv")
+surface_material_override/1 = SubResource("StandardMaterial3D_lggff")
 
 [node name="Head" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="2" unique_id=1097678551]
-surface_material_override/0 = SubResource("StandardMaterial3D_72tv7")
-
-[node name="Body" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
-surface_material_override/0 = SubResource("StandardMaterial3D_x6a8j")
-
-[node name="Body_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
-surface_material_override/0 = SubResource("StandardMaterial3D_s7uix")
-
-[node name="Face" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
-surface_material_override/0 = SubResource("StandardMaterial3D_4hyfj")
-surface_material_override/1 = SubResource("StandardMaterial3D_8d0ks")
-surface_material_override/2 = SubResource("StandardMaterial3D_8kg7c")
-
-[node name="Head_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="6" unique_id=1719889094]
-surface_material_override/0 = SubResource("StandardMaterial3D_wwdad")
-
-[node name="L_Arm" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
-surface_material_override/0 = SubResource("StandardMaterial3D_ykyjb")
-
-[node name="L_Arm_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
-surface_material_override/0 = SubResource("StandardMaterial3D_sivbr")
+surface_material_override/0 = SubResource("StandardMaterial3D_s0gvp")
 
 [node name="L_Iris" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
-surface_material_override/0 = SubResource("StandardMaterial3D_4yprr")
-
-[node name="L_Leg" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
-surface_material_override/0 = SubResource("StandardMaterial3D_1ofy4")
-
-[node name="L_Leg_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
-surface_material_override/0 = SubResource("StandardMaterial3D_a41ck")
-
-[node name="R_Arm" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
-surface_material_override/0 = SubResource("StandardMaterial3D_alien")
-
-[node name="R_Arm_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
-surface_material_override/0 = SubResource("StandardMaterial3D_8jhw1")
+surface_material_override/0 = SubResource("StandardMaterial3D_vxd74")
 
 [node name="R_Iris" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
-surface_material_override/0 = SubResource("StandardMaterial3D_if4ww")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhlwf")
 
-[node name="R_Leg" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
-surface_material_override/0 = SubResource("StandardMaterial3D_brp11")
-
-[node name="R_Leg_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
-surface_material_override/0 = SubResource("StandardMaterial3D_dvobo")
+[node name="Area3D" parent="プレイヤー位置/プレイヤー" index="10" unique_id=15864578]
+collision_layer = 1
 
 [node name="演出ルート" type="Node3D" parent="." unique_id=460926654]
 
-[editable path="NPC制御/わでいどｐｐ"]
-[editable path="NPC制御/わでいどｐｐ/原点/モデル"]
+[editable path="カメラ制御"]
 [editable path="プレイヤー位置/プレイヤー"]
 [editable path="プレイヤー位置/プレイヤー/原点/モデル"]

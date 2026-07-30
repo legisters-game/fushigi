@@ -40,35 +40,56 @@ animation = &"D右"
 animation = &"D左"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_o2cbv"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_o2cbv")
-blend_point_0/pos = Vector2(0, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_bsp01")
-blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_4i0bt")
-blend_point_2/pos = Vector2(-1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_1dlfw")
-blend_point_3/pos = Vector2(0, 1)
-blend_point_4/node = SubResource("AnimationNodeAnimation_yk3c5")
-blend_point_4/pos = Vector2(0, -1)
-blend_point_5/node = SubResource("AnimationNodeAnimation_ua3nl")
-blend_point_5/pos = Vector2(0, 2)
-blend_point_6/node = SubResource("AnimationNodeAnimation_pvq0m")
-blend_point_6/pos = Vector2(0, -2)
-blend_point_7/node = SubResource("AnimationNodeAnimation_wjo2g")
-blend_point_7/pos = Vector2(2, 0)
-blend_point_8/node = SubResource("AnimationNodeAnimation_kdmvu")
-blend_point_8/pos = Vector2(-2, 0)
 min_space = Vector2(-2, -2)
 max_space = Vector2(2, 2)
+blend_point_0/node = SubResource("AnimationNodeAnimation_o2cbv")
+blend_point_0/pos = Vector2(0, 0)
+blend_point_0/name = &"0"
+blend_point_1/node = SubResource("AnimationNodeAnimation_bsp01")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_1/name = &"1"
+blend_point_2/node = SubResource("AnimationNodeAnimation_4i0bt")
+blend_point_2/pos = Vector2(-1, 0)
+blend_point_2/name = &"2"
+blend_point_3/node = SubResource("AnimationNodeAnimation_1dlfw")
+blend_point_3/pos = Vector2(0, 1)
+blend_point_3/name = &"3"
+blend_point_4/node = SubResource("AnimationNodeAnimation_yk3c5")
+blend_point_4/pos = Vector2(0, -1)
+blend_point_4/name = &"4"
+blend_point_5/node = SubResource("AnimationNodeAnimation_ua3nl")
+blend_point_5/pos = Vector2(0, 2)
+blend_point_5/name = &"5"
+blend_point_6/node = SubResource("AnimationNodeAnimation_pvq0m")
+blend_point_6/pos = Vector2(0, -2)
+blend_point_6/name = &"6"
+blend_point_7/node = SubResource("AnimationNodeAnimation_wjo2g")
+blend_point_7/pos = Vector2(2, 0)
+blend_point_7/name = &"7"
+blend_point_8/node = SubResource("AnimationNodeAnimation_kdmvu")
+blend_point_8/pos = Vector2(-2, 0)
+blend_point_8/name = &"8"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ye2gd"]
+animation = &"座る"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ye2gd"]
 reset = false
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nk65a"]
+xfade_time = 0.3
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_h83x8"]
+xfade_time = 0.2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_bsp01"]
 "states/動き/node" = SubResource("AnimationNodeBlendSpace2D_o2cbv")
 "states/動き/position" = Vector2(546, 100)
-transitions = ["Start", "動き", SubResource("AnimationNodeStateMachineTransition_ye2gd")]
+"states/座る/node" = SubResource("AnimationNodeAnimation_ye2gd")
+"states/座る/position" = Vector2(364, 240)
+transitions = ["Start", "動き", SubResource("AnimationNodeStateMachineTransition_ye2gd"), "動き", "座る", SubResource("AnimationNodeStateMachineTransition_nk65a"), "座る", "動き", SubResource("AnimationNodeStateMachineTransition_h83x8")]
+graph_offset = Vector2(17, 121)
 
 [sub_resource type="Animation" id="Animation_nk65a"]
 
@@ -86,6 +107,9 @@ transitions = ["Start", "動き", SubResource("AnimationNodeStateMachineTransiti
 
 [sub_resource type="Animation" id="Animation_ua3nl"]
 
+[sub_resource type="Animation" id="Animation_3hx1a"]
+resource_name = "座る"
+
 [sub_resource type="Animation" id="Animation_pvq0m"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wjo2g"]
@@ -98,16 +122,20 @@ _data = {
 &"前": SubResource("Animation_1dlfw"),
 &"右": SubResource("Animation_yk3c5"),
 &"左": SubResource("Animation_ua3nl"),
+&"座る": SubResource("Animation_3hx1a"),
 &"後": SubResource("Animation_pvq0m")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o2cbv"]
 size = Vector3(1, 1, 0.43151855)
 
-[node name="エンティティ" type="CharacterBody3D" unique_id=1396265163 node_paths=PackedStringArray("アニメツリー", "攻撃判定")]
+[node name="エンティティ" type="CharacterBody3D" unique_id=1396265163 node_paths=PackedStringArray("アニメツリー", "攻撃判定", "通常当たり判定")]
+collision_layer = 9
+collision_mask = 9
 script = ExtResource("1_o2cbv")
 "アニメツリー" = NodePath("AnimationTree")
 "攻撃判定" = NodePath("Area3D")
+"通常当たり判定" = [NodePath("CollisionShape3D"), NodePath("CollisionShape3D2")]
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=57884629]
@@ -137,8 +165,11 @@ anim_player = NodePath("../AnimationPlayer")
 libraries/ = SubResource("AnimationLibrary_wjo2g")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=15864578]
+collision_layer = 9
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=544046227]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56912047, -0.57268906)
 shape = SubResource("BoxShape3D_o2cbv")
+
+[node name="ケツ" type="Marker3D" parent="." unique_id=674815463]

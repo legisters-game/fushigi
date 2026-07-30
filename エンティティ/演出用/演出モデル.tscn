@@ -6,30 +6,50 @@
 
 [node name="演出モデル" unique_id=1106972114 node_paths=PackedStringArray("顔") instance=ExtResource("1_rbdl1")]
 script = ExtResource("2_btu10")
+"オーバーライド" = false
+"NPCオーバーライド" = 0
+"プレイヤーの見た目をジャック" = null
 "顔" = NodePath("R-G MC Rig MoCap v1_0/GeneralSkeleton/head/Head")
 
 [node name="R-G MC Rig MoCap v1_0" parent="." index="0" unique_id=231553116]
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0.62531376, 0)
 
 [node name="GeneralSkeleton" parent="R-G MC Rig MoCap v1_0" index="0" unique_id=1885119474]
-bones/1/enabled = false
+bones/1/rotation = Quaternion(0.1161505, 0.12447653, 0.019467557, 0.9852085)
+bones/11/position = Vector3(5.177094e-10, 1.09901464e-07, 9.751043e-10)
+bones/11/rotation = Quaternion(0.06848299, -0.052034963, -0.02834124, 0.9958913)
 bones/11/scale = Vector3(1.0000001, 1.0000002, 1.0000001)
 bones/12/position = Vector3(0.0003074217, 0.3653263, -0.0017737064)
+bones/12/rotation = Quaternion(-0.029622518, 0.0158497, 0.011286923, 0.9993718)
 bones/12/scale = Vector3(0.99999994, 0.9999997, 0.99999976)
+bones/13/rotation = Quaternion(-0.17151313, -0.057675913, 0.007567356, 0.983463)
 bones/13/scale = Vector3(0.99999994, 1, 1)
+bones/41/rotation = Quaternion(-0.02925225, 0.015847346, 0.0101893945, 0.9993946)
+bones/42/rotation = Quaternion(0.4898924, -0.49468827, -0.54500884, -0.46717715)
+bones/43/rotation = Quaternion(-0.1210614, 0.8937843, -0.42618468, -0.06971689)
+bones/44/rotation = Quaternion(0.5105401, 0.48923308, -0.51053977, 0.48923302)
+bones/45/rotation = Quaternion(-0.11013825, -0.60218775, -0.14921905, 0.7765135)
+bones/46/rotation = Quaternion(0.46796685, 0.5028817, 0.56558937, -0.45631754)
+bones/47/rotation = Quaternion(-0.29690883, 0.7345713, -0.4436452, -0.41884267)
+bones/48/rotation = Quaternion(0.4176243, -0.57060516, 0.41762382, 0.57060516)
+bones/49/rotation = Quaternion(-0.010584591, 0.6459861, -0.036261763, 0.76241404)
 bones/50/rotation = Quaternion(1.4901161e-08, 0, 0, 1)
+bones/51/rotation = Quaternion(-0.042125568, 0.009501211, 0.99789685, -0.048343126)
+bones/52/rotation = Quaternion(0.010899802, 0.952608, -0.29422224, 0.076501235)
+bones/53/rotation = Quaternion(0.04055558, 0.43019062, 0.898944, -0.07204796)
+bones/54/rotation = Quaternion(-0.053618096, 0.45654425, -0.8870965, 0.041859645)
 
 [node name="R_Pupils_001" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(-0.06629808, -0.17022207, -0.98317295, -0.9609394, 0.2762377, 0.01697229, 0.2687003, 0.9458948, -0.18188715, -0.06449824, 1.0158448, 0.22489822)
+transform = Transform3D(0.011122514, 0.06949748, -0.99752015, -0.99878955, 0.048573434, -0.007752549, 0.047914147, 0.9963988, 0.069953665, -0.015228424, 0.9333673, 0.4652793)
 
 [node name="L_Pupils_001" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(-0.06629808, -0.17022207, -0.98317295, -0.9609394, 0.2762377, 0.01697229, 0.2687003, 0.9458948, -0.18188715, 0.1154224, 1.0127388, 0.25818354)
+transform = Transform3D(0.011122514, 0.06949748, -0.99752015, -0.99878955, 0.048573434, -0.007752549, 0.047914147, 0.9963988, 0.069953665, 0.16731776, 0.934786, 0.45247775)
 
 [node name="head" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.98317295, 0.06629808, -0.17022207, -0.01697229, 0.9609394, 0.2762377, 0.18188715, -0.2687003, 0.9458948, 0.03370974, 0.72645307, 0.073886536)
+transform = Transform3D(0.99752015, -0.011122514, 0.06949748, 0.007752549, 0.99878955, 0.048573434, -0.069953665, -0.047914147, 0.9963988, 0.044512756, 0.6915873, 0.23253414)
 
 [node name="左" type="SpringBoneSimulator3D" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="17" unique_id=1917175906 node_paths=PackedStringArray("アニメーションプレイヤー")]
-external_force = Vector3(-0.043146748, 0.06865849, 0)
+external_force = Vector3(-0.015131707, -0.07758244, 0)
 setting_count = 1
 settings/0/root_bone_name = "LeftShoulder"
 settings/0/root_bone = 46
@@ -63,7 +83,7 @@ script = ExtResource("3_8olvb")
 "アニメーションプレイヤー" = NodePath("../../../AnimationPlayer")
 
 [node name="右" type="SpringBoneSimulator3D" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="18" unique_id=125639639 node_paths=PackedStringArray("アニメーションプレイヤー")]
-external_force = Vector3(0.043146748, 0.06865849, 0)
+external_force = Vector3(0.015131707, -0.07758244, 0)
 setting_count = 1
 settings/0/root_bone_name = "RightShoulder"
 settings/0/root_bone = 42
@@ -98,7 +118,7 @@ script = ExtResource("3_8olvb")
 "反転" = true
 
 [node name="体" type="SpringBoneSimulator3D" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="19" unique_id=912893983 node_paths=PackedStringArray("アニメーションプレイヤー")]
-external_force = Vector3(0.012459579, -0.029565336, -0.01999599)
+external_force = Vector3(0.011784494, 0.02238384, -0.003852001)
 setting_count = 1
 settings/0/root_bone_name = "Hips"
 settings/0/root_bone = 11

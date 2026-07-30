@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dwfulvaba84tc"]
+
+[ext_resource type="Script" uid="uid://blxpbfcwjvcig" path="res://レベル/ツール/椅子.gd" id="1_tcrq7"]
+[ext_resource type="PackedScene" uid="uid://b7xx3vq08qd12" path="res://アクションガイド/ガイドボタン.tscn" id="2_us24b"]
+
+[node name="椅子" type="StaticBody3D" unique_id=1860998109]
+script = ExtResource("1_tcrq7")
+
+[node name="マーカー" type="Marker3D" parent="." unique_id=789061060]
+
+[node name="会話ガイドボタン" parent="." unique_id=1392688736 instance=ExtResource("2_us24b")]
+transform = Transform3D(1.1676939, -0.09177879, 0.11023216, 0.11559819, 1.137406, -0.27753732, -0.084920734, 0.286298, 1.1379386, 0, 0.63430077, 0)

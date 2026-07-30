@@ -7,10 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://d52pw0xbk3tj" path="res://エンティティ/プレイヤー/model/モデル_blenderSteve.png" id="5_hylhy"]
 [ext_resource type="Script" uid="uid://dgfp081jd8djn" path="res://エンティティ/プレイヤー/アクセスnpc.gd" id="6_vi7id"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vi7id"]
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adn76"]
 albedo_color = Color(1, 0.01999998, 0.01999998, 1)
 
@@ -78,87 +74,24 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kwx3y")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4shw4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vi7id"]
 resource_name = "R_eye_color"
 cull_mode = 2
 albedo_texture = ExtResource("4_0vtdg")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m210d"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4shw4"]
 resource_name = "L_eye_color"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("4_0vtdg")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bjhc"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m210d"]
 resource_name = "material_0"
 transparency = 4
 albedo_texture = ExtResource("4_0vtdg")
 metallic_specular = 0.0
 texture_filter = 0
 texture_repeat = false
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jq41x"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylpxh"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_an3if"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xf42v"]
-resource_name = "Skin_Head_only"
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ahfys"]
-resource_name = "Mouse"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2t2q"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klj8i"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vdirn"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-metallic_specular = 0.0
-texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgts1"]
 resource_name = "Skin"
@@ -194,7 +127,7 @@ metadata/extras = {
 "targetNames": ["ベンド", "ベンド2"]
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_50ljf"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bjhc"]
 resource_name = "Skin"
 transparency = 4
 cull_mode = 2
@@ -202,39 +135,6 @@ vertex_color_use_as_albedo = true
 albedo_color = Color(0, 0, 0, 1)
 albedo_texture = ExtResource("4_0vtdg")
 roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ww0si"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su5w0"]
-resource_name = "Skin.004"
-transparency = 4
-cull_mode = 2
-diffuse_mode = 2
-albedo_texture = ExtResource("4_0vtdg")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uq8wg"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1er4m"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-metallic_specular = 0.0
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydi6u"]
@@ -267,26 +167,11 @@ metadata/extras = {
 "targetNames": ["ハイライト縦"]
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4mk1u"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jq41x"]
 resource_name = "Pupils(右目)"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("4_0vtdg")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5n5a"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_0vtdg")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stdso"]
-resource_name = "Skin.003"
-transparency = 4
-albedo_texture = ExtResource("4_0vtdg")
-roughness = 0.9
-texture_filter = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_adn76"]
 size = Vector3(7.9606323, 4.2734375, 7.874756)
@@ -294,18 +179,26 @@ size = Vector3(7.9606323, 4.2734375, 7.874756)
 [sub_resource type="BoxShape3D" id="BoxShape3D_hylhy"]
 size = Vector3(1.115, 1, 0.465)
 
-[node name="エンティティ" unique_id=1396265163 node_paths=PackedStringArray("アクセスNPCコライダー", "モデル") instance=ExtResource("1_dffgq")]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gyxre"]
+radius = 0.35742188
+height = 1.4182129
+
+[node name="エンティティ" unique_id=1396265163 node_paths=PackedStringArray("アクセスNPCコライダー", "モデル", "座り用当たり判定", "顔ノード") instance=ExtResource("1_dffgq")]
 script = ExtResource("2_adn76")
 "アクセスNPCコライダー" = NodePath("アクセスNPC")
 SPEED = 5.5
 rotation_speed = 5.0
 "モデル" = NodePath("原点/モデル")
+"座り用当たり判定" = [NodePath("座り")]
+"顔ノード" = NodePath("原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head/Eye_001")
 
 [node name="CollisionShape3D" parent="." index="0" unique_id=57884629]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.83489835, 0)
+visible = false
 
 [node name="CollisionShape3D2" parent="." index="1" unique_id=644918341]
 transform = Transform3D(-1, -8.742277e-08, 3.82137e-15, 0, -4.371138e-08, -0.9999999, 8.742278e-08, -0.9999999, 4.371138e-08, 1.7115537e-08, 0.56381184, 0.4)
+visible = false
 
 [node name="モデル" parent="原点" parent_id_path=PackedInt32Array(1394227668) index="0" unique_id=652042102 instance=ExtResource("3_adn76")]
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0.630943, 0)
@@ -313,97 +206,56 @@ transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0.630943, 0)
 
 [node name="GeneralSkeleton" parent="原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(652042102, 231553116) index="0" unique_id=1885119474]
 bones/1/rotation = Quaternion(0, 0, 0, 1)
-bones/11/position = Vector3(1.2366756e-08, 1.15571744e-07, 7.293772e-10)
-bones/11/rotation = Quaternion(-0.023040777, -0.13720787, 0.029527372, 0.98983395)
-bones/12/rotation = Quaternion(-0.028153213, -0.009090823, -0.016622815, 0.99942404)
-bones/13/rotation = Quaternion(-0.05507039, 0.014736735, 0.010929708, 0.9983139)
-bones/41/rotation = Quaternion(-0.028282357, -0.009211096, -0.016298614, 0.9994247)
-bones/42/rotation = Quaternion(0.53099066, -0.45984253, -0.5487375, -0.45330027)
-bones/43/rotation = Quaternion(0.07022734, 0.79260826, -0.59896904, 0.08986845)
-bones/44/rotation = Quaternion(0.17139572, 0.6860201, -0.17139584, 0.6860201)
-bones/45/rotation = Quaternion(0.0074519487, -0.7941935, -0.02439743, 0.6071293)
-bones/46/rotation = Quaternion(0.5236435, 0.46147066, 0.56953317, -0.43413627)
-bones/47/rotation = Quaternion(-0.1340998, 0.8160371, -0.560854, -0.039287608)
-bones/48/rotation = Quaternion(0.1352733, -0.69404703, 0.1352732, 0.6940469)
-bones/49/rotation = Quaternion(0.06772871, 0.7817875, 0.016712397, 0.6196304)
-bones/51/rotation = Quaternion(-0.06764921, 0.13763271, 0.9847468, 0.082186855)
-bones/52/rotation = Quaternion(0.00841606, 0.963693, -0.26019767, 0.059348345)
-bones/53/rotation = Quaternion(0.015962053, 0.09585565, 0.9904869, 0.09742982)
-bones/54/rotation = Quaternion(-0.0068001053, 0.974982, -0.20873189, 0.07612477)
+bones/11/position = Vector3(1.0024971e-08, 1.1693333e-07, 7.089635e-10)
+bones/11/rotation = Quaternion(-0.003783511, -0.091115594, 0.012076813, 0.9957599)
+bones/12/rotation = Quaternion(-0.04636216, -0.014347618, -0.0069499617, 0.99879754)
+bones/13/rotation = Quaternion(-0.060874593, 0.01441741, 0.0066330438, 0.99801934)
+bones/41/rotation = Quaternion(-0.046434768, -0.014477219, -0.0060395254, 0.99879825)
+bones/42/rotation = Quaternion(0.5128982, -0.4805376, -0.54647285, -0.4553972)
+bones/43/rotation = Quaternion(0.07996633, 0.7853092, -0.6053869, 0.10198877)
+bones/44/rotation = Quaternion(0.16652077, 0.6872197, -0.16652095, 0.6872197)
+bones/45/rotation = Quaternion(0.0061386563, -0.7954434, -0.02199951, 0.6055974)
+bones/46/rotation = Quaternion(0.5222649, 0.464675, 0.56299525, -0.44085473)
+bones/47/rotation = Quaternion(-0.13877207, 0.8071596, -0.5715942, -0.050158028)
+bones/48/rotation = Quaternion(0.13334051, -0.69442093, 0.13334018, 0.69442093)
+bones/49/rotation = Quaternion(0.063135065, 0.78083974, 0.021943992, 0.6211455)
+bones/51/rotation = Quaternion(-0.06433702, 0.10779679, 0.9906218, 0.053935014)
+bones/52/rotation = Quaternion(0.007835474, 0.9801579, -0.19801943, 0.004195233)
+bones/53/rotation = Quaternion(0.021235466, 0.09509318, 0.9933044, 0.06207233)
+bones/54/rotation = Quaternion(-0.0046480205, 0.9802093, -0.18107922, 0.07986702)
 
 [node name="R_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(-0.0052867327, -0.26360434, -0.96461636, -0.9779373, 0.20281139, -0.050063297, 0.20883211, 0.9430697, -0.2588607, -0.15395889, 0.99996966, 0.102835305)
+transform = Transform3D(-0.019278435, -0.18038464, -0.98340714, -0.9757049, 0.21809244, -0.020876862, 0.21823955, 0.95911264, -0.1802066, -0.11696926, 1.0061905, 0.12659642)
 
 [node name="L_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(-0.0052867327, -0.26360434, -0.96461636, -0.9779373, 0.20281139, -0.050063297, 0.20883211, 0.9430697, -0.2588607, 0.022565912, 1.0091312, 0.1502068)
+transform = Transform3D(-0.019278435, -0.18038464, -0.98340714, -0.9757049, 0.21809244, -0.020876862, 0.21823955, 0.95911264, -0.1802066, 0.062994234, 1.0100111, 0.1595742)
 
 [node name="head" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.96461636, 0.0052867327, -0.26360434, 0.050063297, 0.9779373, 0.20281139, 0.2588607, -0.20883211, 0.9430697, -0.020665474, 0.7291976, -0.055633277)
-
-[node name="_設定" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
-surface_material_override/0 = SubResource("StandardMaterial3D_vi7id")
+transform = Transform3D(0.98340714, 0.019278435, -0.18038464, 0.020876862, 0.9757049, 0.21809244, 0.1802066, -0.21823955, 0.95911264, -0.005448493, 0.7301147, -0.039361723)
 
 [node name="Eye_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
-transform = Transform3D(1.534107e-08, -7.2717725e-09, -0.24393816, -0.2032, -5.4900366e-16, -1.841682e-08, 3.0123644e-23, 0.060999997, -2.9079917e-08, 6.281742e-10, 0.20339993, 0.24216999)
+transform = Transform3D(1.534107e-08, -7.2717725e-09, -0.24393816, -0.2032, -5.4900366e-16, -1.841682e-08, 3.0123644e-23, 0.060999997, -2.9079917e-08, 7.442315e-09, 0.113143295, 0.24216999)
 material_override = SubResource("StandardMaterial3D_adn76")
 mesh = SubResource("ArrayMesh_1mf3e")
-surface_material_override/0 = SubResource("StandardMaterial3D_4shw4")
-surface_material_override/1 = SubResource("StandardMaterial3D_m210d")
+surface_material_override/0 = SubResource("StandardMaterial3D_vi7id")
+surface_material_override/1 = SubResource("StandardMaterial3D_4shw4")
 
 [node name="Head" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="2" unique_id=1097678551]
 gi_mode = 0
-surface_material_override/0 = SubResource("StandardMaterial3D_1bjhc")
-
-[node name="Body" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
-surface_material_override/0 = SubResource("StandardMaterial3D_jq41x")
-
-[node name="Body_Layer" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
-surface_material_override/0 = SubResource("StandardMaterial3D_ylpxh")
-
-[node name="Face" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
-surface_material_override/0 = SubResource("StandardMaterial3D_an3if")
-surface_material_override/1 = SubResource("StandardMaterial3D_xf42v")
-surface_material_override/2 = SubResource("StandardMaterial3D_ahfys")
-
-[node name="Head_Layer" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="6" unique_id=1719889094]
-surface_material_override/0 = SubResource("StandardMaterial3D_i2t2q")
-
-[node name="L_Arm" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
-surface_material_override/0 = SubResource("StandardMaterial3D_klj8i")
-
-[node name="L_Arm_Layer" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
-surface_material_override/0 = SubResource("StandardMaterial3D_vdirn")
+surface_material_override/0 = SubResource("StandardMaterial3D_m210d")
 
 [node name="L_Iris" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
 mesh = SubResource("ArrayMesh_6li2t")
 "blend_shapes/ベンド" = 0.0
 "blend_shapes/ベンド2" = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_50ljf")
-
-[node name="L_Leg" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
-surface_material_override/0 = SubResource("StandardMaterial3D_ww0si")
-
-[node name="L_Leg_Layer" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
-surface_material_override/0 = SubResource("StandardMaterial3D_su5w0")
-
-[node name="R_Arm" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
-surface_material_override/0 = SubResource("StandardMaterial3D_uq8wg")
-
-[node name="R_Arm_Layer" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
-surface_material_override/0 = SubResource("StandardMaterial3D_1er4m")
+surface_material_override/0 = SubResource("StandardMaterial3D_1bjhc")
 
 [node name="R_Iris" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
 mesh = SubResource("ArrayMesh_75he5")
-surface_material_override/0 = SubResource("StandardMaterial3D_4mk1u")
-
-[node name="R_Leg" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
-surface_material_override/0 = SubResource("StandardMaterial3D_l5n5a")
-
-[node name="R_Leg_Layer" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
-surface_material_override/0 = SubResource("StandardMaterial3D_stdso")
+surface_material_override/0 = SubResource("StandardMaterial3D_jq41x")
 
 [node name="カメラ基準点" parent="." index="3" unique_id=1770975331]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3644382, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4655708, 0)
 
 [node name="AnimationTree" parent="." index="5" unique_id=436607949]
 root_node = NodePath("../原点/モデル")
@@ -437,6 +289,13 @@ shape = SubResource("BoxShape3D_hylhy")
 
 [node name="RayCast3D" type="RayCast3D" parent="." index="12" unique_id=983325719]
 target_position = Vector3(0, -5.955, 0)
+
+[node name="ケツ" parent="." index="13" unique_id=674815463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5179764, -0.046289682)
+
+[node name="座り" type="CollisionShape3D" parent="." index="14" unique_id=946928034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9823258, 0.100996256)
+shape = SubResource("CapsuleShape3D_gyxre")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="アクセスNPC" to="アクセスNPC" method="_on_body_entered"]

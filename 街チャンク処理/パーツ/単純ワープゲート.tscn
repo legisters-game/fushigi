@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://jq1vcfgqur21"]
+
+[ext_resource type="Script" uid="uid://b7gcncbtrhjae" path="res://街チャンク処理/パーツ/単純ワープゲート.gd" id="1_a4mve"]
+[ext_resource type="PackedScene" uid="uid://b7xx3vq08qd12" path="res://アクションガイド/ガイドボタン.tscn" id="2_f8ook"]
+
+[node name="単純ワープゲート" type="StaticBody3D" unique_id=1014627570]
+script = ExtResource("1_a4mve")
+
+[node name="会話ガイドボタン" parent="." unique_id=1392688736 instance=ExtResource("2_f8ook")]
+transform = Transform3D(1.167694, -0.091778725, 0.11023214, 0.115598194, 1.137406, -0.2775373, -0.084920734, 0.286298, 1.1379386, 0, 0, 0)

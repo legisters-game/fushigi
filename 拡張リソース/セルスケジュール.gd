@@ -8,8 +8,10 @@ class_name セルスケジュール extends Resource
 
 @export var セリフ:Array[セリフオブジェクト]
 @export_subgroup("オプション")
-@export var ディメンション=1
+@export_file("*.tscn") var ディメンション:String=""
+@export var ディメンションオブジェクト番号:int
 @export var アニメーション:String
+
 
 
 func _auto_register_marker(marker):

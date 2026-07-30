@@ -8,6 +8,9 @@ class_name エンティティ
 #@export var 表情データ:表情オブジェクト
 @export var モデル:Node3D
 @export var 攻撃判定:Area3D
+@export var 通常当たり判定:Array[CollisionShape3D]
+@export var 座り用当たり判定:Array[CollisionShape3D]
+@export var 顔ノード:Node3D
 
 var アニメベクター:Vector2
 var カメラ基準:Marker3D
@@ -19,6 +22,7 @@ var 重力無効:bool
 var 体力:int
 var 防御力:float
 
+var 座っている:bool
 
 var 簡易目的地: Vector3 = Vector3.ZERO
 var 簡易移動中: bool = false
@@ -99,7 +103,7 @@ func update_animations(velocitys: Vector3,デルタ:float)->void:
 	# ここで「歩きの速度」を基準にする
 	# 例：walk_speed = 3.0, run_speed = 6.0 の場合
 	# スティック全倒しで blend_pos は 2.0 になる
-	
+
 	var x_ratio:float = local_vel.x / (SPEED)
 	var y_ratio:float = local_vel.z / (SPEED)
 	var blend_pos:Vector2 = Vector2(x_ratio, y_ratio)
@@ -168,3 +172,40 @@ func 簡易移動停止() -> void:
 	
 func アニメーション中に付き重力無効(する:bool=true)->void:
 	重力無効=する
+
+func 座る(座標:Vector3=Vector3.ZERO)->void:
+	var ステートマシーン:AnimationNodeStateMachinePlayback=アニメツリー.get("parameters/playback")
+	if 座標==Vector3.ZERO:
+		for i:CollisionShape3D in 通常当たり判定:
+			if i: i.disabled=false
+		for i:CollisionShape3D in 座り用当たり判定:
+			if i: i.disabled=true
+		ステートマシーン.travel("動き")
+		set_collision_mask_value(1, true)
+		重力無効=false
+		座っている=false
+		#移動操作ロック=false
+	else:
+		set_collision_mask_value(1, false)
+		重力無効=true
+		var マイマーカーの座標: Vector3 = $ケツ.global_position
+		
+		# 2. 「ターゲットの座標」と「自分のマーカー座標」の間のズレ（ベクトル）を計算
+		var ズレ: Vector3 = 座標 - マイマーカーの座標
+		
+		# 3. 親（自分自身）のグローバル座標に、そのズレを足して位置を補正する
+		global_position += ズレ
+		for i:CollisionShape3D in 通常当たり判定:
+			if i: i.disabled=true
+		for i:CollisionShape3D in 座り用当たり判定:
+			if i: i.disabled=false
+		ステートマシーン.travel("座る")
+		座っている=true
+		await get_tree().create_timer(0.03).timeout
+		マイマーカーの座標= $ケツ.global_position
+		
+		# 2. 「ターゲットの座標」と「自分のマーカー座標」の間のズレ（ベクトル）を計算
+		ズレ= 座標 - マイマーカーの座標
+		
+		# 3. 親（自分自身）のグローバル座標に、そのズレを足して位置を補正する
+		global_position += ズレ

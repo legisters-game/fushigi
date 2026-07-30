@@ -10,6 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://dv74ch5bbw7ri" path="res://レベル/ツール/街レベルゲート.tscn" id="8_3n34v"]
 [ext_resource type="PackedScene" uid="uid://dugv7335puobc" path="res://レベル/ツール/街レベルエリアゲート.tscn" id="8_w0h1u"]
 [ext_resource type="PackedScene" uid="uid://dmgy0ytqbirrn" path="res://街チャンク処理/パーツ/レベルエリアゲート.tscn" id="10_yv2u3"]
+[ext_resource type="Script" uid="uid://dpet2fho8egw6" path="res://レベル/マンション/部屋.gd" id="11_asnxd"]
+[ext_resource type="PackedScene" uid="uid://jq1vcfgqur21" path="res://街チャンク処理/パーツ/単純ワープゲート.tscn" id="11_vl8wc"]
+[ext_resource type="Texture2D" uid="uid://tw5f5apsusr5" path="res://ワールド/星テクスチャ.tres" id="12_m3j3l"]
+[ext_resource type="PackedScene" uid="uid://dwfulvaba84tc" path="res://レベル/ツール/椅子.tscn" id="12_rsn5i"]
+[ext_resource type="PackedScene" uid="uid://g3hku684m62q" path="res://ワールド/時間太陽.tscn" id="13_6dblj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yv2u3"]
 size = Vector3(1, 1.9438477, 0.41552734)
@@ -20,10 +25,51 @@ size = Vector3(0.24609375, 0.111206055, 0.27075195)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vl8wc"]
 size = Vector3(1.9782715, 0.53515625, 2.937378)
 
-[node name="マンション" type="Node3D" unique_id=1557217192 node_paths=PackedStringArray("テレポート先", "階層処理切り替え用ノード")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_b5jwi"]
+size = Vector3(1, 0.09246826, 1.5400391)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_euwu4"]
+size = Vector3(0.072753906, 1.5688477, 0.8015137)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iyk0q"]
+size = Vector3(0.6374817, 1.0214844, 0.65234375)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6dblj"]
+sky_top_color = Color(0.28599998, 0.43766668, 0.65, 1)
+sky_horizon_color = Color(0.44889998, 0.533655, 0.67, 1)
+sky_cover = ExtResource("12_m3j3l")
+sky_cover_modulate = Color(1, 1, 1, 0)
+sun_angle_max = 17.09
+
+[sub_resource type="Sky" id="Sky_vxd74"]
+sky_material = SubResource("ProceduralSkyMaterial_6dblj")
+
+[sub_resource type="Environment" id="Environment_rsn5i"]
+background_mode = 2
+sky = SubResource("Sky_vxd74")
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_exposure = 1.2
+tonemap_agx_contrast = 1.23
+ssr_enabled = true
+ssao_enabled = true
+ssao_radius = 6.02
+ssao_intensity = 5.06
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_bounce_feedback = 0.2
+sdfgi_min_cell_size = 0.15625
+fog_depth_curve = 1.035265
+fog_depth_end = 105.7
+volumetric_fog_sky_affect = 0.671
+adjustment_enabled = true
+
+[node name="マンション" type="Node3D" unique_id=1557217192 node_paths=PackedStringArray("テレポート先", "階層処理切り替え用ノード", "NPC用オブジェクト")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
 script = ExtResource("1_0xusk")
 "テレポート先" = [NodePath("-112,176,a/中心/一階/出入口"), NodePath("-112,176,a/中心/一階/エレベーター出口"), NodePath("-112,176,a/中心/二階/エレベーター出口2階")]
 "階層処理切り替え用ノード" = [NodePath("-112,176,a/中心/一階"), NodePath("-112,176,a/中心/一階"), NodePath("-112,176,a/中心/二階")]
+"NPC用オブジェクト" = [null, NodePath("-112,176,a/中心/二階/部屋/椅子キール")]
 
 [node name="-112,176,a" type="NavigationRegion3D" parent="." unique_id=1748681392]
 
@@ -109,7 +155,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5118141, -0.34227705, -0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.41838, -9.364487, -0.04956436)
 
 [node name="出入口出口" type="Marker3D" parent="-112,176,a/中心/一階/出入口" unique_id=62237265]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.805359, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.3794556, -0.31296718)
 
 [node name="勝手口出口" type="Marker3D" parent="-112,176,a/中心/一階" unique_id=1802643983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.35299, 7.862007, 0.7559929)
@@ -151,10 +197,37 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -125
 
 [node name="ライト" type="Node3D" parent="-112,176,a/中心/二階" unique_id=823803587]
 process_mode = 4
-transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 0, 0, 0)
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 0, 1.3667068, -0.22467327)
+
+[node name="ライト" parent="-112,176,a/中心/二階/ライト" unique_id=1033971068 instance=ExtResource("7_pahlj")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -1.4110813, -0.0066013336, -0.108863354)
+
+[node name="ライト2" parent="-112,176,a/中心/二階/ライト" unique_id=73118011 instance=ExtResource("7_pahlj")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -1.0226316, 0.05384493, -0.108863354)
+
+[node name="ライト3" parent="-112,176,a/中心/二階/ライト" unique_id=946575006 instance=ExtResource("7_pahlj")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.48865223, 0.05384493, -0.108863354)
+
+[node name="ライト4" parent="-112,176,a/中心/二階/ライト" unique_id=556447064 instance=ExtResource("7_pahlj")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.16424465, 0.05384493, -0.108863354)
+
+[node name="ライト5" parent="-112,176,a/中心/二階/ライト" unique_id=908911731 instance=ExtResource("7_pahlj")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.23870659, 0.05384493, -0.108863354)
+
+[node name="ライト6" parent="-112,176,a/中心/二階/ライト" unique_id=908329477 instance=ExtResource("7_pahlj")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.53297615, 0.05384493, -0.108863354)
+
+[node name="ライト7" parent="-112,176,a/中心/二階/ライト" unique_id=1346270058 instance=ExtResource("7_pahlj")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.8763666, 0.05384493, -0.108863354)
+
+[node name="ライト8" parent="-112,176,a/中心/二階/ライト" unique_id=57186000 instance=ExtResource("7_pahlj")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 1.1722074, 0.05384493, -0.108863354)
 
 [node name="キール部屋" type="Marker3D" parent="-112,176,a/中心/二階" unique_id=1247367835]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.636368, -0.8295975, -0.04956436)
+
+[node name="キール部屋中" type="Marker3D" parent="-112,176,a/中心/二階/キール部屋" unique_id=1155449857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4362869, 0)
 
 [node name="エレベーター出口2階" type="Marker3D" parent="-112,176,a/中心/二階" unique_id=641055650]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.475769, 2.273201, -0.08522797)
@@ -165,13 +238,6 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 16.3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/街レベルゲート" unique_id=1972310386]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000541687, -1.0200958, 0.29223633)
 shape = SubResource("BoxShape3D_yv2u3")
-
-[node name="街レベルエリアゲート" parent="-112,176,a/中心/二階" unique_id=878428954 instance=ExtResource("8_w0h1u")]
-transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -24.292023, -12.392853, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/街レベルエリアゲート" unique_id=2080970129]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01171875, 0.00975132, -0.07336426)
-shape = SubResource("BoxShape3D_3n34v")
 
 [node name="エレベーターゲート" parent="-112,176,a/中心/二階" unique_id=1526894831 instance=ExtResource("10_yv2u3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.470047, 2.9392776, 0)
@@ -185,3 +251,165 @@ shape = SubResource("BoxShape3D_vl8wc")
 
 [node name="Marker3D" type="Marker3D" parent="-112,176,a/中心/二階/エレベーターゲート" unique_id=86959665]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0312195, -7.6293945e-06)
+
+[node name="部屋" type="Node3D" parent="-112,176,a/中心/二階" unique_id=1937815635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.943329, -5.397682, 0)
+script = ExtResource("11_asnxd")
+
+[node name="キール入口" parent="-112,176,a/中心/二階/部屋" unique_id=1811244377 node_paths=PackedStringArray("アクセスマーカー", "有効化", "無効化", "カメラジャック") instance=ExtResource("11_vl8wc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.346817, 4.4610977, -1.7678413)
+"アクセスマーカー" = NodePath("../../キール部屋/キール部屋中")
+"有効化" = NodePath("../制御")
+"無効化" = NodePath("../../ライト")
+"カメラジャック" = NodePath("../制御/廊下カメラ")
+"カメラ戻す" = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/部屋/キール入口" unique_id=1943874509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15907288, 1.0046043)
+shape = SubResource("BoxShape3D_b5jwi")
+
+[node name="キール出口" parent="-112,176,a/中心/二階/部屋" unique_id=454510266 node_paths=PackedStringArray("アクセスマーカー", "有効化", "無効化") instance=ExtResource("11_vl8wc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.346817, 3.500534, -1.7678413)
+"アクセスマーカー" = NodePath("../../キール部屋")
+"有効化" = NodePath("../../ライト")
+"無効化" = NodePath("../制御")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/部屋/キール出口" unique_id=498537836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05619812, 1.0046043)
+shape = SubResource("BoxShape3D_b5jwi")
+
+[node name="制御" type="Node3D" parent="-112,176,a/中心/二階/部屋" unique_id=1851693483]
+
+[node name="ライト" parent="-112,176,a/中心/二階/部屋/制御" unique_id=1288529107 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3531647, -1.1457748, -2.0781808)
+light_energy = 0.3
+omni_range = 4.0
+omni_attenuation = -0.757
+
+[node name="ライト4" parent="-112,176,a/中心/二階/部屋/制御" unique_id=13354484 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34077454, 2.6387787, -1.8707509)
+light_energy = 0.5
+omni_range = 4.5
+omni_attenuation = -0.081
+
+[node name="ライト2" parent="-112,176,a/中心/二階/部屋/制御" unique_id=1145891603 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.402832, 1.3169632, -2.3613858)
+light_energy = 0.5
+omni_range = 2.8
+
+[node name="ライト3" parent="-112,176,a/中心/二階/部屋/制御" unique_id=1956932755 instance=ExtResource("7_pahlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6270447, -3.3039932, -1.2537103)
+light_energy = 0.24
+omni_range = 2.6
+
+[node name="廊下カメラ" type="Camera3D" parent="-112,176,a/中心/二階/部屋/制御" unique_id=2099030720]
+transform = Transform3D(-0.79692763, -0.1730175, 0.57876706, -0.60407484, 0.22825387, -0.76354027, 1.03975495e-08, -0.95810497, -0.28641734, 6.2335815, -0.44878387, -1.921463)
+
+[node name="リビング入る用" parent="-112,176,a/中心/二階/部屋" unique_id=1844281930 node_paths=PackedStringArray("アクセスマーカー") instance=ExtResource("11_vl8wc")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4.1418, 0.80565643, -1.896)
+"アクセスマーカー" = NodePath("Marker3D")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/部屋/リビング入る用" unique_id=1573355419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06880188, -1.0844383, -0.13119507)
+shape = SubResource("BoxShape3D_euwu4")
+
+[node name="Marker3D" type="Marker3D" parent="-112,176,a/中心/二階/部屋/リビング入る用" unique_id=701185344]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1089783, -1.8898315, 0)
+
+[node name="廊下戻る用" parent="-112,176,a/中心/二階/部屋" unique_id=393100034 node_paths=PackedStringArray("アクセスマーカー", "カメラジャック") instance=ExtResource("11_vl8wc")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.2309723, 0.80565643, -1.896)
+"アクセスマーカー" = NodePath("Marker3D")
+"カメラジャック" = NodePath("../制御/廊下カメラ")
+"カメラ戻す" = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/部屋/廊下戻る用" unique_id=126193897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07220459, -1.0844383, -0.13119507)
+shape = SubResource("BoxShape3D_euwu4")
+
+[node name="Marker3D" type="Marker3D" parent="-112,176,a/中心/二階/部屋/廊下戻る用" unique_id=1654616538]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1368408, -1.869606, 0)
+
+[node name="寝室入る用" parent="-112,176,a/中心/二階/部屋" unique_id=1376287070 node_paths=PackedStringArray("アクセスマーカー", "カメラジャック") instance=ExtResource("11_vl8wc")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.596, -1.594, -1.896)
+"アクセスマーカー" = NodePath("Marker3D")
+"カメラジャック" = NodePath("../寝室カメラ")
+"カメラ戻す" = false
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/部屋/寝室入る用" unique_id=1778178612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07220459, -1.0844383, -0.13119507)
+shape = SubResource("BoxShape3D_euwu4")
+
+[node name="Marker3D" type="Marker3D" parent="-112,176,a/中心/二階/部屋/寝室入る用" unique_id=618183531]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1368408, -1.869606, 0)
+
+[node name="寝室出る用" parent="-112,176,a/中心/二階/部屋" unique_id=1258087279 node_paths=PackedStringArray("アクセスマーカー") instance=ExtResource("11_vl8wc")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.596, -1.594, -1.896)
+"アクセスマーカー" = NodePath("Marker3D")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/部屋/寝室出る用" unique_id=377934397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1368103, -1.0844383, -0.13119507)
+shape = SubResource("BoxShape3D_euwu4")
+
+[node name="Marker3D" type="Marker3D" parent="-112,176,a/中心/二階/部屋/寝室出る用" unique_id=846271409]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.225174, -1.869606, 0)
+
+[node name="寝室カメラ" type="Camera3D" parent="-112,176,a/中心/二階/部屋" unique_id=1524480948]
+transform = Transform3D(0.7368319, -0.41995266, 0.5298287, -0.676076, -0.45769197, 0.57744205, 2.955222e-08, -0.7836822, -0.62116194, 4.677185, -1.5267639, -2.5030599)
+
+[node name="椅子" parent="-112,176,a/中心/二階/部屋" unique_id=1860998109 node_paths=PackedStringArray("戻り位置マーカー") instance=ExtResource("12_rsn5i")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -1.1370087, -0.0710907, -0.5016556)
+"戻り位置マーカー" = NodePath("座り戻り位置")
+"回転上書き" = true
+"初期回転" = 270.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/部屋/椅子" unique_id=22501080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031539917, 0.0107421875, -0.0625)
+shape = SubResource("BoxShape3D_iyk0q")
+
+[node name="座り戻り位置" type="Marker3D" parent="-112,176,a/中心/二階/部屋/椅子" unique_id=835795142]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49713326, 0.6735687)
+
+[node name="椅子キール" parent="-112,176,a/中心/二階/部屋" unique_id=717483474 node_paths=PackedStringArray("戻り位置マーカー") instance=ExtResource("12_rsn5i")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.5060577, -0.0710907, -0.5016556)
+"戻り位置マーカー" = NodePath("座り戻り位置")
+"回転上書き" = true
+"初期回転" = 90.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/部屋/椅子キール" unique_id=421796094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031539917, 0.0107421875, -0.0625)
+shape = SubResource("BoxShape3D_iyk0q")
+
+[node name="座り戻り位置" type="Marker3D" parent="-112,176,a/中心/二階/部屋/椅子キール" unique_id=1071874861]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49713326, 0.6735687)
+
+[node name="時間太陽2" parent="." unique_id=858381750 instance=ExtResource("13_6dblj")]
+transform = Transform3D(-0.013962182, 0.7511909, 0.6599374, -5.7699182e-08, -0.6600017, 0.7512641, 0.99990255, 0.010489249, 0.009215107, 0, 0, 0)
+light_indirect_energy = 1.5
+shadow_opacity = 0.89
+directional_shadow_split_1 = 0.092
+directional_shadow_split_2 = 0.239
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 176.5
+day_length = 5400.0
+top = Color(0.28599998, 0.43766668, 0.65, 1)
+"夜top" = Color(0, 0, 0, 1)
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=1871874431]
+environment = SubResource("Environment_rsn5i")
+
+[connection signal="プレイヤー入った" from="-112,176,a/中心/二階/部屋/リビング入る用" to="-112,176,a/中心/二階/部屋" method="_on_リビング入る用_プレイヤー入った"]
+[connection signal="座られた" from="-112,176,a/中心/二階/部屋/椅子" to="-112,176,a/中心/二階/部屋" method="_on_椅子_座られた"]

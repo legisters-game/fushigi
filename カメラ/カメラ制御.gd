@@ -17,6 +17,7 @@ func _ready() -> void:
 	現在位置=global_position
 	get_node("SpringArm3D/Camera3D").make_current()
 	
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

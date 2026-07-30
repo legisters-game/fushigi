@@ -5,6 +5,7 @@ extends Node3D
 @export var メッシュ親2:Node3D
 @export var 顔:MeshInstance3D
 @export var 表情データ:表情オブジェクト
+@export var 顔ボーン:LookAtModifier3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if not スキン:
