@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "minecraft_block-chain_command_block_front"
-cull_mode = 2
 albedo_texture = ExtResource("1_b6n0t")
+texture_filter = 2

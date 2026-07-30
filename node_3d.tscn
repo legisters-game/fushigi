@@ -142,7 +142,9 @@ top = Color(0.28599998, 0.43766668, 0.65, 1)
 environment = SubResource("Environment_s0gvp")
 
 [node name="都市3d仮" parent="." unique_id=1006423857 instance=ExtResource("4_ealrb")]
+
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
+
 
 [node name="レベル" type="Node3D" parent="." unique_id=14615443]
 
@@ -245,6 +247,7 @@ visible = true
 visible = true
 
 [node name="GeneralSkeleton" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1999271142, 652042102, 231553116) index="0" unique_id=1885119474]
+
 bones/11/position = Vector3(1.2020663e-08, 1.1531696e-07, 1.0111177e-09)
 bones/11/rotation = Quaternion(-0.028141197, -0.13353893, 0.040069155, 0.9898333)
 bones/12/rotation = Quaternion(0.003327483, -0.0076338183, -0.020495558, 0.99975526)
@@ -271,6 +274,7 @@ transform = Transform3D(0.0026115067, -0.24932039, -0.96841747, -0.9785621, 0.19
 
 [node name="head" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
 transform = Transform3D(0.96841747, -0.0026115067, -0.24932039, 0.05381892, 0.9785621, 0.19879502, 0.24345633, -0.20593478, 0.94779736, -0.038822234, 0.7295917, -0.042211287)
+
 
 [node name="Eye_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
 surface_material_override/0 = SubResource("StandardMaterial3D_jsnrv")

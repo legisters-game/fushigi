@@ -1,8 +1,18 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://hy88t1vjg0nc"]
 
 [ext_resource type="Texture2D" uid="uid://bd62k2jjql3vu" path="res://1/都市3d仮_blue_ice.png" id="1_jxo1m"]
+[ext_resource type="Texture2D" uid="uid://c0jyh8lp4b6rm" path="res://マテリアル/立体補間/blue_ice_a.png" id="2_m45g7"]
 
 [resource]
 resource_name = "minecraft_block-blue_ice"
-cull_mode = 2
 albedo_texture = ExtResource("1_jxo1m")
+metallic = 1.0
+metallic_texture = ExtResource("1_jxo1m")
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("2_m45g7")
+ao_enabled = true
+ao_texture = ExtResource("1_jxo1m")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_m45g7")
+texture_filter = 2

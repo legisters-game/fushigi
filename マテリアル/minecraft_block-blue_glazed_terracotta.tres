@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cwpw7rxlmxpj7"]
 
 [ext_resource type="Texture2D" uid="uid://cjxvoeo7a7pe4" path="res://1/都市3d仮_blue_glazed_terracotta.png" id="1_r0c7y"]
+[ext_resource type="Texture2D" uid="uid://c1eqx4w2umbud" path="res://マテリアル/鏡面反射/blue_glazed_terracotta_n.png" id="2_g77bm"]
+[ext_resource type="Texture2D" uid="uid://c5dohkssre6af" path="res://マテリアル/立体補間/blue_glazed_terracotta_a.png" id="3_hxiy1"]
 
 [resource]
 resource_name = "minecraft_block-blue_glazed_terracotta"
-cull_mode = 2
 albedo_texture = ExtResource("1_r0c7y")
+metallic = 1.0
+metallic_texture = ExtResource("2_g77bm")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_hxiy1")
+ao_enabled = true
+ao_texture = ExtResource("2_g77bm")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_hxiy1")
+texture_filter = 2

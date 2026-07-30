@@ -4,5 +4,6 @@
 
 [resource]
 resource_name = "minecraft_block-black_terracotta"
-cull_mode = 2
 albedo_texture = ExtResource("1_5jppk")
+metallic = 1.0
+texture_filter = 2

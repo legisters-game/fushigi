@@ -1,8 +1,25 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ctlf7xwhcpxtm"]
 
 [ext_resource type="Texture2D" uid="uid://0hyfv63vtta3" path="res://1/都市3d仮_anvil.png" id="1_uv08n"]
+[ext_resource type="Texture2D" uid="uid://b1jkesvgdpiwm" path="res://マテリアル/鏡面反射/anvil_n.png" id="2_acpv8"]
+[ext_resource type="Texture2D" uid="uid://c32h3a7ji72so" path="res://マテリアル/立体補間/anvil_a.png" id="4_2nksq"]
 
 [resource]
 resource_name = "minecraft_block-anvil"
-cull_mode = 2
 albedo_texture = ExtResource("1_uv08n")
+metallic = 1.0
+metallic_texture = ExtResource("2_acpv8")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("4_2nksq")
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("4_2nksq")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_acpv8")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("4_2nksq")
+texture_filter = 2

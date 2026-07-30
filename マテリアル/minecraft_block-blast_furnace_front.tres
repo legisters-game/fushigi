@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dqh3ifdd11t4h"]
 
 [ext_resource type="Texture2D" uid="uid://cc6ptjcgd3bnn" path="res://1/都市3d仮_blast_furnace_front.png" id="1_ksxud"]
+[ext_resource type="Texture2D" uid="uid://bh26vrkh16mna" path="res://マテリアル/鏡面反射/blast_furnace_front_on_n.png" id="2_edc7o"]
+[ext_resource type="Texture2D" uid="uid://c130glfebkgjp" path="res://マテリアル/立体補間/blast_furnace_front_a.png" id="3_bsmn3"]
 
 [resource]
 resource_name = "minecraft_block-blast_furnace_front"
-cull_mode = 2
 albedo_texture = ExtResource("1_ksxud")
+metallic = 1.0
+metallic_texture = ExtResource("2_edc7o")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_bsmn3")
+ao_enabled = true
+ao_texture = ExtResource("2_edc7o")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_bsmn3")
+texture_filter = 2

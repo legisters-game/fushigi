@@ -1,9 +1,25 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cj8tu67ltso8e"]
 
 [ext_resource type="Texture2D" uid="uid://bio23neg4yltb" path="res://1/都市3d仮_black_stained_glass_pane_top.png" id="1_p0xn2"]
+[ext_resource type="Texture2D" uid="uid://dob7424de6as1" path="res://マテリアル/鏡面反射/black_stained_glass_n.png" id="2_axdiq"]
+[ext_resource type="Texture2D" uid="uid://b5m5d5vqo4a8a" path="res://マテリアル/立体補間/black_stained_glass_a.png" id="3_cotlj"]
 
 [resource]
 resource_name = "minecraft_block-black_stained_glass_pane_top"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_p0xn2")
+metallic = 1.0
+metallic_texture = ExtResource("2_axdiq")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_cotlj")
+ao_enabled = true
+ao_texture = ExtResource("2_axdiq")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_cotlj")
+texture_filter = 2

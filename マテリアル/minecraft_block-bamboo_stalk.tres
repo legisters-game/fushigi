@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cbvik6frtuci0"]
 
 [ext_resource type="Texture2D" uid="uid://c4ln7pnd0wxxq" path="res://1/都市3d仮_bamboo_stalk.png" id="1_u5qpc"]
+[ext_resource type="Texture2D" uid="uid://dgifiyc72xqqp" path="res://マテリアル/鏡面反射/bamboo_stalk_n.png" id="2_46i1j"]
+[ext_resource type="Texture2D" uid="uid://cgkqemfrxbuyv" path="res://マテリアル/立体補間/bamboo_stalk_a.png" id="3_v73yk"]
 
 [resource]
 resource_name = "minecraft_block-bamboo_stalk"
-cull_mode = 2
 albedo_texture = ExtResource("1_u5qpc")
+metallic = 1.0
+metallic_texture = ExtResource("2_46i1j")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_v73yk")
+ao_enabled = true
+ao_texture = ExtResource("2_46i1j")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_v73yk")
+texture_filter = 2

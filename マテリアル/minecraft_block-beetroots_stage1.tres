@@ -4,6 +4,9 @@
 
 [resource]
 resource_name = "minecraft_block-beetroots_stage1"
-transparency = 4
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("1_h1so8")
+texture_filter = 2

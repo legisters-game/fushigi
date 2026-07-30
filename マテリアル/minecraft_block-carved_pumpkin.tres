@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cychwuph6xjpd"]
 
 [ext_resource type="Texture2D" uid="uid://cwa4i1lgno382" path="res://1/都市3d仮_carved_pumpkin.png" id="1_rqna8"]
+[ext_resource type="Texture2D" uid="uid://5qnq884830q6" path="res://マテリアル/鏡面反射/carved_pumpkin_n.png" id="2_gopnb"]
+[ext_resource type="Texture2D" uid="uid://dbymrhhgeg8lu" path="res://マテリアル/立体補間/carved_pumpkin_a.png" id="3_30v77"]
 
 [resource]
 resource_name = "minecraft_block-carved_pumpkin"
-cull_mode = 2
 albedo_texture = ExtResource("1_rqna8")
+metallic = 1.0
+metallic_texture = ExtResource("2_gopnb")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_30v77")
+ao_enabled = true
+ao_texture = ExtResource("2_gopnb")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_30v77")
+texture_filter = 2

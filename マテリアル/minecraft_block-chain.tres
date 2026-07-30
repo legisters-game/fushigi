@@ -4,6 +4,9 @@
 
 [resource]
 resource_name = "minecraft_block-chain"
-transparency = 4
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("1_ian3c")
+texture_filter = 2

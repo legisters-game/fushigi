@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://pk6urcmskneq"]
 
 [ext_resource type="Texture2D" uid="uid://dhf5n84jeq4ed" path="res://1/都市3d仮_chiseled_quartz_block.png" id="1_fhc41"]
+[ext_resource type="Texture2D" uid="uid://btxwltwwrcifu" path="res://マテリアル/鏡面反射/chiseled_quartz_block_n.png" id="2_4wpds"]
+[ext_resource type="Texture2D" uid="uid://cqvihayagsf" path="res://マテリアル/立体補間/chiseled_quartz_block_a.png" id="3_o2od1"]
 
 [resource]
 resource_name = "minecraft_block-chiseled_quartz_block"
-cull_mode = 2
 albedo_texture = ExtResource("1_fhc41")
+metallic = 1.0
+metallic_texture = ExtResource("2_4wpds")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_o2od1")
+ao_enabled = true
+ao_texture = ExtResource("2_4wpds")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_o2od1")
+texture_filter = 2

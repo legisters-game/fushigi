@@ -1,8 +1,16 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dqsf7c483eq14"]
 
 [ext_resource type="Texture2D" uid="uid://cnx61myopoh0t" path="res://1/都市3d仮_anvil_lower.png" id="1_0m7k8"]
+[ext_resource type="Texture2D" uid="uid://ctkm82jxa8xqr" path="res://マテリアル/立体補間/anvil_lower_a.png" id="2_he3q7"]
+[ext_resource type="Texture2D" uid="uid://c32h3a7ji72so" path="res://マテリアル/立体補間/anvil_a.png" id="3_mfkke"]
 
 [resource]
 resource_name = "minecraft_block-anvil_lower"
-cull_mode = 2
 albedo_texture = ExtResource("1_0m7k8")
+roughness = 0.5
+roughness_texture = ExtResource("3_mfkke")
+ao_enabled = true
+ao_light_affect = 1.0
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_he3q7")
+texture_filter = 2

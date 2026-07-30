@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bxvaumdd2pg0j"]
 
 [ext_resource type="Texture2D" uid="uid://cqh6avm2pjtrj" path="res://1/都市3d仮_birch_planks.png" id="1_7wynj"]
+[ext_resource type="Texture2D" uid="uid://3pckao01m1nb" path="res://マテリアル/鏡面反射/birch_planks_n.png" id="2_ks7ts"]
+[ext_resource type="Texture2D" uid="uid://epxq7ufyd12b" path="res://マテリアル/立体補間/birch_planks_a.png" id="3_clvr7"]
 
 [resource]
 resource_name = "minecraft_block-birch_planks"
-cull_mode = 2
 albedo_texture = ExtResource("1_7wynj")
+metallic = 1.0
+metallic_texture = ExtResource("2_ks7ts")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_clvr7")
+ao_enabled = true
+ao_texture = ExtResource("2_ks7ts")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_clvr7")
+texture_filter = 2
