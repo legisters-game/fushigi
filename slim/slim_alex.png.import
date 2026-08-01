@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw2bgvw1wl3yp"
-path.s3tc="res://.godot/imported/slim_alex.png-564b6ce63b8e10279d7f98d3cd4c3000.s3tc.ctex"
+path="res://.godot/imported/slim_alex.png-564b6ce63b8e10279d7f98d3cd4c3000.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "8483448c9bff0c7c5c35e63205b41e37"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://slim/slim_alex.png"
-dest_files=["res://.godot/imported/slim_alex.png-564b6ce63b8e10279d7f98d3cd4c3000.s3tc.ctex"]
+dest_files=["res://.godot/imported/slim_alex.png-564b6ce63b8e10279d7f98d3cd4c3000.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://nlecwus3ep8w"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_5kdtk"]
+
+[resource]
+script = ExtResource("1_5kdtk")
+"セリフ" = "こんにちは"
+metadata/_custom_type_script = "uid://4uxnotone8su"

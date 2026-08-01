@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://bywtaw3xfp00s"]
+
+[ext_resource type="PackedScene" uid="uid://bx0148bfj82t3" path="res://エンティティ/エンティティ.tscn" id="1_bxaxe"]
+[ext_resource type="Script" uid="uid://bkcxmvt0fctaj" path="res://エンティティ/NPC/マイクラnpc.gd" id="2_3gd3v"]
+[ext_resource type="PackedScene" uid="uid://b441a155ljwec" path="res://slim/slim.tscn" id="2_rj3tn"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_rflok"]
+[ext_resource type="Animation" uid="uid://ou2sg38uggis" path="res://エンティティ/プレイヤー/anim/走り.res" id="4_sddv1"]
+[ext_resource type="PackedScene" uid="uid://b7xx3vq08qd12" path="res://アクションガイド/ガイドボタン.tscn" id="5_insj4"]
+[ext_resource type="Texture2D" uid="uid://c55qafle272gq" path="res://エンティティ/表情管理/わでいど/わでいど.png" id="5_n7wjq"]
+[ext_resource type="Animation" uid="uid://r0p607btfpru" path="res://エンティティ/プレイヤー/anim/走り右.res" id="5_prm7e"]
+[ext_resource type="Animation" uid="uid://37dcd4apqt7p" path="res://エンティティ/プレイヤー/anim/走り左.res" id="6_n7wjq"]
+[ext_resource type="Animation" uid="uid://ye114dj5140u" path="res://エンティティ/プレイヤー/anim/後ろ走り.res" id="7_2ugv8"]
+[ext_resource type="Animation" uid="uid://de4s8hj4ykwcp" path="res://エンティティ/Take 001.res" id="8_8l22f"]
+[ext_resource type="Animation" uid="uid://bshs6g4o4jqxn" path="res://エンティティ/プレイヤー/anim/アイドル.res" id="9_ilph8"]
+[ext_resource type="Animation" uid="uid://c2uu8jq2swof8" path="res://エンティティ/プレイヤー/anim/歩き.res" id="10_c7pcn"]
+[ext_resource type="Animation" uid="uid://0l00ro4np6it" path="res://エンティティ/プレイヤー/anim/右.res" id="11_esw3w"]
+[ext_resource type="Animation" uid="uid://d2msrccklscxu" path="res://エンティティ/プレイヤー/anim/左.res" id="12_u3rek"]
+[ext_resource type="Animation" uid="uid://ibuirv37dihc" path="res://エンティティ/プレイヤー/anim/座る.res" id="13_ru8ly"]
+[ext_resource type="Animation" uid="uid://c701vid3abyg7" path="res://エンティティ/プレイヤー/anim/後ろ.res" id="14_qbs6m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7wjq"]
+resource_name = "material"
+transparency = 2
+alpha_scissor_threshold = 0.104
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("5_n7wjq")
+roughness = 0.5
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ugv8"]
+resource_name = "material"
+transparency = 2
+alpha_scissor_threshold = 0.104
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("5_n7wjq")
+roughness = 0.5
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8l22f"]
+resource_name = "material"
+transparency = 2
+alpha_scissor_threshold = 0.104
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("5_n7wjq")
+roughness = 0.5
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilph8"]
+resource_name = "material"
+transparency = 2
+alpha_scissor_threshold = 0.104
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("5_n7wjq")
+roughness = 0.5
+texture_filter = 0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_esw3w"]
+_data = {
+&"D前": ExtResource("4_sddv1"),
+&"D右": ExtResource("5_prm7e"),
+&"D左": ExtResource("6_n7wjq"),
+&"D後": ExtResource("7_2ugv8"),
+&"Take 001": ExtResource("8_8l22f"),
+&"アイドル": ExtResource("9_ilph8"),
+&"前": ExtResource("10_c7pcn"),
+&"右": ExtResource("11_esw3w"),
+&"左": ExtResource("12_u3rek"),
+&"座る": ExtResource("13_ru8ly"),
+&"後": ExtResource("14_qbs6m")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euwu4"]
+height = 1.5209961
+
+[node name="エンティティ" unique_id=1396265163 node_paths=PackedStringArray("nav_agent", "アクションポイント", "モデル", "座り用当たり判定") instance=ExtResource("1_bxaxe")]
+collision_layer = 3
+platform_on_leave = 2
+script = ExtResource("2_3gd3v")
+nav_agent = NodePath("NavigationAgent3D")
+"デフォルトセリフ" = Array[ExtResource("3_rflok")]([])
+"キャラ" = 0
+"アクションポイント" = NodePath("原点/slim/アーマチュア/GeneralSkeleton/Face/会話ガイドボタン")
+"モデル" = NodePath("原点/slim")
+"座り用当たり判定" = [NodePath("CollisionShape3D3")]
+
+[node name="CollisionShape3D2" parent="." index="1" unique_id=644918341]
+transform = Transform3D(-1, -8.742277e-08, 3.8213705e-15, 0, -4.3711385e-08, -0.9999999, 8.742278e-08, -0.9999999, 4.3711385e-08, 0, 0.564, 0.392)
+
+[node name="slim" parent="原点" parent_id_path=PackedInt32Array(1394227668) index="0" unique_id=1510505477 instance=ExtResource("2_rj3tn")]
+transform = Transform3D(1.285, 0, 0, 0, 1.285, 0, 0, 0, 1.285, 0, -0.02, 0)
+"スキン" = ExtResource("5_n7wjq")
+
+[node name="GeneralSkeleton" parent="原点/slim/アーマチュア" parent_id_path=PackedInt32Array(1510505477, 2064962654) index="0" unique_id=1938702739]
+bones/0/rotation = Quaternion(-0.039102465, -0.003146513, -0.08611006, 0.9955131)
+bones/1/rotation = Quaternion(0.00082801975, 0.0003489563, -0.00012800259, 0.99999964)
+bones/2/rotation = Quaternion(0.017799929, -0.0005424072, 0.023810858, 0.99955785)
+bones/3/rotation = Quaternion(0.5147184, 0.46819606, 0.5791172, -0.4248304)
+bones/4/rotation = Quaternion(-0.050608147, 0.7867855, -0.6150972, -0.0079205055)
+bones/5/rotation = Quaternion(0.1384007, -0.69343007, 0.13840076, 0.69343007)
+bones/6/rotation = Quaternion(0.061545826, 0.78838205, 0.036490154, 0.6110109)
+bones/8/rotation = Quaternion(0.5243757, -0.46097594, -0.5718582, -0.4307081)
+bones/9/rotation = Quaternion(-0.015010117, 0.856758, -0.5092234, 0.08019907)
+bones/10/rotation = Quaternion(0.177667, 0.6844228, -0.17766713, 0.6844227)
+bones/11/rotation = Quaternion(0.020853091, -0.81013167, 0.0097260205, 0.58579624)
+bones/13/rotation = Quaternion(0.04325015, -0.0020747783, -0.054993276, 0.99754745)
+bones/14/rotation = Quaternion(-0.09321304, -0.017259378, 0.004418716, 0.99548674)
+bones/16/rotation = Quaternion(0.046574004, 0.14438157, 0.9812758, -0.118671186)
+bones/17/rotation = Quaternion(0.02105684, 0.9471807, -0.3184613, 0.03142864)
+bones/18/rotation = Quaternion(0.022257067, 0.5976398, -0.80105317, 0.025399614)
+bones/20/rotation = Quaternion(1.0216798e-08, 0.9998589, -0.016800666, -3.7301634e-06)
+bones/21/rotation = Quaternion(-0.061594427, 0.033259507, 0.9938568, -0.08572494)
+bones/22/rotation = Quaternion(-0.016168758, 0.9843896, -0.16353346, -0.06302958)
+bones/23/rotation = Quaternion(-0.010041158, 0.6454057, -0.76346076, 0.021868113)
+bones/25/rotation = Quaternion(1.0724195e-05, 0.99994904, 0.010090558, -0.00028351482)
+
+[node name="Body" parent="原点/slim/アーマチュア/GeneralSkeleton" index="0" unique_id=1523429165]
+surface_material_override/0 = SubResource("StandardMaterial3D_n7wjq")
+
+[node name="Body_outer" parent="原点/slim/アーマチュア/GeneralSkeleton" index="1" unique_id=1634507990]
+surface_material_override/0 = SubResource("StandardMaterial3D_2ugv8")
+
+[node name="Face" parent="原点/slim/アーマチュア/GeneralSkeleton" index="2" unique_id=410574088]
+surface_material_override/0 = SubResource("StandardMaterial3D_8l22f")
+
+[node name="会話ガイドボタン" parent="原点/slim/アーマチュア/GeneralSkeleton/Face" index="0" unique_id=1392688736 instance=ExtResource("5_insj4")]
+transform = Transform3D(0.9925397, -0.07801194, 0.09369733, 0.09825845, 0.9667954, -0.23590675, -0.072182596, 0.24335337, 0.9672481, 0.0008805079, 1.5186635, 0.01783581)
+
+[node name="Face_outer" parent="原点/slim/アーマチュア/GeneralSkeleton" index="3" unique_id=1572632922]
+surface_material_override/0 = SubResource("StandardMaterial3D_ilph8")
+
+[node name="AnimationPlayer" parent="原点/slim" index="1" unique_id=1024708854]
+libraries/ = SubResource("AnimationLibrary_esw3w")
+
+[node name="AnimationTree" parent="." index="5" unique_id=436607949]
+root_node = NodePath("../原点/slim")
+anim_player = NodePath("../原点/slim/AnimationPlayer")
+"parameters/動き/blend_position" = Vector2(-0.010443807, 0.009132385)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="8" unique_id=1913402360]
+path_desired_distance = 2.0
+target_desired_distance = 0.1
+path_postprocessing = 2
+debug_enabled = true
+
+[node name="ケツ" parent="." index="9" unique_id=674815463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52238435, -0.0701711)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." index="10" unique_id=537134123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.874707, 0)
+shape = SubResource("CapsuleShape3D_euwu4")
+disabled = true
+
+[editable path="原点/slim"]

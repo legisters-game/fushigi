@@ -19,6 +19,7 @@ func _ready() -> void:
 				新規マテリアル.albedo_texture=スキン
 				i.set_surface_override_material(e,新規マテリアル)
 	
+	if メッシュ親2==null:return
 	for i in メッシュ親2.get_children():
 		if i is MeshInstance3D:
 			for e:int in range(i.mesh.get_surface_count()):

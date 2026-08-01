@@ -1,7 +1,7 @@
 @tool
 extends MeshInstance3D
 class_name 演出チャンク指定ツール
-@export_tool_button("演出自のチャンクとして追加") var 演出自のチャンク=チャンク追加
+@export_tool_button("演出時のチャンクとして追加") var 演出自のチャンク=チャンク追加
 var 演出基盤:演出基盤クラス
 
 func チャンク追加()->void:

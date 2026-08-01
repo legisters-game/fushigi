@@ -8,48 +8,48 @@
 script = ExtResource("2_btu10")
 "オーバーライド" = false
 "NPCオーバーライド" = 0
-"プレイヤーの見た目をジャック" = null
+"プレイヤーの見た目をジャック" = false
 "顔" = NodePath("R-G MC Rig MoCap v1_0/GeneralSkeleton/head/Head")
 
 [node name="R-G MC Rig MoCap v1_0" parent="." index="0" unique_id=231553116]
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0.62531376, 0)
 
 [node name="GeneralSkeleton" parent="R-G MC Rig MoCap v1_0" index="0" unique_id=1885119474]
-bones/1/rotation = Quaternion(0.1161505, 0.12447653, 0.019467557, 0.9852085)
-bones/11/position = Vector3(5.177094e-10, 1.09901464e-07, 9.751043e-10)
-bones/11/rotation = Quaternion(0.06848299, -0.052034963, -0.02834124, 0.9958913)
+bones/1/rotation = Quaternion(0.12176733, 0.040996376, 0.0055868686, 0.991696)
+bones/11/position = Vector3(-9.4535824e-11, 6.6663354e-08, 1.1785394e-09)
+bones/11/rotation = Quaternion(-0.06332564, 0.015567711, 0.0042583174, 0.9978624)
 bones/11/scale = Vector3(1.0000001, 1.0000002, 1.0000001)
 bones/12/position = Vector3(0.0003074217, 0.3653263, -0.0017737064)
-bones/12/rotation = Quaternion(-0.029622518, 0.0158497, 0.011286923, 0.9993718)
+bones/12/rotation = Quaternion(0.068923794, 0.013915488, -0.0039408286, 0.9975171)
 bones/12/scale = Vector3(0.99999994, 0.9999997, 0.99999976)
-bones/13/rotation = Quaternion(-0.17151313, -0.057675913, 0.007567356, 0.983463)
+bones/13/rotation = Quaternion(-0.118838675, -0.0792308, 0.0029138818, 0.9897432)
 bones/13/scale = Vector3(0.99999994, 1, 1)
-bones/41/rotation = Quaternion(-0.02925225, 0.015847346, 0.0101893945, 0.9993946)
-bones/42/rotation = Quaternion(0.4898924, -0.49468827, -0.54500884, -0.46717715)
-bones/43/rotation = Quaternion(-0.1210614, 0.8937843, -0.42618468, -0.06971689)
-bones/44/rotation = Quaternion(0.5105401, 0.48923308, -0.51053977, 0.48923302)
-bones/45/rotation = Quaternion(-0.11013825, -0.60218775, -0.14921905, 0.7765135)
-bones/46/rotation = Quaternion(0.46796685, 0.5028817, 0.56558937, -0.45631754)
-bones/47/rotation = Quaternion(-0.29690883, 0.7345713, -0.4436452, -0.41884267)
-bones/48/rotation = Quaternion(0.4176243, -0.57060516, 0.41762382, 0.57060516)
-bones/49/rotation = Quaternion(-0.010584591, 0.6459861, -0.036261763, 0.76241404)
+bones/41/rotation = Quaternion(0.0674924, 0.015358786, -0.00264638, 0.99759805)
+bones/42/rotation = Quaternion(0.5430465, -0.43871462, -0.6101208, -0.37467676)
+bones/43/rotation = Quaternion(-0.07307913, 0.88019884, -0.46556085, -0.056236096)
+bones/44/rotation = Quaternion(0.23730253, 0.6660987, -0.23730241, 0.66609883)
+bones/45/rotation = Quaternion(-0.013975879, -0.75700194, -0.057508547, 0.65072703)
+bones/46/rotation = Quaternion(0.5133887, 0.46847242, 0.5838621, -0.41960782)
+bones/47/rotation = Quaternion(0.010507226, 0.8451704, -0.50833535, -0.16483925)
+bones/48/rotation = Quaternion(0.23974508, -0.66522366, 0.23974475, 0.6652234)
+bones/49/rotation = Quaternion(0.0012786837, 0.7390464, 0.08127674, 0.6687322)
 bones/50/rotation = Quaternion(1.4901161e-08, 0, 0, 1)
-bones/51/rotation = Quaternion(-0.042125568, 0.009501211, 0.99789685, -0.048343126)
-bones/52/rotation = Quaternion(0.010899802, 0.952608, -0.29422224, 0.076501235)
-bones/53/rotation = Quaternion(0.04055558, 0.43019062, 0.898944, -0.07204796)
-bones/54/rotation = Quaternion(-0.053618096, 0.45654425, -0.8870965, 0.041859645)
+bones/51/rotation = Quaternion(-0.03938047, 0.076043345, 0.9962459, 0.012675956)
+bones/52/rotation = Quaternion(0.024410209, 0.9591177, -0.28180712, -0.009070471)
+bones/53/rotation = Quaternion(0.0129471505, 0.12762488, 0.9905518, -0.048489578)
+bones/54/rotation = Quaternion(-0.00791005, 0.908857, -0.41627792, 0.025081884)
 
 [node name="R_Pupils_001" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(0.011122514, 0.06949748, -0.99752015, -0.99878955, 0.048573434, -0.007752549, 0.047914147, 0.9963988, 0.069953665, -0.015228424, 0.9333673, 0.4652793)
+transform = Transform3D(0.00839279, -0.016699508, -0.99982524, -0.9999212, -0.009474799, -0.008235339, -0.009335607, 0.9998156, -0.016777664, -0.08285536, 0.94530445, 0.3737107)
 
 [node name="L_Pupils_001" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(0.011122514, 0.06949748, -0.99752015, -0.99878955, 0.048573434, -0.007752549, 0.047914147, 0.9963988, 0.069953665, 0.16731776, 0.934786, 0.45247775)
+transform = Transform3D(0.00839279, -0.016699508, -0.99982524, -0.9999212, -0.009474799, -0.008235339, -0.009335607, 0.9998156, -0.016777664, 0.10011265, 0.9468115, 0.37678096)
 
 [node name="head" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.99752015, -0.011122514, 0.06949748, 0.007752549, 0.99878955, 0.048573434, -0.069953665, -0.047914147, 0.9963988, 0.044512756, 0.6915873, 0.23253414)
+transform = Transform3D(0.99982524, -0.00839279, -0.016699508, 0.008235339, 0.9999212, -0.009474799, 0.016777664, 0.009335607, 0.9998156, -0.002930057, 0.71720123, 0.1333406)
 
 [node name="左" type="SpringBoneSimulator3D" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="17" unique_id=1917175906 node_paths=PackedStringArray("アニメーションプレイヤー")]
-external_force = Vector3(-0.015131707, -0.07758244, 0)
+external_force = Vector3(0.025169164, 0.08632182, 0)
 setting_count = 1
 settings/0/root_bone_name = "LeftShoulder"
 settings/0/root_bone = 46
@@ -83,7 +83,7 @@ script = ExtResource("3_8olvb")
 "アニメーションプレイヤー" = NodePath("../../../AnimationPlayer")
 
 [node name="右" type="SpringBoneSimulator3D" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="18" unique_id=125639639 node_paths=PackedStringArray("アニメーションプレイヤー")]
-external_force = Vector3(0.015131707, -0.07758244, 0)
+external_force = Vector3(-0.025169164, 0.08632182, 0)
 setting_count = 1
 settings/0/root_bone_name = "RightShoulder"
 settings/0/root_bone = 42
@@ -118,7 +118,7 @@ script = ExtResource("3_8olvb")
 "反転" = true
 
 [node name="体" type="SpringBoneSimulator3D" parent="R-G MC Rig MoCap v1_0/GeneralSkeleton" index="19" unique_id=912893983 node_paths=PackedStringArray("アニメーションプレイヤー")]
-external_force = Vector3(0.011784494, 0.02238384, -0.003852001)
+external_force = Vector3(0.014426447, 0.029557716, 0.0065362067)
 setting_count = 1
 settings/0/root_bone_name = "Hips"
 settings/0/root_bone = 11

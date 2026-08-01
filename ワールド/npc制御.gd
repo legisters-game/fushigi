@@ -5,7 +5,7 @@ class_name スケジュール管理クラス
 @export var 太陽:時間太陽
 @export var メッセージボックス:メッセージボックスクラス
 var ソート停止:Dictionary[NPC,Array]={}
-enum NPC{キール,リュー,キング,ヒジキ,リッド,すね,リウス,ちゃいにー,いるか,ななし,かるかん,いきぱら,タック,リッター}
+enum NPC{キール,リュー,キング,ヒジキ,リッド,すね,リウス,ちゃいにー,いるか,ななし,かるかん,いきぱら,タック,リッター,わでいど}
 
 # Called when the node enters the scene tree for the first time.
 

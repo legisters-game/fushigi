@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="1_wjldk"]
 [ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="2_tvflv"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_tvflv"]
 
 [sub_resource type="Resource" id="Resource_wjldk"]
 script = ExtResource("1_wjldk")

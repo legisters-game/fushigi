@@ -138,7 +138,7 @@ func エンティティ取得(名前:String):
 
 # アニメーションの最後や、特定のタイミングで呼び出す
 func 演出終了(フェードアウト有効:bool=false):
-	get_tree().get_first_node_in_group("UI").get_node("メッセージボックス").強制終了()
+	if get_tree().get_first_node_in_group("UI"): get_tree().get_first_node_in_group("UI").get_node("メッセージボックス").強制終了()
 	if フェードアウト有効:
 		if get_tree().get_first_node_in_group("UI"):
 			var フェードアウト:画面フェードクラス = get_tree().get_first_node_in_group("UI").get_node("画面フェード")
