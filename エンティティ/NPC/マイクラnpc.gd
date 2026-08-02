@@ -41,11 +41,7 @@ func _start_schedule_loop():
 			到着 = false
 			# 目的地の更新（後述の移動制御へ）
 			到着位置 = 辞書["目的地"]
-
-		var 辞書ディメンション:String
-		if 辞書["ディメンション"]!="":
-			辞書ディメンション=ResourceUID.uid_to_path(辞書["ディメンション"])
-		if get_tree().get_first_node_in_group("全体制御").ディメンション!=辞書ディメンション:
+		if get_tree().get_first_node_in_group("全体制御").ディメンション!=ResourceUID.uid_to_path(辞書["ディメンション"]):
 			if 辞書["ディメンション"]=="" and (get_tree().get_first_node_in_group("全体制御").ディメンション=="オープンワールド"):
 				show()
 			else:
