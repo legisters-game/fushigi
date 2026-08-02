@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/レベル制御.png")
 extends Node3D
 class_name レベル制御クラス
 var 都市プレイヤー座標:Vector3

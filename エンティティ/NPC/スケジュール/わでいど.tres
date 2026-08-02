@@ -1,0 +1,192 @@
+[gd_resource type="Resource" script_class="NPCスケジューラ" format=3 uid="uid://8oqkkek2l07b"]
+
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="1_nc8lv"]
+[ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="2_2gisd"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_u7psy"]
+[ext_resource type="Script" uid="uid://hoy7ntcb8lpl" path="res://拡張リソース/セリフ分岐オブジェクト.gd" id="4_rufmc"]
+[ext_resource type="Script" uid="uid://c63nudia22pk" path="res://拡張リソース/new_script.gd" id="5_tw4np"]
+
+[sub_resource type="Resource" id="Resource_2mu51"]
+script = ExtResource("3_u7psy")
+"セリフ" = "昼ご飯おいしい
+むしゃむしゃ"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_vmvb8"]
+script = ExtResource("2_2gisd")
+"名前" = "昼ご飯"
+"終了時間" = 0.102
+"セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_2mu51")])
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[sub_resource type="Resource" id="Resource_4i7mf"]
+script = ExtResource("3_u7psy")
+"セリフ" = "残念！僕はマイクラをやっていました！"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_3s0n5"]
+script = ExtResource("3_u7psy")
+"セリフ" = "正解！"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_qpkl4"]
+script = ExtResource("3_u7psy")
+"セリフ" = "残念！僕はマイクラをやっていました！"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_g4s1x"]
+script = ExtResource("3_u7psy")
+"セリフ" = "マテリアル…？
+あ、そういえば最近全然やってないなぁ"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_pf4ct"]
+script = ExtResource("5_tw4np")
+"セリフ" = "まあ、いっか！"
+metadata/_custom_type_script = "uid://c63nudia22pk"
+
+[sub_resource type="Resource" id="Resource_5w2ad"]
+script = ExtResource("4_rufmc")
+"選択肢" = Array[String](["フォトナだ！", "マイクラだ！", "マテリアルだ！"])
+"選択1セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_4i7mf")])
+"選択2セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_3s0n5")])
+"選択3セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_qpkl4"), SubResource("Resource_g4s1x"), SubResource("Resource_pf4ct")])
+"セリフ" = "さあ、僕は何をしているでしょう？"
+metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
+
+[sub_resource type="Resource" id="Resource_8p5mg"]
+script = ExtResource("3_u7psy")
+"セリフ" = "いやークリスタルは楽しいね！"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_72tv7"]
+script = ExtResource("3_u7psy")
+"セリフ" = "もう５連勝だよ！"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_dsgk7"]
+script = ExtResource("2_2gisd")
+"名前" = "いろいろ"
+"開始時間" = 0.122
+"終了時間" = 0.259
+"セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_5w2ad"), SubResource("Resource_8p5mg"), SubResource("Resource_72tv7")])
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[sub_resource type="Resource" id="Resource_x6a8j"]
+script = ExtResource("3_u7psy")
+"セリフ" = "夜ご飯おいしい
+むしゃむしゃ"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_s7uix"]
+script = ExtResource("2_2gisd")
+"名前" = "昼ご飯"
+"開始時間" = 0.263
+"終了時間" = 0.318
+"セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_x6a8j")])
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[sub_resource type="Resource" id="Resource_8d0ks"]
+script = ExtResource("3_u7psy")
+"セリフ" = "は！？"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_8kg7c"]
+script = ExtResource("3_u7psy")
+"セリフ" = "な、なんてことするのさぁ
+酷いなぁ"
+"表情" = 10
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_ykyjb"]
+script = ExtResource("3_u7psy")
+"セリフ" = "もう少し寝かせてくれよ"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_4yprr"]
+script = ExtResource("5_tw4np")
+"セリフ" = "（再び目をつむる）"
+"表情" = 9
+metadata/_custom_type_script = "uid://c63nudia22pk"
+
+[sub_resource type="Resource" id="Resource_wwdad"]
+script = ExtResource("4_rufmc")
+"選択肢" = Array[String](["そっとしておく", "ひっぱたく"])
+"選択2セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_8d0ks"), SubResource("Resource_8kg7c"), SubResource("Resource_ykyjb"), SubResource("Resource_4yprr")])
+"セリフ" = "ZZZ"
+"表情" = 9
+metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
+
+[sub_resource type="Resource" id="Resource_4hyfj"]
+script = ExtResource("2_2gisd")
+"名前" = "就寝"
+"開始時間" = 0.322
+"終了時間" = 0.702
+"セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_wwdad")])
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[sub_resource type="Resource" id="Resource_nu31w"]
+script = ExtResource("3_u7psy")
+"セリフ" = "おはよう！"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_5t8nk"]
+script = ExtResource("2_2gisd")
+"名前" = "起きた"
+"開始時間" = 0.706
+"終了時間" = 0.773
+"セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_nu31w")])
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[sub_resource type="Resource" id="Resource_2yde8"]
+script = ExtResource("3_u7psy")
+"セリフ" = "正解！"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_obt1j"]
+script = ExtResource("3_u7psy")
+"セリフ" = "残念！僕はフォトナをやっていました！"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_1q667"]
+script = ExtResource("3_u7psy")
+"セリフ" = "残念！僕はフォトナをやっていました！"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_ype4i"]
+script = ExtResource("3_u7psy")
+"セリフ" = "マテリアル…？
+あ、そういえば最近全然やってないなぁ"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_riyl1"]
+script = ExtResource("5_tw4np")
+"セリフ" = "まあ、いっか！"
+metadata/_custom_type_script = "uid://c63nudia22pk"
+
+[sub_resource type="Resource" id="Resource_id0nj"]
+script = ExtResource("4_rufmc")
+"選択肢" = Array[String](["フォトナだ！", "マイクラだ！", "マテリアルだ！"])
+"選択1セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_2yde8")])
+"選択2セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_obt1j")])
+"選択3セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_1q667"), SubResource("Resource_ype4i"), SubResource("Resource_riyl1")])
+"セリフ" = "さあ、僕は何をしているでしょう？"
+metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
+
+[sub_resource type="Resource" id="Resource_pb8dk"]
+script = ExtResource("3_u7psy")
+"セリフ" = "いやーフォトナは楽しいね！"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_j3e5s"]
+script = ExtResource("2_2gisd")
+"名前" = "いろいろ"
+"開始時間" = 0.8
+"終了時間" = 1.0
+"セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_id0nj"), SubResource("Resource_pb8dk")])
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[resource]
+script = ExtResource("1_nc8lv")
+"スケジュールリスト" = Array[ExtResource("2_2gisd")]([SubResource("Resource_vmvb8"), SubResource("Resource_dsgk7"), SubResource("Resource_s7uix"), SubResource("Resource_4hyfj"), SubResource("Resource_5t8nk"), SubResource("Resource_j3e5s")])
+metadata/_custom_type_script = "uid://d4j8xlv2dxato"

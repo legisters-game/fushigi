@@ -1,4 +1,5 @@
 @tool
+@icon("res://拡張リソース/アイコン/スケジュール.jpg")
 class_name NPCスケジューラ extends Resource
 
 @export_tool_button("整合性チェック","DampedSpringJoint2D") var ボタン1:Callable=asチェック

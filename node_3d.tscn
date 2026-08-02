@@ -7,17 +7,29 @@
 [ext_resource type="PackedScene" uid="uid://6jh6664vjvwy" path="res://街チャンク処理/都市3d仮.tscn" id="4_ealrb"]
 [ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="8_vxd74"]
 [ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="9_dhlwf"]
+[ext_resource type="Resource" uid="uid://bpyrwxe76yh6j" path="res://エンティティ/NPC/スケジュール/キール.tres" id="10_s0gvp"]
 [ext_resource type="PackedScene" uid="uid://wedomua7c4xx" path="res://エンティティ/NPC/インスタンス/キール.tscn" id="11_jsnrv"]
-[ext_resource type="Script" uid="uid://hoy7ntcb8lpl" path="res://拡張リソース/セリフ分岐オブジェクト.gd" id="11_lggff"]
-[ext_resource type="Script" uid="uid://c63nudia22pk" path="res://拡張リソース/new_script.gd" id="12_s0gvp"]
+[ext_resource type="Resource" uid="uid://8oqkkek2l07b" path="res://エンティティ/NPC/スケジュール/わでいど.tres" id="11_vxd74"]
+[ext_resource type="Resource" uid="uid://dtc25sfh7wu1f" path="res://エンティティ/NPC/スケジュール/リュー.tres" id="12_dhlwf"]
+[ext_resource type="Resource" uid="uid://bro0rkeoo1dkf" path="res://エンティティ/NPC/スケジュール/キング.tres" id="13_5t8nk"]
+[ext_resource type="Resource" uid="uid://chktvp5e6m78g" path="res://エンティティ/NPC/スケジュール/ヒジキ.tres" id="14_5t8nk"]
 [ext_resource type="Script" uid="uid://d0hqsc7rgmj0w" path="res://GUI/コントロールルート.gd" id="14_s0gvp"]
 [ext_resource type="PackedScene" uid="uid://bywtaw3xfp00s" path="res://エンティティ/NPC/マイクラNPCスリム.tscn" id="14_vxd74"]
+[ext_resource type="Resource" uid="uid://ljk2bw81culo" path="res://エンティティ/NPC/スケジュール/リッド.tres" id="15_j3e5s"]
 [ext_resource type="PackedScene" uid="uid://cswg3m17ndvd0" path="res://GUI/ミッションマネージャー/ミッションマネージャー.tscn" id="15_jsnrv"]
+[ext_resource type="Resource" uid="uid://cgboiedoqvjmy" path="res://エンティティ/NPC/スケジュール/すね.tres" id="16_nu31w"]
+[ext_resource type="Resource" uid="uid://b3mwvmlf1yysh" path="res://エンティティ/NPC/スケジュール/リウス.tres" id="17_obt1j"]
+[ext_resource type="Resource" uid="uid://bw4jtx2imaqvy" path="res://エンティティ/NPC/スケジュール/ちゃいにー.tres" id="17_pb8dk"]
+[ext_resource type="Resource" uid="uid://clxd5iy6hukbi" path="res://エンティティ/NPC/スケジュール/いるか.tres" id="18_2mu51"]
+[ext_resource type="Resource" uid="uid://vhp3gtjimunj" path="res://エンティティ/NPC/スケジュール/ななし.tres" id="19_vmvb8"]
+[ext_resource type="Resource" uid="uid://ftk8j028oij" path="res://エンティティ/NPC/スケジュール/かるかん.tres" id="20_4i7mf"]
+[ext_resource type="Resource" uid="uid://bo8b7dsqokhmo" path="res://エンティティ/NPC/スケジュール/いきぱら.tres" id="21_3s0n5"]
+[ext_resource type="Resource" uid="uid://bvkxyp0aayys7" path="res://エンティティ/NPC/スケジュール/タック.tres" id="22_qpkl4"]
+[ext_resource type="Resource" uid="uid://bhr84tvlb3f7j" path="res://エンティティ/NPC/スケジュール/リッター.tres" id="23_2mu51"]
 [ext_resource type="PackedScene" uid="uid://buwi56bftrlec" path="res://エンティティ/プレイヤー/プレイヤー.tscn" id="207_ccj11"]
 [ext_resource type="PackedScene" uid="uid://nfkdvrm1gp82" path="res://カメラ/カメラ制御.tscn" id="208_ir4n0"]
 [ext_resource type="Texture2D" uid="uid://70jmgomtcsjd" path="res://エンティティ/プレイヤー/model/6380439c17d3666d_8.png" id="209_yj0qq"]
 [ext_resource type="PackedScene" uid="uid://d2upvuci7wdjv" path="res://ワールド/npc制御.tscn" id="211_dd1lt"]
-[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="214_oechf"]
 [ext_resource type="Script" uid="uid://ck32fe4yvp4h8" path="res://GUI/時間.gd" id="216_77ide"]
 [ext_resource type="PackedScene" uid="uid://s36hn6agtol7" path="res://GUI/メッセージボックス/メッセージボックス.tscn" id="217_0ma11"]
 [ext_resource type="Material" uid="uid://d0o42plhu13eh" path="res://ワールド/水.tres" id="217_q3cen"]
@@ -78,219 +90,6 @@ fog_depth_end = 105.7
 volumetric_fog_sky_affect = 0.671
 adjustment_enabled = true
 
-[sub_resource type="Resource" id="Resource_jsnrv"]
-script = ExtResource("214_oechf")
-"セリフ" = "こんにちは"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_lggff"]
-script = ExtResource("9_dhlwf")
-"名前" = "お"
-"終了時間" = 1.0
-"目的置" = Vector3(-3.5060577, -0.0710907, -0.5016556)
-"セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_jsnrv")])
-"ディメンション" = "uid://dmbek8jwtnvaw"
-"ディメンションオブジェクト番号" = 1
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_b5jwi"]
-script = ExtResource("9_dhlwf")
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_l0drn"]
-script = ExtResource("9_dhlwf")
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_vxd74"]
-script = ExtResource("8_vxd74")
-"スケジュールリスト" = Array[ExtResource("9_dhlwf")]([SubResource("Resource_lggff"), SubResource("Resource_b5jwi"), SubResource("Resource_l0drn")])
-metadata/_custom_type_script = "uid://d4j8xlv2dxato"
-
-[sub_resource type="Resource" id="Resource_2mu51"]
-script = ExtResource("214_oechf")
-"セリフ" = "昼ご飯おいしい
-むしゃむしゃ"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_vmvb8"]
-script = ExtResource("9_dhlwf")
-"名前" = "昼ご飯"
-"終了時間" = 0.102
-"セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_2mu51")])
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_4i7mf"]
-script = ExtResource("214_oechf")
-"セリフ" = "残念！僕はマイクラをやっていました！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_3s0n5"]
-script = ExtResource("214_oechf")
-"セリフ" = "正解！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_qpkl4"]
-script = ExtResource("214_oechf")
-"セリフ" = "残念！僕はマイクラをやっていました！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_g4s1x"]
-script = ExtResource("214_oechf")
-"セリフ" = "マテリアル…？
-あ、そういえば最近全然やってないなぁ"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_pf4ct"]
-script = ExtResource("12_s0gvp")
-"セリフ" = "まあ、いっか！"
-metadata/_custom_type_script = "uid://c63nudia22pk"
-
-[sub_resource type="Resource" id="Resource_5w2ad"]
-script = ExtResource("11_lggff")
-"選択肢" = Array[String](["フォトナだ！", "マイクラだ！", "マテリアルだ！"])
-"選択1セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_4i7mf")])
-"選択2セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_3s0n5")])
-"選択3セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_qpkl4"), SubResource("Resource_g4s1x"), SubResource("Resource_pf4ct")])
-"セリフ" = "さあ、僕は何をしているでしょう？"
-metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
-
-[sub_resource type="Resource" id="Resource_8p5mg"]
-script = ExtResource("214_oechf")
-"セリフ" = "いやークリスタルは楽しいね！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_72tv7"]
-script = ExtResource("214_oechf")
-"セリフ" = "もう５連勝だよ！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_dsgk7"]
-script = ExtResource("9_dhlwf")
-"名前" = "いろいろ"
-"開始時間" = 0.122
-"終了時間" = 0.259
-"セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_5w2ad"), SubResource("Resource_8p5mg"), SubResource("Resource_72tv7")])
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_x6a8j"]
-script = ExtResource("214_oechf")
-"セリフ" = "夜ご飯おいしい
-むしゃむしゃ"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_s7uix"]
-script = ExtResource("9_dhlwf")
-"名前" = "昼ご飯"
-"開始時間" = 0.263
-"終了時間" = 0.318
-"セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_x6a8j")])
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_8d0ks"]
-script = ExtResource("214_oechf")
-"セリフ" = "は！？"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_8kg7c"]
-script = ExtResource("214_oechf")
-"セリフ" = "な、なんてことするのさぁ
-酷いなぁ"
-"表情" = 10
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_ykyjb"]
-script = ExtResource("214_oechf")
-"セリフ" = "もう少し寝かせてくれよ"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_4yprr"]
-script = ExtResource("12_s0gvp")
-"セリフ" = "（再び目をつむる）"
-"表情" = 9
-metadata/_custom_type_script = "uid://c63nudia22pk"
-
-[sub_resource type="Resource" id="Resource_wwdad"]
-script = ExtResource("11_lggff")
-"選択肢" = Array[String](["そっとしておく", "ひっぱたく"])
-"選択2セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_8d0ks"), SubResource("Resource_8kg7c"), SubResource("Resource_ykyjb"), SubResource("Resource_4yprr")])
-"セリフ" = "ZZZ"
-"表情" = 9
-metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
-
-[sub_resource type="Resource" id="Resource_4hyfj"]
-script = ExtResource("9_dhlwf")
-"名前" = "就寝"
-"開始時間" = 0.322
-"終了時間" = 0.702
-"セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_wwdad")])
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_nu31w"]
-script = ExtResource("214_oechf")
-"セリフ" = "おはよう！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_5t8nk"]
-script = ExtResource("9_dhlwf")
-"名前" = "起きた"
-"開始時間" = 0.706
-"終了時間" = 0.773
-"セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_nu31w")])
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_2yde8"]
-script = ExtResource("214_oechf")
-"セリフ" = "正解！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_obt1j"]
-script = ExtResource("214_oechf")
-"セリフ" = "残念！僕はフォトナをやっていました！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_1q667"]
-script = ExtResource("214_oechf")
-"セリフ" = "残念！僕はフォトナをやっていました！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_ype4i"]
-script = ExtResource("214_oechf")
-"セリフ" = "マテリアル…？
-あ、そういえば最近全然やってないなぁ"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_riyl1"]
-script = ExtResource("12_s0gvp")
-"セリフ" = "まあ、いっか！"
-metadata/_custom_type_script = "uid://c63nudia22pk"
-
-[sub_resource type="Resource" id="Resource_id0nj"]
-script = ExtResource("11_lggff")
-"選択肢" = Array[String](["フォトナだ！", "マイクラだ！", "マテリアルだ！"])
-"選択1セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_2yde8")])
-"選択2セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_obt1j")])
-"選択3セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_1q667"), SubResource("Resource_ype4i"), SubResource("Resource_riyl1")])
-"セリフ" = "さあ、僕は何をしているでしょう？"
-metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
-
-[sub_resource type="Resource" id="Resource_pb8dk"]
-script = ExtResource("214_oechf")
-"セリフ" = "いやーフォトナは楽しいね！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_j3e5s"]
-script = ExtResource("9_dhlwf")
-"名前" = "いろいろ"
-"開始時間" = 0.8
-"終了時間" = 1.0
-"セリフ" = Array[ExtResource("214_oechf")]([SubResource("Resource_id0nj"), SubResource("Resource_pb8dk")])
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_dhlwf"]
-script = ExtResource("8_vxd74")
-"スケジュールリスト" = Array[ExtResource("9_dhlwf")]([SubResource("Resource_vmvb8"), SubResource("Resource_dsgk7"), SubResource("Resource_s7uix"), SubResource("Resource_4hyfj"), SubResource("Resource_5t8nk"), SubResource("Resource_j3e5s")])
-metadata/_custom_type_script = "uid://d4j8xlv2dxato"
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajunh"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_um0fc"]
@@ -300,28 +99,126 @@ subdivide_width = 20
 subdivide_depth = 20
 center_offset = Vector3(0, 0.622, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7uix"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mu51"]
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("209_yj0qq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hyfj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmvb8"]
 resource_name = "R_eye_color"
 cull_mode = 2
 albedo_texture = ExtResource("209_yj0qq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8d0ks"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4i7mf"]
 resource_name = "L_eye_color"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("209_yj0qq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kg7c"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3s0n5"]
 resource_name = "material_0"
 transparency = 4
 albedo_texture = ExtResource("209_yj0qq")
 metallic_specular = 0.0
 texture_filter = 0
 texture_repeat = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpkl4"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4s1x"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf4ct"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5w2ad"]
+resource_name = "Skin_Head_only"
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+roughness = 0.9
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8p5mg"]
+resource_name = "Mouse"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsgk7"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72tv7"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6a8j"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7uix"]
+resource_name = "Skin"
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("209_yj0qq")
+roughness = 0.9
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hyfj"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8d0ks"]
+resource_name = "Skin.004"
+transparency = 4
+cull_mode = 2
+diffuse_mode = 2
+albedo_texture = ExtResource("209_yj0qq")
+roughness = 0.9
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kg7c"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwdad"]
 resource_name = "Skin"
@@ -332,12 +229,10 @@ metallic_specular = 0.0
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykyjb"]
-resource_name = "Skin"
-transparency = 4
+resource_name = "Pupils(右目)"
+cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sivbr"]
 resource_name = "Skin"
@@ -348,102 +243,6 @@ metallic_specular = 0.0
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4yprr"]
-resource_name = "Skin_Head_only"
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ofy4"]
-resource_name = "Mouse"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a41ck"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alien"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8jhw1"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if4ww"]
-resource_name = "Skin"
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_color = Color(0, 0, 0, 1)
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brp11"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvobo"]
-resource_name = "Skin.004"
-transparency = 4
-cull_mode = 2
-diffuse_mode = 2
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvloe"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5u2i"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7u8at"]
-resource_name = "Pupils(右目)"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u85y0"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uhrmv"]
 resource_name = "Skin.003"
 transparency = 4
 albedo_texture = ExtResource("209_yj0qq")
@@ -482,8 +281,21 @@ transform = Transform3D(1, 0, 0, 0, 0.76040596, -0.64944804, 0, 0.64944804, 0.76
 
 [node name="NPC制御" parent="." unique_id=2005143416 node_paths=PackedStringArray("太陽", "メッセージボックス") groups=["NPC制御"] instance=ExtResource("211_dd1lt")]
 "全体スケジュール" = Dictionary[int, ExtResource("8_vxd74")]({
-0: SubResource("Resource_vxd74"),
-14: SubResource("Resource_dhlwf")
+0: ExtResource("10_s0gvp"),
+1: ExtResource("12_dhlwf"),
+2: ExtResource("13_5t8nk"),
+3: ExtResource("14_5t8nk"),
+4: ExtResource("15_j3e5s"),
+5: ExtResource("16_nu31w"),
+6: ExtResource("17_obt1j"),
+7: ExtResource("17_pb8dk"),
+8: ExtResource("18_2mu51"),
+9: ExtResource("19_vmvb8"),
+10: ExtResource("20_4i7mf"),
+11: ExtResource("21_3s0n5"),
+12: ExtResource("22_qpkl4"),
+13: ExtResource("23_2mu51"),
+14: ExtResource("11_vxd74")
 })
 "太陽" = NodePath("../時間太陽")
 "メッセージボックス" = NodePath("../Control/メッセージボックス")
@@ -578,85 +390,85 @@ visible = true
 
 [node name="GeneralSkeleton" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1999271142, 652042102, 231553116) index="0" unique_id=1885119474]
 bones/11/position = Vector3(1.2841018e-08, 1.15523946e-07, 1.4728274e-10)
-bones/11/rotation = Quaternion(-0.03110408, -0.026171869, -0.083842374, 0.9956496)
-bones/12/rotation = Quaternion(0.015067933, -0.00083737477, 0.022840284, 0.99962527)
-bones/13/rotation = Quaternion(-0.09187543, -0.011204347, 0.008176602, 0.9956739)
-bones/41/rotation = Quaternion(0.01534189, -0.0025216897, 0.022418242, 0.9996278)
-bones/42/rotation = Quaternion(0.52630126, -0.4532686, -0.5893675, -0.41255367)
-bones/43/rotation = Quaternion(0.004040463, 0.8677826, -0.49084574, 0.07750852)
-bones/44/rotation = Quaternion(0.1725207, 0.6857381, -0.17252058, 0.6857381)
-bones/45/rotation = Quaternion(0.015164174, -0.7975329, 0.006007218, 0.60305506)
-bones/46/rotation = Quaternion(0.5150419, 0.46489304, 0.58934766, -0.41385454)
-bones/47/rotation = Quaternion(-0.027693542, 0.7988891, -0.6007754, -0.008839945)
-bones/48/rotation = Quaternion(0.13073377, -0.69491637, 0.13073348, 0.69491637)
-bones/49/rotation = Quaternion(0.078752324, 0.81577605, -0.012798115, 0.5728385)
-bones/51/rotation = Quaternion(-0.07197319, 0.027827762, 0.9931087, -0.08820882)
-bones/52/rotation = Quaternion(-0.0027011118, 0.98807126, -0.14627665, -0.048073296)
-bones/53/rotation = Quaternion(0.058789566, 0.13273516, 0.983999, -0.10330179)
-bones/54/rotation = Quaternion(-0.018087637, 0.9498539, -0.3028312, 0.07578802)
+bones/11/rotation = Quaternion(-0.025611162, -0.024183547, -0.08272984, 0.9959494)
+bones/12/rotation = Quaternion(-0.021449009, -0.0070413193, 0.020774463, 0.9995293)
+bones/13/rotation = Quaternion(-0.06582044, -0.0046154894, 0.0042752884, 0.9978117)
+bones/41/rotation = Quaternion(-0.02131893, -0.0076381187, 0.020755647, 0.99952805)
+bones/42/rotation = Quaternion(0.53310084, -0.45571563, -0.5566357, -0.44529048)
+bones/43/rotation = Quaternion(0.057523757, 0.8368958, -0.53592235, 0.09530904)
+bones/44/rotation = Quaternion(0.16551349, 0.68746305, -0.16551325, 0.6874629)
+bones/45/rotation = Quaternion(0.005291635, -0.7999806, -0.013259082, 0.59985614)
+bones/46/rotation = Quaternion(0.5154682, 0.46960622, 0.57169443, -0.43235186)
+bones/47/rotation = Quaternion(-0.13185583, 0.7618551, -0.6341806, -0.0023953917)
+bones/48/rotation = Quaternion(0.12512253, -0.6959486, 0.12512247, 0.6959485)
+bones/49/rotation = Quaternion(0.05982358, 0.7849859, 0.039197285, 0.6153713)
+bones/51/rotation = Quaternion(-0.06959145, 0.022676507, 0.99355245, -0.086582564)
+bones/52/rotation = Quaternion(-0.0018946686, 0.9889654, -0.13889, -0.051513012)
+bones/53/rotation = Quaternion(0.05804754, 0.12810999, 0.98462, -0.10364275)
+bones/54/rotation = Quaternion(-0.011417606, 0.9528233, -0.29691616, 0.06195531)
 
 [node name="R_Pupils_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(-0.1154582, -0.053343855, -0.99187887, -0.970173, 0.22033364, 0.10108187, 0.2131522, 0.97396487, -0.07719209, 0.046826147, 1.0076079, 0.14623575)
+transform = Transform3D(-0.12483436, -0.044116933, -0.9911964, -0.96692556, 0.22936305, 0.111568965, 0.22242169, 0.9723405, -0.07129018, 0.052175723, 1.0085237, 0.12528484)
 
 [node name="L_Pupils_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(-0.1154582, -0.053343855, -0.99187887, -0.970173, 0.22033364, 0.10108187, 0.2131522, 0.97396487, -0.07719209, 0.22833996, 0.98910993, 0.16036187)
+transform = Transform3D(-0.12483436, -0.044116933, -0.9911964, -0.96692556, 0.22936305, 0.111568965, 0.22242169, 0.9723405, -0.07129018, 0.23356465, 0.98810655, 0.13833092)
 
 [node name="head" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.99187887, 0.1154582, -0.053343855, -0.10108187, 0.970173, 0.22033364, 0.07719209, -0.2131522, 0.97396487, 0.10633013, 0.7232481, -0.03207776)
+transform = Transform3D(0.9911964, 0.12483436, -0.044116933, -0.111568965, 0.96692556, 0.22936305, 0.07129018, -0.22242169, 0.9723405, 0.10725346, 0.7219755, -0.050935104)
 
 [node name="_設定" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
-surface_material_override/0 = SubResource("StandardMaterial3D_s7uix")
+surface_material_override/0 = SubResource("StandardMaterial3D_2mu51")
 
 [node name="Eye_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
-surface_material_override/0 = SubResource("StandardMaterial3D_4hyfj")
-surface_material_override/1 = SubResource("StandardMaterial3D_8d0ks")
+surface_material_override/0 = SubResource("StandardMaterial3D_vmvb8")
+surface_material_override/1 = SubResource("StandardMaterial3D_4i7mf")
 
 [node name="Head" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="2" unique_id=1097678551]
-surface_material_override/0 = SubResource("StandardMaterial3D_8kg7c")
+surface_material_override/0 = SubResource("StandardMaterial3D_3s0n5")
 
 [node name="Body" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
-surface_material_override/0 = SubResource("StandardMaterial3D_wwdad")
+surface_material_override/0 = SubResource("StandardMaterial3D_qpkl4")
 
 [node name="Body_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
-surface_material_override/0 = SubResource("StandardMaterial3D_ykyjb")
+surface_material_override/0 = SubResource("StandardMaterial3D_g4s1x")
 
 [node name="Face" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
-surface_material_override/0 = SubResource("StandardMaterial3D_sivbr")
-surface_material_override/1 = SubResource("StandardMaterial3D_4yprr")
-surface_material_override/2 = SubResource("StandardMaterial3D_1ofy4")
+surface_material_override/0 = SubResource("StandardMaterial3D_pf4ct")
+surface_material_override/1 = SubResource("StandardMaterial3D_5w2ad")
+surface_material_override/2 = SubResource("StandardMaterial3D_8p5mg")
 
 [node name="Head_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="6" unique_id=1719889094]
-surface_material_override/0 = SubResource("StandardMaterial3D_a41ck")
+surface_material_override/0 = SubResource("StandardMaterial3D_dsgk7")
 
 [node name="L_Arm" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
-surface_material_override/0 = SubResource("StandardMaterial3D_alien")
+surface_material_override/0 = SubResource("StandardMaterial3D_72tv7")
 
 [node name="L_Arm_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
-surface_material_override/0 = SubResource("StandardMaterial3D_8jhw1")
+surface_material_override/0 = SubResource("StandardMaterial3D_x6a8j")
 
 [node name="L_Iris" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
-surface_material_override/0 = SubResource("StandardMaterial3D_if4ww")
+surface_material_override/0 = SubResource("StandardMaterial3D_s7uix")
 
 [node name="L_Leg" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
-surface_material_override/0 = SubResource("StandardMaterial3D_brp11")
+surface_material_override/0 = SubResource("StandardMaterial3D_4hyfj")
 
 [node name="L_Leg_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
-surface_material_override/0 = SubResource("StandardMaterial3D_dvobo")
+surface_material_override/0 = SubResource("StandardMaterial3D_8d0ks")
 
 [node name="R_Arm" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
-surface_material_override/0 = SubResource("StandardMaterial3D_gvloe")
+surface_material_override/0 = SubResource("StandardMaterial3D_8kg7c")
 
 [node name="R_Arm_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
-surface_material_override/0 = SubResource("StandardMaterial3D_m5u2i")
+surface_material_override/0 = SubResource("StandardMaterial3D_wwdad")
 
 [node name="R_Iris" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
-surface_material_override/0 = SubResource("StandardMaterial3D_7u8at")
+surface_material_override/0 = SubResource("StandardMaterial3D_ykyjb")
 
 [node name="R_Leg" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
-surface_material_override/0 = SubResource("StandardMaterial3D_u85y0")
+surface_material_override/0 = SubResource("StandardMaterial3D_sivbr")
 
 [node name="R_Leg_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
-surface_material_override/0 = SubResource("StandardMaterial3D_uhrmv")
+surface_material_override/0 = SubResource("StandardMaterial3D_4yprr")
 
 [node name="Area3D" parent="プレイヤー位置/プレイヤー" index="10" unique_id=15864578]
 collision_layer = 1

@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/チャンクルート.png")
 @tool
 extends Node3D
 class_name チャンク管理クラス

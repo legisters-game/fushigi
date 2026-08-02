@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/NPC制御.png")
 extends Node3D
 class_name スケジュール管理クラス
 

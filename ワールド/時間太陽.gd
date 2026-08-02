@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/時間太陽.png")
 extends DirectionalLight3D
 class_name 時間太陽
 # 0.25 0.5  0.75  1 

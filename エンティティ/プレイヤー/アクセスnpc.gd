@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/アクセスNPC.png")
 extends Area3D
 
 

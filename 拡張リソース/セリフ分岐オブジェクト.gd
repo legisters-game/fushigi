@@ -1,4 +1,5 @@
 @tool
+@icon("res://拡張リソース/アイコン/セリフ分岐.png")
 extends セリフオブジェクト
 class_name セリフ分岐オブジェクト
 @export var 選択肢:Array[String]=[]:

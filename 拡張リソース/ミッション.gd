@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/ミッション.png")
 extends Resource
 class_name ミッションデータ
 @export var ミッション名:String

@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/セリフ.png")
 extends Sprite3D
 @export var アクション:InputEventAction
 

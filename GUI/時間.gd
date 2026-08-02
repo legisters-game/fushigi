@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/UI_時間.png")
 extends Control
 @export var 太陽:時間太陽
 

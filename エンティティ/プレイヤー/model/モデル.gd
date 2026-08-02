@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/モデル.png")
 @tool
 extends Node3D
 @export var スキン:CompressedTexture2D

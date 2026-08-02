@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/UI_メッセージ.png")
 extends Control
 class_name メッセージボックスクラス
 @export var メッセージラベル:Label

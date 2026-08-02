@@ -1,4 +1,4 @@
-@icon("a")
+@icon("res://拡張リソース/アイコン/セルスケジュール.jpg")
 class_name セルスケジュール extends Resource
 
 @export var 名前:String

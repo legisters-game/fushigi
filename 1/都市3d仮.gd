@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/街ルート.png")
 @tool
 extends Node3D
 class_name オープンワールド管理クラス

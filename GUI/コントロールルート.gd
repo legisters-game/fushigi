@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/UI.png")
 extends Control
 @export var ムービー中非表示リスト:Array[Control]
 

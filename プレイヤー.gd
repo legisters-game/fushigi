@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/レクレイス.png")
 extends エンティティ
 class_name プレイヤークラス
 @onready var camera_pivot = get_viewport().get_camera_3d()

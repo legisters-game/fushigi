@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="NPCスケジューラ" format=3 uid="uid://ftk8j028oij"]
+
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="1_vc0x8"]
+[ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="2_4qq8s"]
+
+[resource]
+script = ExtResource("1_vc0x8")
+metadata/_custom_type_script = "uid://d4j8xlv2dxato"

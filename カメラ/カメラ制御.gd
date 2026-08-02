@@ -1,3 +1,4 @@
+@icon("res://拡張リソース/アイコン/拡張ノード/カメラ制御.png")
 extends Node3D
 class_name 追尾カメラクラス
 @export var 目標:エンティティ
