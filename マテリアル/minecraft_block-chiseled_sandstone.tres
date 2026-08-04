@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b6pf0xo4hms0x"]
 
 [ext_resource type="Texture2D" uid="uid://dehyu3ik6re1y" path="res://1/都市3d仮_chiseled_sandstone.png" id="1_bwhuv"]
+[ext_resource type="Texture2D" uid="uid://ryj06d8844u7" path="res://マテリアル/鏡面反射/chiseled_sandstone_n.png" id="2_wx2qp"]
+[ext_resource type="Texture2D" uid="uid://v7bwhsvoto6y" path="res://マテリアル/立体補間/chiseled_sandstone_a.png" id="3_h7evy"]
 
 [resource]
 resource_name = "minecraft_block-chiseled_sandstone"
-cull_mode = 2
 albedo_texture = ExtResource("1_bwhuv")
+metallic = 1.0
+metallic_texture = ExtResource("2_wx2qp")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_h7evy")
+ao_enabled = true
+ao_texture = ExtResource("2_wx2qp")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_h7evy")
+heightmap_flip_texture = true
