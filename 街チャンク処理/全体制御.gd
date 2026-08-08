@@ -38,9 +38,28 @@ func _ready() -> void:
 		get_tree().get_first_node_in_group("プレイヤー").プレイヤーロード()
 		get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
 	
+	if データロガー.システム設定読み込み("軽量化"):
+		get_world_3d().environment.sdfgi_enabled=false
+		get_viewport().scaling_3d_scale=0.8
+		get_viewport().mesh_lod_threshold=0.5
+	if データロガー.システム設定読み込み("3D品質向上"):
+		if データロガー.システム設定読み込み("軽量化"):
+			get_viewport().msaa_3d=Viewport.MSAA_4X
+			
+		else:
+			#元が美人ならすっぴんでいいんじゃない？
+			#get_viewport().msaa_3d=Viewport.MSAA_4X
+			pass
+	
+	if データロガー.システム設定読み込み("アンチエイリアス有効"):
+		get_viewport().use_taa=true
+	else:
+		get_viewport().use_taa=false
+	
 	await  get_tree().create_timer(2).timeout
 	if !データロガー.フラグあるか("最初の演出完了"):
 		シナリオ演出実行("res://シナリオ/シナリオシーン/プロローグ1目覚め/プロローグ1目覚め.tscn")
+	
 	
 	while true:
 		await get_tree().create_timer(50).timeout

@@ -16,15 +16,34 @@ enum プレイヤーデータ {
 	回転座標,
 }
 
-func _ready():
+func _init() -> void:
 	if config.load(SAVE_PATH)!=OK:
 		print("えらーー")
 		全保存()
+	
+	var デバッグ軽量化:bool=false
+	if デバッグ軽量化:
+		システム設定書き込み("軽量化",true)
+		システム設定書き込み("影オフ",true)
+	else:
+		pass
+		#システム設定書き込み("アンチエイリアス有効",true)
+	システム設定書き込み("3D品質向上",true)
+	
+	
 	
 	フラグ追加("初期")
 
 func _exit_tree() -> void:
 	全保存()
+
+
+func システム設定読み込み(設定名:String,初期値:bool=false)->bool:
+	return config.get_value("システム設定",設定名,初期値)
+
+func システム設定書き込み(設定名:String,入力値:bool)->void:
+	config.set_value("システム設定",設定名,入力値)
+
 
 
 # --- フラグ管理 (文字列があるかないか) ---

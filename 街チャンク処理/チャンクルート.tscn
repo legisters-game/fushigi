@@ -24,7 +24,10 @@ filter_walkable_low_height_spans = true
 script/source = "extends BoxShape3D
 #0.7~3
 func _init() -> void:
-	size=Vector3(15,20,15)*1
+	if データロガー.システム設定読み込み(\"軽量化\"):
+		size=Vector3(15*0.88,20,15*0.88)
+	else:
+		size=Vector3(15,20,15)*1
 "
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s5hho"]

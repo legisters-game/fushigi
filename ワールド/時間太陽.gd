@@ -24,6 +24,8 @@ var シグナル:Dictionary={"夜":false,"真夜":false,"朝":false,"真昼":fal
 
 func _ready() -> void:
 	#time=時間辞書[時間.真夜]
+	if データロガー.システム設定読み込み("影オフ"):
+		shadow_enabled=false
 	while true:
 		await  get_tree().create_timer(1).timeout
 		#print(time)
