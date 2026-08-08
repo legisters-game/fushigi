@@ -56,12 +56,13 @@ metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
 
 [sub_resource type="Resource" id="Resource_8p5mg"]
 script = ExtResource("3_u7psy")
-"セリフ" = "いやークリスタルは楽しいね！"
+"セリフ" = "やっぱりマイクラはクリスタルよ"
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_72tv7"]
 script = ExtResource("3_u7psy")
-"セリフ" = "もう５連勝だよ！"
+"セリフ" = "まだ今日2連勝までしか言ってない...; ;"
+"表情" = 10
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_dsgk7"]
@@ -88,19 +89,18 @@ metadata/_custom_type_script = "uid://2jb1vfql7n4p"
 
 [sub_resource type="Resource" id="Resource_8d0ks"]
 script = ExtResource("3_u7psy")
-"セリフ" = "は！？"
+"セリフ" = "ん...?"
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_8kg7c"]
 script = ExtResource("3_u7psy")
-"セリフ" = "な、なんてことするのさぁ
-酷いなぁ"
+"セリフ" = "何やってんの?せっかく眠り深かったのに..."
 "表情" = 10
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_ykyjb"]
 script = ExtResource("3_u7psy")
-"セリフ" = "もう少し寝かせてくれよ"
+"セリフ" = "もう少し寝かせて、次起こしたら怒るよ"
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_4yprr"]
@@ -127,7 +127,7 @@ metadata/_custom_type_script = "uid://2jb1vfql7n4p"
 
 [sub_resource type="Resource" id="Resource_nu31w"]
 script = ExtResource("3_u7psy")
-"セリフ" = "おはよう！"
+"セリフ" = "おはよ...クソ眠い"
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_5t8nk"]
@@ -145,7 +145,7 @@ metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_obt1j"]
 script = ExtResource("3_u7psy")
-"セリフ" = "残念！僕はフォトナをやっていました！"
+"セリフ" = "はずれ~！僕はフォトナをやっていました！"
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_1q667"]
@@ -175,7 +175,12 @@ metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
 
 [sub_resource type="Resource" id="Resource_pb8dk"]
 script = ExtResource("3_u7psy")
-"セリフ" = "いやーフォトナは楽しいね！"
+"セリフ" = "フォトナ敵強い..."
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_4j10k"]
+script = ExtResource("3_u7psy")
+"セリフ" = "ランクゴールドから上がらない; ;"
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_j3e5s"]
@@ -183,7 +188,7 @@ script = ExtResource("2_2gisd")
 "名前" = "いろいろ"
 "開始時間" = 0.8
 "終了時間" = 1.0
-"セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_id0nj"), SubResource("Resource_pb8dk")])
+"セリフ" = Array[ExtResource("3_u7psy")]([SubResource("Resource_id0nj"), SubResource("Resource_pb8dk"), SubResource("Resource_4j10k")])
 metadata/_custom_type_script = "uid://2jb1vfql7n4p"
 
 [resource]
