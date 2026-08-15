@@ -224,12 +224,14 @@ transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.8763666, 0.0
 transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 1.1722074, 0.05384493, -0.108863354)
 
 [node name="キール部屋" type="Marker3D" parent="-112,176,a/中心/二階" unique_id=1247367835]
+process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.636368, -0.8295975, -0.04956436)
 
 [node name="キール部屋中" type="Marker3D" parent="-112,176,a/中心/二階/キール部屋" unique_id=1155449857]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4362869, 0)
 
 [node name="エレベーター出口2階" type="Marker3D" parent="-112,176,a/中心/二階" unique_id=641055650]
+process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.475769, 2.273201, -0.08522797)
 
 [node name="街レベルゲート" parent="-112,176,a/中心/二階" unique_id=437996489 instance=ExtResource("8_3n34v")]
@@ -250,6 +252,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3062744, 0.23242188, -0.968
 shape = SubResource("BoxShape3D_vl8wc")
 
 [node name="Marker3D" type="Marker3D" parent="-112,176,a/中心/二階/エレベーターゲート" unique_id=86959665]
+process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0312195, -7.6293945e-06)
 
 [node name="部屋" type="Node3D" parent="-112,176,a/中心/二階" unique_id=1937815635]
@@ -404,7 +407,6 @@ directional_shadow_split_1 = 0.092
 directional_shadow_split_2 = 0.239
 directional_shadow_blend_splits = true
 directional_shadow_max_distance = 176.5
-day_length = 5400.0
 top = Color(0.28599998, 0.43766668, 0.65, 1)
 "夜top" = Color(0, 0, 0, 1)
 

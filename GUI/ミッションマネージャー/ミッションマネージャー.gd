@@ -37,20 +37,52 @@ func ミッション進行度更新()->void:
 			if get_node("VBoxContainer/HBoxContainer").has_node(i[0].ミッション名):
 				get_node("VBoxContainer/HBoxContainer").get_node(i[0].ミッション名).バー更新(データロガー.ミッション条件取得(i[0].条件フラグ))
 
-func ミッション取得()->Dictionary[String,Array]:
-	var 空辞書:Dictionary[String,Array]
+func ミッション取得() -> Dictionary[String, Array]:
+	var 結果辞書: Dictionary[String, Array] = {}
 	if !データロガー.config.has_section("ミッションフラグ"):
-		return 空辞書
-	var ミッションフラグリスト:PackedStringArray=データロガー.config.get_section_keys("ミッションフラグ")
-	for i:String in ミッションフラグリスト:
-		空辞書.set(i,[データロガー.ミッションオブジェクト取得(i),データロガー.ミッションオブジェクト取得(i).優先度])
-		if !$VBoxContainer/HBoxContainer.has_node(空辞書[i][0].ミッション名):
-			var ミッションセルノード:ミッション表示セル= ミッションセルパック.instantiate()
-			$VBoxContainer/HBoxContainer.add_child(ミッションセルノード,true)
-			ミッションセルノード.初期化(空辞書[i][0].ミッション名,空辞書[i][0].表示用条件,空辞書[i][0].条件数)
-		#get_node("VBoxContainer/HBoxContainer/Control").初期化(空辞書[i].ミッション名,空辞書[i].表示用条件,空辞書[i].条件数)
-		
-	return 空辞書
+		return 結果辞書
+
+	var ミッションフラグリスト: PackedStringArray = データロガー.config.get_section_keys("ミッションフラグ")
+	var メインリスト: Array = []
+	var サブリスト: Array = []
+
+	# 1. データの取得とメイン／サブの振り分け
+	for フラグ: String in ミッションフラグリスト:
+		var オブジェクト:ミッションデータ = データロガー.ミッションオブジェクト取得(フラグ)
+		var 要素: Array = [オブジェクト, オブジェクト.優先度]
+		結果辞書[フラグ] = 要素
+
+		if オブジェクト.サブ:
+			サブリスト.append(要素)
+		else:
+			メインリスト.append(要素)
+
+	# 2. 優先度の高い順（降順）にそれぞれソート
+	メインリスト.sort_custom(func(a, b): return a[1] > b[1])
+	サブリスト.sort_custom(func(a, b): return a[1] > b[1])
+
+	# 3. メインの後にサブを結合
+	var ソート済み全リスト: Array = メインリスト + サブリスト
+
+	# 4. GUI上の表示順（ノード順）をソート結果に合わせて生成・移動
+	var コンテナ:VBoxContainer = $VBoxContainer/HBoxContainer
+	for i:int in range(ソート済み全リスト.size()):
+		var ミッション:ミッションデータ = ソート済み全リスト[i][0]
+		var ノード名: String = ミッション.ミッション名
+		var セルノード: ミッション表示セル
+
+		if not コンテナ.has_node(ノード名):
+			セルノード = ミッションセルパック.instantiate()
+			セルノード.name = ノード名
+			コンテナ.add_child(セルノード, true)
+			セルノード.初期化(ミッション.ミッション名, ミッション.表示用条件, ミッション.条件数)
+		else:
+			セルノード = コンテナ.get_node(ノード名) as ミッション表示セル
+
+		# コンテナ内の表示順序をソート結果のインデックスに合わせる
+		コンテナ.move_child(セルノード, i)
+
+	return 結果辞書
 
 
 func キャラスケジュール取得(NPC番号:スケジュール管理クラス.NPC)->Array[NPCスケジューラ]:

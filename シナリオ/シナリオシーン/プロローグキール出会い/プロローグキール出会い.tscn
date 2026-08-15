@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://blg0wki80emvo" path="res://シナリオ/演出基盤.tscn" id="1_lf3t1"]
 [ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="2_e4iu5"]
+[ext_resource type="Resource" uid="uid://c3pi3kffcft0g" path="res://セリフ/ボイスセリフ.tres" id="3_e4iu5"]
 [ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="3_oiqgr"]
 [ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="4_p3ojn"]
 [ext_resource type="Resource" uid="uid://d2mlfpv0ko2vg" path="res://シナリオ/シナリオシーン/プロローグキール出会い/キール温泉待機.tres" id="5_lf3t1"]
@@ -132,10 +133,13 @@ tracks/0/path = NodePath(".:セリフ管理")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0333, 3.9667, 4, 12.2333, 12.2667, 14.7667, 14.8, 22, 25, 25.0333, 26.7, 31.0333, 31.0667, 36, 36.1, 38.6456, 38.7333, 42, 43),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.0333, 2.11, 3.9667, 4, 12.2333, 12.2667, 14.7667, 14.8, 22, 25, 25.0333, 26.7, 31.0333, 31.0667, 36, 36.1, 38.6456, 38.7333, 42, 43),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": ["キール", 0],
+"method": &"セリフ呼び出し"
+}, {
+"args": ["", 10],
 "method": &"セリフ呼び出し"
 }, {
 "args": [],
@@ -291,7 +295,7 @@ _data = {
 }
 
 [node name="演出基盤" unique_id=854987473 node_paths=PackedStringArray("削除対象") instance=ExtResource("1_lf3t1")]
-"セリフ集" = Array[ExtResource("2_e4iu5")]([SubResource("Resource_tpii3"), SubResource("Resource_fuf43"), SubResource("Resource_44g08"), SubResource("Resource_qfw6f"), SubResource("Resource_jm56n"), SubResource("Resource_iyqnj"), SubResource("Resource_411kn"), SubResource("Resource_85kx7"), SubResource("Resource_1uil7"), SubResource("Resource_xvhs4")])
+"セリフ集" = Array[ExtResource("2_e4iu5")]([SubResource("Resource_tpii3"), SubResource("Resource_fuf43"), SubResource("Resource_44g08"), SubResource("Resource_qfw6f"), SubResource("Resource_jm56n"), SubResource("Resource_iyqnj"), SubResource("Resource_411kn"), SubResource("Resource_85kx7"), SubResource("Resource_1uil7"), SubResource("Resource_xvhs4"), ExtResource("3_e4iu5")])
 "削除対象" = [NodePath("DirectionalLight3D"), NodePath("WorldEnvironment"), NodePath("マンション")]
 "再生前条件更新フラグ名" = "住人を見つける"
 "再生前条件フラグ加算数" = 1
@@ -319,7 +323,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85077286, 0)
 [node name="キール" parent="オブジェクト中心" index="5" unique_id=1106972114 instance=ExtResource("7_86ktm")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -0.9603119, -0.013031483, 0.58470917)
 "オーバーライド" = true
-"プレイヤーの見た目をジャック" = false
 "スキン" = ExtResource("8_lf3t1")
 
 [node name="キール" type="Marker3D" parent="オブジェクト中心/キール" index="2" unique_id=157259278]

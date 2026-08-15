@@ -120,7 +120,11 @@ layout_mode = 2
 [node name="選択肢ボタン3" parent="VBoxContainer" unique_id=1228976749 instance=ExtResource("3_74yma")]
 layout_mode = 2
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1072733858]
+volume_db = -13.0
+
 [connection signal="ログ進行" from="." to="." method="_on_ログ進行"]
 [connection signal="pressed" from="VBoxContainer/選択肢ボタン1" to="." method="_on_選択肢ボタン1_pressed"]
 [connection signal="pressed" from="VBoxContainer/選択肢ボタン2" to="." method="_on_選択肢ボタン2_pressed"]
 [connection signal="pressed" from="VBoxContainer/選択肢ボタン3" to="." method="_on_選択肢ボタン3_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

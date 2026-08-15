@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ddbs56n4ifwyk"]
+
+[ext_resource type="PackedScene" uid="uid://dqniwtybwknaw" path="res://エンティティ/NPC/マイクラNPC.tscn" id="1_n2jmn"]
+
+[node name="りゅー" unique_id=1396265163 instance=ExtResource("1_n2jmn")]
+
+[node name="GeneralSkeleton" parent="原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(652042102, 231553116) index="0" unique_id=1885119474]
+bones/11/rotation = Quaternion(-0.03512821, -0.018168267, -0.084393635, 0.99564743)
+bones/12/rotation = Quaternion(0.010954423, -0.0003576455, 0.022277035, 0.99969184)
+bones/13/rotation = Quaternion(-0.09562891, -0.01647644, 0.0068949647, 0.9952568)
+bones/41/rotation = Quaternion(0.011339364, -0.0017952252, 0.021743791, 0.99969774)
+bones/42/rotation = Quaternion(0.5265277, -0.45766813, -0.5750926, -0.42729032)
+bones/43/rotation = Quaternion(0.034792442, 0.85120565, -0.51816016, 0.07581925)
+bones/44/rotation = Quaternion(0.16985683, 0.6864028, -0.16985683, 0.6864027)
+bones/45/rotation = Quaternion(0.010786356, -0.801799, -0.005376879, 0.5974723)
+bones/46/rotation = Quaternion(0.5121895, 0.4710859, 0.57858175, -0.4254212)
+bones/47/rotation = Quaternion(-0.08318347, 0.772661, -0.62929565, 0.007902975)
+bones/48/rotation = Quaternion(0.12778118, -0.69546515, 0.1277811, 0.6954654)
+bones/49/rotation = Quaternion(0.05189511, 0.78957623, 0.03591096, 0.61039877)
+bones/51/rotation = Quaternion(-0.06459689, 0.029054763, 0.9934701, -0.08944557)
+bones/52/rotation = Quaternion(-0.010302967, 0.9865546, -0.1527355, -0.05723486)
+bones/53/rotation = Quaternion(0.052545283, 0.1341658, 0.982974, -0.11402056)
+bones/54/rotation = Quaternion(-0.0007117234, 0.9502897, -0.30692464, 0.05240419)
+
+[node name="R_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
+transform = Transform3D(-0.11831249, -0.043678246, -0.9920153, -0.96436757, 0.24313524, 0.10430991, 0.23663783, 0.96900845, -0.07088783, 0.051028743, 1.0113456, 0.13053754)
+
+[node name="L_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
+transform = Transform3D(-0.11831249, -0.043678246, -0.9920153, -0.96436757, 0.24313524, 0.10430991, 0.23663783, 0.96900845, -0.07088783, 0.23256752, 0.9922569, 0.14350997)
+
+[node name="head" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
+transform = Transform3D(0.9920153, 0.11831249, -0.043678246, -0.10430991, 0.96436757, 0.24313524, 0.07088783, -0.23663783, 0.96900845, 0.10756857, 0.72262704, -0.04163023)
+
+[editable path="原点/モデル"]

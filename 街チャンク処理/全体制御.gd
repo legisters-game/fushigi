@@ -13,31 +13,48 @@ var 読み込みチャンクシグナル有効:bool
 signal 読み込み完了シグナル
 signal レベル読み込み完了シグナル
 @export  var 実験:ミッションデータ
-# Called when the node enters the scene tree for the first time.
+@export  var 実験2:ミッションデータ
+
 func _ready() -> void:
-	#await get_tree().create_timer(1).timeout
+	システム設定関係()
+	
+	#ミッション保存テスト
 	データロガー.ミッションフラグ追加(実験)
+	データロガー.ミッションフラグ追加(実験2)
 	データロガー.全保存()
 	
-	
+	#セーブデータからディメンション情報を取得
 	ディメンション=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.ディメンション,"オープンワールド")
 	ディメンション階層=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.ディメンション階層,0)
 	
 	if ディメンション!="オープンワールド":
+		#位置はセーブデータの位置でオーバーライドする。この関数でプレイヤー操作が有効になる
 		レベル移動(ディメンション,0,ディメンション階層,true)
-		
 		
 		await レベル読み込み完了シグナル
 		get_tree().get_first_node_in_group("プレイヤー").プレイヤーロード()
 	else:
+		#先行で位置を移動させ、チャンクを読み込ませる
 		get_tree().get_first_node_in_group("プレイヤー").global_position=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.座標,Vector3.ZERO)
 		#await get_tree().create_timer(0.1).timeout
 		読み込みチャンクシグナル送信スタート()
 		get_node("Control/画面フェード").フェードイン待機(self)
 		await 読み込み完了シグナル
 		get_tree().get_first_node_in_group("プレイヤー").プレイヤーロード()
-		get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
+		get_tree().get_first_node_in_group("プレイヤー").操作停止(false)
+	#実験はここで行う↓
+	await  get_tree().create_timer(2).timeout
+	if !データロガー.フラグあるか("最初の演出完了"):
+		シナリオ演出実行("res://シナリオ/シナリオシーン/プロローグ1目覚め/プロローグ1目覚め.tscn")
 	
+	#自動セーブ機能 データは更新せず、ストレージにファイルを保存するだけ
+	while true:
+		await get_tree().create_timer(50).timeout
+		データロガー.全保存()
+
+##順次追加予定
+func システム設定関係()->void:
+	#システム設定関係
 	if データロガー.システム設定読み込み("軽量化"):
 		get_world_3d().environment.sdfgi_enabled=false
 		get_viewport().scaling_3d_scale=0.8
@@ -55,36 +72,34 @@ func _ready() -> void:
 		get_viewport().use_taa=true
 	else:
 		get_viewport().use_taa=false
-	
-	await  get_tree().create_timer(2).timeout
-	if !データロガー.フラグあるか("最初の演出完了"):
-		シナリオ演出実行("res://シナリオ/シナリオシーン/プロローグ1目覚め/プロローグ1目覚め.tscn")
-	
-	
-	while true:
-		await get_tree().create_timer(50).timeout
-		データロガー.全保存()
 
+
+##プレイヤーをレベルに移動させます。[br]
+##レベル：レベル(レベル基礎)のシーンパス[br]
+##番号:テレポート先の位置リスト番号[br]
+##階層:何階を有効にするか[br]
+##フェードアウトオフ:部屋移動など小規模移動時に使うかも？
 func レベル移動(レベル:String, 番号:int=0,階層:int=0,フェードアウトオフ:bool=false)->void:
 	#シーンの演出
-	get_tree().get_first_node_in_group("プレイヤー").レベル移動中=true
-	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=true
-	get_tree().get_first_node_in_group("プレイヤー").move_direction=Vector3.ZERO
+	get_tree().get_first_node_in_group("プレイヤー").操作停止()
 	if not フェードアウトオフ:
 		get_node("Control/画面フェード").フェードアウト()
+	#街復帰時、この位置に移動させるため
 	都市プレイヤー座標=get_tree().get_first_node_in_group("プレイヤー").global_position
+	#プレイヤーが建物内に入る演出用
 	await get_tree().create_timer(1).timeout
 	get_tree().get_first_node_in_group("プレイヤー").簡易移動停止()
+	
 	var レベルシーン:PackedScene=load(レベル)
-	レベルルート=レベルシーン.instantiate()
+	var レベルルートローカル:レベル基礎クラス=レベルシーン.instantiate()
 	for i:Node in get_node("レベル").get_children():
 		i.queue_free()
-	get_node("レベル").add_child(レベルルート)
-	レベルルート=レベルルート
-	レベルルート.階層有効(階層)
+	get_node("レベル").add_child(レベルルートローカル)
+	レベルルート=レベルルートローカル
+	レベルルートローカル.階層有効(階層)
 	#エレベーターの場合
-	if レベルルート is エレベーターレベルクラス:
-		レベルルート.初期化(番号)
+	if レベルルートローカル is エレベーターレベルクラス:
+		レベルルートローカル.初期化(番号)
 		番号=0
 		データロガー.ディメンションセーブロック=true
 	else:
@@ -93,7 +108,7 @@ func レベル移動(レベル:String, 番号:int=0,階層:int=0,フェードア
 	if has_node("都市3d仮"):
 		var 全体都市=get_node("都市3d仮")
 		remove_child(全体都市)
-	単純ワープ(レベルルート.テレポート先[番号])
+	単純ワープ(レベルルートローカル.テレポート先[番号])
 	レベル読み込み完了シグナル.emit()
 	ディメンション=レベル
 	ディメンション階層=階層
@@ -101,9 +116,8 @@ func レベル移動(レベル:String, 番号:int=0,階層:int=0,フェードア
 	データロガー.全保存()
 	get_node("Control/画面フェード").フェードイン()
 	await get_tree().create_timer(2).timeout
-	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
 	get_tree().get_first_node_in_group("プレイヤー").操作ロック前位置=get_tree().get_first_node_in_group("プレイヤー").global_position
-	get_tree().get_first_node_in_group("プレイヤー").レベル移動中=false
+	get_tree().get_first_node_in_group("プレイヤー").操作停止(false)
 	
 func 単純ワープ(ワープ先マーカー:Marker3D,フェードアウト:bool=false)->void:
 	if フェードアウト:
@@ -118,20 +132,17 @@ func 単純ワープ(ワープ先マーカー:Marker3D,フェードアウト:boo
 		await get_tree().create_timer(1).timeout
 		get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
 
-
+##マーカを付けたときだけその位置で都市に戻る
 func 都市戻り(プレイヤー座標マーカー:Marker3D=null)->void:
-	get_tree().get_first_node_in_group("プレイヤー").レベル移動中=true
-	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=true
-	get_tree().get_first_node_in_group("プレイヤー").move_direction=Vector3.ZERO
 	get_node("Control/画面フェード").フェードアウト()
+	get_tree().get_first_node_in_group("プレイヤー").操作停止()
 	await get_tree().create_timer(1).timeout
 	get_tree().get_first_node_in_group("プレイヤー").簡易移動停止()
 	if プレイヤー座標マーカー:
 		都市プレイヤー座標=プレイヤー座標マーカー.global_position
-	for i in get_node("レベル").get_children():
-		i.queue_free()
+	for レベルノード:Node in get_node("レベル").get_children():
+		レベルノード.queue_free()
 	var 街シーン:PackedScene=load("res://街チャンク処理/都市3d仮.tscn")
-	
 	add_child(街シーン.instantiate())
 	get_tree().get_first_node_in_group("プレイヤー").global_position=都市プレイヤー座標
 	ディメンション="オープンワールド"
@@ -141,9 +152,8 @@ func 都市戻り(プレイヤー座標マーカー:Marker3D=null)->void:
 	get_node("Control/画面フェード").フェードイン待機(self)
 	await get_tree().create_timer(0.1).timeout
 	get_tree().get_first_node_in_group("プレイヤー").global_position=都市プレイヤー座標
-	await get_tree().create_timer(1.8).timeout
-	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
-	get_tree().get_first_node_in_group("プレイヤー").レベル移動中=false
+	await get_tree().create_timer(1.5).timeout
+	get_tree().get_first_node_in_group("プレイヤー").操作停止(false)
 
 	
 
@@ -153,12 +163,9 @@ func ディメンション返し()->String:
 func ディメンション階層返し()->int:
 	return ディメンション階層
 
-	
 func 読み込みチャンクシグナル送信スタート()->void:
 	読み込み中チャンク=[]
 	読み込みチャンクシグナル有効=true
-
-
 
 func 読み込み追加(チャンク:String)->void:
 	if 読み込み中チャンク.has(チャンク) or not 読み込みチャンクシグナル有効:
@@ -218,6 +225,7 @@ func シナリオ演出実行(演出パス: String):
 		get_node("NPC制御").hide()
 		get_tree().get_first_node_in_group("プレイヤー").hide()
 		演出インスタンス.演出開始()
+
 
 func _演出終了後の後処理(インスタンス: 演出基盤クラス):
 	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://c3pi3kffcft0g"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_igpgt"]
+[ext_resource type="AudioStream" uid="uid://2yosveik54jo" path="res://セリフ/Output.wav" id="2_wvic2"]
+
+[resource]
+script = ExtResource("1_igpgt")
+"セリフ" = "ゆっくりしていってね"
+"ボイス" = ExtResource("2_wvic2")
+metadata/_custom_type_script = "uid://4uxnotone8su"

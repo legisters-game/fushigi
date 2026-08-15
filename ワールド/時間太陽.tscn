@@ -9,7 +9,6 @@ light_energy = 1.863
 shadow_enabled = true
 shadow_opacity = 0.8
 script = ExtResource("1_n5qdj")
-day_length = 3600.0
 top = Color(0.3355, 0.42487502, 0.55, 1)
 ho = Color(0.44889998, 0.533655, 0.67, 1)
 "夕top" = Color(0.78, 0.247, 0, 1)

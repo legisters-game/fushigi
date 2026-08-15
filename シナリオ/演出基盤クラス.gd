@@ -26,6 +26,8 @@ var 都市ルート:オープンワールド管理クラス
 var 表示リスト:Array[String]
 var 一時チャンク解放用:Array[チャンク管理クラス]
 var 停止準備完了: bool = false
+var セリフ再生中:bool
+var 音声有効:bool
 
 func _ready() -> void:
 	if has_node("街全体ビュー"):
@@ -69,6 +71,7 @@ func _ready() -> void:
 		else:
 			for デバッグ用削除ノード:Node in 削除対象:
 				デバッグ用削除ノード.queue_free()
+		音声有効=データロガー.システム設定読み込み("音声有効")
 	print(表示リスト)
 	var スキップカウンター:int=0
 	while true and not Engine.is_editor_hint():
@@ -102,7 +105,13 @@ func セリフ呼び出し(誰: String,番号: int):
 
 
 func セリフ表示(誰: String, 内容: セリフオブジェクト):
-	if not get_tree().get_first_node_in_group("UI"):return
+	if not get_tree().get_first_node_in_group("UI"):
+		get_tree().root.add_child(load("res://GUI/UI.tscn").instantiate())
+		for デバッグ用UI:Control in get_tree().get_first_node_in_group("UI").get_children():
+			if not デバッグ用UI is メッセージボックスクラス:
+				デバッグ用UI.hide()
+		#var s:PackedScene
+		#s.instantiate()
 	var ボックス:メッセージボックスクラス = get_tree().get_first_node_in_group("UI").get_node("メッセージボックス")
 	
 	# ボックスを表示状態にする（既存の表示ロジックの一部を流用）
@@ -110,10 +119,16 @@ func セリフ表示(誰: String, 内容: セリフオブジェクト):
 	if 誰!="":ボックス.名前.text = 誰
 	else:誰=ボックス.名前.text
 	ボックス.メッセージラベル.text = 内容.セリフ
+	if 音声有効:
+		ボックス.get_node("AudioStreamPlayer").stream=内容.ボイス
+		ボックス.get_node("AudioStreamPlayer").play()
+		
+	
 	var 対象:Node3D=エンティティ取得(誰)
 	if 対象:
 		対象.表情切り替え(内容.表情)
-
+		
+		
 	# 【重要】ここでアニメを止め、プレイヤーがボタンを押すまで待つ
 	# メッセージボックスクラスが発行するシグナルを待機する
 	#アニメ.pause()
@@ -127,7 +142,7 @@ func セリフ表示(誰: String, 内容: セリフオブジェクト):
 	アニメーション.play()
 
 func 停止ポイント設定():
-	if not get_parent() is Node3D:
+	if not get_parent() is Node3D and not get_tree().get_first_node_in_group("UI"):
 		return
 	停止準備完了 = true
 	アニメーション.pause() # ここでアニメが止まる
@@ -161,8 +176,11 @@ func フェード(アウト:bool=false)->void:
 		else:
 			フェードアウト.フェードイン()
 
-
-
+func リスト内レベル基礎判断(リスト:Array[Node])->bool:
+	for i:Node in リスト:
+		if i is レベル基礎クラス:
+			return true
+	return false
 func 調整用街表示(デバッグ=false)->void:
 	if has_node("街全体ビュー"):
 		get_node("街全体ビュー").queue_free()
@@ -170,30 +188,31 @@ func 調整用街表示(デバッグ=false)->void:
 	
 	print_rich("[color=green]街読み込み中…[/color]")
 	await  get_tree().create_timer(0.01).timeout
-	var シーン:PackedScene=load("res://使わない/街全体ビュー.tscn")
-	var ノード:デバッグ用街シーン=シーン.instantiate()
-	ノード.set("デバッグ",デバッグ)
-	add_child(ノード)
-	if Engine.is_editor_hint():
-		var アタッチスクリプト:Script= load("res://使わない/演出チャンク定義ツール.gd")
-		#前提として子ノードは1つしか存在しないはずのため↓
-		for 子ノード:Node3D in ノード.get_children()[0].get_children():
-			var メッシュ:MeshInstance3D=子ノード.get_children()[0]
-			if メッシュ is MeshInstance3D:
-				メッシュ.set_script(アタッチスクリプト)
-				メッシュ.set("演出基盤",self)
-				メッシュ.owner=self
-	#シーンとして保存させないため↓
-	#ノード.owner=self
-	ノード.position.y=-50
-	ノード.rotation_degrees.x=0
-	ノード.scale=Vector3(16,16,16)
+	if Engine.is_editor_hint() or not Engine.is_editor_hint() and not リスト内レベル基礎判断(削除対象):
+		var シーン:PackedScene=load("res://使わない/街全体ビュー.tscn")
+		var ノード:デバッグ用街シーン=シーン.instantiate()
+		ノード.set("デバッグ",デバッグ)
+		add_child(ノード)
+		if Engine.is_editor_hint():
+			var アタッチスクリプト:Script= load("res://使わない/演出チャンク定義ツール.gd")
+			#前提として子ノードは1つしか存在しないはずのため↓
+			for 子ノード:Node3D in ノード.get_children()[0].get_children():
+				var メッシュ:MeshInstance3D=子ノード.get_children()[0]
+				if メッシュ is MeshInstance3D:
+					メッシュ.set_script(アタッチスクリプト)
+					メッシュ.set("演出基盤",self)
+					メッシュ.owner=self
+		#シーンとして保存させないため↓
+		#ノード.owner=self
+		ノード.position.y=-50
+		ノード.rotation_degrees.x=0
+		ノード.scale=Vector3(16,16,16)
 	
-	if not 表示リスト.is_empty():
-		var 街全体:Node3D=ノード.get_node("街全体ビュー")
-		for チャンクルート:Node3D in 街全体.get_children():
-			if not 表示リスト.has(チャンクルート.name):
-				チャンクルート.queue_free()
+		if not 表示リスト.is_empty():
+			var 街全体:Node3D=ノード.get_node("街全体ビュー")
+			for チャンクルート:Node3D in 街全体.get_children():
+				if not 表示リスト.has(チャンクルート.name):
+					チャンクルート.queue_free()
 	
 	print_rich("[color=green]完了！！[/color]")
 	

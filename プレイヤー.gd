@@ -144,7 +144,14 @@ func プレイヤーセーブ()->void:
 	super()
 	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.ディメンション,レベル制御.ディメンション返し())
 	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.ディメンション階層,レベル制御.ディメンション階層返し())
-	
+func 操作停止(する:bool=true)->void:
+	if する:
+		移動操作ロック=true
+		レベル移動中=true
+	else:
+		移動操作ロック=false
+		レベル移動中=false
+	move_direction=Vector3.ZERO
 func 座る(座標:Vector3=Vector3.ZERO)->void:
 	super(座標)
 	if 座標==Vector3.ZERO:

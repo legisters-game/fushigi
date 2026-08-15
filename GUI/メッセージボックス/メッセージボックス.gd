@@ -10,6 +10,8 @@ class_name メッセージボックスクラス
 @export var 追尾カメラ:追尾カメラクラス
 var 相手NPC:NPCクラス
 var 中断:bool
+var 選択肢中:bool
+var 音声有効:bool
 signal ログ進行(int)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,7 +23,7 @@ func _ready() -> void:
 	選択肢1.入力キー指定(キーマッピング.キー文字[キーマッピング.インプットイベントから入力イベントを文字で返す(InputMap.action_get_events("選択肢1")[0])])
 	選択肢2.入力キー指定(キーマッピング.キー文字[キーマッピング.インプットイベントから入力イベントを文字で返す(InputMap.action_get_events("選択肢2")[0])])
 	選択肢3.入力キー指定(キーマッピング.キー文字[キーマッピング.インプットイベントから入力イベントを文字で返す(InputMap.action_get_events("選択肢3")[0])])
-	
+	音声有効=データロガー.システム設定読み込み("音声有効")
 
 func 表示(誰:String,メッセージ内容:Array[セリフオブジェクト])->void:
 	show()
@@ -35,9 +37,14 @@ func 表示(誰:String,メッセージ内容:Array[セリフオブジェクト])
 	for i:セリフオブジェクト in メッセージ内容:
 		if 中断:break
 		メッセージラベル.text=i.セリフ
+		if i.ボイス and 音声有効:
+			$AudioStreamPlayer.stream=i.ボイス
+			$AudioStreamPlayer.play()
 		if 相手NPC:
 			相手NPC.表情切り替え(i.表情)
-			
+		
+		
+		選択肢中=i is セリフ分岐オブジェクト
 		if i is セリフ分岐オブジェクト:
 			await 分岐回帰ログ表示(i)
 		elif i is ファイナルセリフオブジェクト:
@@ -93,8 +100,12 @@ func 分岐回帰ログ表示(分岐セリフ:セリフ分岐オブジェクト)
 			for i:セリフオブジェクト in 分岐セリフ.選択1セリフ:
 				if 中断:break
 				メッセージラベル.text=i.セリフ
+				if i.ボイス and 音声有効:
+					$AudioStreamPlayer.stream=i.ボイス
+					$AudioStreamPlayer.play()
 				if 相手NPC:
 					相手NPC.表情切り替え(i.表情)
+				選択肢中=i is セリフ分岐オブジェクト
 				if i is セリフ分岐オブジェクト:
 					await 分岐回帰ログ表示(i)
 				elif i is ファイナルセリフオブジェクト:
@@ -106,8 +117,12 @@ func 分岐回帰ログ表示(分岐セリフ:セリフ分岐オブジェクト)
 			for i:セリフオブジェクト in 分岐セリフ.選択2セリフ:
 				if 中断:break
 				メッセージラベル.text=i.セリフ
+				if i.ボイス and 音声有効:
+					$AudioStreamPlayer.stream=i.ボイス
+					$AudioStreamPlayer.play()
 				if 相手NPC:
 					相手NPC.表情切り替え(i.表情)
+				選択肢中=i is セリフ分岐オブジェクト
 				if i is セリフ分岐オブジェクト:
 					await 分岐回帰ログ表示(i)
 				elif i is ファイナルセリフオブジェクト:
@@ -119,8 +134,12 @@ func 分岐回帰ログ表示(分岐セリフ:セリフ分岐オブジェクト)
 			for i:セリフオブジェクト in 分岐セリフ.選択3セリフ:
 				if 中断:break
 				メッセージラベル.text=i.セリフ
+				if i.ボイス and 音声有効:
+					$AudioStreamPlayer.stream=i.ボイス
+					$AudioStreamPlayer.play()
 				if 相手NPC:
 					相手NPC.表情切り替え(i.表情)
+				選択肢中=i is セリフ分岐オブジェクト
 				if i is セリフ分岐オブジェクト:
 					await 分岐回帰ログ表示(i)
 				elif i is ファイナルセリフオブジェクト:
@@ -128,7 +147,6 @@ func 分岐回帰ログ表示(分岐セリフ:セリフ分岐オブジェクト)
 					await ログ進行
 				else:
 					await ログ進行
-		
 		
 
 func _unhandled_input(_event: InputEvent) -> void:
@@ -156,3 +174,12 @@ func _on_選択肢ボタン2_pressed() -> void:
 
 func _on_選択肢ボタン3_pressed() -> void:
 	ログ進行.emit(2)
+
+
+func _on_audio_stream_player_finished() -> void:
+	if not 選択肢中:
+		if get_tree().get_first_node_in_group("全体制御") and get_tree().get_first_node_in_group("全体制御").has_node("演出ルート"): 
+			if get_tree().get_first_node_in_group("全体制御").get_node("演出ルート").get_child_count()!=0:
+				while not get_tree().get_first_node_in_group("全体制御").get_node("演出ルート").get_children()[0].停止準備完了:
+					await get_tree().create_timer(0.5).timeout
+		ログ進行.emit(0)

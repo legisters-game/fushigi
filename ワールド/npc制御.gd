@@ -17,7 +17,7 @@ func 目的地取得(対象: NPC) -> Dictionary[String, Variant]:
 	if not 全体スケジュール.has(対象):
 		基本辞書無し=true
 
-	var 現在時刻:float = 太陽.time
+	var 現在時刻:float = 太陽.現時間
 	
 	# 1. 既存のソート停止（強制到着）状態の確認
 	if ソート停止 and ソート停止.has(対象) and ソート停止[対象] and ソート停止[対象][0]:

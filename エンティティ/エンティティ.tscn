@@ -147,11 +147,14 @@ transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.9999999, 0, 0.9999999, -4
 shape = SubResource("SeparationRayShape3D_bsp01")
 
 [node name="原点" type="Marker3D" parent="." unique_id=1394227668]
+process_mode = 4
 
 [node name="カメラ基準点" type="Marker3D" parent="." unique_id=1770975331]
+process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1931739, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=623421787]
+process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99383, 0)
 visible = false
 mesh = SubResource("CapsuleMesh_o2cbv")
@@ -173,3 +176,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56912047, -0.57268906)
 shape = SubResource("BoxShape3D_o2cbv")
 
 [node name="ケツ" type="Marker3D" parent="." unique_id=674815463]
+process_mode = 4
