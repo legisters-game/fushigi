@@ -13,7 +13,3 @@ func ムービー中非表示()->void:
 func ムービー終了表示()->void:
 	for i:Control in ムービー中非表示リスト:
 		if i:i.show()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

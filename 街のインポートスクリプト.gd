@@ -1,11 +1,11 @@
 @tool
 extends EditorScenePostImport
 
-func _post_import(scene: Node):
+func _post_import(scene: Node)->Node:
 	var 関節シーン: PackedScene = load("res://街チャンク処理/チャンクルート.tscn")
 	
 	# get_children() はコピーを配列で取るので、ループ中の remove_child は安全です
-	for child in scene.get_children():
+	for child:Node in scene.get_children():
 		if child is MeshInstance3D:
 			# 1. 元の親から切り離す
 			scene.remove_child(child)

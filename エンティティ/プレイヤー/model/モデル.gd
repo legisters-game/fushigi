@@ -1,6 +1,7 @@
 @icon("res://拡張リソース/アイコン/拡張ノード/モデル.png")
 @tool
 extends Node3D
+class_name モデルクラス
 @export var スキン:CompressedTexture2D
 @export var メッシュ親:Node3D
 @export var メッシュ親2:Node3D
@@ -11,24 +12,24 @@ extends Node3D
 func _ready() -> void:
 	if not スキン:
 		return
-	for i in メッシュ親.get_children():
-		if i is MeshInstance3D:
-			for e:int in range(i.mesh.get_surface_count()):
+	for 暫定メッシュ:Node in メッシュ親.get_children():
+		if 暫定メッシュ is MeshInstance3D:
+			for インデックス:int in range(暫定メッシュ.mesh.get_surface_count()):
 				#print("ds")
-				var 元マテリアル:StandardMaterial3D=i.mesh.surface_get_material(e)
+				var 元マテリアル:StandardMaterial3D=暫定メッシュ.mesh.surface_get_material(インデックス)
 				var 新規マテリアル:StandardMaterial3D=元マテリアル.duplicate()
 				新規マテリアル.albedo_texture=スキン
-				i.set_surface_override_material(e,新規マテリアル)
+				暫定メッシュ.set_surface_override_material(インデックス,新規マテリアル)
 	
 	if メッシュ親2==null:return
-	for i in メッシュ親2.get_children():
-		if i is MeshInstance3D:
-			for e:int in range(i.mesh.get_surface_count()):
+	for 暫定メッシュ2:Node in メッシュ親2.get_children():
+		if 暫定メッシュ2 is MeshInstance3D:
+			for インデックス:int in range(暫定メッシュ2.mesh.get_surface_count()):
 				#print("ds")
-				var 元マテリアル:StandardMaterial3D=i.mesh.surface_get_material(e)
+				var 元マテリアル:StandardMaterial3D=暫定メッシュ2.mesh.surface_get_material(インデックス)
 				var 新規マテリアル:StandardMaterial3D=元マテリアル.duplicate()
 				新規マテリアル.albedo_texture=スキン
-				i.set_surface_override_material(e,新規マテリアル)
+				暫定メッシュ2.set_surface_override_material(インデックス,新規マテリアル)
 
 
 func 表情切り替え(切り替え表情:表情オブジェクト.表情)->void:

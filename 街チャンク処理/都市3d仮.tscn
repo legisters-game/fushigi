@@ -6,7 +6,7 @@
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_r3fl7"]
 plane = Plane(0, 0.225, 0, 0)
 
-[node name="都市3d仮" type="Node3D" unique_id=1006423857]
+[node name="都市3d仮" type="Node3D" unique_id=1006423857 groups=["チャンクルート"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35.094, 0)
 script = ExtResource("1_c8qmy")
 

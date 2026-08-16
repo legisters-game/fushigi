@@ -5,20 +5,24 @@ class_name チャンク管理クラス
 @export var マテリアル:StandardMaterial3D
 @export var デバッグあり:bool
 @export var ナビメッシュ:NavigationMesh
-var 保持:Node3D
-#@export var dssa:NavigationRegion3D
+
+##出現が完了したらtrue
 var 出現済み:bool
+##街が解放されたらtrue
 var 解放された:bool=true
+##ディレクトリ無し。名前だけ
 var 保存パス:String
+##内部パス:res
 var 内部保存パス:String
-
+##スレッドで読んでいる街のデータが保存されているパス
 var ロード中パス: String = ""
+##ロード中にtrue
 var ロード中: bool = false
-
-
-
+##ナビメッシュが入る条件式で使う
 var ナビ生成済み:NavigationMesh
+##強制表示中にtrue
 var 強制表示中:bool
+##論理的に表示されていることならばtrue
 var 理論表示中:bool
 signal 強制表示解除シグナル
 
@@ -167,42 +171,48 @@ func 真処理有無制御(有無:bool)->void:
 				# print("別スレッドでロード開始: ", name)
 	else:
 		#非表示側
-		if get_parent().get_parent() is レベル制御クラス:
-			get_parent().get_parent().読み込み完了(name)
+		if get_tree().get_first_node_in_group("全体制御") is レベル制御クラス:
+			get_tree().get_first_node_in_group("全体制御").読み込み完了(name)
+		
+		# ロード中のフラグを下ろすだけで、完了時の add_child をスキップさせる
 		if ロード中:
-			# ロード中のフラグを下ろすだけで、完了時の add_child をスキップさせる
 			ロード中 = false
 			ロード中パス = ""
 			# print("ロード中に範囲外に出たためキャンセル: ", name)
 		
+		#街メッシュのルートノード取得↓
 		var ルート:NavigationRegion3D
-		for i:Node3D in get_children():
-			if i is NavigationRegion3D:
-				ルート=i
+		for 子ノード:Node3D in get_children():
+			if 子ノード is NavigationRegion3D:
+				ルート=子ノード
 				break
+		#ルートを取得出来た場合↓
 		if ルート:
+			#出現したことをリセットする
 			出現済み=false
+			#ここで真のメッシュノードを取得する↓
 			var メッシュノード:MeshInstance3D
-			for e:Node3D in ルート.get_children():
-				if e is MeshInstance3D:
-					メッシュノード=e
+			for 子ノード:Node3D in ルート.get_children():
+				if 子ノード is MeshInstance3D:
+					メッシュノード=子ノード
 					break
+			#メッシュノード取得できた場合↓
 			if メッシュノード:
 				var アニメ:Tween=get_tree().create_tween()
 				アニメ.bind_node(メッシュノード)
 				アニメ.tween_property(メッシュノード,"transparency",1,1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 				await アニメ.finished
-				if 出現済み:
+				if 出現済み:#もし、消えている最中にプレイヤーが入ってきたら消すのをやめる
 					return
 				#メッシュノード.process_mode=Node.PROCESS_MODE_DISABLED
-				ナビ生成済み=ルート.navigation_mesh
+				ナビ生成済み=ルート.navigation_mesh#ナビメッシュを変数保持する。2度目は外部から読み込まない。
 				
-				
-				ルート.get_parent().remove_child(ルート)
+				ルート.get_parent().remove_child(ルート)#自身を消す。
 				ルート.queue_free()
+				#解放されたことを変数で保持する。
 				解放された=true
 				await get_tree().create_timer(10).timeout
-				ナビ生成済み=null
+				ナビ生成済み=null#十秒以内だけナビメッシュは保持される。
 
 ##街のメッシュをオーバーライドして視覚的にデバッグする[br]子がいないと機能しない
 func デバッグ(ブール:bool)->void:
@@ -250,15 +260,15 @@ func シグナル切断(ノード: Node)->void:
 
 func _process(_delta: float) -> void:
 	if ロード中:
-		var status = ResourceLoader.load_threaded_get_status(ロード中パス)
+		var ステータス = ResourceLoader.load_threaded_get_status(ロード中パス)
 		
-		match status:
+		match ステータス:
 			ResourceLoader.THREAD_LOAD_LOADED:
 				# ロード完了
 				#print("台無し")
-				var packed_scene = ResourceLoader.load_threaded_get(ロード中パス) as PackedScene
+				var シーンパッケージ:PackedScene = ResourceLoader.load_threaded_get(ロード中パス) as PackedScene
 				if ロード中: # 待機中に 有無:false が走っていないか最終チェック
-					_ロード完了処理(packed_scene)
+					_ロード完了処理(シーンパッケージ)
 					print("読み込み完了")
 				
 				ロード中 = false
@@ -268,33 +278,31 @@ func _process(_delta: float) -> void:
 				ロード中 = false
 				ロード中パス = ""
 
-				
-func _ロード完了処理(packed_scene: PackedScene)->void:
-	if packed_scene and 解放された:
-		var instance:Node = packed_scene.instantiate()
-		add_child(instance)
-		print(instance.name,"エラー箇所")
+func _ロード完了処理(シーンパッケージ: PackedScene)->void:
+	if シーンパッケージ and 解放された:
+		var インスタンス:Node = シーンパッケージ.instantiate()
+		add_child(インスタンス)
 		解放された = false
-		# ナビメッシュの設定やアニメーション開始
-		# （元の「for i in get_children():」以降のナビベイク・Tween処理をここに移動）
-		セットアップ完了通知(instance)
+		セットアップ完了通知(インスタンス)
 
 func セットアップ完了通知(_instance)->void:
 	var アニメーション用ナビ変数:NavigationRegion3D
 	
 	for 子ノード:Node in get_children():
 		if 子ノード is NavigationRegion3D:
+			#アニメーション用ナビ変数を取りに行く↓
 			アニメーション用ナビ変数=子ノード
+			#ナビが外部保存されているか
 			if not ナビ生成済み:
-				#外部保存されているか
-				var path:String="user://nv/"+str(name)+".res"
-				var nav_mesh:NavigationMesh = ResourceLoader.load(path) as NavigationMesh
-				if nav_mesh:
+				var パス:String="user://nv/"+str(name)+".res"
+				var ロードナビゲーションメッシュ:NavigationMesh = ResourceLoader.load(パス) as NavigationMesh
+				#内部リソースを参照しに行って、使用されていることを把握して、使用する↓
+				if ロードナビゲーションメッシュ:
 					#されてたら読み込み
-					子ノード.navigation_mesh=nav_mesh
+					子ノード.navigation_mesh=ロードナビゲーションメッシュ
 				else:
-					#されてなければ、ベイク書き込み
-					子ノード.navigation_mesh=ナビメッシュ.duplicate()
+					#されてなければ、ベイク書き込み、そして外部に保存する。
+					子ノード.navigation_mesh=ナビメッシュ.duplicate()#空のリソースとしてコピーを作成する。
 					#子ノード.navigation_mesh.border_size=0
 					#子ノード.navigation_mesh.cell_size=0.25
 					#子ノード.navigation_mesh.cell_height=0.01
@@ -303,14 +311,14 @@ func セットアップ完了通知(_instance)->void:
 					子ノード.navigation_mesh.agent_height=2.1
 					#await get_tree().create_timer(randi_range(1,60)).tim
 					子ノード.bake_navigation_mesh()
-						
-					var error:Error = ResourceSaver.save(子ノード.navigation_mesh, path)
+					
+					var error:Error = ResourceSaver.save(子ノード.navigation_mesh, パス)
 					if error == OK:
 						pass
 						#print("ナビメッシュの保存に成功しました: ", path)
 					else:
 						print("保存エラー: ", error)
-						
+			
 			elif ナビ生成済み:
 				子ノード.navigation_mesh=ナビ生成済み
 			else:
@@ -320,17 +328,20 @@ func セットアップ完了通知(_instance)->void:
 				await get_tree().create_timer(10).timeout
 				ナビ生成済み=null
 			break
+	#アニメーション用ナビ変数を取得できていた場合↓
 	if アニメーション用ナビ変数:
 		var メッシュノード:MeshInstance3D
-		for e:Node3D in アニメーション用ナビ変数.get_children():
-			if e is MeshInstance3D:
-				メッシュノード=e
+		#メッシュノード取得↓
+		for アニメーション用暫定ノード:Node3D in アニメーション用ナビ変数.get_children():
+			if アニメーション用暫定ノード is MeshInstance3D:
+				メッシュノード=アニメーション用暫定ノード
 				break
+		#メッシュノードを取得できていた場合↓
 		if メッシュノード:
 			var アニメ:Tween=get_tree().create_tween()
 			メッシュノード.transparency=1
 			アニメ.bind_node(メッシュノード)
 			アニメ.tween_property(メッシュノード,"transparency",0,1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
 			await アニメ.finished
-			if get_parent().get_parent() is レベル制御クラス:
-				get_parent().get_parent().読み込み完了(name)
+			if get_tree().get_first_node_in_group("全体制御") is レベル制御クラス:
+				get_tree().get_first_node_in_group("全体制御").読み込み完了(name)

@@ -7,9 +7,9 @@ func _on_body_entered(body: Node3D) -> void:
 		if not body.レベル制御 or body.レベル移動中:return
 		body.移動操作ロック=true
 		var 位置マーカー:Marker3D
-		for i in get_children():
-			if i is Marker3D:
-				位置マーカー=i
+		for 子ノード:Node in get_children():
+			if 子ノード is Marker3D:
+				位置マーカー=子ノード
 				break
 		if 位置マーカー:
 			#var 上書きプレイヤー復帰位置:Vector3

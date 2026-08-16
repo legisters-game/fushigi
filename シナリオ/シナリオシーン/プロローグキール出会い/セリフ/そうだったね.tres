@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://d0f7ubtr6eyr"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_hi8wn"]
+[ext_resource type="AudioStream" uid="uid://b6gsv4xncc8kb" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/音声/そうだったね.wav" id="2_g21pn"]
+
+[resource]
+script = ExtResource("1_hi8wn")
+"セリフ" = "そうだったね…
+ようこそ この街へ、、。
+せっかくだし、出会い記念に温泉にでも行くか。"
+"ボイス" = ExtResource("2_g21pn")
+metadata/_custom_type_script = "uid://4uxnotone8su"

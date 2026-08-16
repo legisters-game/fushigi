@@ -25,11 +25,11 @@ func _physics_process(delta: float) -> void:
 	if not 目標:
 		return
 		
-	var local_current = get_parent().to_local(global_position)
-	var local_target = get_parent().to_local(目標.カメラ基準.global_position)
+	var local_current:Vector3 = get_parent().to_local(global_position)
+	var local_target:Vector3 = get_parent().to_local(目標.カメラ基準.global_position)
 	
 	# ローカル空間の中でだけ、なめらかに追従させる
-	var local_next = lerp(local_current, local_target, delta * 速さ)
+	var local_next:Vector3 = lerp(local_current, local_target, delta * 速さ)
 	
 	# 最終的な位置をグローバルに変換して適用
 	global_position = get_parent().to_global(local_next)

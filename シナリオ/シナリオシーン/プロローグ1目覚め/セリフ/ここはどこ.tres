@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://b6fkvv1kddmup"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_a4icp"]
+[ext_resource type="AudioStream" uid="uid://c5srgq2gqlya5" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/ボイス/ここはどこ？.wav" id="2_xdrw7"]
+
+[resource]
+script = ExtResource("1_a4icp")
+"セリフ" = "ここはどこ？"
+"ボイス" = ExtResource("2_xdrw7")
+metadata/_custom_type_script = "uid://4uxnotone8su"

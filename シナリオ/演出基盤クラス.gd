@@ -34,8 +34,8 @@ func _ready() -> void:
 		var 街ノード:Node3D=get_node("街全体ビュー")
 		remove_child(街ノード)
 		街ノード.queue_free()
-	for i:String in 表示チャンク:
-		var チャンク名:String=ResourceUID.uid_to_path(i)
+	for 強制表示するチャンク:String in 表示チャンク:
+		var チャンク名:String=ResourceUID.uid_to_path(強制表示するチャンク)
 		if チャンク名.containsn(",a."):
 			#チャンク名=チャンク名.get_file()
 			チャンク名=チャンク名.get_file().split(".")[0]+"_Chunk"
@@ -87,11 +87,11 @@ func _ready() -> void:
 
 
 # 外部（メッセージボックス等）から再開させるために使う
-func アニメーション再開():
+func アニメーション再開()->void:
 	アニメーション.play()
 
 # 子クラスでこの関数をオーバーライドして中身を書く
-func 演出開始():
+func 演出開始()->void:
 	show()
 	if カメラ:
 		カメラ.make_current()
@@ -100,11 +100,11 @@ func 演出開始():
 	if プレイヤー再生前ワープ and get_tree().get_first_node_in_group("プレイヤー"):
 		get_tree().get_first_node_in_group("プレイヤー").global_position=$"オブジェクト中心/プレイヤー開始位置".global_position
 
-func セリフ呼び出し(誰: String,番号: int):
+func セリフ呼び出し(誰: String,番号: int)->void:
 	セリフ表示(誰, セリフ集[番号])
 
 
-func セリフ表示(誰: String, 内容: セリフオブジェクト):
+func セリフ表示(誰: String, 内容: セリフオブジェクト)->void:
 	if not get_tree().get_first_node_in_group("UI"):
 		get_tree().root.add_child(load("res://GUI/UI.tscn").instantiate())
 		for デバッグ用UI:Control in get_tree().get_first_node_in_group("UI").get_children():
@@ -141,18 +141,18 @@ func セリフ表示(誰: String, 内容: セリフオブジェクト):
 	ボックス.hide()
 	アニメーション.play()
 
-func 停止ポイント設定():
+func 停止ポイント設定()->void:
 	if not get_parent() is Node3D and not get_tree().get_first_node_in_group("UI"):
 		return
 	停止準備完了 = true
 	アニメーション.pause() # ここでアニメが止まる
 
-func エンティティ取得(名前:String):
+func エンティティ取得(名前:String)->Node:
 	return $"オブジェクト中心".get_node(名前)
 
 
 # アニメーションの最後や、特定のタイミングで呼び出す
-func 演出終了(フェードアウト有効:bool=false):
+func 演出終了(フェードアウト有効:bool=false)->void:
 	if get_tree().get_first_node_in_group("UI"): get_tree().get_first_node_in_group("UI").get_node("メッセージボックス").強制終了()
 	if フェードアウト有効:
 		if get_tree().get_first_node_in_group("UI"):

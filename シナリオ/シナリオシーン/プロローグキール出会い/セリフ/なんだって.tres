@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://b3dhwb30uh4fp"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_xuu2f"]
+[ext_resource type="AudioStream" uid="uid://1j534fshm4ny" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/音声/なんだって.wav" id="2_30x52"]
+
+[resource]
+script = ExtResource("1_xuu2f")
+"セリフ" = "なんだって！"
+"ボイス" = ExtResource("2_30x52")
+metadata/_custom_type_script = "uid://4uxnotone8su"

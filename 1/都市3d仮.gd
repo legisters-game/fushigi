@@ -16,7 +16,7 @@ func _ready() -> void:
 
 
 
-func okq():
+func okq()->void:
 	if not 全体表示:
 		全体表示=true
 		for i:Node in get_children():

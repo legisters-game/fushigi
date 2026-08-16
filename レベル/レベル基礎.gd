@@ -29,7 +29,3 @@ func 階層有効(階層番号:int)->void:
 		for i:Node3D in 階層処理切り替え用ノード:
 			if i!=ノード:i.queue_free() 
 	
-		
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

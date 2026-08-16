@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://j0piamh6s77i"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_ghc1o"]
+[ext_resource type="AudioStream" uid="uid://bsp7tlc6o6nnl" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/ボイス/それしか思い出せない.wav" id="2_57pj1"]
+
+[resource]
+script = ExtResource("1_ghc1o")
+"セリフ" = "それしか思い出せない…"
+"ボイス" = ExtResource("2_57pj1")
+metadata/_custom_type_script = "uid://4uxnotone8su"

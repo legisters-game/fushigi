@@ -6,7 +6,7 @@ class_name エンティティ
 @export var アニメツリー:AnimationTree
 #@export var 顔:MeshInstance3D
 #@export var 表情データ:表情オブジェクト
-@export var モデル:Node3D
+@export var モデル:モデルクラス
 @export var 攻撃判定:Area3D
 @export var 通常当たり判定:Array[CollisionShape3D]
 @export var 座り用当たり判定:Array[CollisionShape3D]
@@ -45,40 +45,40 @@ func _physics_process(delta: float):
 	move_and_slide()
 	update_animations(move_direction,delta)
 
-# 移動の計算
-func apply_movement(delta:float):
+##移動の計算
+func apply_movement(delta:float)->void:
 	# 重力処理（簡略化）
 	if not is_on_floor() :
 		velocity.y -= 10 * delta
 		
 	if 簡易移動中:
 		# 水平方向の距離を計算（高さYを無視する場合）
-		var current_pos = global_transform.origin
-		var target_pos = 簡易目的地
-		target_pos.y = current_pos.y # 高さは無視して平面で距離判定
+		var 現在位置:Vector3 = global_transform.origin
+		var 目標位置:Vector3 = 簡易目的地
+		目標位置.y = 現在位置.y # 高さは無視して平面で距離判定
 		
-		if current_pos.distance_to(target_pos) > 簡易到着許容距離:
+		if 現在位置.distance_to(目標位置) > 簡易到着許容距離:
 			# 目的地への方向ベクトルを計算
-			move_direction = (target_pos - current_pos).normalized()
+			move_direction = (目標位置 - 現在位置).normalized()
 		else:
 			# 到着した場合
 			簡易移動停止()
 	
 	# move_direction（絶対座標系）に基づいて速度を設定
 	if 簡易中強制歩き:move_direction = move_direction/2.0
-	var target_vel = move_direction * SPEED#*delta*30#*70
-	velocity.x = target_vel.x
-	velocity.z = target_vel.z
+	var 目標速度:Vector3 = move_direction * SPEED#*delta*30#*70
+	velocity.x = 目標速度.x
+	velocity.z = 目標速度.z
 	if 重力無効:
-		velocity.y = target_vel.y
+		velocity.y = 目標速度.y
 
 # 回転の計算（進んでいる方向を向く）
-func apply_rotation(delta:float):
+func apply_rotation(delta:float)->void:
 	if move_direction.length() > 0.1:
 		# 進みたい方向への角度を計算
-		var target_angle:float = atan2(move_direction.x, move_direction.z)
+		var 目標角度:float = atan2(move_direction.x, move_direction.z)
 		# 現在の回転を目標の回転へ補完（スムーズに回転させる）
-		global_rotation.y = learn_angle(global_rotation.y, target_angle, rotation_speed * delta)
+		global_rotation.y = learn_angle(global_rotation.y, 目標角度, rotation_speed * delta)
 		指定回転=false
 	elif 指定回転:
 		global_rotation.y = learn_angle(global_rotation.y, 目標回転, rotation_speed * delta*0.5)
@@ -87,18 +87,18 @@ func apply_rotation(delta:float):
 			print(angle_difference(global_rotation.y,目標回転))
 			global_rotation.y=目標回転
 			指定回転=false
-			
+
 func 回転指定(目標:float)->void:
 	指定回転=true
 	目標回転=目標
 
 
 # lerp_angleのヘルパー（Godot 4標準関数ですが明示的に）
-func learn_angle(from:float, to:float, weight:float):
+func learn_angle(from:float, to:float, weight:float)->float:
 	return lerp_angle(from, to, weight)
 
 func update_animations(velocitys: Vector3,デルタ:float)->void:
-	var local_vel = global_transform.basis.inverse() * velocitys*SPEED*2
+	var local_vel:Vector3 = global_transform.basis.inverse() * velocitys*SPEED*2
 	
 	# ここで「歩きの速度」を基準にする
 	# 例：walk_speed = 3.0, run_speed = 6.0 の場合

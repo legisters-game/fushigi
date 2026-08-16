@@ -180,7 +180,7 @@ func 読み込み完了(チャンク:String)->void:
 		if 読み込み中チャンク.is_empty():
 			読み込み完了シグナル.emit()
 
-func シナリオ演出実行(演出パス: String):
+func シナリオ演出実行(演出パス: String)->void:
 	var 演出リソース: = load(演出パス)
 	if not 演出リソース:
 		return
@@ -227,7 +227,7 @@ func シナリオ演出実行(演出パス: String):
 		演出インスタンス.演出開始()
 
 
-func _演出終了後の後処理(インスタンス: 演出基盤クラス):
+func _演出終了後の後処理(インスタンス: 演出基盤クラス)->void:
 	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
 	インスタンス.queue_free()
 	get_node("NPC制御").show()

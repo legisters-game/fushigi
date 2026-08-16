@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://qec2kb307sc3"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_jaxry"]
+[ext_resource type="AudioStream" uid="uid://dlk7r3y1ny1rf" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/音声/この街はもともと.wav" id="2_kpvvp"]
+
+[resource]
+script = ExtResource("1_jaxry")
+"セリフ" = "この街は元々こんなに都市的じゃなかったんだ。
+まあ 大規模な村ではあったけどね。
+住人も大勢いたさ。"
+"ボイス" = ExtResource("2_kpvvp")
+metadata/_custom_type_script = "uid://4uxnotone8su"

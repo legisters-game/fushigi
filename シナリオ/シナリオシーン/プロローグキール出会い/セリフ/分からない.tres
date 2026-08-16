@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://dhjhb5qs68urp"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_wrgjg"]
+[ext_resource type="AudioStream" uid="uid://dir2auwd6ir6p" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/音声/分からない.wav" id="2_aeh2l"]
+
+[resource]
+script = ExtResource("1_wrgjg")
+"セリフ" = "分からない。
+まあ君は そんな街に来てしまったという訳さ。"
+"ボイス" = ExtResource("2_aeh2l")
+metadata/_custom_type_script = "uid://4uxnotone8su"

@@ -65,7 +65,7 @@ _data = {
 &"開始": SubResource("Animation_r4pe8")
 }
 
-[node name="演出基盤" type="Node3D" unique_id=854987473 node_paths=PackedStringArray("削除対象")]
+[node name="演出基盤" type="Node3D" unique_id=854987473 node_paths=PackedStringArray("削除対象") groups=["演出ノード"]]
 script = ExtResource("1_r4pe8")
 "削除対象" = [NodePath("DirectionalLight3D"), NodePath("WorldEnvironment")]
 

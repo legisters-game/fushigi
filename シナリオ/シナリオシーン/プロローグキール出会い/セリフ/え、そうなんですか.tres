@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://bv5fx3l0kjpd1"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_m3a6c"]
+[ext_resource type="AudioStream" uid="uid://bckx1agg68pvs" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/音声/そうなんですか.wav" id="2_ydexn"]
+
+[resource]
+script = ExtResource("1_m3a6c")
+"セリフ" = "え！？そうなんですか！
+どうして…"
+"ボイス" = ExtResource("2_ydexn")
+metadata/_custom_type_script = "uid://4uxnotone8su"

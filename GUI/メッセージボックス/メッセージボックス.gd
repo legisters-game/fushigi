@@ -178,8 +178,7 @@ func _on_選択肢ボタン3_pressed() -> void:
 
 func _on_audio_stream_player_finished() -> void:
 	if not 選択肢中:
-		if get_tree().get_first_node_in_group("全体制御") and get_tree().get_first_node_in_group("全体制御").has_node("演出ルート"): 
-			if get_tree().get_first_node_in_group("全体制御").get_node("演出ルート").get_child_count()!=0:
-				while not get_tree().get_first_node_in_group("全体制御").get_node("演出ルート").get_children()[0].停止準備完了:
+		if get_tree().get_first_node_in_group("演出ノード"): 
+				while get_tree().get_first_node_in_group("演出ノード") and not get_tree().get_first_node_in_group("演出ノード").停止準備完了:
 					await get_tree().create_timer(0.5).timeout
 		ログ進行.emit(0)

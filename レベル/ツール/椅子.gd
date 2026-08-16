@@ -30,9 +30,9 @@ func 降りる()->void:
 
 func 当たり判定取得()->CollisionShape3D:
 	var 返値:CollisionShape3D
-	for i:Node in get_children():
-		if i is CollisionShape3D:
-			return i
+	for 子ノード:Node in get_children():
+		if 子ノード is CollisionShape3D:
+			return 子ノード
 	return 返値
 
 func ガイド表示(する:bool)->void:

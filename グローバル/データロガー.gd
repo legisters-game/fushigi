@@ -129,5 +129,5 @@ func ミッション条件フラグ消去(ミッション条件フラグ:String)
 
 	
 # セーブ実行
-func 全保存():
+func 全保存()->void:
 	config.save(SAVE_PATH)

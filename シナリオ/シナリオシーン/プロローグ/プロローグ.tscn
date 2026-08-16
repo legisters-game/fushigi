@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c0mhksd1gr5ic" path="res://シナリオ/演出カメラ.tscn" id="4_fvwph"]
 [ext_resource type="AudioStream" uid="uid://d4hrm6tyxapre" path="res://シナリオ/シナリオシーン/プロローグ/Tomorrow_Land.mp3" id="4_mfuy4"]
 [ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="4_oqs1q"]
+[ext_resource type="Resource" uid="uid://bg7nsp7ufhf5s" path="res://シナリオ/シナリオシーン/プロローグ/セリフ/開けてきたね.tres" id="4_vjggf"]
 [ext_resource type="Texture2D" uid="uid://70jmgomtcsjd" path="res://エンティティ/プレイヤー/model/6380439c17d3666d_8.png" id="5_11wke"]
 [ext_resource type="PackedScene" uid="uid://bs8n5xvhfrqsw" path="res://エンティティ/演出用/演出モデル.tscn" id="5_fvwph"]
 [ext_resource type="AudioStream" uid="uid://bl1n4p5262d6c" path="res://シナリオ/シナリオシーン/プロローグ/オープニングフル尺.mp3" id="5_im40r"]
@@ -13,12 +14,6 @@
 [ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="6_x1gaa"]
 [ext_resource type="Resource" uid="uid://nbbmunmsweld" path="res://エンティティ/表情管理/わでいど/わでいど.tres" id="7_ljke7"]
 [ext_resource type="PackedScene" uid="uid://sn1p3prkqs7b" path="res://シナリオ/演出用プレイヤー上書き.tscn" id="8_ionig"]
-
-[sub_resource type="Resource" id="Resource_11wke"]
-script = ExtResource("3_vj5kn")
-"セリフ" = "おー、開けてきたね"
-"表情" = 3
-metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_jsnrv"]
 script = ExtResource("3_vj5kn")
@@ -196,7 +191,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 6.8, 10, 141.44382, 149.56293),
 "transitions": PackedFloat32Array(1, 1, 1, 1.5157168, 1),
 "update": 0,
-"values": [Vector3(-0.062, -17.566, 9.076), Vector3(-0.062, -17.566, 9.076), Vector3(-0.062, -4.776, 26.736), Vector3(-0.062, -4.776, 26.736), Vector3(0.423, 0.769, 15.431)]
+"values": [Vector3(-0.307, 0.814, 24.016), Vector3(-0.017, 0.539, 36.131), Vector3(-0.062, -4.776, 26.736), Vector3(-0.062, -4.776, 26.736), Vector3(0.423, 0.769, 15.431)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -269,7 +264,7 @@ albedo_color = Color(1, 0, 0, 1)
 
 [node name="演出基盤" unique_id=854987473 instance=ExtResource("1_axwyn")]
 script = ExtResource("2_vj5kn")
-"セリフ集" = Array[ExtResource("3_vj5kn")]([SubResource("Resource_11wke")])
+"セリフ集" = Array[ExtResource("3_vj5kn")]([ExtResource("4_vjggf")])
 "再生前条件更新フラグ名" = "街を探索する"
 "再生前条件フラグ加算数" = 1
 "条件フラグ加算から上書き" = true
@@ -281,7 +276,7 @@ script = ExtResource("2_vj5kn")
 libraries/ = SubResource("AnimationLibrary_vj5kn")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3" unique_id=337026543]
-volume_db = -15.0
+volume_db = -25.0
 
 [node name="オブジェクト中心" parent="." index="4" unique_id=610700827]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89.657455, 14.9103565, 118.79608)
@@ -295,7 +290,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6648617, 0.38116646)
 
 [node name="演出カメラ" parent="オブジェクト中心" index="1" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
-transform = Transform3D(0.98909205, 0.019308165, -0.14602792, 0, 0.99137163, 0.13108154, 0.14729889, -0.12965171, 0.98055774, -1.8135986, 3.2928333, 11.7969055)
+transform = Transform3D(0.99612254, 0.032998897, -0.081553146, 0, 0.92698914, 0.37508819, 0.087976374, -0.3736338, 0.92339486, -1.8135986, 3.2928333, 11.7969055)
 "ターゲット" = [NodePath("../レクレイス/Marker3D")]
 "切り替え時間" = 1.0
 
@@ -308,7 +303,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.4044704, 0)
 [node name="演出用プレイヤー上書き" parent="オブジェクト中心/街全体紹介用" index="0" unique_id=601787656 instance=ExtResource("8_ionig")]
 
 [node name="演出カメラ2" parent="オブジェクト中心/街全体紹介用" index="1" unique_id=1747915640 node_paths=PackedStringArray("ターゲット") instance=ExtResource("4_fvwph")]
-transform = Transform3D(0.99997663, -0.0019227073, -0.006561309, 0, 0.9596457, -0.28121188, 0.00683722, 0.2812053, 0.95962334, -0.062057495, -2.659729, 9.07621)
+transform = Transform3D(0.9999183, 0.00043295167, -0.01277473, 0, 0.99942625, 0.03387181, 0.012782064, -0.033869043, 0.9993446, -0.062057495, -2.659729, 9.07621)
 "ターゲット" = [NodePath("..")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="オブジェクト中心/街全体紹介用" index="2" unique_id=485104480]
@@ -317,5 +312,6 @@ material_override = SubResource("StandardMaterial3D_ionig")
 mesh = SubResource("CylinderMesh_mfuy4")
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[connection signal="演出完了通知" from="." to="." method="_on_演出完了通知"]
 
 [editable path="オブジェクト中心/レクレイス"]

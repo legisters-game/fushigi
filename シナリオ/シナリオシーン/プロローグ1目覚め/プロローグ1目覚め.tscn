@@ -5,12 +5,17 @@
 [ext_resource type="PackedScene" uid="uid://bs8n5xvhfrqsw" path="res://エンティティ/演出用/演出モデル.tscn" id="2_vo1ma"]
 [ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="3_c6ncj"]
 [ext_resource type="Texture2D" uid="uid://70jmgomtcsjd" path="res://エンティティ/プレイヤー/model/6380439c17d3666d_8.png" id="3_cdcwc"]
+[ext_resource type="Resource" uid="uid://ww7b6ddf0qu6" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/は.tres" id="3_yr502"]
 [ext_resource type="Animation" uid="uid://gl7bkr65qe3n" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/アニメデータ/getting up1.res" id="4_airmw"]
 [ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="4_ioj3v"]
+[ext_resource type="Resource" uid="uid://k0ky44cdgg5y" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/あれ.tres" id="4_yvbbo"]
+[ext_resource type="Resource" uid="uid://b6fkvv1kddmup" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/ここはどこ.tres" id="5_f5u4t"]
 [ext_resource type="Resource" uid="uid://b5nx0soieo1qd" path="res://エンティティ/表情管理/レクレイス/レクレイス.tres" id="5_he367"]
 [ext_resource type="Animation" uid="uid://dos8eqb76ey2b" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/アニメデータ/getting up2.res" id="5_vnx6e"]
 [ext_resource type="Animation" uid="uid://daoaf4f5rnbqa" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/アニメデータ/寝てる.res" id="6_gml4g"]
+[ext_resource type="Resource" uid="uid://b5i5aj376ys6y" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/俺はレクレイス.tres" id="6_gu4ah"]
 [ext_resource type="Animation" uid="uid://rvhcflr0pnab" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/アニメデータ/起き上がり.res" id="7_g0iw0"]
+[ext_resource type="Resource" uid="uid://j0piamh6s77i" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/それしか思い出せない.tres" id="7_r30ve"]
 [ext_resource type="Animation" uid="uid://deujr7sch7qmi" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/アニメデータ/見渡す.res" id="8_g0iw0"]
 [ext_resource type="PackedScene" uid="uid://c0mhksd1gr5ic" path="res://シナリオ/演出カメラ.tscn" id="9_gml4g"]
 
@@ -18,31 +23,6 @@
 script = ExtResource("2_vnx6e")
 "セリフ" = "……"
 "表情" = 9
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_g0iw0"]
-script = ExtResource("2_vnx6e")
-"セリフ" = "っは！"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_he367"]
-script = ExtResource("2_vnx6e")
-"セリフ" = "あれ？"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_c6ncj"]
-script = ExtResource("2_vnx6e")
-"セリフ" = "ここはどこ？"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_ioj3v"]
-script = ExtResource("2_vnx6e")
-"セリフ" = "俺はレクレイス"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_ddr2e"]
-script = ExtResource("2_vnx6e")
-"セリフ" = "それしか思い出せない…"
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_k4qth"]
@@ -120,6 +100,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id="Animation_onk1l"]
 resource_name = "開始"
 length = 20.0
+step = 0.1
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -260,10 +241,10 @@ tracks/7/path = NodePath("オブジェクト中心/レクレイス/演出カメ�
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 3, 5.1, 9.310758, 15.72013),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 5.1, 9.310758, 15.72013),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.518, 1.547, 0.785), Vector3(-0.518, 1.547, 0.785), Vector3(-0.9729996, 1.2689686, 0.7550049), Vector3(0.042, 1.479, 0.735), Vector3(-0.068, 1.469, 0.635)]
+"values": [Vector3(-0.713, 1.334, 0.79), Vector3(-0.713, 1.334, 0.79), Vector3(0.042, 1.479, 0.735), Vector3(-0.068, 1.469, 0.635)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -295,7 +276,7 @@ _data = {
 
 [node name="演出基盤" unique_id=854987473 instance=ExtResource("1_jtjba")]
 "表示チャンク" = Array[String](["uid://b151ytpjybj7k", "uid://c2vpwnve678y7", "uid://bdncegnplxomx", "uid://bq2ts8tlgy1x1", "uid://cjat1ca4vn7b", "uid://bm5vq4elaritk", "uid://ddj0yb7r76c2d", "uid://bk360tcruf8di", "uid://omr7pjhgsjc6"])
-"セリフ集" = Array[ExtResource("2_vnx6e")]([SubResource("Resource_gml4g"), SubResource("Resource_g0iw0"), SubResource("Resource_he367"), SubResource("Resource_c6ncj"), SubResource("Resource_ioj3v"), SubResource("Resource_ddr2e")])
+"セリフ集" = Array[ExtResource("2_vnx6e")]([SubResource("Resource_gml4g"), ExtResource("3_yr502"), ExtResource("4_yvbbo"), ExtResource("5_f5u4t"), ExtResource("6_gu4ah"), ExtResource("7_r30ve")])
 "再生後フラグ" = "最初の演出完了"
 "再生後発生ミッション" = Array[ExtResource("3_c6ncj")]([SubResource("Resource_k4qth")])
 "プレイヤー再生前ワープ" = true
@@ -307,7 +288,7 @@ libraries/ = SubResource("AnimationLibrary_vo1ma")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.887024, 14.9103565, 140.87599)
 
 [node name="レクレイス" parent="オブジェクト中心" index="0" unique_id=1106972114 instance=ExtResource("2_vo1ma")]
-transform = Transform3D(0.89714247, 0, 0.4417406, 0, 0.99999994, 0, -0.44174057, 0, 0.8971425, 0, -14.992, -0.727)
+transform = Transform3D(0.8971424, 0, 0.4417406, 0, 0.9999999, 0, -0.44174054, 0, 0.8971425, 0, -14.992, -0.727)
 "スキン" = ExtResource("3_cdcwc")
 "表情データ" = ExtResource("5_he367")
 
@@ -318,13 +299,13 @@ libraries/mixamo = SubResource("AnimationLibrary_bslyf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051, 1.414, 0)
 
 [node name="演出カメラ2" parent="オブジェクト中心/レクレイス" index="3" unique_id=1454396540 node_paths=PackedStringArray("ターゲット") instance=ExtResource("9_gml4g")]
-transform = Transform3D(-0.12025699, -0.83077914, 0.5434567, 0, 0.54742926, 0.83685213, -0.9927431, 0.10063729, -0.0658322, 0.19044495, 1.6882553, 0.9208641)
+transform = Transform3D(0.8089541, -0.052620985, -0.58551276, 0.28978762, 0.9022632, 0.31928754, 0.51148516, -0.42796314, 0.74513817, 0.19044495, 1.6882553, 0.9208641)
 "ターゲット" = [NodePath("../レクレイス顔"), NodePath("../../寝顔")]
 "ターゲット番号" = 1
 "切り替え時間" = 1.0
 
 [node name="演出カメラ" parent="オブジェクト中心" index="1" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
-transform = Transform3D(-0.15961888, -0.98178864, 0.103018865, 0, 0.104356855, 0.9945399, -0.9871787, 0.15874736, -0.016657325, 1.7105255, 2.4936428, -1.0187073)
+transform = Transform3D(-0.65914285, -0.47685525, 0.58149785, 0, 0.7732502, 0.63410103, -0.7520177, 0.41796324, -0.50968236, 1.7105255, 2.4936428, -1.0187073)
 "ターゲット" = [NodePath("../レクレイス/レクレイス顔")]
 
 [node name="寝顔" type="Marker3D" parent="オブジェクト中心" index="2" unique_id=1489523084]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://cysnhcrkx1p68"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_nef62"]
+[ext_resource type="AudioStream" uid="uid://dbxe1u0542pee" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/音声/だけども突然.wav" id="2_ke4fo"]
+
+[resource]
+script = ExtResource("1_nef62")
+"セリフ" = "だけども
+突然、住人全員が消えたのさ。
+"
+"ボイス" = ExtResource("2_ke4fo")
+metadata/_custom_type_script = "uid://4uxnotone8su"
