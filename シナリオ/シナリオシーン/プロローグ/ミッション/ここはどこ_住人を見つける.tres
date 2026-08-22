@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="ミッションデータ" format=3 uid="uid://dw3dledjx2u4t"]
+
+[ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="1_x3aab"]
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="2_7vue6"]
+[ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="3_ro06l"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="4_0yk62"]
+
+[sub_resource type="Resource" id="Resource_jsnrv"]
+script = ExtResource("4_0yk62")
+"セリフ" = "おう、座れや。"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_lggff"]
+script = ExtResource("3_ro06l")
+"名前" = "お"
+"終了時間" = 1.0
+"目的置" = Vector3(-3.5060577, -0.0710907, -0.5016556)
+"セリフ" = Array[ExtResource("4_0yk62")]([SubResource("Resource_jsnrv")])
+"ディメンション" = "uid://dmbek8jwtnvaw"
+"ディメンションオブジェクト番号" = 1
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[sub_resource type="Resource" id="Resource_n5jst"]
+script = ExtResource("2_7vue6")
+"スケジュールリスト" = Array[ExtResource("3_ro06l")]([SubResource("Resource_lggff")])
+metadata/_custom_type_script = "uid://d4j8xlv2dxato"
+
+[resource]
+script = ExtResource("1_x3aab")
+"ミッション名" = "ここはどこ？"
+"完了後フラグ" = "オープニング再生済"
+"条件フラグ" = "住人を見つける"
+"条件数" = 1
+"表示用条件" = "街の住人を見つける"
+"キャラセリフ上書きリスト" = Dictionary[int, ExtResource("2_7vue6")]({
+0: SubResource("Resource_n5jst")
+})
+metadata/_custom_type_script = "uid://bjjvp7rx64bcv"

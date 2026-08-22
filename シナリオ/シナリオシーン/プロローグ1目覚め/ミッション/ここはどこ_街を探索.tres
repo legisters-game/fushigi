@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ミッションデータ" format=3 uid="uid://dsdywakaemmra"]
+
+[ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="1_p2yjs"]
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="2_jsbg5"]
+
+[resource]
+script = ExtResource("1_p2yjs")
+"ミッション名" = "ここはどこ？"
+"完了後フラグ" = "オープニング再生済"
+"条件フラグ" = "街を探索する"
+"条件数" = 1
+"表示用条件" = "街の住人を見つける"
+metadata/_custom_type_script = "uid://bjjvp7rx64bcv"

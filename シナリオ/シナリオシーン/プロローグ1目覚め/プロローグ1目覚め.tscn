@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://70jmgomtcsjd" path="res://エンティティ/プレイヤー/model/6380439c17d3666d_8.png" id="3_cdcwc"]
 [ext_resource type="Resource" uid="uid://ww7b6ddf0qu6" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/は.tres" id="3_yr502"]
 [ext_resource type="Animation" uid="uid://gl7bkr65qe3n" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/アニメデータ/getting up1.res" id="4_airmw"]
-[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="4_ioj3v"]
 [ext_resource type="Resource" uid="uid://k0ky44cdgg5y" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/あれ.tres" id="4_yvbbo"]
 [ext_resource type="Resource" uid="uid://b6fkvv1kddmup" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/ここはどこ.tres" id="5_f5u4t"]
 [ext_resource type="Resource" uid="uid://b5nx0soieo1qd" path="res://エンティティ/表情管理/レクレイス/レクレイス.tres" id="5_he367"]
@@ -17,6 +16,7 @@
 [ext_resource type="Animation" uid="uid://rvhcflr0pnab" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/アニメデータ/起き上がり.res" id="7_g0iw0"]
 [ext_resource type="Resource" uid="uid://j0piamh6s77i" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/セリフ/それしか思い出せない.tres" id="7_r30ve"]
 [ext_resource type="Animation" uid="uid://deujr7sch7qmi" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/アニメデータ/見渡す.res" id="8_g0iw0"]
+[ext_resource type="Resource" uid="uid://dsdywakaemmra" path="res://シナリオ/シナリオシーン/プロローグ1目覚め/ミッション/ここはどこ_街を探索.tres" id="9_f5u4t"]
 [ext_resource type="PackedScene" uid="uid://c0mhksd1gr5ic" path="res://シナリオ/演出カメラ.tscn" id="9_gml4g"]
 
 [sub_resource type="Resource" id="Resource_gml4g"]
@@ -24,15 +24,6 @@ script = ExtResource("2_vnx6e")
 "セリフ" = "……"
 "表情" = 9
 metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_k4qth"]
-script = ExtResource("3_c6ncj")
-"ミッション名" = "ここはどこ？"
-"完了後フラグ" = "オープニング再生済"
-"条件フラグ" = "街を探索する"
-"条件数" = 1
-"表示用条件" = "街の住人を見つける"
-metadata/_custom_type_script = "uid://bjjvp7rx64bcv"
 
 [sub_resource type="Animation" id="Animation_jtjba"]
 length = 0.001
@@ -278,7 +269,7 @@ _data = {
 "表示チャンク" = Array[String](["uid://b151ytpjybj7k", "uid://c2vpwnve678y7", "uid://bdncegnplxomx", "uid://bq2ts8tlgy1x1", "uid://cjat1ca4vn7b", "uid://bm5vq4elaritk", "uid://ddj0yb7r76c2d", "uid://bk360tcruf8di", "uid://omr7pjhgsjc6"])
 "セリフ集" = Array[ExtResource("2_vnx6e")]([SubResource("Resource_gml4g"), ExtResource("3_yr502"), ExtResource("4_yvbbo"), ExtResource("5_f5u4t"), ExtResource("6_gu4ah"), ExtResource("7_r30ve")])
 "再生後フラグ" = "最初の演出完了"
-"再生後発生ミッション" = Array[ExtResource("3_c6ncj")]([SubResource("Resource_k4qth")])
+"再生後発生ミッション" = Array[ExtResource("3_c6ncj")]([ExtResource("9_f5u4t")])
 "プレイヤー再生前ワープ" = true
 
 [node name="AnimationPlayer" parent="." index="2" unique_id=341811062]
@@ -305,7 +296,7 @@ transform = Transform3D(0.8089541, -0.052620985, -0.58551276, 0.28978762, 0.9022
 "切り替え時間" = 1.0
 
 [node name="演出カメラ" parent="オブジェクト中心" index="1" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
-transform = Transform3D(-0.65914285, -0.47685525, 0.58149785, 0, 0.7732502, 0.63410103, -0.7520177, 0.41796324, -0.50968236, 1.7105255, 2.4936428, -1.0187073)
+transform = Transform3D(-0.62600017, -0.7326023, 0.26724082, 0, 0.34269425, 0.939447, -0.7798229, 0.58809406, -0.21452667, 1.7105255, 2.4936428, -1.0187073)
 "ターゲット" = [NodePath("../レクレイス/レクレイス顔")]
 
 [node name="寝顔" type="Marker3D" parent="オブジェクト中心" index="2" unique_id=1489523084]

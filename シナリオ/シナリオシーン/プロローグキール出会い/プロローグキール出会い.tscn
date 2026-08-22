@@ -5,9 +5,7 @@
 [ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="3_oiqgr"]
 [ext_resource type="Resource" uid="uid://bk0h0w6bpgwlb" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/よく来たな.tres" id="3_p3ojn"]
 [ext_resource type="Resource" uid="uid://bsuun677ffhhv" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/住人を見つけるのに.tres" id="4_0n285"]
-[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="4_p3ojn"]
 [ext_resource type="Resource" uid="uid://bv5fx3l0kjpd1" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/え、そうなんですか.tres" id="5_iq6gg"]
-[ext_resource type="Resource" uid="uid://d2mlfpv0ko2vg" path="res://シナリオ/シナリオシーン/プロローグキール出会い/キール温泉待機.tres" id="5_lf3t1"]
 [ext_resource type="Resource" uid="uid://qec2kb307sc3" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/この街は.tres" id="6_6hqtf"]
 [ext_resource type="PackedScene" uid="uid://c0mhksd1gr5ic" path="res://シナリオ/演出カメラ.tscn" id="6_jaue0"]
 [ext_resource type="Resource" uid="uid://cysnhcrkx1p68" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/だけども突然.tres" id="7_55ovf"]
@@ -20,18 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dmbek8jwtnvaw" path="res://レベル/マンション/マンション.tscn" id="10_u2mjo"]
 [ext_resource type="Resource" uid="uid://g726xr3b20g7" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/僕レクレイス.tres" id="11_uncjq"]
 [ext_resource type="Resource" uid="uid://d0f7ubtr6eyr" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/そうだったね.tres" id="12_k0ccu"]
-
-[sub_resource type="Resource" id="Resource_gyft0"]
-script = ExtResource("3_oiqgr")
-"ミッション名" = "温泉に行こう！"
-"完了後フラグ" = "キール温泉行った"
-"条件フラグ" = "キール温泉"
-"条件数" = 1
-"表示用条件" = "キールと温泉に行く"
-"キャラセリフ上書きリスト" = Dictionary[int, ExtResource("4_p3ojn")]({
-0: ExtResource("5_lf3t1")
-})
-metadata/_custom_type_script = "uid://bjjvp7rx64bcv"
+[ext_resource type="Resource" uid="uid://xocpyfo3ryer" path="res://シナリオ/シナリオシーン/プロローグキール出会い/ミッション/温泉に行こう_キール温泉.tres" id="14_u2mjo"]
 
 [sub_resource type="Animation" id="Animation_qmusa"]
 length = 0.001
@@ -248,7 +235,7 @@ _data = {
 "再生前条件フラグ加算数" = 1
 "条件フラグ加算から上書き" = true
 "再生後フラグ" = "キール出会い済"
-"再生後発生ミッション" = Array[ExtResource("3_oiqgr")]([SubResource("Resource_gyft0")])
+"再生後発生ミッション" = Array[ExtResource("3_oiqgr")]([ExtResource("14_u2mjo")])
 
 [node name="AnimationPlayer" parent="." index="2" unique_id=341811062]
 libraries/ = SubResource("AnimationLibrary_wf7fa")
