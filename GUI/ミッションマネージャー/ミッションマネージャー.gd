@@ -95,7 +95,7 @@ func キャラスケジュール取得(NPC番号:スケジュール管理クラ�
 		if スケジュール:
 			ソート前リスト.append([スケジュール,ミッション[0].優先度])
 
-	ソート前リスト.sort_custom(func(a:Array, b:Array): return a[1] < b[1])
+	ソート前リスト.sort_custom(func(a:Array, b:Array): return a[1] > b[1])
 	
 	var 結果: Array[NPCスケジューラ] = []
 	for リスト: Array in ソート前リスト:

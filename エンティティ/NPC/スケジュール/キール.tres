@@ -2,42 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="1_5o7i3"]
 [ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="2_0bgl4"]
-[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_rhg5c"]
-[ext_resource type="Script" uid="uid://hoy7ntcb8lpl" path="res://拡張リソース/セリフ分岐オブジェクト.gd" id="4_rhg5c"]
-[ext_resource type="Script" uid="uid://c63nudia22pk" path="res://拡張リソース/new_script.gd" id="5_yjpca"]
-
-[sub_resource type="Resource" id="Resource_jsnrv"]
-script = ExtResource("3_rhg5c")
-"セリフ" = "こんにちは"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_tvflv"]
-script = ExtResource("4_rhg5c")
-metadata/_custom_type_script = "uid://hoy7ntcb8lpl"
-
-[sub_resource type="Resource" id="Resource_egkn5"]
-script = ExtResource("5_yjpca")
-metadata/_custom_type_script = "uid://c63nudia22pk"
-
-[sub_resource type="Resource" id="Resource_lggff"]
-script = ExtResource("2_0bgl4")
-"名前" = "お"
-"終了時間" = 1.0
-"目的置" = Vector3(-3.5060577, -0.0710907, -0.5016556)
-"セリフ" = Array[ExtResource("3_rhg5c")]([SubResource("Resource_jsnrv"), SubResource("Resource_tvflv"), SubResource("Resource_egkn5")])
-"ディメンション" = "uid://dmbek8jwtnvaw"
-"ディメンションオブジェクト番号" = 1
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_b5jwi"]
-script = ExtResource("2_0bgl4")
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
-
-[sub_resource type="Resource" id="Resource_l0drn"]
-script = ExtResource("2_0bgl4")
-metadata/_custom_type_script = "uid://2jb1vfql7n4p"
 
 [resource]
 script = ExtResource("1_5o7i3")
-"スケジュールリスト" = Array[ExtResource("2_0bgl4")]([SubResource("Resource_lggff"), SubResource("Resource_b5jwi"), SubResource("Resource_l0drn")])
 metadata/_custom_type_script = "uid://d4j8xlv2dxato"

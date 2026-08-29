@@ -3,11 +3,43 @@
 [ext_resource type="Script" uid="uid://wi5tiv3q5m6a" path="res://レベル/レベル基礎.gd" id="1_8bkft"]
 [ext_resource type="ArrayMesh" uid="uid://c1jgukd8u7ljh" path="res://街メッシュ/都市3d仮_80,-48.res" id="2_rs4s5"]
 [ext_resource type="Script" uid="uid://dunk7b3n3p2st" path="res://街チャンク処理/パーツ/街メッシュルート.gd" id="3_kjcdb"]
+[ext_resource type="PackedScene" uid="uid://dunmrlgfjvq0t" path="res://レベル/ツール/ライト.tscn" id="5_6xx3s"]
+[ext_resource type="PackedScene" uid="uid://dugv7335puobc" path="res://レベル/ツール/街レベルエリアゲート.tscn" id="6_gw68c"]
+[ext_resource type="PackedScene" uid="uid://bn0fvfm378fl0" path="res://街チャンク処理/パーツ/レベルゲート.tscn" id="7_s5tcf"]
 [ext_resource type="Shape3D" uid="uid://dmj4372myrwyb" path="res://街チャンク処理/街コリジョン/80,-48.tres" id="8_bcwq7"]
+[ext_resource type="PackedScene" uid="uid://dmgy0ytqbirrn" path="res://街チャンク処理/パーツ/レベルエリアゲート.tscn" id="8_rs4s5"]
+[ext_resource type="PackedScene" uid="uid://wedomua7c4xx" path="res://エンティティ/NPC/インスタンス/キール.tscn" id="9_nrffm"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="10_ehavt"]
+[ext_resource type="Script" uid="uid://ol7t1656sr3p" path="res://エンティティ/NPC/条件中のみ表示NPC.gd" id="10_nrffm"]
 
-[node name="銭湯" type="Node3D" unique_id=2034705794]
+[sub_resource type="BoxShape3D" id="BoxShape3D_b5jwi"]
+size = Vector3(0.025, 0.155, 0.14978516)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_euwu4"]
+size = Vector3(2.2252197, 0.45166016, 2.2817383)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iyk0q"]
+size = Vector3(0.06640625, 0.29632568, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rs4s5"]
+size = Vector3(0.17590332, 0.12992859, 0.22937012)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s5tcf"]
+size = Vector3(1.4667053, 0.45166016, 1.5211182)
+
+[sub_resource type="Resource" id="Resource_ehavt"]
+script = ExtResource("10_ehavt")
+"セリフ" = "おう、入ろうや"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8445k"]
+size = Vector3(0.25097656, 0.029052734, 1)
+
+[node name="銭湯" type="Node3D" unique_id=2034705794 node_paths=PackedStringArray("テレポート先", "階層処理切り替え用ノード")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
 script = ExtResource("1_8bkft")
+"テレポート先" = [NodePath("80,-48,a/80,-48,a/中心/ロビー/入口"), NodePath("80,-48,a/80,-48,a/中心/男脱衣室/ロビー→男脱衣"), NodePath("80,-48,a/80,-48,a/中心/女脱衣室/ロビー→女脱衣"), NodePath("80,-48,a/80,-48,a/中心/ロビー/男脱衣→ロビー"), NodePath("80,-48,a/80,-48,a/中心/ロビー/女脱衣→ロビー"), NodePath("80,-48,a/80,-48,a/中心/男脱衣室/銭湯→男脱衣"), NodePath("80,-48,a/80,-48,a/中心/女脱衣室/銭湯→女脱衣"), NodePath("80,-48,a/80,-48,a/中心/女銭湯/女脱衣→銭湯"), NodePath("80,-48,a/80,-48,a/中心/男銭湯/ライト/男脱衣→銭湯"), NodePath("80,-48,a/80,-48,a/中心/ロビー/裏口"), NodePath("80,-48,a/80,-48,a/中心/ロビー/食堂→ロビー"), NodePath("80,-48,a/80,-48,a/中心/会食場/ロビ→食堂"), NodePath("80,-48,a/80,-48,a/中心/ロビー/客室→ロビー"), NodePath("80,-48,a/80,-48,a/中心/客室/ロビ→客室")]
+"階層処理切り替え用ノード" = [NodePath("80,-48,a/80,-48,a/中心/ロビー"), NodePath("80,-48,a/80,-48,a/中心/男脱衣室"), NodePath("80,-48,a/80,-48,a/中心/男銭湯"), NodePath("80,-48,a/80,-48,a/中心/女脱衣室"), NodePath("80,-48,a/80,-48,a/中心/女銭湯"), NodePath("80,-48,a/80,-48,a/中心/会食場"), NodePath("80,-48,a/80,-48,a/中心/客室")]
 
 [node name="80,-48,a" type="NavigationRegion3D" parent="." unique_id=529406788]
 
@@ -27,3 +59,573 @@ collision_mask = 3
 [node name="地形コリジョン" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/地形当たり判定" unique_id=979345464]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8397255, 4.7097683, 3.1398456)
 shape = ExtResource("8_bcwq7")
+
+[node name="ロビー" type="Node3D" parent="80,-48,a/80,-48,a/中心" unique_id=388644111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2883162, -0.24237967, 0.014644267)
+
+[node name="照明" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=1447767304]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2531716)
+
+[node name="ロビー" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明" unique_id=1552694233]
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/ロビー/照明/ロビー" unique_id=741540008 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.05100012, 0, 0)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/ロビー/照明/ロビー" unique_id=1401262013 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.15900004, 0, 0)
+
+[node name="右側" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明" unique_id=2020284778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8603072, 0)
+
+[node name="奥" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側" unique_id=2097678750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048261642, 0, 0)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/奥" unique_id=2115731246 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+
+[node name="ライト5" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/奥" unique_id=390989702 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.20292807, 0)
+
+[node name="ライト6" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/奥" unique_id=387057616 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.4732852, 2.9802322e-08)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/奥" unique_id=1699262175 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.29715276, 0)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/奥" unique_id=811619512 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.63159776, -2.9802322e-08)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/奥" unique_id=1244992877 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.9378152, -2.9802322e-08)
+
+[node name="前" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側" unique_id=245471287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09854722, 0, 0)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/前" unique_id=1710629321 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+
+[node name="ライト5" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/前" unique_id=957702432 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.20292807, 0)
+
+[node name="ライト6" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/前" unique_id=913759059 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.4732852, 2.9802322e-08)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/前" unique_id=1685139119 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.29715276, 0)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/前" unique_id=1006620508 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.63159776, -2.9802322e-08)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右側/前" unique_id=1894128084 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.9378152, -2.9802322e-08)
+
+[node name="左側" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明" unique_id=647311051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1033568, 1.1920929e-07)
+
+[node name="奥" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側" unique_id=1312023413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048261642, 0, 0)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/奥" unique_id=821562392 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+
+[node name="ライト5" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/奥" unique_id=1572990023 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.20292807, 0)
+
+[node name="ライト6" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/奥" unique_id=456468684 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.4732852, 2.9802322e-08)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/奥" unique_id=141245628 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.29715276, 0)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/奥" unique_id=295521876 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.63159776, -2.9802322e-08)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/奥" unique_id=1208377258 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.9378152, -2.9802322e-08)
+
+[node name="前" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側" unique_id=1986813368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09854722, 0, 0)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/前" unique_id=208626138 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+
+[node name="ライト5" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/前" unique_id=947724875 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.20292807, 0)
+
+[node name="ライト6" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/前" unique_id=1471193422 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.4732852, 2.9802322e-08)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/前" unique_id=1321366808 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.29715276, 0)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/前" unique_id=1276665290 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.63159776, -2.9802322e-08)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左側/前" unique_id=1113111489 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.9378152, -2.9802322e-08)
+
+[node name="浴場前" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明" unique_id=1254697343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40522528, 0, 0.052632943)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/ロビー/照明/浴場前" unique_id=1854479170 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.14196515, 0, 0.057171777)
+
+[node name="トイレ" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明" unique_id=1257475482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0798924, -1.5724735, 2.0861626e-07)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/ロビー/照明/トイレ" unique_id=837331357 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.2821486, 0.09708452, 0.02668497)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/ロビー/照明/トイレ" unique_id=958423373 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.2821486, -0.14085674, 0.026684985)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/ロビー/照明/トイレ" unique_id=2103904730 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.1675036, -0.14085674, 0.026684985)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/ロビー/照明/トイレ" unique_id=915877800 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.1675036, 0.06372881, 0.02668497)
+
+[node name="裏口前" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明" unique_id=1486383342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30923247, -1.6471272, 2.682209e-07)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/ロビー/照明/裏口前" unique_id=1225744909 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.2821486, 0.09708452, 0.02668497)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/ロビー/照明/裏口前" unique_id=1848257861 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.07534289, 0.06372881, 0.026684955)
+
+[node name="右小屋" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明" unique_id=1370868867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5342026, 1.7618351, 5.9604645e-08)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右小屋" unique_id=488583761 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.2540412, -2.9802322e-08)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右小屋" unique_id=668198398 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.23040581, 0)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右小屋" unique_id=1655179881 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.29169893, 0.2540412, -5.9604645e-08)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/ロビー/照明/右小屋" unique_id=1618542237 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.29169893, -0.23040581, 0)
+
+[node name="左小屋" type="Node3D" parent="80,-48,a/80,-48,a/中心/ロビー/照明" unique_id=228994502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5342026, -1.6561136, 2.3841858e-07)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左小屋" unique_id=117299190 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.2540412, -2.9802322e-08)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左小屋" unique_id=1015967911 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.23040581, 0)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左小屋" unique_id=1998699384 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.29169893, 0.2540412, -5.9604645e-08)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/ロビー/照明/左小屋" unique_id=1442659990 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.29169893, -0.23040581, 0)
+
+[node name="街レベルエリアゲート" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=904484294 node_paths=PackedStringArray("脱出先アクセスマーカー") instance=ExtResource("6_gw68c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24308705, 0, -0.057146505)
+"移動時間" = 0.8
+"脱出先アクセスマーカー" = NodePath("出口")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/ロビー/街レベルエリアゲート" unique_id=970667776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030404806, 0, -0.017392568)
+shape = SubResource("BoxShape3D_b5jwi")
+
+[node name="出口" type="Marker3D" parent="80,-48,a/80,-48,a/中心/ロビー/街レベルエリアゲート" unique_id=1136184932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1267941, 0, 0.055654228)
+
+[node name="街レベルエリアゲート裏口" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=1417585865 node_paths=PackedStringArray("脱出先アクセスマーカー") instance=ExtResource("6_gw68c")]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 1, -4.3711385e-08, 4.371139e-08, -4.371139e-08, 4.371139e-08, 1, 0.5763736, -1.6590805, -0.057146426)
+"移動時間" = 1.0
+"脱出先アクセスマーカー" = NodePath("出口裏")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/ロビー/街レベルエリアゲート裏口" unique_id=613007533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030404806, 0, -0.017392568)
+shape = SubResource("BoxShape3D_b5jwi")
+
+[node name="出口裏" type="Marker3D" parent="80,-48,a/80,-48,a/中心/ロビー/街レベルエリアゲート裏口" unique_id=1205551020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, -8.3518705e-23, 1, -0.2658205, 0, 0.055654228)
+
+[node name="入口" type="Marker3D" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=628608319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22871196, 0, -0.0014922759)
+
+[node name="裏口" type="Marker3D" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=763331126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5760784, -1.6150565, -0.0014922047)
+
+[node name="男行き" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=1014627570 instance=ExtResource("7_s5tcf")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0.27702427, 0.08669567, -0.12059462)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 1
+"階層" = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/ロビー/男行き" unique_id=2000596042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.071956635, 0.27416992, 0.64086914)
+shape = SubResource("BoxShape3D_euwu4")
+
+[node name="女行き" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=1184832327 instance=ExtResource("7_s5tcf")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0.27702427, -0.07400417, -0.12059461)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 2
+"階層" = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/ロビー/女行き" unique_id=265631627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.071956635, -0.2598648, 0.64086914)
+shape = SubResource("BoxShape3D_euwu4")
+
+[node name="男脱衣→ロビー" type="Marker3D" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=1069138035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2716322, 0.079610825, -3.4779077e-09)
+
+[node name="女脱衣→ロビー" type="Marker3D" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=463819486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2716322, -0.06207943, 2.73576e-09)
+
+[node name="食堂行き" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=1487963978 instance=ExtResource("8_rs4s5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7669294, 1.9098437, -8.341158e-08)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 11
+"階層" = 5
+"移動時間" = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/ロビー/食堂行き" unique_id=1189640590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30979657, -0.034460545, 3.0559022e-10)
+shape = SubResource("BoxShape3D_iyk0q")
+
+[node name="マーカー" type="Marker3D" parent="80,-48,a/80,-48,a/中心/ロビー/食堂行き" unique_id=470079115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4564221, 0, -0.28219843)
+
+[node name="客室行き" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=1925075512 instance=ExtResource("8_rs4s5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35607123, -1.7855964, -0.11120098)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 13
+"階層" = 6
+"移動時間" = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/ロビー/客室行き" unique_id=272119367]
+transform = Transform3D(0.77924573, -2.7394734e-08, -0.62671846, 2.7394734e-08, 1, -9.649476e-09, 0.62671846, -9.649476e-09, 0.77924573, 0.0042538643, 0.03350973, -0.1447147)
+shape = SubResource("BoxShape3D_rs4s5")
+
+[node name="マーカー" type="Marker3D" parent="80,-48,a/80,-48,a/中心/ロビー/客室行き" unique_id=1773535732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39240432, 0.029005527, -0.24172686)
+
+[node name="食堂→ロビー" type="Marker3D" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=1102880616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23030233, 1.8894494, -0.027355283)
+
+[node name="客室→ロビー" type="Marker3D" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=519496802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023940802, -1.7628798, 7.71397e-08)
+
+[node name="男脱衣室" type="Node3D" parent="80,-48,a/80,-48,a/中心" unique_id=182866858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5648377, 0.08723831, -3.7252903e-09)
+
+[node name="ライト" type="Node3D" parent="80,-48,a/80,-48,a/中心/男脱衣室" unique_id=941730989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.108683586, -0.099786125)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/男脱衣室/ライト" unique_id=1136591662 instance=ExtResource("5_6xx3s")]
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/男脱衣室/ライト" unique_id=447248602 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.3267703, -1.3969839e-08)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/男脱衣室/ライト" unique_id=1879329905 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.6109848, -2.7008355e-08)
+
+[node name="脱衣ライト" type="Node3D" parent="80,-48,a/80,-48,a/中心/男脱衣室/ライト" unique_id=610100312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7430439, 0.44000626, -2.2351742e-08)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/男脱衣室/ライト/脱衣ライト" unique_id=1470101237 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.330657, -0.056233883, -0.05508066)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/男脱衣室/ライト/脱衣ライト" unique_id=872972319 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.33358932, 0.14156675, -0.057648145)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/男脱衣室/ライト/脱衣ライト" unique_id=1806656073 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.50330997, 0.14156675, -0.060107224)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/男脱衣室/ライト/脱衣ライト" unique_id=1256278154 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.51773, -0.09368563, -0.071424685)
+
+[node name="ロビー行き" parent="80,-48,a/80,-48,a/中心/男脱衣室" unique_id=1431484593 instance=ExtResource("7_s5tcf")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.001904726, -0.15031385, -0.12059461)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/男脱衣室/ロビー行き" unique_id=106193470]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.071956635, -0.2598648, 0.64086914)
+shape = SubResource("BoxShape3D_euwu4")
+
+[node name="銭湯行き" parent="80,-48,a/80,-48,a/中心/男脱衣室" unique_id=1818527745 instance=ExtResource("7_s5tcf")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0.26801372, 0.5598812, -0.09938853)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 8
+"階層" = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/男脱衣室/銭湯行き" unique_id=1266799104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03395462, 0.024009705, 0.946967)
+shape = SubResource("BoxShape3D_s5tcf")
+
+[node name="銭湯→男脱衣" type="Marker3D" parent="80,-48,a/80,-48,a/中心/男脱衣室" unique_id=1058680468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27003074, 0.5176258, 0.01397017)
+
+[node name="ロビー→男脱衣" type="Marker3D" parent="80,-48,a/80,-48,a/中心/男脱衣室" unique_id=577744982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011956215, -0.15266323, 0.013970197)
+
+[node name="エンティティ" parent="80,-48,a/80,-48,a/中心/男脱衣室" unique_id=1396265163 instance=ExtResource("9_nrffm")]
+transform = Transform3D(-2.7319618e-09, 0, 0.0625, -0.0625, -2.7319615e-09, -2.7319618e-09, 2.7319618e-09, -0.0625, -1.02626763e-16, 0.4252603, 0.4254713, 0.014461037)
+script = ExtResource("10_nrffm")
+"表示中ミッションフラグ" = "温泉に行こう！"
+"デフォルトセリフ" = Array[ExtResource("10_ehavt")]([SubResource("Resource_ehavt")])
+
+[node name="女脱衣室" type="Node3D" parent="80,-48,a/80,-48,a/中心" unique_id=1269472511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5648377, -0.9126787, 4.004687e-08)
+
+[node name="ライト" type="Node3D" parent="80,-48,a/80,-48,a/中心/女脱衣室" unique_id=1204832449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.108683586, -0.099786125)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/女脱衣室/ライト" unique_id=1622242227 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.03525448, -7.450581e-09)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/女脱衣室/ライト" unique_id=533950505 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.3267703, -1.3969839e-08)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/女脱衣室/ライト" unique_id=239283267 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.55682325, -2.9802322e-08)
+
+[node name="脱衣ライト" type="Node3D" parent="80,-48,a/80,-48,a/中心/女脱衣室/ライト" unique_id=1043508138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7098787, 0.1652441, -7.450581e-09)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/女脱衣室/ライト/脱衣ライト" unique_id=1237760805 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.31593227, -0.08512831, -0.055080675)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/女脱衣室/ライト/脱衣ライト" unique_id=2127858996 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.33358932, 0.14156675, -0.057648145)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/女脱衣室/ライト/脱衣ライト" unique_id=1924040437 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.50330997, 0.14156675, -0.060107224)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/女脱衣室/ライト/脱衣ライト" unique_id=1040411991 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.51773, -0.09368563, -0.071424685)
+
+[node name="ロビー行き" parent="80,-48,a/80,-48,a/中心/女脱衣室" unique_id=136029386 instance=ExtResource("7_s5tcf")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0.0019302368, 0.49707747, -0.12059464)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/女脱衣室/ロビー行き" unique_id=759273594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.071956635, 0.27416992, 0.64086914)
+shape = SubResource("BoxShape3D_euwu4")
+
+[node name="女銭湯" parent="80,-48,a/80,-48,a/中心/女脱衣室" unique_id=1852558820 instance=ExtResource("7_s5tcf")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0.27389836, -0.1407919, -0.102384575)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 7
+"階層" = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/女脱衣室/女銭湯" unique_id=2021535524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.071956635, 0.27416992, 0.64086914)
+shape = SubResource("BoxShape3D_euwu4")
+
+[node name="銭湯→女脱衣" type="Marker3D" parent="80,-48,a/80,-48,a/中心/女脱衣室" unique_id=528917509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27352953, -0.076869965, 0.013500275)
+
+[node name="ロビー→女脱衣" type="Marker3D" parent="80,-48,a/80,-48,a/中心/女脱衣室" unique_id=629723701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01721859, 0.50535154, 0.013500248)
+
+[node name="女銭湯" type="Node3D" parent="80,-48,a/80,-48,a/中心" unique_id=1377922991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5551198, -0.924778, 4.004687e-08)
+
+[node name="ライト" type="Node3D" parent="80,-48,a/80,-48,a/中心/女銭湯" unique_id=617705078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02590251, -0.4077549, -0.16578785)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/女銭湯/ライト" unique_id=1541851754 instance=ExtResource("5_6xx3s")]
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/女銭湯/ライト" unique_id=2059312374 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.56244063, -0.06408024, 0)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/女銭湯/ライト" unique_id=1289298971 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.3087709, 0.3962736, -5.9604645e-08)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/女銭湯/ライト" unique_id=69177458 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.34394646, 0.7534642, -1.0430813e-07)
+
+[node name="ライト5" parent="80,-48,a/80,-48,a/中心/女銭湯/ライト" unique_id=1651908383 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.10515022, 0.89727974, -0.049829006)
+
+[node name="ライト6" parent="80,-48,a/80,-48,a/中心/女銭湯/ライト" unique_id=176007015 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.10515022, 0.5932903, -0.04982899)
+
+[node name="女脱衣所戻り" parent="80,-48,a/80,-48,a/中心/女銭湯" unique_id=624930846 instance=ExtResource("7_s5tcf")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.7162237, -0.19321728, -0.08203887)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 6
+"階層" = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/女銭湯/女脱衣所戻り" unique_id=1029846450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.071956635, 0.27416992, 0.64086914)
+shape = SubResource("BoxShape3D_euwu4")
+
+[node name="女脱衣→銭湯" type="Marker3D" parent="80,-48,a/80,-48,a/中心/女銭湯" unique_id=182970858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7167525, -0.22252226, 0.01468597)
+
+[node name="男銭湯" type="Node3D" parent="80,-48,a/80,-48,a/中心" unique_id=452013954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8805559, 0.7675824, 0.016886186)
+
+[node name="ライト" type="Node3D" parent="80,-48,a/80,-48,a/中心/男銭湯" unique_id=152662581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02020526, 0, -0.33380666)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=672568215 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.0533576, 0)
+
+[node name="ライト7" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=1703037394 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.360909, -0.7598109, 0.063040406)
+
+[node name="ライト8" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=1730407511 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.360909, -0.4363184, 0.063040376)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=908272166 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.37992978, -2.9802322e-08)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=496402782 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.40069032, 0.37992978, -2.9802322e-08)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=982212532 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.36058378, 0, 0)
+
+[node name="ライト5" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=641864676 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.7311702, 0, 0)
+
+[node name="ライト6" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=222531806 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.7311702, 0.4415741, -2.9802322e-08)
+
+[node name="ライト9" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=1309951372 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.5603137, -0.4073367, 0.10242094)
+
+[node name="ライト10" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=940398055 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.5603137, -0.80432415, 0.102420956)
+
+[node name="男脱衣→銭湯" type="Marker3D" parent="80,-48,a/80,-48,a/中心/男銭湯/ライト" unique_id=77581236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06604004, -0.066146374, 0.33153388)
+
+[node name="脱衣所行き" parent="80,-48,a/80,-48,a/中心/男銭湯" unique_id=1535701468 instance=ExtResource("7_s5tcf")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.05034542, -0.080975056, -0.11627472)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 5
+"階層" = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/男銭湯/脱衣所行き" unique_id=1442060421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03395462, -0.22188187, 0.94696695)
+shape = SubResource("BoxShape3D_s5tcf")
+
+[node name="会食場" type="Node3D" parent="80,-48,a/80,-48,a/中心" unique_id=374059193]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9986415, 0, -0.4342113)
+
+[node name="ライト" type="Node3D" parent="80,-48,a/80,-48,a/中心/会食場" unique_id=1524932038]
+process_mode = 4
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=421166074 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, -0.15651295)
+
+[node name="ライト8" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=1140068304 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.45613384, -0.15651289)
+
+[node name="ライト9" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=235370412 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.004704714, -0.92303133, -0.15651289)
+
+[node name="ライト10" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=1826436731 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.012741327, -1.297329, -0.15651289)
+
+[node name="ライト11" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=48693284 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.012741327, -1.5317822, -0.15792784)
+
+[node name="ライト12" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=1656129964 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.5547612, -1.3392768, -0.1579279)
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=2141928605 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.30052423, -0.13859078)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=963649264 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.042408466, 0.8775761, -0.15967205)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=1385989349 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.2764554, 0.8775761, -0.15967205)
+
+[node name="ライト5" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=308301132 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.2764554, 1.1950076, -0.15967205)
+
+[node name="ライト6" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=134625354 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.06581044, 1.2622674, -0.15967199)
+
+[node name="ライト7" parent="80,-48,a/80,-48,a/中心/会食場/ライト" unique_id=555176410 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.6392746, 1.0433927, -0.17519745)
+
+[node name="ロビー行き" parent="80,-48,a/80,-48,a/中心/会食場" unique_id=620113524 instance=ExtResource("8_rs4s5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62892604, 1.3065822, 0.026256919)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 10
+"移動時間" = 0.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/会食場/ロビー行き" unique_id=718258636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0043945313, 0.05895996, 0)
+shape = SubResource("BoxShape3D_8445k")
+
+[node name="Marker3D" type="Marker3D" parent="80,-48,a/80,-48,a/中心/会食場/ロビー行き" unique_id=1109279224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3627746, 0.11605775)
+
+[node name="ロビ→食堂" type="Marker3D" parent="80,-48,a/80,-48,a/中心/会食場" unique_id=1303754537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.646647, 1.258435, 0.019197077)
+
+[node name="客室" type="Node3D" parent="80,-48,a/80,-48,a/中心" unique_id=1646292829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6300092, -1.2013817, -0.33764544)
+
+[node name="ライト" type="Node3D" parent="80,-48,a/80,-48,a/中心/客室" unique_id=1734318465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15058857)
+
+[node name="ライト" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=1330270470 instance=ExtResource("5_6xx3s")]
+
+[node name="ライト2" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=1683469663 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 2.5455186, 5.9604645e-08)
+
+[node name="ライト3" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=676951462 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 2.2004337, 2.3841858e-07)
+
+[node name="ライト4" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=1749259593 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 1.7404699, 2.3841858e-07)
+
+[node name="ライト5" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=806796525 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 1.4914608, 2.3841858e-07)
+
+[node name="ライト6" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=1688320661 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 1.1803255, 2.3841858e-07)
+
+[node name="ライト7" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=133916042 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.7255049, 4.172325e-07)
+
+[node name="ライト8" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=215556162 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0.51856995, 4.7683716e-07)
+
+[node name="ライト9" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=1432831534 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, -0.25538588, 5.364418e-07)
+
+[node name="ライト10" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=638553698 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.01738429, -0.52298737, 7.748604e-07)
+
+[node name="ライト11" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=1614127121 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.008611441, -0.77827406, 8.34465e-07)
+
+[node name="ライト12" parent="80,-48,a/80,-48,a/中心/客室/ライト" unique_id=1216311884 instance=ExtResource("5_6xx3s")]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.33883262, -0.75815105, 0.020940453)
+
+[node name="ロビー行き" parent="80,-48,a/80,-48,a/中心/客室" unique_id=663682434 instance=ExtResource("8_rs4s5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35607123, -0.8017421, 0.006005317)
+"アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
+"アクセス番号" = 12
+"移動時間" = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/客室/ロビー行き" unique_id=207717433]
+transform = Transform3D(0.77924573, -2.7394734e-08, -0.62671846, 2.7394734e-08, 1, -9.649476e-09, 0.62671846, -9.649476e-09, 0.77924573, -0.41972303, 0.017885685, 0.075935066)
+shape = SubResource("BoxShape3D_rs4s5")
+
+[node name="マーカー" type="Marker3D" parent="80,-48,a/80,-48,a/中心/客室/ロビー行き" unique_id=1857160771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.51909566, 0.029005527, 0.25879198)
+
+[node name="ロビ→客室" type="Marker3D" parent="80,-48,a/80,-48,a/中心/客室" unique_id=797505711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39926314, -0.79967594, 2.9802322e-08)

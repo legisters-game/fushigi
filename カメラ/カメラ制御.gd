@@ -12,6 +12,7 @@ const 角最大ロック:float=15
 var 角最小変数:float=-15
 const 角最小:float=-15
 
+@onready var 親:レベル制御クラス=$"../"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,14 +26,14 @@ func _physics_process(delta: float) -> void:
 	if not 目標:
 		return
 		
-	var local_current:Vector3 = get_parent().to_local(global_position)
-	var local_target:Vector3 = get_parent().to_local(目標.カメラ基準.global_position)
+	var local_current:Vector3 = 親.to_local(global_position)
+	var local_target:Vector3 = 親.to_local(目標.カメラ基準.global_position)
 	
 	# ローカル空間の中でだけ、なめらかに追従させる
 	var local_next:Vector3 = lerp(local_current, local_target, delta * 速さ)
 	
 	# 最終的な位置をグローバルに変換して適用
-	global_position = get_parent().to_global(local_next)
+	global_position = 親.to_global(local_next)
 	
 	
 	#現在位置=lerp(現在位置,目標.カメラ基準.global_position,delta*速さ)

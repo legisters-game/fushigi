@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="2_lggff"]
 [ext_resource type="Texture2D" uid="uid://tw5f5apsusr5" path="res://ワールド/星テクスチャ.tres" id="2_yoow5"]
 [ext_resource type="PackedScene" uid="uid://6jh6664vjvwy" path="res://街チャンク処理/都市3d仮.tscn" id="4_ealrb"]
+[ext_resource type="Resource" uid="uid://5x5msw3jds8a" path="res://上書きテスト.tres" id="5_2mu51"]
 [ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="8_vxd74"]
 [ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="9_dhlwf"]
 [ext_resource type="Resource" uid="uid://bpyrwxe76yh6j" path="res://エンティティ/NPC/スケジュール/キール.tres" id="10_s0gvp"]
@@ -64,10 +65,13 @@ metadata/_custom_type_script = "uid://bjjvp7rx64bcv"
 
 [sub_resource type="Resource" id="Resource_pb8dk"]
 script = ExtResource("2_lggff")
-"ミッション名" = "reft"
+"ミッション名" = "上書きチェック"
 "条件数" = 6
-"サブ" = true
-"優先度" = 2
+"表示用条件" = "上書きのテスト"
+"優先度" = 10
+"キャラセリフ上書きリスト" = Dictionary[int, ExtResource("8_vxd74")]({
+0: ExtResource("5_2mu51")
+})
 metadata/_custom_type_script = "uid://bjjvp7rx64bcv"
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6dblj"]
@@ -111,28 +115,23 @@ vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("209_yj0qq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mu51"]
+resource_name = "R_eye_color"
+cull_mode = 2
+albedo_texture = ExtResource("209_yj0qq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmvb8"]
+resource_name = "L_eye_color"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4i7mf"]
 resource_name = "material_0"
 transparency = 4
 albedo_texture = ExtResource("209_yj0qq")
 metallic_specular = 0.0
 texture_filter = 0
 texture_repeat = false
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmvb8"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4i7mf"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3s0n5"]
 resource_name = "Skin"
@@ -143,6 +142,22 @@ metallic_specular = 0.0
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpkl4"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4s1x"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf4ct"]
 resource_name = "Skin_Head_only"
 transparency = 4
 cull_mode = 2
@@ -151,27 +166,11 @@ albedo_texture = ExtResource("209_yj0qq")
 roughness = 0.9
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4s1x"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5w2ad"]
 resource_name = "Mouse"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("209_yj0qq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf4ct"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5w2ad"]
-resource_name = "Skin"
-transparency = 4
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("209_yj0qq")
-metallic_specular = 0.0
-texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8p5mg"]
 resource_name = "Skin"
@@ -190,20 +189,21 @@ metallic_specular = 0.0
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72tv7"]
-resource_name = "Skin.004"
-transparency = 4
-cull_mode = 2
-diffuse_mode = 2
-albedo_texture = ExtResource("209_yj0qq")
-roughness = 0.9
-texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6a8j"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("209_yj0qq")
 metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6a8j"]
+resource_name = "Skin"
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("209_yj0qq")
+roughness = 0.9
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7uix"]
@@ -215,6 +215,15 @@ metallic_specular = 0.0
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hyfj"]
+resource_name = "Skin.004"
+transparency = 4
+cull_mode = 2
+diffuse_mode = 2
+albedo_texture = ExtResource("209_yj0qq")
+roughness = 0.9
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8d0ks"]
 resource_name = "Skin"
 transparency = 4
 vertex_color_use_as_albedo = true
@@ -222,7 +231,29 @@ albedo_texture = ExtResource("209_yj0qq")
 metallic_specular = 0.0
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8d0ks"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kg7c"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwdad"]
+resource_name = "Pupils(右目)"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykyjb"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("209_yj0qq")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sivbr"]
 resource_name = "Skin.003"
 transparency = 4
 albedo_texture = ExtResource("209_yj0qq")
@@ -282,6 +313,7 @@ transform = Transform3D(1, 0, 0, 0, 0.76040596, -0.64944804, 0, 0.64944804, 0.76
 "メッセージボックス" = NodePath("../Control/メッセージボックス")
 
 [node name="キール" parent="NPC制御" unique_id=1396265163 instance=ExtResource("11_jsnrv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.15866, 25.048, 237.73334)
 
 [node name="わでいど" parent="NPC制御" unique_id=1102978789 instance=ExtResource("14_vxd74")]
 "キャラ" = 14
@@ -325,85 +357,85 @@ process_mode = 0
 
 [node name="GeneralSkeleton" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1999271142, 652042102, 231553116) index="0" unique_id=1885119474]
 bones/11/position = Vector3(1.2841018e-08, 1.15523946e-07, 1.4728274e-10)
-bones/11/rotation = Quaternion(-0.020584932, -0.13873184, 0.028817056, 0.9896966)
-bones/12/rotation = Quaternion(-0.042352334, -0.008021552, -0.017175209, 0.99892294)
-bones/13/rotation = Quaternion(-0.042863365, 0.008202715, 0.01383262, 0.99895155)
-bones/41/rotation = Quaternion(-0.042599384, -0.008507202, -0.01646911, 0.9989203)
-bones/42/rotation = Quaternion(0.53267926, -0.46065563, -0.53718334, -0.46420175)
-bones/43/rotation = Quaternion(0.101298474, 0.7751994, -0.61591333, 0.09723876)
-bones/44/rotation = Quaternion(0.1767884, 0.6846502, -0.17678823, 0.6846502)
-bones/45/rotation = Quaternion(0.0038008452, -0.79002166, -0.032879885, 0.61218494)
-bones/46/rotation = Quaternion(0.5256445, 0.4610269, 0.56316036, -0.4404571)
-bones/47/rotation = Quaternion(-0.16952647, 0.8031527, -0.56909114, -0.048393898)
-bones/48/rotation = Quaternion(0.13975185, -0.69315904, 0.13975191, 0.69315904)
-bones/49/rotation = Quaternion(0.060543377, 0.7789136, 0.024398694, 0.6237249)
-bones/51/rotation = Quaternion(-0.06676399, 0.13825285, 0.9848182, 0.08100579)
-bones/52/rotation = Quaternion(0.008162319, 0.9641267, -0.25849748, 0.059768394)
-bones/53/rotation = Quaternion(0.016706431, 0.09693392, 0.9904942, 0.09615716)
-bones/54/rotation = Quaternion(-0.00631843, 0.97499037, -0.20844442, 0.076842785)
+bones/11/rotation = Quaternion(-0.031450287, -0.025924876, -0.083664104, 0.9956602)
+bones/12/rotation = Quaternion(0.016637575, -0.00041980186, 0.022854555, 0.99960035)
+bones/13/rotation = Quaternion(-0.09273372, -0.011718104, 0.008260455, 0.9955877)
+bones/41/rotation = Quaternion(0.016927518, -0.0021776855, 0.022387141, 0.99960375)
+bones/42/rotation = Quaternion(0.5261012, -0.45330054, -0.5899134, -0.41199332)
+bones/43/rotation = Quaternion(0.0037494204, 0.8683369, -0.49002716, 0.07648818)
+bones/44/rotation = Quaternion(0.17320883, 0.6855646, -0.17320889, 0.6855646)
+bones/45/rotation = Quaternion(0.015121227, -0.7977249, 0.006354256, 0.60279846)
+bones/46/rotation = Quaternion(0.5147421, 0.46503282, 0.589891, -0.4132961)
+bones/47/rotation = Quaternion(-0.025160216, 0.79956764, -0.59998107, -0.009024905)
+bones/48/rotation = Quaternion(0.1311378, -0.6948402, 0.13113753, 0.6948402)
+bones/49/rotation = Quaternion(0.0789451, 0.8162227, -0.014211373, 0.57214177)
+bones/51/rotation = Quaternion(-0.07203735, 0.027926393, 0.993101, -0.08821035)
+bones/52/rotation = Quaternion(-0.0024456342, 0.987934, -0.1471386, -0.0482768)
+bones/53/rotation = Quaternion(0.058759183, 0.13258435, 0.98400867, -0.1034199)
+bones/54/rotation = Quaternion(-0.017552521, 0.94992465, -0.30299506, 0.07435772)
 
 [node name="R_Pupils_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(-0.0036501065, -0.2769663, -0.9608727, -0.97794735, 0.2016406, -0.054406833, 0.20881979, 0.9394843, -0.2715945, -0.15328258, 0.9986042, 0.094914764)
+transform = Transform3D(-0.11477885, -0.053354748, -0.99195725, -0.97040427, 0.21959178, 0.10047371, 0.21246493, 0.9741318, -0.07698017, 0.046343267, 1.0074936, 0.14706878)
 
 [node name="L_Pupils_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(-0.0036501065, -0.2769663, -0.9608727, -0.97794735, 0.2016406, -0.054406833, 0.20881979, 0.9394843, -0.2715945, 0.022557134, 1.0085607, 0.14461653)
+transform = Transform3D(-0.11477885, -0.053354748, -0.99195725, -0.97040427, 0.21959178, 0.10047371, 0.21246493, 0.9741318, -0.07698017, 0.22787143, 0.989107, 0.16115613)
 
 [node name="head" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.9608727, 0.0036501065, -0.2769663, 0.054406833, 0.97794735, 0.2016406, 0.2715945, -0.20881979, 0.9394843, -0.016687965, 0.72843164, -0.06175569)
+transform = Transform3D(0.99195725, 0.11477885, -0.053354748, -0.10047371, 0.97040427, 0.21959178, 0.07698017, -0.21246493, 0.9741318, 0.10601258, 0.7233032, -0.031459134)
 
 [node name="_設定" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
 surface_material_override/0 = SubResource("StandardMaterial3D_pb8dk")
 
 [node name="Eye_001" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("StandardMaterial3D_2mu51")
+surface_material_override/1 = SubResource("StandardMaterial3D_vmvb8")
 
 [node name="Head" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="2" unique_id=1097678551]
-surface_material_override/0 = SubResource("StandardMaterial3D_2mu51")
-
-[node name="Body" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
-surface_material_override/0 = SubResource("StandardMaterial3D_vmvb8")
-
-[node name="Body_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
 surface_material_override/0 = SubResource("StandardMaterial3D_4i7mf")
 
-[node name="Face" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
+[node name="Body" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
 surface_material_override/0 = SubResource("StandardMaterial3D_3s0n5")
-surface_material_override/1 = SubResource("StandardMaterial3D_qpkl4")
-surface_material_override/2 = SubResource("StandardMaterial3D_g4s1x")
+
+[node name="Body_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
+surface_material_override/0 = SubResource("StandardMaterial3D_qpkl4")
+
+[node name="Face" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
+surface_material_override/0 = SubResource("StandardMaterial3D_g4s1x")
+surface_material_override/1 = SubResource("StandardMaterial3D_pf4ct")
+surface_material_override/2 = SubResource("StandardMaterial3D_5w2ad")
 
 [node name="Head_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="6" unique_id=1719889094]
-surface_material_override/0 = SubResource("StandardMaterial3D_pf4ct")
-
-[node name="L_Arm" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
-surface_material_override/0 = SubResource("StandardMaterial3D_5w2ad")
-
-[node name="L_Arm_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
 surface_material_override/0 = SubResource("StandardMaterial3D_8p5mg")
 
-[node name="L_Iris" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
-surface_material_override/0 = null
-
-[node name="L_Leg" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
+[node name="L_Arm" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
 surface_material_override/0 = SubResource("StandardMaterial3D_dsgk7")
 
-[node name="L_Leg_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
+[node name="L_Arm_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
 surface_material_override/0 = SubResource("StandardMaterial3D_72tv7")
 
-[node name="R_Arm" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
+[node name="L_Iris" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
 surface_material_override/0 = SubResource("StandardMaterial3D_x6a8j")
 
-[node name="R_Arm_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
+[node name="L_Leg" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
 surface_material_override/0 = SubResource("StandardMaterial3D_s7uix")
 
-[node name="R_Iris" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
-surface_material_override/0 = null
-
-[node name="R_Leg" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
+[node name="L_Leg_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
 surface_material_override/0 = SubResource("StandardMaterial3D_4hyfj")
 
-[node name="R_Leg_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
+[node name="R_Arm" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
 surface_material_override/0 = SubResource("StandardMaterial3D_8d0ks")
+
+[node name="R_Arm_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
+surface_material_override/0 = SubResource("StandardMaterial3D_8kg7c")
+
+[node name="R_Iris" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
+surface_material_override/0 = SubResource("StandardMaterial3D_wwdad")
+
+[node name="R_Leg" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
+surface_material_override/0 = SubResource("StandardMaterial3D_ykyjb")
+
+[node name="R_Leg_Layer" parent="プレイヤー位置/プレイヤー/原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
+surface_material_override/0 = SubResource("StandardMaterial3D_sivbr")
 
 [node name="カメラ基準点" parent="プレイヤー位置/プレイヤー" index="3" unique_id=1770975331]
 process_mode = 0

@@ -36,18 +36,19 @@ func _ready() -> void:
 		プレイヤーセーブ()
 	
 	return
-	while global_position.x<=1258.081:
-		var アニメ:Tween=get_tree().create_tween()
-		アニメ.bind_node(self)
-		アニメ.tween_property(self,"global_position",Vector3(global_position.x,global_position.y,761.289),10)
-		await アニメ.finished
-		global_position.z=-692.289
-		global_position.x+=25
+	##デバッグ用プレイヤー街全体移動処理
+#	while global_position.x<=1258.081:
+#		var アニメ:Tween=get_tree().create_tween()
+#		アニメ.bind_node(self)
+#		アニメ.tween_property(self,"global_position",Vector3(global_position.x,global_position.y,761.289),10)
+#		await アニメ.finished
+#		global_position.z=-692.289
+#		global_position.x+=25
 		
-	while true:
-		await get_tree().create_timer(0.1).timeout
-		if not 移動操作ロック:
-			操作ロック前位置=global_position
+#	while true:
+#		await get_tree().create_timer(0.1).timeout
+#		if not 移動操作ロック:
+#			操作ロック前位置=global_position
 		
 
 

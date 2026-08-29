@@ -26,15 +26,31 @@ var 会話前回転値保持:float
 func _ready() -> void:
 	super()
 	重力無効 = true#NPCはナビゲーションにより移動を制御するため
-	# スケジュールループ（NPC管理）
-	スケジュールループスタート()
+	#NPC管理に属していない場合、単独で制御するが、重複する場合は自身を消滅させる
+	if get_parent() is スケジュール管理クラス:
+		# スケジュールループ（NPC管理）
+		スケジュールループスタート()
+	elif get_tree().get_first_node_in_group("NPC制御"):
+		for 主のNPC:Node in get_tree().get_first_node_in_group("NPC制御").get_children():
+			if 主のNPC is NPCクラス and 主のNPC.キャラ==キャラ:
+				重複したら消去(主のNPC)
+				
+		
+
+func 重複したら消去(自分:NPCクラス)->void:
+	while true:
+		await  get_tree().create_timer(1).timeout
+		if 自分.visible:queue_free()
 
 func スケジュールループスタート()->void:
-	while get_parent() is スケジュール管理クラス:
-		var NPC管理: スケジュール管理クラス = get_parent()
+	var NPC管理: スケジュール管理クラス
+	if get_parent() is スケジュール管理クラス:
+		NPC管理=get_parent()
+	var レベル制御:レベル制御クラス=get_tree().get_first_node_in_group("全体制御")
+	while NPC管理 and レベル制御:
 		if not NPC管理.全体スケジュール.has(キャラ) :
 			到着位置=global_position #到着位置を上書き
-			break
+			#break
 		await get_tree().create_timer(0.2).timeout
 		#{"目的地": Vector3, "強制到着":bool,"ディメンション":String}
 		var 辞書: Dictionary = NPC管理.目的地取得(キャラ)
@@ -57,9 +73,9 @@ func スケジュールループスタート()->void:
 			#レベルシーンの保存パスが入る
 			辞書ディメンション=ResourceUID.uid_to_path(辞書["ディメンション"])
 		#プレイヤーがいる位置がNPC目的のディメンションと異なる場合↓オーバーワールド時は""になる為通る
-		if get_tree().get_first_node_in_group("全体制御").ディメンション!=辞書ディメンション:
+		if レベル制御.ディメンション!=辞書ディメンション:
 			#プレイヤーがいる位置と目的の位置が両方オーバーワールド↓
-			if 辞書["ディメンション"]=="" and (get_tree().get_first_node_in_group("全体制御").ディメンション=="オープンワールド"):
+			if 辞書["ディメンション"]=="" and (レベル制御.ディメンション=="オープンワールド"):
 				show()
 			else:
 				hide()
@@ -67,10 +83,10 @@ func スケジュールループスタート()->void:
 		else:
 			show()
 			#NPCがオブジェクトにアクセスする場合、ルートがレベルルートを保持しているか↓
-			if 辞書["ディメンション"]!="" and 辞書["ディメンションオブジェクト番号"] and get_tree().get_first_node_in_group("全体制御").レベルルート:
+			if 辞書["ディメンション"]!="" and 辞書["ディメンションオブジェクト番号"] and レベル制御.レベルルート:
 				#ディメンション側にオブジェクトが登録されている場合↓
-				if get_tree().get_first_node_in_group("全体制御").レベルルート.NPC用オブジェクト[辞書["ディメンションオブジェクト番号"]]:
-					get_tree().get_first_node_in_group("全体制御").レベルルート.NPC用オブジェクト[辞書["ディメンションオブジェクト番号"]].実行(self)
+				if レベル制御.レベルルート.NPC用オブジェクト[辞書["ディメンションオブジェクト番号"]]:
+					レベル制御.レベルルート.NPC用オブジェクト[辞書["ディメンションオブジェクト番号"]].実行(self)
 					到着=true#到着はさせておく
 
 ##プレイヤーは引数の方向を向く
@@ -79,14 +95,26 @@ func メッセージ送信(向くターゲット:Node3D=null)->void:
 	if get_parent() is スケジュール管理クラス:
 		#メッセージボックスで停止をfalseにする
 		停止=true
-		move_direction = Vector3.ZERO
 		var NPC管理: スケジュール管理クラス = get_parent()
+		move_direction = Vector3.ZERO
 		var メッセージリスト:Array[セリフオブジェクト]= NPC管理.メッセージ取得(キャラ)
 		NPC管理.メッセージボックス.相手NPC=self
 		if 到着 and メッセージリスト:
 			NPC管理.メッセージボックス.表示(NPC管理.NPC.find_key(キャラ),メッセージリスト)
 		else:
 			NPC管理.メッセージボックス.表示(NPC管理.NPC.find_key(キャラ),デフォルトセリフ)
+		if 向くターゲット and not 座っている:
+			var 距離差分:Vector3=向くターゲット.global_position - global_position
+			回転指定(atan2( 距離差分.x, 距離差分.z))
+		会話前回転値保持=global_rotation.y
+		if モデル.顔ボーン:
+			モデル.顔ボーン.target_node=向くターゲット.get_path()
+	else:
+		停止=true
+		move_direction = Vector3.ZERO
+		if get_tree().get_first_node_in_group("UI")and get_tree().get_first_node_in_group("UI").get_node("メッセージボックス"):
+			get_tree().get_first_node_in_group("UI").get_node("メッセージボックス").相手NPC=self
+			get_tree().get_first_node_in_group("UI").get_node("メッセージボックス").表示(スケジュール管理クラス.NPC.find_key(キャラ),デフォルトセリフ)
 		if 向くターゲット and not 座っている:
 			var 距離差分:Vector3=向くターゲット.global_position - global_position
 			回転指定(atan2( 距離差分.x, 距離差分.z))

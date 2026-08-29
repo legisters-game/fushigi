@@ -32,7 +32,8 @@ func 当たり判定取得()->CollisionShape3D:
 	var 返値:CollisionShape3D
 	for 子ノード:Node in get_children():
 		if 子ノード is CollisionShape3D:
-			return 子ノード
+			返値=子ノード
+			break
 	return 返値
 
 func ガイド表示(する:bool)->void:

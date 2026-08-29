@@ -7,12 +7,6 @@ class_name オープンワールド管理クラス
 var 全体表示:bool
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	return
-	for i in get_children():
-		print(i.name)
-	#process_mode=Node.PROCESS_MODE_DISABLED
 
 
 

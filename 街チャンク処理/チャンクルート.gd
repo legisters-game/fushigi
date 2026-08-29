@@ -38,18 +38,18 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 		#おじさん、編集中にナビゲーションを反映する時代はもう終わりましたよ。。
-		for 子ノード:Node in get_children():
-			if 子ノード is NavigationRegion3D:
-				子ノード.navigation_mesh.border_size=0
-				子ノード.navigation_mesh.cell_size=0.25
-				子ノード.navigation_mesh.cell_height=0.01
-				子ノード.navigation_mesh.agent_max_climb=0.55
-				子ノード.navigation_mesh.border_size=0
-				子ノード.navigation_mesh.agent_height=2
+#		for 子ノード:Node in get_children():
+#			if 子ノード is NavigationRegion3D:
+#				子ノード.navigation_mesh.border_size=0
+#				子ノード.navigation_mesh.cell_size=0.25
+#				子ノード.navigation_mesh.cell_height=0.01
+#				子ノード.navigation_mesh.agent_max_climb=0.55
+#				子ノード.navigation_mesh.border_size=0
+#				子ノード.navigation_mesh.agent_height=2
 				#await get_tree().create_timer(randi_range(1,60)).tim
 				#i.bake_navigation_mesh()
-				子ノード.navigation_mesh=null
-		return
+#				子ノード.navigation_mesh=null
+#		return
 
 	#for i in get_children():
 		#if i is NavigationRegion3D:
@@ -236,6 +236,7 @@ func 強制表示解除()->void:
 	強制表示中=false
 	if not 理論表示中:
 		真処理有無制御(false)
+	強制表示解除シグナル.emit()
 
 ##外部シーンとして保存させあるためオーナーを書き換える。[br]ノード:から下の子全て対象
 func オーナー回帰セット(ノード: Node, ルート: Node)->void:
