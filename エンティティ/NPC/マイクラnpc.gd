@@ -30,14 +30,15 @@ func _ready() -> void:
 	if get_parent() is スケジュール管理クラス:
 		# スケジュールループ（NPC管理）
 		スケジュールループスタート()
+		
 	elif get_tree().get_first_node_in_group("NPC制御"):
 		for 主のNPC:Node in get_tree().get_first_node_in_group("NPC制御").get_children():
 			if 主のNPC is NPCクラス and 主のNPC.キャラ==キャラ:
 				重複したら消去(主のNPC)
-				
 		
 
 func 重複したら消去(自分:NPCクラス)->void:
+	if not データロガー.フラグあるか(スケジュール管理クラス.NPC.find_key(キャラ)+"出現"):queue_free()
 	while true:
 		await  get_tree().create_timer(1).timeout
 		if 自分.visible:queue_free()
@@ -48,6 +49,8 @@ func スケジュールループスタート()->void:
 		NPC管理=get_parent()
 	var レベル制御:レベル制御クラス=get_tree().get_first_node_in_group("全体制御")
 	while NPC管理 and レベル制御:
+		if not データロガー.フラグあるか(スケジュール管理クラス.NPC.find_key(キャラ)+"出現"):
+			hide()
 		if not NPC管理.全体スケジュール.has(キャラ) :
 			到着位置=global_position #到着位置を上書き
 			#break

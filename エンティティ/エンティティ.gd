@@ -12,6 +12,8 @@ class_name エンティティ
 @export var 座り用当たり判定:Array[CollisionShape3D]
 @export var 顔ノード:Node3D
 
+@export var ターゲットマーカー:Marker3D
+
 var アニメベクター:Vector2
 var カメラ基準:Marker3D
 var 指定回転:bool
@@ -74,7 +76,11 @@ func apply_movement(delta:float)->void:
 
 # 回転の計算（進んでいる方向を向く）
 func apply_rotation(delta:float)->void:
-	if move_direction.length() > 0.1:
+	if ターゲットマーカー:
+		var 距離:Vector3=ターゲットマーカー.global_position - global_position
+		var 目標角度:float = atan2(距離.x, 距離.z)
+		global_rotation.y = learn_angle(global_rotation.y, 目標角度, rotation_speed * delta)
+	elif  move_direction.length() > 0.1:
 		# 進みたい方向への角度を計算
 		var 目標角度:float = atan2(move_direction.x, move_direction.z)
 		# 現在の回転を目標の回転へ補完（スムーズに回転させる）
@@ -91,6 +97,13 @@ func apply_rotation(delta:float)->void:
 func 回転指定(目標:float)->void:
 	指定回転=true
 	目標回転=目標
+
+func 視点固定ターゲット指定(ターゲット:Marker3D=null)->void:
+	if ターゲット:
+		ターゲットマーカー=ターゲット
+		
+	else:
+		ターゲットマーカー=null
 
 
 # lerp_angleのヘルパー（Godot 4標準関数ですが明示的に）

@@ -1,5 +1,6 @@
 @icon("res://拡張リソース/アイコン/拡張ノード/UI.png")
 extends Control
+class_name コントロールルート
 @export var ムービー中非表示リスト:Array[Control]
 
 # Called when the node enters the scene tree for the first time.

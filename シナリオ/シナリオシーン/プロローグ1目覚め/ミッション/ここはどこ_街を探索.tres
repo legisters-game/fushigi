@@ -10,4 +10,5 @@ script = ExtResource("1_p2yjs")
 "条件フラグ" = "街を探索する"
 "条件数" = 1
 "表示用条件" = "街の住人を見つける"
+"目的地" = Vector3(-93.14148, 0.52599907, 116.700325)
 metadata/_custom_type_script = "uid://bjjvp7rx64bcv"

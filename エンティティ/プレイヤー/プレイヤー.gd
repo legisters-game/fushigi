@@ -6,9 +6,12 @@ class_name プレイヤークラス
 @export var レベル制御:レベル制御クラス
 @export var メッセージボックス:メッセージボックスクラス
 
+var 戦闘モード:bool
 var 移動操作ロック:bool=true
 var 操作ロック前位置:Vector3
+
 @export var 追尾物:Node3D
+
 #レベル制御で制御
 var レベル移動中:bool
 func _ready() -> void:
@@ -105,7 +108,7 @@ func _process(_delta)->void:
 				break
 			elif 衝突物体 is レベルゲート:
 				if 衝突物体.アクセスレベル!="":
-					レベル制御.レベル移動(衝突物体.アクセスレベル,衝突物体.アクセス番号,衝突物体.階層)
+					衝突物体.実行()
 					break
 			elif 衝突物体 is 街レベルゲート:
 				レベル制御.都市戻り(衝突物体.アクセスマーカー)
@@ -115,6 +118,7 @@ func _process(_delta)->void:
 				break
 			elif 衝突物体 is 椅子アタッチクラス:
 				衝突物体.実行(self)
+				break
 			else:
 				if 衝突物体.has_method("実行"):
 					衝突物体.実行()
@@ -137,6 +141,7 @@ func _on_timer_timeout() -> void:
 		await get_tree().create_timer(0.1).timeout
 		表情切り替え(表情オブジェクト.表情.通常)
 
+	#戦闘切り替え(!戦闘モード)
 func アニメーション中に付き重力無効(する:bool=true)->void:
 	super(する)
 	移動操作ロック=する
@@ -153,9 +158,42 @@ func 操作停止(する:bool=true)->void:
 		移動操作ロック=false
 		レベル移動中=false
 	move_direction=Vector3.ZERO
+
+func 戦闘切り替え(オン:bool)->void:
+	戦闘モード=オン
+	var ステートマシーン:AnimationNodeStateMachinePlayback=アニメツリー.get("parameters/playback")
+	if 戦闘モード:
+		ステートマシーン.travel("戦闘動き")
+		視点固定ターゲット指定(追尾物)
+		if モデル.顔ボーン:
+			モデル.顔ボーン.target_node=追尾物.get_path()
+
+	else:
+		ステートマシーン.travel("動き")
+		視点固定ターゲット指定()
+		if モデル.顔ボーン:
+			モデル.顔ボーン.target_node=NodePath()
+
+
 func 座る(座標:Vector3=Vector3.ZERO)->void:
 	super(座標)
 	if 座標==Vector3.ZERO:
 		移動操作ロック=false
 	else:
 		移動操作ロック=true
+
+func update_animations(velocitys: Vector3,デルタ:float)->void:
+	var local_vel:Vector3 = global_transform.basis.inverse() * velocitys*SPEED*2
+	
+	# ここで「歩きの速度」を基準にする
+	# 例：walk_speed = 3.0, run_speed = 6.0 の場合
+	# スティック全倒しで blend_pos は 2.0 になる
+
+	var x_ratio:float = local_vel.x / (SPEED)
+	var y_ratio:float = local_vel.z / (SPEED)
+	var blend_pos:Vector2 = Vector2(x_ratio, y_ratio)
+	アニメベクター=lerp(アニメベクター,blend_pos,デルタ*11)
+	if 戦闘モード:
+		アニメツリー.set("parameters/戦闘動き/blend_position", アニメベクター)
+	else:
+		アニメツリー.set("parameters/動き/blend_position", アニメベクター)

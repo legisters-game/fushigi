@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://bt4aut6oae7be"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_5a0rk"]
+[ext_resource type="AudioStream" uid="uid://dtlnykadbfcgo" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/ボイス/うーん寂しく.wav" id="2_j3fkw"]
+
+[resource]
+script = ExtResource("1_5a0rk")
+"セリフ" = "うーん、寂しくねーな。
+今はお前がいるからな。"
+"ボイス" = ExtResource("2_j3fkw")
+metadata/_custom_type_script = "uid://4uxnotone8su"

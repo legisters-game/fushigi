@@ -148,7 +148,7 @@ func 停止ポイント設定()->void:
 	アニメーション.pause() # ここでアニメが止まる
 
 func エンティティ取得(名前:String)->Node:
-	return $"オブジェクト中心".get_node(名前)
+	return $"オブジェクト中心".get_node_or_null(名前)
 
 
 # アニメーションの最後や、特定のタイミングで呼び出す
@@ -160,12 +160,12 @@ func 演出終了(フェードアウト有効:bool=false)->void:
 			フェードアウト.フェードアウト()
 			await get_tree().create_timer(1).timeout
 			フェードアウト.フェードイン()
-	演出完了通知.emit()
 	if プレイヤー再生後ワープ and get_tree().get_first_node_in_group("プレイヤー"):
 		get_tree().get_first_node_in_group("プレイヤー").global_position=$"オブジェクト中心/プレイヤー終了位置".global_position
 	if 再生後フラグ!="":
 		データロガー.フラグ追加(再生後フラグ)
 		データロガー.全保存()
+	演出完了通知.emit()
 	
 
 func フェード(アウト:bool=false)->void:

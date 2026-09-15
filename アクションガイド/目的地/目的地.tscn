@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b3klsbc61uf40"]
+
+[ext_resource type="Script" uid="uid://8ub7ksnrltpl" path="res://アクションガイド/目的地/目的地.gd" id="1_qv2qe"]
+[ext_resource type="Texture2D" uid="uid://dnilvjff6iq0q" path="res://icon.svg" id="2_kcuoe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_euwu4"]
+render_priority = 1
+no_depth_test = true
+albedo_color = Color(0, 0.5333333, 1, 1)
+metallic = 0.82
+roughness = 0.55
+emission_enabled = true
+emission = Color(0.024880774, 0.024880774, 0.024880774, 1)
+emission_energy_multiplier = 4.05
+emission_texture = ExtResource("2_kcuoe")
+rim_tint = 0.11
+fixed_size = true
+distance_fade_mode = 1
+distance_fade_min_distance = 5.0
+stencil_flags = 2
+
+[sub_resource type="TorusMesh" id="TorusMesh_b5jwi"]
+material = SubResource("StandardMaterial3D_euwu4")
+
+[node name="目的地" type="Node3D" unique_id=1789454795]
+script = ExtResource("1_qv2qe")
+"無効" = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1717023177]
+transform = Transform3D(-0.032112584, 0.023890452, -1.0442868e-09, 0, -1.7484555e-09, -0.04, -0.023890452, -0.032112584, 1.4036977e-09, 0, -1.0011386, 0)
+ignore_occlusion_culling = true
+mesh = SubResource("TorusMesh_b5jwi")

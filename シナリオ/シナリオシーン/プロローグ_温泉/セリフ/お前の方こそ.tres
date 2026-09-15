@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://d4kn0f2a2a5hv"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_rnm7e"]
+[ext_resource type="AudioStream" uid="uid://dk71dag7j4y3o" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/ボイス/お前の方こそ.wav" id="2_jqj6j"]
+
+[resource]
+script = ExtResource("1_rnm7e")
+"セリフ" = "お前の方こそ寂しくなかったのか？"
+"ボイス" = ExtResource("2_jqj6j")
+metadata/_custom_type_script = "uid://4uxnotone8su"

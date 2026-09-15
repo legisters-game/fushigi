@@ -6,21 +6,28 @@ var 都市プレイヤー座標:Vector3
 var ディメンション:String
 var レベルルート:レベル基礎クラス
 var ディメンション階層:int
+var ムービー予約中:bool
 
 var 読み込み中チャンク:Array[String]
 var 読み込みチャンクシグナル有効:bool
 
 signal 読み込み完了シグナル
 signal レベル読み込み完了シグナル
+signal 移動完了
+
 @export  var 実験:ミッションデータ
 @export  var 実験2:ミッションデータ
+
+
+enum 発生イベント{会話,ムービー}
 
 func _ready() -> void:
 	システム設定関係()
 	
 	#ミッション保存テスト
-	データロガー.ミッションフラグ追加(実験)
-	データロガー.ミッションフラグ追加(実験2)
+	データロガー.フラグ追加("キール出現")
+	#データロガー.ミッションフラグ追加(実験)
+	#データロガー.ミッションフラグ追加(実験2)
 	データロガー.全保存()
 	
 	#セーブデータからディメンション情報を取得
@@ -90,6 +97,9 @@ func レベル移動(レベル:String, 番号:int=0,階層:int=0,フェードア
 	await get_tree().create_timer(1).timeout
 	get_tree().get_first_node_in_group("プレイヤー").簡易移動停止()
 	
+	if get_node("Control/画面フェード").消え中:
+		await get_node("Control/画面フェード").画面消えた
+	
 	var レベルシーン:PackedScene=load(レベル)
 	var レベルルートローカル:レベル基礎クラス=レベルシーン.instantiate()
 	for i:Node in get_node("レベル").get_children():
@@ -114,10 +124,12 @@ func レベル移動(レベル:String, 番号:int=0,階層:int=0,フェードア
 	ディメンション階層=階層
 	get_tree().get_first_node_in_group("プレイヤー").プレイヤーセーブ()
 	データロガー.全保存()
-	get_node("Control/画面フェード").フェードイン()
+	if not ムービー予約中:
+		get_node("Control/画面フェード").フェードイン()
 	await get_tree().create_timer(2).timeout
 	get_tree().get_first_node_in_group("プレイヤー").操作ロック前位置=get_tree().get_first_node_in_group("プレイヤー").global_position
 	get_tree().get_first_node_in_group("プレイヤー").操作停止(false)
+	移動完了.emit()
 	
 func 単純ワープ(ワープ先マーカー:Marker3D,フェードアウト:bool=false)->void:
 	if フェードアウト:
@@ -143,7 +155,9 @@ func 都市戻り(プレイヤー座標マーカー:Marker3D=null)->void:
 	for レベルノード:Node in get_node("レベル").get_children():
 		レベルノード.queue_free()
 	var 街シーン:PackedScene=load("res://街チャンク処理/都市3d仮.tscn")
-	add_child(街シーン.instantiate())
+	var オープンワールドルート:オープンワールド管理クラス=街シーン.instantiate()
+	add_child(オープンワールドルート)
+	オープンワールドルート.position.y=-50
 	get_tree().get_first_node_in_group("プレイヤー").global_position=都市プレイヤー座標
 	ディメンション="オープンワールド"
 	get_tree().get_first_node_in_group("プレイヤー").プレイヤーセーブ()
@@ -154,8 +168,50 @@ func 都市戻り(プレイヤー座標マーカー:Marker3D=null)->void:
 	get_tree().get_first_node_in_group("プレイヤー").global_position=都市プレイヤー座標
 	await get_tree().create_timer(1.5).timeout
 	get_tree().get_first_node_in_group("プレイヤー").操作停止(false)
-
+	get_tree().get_first_node_in_group("UI").get_node("ミッションマネージャー").ミッション更新()
+	移動完了.emit()
 	
+
+func 移動後実行予約(種類:発生イベント,オブジェクト=null,ミッションオブジェクト:ミッションデータ=null)->void:
+	if 種類==発生イベント.ムービー:
+		ムービー予約中=true
+	await 移動完了
+	if 種類==発生イベント.会話:
+		var セリフ配列:Array[セリフオブジェクト]
+		for データ in オブジェクト:
+			if データ is セリフオブジェクト:
+				セリフ配列.append(データ)
+		if セリフ配列.is_empty():
+			return
+		get_tree().get_first_node_in_group("プレイヤー").操作停止(true)
+		get_node("Control/メッセージボックス").表示("レクレイス",セリフ配列)
+		await get_node("Control/メッセージボックス").会話終了
+		get_tree().get_first_node_in_group("プレイヤー").操作停止(false)
+	elif 種類==発生イベント.ムービー:
+		var ムービー:String
+		for データ in オブジェクト:
+			if データ is String:
+				ムービー=データ
+				break
+		if not ムービー:return
+		シナリオ演出実行(ムービー)
+		var 演出ルート=get_node("演出ルート")
+		if not 演出ルート.get_children().is_empty() and 演出ルート.get_children()[0]:
+			var 演出ノード:演出基盤クラス
+			if 演出ルート.get_children()[0] is 演出基盤クラス:
+				演出ノード=演出ルート.get_children()[0]
+				
+				await 演出ノード.演出完了通知
+				ムービー予約中=false
+				
+			else:return
+		else:return
+		
+		
+	if ミッションオブジェクト:
+		データロガー.ミッションフラグ追加(ミッションオブジェクト)
+		get_node("Control/ミッションマネージャー").ミッション更新()
+
 
 func ディメンション返し()->String:
 	return ディメンション
@@ -189,7 +245,8 @@ func シナリオ演出実行(演出パス: String)->void:
 	
 	# 型チェック（演出基盤クラスを継承しているか）
 	if 演出インスタンス is 演出基盤クラス:
-		get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードアウト()
+		if not get_tree().get_first_node_in_group("UI").get_node("画面フェード").消え中 and not ムービー予約中:
+			get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードアウト()
 		
 		if has_node("都市3d仮"):
 			演出インスタンス.都市ルート=get_node("都市3d仮")
@@ -230,6 +287,7 @@ func シナリオ演出実行(演出パス: String)->void:
 func _演出終了後の後処理(インスタンス: 演出基盤クラス)->void:
 	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
 	インスタンス.queue_free()
+	$"演出ルート".remove_child(インスタンス)
 	get_node("NPC制御").show()
 	get_tree().get_first_node_in_group("プレイヤー").show()
 	get_tree().get_first_node_in_group("UI").ムービー終了表示()
@@ -238,4 +296,5 @@ func _演出終了後の後処理(インスタンス: 演出基盤クラス)->vo
 			データロガー.ミッションフラグ追加(i)
 			
 		get_tree().get_first_node_in_group("UI").get_node("ミッションマネージャー").ミッション更新()
+		print("")
 	# プレイヤーのカメラをメインに戻す処理などをここに書く

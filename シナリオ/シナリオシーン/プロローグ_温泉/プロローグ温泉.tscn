@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://en2xvtqcwuwc"]
+
+[ext_resource type="PackedScene" uid="uid://blg0wki80emvo" path="res://シナリオ/演出基盤.tscn" id="1_8hc5o"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="2_a7eyr"]
+[ext_resource type="PackedScene" uid="uid://c8cluh0u6kfci" path="res://レベル/銭湯/銭湯.tscn" id="2_lr1ka"]
+[ext_resource type="PackedScene" uid="uid://bs8n5xvhfrqsw" path="res://エンティティ/演出用/演出モデル.tscn" id="2_xpxkp"]
+[ext_resource type="Animation" uid="uid://t58htoujvkx8" path="res://シナリオ/シナリオシーン/プロローグ_温泉/アニメーション/座る.res" id="3_8lcn4"]
+[ext_resource type="Texture2D" uid="uid://diy1qbve8cgei" path="res://エンティティ/表情管理/レクレイス/レクレイス.png" id="3_a7eyr"]
+[ext_resource type="Resource" uid="uid://kqeim2h8pcr5" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/あの、キールさんは寂しく.tres" id="3_ak27x"]
+[ext_resource type="Resource" uid="uid://bt4aut6oae7be" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/うーん寂しく.tres" id="4_6c3om"]
+[ext_resource type="Texture2D" uid="uid://eejhiqboaihk" path="res://エンティティ/表情管理/キール/423fc6d5b26b7fad0db712372ee184.png" id="4_xpxkp"]
+[ext_resource type="Resource" uid="uid://bfcl7pq4p5x6l" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/いや、昔のときの.tres" id="5_2gg36"]
+[ext_resource type="Resource" uid="uid://d4kn0f2a2a5hv" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/お前の方こそ.tres" id="6_86qqb"]
+[ext_resource type="Resource" uid="uid://dc363lyoxh5yu" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/え、あ、まあ.tres" id="7_peyhm"]
+[ext_resource type="Resource" uid="uid://c5adt0av77u4h" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/どうだ俺たち.tres" id="8_kjaf1"]
+[ext_resource type="Resource" uid="uid://b13yn8vtrqxok" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/ど、どうですかね.tres" id="9_c6lsf"]
+[ext_resource type="Resource" uid="uid://bipgewg4pauba" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/おいおい、冗談.tres" id="10_joqob"]
+[ext_resource type="Resource" uid="uid://c45ooc1fs4dyf" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/そうですね。.tres" id="11_sveur"]
+[ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="12_2gg36"]
+[ext_resource type="Resource" uid="uid://dxp01ejlp5maj" path="res://シナリオ/シナリオシーン/プロローグ_温泉/ミッション/温泉から出る.tres" id="13_86qqb"]
+[ext_resource type="PackedScene" uid="uid://c0mhksd1gr5ic" path="res://シナリオ/演出カメラ.tscn" id="16_6c3om"]
+
+[sub_resource type="Animation" id="Animation_8lcn4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("オブジェクト中心/演出カメラ:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.3744507, 3.0144928, -2.9731026)]
+}
+
+[sub_resource type="Animation" id="Animation_a7eyr"]
+resource_name = "開始"
+length = 40.0
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:セリフ管理")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.6, 5.3, 5.4, 9.200001, 9.3, 12.5, 12.6, 15.9, 16, 19.6, 19.7, 22.300001, 22.400002, 24.1, 24.2, 27.699999, 27.8, 28.9, 29),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": ["レクレイス", 0],
+"method": &"セリフ呼び出し"
+}, {
+"args": [],
+"method": &"停止ポイント設定"
+}, {
+"args": ["キール", 1],
+"method": &"セリフ呼び出し"
+}, {
+"args": [],
+"method": &"停止ポイント設定"
+}, {
+"args": ["レクレイス", 2],
+"method": &"セリフ呼び出し"
+}, {
+"args": [],
+"method": &"停止ポイント設定"
+}, {
+"args": ["キール", 3],
+"method": &"セリフ呼び出し"
+}, {
+"args": [],
+"method": &"停止ポイント設定"
+}, {
+"args": ["レクレイス", 4],
+"method": &"セリフ呼び出し"
+}, {
+"args": [],
+"method": &"停止ポイント設定"
+}, {
+"args": ["キール", 5],
+"method": &"セリフ呼び出し"
+}, {
+"args": [],
+"method": &"停止ポイント設定"
+}, {
+"args": ["レクレイス", 6],
+"method": &"セリフ呼び出し"
+}, {
+"args": [],
+"method": &"停止ポイント設定"
+}, {
+"args": ["キール", 7],
+"method": &"セリフ呼び出し"
+}, {
+"args": [],
+"method": &"停止ポイント設定"
+}, {
+"args": ["レクレイス", 8],
+"method": &"セリフ呼び出し"
+}, {
+"args": [],
+"method": &"停止ポイント設定"
+}, {
+"args": [true],
+"method": &"演出終了"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("オブジェクト中心/演出カメラ")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("オブジェクト中心/演出カメラ:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-4.3744507, 3.0144928, -2.9731026), Vector3(-4.374, 1.619, 0.402)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("オブジェクト中心/演出カメラ2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(20),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8gfdy"]
+_data = {
+&"RESET": SubResource("Animation_8lcn4"),
+&"開始": SubResource("Animation_a7eyr")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a7eyr"]
+_data = {
+&"座る": ExtResource("3_8lcn4")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1vrfj"]
+_data = {
+&"座る": ExtResource("3_8lcn4")
+}
+
+[node name="演出基盤" unique_id=854987473 node_paths=PackedStringArray("削除対象") instance=ExtResource("1_8hc5o")]
+"セリフ集" = Array[ExtResource("2_a7eyr")]([ExtResource("3_ak27x"), ExtResource("4_6c3om"), ExtResource("5_2gg36"), ExtResource("6_86qqb"), ExtResource("7_peyhm"), ExtResource("8_kjaf1"), ExtResource("9_c6lsf"), ExtResource("10_joqob"), ExtResource("11_sveur")])
+"削除対象" = [NodePath("DirectionalLight3D"), NodePath("WorldEnvironment"), NodePath("銭湯")]
+"再生前条件更新フラグ名" = "キール温泉"
+"再生前条件フラグ加算数" = 1
+"条件フラグ加算から上書き" = true
+"再生後発生ミッション" = Array[ExtResource("12_2gg36")]([ExtResource("13_86qqb")])
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=341811062]
+libraries/ = SubResource("AnimationLibrary_8gfdy")
+
+[node name="オブジェクト中心" parent="." index="3" unique_id=610700827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.03981, -0.10492015, -59.99493)
+
+[node name="演出カメラ" parent="オブジェクト中心" index="0" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
+transform = Transform3D(-0.99690664, -0.029016562, 0.073042534, 0, 0.92935354, 0.369191, -0.07859499, 0.36804894, -0.9264787, -4.3744507, 3.0144928, -2.9731026)
+"ターゲット" = [NodePath("../二人の間")]
+
+[node name="Marker3D" type="Marker3D" parent="オブジェクト中心" index="3" unique_id=1889574294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10841054, 0)
+
+[node name="レクレイス" parent="オブジェクト中心" index="4" unique_id=1106972114 instance=ExtResource("2_xpxkp")]
+transform = Transform3D(-0.75699514, 0, 0.6534205, 0, 1, 0, -0.6534205, 0, -0.75699514, -5.5839996, -1.095, 4.5630646)
+"プレイヤーの見た目をジャック" = true
+"スキン" = ExtResource("3_a7eyr")
+
+[node name="AnimationPlayer" parent="オブジェクト中心/レクレイス" index="1" unique_id=1180611621]
+"libraries/追加" = SubResource("AnimationLibrary_a7eyr")
+autoplay = &"追加/座る"
+
+[node name="キール" parent="オブジェクト中心" index="5" unique_id=2081884090 instance=ExtResource("2_xpxkp")]
+transform = Transform3D(-0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, -0.9659258, -3.893406, -1.0950017, 4.78928)
+"オーバーライド" = true
+"スキン" = ExtResource("4_xpxkp")
+
+[node name="AnimationPlayer" parent="オブジェクト中心/キール" index="1" unique_id=1180611621]
+"libraries/追加" = SubResource("AnimationLibrary_1vrfj")
+autoplay = &"追加/座る"
+
+[node name="二人の間" type="Marker3D" parent="オブジェクト中心" index="6" unique_id=368482889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.689064, 0.026522368, 4.3982964)
+
+[node name="演出カメラ2" parent="オブジェクト中心" index="7" unique_id=2044151630 node_paths=PackedStringArray("ターゲット") instance=ExtResource("16_6c3om")]
+transform = Transform3D(0.99999994, 2.8230776e-05, -0.00032303334, 0, 0.996203, 0.08706093, 0.00032426458, -0.08706092, 0.99620295, -4.689335, 0.099517584, 5.233551)
+"ターゲット" = [NodePath("../二人の間")]
+
+[node name="銭湯" parent="." index="4" unique_id=2034705794 instance=ExtResource("2_lr1ka")]
+
+[editable path="オブジェクト中心/レクレイス"]
+[editable path="オブジェクト中心/キール"]

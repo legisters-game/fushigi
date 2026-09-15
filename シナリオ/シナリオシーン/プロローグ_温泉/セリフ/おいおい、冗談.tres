@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://bipgewg4pauba"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_eya6e"]
+[ext_resource type="AudioStream" uid="uid://xbtshtr3bu0k" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/ボイス/おいおい、冗談.wav" id="2_sq20a"]
+
+[resource]
+script = ExtResource("1_eya6e")
+"セリフ" = "おいおい、冗談はよしてくれ、
+1人は嫌だろ？"
+"ボイス" = ExtResource("2_sq20a")
+metadata/_custom_type_script = "uid://4uxnotone8su"

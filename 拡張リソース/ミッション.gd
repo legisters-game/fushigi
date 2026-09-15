@@ -9,6 +9,7 @@ class_name ミッションデータ
 @export_multiline() var 表示用条件:String
 @export var サブ:bool
 @export var 優先度:int
+@export var 目的地:Vector3
 @export var キャラセリフ上書きリスト:Dictionary[スケジュール管理クラス.NPC,NPCスケジューラ]
 
 func 初期化(_name: String,辞書:Dictionary) -> void:
@@ -19,6 +20,7 @@ func 初期化(_name: String,辞書:Dictionary) -> void:
 	表示用条件=辞書["表示用条件"]
 	サブ=辞書["サブ"]
 	優先度=辞書["優先度"]
+	目的地=辞書["目的地"]
 	if 辞書.has("スケジュール") and 辞書["スケジュール"]is Dictionary:
 		キャラセリフ上書きリスト=辞書["スケジュール"]
 	

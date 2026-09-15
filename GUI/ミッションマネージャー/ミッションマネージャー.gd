@@ -33,12 +33,15 @@ func ミッション進行度更新()->void:
 			#get_node("VBoxContainer/HBoxContainer/Control").完了()
 			if get_node("VBoxContainer/HBoxContainer").has_node(ミッションと優先度[0].ミッション名):
 				get_node("VBoxContainer/HBoxContainer").get_node(ミッションと優先度[0].ミッション名).完了()
+			if ミッションと優先度[0]==$"目的地".ミッション:
+				$"目的地".hide()
 		else:
 			#get_node("VBoxContainer/HBoxContainer/Control").バー更新(データロガー.ミッション条件取得(i.条件フラグ))
 			if get_node("VBoxContainer/HBoxContainer").has_node(ミッションと優先度[0].ミッション名):
 				get_node("VBoxContainer/HBoxContainer").get_node(ミッションと優先度[0].ミッション名).バー更新(データロガー.ミッション条件取得(ミッションと優先度[0].条件フラグ))
 
 func ミッション取得() -> Dictionary[String, Array]:
+	if not $"../../演出ルート".get_children().is_empty():return{}
 	var 結果辞書: Dictionary[String, Array] = {}
 	if !データロガー.config.has_section("ミッションフラグ"):
 		return 結果辞書
@@ -82,7 +85,11 @@ func ミッション取得() -> Dictionary[String, Array]:
 
 		# コンテナ内の表示順序をソート結果のインデックスに合わせる
 		コンテナ.move_child(セルノード, インデックス)
-
+		
+	for ミッション:Array in  ソート済み全リスト:
+		if ミッション[0].目的地!=Vector3.ZERO:
+			$"目的地".目的地更新(ミッション[0].目的地,ミッション[0])
+			break
 	return 結果辞書
 
 
@@ -92,7 +99,7 @@ func キャラスケジュール取得(NPC番号:スケジュール管理クラ�
 		var スケジュール:NPCスケジューラ
 		if ミッション[0].キャラセリフ上書きリスト and ミッション[0].キャラセリフ上書きリスト.has(NPC番号):
 			スケジュール=ミッション[0].キャラセリフ上書きリスト[NPC番号]
-		if スケジュール:
+		if スケジュール and not スケジュール.スケジュールリスト.is_empty():
 			ソート前リスト.append([スケジュール,ミッション[0].優先度])
 
 	ソート前リスト.sort_custom(func(a:Array, b:Array): return a[1] > b[1])

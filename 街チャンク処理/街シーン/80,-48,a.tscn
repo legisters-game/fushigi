@@ -59,6 +59,8 @@ transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 1, -4.3711385e-08, 4.37
 "アクセスレベル" = "res://レベル/銭湯/銭湯.tscn"
 "アクセス番号" = 9
 "移動時間" = 0.8
+"ミッション条件更新フラグ名" = "トイレGO"
+"ミッション条件更新値" = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/中心/当たり判定制御/レベルゲート2" unique_id=1398953346]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.038726926, 0.021942139, 0)

@@ -261,8 +261,11 @@ transform = Transform3D(0.98909205, 0.019308165, -0.14602792, 0, 0.99137163, 0.1
 "ターゲット" = [NodePath("../レクレイス/Marker3D")]
 "切り替え時間" = 1.0
 
+[node name="プレイヤー開始位置" parent="オブジェクト中心" index="2" unique_id=921214811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88856506, -14.882515, 0.0019302368)
+
 [node name="プレイヤー終了位置" parent="オブジェクト中心" index="3" unique_id=1054089237]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.620514, 0, -43.66082)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.620514, -14.873648, -43.66082)
 
 [node name="街全体紹介用" type="Marker3D" parent="オブジェクト中心" index="4" unique_id=1549613727]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.4044704, 0)

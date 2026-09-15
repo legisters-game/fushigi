@@ -27,9 +27,10 @@ glow_enabled = true
 [sub_resource type="Animation" id="Animation_8tjtt"]
 length = 0.001
 
-[sub_resource type="Animation" id="Animation_r4pe8"]
+[sub_resource type="Animation" id="Animation_hsgxs"]
 resource_name = "開始"
 length = 10.0
+step = 0.1
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -37,32 +38,18 @@ tracks/0/path = NodePath(".:セリフ管理")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(6.91),
+"times": PackedFloat32Array(10),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": [],
+"args": [true],
 "method": &"演出終了"
 }]
 }
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("オブジェクト中心/演出カメラ")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.05),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"make_current"
-}]
-}
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_8tjtt"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ckrf0"]
 _data = {
 &"RESET": SubResource("Animation_8tjtt"),
-&"開始": SubResource("Animation_r4pe8")
+&"開始": SubResource("Animation_hsgxs")
 }
 
 [node name="演出基盤" type="Node3D" unique_id=854987473 node_paths=PackedStringArray("削除対象") groups=["演出ノード"]]
@@ -85,14 +72,15 @@ directional_shadow_max_distance = 176.5
 environment = SubResource("Environment_8tjtt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=341811062]
-libraries/ = SubResource("AnimationLibrary_8tjtt")
+libraries/ = SubResource("AnimationLibrary_ckrf0")
 
 [node name="オブジェクト中心" type="Node3D" parent="." unique_id=610700827]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.9103565, 0)
 
-[node name="演出カメラ" parent="オブジェクト中心" unique_id=1454396540 instance=ExtResource("2_8tjtt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.9103565, 0)
+[node name="演出カメラ" parent="オブジェクト中心" unique_id=1454396540 node_paths=PackedStringArray("ターゲット") instance=ExtResource("2_8tjtt")]
+transform = Transform3D(-0.9692643, 0.0009459974, -0.2460198, 0, 0.9999926, 0.0038451802, 0.24602161, 0.003726996, -0.9692572, -1.5688477, 2.4895687, -2.678215)
+"ターゲット" = [NodePath("../プレイヤー開始位置")]
 
 [node name="プレイヤー開始位置" type="Marker3D" parent="オブジェクト中心" unique_id=921214811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88856506, 2.4789362, 0.0019302368)
 
 [node name="プレイヤー終了位置" type="Marker3D" parent="オブジェクト中心" unique_id=1054089237]

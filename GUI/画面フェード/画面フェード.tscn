@@ -109,3 +109,5 @@ texture = ExtResource("2_e0xp5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=406942275]
 libraries/ = SubResource("AnimationLibrary_t2rcv")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

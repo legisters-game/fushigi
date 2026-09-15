@@ -6,6 +6,13 @@ class_name レベルエリアゲート
 @export var 階層:int
 @export var 移動時間:float
 
+@export var イベント発生条件ミッションフラグ:String
+@export var イベント用オブジェクト:Array
+@export var 移動後イベント:レベル制御クラス.発生イベント
+@export var イベント発生後ミッション:ミッションデータ
+@export var ミッション条件更新フラグ名:String
+@export var ミッション条件更新値:int
+
 func _ready() -> void:
 	if アクセスレベル=="":
 		queue_free()
@@ -13,6 +20,14 @@ func _ready() -> void:
 func _on_body_entered(body: Node3D) -> void:
 	if body is プレイヤークラス:
 		if not body.レベル制御 or body.レベル移動中:return
+		
+		var イベント予約有効:bool
+		イベント予約有効=データロガー.ミッションフラグあるか(イベント発生条件ミッションフラグ)
+		データロガー.ミッション条件フラグ保存(ミッション条件更新フラグ名,ミッション条件更新値)
+		
+		if イベント予約有効:
+			階層=2
+		
 		body.移動操作ロック=true
 		var 位置マーカー:Marker3D
 		for i in get_children():
@@ -33,3 +48,6 @@ func _on_body_entered(body: Node3D) -> void:
 		else:
 			body.レベル制御.レベル移動(アクセスレベル,アクセス番号,階層)
 		データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.座標,body.操作ロック前位置)
+		
+		if イベント用オブジェクト and イベント予約有効:
+			body.レベル制御.移動後実行予約(移動後イベント,イベント用オブジェクト,イベント発生後ミッション)

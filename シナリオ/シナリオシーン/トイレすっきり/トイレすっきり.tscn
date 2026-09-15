@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dba7qpldwerps"]
+
+[ext_resource type="PackedScene" uid="uid://blg0wki80emvo" path="res://シナリオ/演出基盤.tscn" id="1_3uagn"]
+[ext_resource type="Animation" uid="uid://d08u0g6ricvni" path="res://シナリオ/シナリオシーン/トイレすっきり/アニメーション/開始.res" id="2_ktp6w"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="2_rthek"]
+[ext_resource type="PackedScene" uid="uid://dmbek8jwtnvaw" path="res://レベル/マンション/マンション.tscn" id="3_rthek"]
+[ext_resource type="Resource" uid="uid://dawfc5ss5t8l2" path="res://シナリオ/シナリオシーン/トイレすっきり/セリフ/すっきりした.tres" id="3_s7bev"]
+[ext_resource type="Resource" uid="uid://b672fpmjtcnbx" path="res://シナリオ/シナリオシーン/トイレすっきり/セリフ/トイレ音.tres" id="4_cm75h"]
+[ext_resource type="Resource" uid="uid://ba3hyoh0m2alq" path="res://シナリオ/シナリオシーン/トイレすっきり/セリフ/おう、よかったな.tres" id="5_cm75h"]
+
+[sub_resource type="Animation" id="Animation_s7bev"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cm75h"]
+_data = {
+&"RESET": SubResource("Animation_s7bev"),
+&"開始": ExtResource("2_ktp6w")
+}
+
+[node name="演出基盤" unique_id=854987473 node_paths=PackedStringArray("削除対象") instance=ExtResource("1_3uagn")]
+"セリフ集" = Array[ExtResource("2_rthek")]([ExtResource("3_s7bev"), ExtResource("4_cm75h"), ExtResource("5_cm75h")])
+"削除対象" = [NodePath("DirectionalLight3D"), NodePath("WorldEnvironment"), NodePath("マンション")]
+"プレイヤー再生後ワープ" = true
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=341811062]
+libraries/ = SubResource("AnimationLibrary_cm75h")
+
+[node name="オブジェクト中心" parent="." index="3" unique_id=610700827]
+transform = Transform3D(0.99334955, 0, 0.1151377, 0, 1, 0, -0.1151377, 0, 0.99334955, -147.55443, 0, 117.187836)
+
+[node name="演出カメラ" parent="オブジェクト中心" index="0" unique_id=1454396540]
+transform = Transform3D(-0.9749492, 0.024178088, -0.22110981, 0, 0.9940745, 0.108700834, 0.22242779, 0.10597778, -0.9691721, -0.88900757, 9.55, -4.2180023)
+
+[node name="プレイヤー開始位置" parent="オブジェクト中心" index="1" unique_id=921214811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.781, 8.729, 3.102)
+
+[node name="プレイヤー終了位置" parent="オブジェクト中心" index="2" unique_id=1054089237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3845215, 7.219715, 5.2498245)
+
+[node name="マンション" parent="." index="4" unique_id=1557217192 node_paths=PackedStringArray("NPC用オブジェクト") instance=ExtResource("3_rthek")]
+"NPC用オブジェクト" = [null, NodePath("-112,176,a/中心/二階/部屋/椅子キール")]
+
+[editable path="マンション"]

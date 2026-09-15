@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ミッションデータ" format=3 uid="uid://dxp01ejlp5maj"]
+
+[ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="1_m1s0e"]
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="2_qgl7w"]
+
+[resource]
+script = ExtResource("1_m1s0e")
+"ミッション名" = "温泉から出る"
+"条件フラグ" = "温泉から出る"
+"条件数" = 1
+"優先度" = 1
+metadata/_custom_type_script = "uid://bjjvp7rx64bcv"
