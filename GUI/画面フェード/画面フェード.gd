@@ -11,7 +11,8 @@ func フェードイン待機(オープン:レベル制御クラス)->void:
 	フェードイン()
 
 
-func フェードアウト()->void:
+func フェードアウト(画像あり:bool=false)->void:
+	$"ColorRect/画像".visible=画像あり
 	get_node("AnimationPlayer").play("フェードアウト")
 	消え中=true
 	

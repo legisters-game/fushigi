@@ -4,6 +4,7 @@
 
 [resource]
 resource_name = "create_block-palettes-framed_glass"
+render_priority = 2
 transparency = 4
 albedo_texture = ExtResource("1_wegu8")
 texture_filter = 2

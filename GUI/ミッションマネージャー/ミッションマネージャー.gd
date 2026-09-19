@@ -90,6 +90,9 @@ func ミッション取得() -> Dictionary[String, Array]:
 		if ミッション[0].目的地!=Vector3.ZERO:
 			$"目的地".目的地更新(ミッション[0].目的地,ミッション[0])
 			break
+			
+	#ここでＮＰＣの上書きをかける
+	get_tree().get_first_node_in_group("NPC制御").キャッシュ消去()
 	return 結果辞書
 
 
@@ -107,7 +110,6 @@ func キャラスケジュール取得(NPC番号:スケジュール管理クラ�
 	var 結果: Array[NPCスケジューラ] = []
 	for リスト: Array in ソート前リスト:
 		結果.append(リスト[0])
-
 	return 結果
 	
 	

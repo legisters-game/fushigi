@@ -4,10 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://6jh6664vjvwy" path="res://街チャンク処理/都市3d仮.tscn" id="1_p3qju"]
 [ext_resource type="PackedScene" uid="uid://buwi56bftrlec" path="res://エンティティ/プレイヤー/プレイヤー.tscn" id="2_lgdby"]
 [ext_resource type="PackedScene" uid="uid://nfkdvrm1gp82" path="res://カメラ/カメラ制御.tscn" id="3_5dlex"]
-[ext_resource type="Script" uid="uid://ck32fe4yvp4h8" path="res://GUI/時間.gd" id="5_10o88"]
-[ext_resource type="PackedScene" uid="uid://s36hn6agtol7" path="res://GUI/メッセージボックス/メッセージボックス.tscn" id="6_4x66x"]
+[ext_resource type="PackedScene" uid="uid://bsi4qrtmhdsr7" path="res://GUI/UI.tscn" id="6_otl0w"]
 [ext_resource type="PackedScene" uid="uid://cq7xmps5vwqtp" path="res://電車/インスタンス管理/先頭列車.tscn" id="6_sj3gr"]
-[ext_resource type="PackedScene" uid="uid://b3guj3xr1as0a" path="res://GUI/画面フェード/画面フェード.tscn" id="7_sj3gr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6sw3j"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -43,60 +41,6 @@ environment = SubResource("Environment_prypv")
 
 [node name="都市3d仮" parent="." unique_id=1006423857 instance=ExtResource("1_p3qju")]
 
-[node name="Control" type="Control" parent="." unique_id=48858334 groups=["UI"]]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="時間" type="Control" parent="Control" unique_id=1568317424]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -255.59003
-offset_top = -50.0
-offset_right = -5.5892334
-offset_bottom = -10.0
-grow_horizontal = 0
-grow_vertical = 0
-script = ExtResource("5_10o88")
-
-[node name="ProgressBar" type="HSlider" parent="Control/時間" unique_id=1920656608]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -16.0
-grow_horizontal = 2
-grow_vertical = 0
-focus_mode = 0
-max_value = 1000.0
-editable = false
-
-[node name="Label" type="Label" parent="Control/時間" unique_id=79838171]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-text = "時間"
-horizontal_alignment = 1
-
-[node name="メッセージボックス" parent="Control" unique_id=1796908698 instance=ExtResource("6_4x66x")]
-layout_mode = 1
-
-[node name="画面フェード" parent="Control" unique_id=298488208 instance=ExtResource("7_sj3gr")]
-layout_mode = 1
-
 [node name="Node3D" type="Node3D" parent="." unique_id=1867969318]
 
 [node name="Path3D" type="Path3D" parent="Node3D" unique_id=2027480841]
@@ -104,21 +48,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.505, 16.045, 0)
 curve = SubResource("Curve3D_8rf30")
 
 [node name="先頭列車" parent="Node3D/Path3D" unique_id=716878262 instance=ExtResource("6_sj3gr")]
-transform = Transform3D(-0.74052936, -3.9765874e-07, 0.672024, 0, 1, 5.9173294e-07, -0.672024, 4.3819563e-07, -0.74052936, -138.77774, 0, 129.23639)
-progress = 2.431514
+transform = Transform3D(-0.22593887, 0, -0.9741414, 0, 1, 0, 0.97414154, 0, -0.22593884, 30.07866, 0, 177.5035)
+progress = 172.97414
 
 [node name="プレイヤー相対位置" type="Node3D" parent="." unique_id=1414897882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 0, 0, 0)
 
 [node name="プレイヤー" parent="プレイヤー相対位置" unique_id=1396265163 node_paths=PackedStringArray("レベル制御", "メッセージボックス", "追尾物") groups=["プレイヤー"] instance=ExtResource("2_lgdby")]
 "レベル制御" = NodePath("../..")
-"メッセージボックス" = NodePath("../../Control/メッセージボックス")
+"メッセージボックス" = NodePath("")
 "追尾物" = NodePath("../../Node3D/Path3D/先頭列車/MeshInstance3D")
 
-[node name="カメラ制御" parent="プレイヤー相対位置" unique_id=629122187 node_paths=PackedStringArray("目標") instance=ExtResource("3_5dlex")]
-transform = Transform3D(1, 0, 0, 0, 0.76040614, -0.6494482, 0, 0.6494482, 0.76040614, 0, 0, 0)
-"目標" = NodePath("../プレイヤー")
+[node name="カメラ制御" parent="." unique_id=629122187 node_paths=PackedStringArray("目標") instance=ExtResource("3_5dlex")]
+transform = Transform3D(1, 0, 0, 0, 0.76040614, -0.6494482, 0, 0.6494481, 0.760406, 0, 0, 0)
+"目標" = NodePath("../プレイヤー相対位置/プレイヤー")
 "速さ" = 5.0
 "感度" = 9.0
+
+[node name="Control" parent="." unique_id=2117861670 instance=ExtResource("6_otl0w")]
+
+[node name="演出ルート" type="Node3D" parent="." unique_id=1613736511]
 
 [editable path="Node3D/Path3D/先頭列車"]

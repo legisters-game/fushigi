@@ -11,16 +11,17 @@ func _ready() -> void:
 	scale=Vector3(16,16,16)
 	position=Vector3.ZERO
 	rotation_degrees=Vector3(90,0,0)
-	get_parent().position=Vector3.ZERO
-	get_parent().scale=Vector3(1,1,1)
-	get_parent().rotation_degrees=Vector3.ZERO
+	var ナビノード:Node=get_parent()
+	ナビノード.position=Vector3.ZERO
+	ナビノード.scale=Vector3(1,1,1)
+	ナビノード.rotation_degrees=Vector3.ZERO
 	if has_node("街全体ビュー"):
 		get_node("街全体ビュー").queue_free()
 	for i:StaticBody3D in find_children("地形当たり判定","StaticBody3D"):
 		i.collision_mask=3
 		i.collision_layer=3
-	if get_parent() is NavigationRegion3D:
-		オーナー=get_parent()
+	if ナビノード is NavigationRegion3D:
+		オーナー=ナビノード
 	else:
 		printerr("依存関係が壊れています。\nNavigationRegion3Dの子にMeshInstance3D(私もとい、街メッシュルート.gd)が来るようにしてください。")
 	if not Engine.is_editor_hint():
@@ -198,7 +199,7 @@ func has_name_recursive(node: Node, target_type:String) -> Node:
 			return a
 	return
 
-func rename_resource_keep_links(current_res: Resource, new_path: String):
+func rename_resource_keep_links(current_res: Resource, new_path: String)->void:
 	# 1. 既存の古いパスを取得（後で削除するため）
 	var old_path:String = current_res.resource_path
 	
