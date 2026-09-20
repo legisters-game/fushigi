@@ -179,7 +179,7 @@ libraries/ = SubResource("AnimationLibrary_8gfdy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.03981, -0.10492015, -59.99493)
 
 [node name="演出カメラ" parent="オブジェクト中心" index="0" unique_id=1454396540 node_paths=PackedStringArray("ターゲット")]
-transform = Transform3D(-0.99690664, -0.029016562, 0.073042534, 0, 0.92935354, 0.369191, -0.07859499, 0.36804894, -0.9264787, -4.3744507, 3.0144928, -2.9731026)
+transform = Transform3D(-0.99909043, -0.016006095, 0.039523393, 0, 0.9268772, 0.37536466, -0.042641457, 0.37502325, -0.92603415, -4.3744507, 3.0144928, -2.9731026)
 "ターゲット" = [NodePath("../二人の間")]
 
 [node name="Marker3D" type="Marker3D" parent="オブジェクト中心" index="3" unique_id=1889574294]

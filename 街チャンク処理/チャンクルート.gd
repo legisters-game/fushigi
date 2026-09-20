@@ -24,6 +24,8 @@ var ナビ生成済み:NavigationMesh
 var 強制表示中:bool
 ##論理的に表示されていることならばtrue
 var 理論表示中:bool
+##起動時フリーズするのを防ぐため
+var 起動直後:bool=true
 signal 強制表示解除シグナル
 
 func _ready() -> void:
@@ -89,6 +91,8 @@ func _ready() -> void:
 			else:
 				print("パックに失敗しました（恐らくroot_nodeが不正）")
 			break
+	await get_tree().create_timer(0.5).timeout
+	起動直後=false
 	
 	
 func _on_area_3d_body_entered(体: Node3D) -> void:
@@ -115,6 +119,7 @@ func _on_area_3d_body_exited(体: Node3D) -> void:
 
 ##街の表示と非表示を引数を用いて実装しています。
 func 真処理有無制御(有無:bool)->void:
+	if 起動直後:await get_tree().create_timer(0.5).timeout
 	if 有無:
 		#表示側
 		var ディレクトリシーンパス:String = "user://sen/"
@@ -157,14 +162,14 @@ func 真処理有無制御(有無:bool)->void:
 		#街のデータは無く、読み直す
 		elif ResourceLoader.exists(内部保存パス,"PackedScene"):
 			#スレッドで読み込み命令開始↓
-			var エラー:Error = ResourceLoader.load_threaded_request(内部保存パス)
+			var エラー:Error = ResourceLoader.load_threaded_request(内部保存パス,"")
 			if エラー == OK:
 				ロード中パス = 内部保存パス
 				ロード中 = true
 				get_tree().get_first_node_in_group("全体制御").読み込み追加(name)
 				return
 		else:#ゲーム内部にシーンが保存されていない場合↓
-			var err:Error = ResourceLoader.load_threaded_request(フルパス)
+			var err:Error = ResourceLoader.load_threaded_request(フルパス,"",)
 			if err == OK:
 				ロード中パス = フルパス
 				ロード中 = true
@@ -270,7 +275,7 @@ func _process(_delta: float) -> void:
 				var シーンパッケージ:PackedScene = ResourceLoader.load_threaded_get(ロード中パス) as PackedScene
 				if ロード中: # 待機中に 有無:false が走っていないか最終チェック
 					_ロード完了処理(シーンパッケージ)
-					print("読み込み完了")
+					#print("読み込み完了")
 				
 				ロード中 = false
 				ロード中パス = ""

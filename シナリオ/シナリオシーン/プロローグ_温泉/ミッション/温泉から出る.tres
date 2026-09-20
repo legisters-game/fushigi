@@ -9,4 +9,5 @@ script = ExtResource("1_m1s0e")
 "条件フラグ" = "温泉から出る"
 "条件数" = 1
 "優先度" = 1
+"目的地" = Vector3(-149.50879, 1.4043111, 116.71444)
 metadata/_custom_type_script = "uid://bjjvp7rx64bcv"

@@ -51,6 +51,7 @@ func スケジュールループスタート()->void:
 	while NPC管理 and レベル制御:
 		if not データロガー.フラグあるか(スケジュール管理クラス.NPC.find_key(キャラ)+"出現"):
 			hide()
+			queue_free()
 		if not NPC管理.全体スケジュール.has(キャラ) :
 			到着位置=global_position #到着位置を上書き
 			#break

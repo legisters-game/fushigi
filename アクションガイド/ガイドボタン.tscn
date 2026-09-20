@@ -13,7 +13,7 @@ gi_mode = 0
 billboard = 1
 transparent = false
 no_depth_test = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("1_8dwdb")
 script = ExtResource("1_bk2gg")
 "アクション" = SubResource("InputEventAction_bk2gg")
@@ -21,6 +21,6 @@ script = ExtResource("1_bk2gg")
 [node name="Label3D" type="Label3D" parent="." unique_id=1360441595]
 billboard = 1
 no_depth_test = true
-render_priority = 3
-outline_render_priority = 2
+render_priority = 4
+outline_render_priority = 3
 text = "a"

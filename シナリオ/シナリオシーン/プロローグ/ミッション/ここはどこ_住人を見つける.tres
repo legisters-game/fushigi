@@ -32,6 +32,7 @@ script = ExtResource("1_x3aab")
 "条件フラグ" = "住人を見つける"
 "条件数" = 1
 "表示用条件" = "街の住人を見つける"
+"目的地" = Vector3(-149.50879, 1.4043111, 116.71444)
 "キャラセリフ上書きリスト" = Dictionary[int, ExtResource("2_7vue6")]({
 0: SubResource("Resource_n5jst")
 })

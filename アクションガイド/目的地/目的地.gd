@@ -2,14 +2,16 @@
 extends Node3D
 
 
-@onready var モデル:MeshInstance3D=$MeshInstance3D
-@onready var レベル制御:レベル制御クラス=$"../../../"
+@onready var モデル:MeshInstance3D=$メッシュ
+@onready var レベル制御:レベル制御クラス
 var ターン:bool
 @export var 無効:bool
 var ミッション:ミッションデータ
 
 func _ready() -> void:
-	hide()
+	if not Engine.is_editor_hint(): 
+		hide()
+		レベル制御=$"../../../"
 
 func _physics_process(delta: float) -> void:
 	if !Engine.is_editor_hint() and レベル制御 and not(レベル制御.ディメンション返し()==""or レベル制御.ディメンション返し()=="オープンワールド"):
@@ -38,10 +40,23 @@ func 目的地更新(目的地:Vector3,追尾ミッション:ミッションデ�
 	show()
 	if get_tree().get_first_node_in_group("プレイヤー"):
 		global_position=get_tree().get_first_node_in_group("プレイヤー").global_position
-		global_position.y+=1
-		await get_tree().create_timer(0.45).timeout
+		global_position.y+=2
+		近接表示切り替え(true)
+		await get_tree().create_timer(1).timeout
 	ミッション=追尾ミッション
 	var アニメーション:Tween=get_tree().create_tween()
 	アニメーション.bind_node(self)
 	アニメーション.tween_property(self,"global_position",目的地,5)
 	アニメーション.set_ease(Tween.EASE_IN_OUT)
+	await get_tree().create_timer(1).timeout
+	近接表示切り替え(false)
+
+func 近接表示切り替え(表示:bool=true)->void:
+	var メッシュ:MeshInstance3D=$"メッシュ"
+	var マテリアル:StandardMaterial3D=メッシュ.mesh.surface_get_material(0)
+	if not マテリアル:return
+	if 表示:
+		マテリアル.distance_fade_mode=BaseMaterial3D.DISTANCE_FADE_DISABLED
+	else:
+		マテリアル.distance_fade_mode=BaseMaterial3D.DISTANCE_FADE_PIXEL_ALPHA
+		

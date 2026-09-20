@@ -5,12 +5,16 @@ class_name スケジュール管理クラス
 @onready var レベル制御:レベル制御クラス=$"../"
 
 @export var 全体スケジュール:Dictionary[NPC,NPCスケジューラ]
+@export var NPCシーン:Dictionary[NPC,PackedScene]
 @export var 太陽:時間太陽
 @export var メッセージボックス:メッセージボックスクラス
 var ソート停止:Dictionary[NPC,Array]={}
 enum NPC{キール,リュー,キング,ヒジキ,リッド,すね,リウス,ちゃいにー,いるか,ななし,かるかん,いきぱら,タック,リッター,わでいど}
 
-
+func _ready() -> void:
+	await get_tree().create_timer(2).timeout
+	while true:
+		pass
 
 #直接ミッションを参照しに行って、オーバーライドがあるか確認する、重複する場合は優先順位で判断する。
 func 目的地取得(対象: NPC) -> Dictionary[String, Variant]:
@@ -185,5 +189,15 @@ func NPC取得(番号:NPC)->エンティティ:
 			return ノード
 	return null
 	
+	
+func NPC再出現判断()->void:
+	for NPC対象:NPC in NPC:
+		var NPC名:String=NPC.find_key(NPC対象)
+		if データロガー.フラグあるか(NPC名+"出現") and !get_node_or_null(NPC名):
+			var NPC解凍シーン:PackedScene=NPCシーン.get(NPC対象)
+			var NPCノード:NPCクラス=NPC解凍シーン.instantiate()
+			
+			#NPCノード.
+
 func キャッシュ消去()->void:
 	ソート停止={}

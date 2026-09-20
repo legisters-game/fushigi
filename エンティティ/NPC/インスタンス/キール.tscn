@@ -161,32 +161,32 @@ texture_filter = 2
 "スキン" = ExtResource("2_fqpfb")
 
 [node name="GeneralSkeleton" parent="原点/モデル/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(652042102, 231553116) index="0" unique_id=1885119474]
-bones/11/position = Vector3(6.3813704e-10, 1.15902715e-07, -2.173449e-10)
-bones/11/rotation = Quaternion(-0.027806304, -0.022722734, -0.08325117, 0.99588144)
-bones/12/rotation = Quaternion(-0.011687116, -0.008003154, 0.02207116, 0.99965614)
-bones/13/rotation = Quaternion(-0.06429695, -0.005233346, 0.0074041067, 0.99788964)
-bones/41/rotation = Quaternion(-0.011565057, -0.008605863, 0.021992667, 0.9996543)
-bones/42/rotation = Quaternion(0.5322749, -0.45657748, -0.55621, -0.445927)
-bones/43/rotation = Quaternion(0.04507014, 0.8368657, -0.5365613, 0.09862194)
-bones/44/rotation = Quaternion(0.16838165, 0.68676615, -0.16838123, 0.68676615)
-bones/45/rotation = Quaternion(0.01190147, -0.79985243, -0.009010977, 0.600011)
-bones/46/rotation = Quaternion(0.51643735, 0.4712517, 0.56169146, -0.44239932)
-bones/47/rotation = Quaternion(-0.123235665, 0.75559366, -0.6433108, -0.006514396)
-bones/48/rotation = Quaternion(0.12849814, -0.6953332, 0.12849814, 0.6953333)
-bones/49/rotation = Quaternion(0.06216833, 0.7901396, 0.0380371, 0.6085783)
-bones/51/rotation = Quaternion(-0.070876665, 0.02928777, 0.993339, -0.086003125)
-bones/52/rotation = Quaternion(-0.0020310425, 0.9883547, -0.142848, -0.052397456)
-bones/53/rotation = Quaternion(0.057996165, 0.13420624, 0.98395777, -0.10223632)
-bones/54/rotation = Quaternion(-0.0134253325, 0.951546, -0.29892936, 0.070861995)
+bones/11/position = Vector3(5.563135e-15, 2.4317237e-22, -2.4317156e-22)
+bones/11/rotation = Quaternion(-0.022986673, -0.023322687, -0.08290631, 0.99601924)
+bones/12/rotation = Quaternion(-0.029771134, -0.013135769, 0.021085871, 0.999248)
+bones/13/rotation = Quaternion(-0.05592083, -0.006192908, 0.010698228, 0.9983587)
+bones/41/rotation = Quaternion(-0.029773071, -0.013239662, 0.020878866, 0.99925095)
+bones/42/rotation = Quaternion(0.5364216, -0.45683363, -0.53610104, -0.46491998)
+bones/43/rotation = Quaternion(0.06322953, 0.82196367, -0.55521464, 0.110066555)
+bones/44/rotation = Quaternion(0.16741903, 0.6870014, -0.167419, 0.6870014)
+bones/45/rotation = Quaternion(0.0056725563, -0.8058812, -0.0120516, 0.5919274)
+bones/46/rotation = Quaternion(0.5200739, 0.468586, 0.5567895, -0.4471418)
+bones/47/rotation = Quaternion(-0.16747108, 0.7474487, -0.64284617, -0.0047777835)
+bones/48/rotation = Quaternion(0.12920412, -0.6952024, 0.1292041, 0.6952024)
+bones/49/rotation = Quaternion(0.059473988, 0.7762245, 0.05263891, 0.62543404)
+bones/51/rotation = Quaternion(-0.061731074, 0.03806682, 0.9938848, -0.083266325)
+bones/52/rotation = Quaternion(-0.013704208, 0.98812044, -0.13835704, -0.0654797)
+bones/53/rotation = Quaternion(0.046786558, 0.14157924, 0.98216295, -0.11455273)
+bones/54/rotation = Quaternion(0.018187301, 0.95322186, -0.29641166, 0.05636863)
 
 [node name="R_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
-transform = Transform3D(-0.116342336, -0.047915354, -0.9920526, -0.97174126, 0.21204036, 0.10371895, 0.2053855, 0.97608554, -0.0712306, 0.048724156, 1.0053356, 0.13384762)
+transform = Transform3D(-0.113001086, -0.05867632, -0.99186075, -0.9699346, 0.22306532, 0.09730702, 0.21554014, 0.97303593, -0.08211882, 0.046192165, 1.0062757, 0.12383527)
 
 [node name="L_Pupils_001" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
-transform = Transform3D(-0.116342336, -0.047915354, -0.9920526, -0.97174126, 0.21204036, 0.10371895, 0.2053855, 0.97608554, -0.0712306, 0.23026977, 0.9863549, 0.14688282)
+transform = Transform3D(-0.113001086, -0.05867632, -0.99186075, -0.9699346, 0.22306532, 0.09730702, 0.21554014, 0.97303593, -0.08211882, 0.22770268, 0.9884684, 0.13886298)
 
 [node name="head" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
-transform = Transform3D(0.9920526, 0.116342336, -0.047915354, -0.10371895, 0.97174126, 0.21204036, 0.0712306, -0.2053855, 0.97608554, 0.10673664, 0.7224046, -0.047209006)
+transform = Transform3D(0.99186075, 0.113001086, -0.05867632, -0.09730702, 0.9699346, 0.22306532, 0.08211882, -0.21554014, 0.97303593, 0.10753952, 0.72159606, -0.05333954)
 
 [node name="_設定" parent="原点/モデル/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
 surface_material_override/0 = SubResource("StandardMaterial3D_pv51y")

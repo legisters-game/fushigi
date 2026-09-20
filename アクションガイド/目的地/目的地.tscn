@@ -26,7 +26,7 @@ material = SubResource("StandardMaterial3D_euwu4")
 script = ExtResource("1_qv2qe")
 "無効" = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1717023177]
-transform = Transform3D(-0.032112584, 0.023890452, -1.0442868e-09, 0, -1.7484555e-09, -0.04, -0.023890452, -0.032112584, 1.4036977e-09, 0, -1.0011386, 0)
+[node name="メッシュ" type="MeshInstance3D" parent="." unique_id=1717023177]
+transform = Transform3D(-0.03842734, -0.011343066, 4.9584536e-10, 0, -1.7484555e-09, -0.04, 0.011343066, -0.03842734, 1.6797232e-09, 0, -1.0011386, 0)
 ignore_occlusion_culling = true
 mesh = SubResource("TorusMesh_b5jwi")
