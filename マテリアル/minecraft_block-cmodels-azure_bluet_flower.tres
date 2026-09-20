@@ -7,3 +7,4 @@ resource_name = "minecraft_block-cmodels-azure_bluet_flower"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_8vmat")
+texture_filter = 2

@@ -1,8 +1,18 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bexd4hxvxqa55"]
 
 [ext_resource type="Texture2D" uid="uid://c7icbmiwj384g" path="res://1/都市3d仮_dark_oak_door.png" id="1_qpdor"]
+[ext_resource type="Texture2D" uid="uid://b0p8padwiqfka" path="res://マテリアル/立体補間/dark_oak_door_a.png" id="2_cjwts"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-dark_oak_door"
-cull_mode = 2
 albedo_texture = ExtResource("1_qpdor")
+metallic = 1.0
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("2_cjwts")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("2_cjwts")
+texture_filter = 2

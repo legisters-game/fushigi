@@ -1,8 +1,18 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://doplomtkfamk0"]
 
 [ext_resource type="Texture2D" uid="uid://v8sdh2naqr20" path="res://1/都市3d仮_furnace_top_off.png" id="1_lgh81"]
+[ext_resource type="Texture2D" uid="uid://f1pcas4kgcwx" path="res://マテリアル/立体補間/furnace_top_off_a.png" id="2_4lthu"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-furnace_top_off"
-cull_mode = 2
 albedo_texture = ExtResource("1_lgh81")
+metallic = 1.0
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("2_4lthu")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("2_4lthu")
+texture_filter = 2

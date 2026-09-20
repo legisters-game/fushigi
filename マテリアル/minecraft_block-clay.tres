@@ -1,8 +1,20 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dr3rx2bk1wf06"]
 
 [ext_resource type="Texture2D" uid="uid://bm70tdsghhq53" path="res://1/都市3d仮_clay.png" id="1_mkcd4"]
+[ext_resource type="Texture2D" uid="uid://us4x5eit0uxf" path="res://マテリアル/鏡面反射/clay_n.png" id="2_7q5ma"]
+[ext_resource type="Texture2D" uid="uid://0p6dpn1uprpx" path="res://マテリアル/立体補間/clay_a.png" id="3_ts6db"]
 
 [resource]
 resource_name = "minecraft_block-clay"
-cull_mode = 2
 albedo_texture = ExtResource("1_mkcd4")
+metallic = 1.0
+metallic_texture = ExtResource("2_7q5ma")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_ts6db")
+ao_enabled = true
+ao_texture = ExtResource("2_7q5ma")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_ts6db")
+texture_filter = 2

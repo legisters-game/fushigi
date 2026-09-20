@@ -7,3 +7,4 @@ resource_name = "minecraft_block-cmodels-fern_leaves1"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_hh754")
+texture_filter = 2
