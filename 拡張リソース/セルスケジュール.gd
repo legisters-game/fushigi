@@ -14,7 +14,7 @@ class_name セルスケジュール extends Resource
 
 
 
-func _auto_register_marker(marker):
+func _auto_register_marker(marker:Marker3D):
 	# 整合性チェックのための新規データ作成
 	目的置 = marker.global_position
 	

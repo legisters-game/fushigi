@@ -3,10 +3,12 @@
 [ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="1_l01kl"]
 [ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="2_tn7f7"]
 [ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_r20ey"]
+[ext_resource type="AudioStream" uid="uid://bg2lhg2joq47k" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/音声/おう、温泉行こうや.wav" id="4_tn7f7"]
 
 [sub_resource type="Resource" id="Resource_ioj3v"]
 script = ExtResource("3_r20ey")
 "セリフ" = "おう、温泉行こうや"
+"ボイス" = ExtResource("4_tn7f7")
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_6tkqi"]

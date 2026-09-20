@@ -30,8 +30,8 @@ func _ready() -> void:
 		await  get_tree().create_timer(1).timeout
 		#print(現時間)
 	return
-	夕()
-	朝()
+#	夕()
+#	朝()
 
 func _process(delta:float):
 	if ストップ:return

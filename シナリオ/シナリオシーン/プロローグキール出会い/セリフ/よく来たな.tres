@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://bk0h0w6bpgwlb"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_tkpsj"]
+[ext_resource type="AudioStream" uid="uid://chgchi0yg47w6" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/音声/俺はキール.wav" id="2_qhte3"]
+
+[resource]
+script = ExtResource("1_tkpsj")
+"セリフ" = "よく来たな。
+俺はキールよろしくな。"
+"ボイス" = ExtResource("2_qhte3")
+metadata/_custom_type_script = "uid://4uxnotone8su"

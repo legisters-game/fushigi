@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://bsuun677ffhhv"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_sjxqe"]
+[ext_resource type="AudioStream" uid="uid://bdq54m83f5nmd" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/音声/住人を見つけるのに.wav" id="2_rj2xj"]
+
+[resource]
+script = ExtResource("1_sjxqe")
+"セリフ" = "住人を見つけるのに大分苦労しただろう。
+この街には俺しか住んでいないからな。"
+"ボイス" = ExtResource("2_rj2xj")
+metadata/_custom_type_script = "uid://4uxnotone8su"

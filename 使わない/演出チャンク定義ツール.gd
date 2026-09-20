@@ -10,7 +10,7 @@ func チャンク追加()->void:
 	if not ResourceLoader.exists(自身の名前):
 		printerr("これはシステム的なエラーではありませんが、チャンクのシーンが保存されていません。\n表示させたいチャンクは既にシーンとして保存されている必要があります。\n"+自身の名前)
 		return
-	var UID:String=ResourceUID.id_to_text(ResourceLoader.get_resource_uid(自身の名前))
+	var _UID:String=ResourceUID.id_to_text(ResourceLoader.get_resource_uid(自身の名前))
 	#ResourceUID.id_to_text
 	if not 演出基盤.表示チャンク.has(自身の名前):
 		演出基盤.表示チャンク.append(自身の名前)

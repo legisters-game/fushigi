@@ -31,6 +31,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19389057, -0.060720205, -0.
 shape = SubResource("BoxShape3D_ydyje")
 
 [node name="地形当たり判定" type="StaticBody3D" parent="320,96,a/中心/当たり判定制御" unique_id=1337409276]
+collision_layer = 3
+collision_mask = 3
 
 [node name="地形コリジョン" type="CollisionShape3D" parent="320,96,a/中心/当たり判定制御/地形当たり判定" unique_id=318011633]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.96711, -3.63472, 3.1926591)
@@ -40,6 +42,9 @@ shape = ExtResource("4_kx3av")
 
 [node name="透明壁" parent="320,96,a/中心/当たり判定制御/壁" unique_id=491570466 instance=ExtResource("5_85stm")]
 transform = Transform3D(1, 0, 0, 0, 0.855, 0, 0, 0, 1, 2.55974, -0.15072322, -0.421314)
+
+[node name="透明壁2" parent="320,96,a/中心/当たり判定制御/壁" unique_id=2072857208 instance=ExtResource("5_85stm")]
+transform = Transform3D(0.79, 0, 0, 0, 0.46, 0, 0, 0, 1, 1.9142065, -0.7828007, 0)
 
 [node name="320,96,a_oc" parent="320,96,a/中心" unique_id=1955116240 instance=ExtResource("6_qrkvr")]
 occluder = ExtResource("7_ig5vo")

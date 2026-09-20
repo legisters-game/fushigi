@@ -11,16 +11,17 @@ func _ready() -> void:
 	scale=Vector3(16,16,16)
 	position=Vector3.ZERO
 	rotation_degrees=Vector3(90,0,0)
-	get_parent().position=Vector3.ZERO
-	get_parent().scale=Vector3(1,1,1)
-	get_parent().rotation_degrees=Vector3.ZERO
+	var ナビノード:Node=get_parent()
+	ナビノード.position=Vector3.ZERO
+	ナビノード.scale=Vector3(1,1,1)
+	ナビノード.rotation_degrees=Vector3.ZERO
 	if has_node("街全体ビュー"):
 		get_node("街全体ビュー").queue_free()
 	for i:StaticBody3D in find_children("地形当たり判定","StaticBody3D"):
 		i.collision_mask=3
 		i.collision_layer=3
-	if get_parent() is NavigationRegion3D:
-		オーナー=get_parent()
+	if ナビノード is NavigationRegion3D:
+		オーナー=ナビノード
 	else:
 		printerr("依存関係が壊れています。\nNavigationRegion3Dの子にMeshInstance3D(私もとい、街メッシュルート.gd)が来るようにしてください。")
 	if not Engine.is_editor_hint():
@@ -57,8 +58,8 @@ func チェック開始()->void:
 			エラー=true
 		
 
-		for i:Node in get_children():
-			var ヒット:Node=has_type_recursive(i,OccluderInstance3D)
+		for 子ノード:Node in get_children():
+			var ヒット:Node=has_type_recursive(子ノード,OccluderInstance3D)
 			if ヒット:
 				var オクルージョンカリング:OccluderInstance3D=ヒット
 				オクルージョンカリング.name=name+"_oc"
@@ -79,16 +80,16 @@ func チェック開始()->void:
 					printerr("オクルージョンカリングが無い")
 					エラー=true
 	if not メタ情報 & 透明壁無し:
-		for i:Node in get_children():
-			var ヒット:Node=has_type_recursive(i,透明壁コリジョン)
+		for 子ノード:Node in get_children():
+			var ヒット:Node=has_type_recursive(子ノード,透明壁コリジョン)
 			if ヒット:
 				break
 			else:
 				printerr("透明壁が無い")
 				エラー=true
 	if not メタ情報 & 高画質無し:
-		for i:Node in get_children():
-			var ヒット:Node=has_type_recursive(i,VoxelGI)
+		for 子ノード:Node in get_children():
+			var ヒット:Node=has_type_recursive(子ノード,VoxelGI)
 			if ヒット:
 				var GI:VoxelGI=ヒット
 				if GI.size==Vector3(20,20,20):
@@ -102,8 +103,8 @@ func チェック開始()->void:
 				printerr("グローバルイルミネーションが無い")
 				エラー=true
 	if not メタ情報 & 地形判定無し:
-		for i:Node in get_children():
-			var ヒット:Node=has_name_recursive(i,"地形コリジョン")
+		for 子ノード:Node in get_children():
+			var ヒット:Node=has_name_recursive(子ノード,"地形コリジョン")
 			if ヒット and ヒット is CollisionShape3D:
 				var コリジョン:CollisionShape3D=ヒット
 				if コリジョン.position==Vector3.ZERO:
@@ -148,8 +149,8 @@ func チェック開始()->void:
 				エラー=true
 				
 	if not メタ情報 & 地形判定無し and not メタ情報 & 平面で障害物無し and not メタ情報 & 透明壁無し:
-		for i:Node in get_children():
-			var ヒット:Node=has_name_recursive(i,"当たり判定制御")
+		for 子ノード:Node in get_children():
+			var ヒット:Node=has_name_recursive(子ノード,"当たり判定制御")
 			if ヒット:
 				var エリア:Area3D=ヒット
 				var ヒット2:Node=has_name_recursive(エリア,"処理範囲内")
@@ -198,7 +199,7 @@ func has_name_recursive(node: Node, target_type:String) -> Node:
 			return a
 	return
 
-func rename_resource_keep_links(current_res: Resource, new_path: String):
+func rename_resource_keep_links(current_res: Resource, new_path: String)->void:
 	# 1. 既存の古いパスを取得（後で削除するため）
 	var old_path:String = current_res.resource_path
 	

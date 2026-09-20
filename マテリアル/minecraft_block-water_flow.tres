@@ -4,7 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-water_flow"
-render_priority = 0
+render_priority = 2
 shader = ExtResource("1_iiql5")
 shader_parameter/base_tint_color = Color(0, 0.6299998, 0.9, 1)
 shader_parameter/deep_color = Color(0, 0.1, 0.2, 1)

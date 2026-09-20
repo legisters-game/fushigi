@@ -12,9 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dmgy0ytqbirrn" path="res://街チャンク処理/パーツ/レベルエリアゲート.tscn" id="10_yv2u3"]
 [ext_resource type="Script" uid="uid://dpet2fho8egw6" path="res://レベル/マンション/部屋.gd" id="11_asnxd"]
 [ext_resource type="PackedScene" uid="uid://jq1vcfgqur21" path="res://街チャンク処理/パーツ/単純ワープゲート.tscn" id="11_vl8wc"]
-[ext_resource type="Texture2D" uid="uid://tw5f5apsusr5" path="res://ワールド/星テクスチャ.tres" id="12_m3j3l"]
 [ext_resource type="PackedScene" uid="uid://dwfulvaba84tc" path="res://レベル/ツール/椅子.tscn" id="12_rsn5i"]
-[ext_resource type="PackedScene" uid="uid://g3hku684m62q" path="res://ワールド/時間太陽.tscn" id="13_6dblj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yv2u3"]
 size = Vector3(1, 1.9438477, 0.41552734)
@@ -33,36 +31,6 @@ size = Vector3(0.072753906, 1.5688477, 0.8015137)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iyk0q"]
 size = Vector3(0.6374817, 1.0214844, 0.65234375)
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6dblj"]
-sky_top_color = Color(0.28599998, 0.43766668, 0.65, 1)
-sky_horizon_color = Color(0.44889998, 0.533655, 0.67, 1)
-sky_cover = ExtResource("12_m3j3l")
-sky_cover_modulate = Color(1, 1, 1, 0)
-sun_angle_max = 17.09
-
-[sub_resource type="Sky" id="Sky_vxd74"]
-sky_material = SubResource("ProceduralSkyMaterial_6dblj")
-
-[sub_resource type="Environment" id="Environment_rsn5i"]
-background_mode = 2
-sky = SubResource("Sky_vxd74")
-reflected_light_source = 2
-tonemap_mode = 3
-tonemap_exposure = 1.2
-tonemap_agx_contrast = 1.23
-ssr_enabled = true
-ssao_enabled = true
-ssao_radius = 6.02
-ssao_intensity = 5.06
-ssil_enabled = true
-sdfgi_enabled = true
-sdfgi_bounce_feedback = 0.2
-sdfgi_min_cell_size = 0.15625
-fog_depth_curve = 1.035265
-fog_depth_end = 105.7
-volumetric_fog_sky_affect = 0.671
-adjustment_enabled = true
 
 [node name="マンション" type="Node3D" unique_id=1557217192 node_paths=PackedStringArray("テレポート先", "階層処理切り替え用ノード", "NPC用オブジェクト")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
@@ -398,20 +366,6 @@ shape = SubResource("BoxShape3D_iyk0q")
 [node name="座り戻り位置" type="Marker3D" parent="-112,176,a/中心/二階/部屋/椅子キール" unique_id=1071874861]
 process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49713326, 0.6735687)
-
-[node name="時間太陽2" parent="." unique_id=858381750 instance=ExtResource("13_6dblj")]
-transform = Transform3D(-0.013962182, 0.7511909, 0.6599374, -5.7699182e-08, -0.6600017, 0.7512641, 0.99990255, 0.010489249, 0.009215107, 0, 0, 0)
-light_indirect_energy = 1.5
-shadow_opacity = 0.89
-directional_shadow_split_1 = 0.092
-directional_shadow_split_2 = 0.239
-directional_shadow_blend_splits = true
-directional_shadow_max_distance = 176.5
-top = Color(0.28599998, 0.43766668, 0.65, 1)
-"夜top" = Color(0, 0, 0, 1)
-
-[node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=1871874431]
-environment = SubResource("Environment_rsn5i")
 
 [connection signal="プレイヤー入った" from="-112,176,a/中心/二階/部屋/リビング入る用" to="-112,176,a/中心/二階/部屋" method="_on_リビング入る用_プレイヤー入った"]
 [connection signal="座られた" from="-112,176,a/中心/二階/部屋/椅子" to="-112,176,a/中心/二階/部屋" method="_on_椅子_座られた"]

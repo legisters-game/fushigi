@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://5bd47jovfa5x"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_04uby"]
+[ext_resource type="AudioStream" uid="uid://bm3fhbl7mqo2s" path="res://シナリオ/シナリオシーン/プロローグキール出会い/セリフ/音声/消えた人はどこに.wav" id="2_qtab2"]
+
+[resource]
+script = ExtResource("1_04uby")
+"セリフ" = "それで、消えた人はどこに…？"
+"ボイス" = ExtResource("2_qtab2")
+metadata/_custom_type_script = "uid://4uxnotone8su"

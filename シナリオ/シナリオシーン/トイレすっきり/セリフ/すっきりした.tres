@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://dawfc5ss5t8l2"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_ap1vv"]
+[ext_resource type="AudioStream" uid="uid://g42a83dyk7sk" path="res://シナリオ/シナリオシーン/トイレすっきり/セリフ/ボイス/すっきりした.wav" id="2_8jcxk"]
+
+[resource]
+script = ExtResource("1_ap1vv")
+"セリフ" = "す、すっきりしたー"
+"ボイス" = ExtResource("2_8jcxk")
+metadata/_custom_type_script = "uid://4uxnotone8su"

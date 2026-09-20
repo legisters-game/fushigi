@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://bfcl7pq4p5x6l"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_qv1f2"]
+[ext_resource type="AudioStream" uid="uid://bpqg4sk55sqey" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/ボイス/いや、昔のときの.wav" id="2_aex38"]
+
+[resource]
+script = ExtResource("1_qv1f2")
+"セリフ" = "（いや、昔のときの話しなんだけどな）"
+"ボイス" = ExtResource("2_aex38")
+metadata/_custom_type_script = "uid://4uxnotone8su"

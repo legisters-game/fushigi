@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bcr5kg7vy06g6" path="res://街チャンク処理/パーツ/レベルエリアゲート.gd" id="1_n4gbv"]
 
 [node name="レベルゲート" type="Area3D" unique_id=1487963978]
+monitorable = false
 script = ExtResource("1_n4gbv")
 "移動時間" = 0.1
 

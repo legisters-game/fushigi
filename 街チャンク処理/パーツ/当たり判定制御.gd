@@ -26,7 +26,7 @@ func プロセス制御(ブール:bool)->void:
 			i.process_mode=Node.PROCESS_MODE_INHERIT
 			if オクルージョンノード:オクルージョンノード.process_mode=Node.PROCESS_MODE_INHERIT
 		else:
-			print(データロガー.フラグあるか("電車乗車"))
+			#print(データロガー.フラグあるか("電車乗車"))
 			i.process_mode=Node.PROCESS_MODE_DISABLED
 			if オクルージョンノード:オクルージョンノード.process_mode=Node.PROCESS_MODE_DISABLED
 			
@@ -48,7 +48,7 @@ func 真のルート特定()->Variant:
 			return ルート
 	return
 
-func 範囲コリジョン生成():
+func 範囲コリジョン生成()->void:
 	var ルートノード:MeshInstance3D=ルート特定()
 	var 真のルート:NavigationRegion3D=真のルート特定()
 	if not 真のルート:
@@ -145,7 +145,7 @@ func 地形当たり判定生成()->void:
 		final_resource.take_over_path(保存先)
 	collision_node.shape=final_resource
 	# 保存（FLAG_CHANGE_PATH を使うことでパスを確定）
-	var flags = ResourceSaver.FLAG_CHANGE_PATH | ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS
+	var flags:ResourceSaver.SaverFlags = ResourceSaver.FLAG_CHANGE_PATH | ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS
 	ResourceSaver.save(final_resource,保存先, flags)
 	
 	

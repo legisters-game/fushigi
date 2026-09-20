@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://kqeim2h8pcr5"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_qppw1"]
+[ext_resource type="AudioStream" uid="uid://bh0x4rinhvahp" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/ボイス/あの、キールさんは寂しく.wav" id="2_n4mhr"]
+
+[resource]
+script = ExtResource("1_qppw1")
+"セリフ" = "あの、キールさんは寂しくないんですか？
+誰もいなくて。"
+"ボイス" = ExtResource("2_n4mhr")
+metadata/_custom_type_script = "uid://4uxnotone8su"

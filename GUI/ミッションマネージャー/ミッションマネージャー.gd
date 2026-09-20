@@ -9,35 +9,39 @@ var ミッション達:Dictionary[String,Array]
 func _ready() -> void:
 	ミッション更新()
 	#データロガー.ミッションオブジェクト保存(ミッションデータ.new())
+	#仮のミッション追加
 	データロガー.ミッション条件フラグ保存("いるか君誤字数",データロガー.ミッション条件取得("いるか君誤字数")+1)
 	await get_tree().create_timer(3).timeout
 
-	for i:Array in ミッション達.values():
-		if i[0].条件判断():
-			ミッション達.erase(i[0].ミッション名)
+	for ミッションと優先度:Array in ミッション達.values():
+		if ミッションと優先度[0].条件判断():
+			ミッション達.erase(ミッションと優先度[0].ミッション名)
 			#get_node("VBoxContainer/HBoxContainer/Control").完了()
-			if get_node("VBoxContainer/HBoxContainer").has_node(i[0].ミッション名):
-				get_node("VBoxContainer/HBoxContainer").get_node(i[0].ミッション名).完了()
+			if get_node("VBoxContainer/HBoxContainer").has_node(ミッションと優先度[0].ミッション名):
+				get_node("VBoxContainer/HBoxContainer").get_node(ミッションと優先度[0].ミッション名).完了()
 		else:
 			#get_node("VBoxContainer/HBoxContainer/Control").バー更新(データロガー.ミッション条件取得(i.条件フラグ))
-			if get_node("VBoxContainer/HBoxContainer").has_node(i[0].ミッション名):
-				get_node("VBoxContainer/HBoxContainer").get_node(i[0].ミッション名).バー更新(データロガー.ミッション条件取得(i[0].条件フラグ))
+			if get_node("VBoxContainer/HBoxContainer").has_node(ミッションと優先度[0].ミッション名):
+				get_node("VBoxContainer/HBoxContainer").get_node(ミッションと優先度[0].ミッション名).バー更新(データロガー.ミッション条件取得(ミッションと優先度[0].条件フラグ))
 func ミッション更新()->void:
 	ミッション達=ミッション取得()
 
 func ミッション進行度更新()->void:
-	for i:Array in ミッション達.values():
-		if i[0].条件判断():
-			ミッション達.erase(i[0].ミッション名)
+	for ミッションと優先度:Array in ミッション達.values():
+		if ミッションと優先度[0].条件判断():
+			ミッション達.erase(ミッションと優先度[0].ミッション名)
 			#get_node("VBoxContainer/HBoxContainer/Control").完了()
-			if get_node("VBoxContainer/HBoxContainer").has_node(i[0].ミッション名):
-				get_node("VBoxContainer/HBoxContainer").get_node(i[0].ミッション名).完了()
+			if get_node("VBoxContainer/HBoxContainer").has_node(ミッションと優先度[0].ミッション名):
+				get_node("VBoxContainer/HBoxContainer").get_node(ミッションと優先度[0].ミッション名).完了()
+			if ミッションと優先度[0]==$"目的地".ミッション:
+				$"目的地".hide()
 		else:
 			#get_node("VBoxContainer/HBoxContainer/Control").バー更新(データロガー.ミッション条件取得(i.条件フラグ))
-			if get_node("VBoxContainer/HBoxContainer").has_node(i[0].ミッション名):
-				get_node("VBoxContainer/HBoxContainer").get_node(i[0].ミッション名).バー更新(データロガー.ミッション条件取得(i[0].条件フラグ))
+			if get_node("VBoxContainer/HBoxContainer").has_node(ミッションと優先度[0].ミッション名):
+				get_node("VBoxContainer/HBoxContainer").get_node(ミッションと優先度[0].ミッション名).バー更新(データロガー.ミッション条件取得(ミッションと優先度[0].条件フラグ))
 
 func ミッション取得() -> Dictionary[String, Array]:
+	if not $"../../演出ルート".get_children().is_empty():return{}
 	var 結果辞書: Dictionary[String, Array] = {}
 	if !データロガー.config.has_section("ミッションフラグ"):
 		return 結果辞書
@@ -58,16 +62,16 @@ func ミッション取得() -> Dictionary[String, Array]:
 			メインリスト.append(要素)
 
 	# 2. 優先度の高い順（降順）にそれぞれソート
-	メインリスト.sort_custom(func(a, b): return a[1] > b[1])
-	サブリスト.sort_custom(func(a, b): return a[1] > b[1])
+	メインリスト.sort_custom(func(a:Array, b:Array): return a[1] > b[1])
+	サブリスト.sort_custom(func(a:Array, b:Array): return a[1] > b[1])
 
 	# 3. メインの後にサブを結合
 	var ソート済み全リスト: Array = メインリスト + サブリスト
 
 	# 4. GUI上の表示順（ノード順）をソート結果に合わせて生成・移動
 	var コンテナ:VBoxContainer = $VBoxContainer/HBoxContainer
-	for i:int in range(ソート済み全リスト.size()):
-		var ミッション:ミッションデータ = ソート済み全リスト[i][0]
+	for インデックス:int in range(ソート済み全リスト.size()):
+		var ミッション:ミッションデータ = ソート済み全リスト[インデックス][0]
 		var ノード名: String = ミッション.ミッション名
 		var セルノード: ミッション表示セル
 
@@ -80,8 +84,15 @@ func ミッション取得() -> Dictionary[String, Array]:
 			セルノード = コンテナ.get_node(ノード名) as ミッション表示セル
 
 		# コンテナ内の表示順序をソート結果のインデックスに合わせる
-		コンテナ.move_child(セルノード, i)
-
+		コンテナ.move_child(セルノード, インデックス)
+		
+	for ミッション:Array in  ソート済み全リスト:
+		if ミッション[0].目的地!=Vector3.ZERO:
+			$"目的地".目的地更新(ミッション[0].目的地,ミッション[0])
+			break
+			
+	#ここでＮＰＣの上書きをかける
+	get_tree().get_first_node_in_group("NPC制御").キャッシュ消去()
 	return 結果辞書
 
 
@@ -91,15 +102,14 @@ func キャラスケジュール取得(NPC番号:スケジュール管理クラ�
 		var スケジュール:NPCスケジューラ
 		if ミッション[0].キャラセリフ上書きリスト and ミッション[0].キャラセリフ上書きリスト.has(NPC番号):
 			スケジュール=ミッション[0].キャラセリフ上書きリスト[NPC番号]
-		if スケジュール:
+		if スケジュール and not スケジュール.スケジュールリスト.is_empty():
 			ソート前リスト.append([スケジュール,ミッション[0].優先度])
 
-	ソート前リスト.sort_custom(func(a, b): return a[1] < b[1])
+	ソート前リスト.sort_custom(func(a:Array, b:Array): return a[1] > b[1])
 	
 	var 結果: Array[NPCスケジューラ] = []
 	for リスト: Array in ソート前リスト:
 		結果.append(リスト[0])
-
 	return 結果
 	
 	

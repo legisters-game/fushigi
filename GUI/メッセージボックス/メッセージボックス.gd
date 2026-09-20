@@ -13,6 +13,7 @@ var 中断:bool
 var 選択肢中:bool
 var 音声有効:bool
 signal ログ進行(int)
+signal 会話終了
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide()
@@ -32,8 +33,8 @@ func 表示(誰:String,メッセージ内容:Array[セリフオブジェクト])
 	中断=false
 	if 相手NPC and 追尾カメラ:
 		追尾カメラ.会話中視点角ロック(true,相手NPC)
-	if 相手NPC.アクションポイント:
-		相手NPC.アクションポイント.hide()
+		if 相手NPC.アクションポイント:
+			相手NPC.アクションポイント.hide()
 	for i:セリフオブジェクト in メッセージ内容:
 		if 中断:break
 		メッセージラベル.text=i.セリフ
@@ -62,6 +63,7 @@ func 表示(誰:String,メッセージ内容:Array[セリフオブジェクト])
 	if 追尾カメラ:
 		追尾カメラ.会話中視点角ロック(false)
 	hide()
+	会話終了.emit()
 
 func 強制終了()->void:
 	while  visible:
@@ -69,6 +71,7 @@ func 強制終了()->void:
 		ログ進行.emit(0)
 		await get_tree().create_timer(0.01).timeout
 		hide()
+		会話終了.emit()
 
 func 分岐回帰ログ表示(分岐セリフ:セリフ分岐オブジェクト)->void:
 	match 分岐セリフ.選択肢.size():
@@ -178,8 +181,7 @@ func _on_選択肢ボタン3_pressed() -> void:
 
 func _on_audio_stream_player_finished() -> void:
 	if not 選択肢中:
-		if get_tree().get_first_node_in_group("全体制御") and get_tree().get_first_node_in_group("全体制御").has_node("演出ルート"): 
-			if get_tree().get_first_node_in_group("全体制御").get_node("演出ルート").get_child_count()!=0:
-				while not get_tree().get_first_node_in_group("全体制御").get_node("演出ルート").get_children()[0].停止準備完了:
+		if get_tree().get_first_node_in_group("演出ノード"): 
+				while get_tree().get_first_node_in_group("演出ノード") and not get_tree().get_first_node_in_group("演出ノード").停止準備完了:
 					await get_tree().create_timer(0.5).timeout
 		ログ進行.emit(0)

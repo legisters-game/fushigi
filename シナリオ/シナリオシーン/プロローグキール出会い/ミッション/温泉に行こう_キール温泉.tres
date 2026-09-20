@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ミッションデータ" format=3 uid="uid://xocpyfo3ryer"]
+
+[ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="1_6a52h"]
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="2_pm11l"]
+[ext_resource type="Resource" uid="uid://d2mlfpv0ko2vg" path="res://シナリオ/シナリオシーン/プロローグキール出会い/キール温泉待機.tres" id="3_hw72h"]
+
+[resource]
+script = ExtResource("1_6a52h")
+"ミッション名" = "温泉に行こう！"
+"完了後フラグ" = "キール温泉行った"
+"条件フラグ" = "キール温泉"
+"条件数" = 1
+"表示用条件" = "キールと温泉に行く"
+"キャラセリフ上書きリスト" = Dictionary[int, ExtResource("2_pm11l")]({
+0: ExtResource("3_hw72h")
+})
+metadata/_custom_type_script = "uid://bjjvp7rx64bcv"

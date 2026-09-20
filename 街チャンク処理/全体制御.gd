@@ -6,42 +6,52 @@ var 都市プレイヤー座標:Vector3
 var ディメンション:String
 var レベルルート:レベル基礎クラス
 var ディメンション階層:int
+var ムービー予約中:bool
 
 var 読み込み中チャンク:Array[String]
 var 読み込みチャンクシグナル有効:bool
 
+@onready var GUI:コントロールルート=$"Control"
+
 signal 読み込み完了シグナル
 signal レベル読み込み完了シグナル
+signal 移動完了
+
 @export  var 実験:ミッションデータ
 @export  var 実験2:ミッションデータ
+
+
+enum 発生イベント{会話,ムービー}
 
 func _ready() -> void:
 	システム設定関係()
 	
 	#ミッション保存テスト
-	データロガー.ミッションフラグ追加(実験)
-	データロガー.ミッションフラグ追加(実験2)
+	データロガー.フラグ追加("キール出現")
+	#データロガー.ミッションフラグ追加(実験)
+	#データロガー.ミッションフラグ追加(実験2)
 	データロガー.全保存()
 	
 	#セーブデータからディメンション情報を取得
 	ディメンション=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.ディメンション,"オープンワールド")
 	ディメンション階層=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.ディメンション階層,0)
 	
-	if ディメンション!="オープンワールド":
+	if ディメンション!="オープンワールド" and  ディメンション!="":
 		#位置はセーブデータの位置でオーバーライドする。この関数でプレイヤー操作が有効になる
 		レベル移動(ディメンション,0,ディメンション階層,true)
 		
 		await レベル読み込み完了シグナル
-		get_tree().get_first_node_in_group("プレイヤー").プレイヤーロード()
+		プレイヤー取得().プレイヤーロード()
 	else:
+		var プレイヤー:プレイヤークラス=プレイヤー取得()
 		#先行で位置を移動させ、チャンクを読み込ませる
-		get_tree().get_first_node_in_group("プレイヤー").global_position=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.座標,Vector3.ZERO)
+		プレイヤー.global_position=データロガー.プレイヤーステート取得(データロガー.プレイヤーデータ.座標,Vector3.ZERO)
 		#await get_tree().create_timer(0.1).timeout
 		読み込みチャンクシグナル送信スタート()
-		get_node("Control/画面フェード").フェードイン待機(self)
+		GUI.フェードGUI.フェードイン待機(self)
 		await 読み込み完了シグナル
-		get_tree().get_first_node_in_group("プレイヤー").プレイヤーロード()
-		get_tree().get_first_node_in_group("プレイヤー").操作停止(false)
+		プレイヤー.プレイヤーロード()
+		プレイヤー.操作停止(false)
 	#実験はここで行う↓
 	await  get_tree().create_timer(2).timeout
 	if !データロガー.フラグあるか("最初の演出完了"):
@@ -80,15 +90,19 @@ func システム設定関係()->void:
 ##階層:何階を有効にするか[br]
 ##フェードアウトオフ:部屋移動など小規模移動時に使うかも？
 func レベル移動(レベル:String, 番号:int=0,階層:int=0,フェードアウトオフ:bool=false)->void:
+	var プレイヤー:プレイヤークラス=プレイヤー取得()
 	#シーンの演出
-	get_tree().get_first_node_in_group("プレイヤー").操作停止()
+	プレイヤー.操作停止()
 	if not フェードアウトオフ:
-		get_node("Control/画面フェード").フェードアウト()
+		GUI.フェードGUI.フェードアウト()
 	#街復帰時、この位置に移動させるため
-	都市プレイヤー座標=get_tree().get_first_node_in_group("プレイヤー").global_position
+	都市プレイヤー座標=プレイヤー.global_position
 	#プレイヤーが建物内に入る演出用
 	await get_tree().create_timer(1).timeout
-	get_tree().get_first_node_in_group("プレイヤー").簡易移動停止()
+	プレイヤー.簡易移動停止()
+	
+	if GUI.フェードGUI.消え中:
+		await GUI.フェードGUI.画面消えた
 	
 	var レベルシーン:PackedScene=load(レベル)
 	var レベルルートローカル:レベル基礎クラス=レベルシーン.instantiate()
@@ -106,56 +120,105 @@ func レベル移動(レベル:String, 番号:int=0,階層:int=0,フェードア
 		データロガー.ディメンションセーブロック=false
 	
 	if has_node("都市3d仮"):
-		var 全体都市=get_node("都市3d仮")
+		var 全体都市:オープンワールド管理クラス=get_node("都市3d仮")
 		remove_child(全体都市)
 	単純ワープ(レベルルートローカル.テレポート先[番号])
 	レベル読み込み完了シグナル.emit()
 	ディメンション=レベル
 	ディメンション階層=階層
-	get_tree().get_first_node_in_group("プレイヤー").プレイヤーセーブ()
+	プレイヤー.プレイヤーセーブ()
 	データロガー.全保存()
-	get_node("Control/画面フェード").フェードイン()
+	if not ムービー予約中:
+		GUI.フェードGUI.フェードイン()
 	await get_tree().create_timer(2).timeout
-	get_tree().get_first_node_in_group("プレイヤー").操作ロック前位置=get_tree().get_first_node_in_group("プレイヤー").global_position
-	get_tree().get_first_node_in_group("プレイヤー").操作停止(false)
+	プレイヤー.操作ロック前位置=プレイヤー.global_position
+	プレイヤー.操作停止(false)
+	移動完了.emit()
 	
 func 単純ワープ(ワープ先マーカー:Marker3D,フェードアウト:bool=false)->void:
+	var プレイヤー:プレイヤークラス=プレイヤー取得()
 	if フェードアウト:
-		get_node("Control/画面フェード").フェードアウト()
-		get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=true
+		GUI.フェードGUI.フェードアウト()
+		プレイヤー.移動操作ロック=true
 		await get_tree().create_timer(1).timeout
 		
-	get_tree().get_first_node_in_group("プレイヤー").global_position=ワープ先マーカー.global_position
-	get_tree().get_first_node_in_group("プレイヤー").簡易移動停止()
+	プレイヤー.global_position=ワープ先マーカー.global_position
+	プレイヤー.簡易移動停止()
 	if フェードアウト:
-		get_node("Control/画面フェード").フェードイン()
+		GUI.フェードGUI.フェードイン()
 		await get_tree().create_timer(1).timeout
-		get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
+		プレイヤー.移動操作ロック=false
 
 ##マーカを付けたときだけその位置で都市に戻る
 func 都市戻り(プレイヤー座標マーカー:Marker3D=null)->void:
-	get_node("Control/画面フェード").フェードアウト()
-	get_tree().get_first_node_in_group("プレイヤー").操作停止()
+	var プレイヤー:プレイヤークラス=プレイヤー取得()
+	GUI.フェードGUI.フェードアウト(true)
+	プレイヤー.操作停止()
 	await get_tree().create_timer(1).timeout
-	get_tree().get_first_node_in_group("プレイヤー").簡易移動停止()
+	プレイヤー.簡易移動停止()
 	if プレイヤー座標マーカー:
 		都市プレイヤー座標=プレイヤー座標マーカー.global_position
 	for レベルノード:Node in get_node("レベル").get_children():
 		レベルノード.queue_free()
 	var 街シーン:PackedScene=load("res://街チャンク処理/都市3d仮.tscn")
-	add_child(街シーン.instantiate())
-	get_tree().get_first_node_in_group("プレイヤー").global_position=都市プレイヤー座標
+	var オープンワールドルート:オープンワールド管理クラス=街シーン.instantiate()
+	add_child(オープンワールドルート)
+	オープンワールドルート.position.y=-50
+	プレイヤー.global_position=都市プレイヤー座標
 	ディメンション="オープンワールド"
-	get_tree().get_first_node_in_group("プレイヤー").プレイヤーセーブ()
+	プレイヤー.プレイヤーセーブ()
 	データロガー.全保存()
 	読み込みチャンクシグナル送信スタート()
-	get_node("Control/画面フェード").フェードイン待機(self)
+	GUI.フェードGUI.フェードイン待機(self)
 	await get_tree().create_timer(0.1).timeout
-	get_tree().get_first_node_in_group("プレイヤー").global_position=都市プレイヤー座標
+	プレイヤー.global_position=都市プレイヤー座標
 	await get_tree().create_timer(1.5).timeout
-	get_tree().get_first_node_in_group("プレイヤー").操作停止(false)
-
+	プレイヤー.操作停止(false)
+	GUI.ミッションGUI.ミッション更新()
+	移動完了.emit()
 	
+
+func 移動後実行予約(種類:発生イベント,オブジェクト=null,ミッションオブジェクト:ミッションデータ=null)->void:
+	if 種類==発生イベント.ムービー:
+		ムービー予約中=true
+	await 移動完了
+	if 種類==発生イベント.会話:
+		var プレイヤー:プレイヤークラス=プレイヤー取得()
+		var セリフ配列:Array[セリフオブジェクト]
+		for データ in オブジェクト:
+			if データ is セリフオブジェクト:
+				セリフ配列.append(データ)
+		if セリフ配列.is_empty():
+			return
+		プレイヤー.操作停止(true)
+		GUI.メッセージボックス.表示("レクレイス",セリフ配列)
+		await GUI.メッセージボックス.会話終了
+		プレイヤー.操作停止(false)
+	elif 種類==発生イベント.ムービー:
+		var ムービー:String
+		for データ in オブジェクト:
+			if データ is String:
+				ムービー=データ
+				break
+		if not ムービー:return
+		シナリオ演出実行(ムービー)
+		var 演出ルート=get_node("演出ルート")
+		if not 演出ルート.get_children().is_empty() and 演出ルート.get_children()[0]:
+			var 演出ノード:演出基盤クラス
+			if 演出ルート.get_children()[0] is 演出基盤クラス:
+				演出ノード=演出ルート.get_children()[0]
+				
+				await 演出ノード.演出完了通知
+				ムービー予約中=false
+				
+			else:return
+		else:return
+		
+		
+	if ミッションオブジェクト:
+		データロガー.ミッションフラグ追加(ミッションオブジェクト)
+		GUI.ミッションGUI.ミッション更新()
+
 
 func ディメンション返し()->String:
 	return ディメンション
@@ -180,7 +243,7 @@ func 読み込み完了(チャンク:String)->void:
 		if 読み込み中チャンク.is_empty():
 			読み込み完了シグナル.emit()
 
-func シナリオ演出実行(演出パス: String):
+func シナリオ演出実行(演出パス: String)->void:
 	var 演出リソース: = load(演出パス)
 	if not 演出リソース:
 		return
@@ -189,7 +252,8 @@ func シナリオ演出実行(演出パス: String):
 	
 	# 型チェック（演出基盤クラスを継承しているか）
 	if 演出インスタンス is 演出基盤クラス:
-		get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードアウト()
+		if not get_tree().get_first_node_in_group("UI").get_node("画面フェード").消え中 and not ムービー予約中:
+			get_tree().get_first_node_in_group("UI").get_node("画面フェード").フェードアウト()
 		
 		if has_node("都市3d仮"):
 			演出インスタンス.都市ルート=get_node("都市3d仮")
@@ -227,15 +291,26 @@ func シナリオ演出実行(演出パス: String):
 		演出インスタンス.演出開始()
 
 
-func _演出終了後の後処理(インスタンス: 演出基盤クラス):
-	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
+func _演出終了後の後処理(インスタンス: 演出基盤クラス)->void:
+	var プレイヤー:プレイヤークラス=プレイヤー取得()
+	プレイヤー.移動操作ロック=false
 	インスタンス.queue_free()
+	$"演出ルート".remove_child(インスタンス)
 	get_node("NPC制御").show()
-	get_tree().get_first_node_in_group("プレイヤー").show()
-	get_tree().get_first_node_in_group("UI").ムービー終了表示()
+	プレイヤー.show()
+	GUI.ムービー終了表示()
 	if インスタンス.再生後発生ミッション and !インスタンス.再生後発生ミッション.is_empty():
 		for i:ミッションデータ in インスタンス.再生後発生ミッション:
 			データロガー.ミッションフラグ追加(i)
 			
-		get_tree().get_first_node_in_group("UI").get_node("ミッションマネージャー").ミッション更新()
+		GUI.ミッションGUI.ミッション更新()
+		print("")
 	# プレイヤーのカメラをメインに戻す処理などをここに書く
+
+
+##プレイヤーを返す、再利用性のため
+func プレイヤー取得()->プレイヤークラス:
+	var 基本プレイヤー:プレイヤークラス=get_node_or_null("プレイヤー位置/プレイヤー")
+	if 基本プレイヤー:
+		return 基本プレイヤー
+	return get_tree().get_first_node_in_group("プレイヤー")

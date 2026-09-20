@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="NPCスケジューラ" format=3 uid="uid://5x5msw3jds8a"]
+
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="1_4dm1k"]
+[ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="2_gdl12"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_xr3j6"]
+
+[sub_resource type="Resource" id="Resource_qpkl4"]
+script = ExtResource("3_xr3j6")
+"セリフ" = "上書き
+テスト"
+metadata/_custom_type_script = "uid://4uxnotone8su"
+
+[sub_resource type="Resource" id="Resource_3s0n5"]
+script = ExtResource("2_gdl12")
+"名前" = "上書き"
+"終了時間" = 1.0
+"セリフ" = Array[ExtResource("3_xr3j6")]([SubResource("Resource_qpkl4")])
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[resource]
+script = ExtResource("1_4dm1k")
+"スケジュールリスト" = Array[ExtResource("2_gdl12")]([SubResource("Resource_3s0n5")])
+metadata/_custom_type_script = "uid://d4j8xlv2dxato"

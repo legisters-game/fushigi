@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://c45ooc1fs4dyf"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_017u1"]
+[ext_resource type="AudioStream" uid="uid://drm0dtfds5l2n" path="res://シナリオ/シナリオシーン/プロローグ_温泉/セリフ/ボイス/そうですね。.wav" id="2_0417h"]
+
+[resource]
+script = ExtResource("1_017u1")
+"セリフ" = "そうですね。"
+"ボイス" = ExtResource("2_0417h")
+metadata/_custom_type_script = "uid://4uxnotone8su"
