@@ -1,8 +1,17 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://gb5diipdcagg"]
 
 [ext_resource type="Texture2D" uid="uid://b6vpfb05xo2y0" path="res://1/都市3d仮_jukebox_back.png" id="1_5lsx2"]
+[ext_resource type="Texture2D" uid="uid://44g50jpm8ijb" path="res://マテリアル/立体補間/jukebox_back_a.png" id="2_qqnno"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-jukebox_back"
-cull_mode = 2
 albedo_texture = ExtResource("1_5lsx2")
+metallic = 1.0
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("2_qqnno")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("2_qqnno")
+texture_filter = 2

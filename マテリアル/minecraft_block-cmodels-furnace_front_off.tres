@@ -1,8 +1,16 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://0v4qwvxqsa2y"]
 
 [ext_resource type="Texture2D" uid="uid://c4se7uytbvmx1" path="res://1/都市3d仮_furnace_front_off.png" id="1_k37vf"]
+[ext_resource type="Texture2D" uid="uid://cca7tofbi6bmc" path="res://マテリアル/立体補間/furnace_front_off_a.png" id="2_pnjjy"]
+[ext_resource type="Texture2D" uid="uid://bh26vrkh16mna" path="res://マテリアル/鏡面反射/blast_furnace_front_on_n.png" id="3_5a6wl"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-furnace_front_off"
 cull_mode = 2
 albedo_texture = ExtResource("1_k37vf")
+metallic = 1.0
+metallic_texture = ExtResource("3_5a6wl")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("2_pnjjy")
+texture_filter = 2

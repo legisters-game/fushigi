@@ -4,5 +4,5 @@
 
 [resource]
 resource_name = "minecraft_block-cmodels-jukebox_bottom"
-cull_mode = 2
+transparency = 4
 albedo_texture = ExtResource("1_jk4mj")

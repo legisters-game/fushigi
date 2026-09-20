@@ -1,8 +1,16 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dmy5gjnup1fr5"]
 
 [ext_resource type="Texture2D" uid="uid://bc11qvcs2e25j" path="res://1/都市3d仮_door_metal.png" id="1_uqvkf"]
+[ext_resource type="Texture2D" uid="uid://dc5a78ksrlmsg" path="res://マテリアル/立体補間/door_metal_a.png" id="2_hb258"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-door_metal"
-cull_mode = 2
 albedo_texture = ExtResource("1_uqvkf")
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("2_hb258")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("2_hb258")
+texture_filter = 2

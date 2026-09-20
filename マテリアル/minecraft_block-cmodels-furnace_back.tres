@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dk866pt5n6txw"]
 
 [ext_resource type="Texture2D" uid="uid://8oy4g1ju5y3q" path="res://1/都市3d仮_furnace_back.png" id="1_33qlx"]
+[ext_resource type="Texture2D" uid="uid://j3v7r05qpmmv" path="res://マテリアル/鏡面反射/blast_furnace_back_n.png" id="2_4boce"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4l1ie"]
+load_path = "res://.godot/imported/blast_furnace_back_a.png-3f3d3d4d82e8694e79d3ad53e037f10a.s3tc.ctex"
 
 [resource]
 resource_name = "minecraft_block-cmodels-furnace_back"
-cull_mode = 2
 albedo_texture = ExtResource("1_33qlx")
+metallic = 1.0
+metallic_texture = ExtResource("2_4boce")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = SubResource("CompressedTexture2D_4l1ie")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_4boce")
+texture_filter = 2

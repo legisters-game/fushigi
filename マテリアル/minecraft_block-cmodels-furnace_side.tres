@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://db1x5lkgflb7o"]
 
 [ext_resource type="Texture2D" uid="uid://borrofqaxlobk" path="res://1/都市3d仮_furnace_side.png" id="1_7wdxf"]
+[ext_resource type="Texture2D" uid="uid://donkefy7li50b" path="res://マテリアル/鏡面反射/blast_furnace_side_n.png" id="2_il68y"]
+[ext_resource type="Texture2D" uid="uid://p2iwfh7kgr55" path="res://マテリアル/立体補間/furnace_side_a.png" id="3_nawt7"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-furnace_side"
-cull_mode = 2
 albedo_texture = ExtResource("1_7wdxf")
+metallic = 1.0
+metallic_texture = ExtResource("2_il68y")
+metallic_texture_channel = 1
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("3_nawt7")
+ao_enabled = true
+ao_texture = ExtResource("2_il68y")
+ao_texture_channel = 1
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("3_nawt7")
+texture_filter = 2
