@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bv30xdkprxgym"]
+
+[ext_resource type="Script" uid="uid://dew0hxp428obl" path="res://irukaFirework/firework.gd" id="1_bwhnj"]
+
+[node name="Firework" type="Node2D" unique_id=320971847]
+script = ExtResource("1_bwhnj")
