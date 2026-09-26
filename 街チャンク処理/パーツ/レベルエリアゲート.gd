@@ -13,6 +13,8 @@ class_name レベルエリアゲート
 @export var ミッション条件更新フラグ名:String
 @export var ミッション条件更新値:int
 
+@export var イベント発生時の階層:int
+
 func _ready() -> void:
 	if アクセスレベル=="":
 		queue_free()
@@ -26,7 +28,7 @@ func _on_body_entered(body: Node3D) -> void:
 		データロガー.ミッション条件フラグ保存(ミッション条件更新フラグ名,ミッション条件更新値)
 		
 		if イベント予約有効:
-			階層=2
+			階層=イベント発生時の階層
 		
 		body.移動操作ロック=true
 		var 位置マーカー:Marker3D

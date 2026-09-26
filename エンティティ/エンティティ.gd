@@ -31,6 +31,8 @@ var 簡易移動中: bool = false
 var 簡易到着許容距離: float = 0.5
 var 簡易中強制歩き:bool
 
+
+
 #var input_dir: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
@@ -44,7 +46,8 @@ var move_direction: Vector3 = Vector3.ZERO
 func _physics_process(delta: float):
 	apply_movement(delta)
 	apply_rotation(delta)
-	move_and_slide()
+	if not 座っている:
+		move_and_slide()
 	update_animations(move_direction,delta)
 
 ##移動の計算

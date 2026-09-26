@@ -3,8 +3,9 @@ extends VoxelGI
 @export var 例外:bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	queue_free()
 	if not Engine.is_editor_hint() and !例外:
-		queue_free()
+		pass
 	if data:
 		data.propagation=1
 		#call_deferred("bake")

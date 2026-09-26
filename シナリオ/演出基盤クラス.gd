@@ -5,6 +5,7 @@ class_name 演出基盤クラス
 
 # 演出が終わったことを親シーンに知らせるためのシグナル
 signal 演出完了通知()
+signal 演出開始シグナル
 @export_tool_button("街表示")var 調整用=調整用街表示.bind(false)
 @export_file("*.tscn") var 表示チャンク:Array[String]
 @export var セリフ集: Array[セリフオブジェクト]
@@ -21,6 +22,7 @@ signal 演出完了通知()
 
 @onready var アニメーション: AnimationPlayer = $AnimationPlayer
 @onready var カメラ: Camera3D = $"オブジェクト中心/演出カメラ"
+@onready var バー:スキップバー=$"Control/スキップバー"
 
 var 都市ルート:オープンワールド管理クラス
 var 表示リスト:Array[String]
@@ -63,26 +65,36 @@ func _ready() -> void:
 			if 再生後発生ミッション and !再生後発生ミッション.is_empty():
 				for i:ミッションデータ in 再生後発生ミッション:
 					データロガー.ミッションフラグ追加(i)
+			データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.ムービーシーン,scene_file_path)
+			データロガー.全保存()
 		if not get_parent() is Node3D:
 			#print(get_parent())
 			await  調整用街表示(true)
 			show()
 			演出開始()
 		else:
+			if プレイヤー再生後ワープ:
+				データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.座標,$"オブジェクト中心/プレイヤー終了位置".global_position)
+			データロガー.全保存()
 			for デバッグ用削除ノード:Node in 削除対象:
 				デバッグ用削除ノード.queue_free()
+			
 		音声有効=データロガー.システム設定読み込み("音声有効")
 	print(表示リスト)
-	var スキップカウンター:int=0
-	while true and not Engine.is_editor_hint():
-		await get_tree().create_timer(0.1).timeout
+	var 加速度:float=1
+	await 演出開始シグナル
+	while true and not Engine.is_editor_hint() and バー.value<=99:
+		await get_tree().create_timer(0.05).timeout
 		if Input.is_action_pressed("アニメーションスキップ"):
-			スキップカウンター+=1
+			バー.value+=5*加速度
+			加速度+=0.1
+			バー.show()
 		else:
-			スキップカウンター=0
-		if スキップカウンター>10:
-			演出終了()
-			break
+			バー.value=0
+			加速度=1
+			バー.hide()
+	バー.value=100
+
 
 
 
@@ -99,7 +111,8 @@ func 演出開始()->void:
 		アニメーション.play("開始")
 	if プレイヤー再生前ワープ and get_tree().get_first_node_in_group("プレイヤー"):
 		get_tree().get_first_node_in_group("プレイヤー").global_position=$"オブジェクト中心/プレイヤー開始位置".global_position
-
+	演出開始シグナル.emit()
+	
 func セリフ呼び出し(誰: String,番号: int)->void:
 	セリフ表示(誰, セリフ集[番号])
 
@@ -154,6 +167,10 @@ func エンティティ取得(名前:String)->Node:
 # アニメーションの最後や、特定のタイミングで呼び出す
 func 演出終了(フェードアウト有効:bool=false)->void:
 	if get_tree().get_first_node_in_group("UI"): get_tree().get_first_node_in_group("UI").get_node("メッセージボックス").強制終了()
+	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.ムービーシーン,"")
+	if 再生後フラグ!="":
+		データロガー.フラグ追加(再生後フラグ)
+	データロガー.全保存()
 	if フェードアウト有効:
 		if get_tree().get_first_node_in_group("UI"):
 			var フェードアウト:画面フェードクラス = get_tree().get_first_node_in_group("UI").get_node("画面フェード")
@@ -162,9 +179,6 @@ func 演出終了(フェードアウト有効:bool=false)->void:
 			フェードアウト.フェードイン()
 	if プレイヤー再生後ワープ and get_tree().get_first_node_in_group("プレイヤー"):
 		get_tree().get_first_node_in_group("プレイヤー").global_position=$"オブジェクト中心/プレイヤー終了位置".global_position
-	if 再生後フラグ!="":
-		データロガー.フラグ追加(再生後フラグ)
-		データロガー.全保存()
 	演出完了通知.emit()
 	
 
@@ -221,3 +235,8 @@ func 調整用街表示(デバッグ=false)->void:
 func _exit_tree() -> void:
 	for チャンクルート in 一時チャンク解放用:
 		チャンクルート.強制表示解除()
+
+
+func _on_スキップバー_発火() -> void:
+	await get_tree().create_timer(0.7).timeout
+	演出終了()

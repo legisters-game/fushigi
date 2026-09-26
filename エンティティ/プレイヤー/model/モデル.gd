@@ -10,8 +10,9 @@ class_name モデルクラス
 @export var 顔ボーン:LookAtModifier3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if not スキン:
+	if not スキン or スキン.get_size() == Vector2.ZERO:
 		return
+	await RenderingServer.frame_post_draw
 	for 暫定メッシュ:Node in メッシュ親.get_children():
 		if 暫定メッシュ is MeshInstance3D:
 			for インデックス:int in range(暫定メッシュ.mesh.get_surface_count()):

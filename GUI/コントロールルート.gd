@@ -4,7 +4,7 @@ class_name コントロールルート
 @export var ムービー中非表示リスト:Array[Control]
 
 @onready var 時間:Control=$"時間"
-@onready var メッセージボックス:Control=$"メッセージボックス"
+@onready var メッセージボックス:メッセージボックスクラス=$"メッセージボックス"
 @onready var ミッションGUI:ミッションマネージャー=$"ミッションマネージャー"
 @onready var フェードGUI:画面フェードクラス=$"画面フェード"
 

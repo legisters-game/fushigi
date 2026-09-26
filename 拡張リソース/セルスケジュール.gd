@@ -9,7 +9,7 @@ class_name セルスケジュール extends Resource
 @export var セリフ:Array[セリフオブジェクト]
 @export_subgroup("オプション")
 @export_file("*.tscn") var ディメンション:String=""
-@export var ディメンションオブジェクト番号:int
+@export_range(0,100) var ディメンションオブジェクト番号:int
 @export var アニメーション:String
 
 

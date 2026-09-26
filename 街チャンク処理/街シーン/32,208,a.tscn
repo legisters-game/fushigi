@@ -4,9 +4,7 @@
 [ext_resource type="Script" uid="uid://dunk7b3n3p2st" path="res://街チャンク処理/パーツ/街メッシュルート.gd" id="2_05ay3"]
 [ext_resource type="PackedScene" uid="uid://cy1sm8tj6b2n2" path="res://街チャンク処理/パーツ/当たり判定制御.tscn" id="3_3et2j"]
 [ext_resource type="Shape3D" uid="uid://bfemihmc5ecjy" path="res://街チャンク処理/街コリジョン/32,208.tres" id="4_3kmxd"]
-[ext_resource type="PackedScene" uid="uid://bbfh83jgah2q1" path="res://街チャンク処理/パーツ/グローバルイルミネーション.tscn" id="5_1bqfm"]
 [ext_resource type="PackedScene" uid="uid://c6bhck6xe5xnq" path="res://街チャンク処理/パーツ/ミッション進行するやつ.tscn" id="5_3kmxd"]
-[ext_resource type="VoxelGIData" uid="uid://c1o5max5wwvg7" path="res://街チャンク処理/街GI/32,208,グローバルイルミネーション_data.res" id="6_01eo1"]
 [ext_resource type="PackedScene" uid="uid://uknsp7tmjptt" path="res://街チャンク処理/パーツ/オクルージョンカリング.tscn" id="7_8pddj"]
 [ext_resource type="ArrayOccluder3D" uid="uid://cbp13pyeqqn1c" path="res://街チャンク処理/街オクルージョン/32,208.occ" id="8_jf44h"]
 
@@ -46,11 +44,6 @@ transform = Transform3D(0.15314707, -1.7763568e-15, 0.28097326, -0.28097326, -1.
 [node name="ミッション進行するやつ2" parent="32,208,a/中心/当たり判定制御" unique_id=1239112132 instance=ExtResource("5_3kmxd")]
 transform = Transform3D(-0.0034235716, 0, 0.3199817, -0.3199817, -1.3987644e-08, -0.0034235716, 1.3986843e-08, -0.32, 1.4964907e-10, 0, -0.3655777, 0.7247429)
 "条件フラグ" = "レジスタスを見つけた回数"
-
-[node name="グローバルイルミネーション" parent="32,208,a/中心" unique_id=754016580 instance=ExtResource("5_1bqfm")]
-transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.13746643, 1.3833466, -4.7683716e-07)
-size = Vector3(63.769043, 64.26709, 20)
-data = ExtResource("6_01eo1")
 
 [node name="32,208,a_oc" parent="32,208,a/中心" unique_id=1955116240 instance=ExtResource("7_8pddj")]
 occluder = ExtResource("8_jf44h")

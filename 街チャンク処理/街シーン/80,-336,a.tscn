@@ -4,9 +4,7 @@
 [ext_resource type="Script" uid="uid://dunk7b3n3p2st" path="res://街チャンク処理/パーツ/街メッシュルート.gd" id="2_e2ynp"]
 [ext_resource type="PackedScene" uid="uid://cy1sm8tj6b2n2" path="res://街チャンク処理/パーツ/当たり判定制御.tscn" id="3_cejiu"]
 [ext_resource type="Shape3D" uid="uid://nueyf4rt5xph" path="res://街チャンク処理/街コリジョン/80,-336.tres" id="4_ohiws"]
-[ext_resource type="PackedScene" uid="uid://bbfh83jgah2q1" path="res://街チャンク処理/パーツ/グローバルイルミネーション.tscn" id="5_4rhl1"]
 [ext_resource type="PackedScene" uid="uid://cukax37ntwqle" path="res://街チャンク処理/パーツ/透明壁.tscn" id="5_ohiws"]
-[ext_resource type="VoxelGIData" uid="uid://bby5k8cbcof7k" path="res://街チャンク処理/街GI/80,-336,グローバルイルミネーション_data.res" id="6_6mjel"]
 [ext_resource type="PackedScene" uid="uid://uknsp7tmjptt" path="res://街チャンク処理/パーツ/オクルージョンカリング.tscn" id="7_iorm1"]
 [ext_resource type="ArrayOccluder3D" uid="uid://cmr1tblgue7c1" path="res://街チャンク処理/街オクルージョン/80,-336.occ" id="8_fylnt"]
 
@@ -58,11 +56,6 @@ transform = Transform3D(0.11, 0, 0, 0, 0.79, 0, 0, 0, 1, 0.3756745, -8.647818, -
 
 [node name="透明壁6" parent="80,-336,a/中心/当たり判定制御/壁" unique_id=185784289 instance=ExtResource("5_ohiws")]
 transform = Transform3D(0.965, 0, 0, 0, 0.54, 0, 0, 0, 1, 1.8823526, -8.72699, -0.22701097)
-
-[node name="グローバルイルミネーション" parent="80,-336,a/中心" unique_id=754016580 instance=ExtResource("5_4rhl1")]
-transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.050008774, -8.117151, -0.09056163)
-size = Vector3(77.16254, 40.694702, 22.89795)
-data = ExtResource("6_6mjel")
 
 [node name="80,-336,a_oc" parent="80,-336,a/中心" unique_id=1955116240 instance=ExtResource("7_iorm1")]
 occluder = ExtResource("8_fylnt")

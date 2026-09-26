@@ -14,6 +14,7 @@ enum プレイヤーデータ {
 	ディメンション階層,
 	座標,
 	回転座標,
+	ムービーシーン
 }
 
 func _init() -> void:
@@ -28,8 +29,9 @@ func _init() -> void:
 	else:
 		pass
 		#システム設定書き込み("アンチエイリアス有効",true)
-	システム設定書き込み("3D品質向上",true)
-	システム設定書き込み("音声有効",true)
+	システム設定初期値("3D品質向上",true)
+	システム設定初期値("音声有効",true)
+	システム設定初期値("視覚外非表示",true)
 	
 	
 	フラグ追加("初期")
@@ -44,7 +46,9 @@ func システム設定読み込み(設定名:String,初期値:bool=false)->bool
 func システム設定書き込み(設定名:String,入力値:bool)->void:
 	config.set_value("システム設定",設定名,入力値)
 
-
+func システム設定初期値(設定名:String,値:bool)->void:
+	if not config.has_section_key("システム設定",設定名):
+		システム設定書き込み(設定名,値)
 
 # --- フラグ管理 (文字列があるかないか) ---
 func フラグ追加(フラグ名: String):
@@ -59,14 +63,14 @@ func フラグあるか(フラグ名: String) -> bool:
 
 # --- ステータス管理 (Enumをそのままintキーとして保存) ---
 # 文字列の辞書を介さず、Enum(int) を直接 ConfigFile に書き込む
-func プレイヤーステート保存(stat_type: プレイヤーデータ, value: Variant)->void:
+func プレイヤーステート保存(プレイヤーのデータ: プレイヤーデータ, 値: Variant)->void:
 	# config内部では "0", "1" といったキーで保存されるが
 	# 外側からは Enum の名前でアクセスしている状態になる
 	if ディメンションセーブロック:return
-	config.set_value("プレイヤー", str(stat_type), value)
+	config.set_value("プレイヤー", プレイヤーデータ.find_key(プレイヤーのデータ), 値)
 
-func プレイヤーステート取得(stat_type: プレイヤーデータ, default_value: Variant = 0) -> Variant:
-	return config.get_value("プレイヤー", str(stat_type), default_value)
+func プレイヤーステート取得(プレイヤーのデータ: プレイヤーデータ, 初期値: Variant = 0) -> Variant:
+	return config.get_value("プレイヤー", プレイヤーデータ.find_key(プレイヤーのデータ), 初期値)
 
 
 func ミッションオブジェクト取得(ミッション用フラグ名:String)->ミッションデータ:

@@ -7,8 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cukax37ntwqle" path="res://街チャンク処理/パーツ/透明壁.tscn" id="5_jtvyg"]
 [ext_resource type="PackedScene" uid="uid://uknsp7tmjptt" path="res://街チャンク処理/パーツ/オクルージョンカリング.tscn" id="6_fny2s"]
 [ext_resource type="ArrayOccluder3D" uid="uid://bauum81uheusb" path="res://街チャンク処理/街オクルージョン/128,816.occ" id="7_qsn1i"]
-[ext_resource type="PackedScene" uid="uid://bbfh83jgah2q1" path="res://街チャンク処理/パーツ/グローバルイルミネーション.tscn" id="8_f4voa"]
-[ext_resource type="VoxelGIData" uid="uid://ccqtjkduliceq" path="res://街チャンク処理/街GI/128,816,グローバルイルミネーション_data.res" id="9_4smf8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ybid0"]
 size = Vector3(6.4, 5.6000023, 2.75)
@@ -55,8 +53,3 @@ transform = Transform3D(0.29, 0, 0, 0, 1.19, 0, 0, 0, 1, -3.1226478, -2.8847694,
 
 [node name="128,816,a_oc" parent="128,816,a/中心" unique_id=1955116240 instance=ExtResource("6_fny2s")]
 occluder = ExtResource("7_qsn1i")
-
-[node name="グローバルイルミネーション" parent="128,816,a/中心" unique_id=754016580 instance=ExtResource("8_f4voa")]
-transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.16860199, -0.63890076, -0.9040134)
-size = Vector3(102.982666, 90.02009, 44.687973)
-data = ExtResource("9_4smf8")

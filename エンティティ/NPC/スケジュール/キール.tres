@@ -14,6 +14,8 @@ script = ExtResource("2_0bgl4")
 "名前" = "o"
 "終了時間" = 1.0
 "セリフ" = Array[ExtResource("3_5o7i3")]([SubResource("Resource_vmvb8")])
+"ディメンション" = "uid://dmbek8jwtnvaw"
+"ディメンションオブジェクト番号" = 1
 metadata/_custom_type_script = "uid://2jb1vfql7n4p"
 
 [resource]

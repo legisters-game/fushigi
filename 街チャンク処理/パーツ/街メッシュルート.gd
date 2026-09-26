@@ -31,8 +31,24 @@ func _ready() -> void:
 			#u.subdiv=VoxelGI.SUBDIV_64
 			#u.bake()
 			#u.hide()
+		#return
+		if !データロガー.システム設定読み込み("視覚外非表示"):return
+		var 視覚範囲制御:VisibleOnScreenNotifier3D=VisibleOnScreenNotifier3D.new()
+		視覚範囲制御.aabb=mesh.get_aabb().grow(0.1)
+		視覚範囲制御.screen_entered.connect(視覚有効)
+		視覚範囲制御.screen_exited.connect(視覚無効)
+		await get_parent().ready
+		視覚範囲制御.position=position
+		視覚範囲制御.rotation=rotation
+		視覚範囲制御.scale=scale
+		get_parent().add_child(視覚範囲制御)
+		視覚範囲制御.owner=$"../"
 	
+func 視覚有効()->void:
+	layers=1
 	
+func 視覚無効()->void:
+	layers=0
 func 街切り替え()->void:
 	if has_node("街全体ビュー"):
 		get_node("街全体ビュー").queue_free()
@@ -86,21 +102,6 @@ func チェック開始()->void:
 				break
 			else:
 				printerr("透明壁が無い")
-				エラー=true
-	if not メタ情報 & 高画質無し:
-		for 子ノード:Node in get_children():
-			var ヒット:Node=has_type_recursive(子ノード,VoxelGI)
-			if ヒット:
-				var GI:VoxelGI=ヒット
-				if GI.size==Vector3(20,20,20):
-					push_warning("グローバルイルミネーション、範囲設定が初期値のままです。")
-				if not GI.data:
-					printerr("グローバルイルミネーション、ベイクされていない")
-					break
-				rename_resource_keep_links(GI.data,"res://街チャンク処理/街GI/"+name.trim_suffix(",a")+",グローバルイルミネーション_data.res")
-				break
-			else:
-				printerr("グローバルイルミネーションが無い")
 				エラー=true
 	if not メタ情報 & 地形判定無し:
 		for 子ノード:Node in get_children():

@@ -8,8 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dmgy0ytqbirrn" path="res://街チャンク処理/パーツ/レベルエリアゲート.tscn" id="6_5i1ed"]
 [ext_resource type="PackedScene" uid="uid://uknsp7tmjptt" path="res://街チャンク処理/パーツ/オクルージョンカリング.tscn" id="6_8yetx"]
 [ext_resource type="ArrayOccluder3D" uid="uid://k7yikx4rxpwc" path="res://街チャンク処理/街オクルージョン/-160,240.occ" id="7_puow5"]
-[ext_resource type="PackedScene" uid="uid://bbfh83jgah2q1" path="res://街チャンク処理/パーツ/グローバルイルミネーション.tscn" id="8_5i1ed"]
-[ext_resource type="VoxelGIData" uid="uid://35d50tfyk8q1" path="res://街チャンク処理/街GI/-160,240,グローバルイルミネーション_data.res" id="9_puow5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8yetx"]
 size = Vector3(2.428, 3.2280006, 2.2000003)
@@ -70,7 +68,6 @@ transform = Transform3D(0.14, 0, 0, 0, 0.36, 0, 0, 0, 1, -1.3489046, 1.1441956, 
 
 [node name="レベルゲート" parent="-160,240,a/中心/当たり判定制御" unique_id=1487963978 instance=ExtResource("6_5i1ed")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.20923138)
-monitorable = false
 "アクセスレベル" = "res://レベル/ｇｆ.tscn"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="-160,240,a/中心/当たり判定制御/レベルゲート" unique_id=671636406]
@@ -83,8 +80,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14975071, 0.45457172, 0.06
 
 [node name="-160,240,a_oc" parent="-160,240,a/中心" unique_id=1955116240 instance=ExtResource("6_8yetx")]
 occluder = ExtResource("7_puow5")
-
-[node name="グローバルイルミネーション" parent="-160,240,a/中心" unique_id=754016580 instance=ExtResource("8_5i1ed")]
-transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, -0.15381813, 0.36956024, -0.8733063)
-size = Vector3(39.181335, 51.91333, 29.791504)
-data = ExtResource("9_puow5")

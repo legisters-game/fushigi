@@ -5,8 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://cy1sm8tj6b2n2" path="res://街チャンク処理/パーツ/当たり判定制御.tscn" id="3_gpubx"]
 [ext_resource type="Shape3D" uid="uid://wrqcf2204fhl" path="res://街チャンク処理/街コリジョン/1056,-192.tres" id="4_4t1y2"]
 [ext_resource type="PackedScene" uid="uid://cukax37ntwqle" path="res://街チャンク処理/パーツ/透明壁.tscn" id="5_rq40v"]
-[ext_resource type="PackedScene" uid="uid://bbfh83jgah2q1" path="res://街チャンク処理/パーツ/グローバルイルミネーション.tscn" id="5_s0nr2"]
-[ext_resource type="VoxelGIData" uid="uid://ctk28nv6onaja" path="res://街チャンク処理/街GI/1056,-192,グローバルイルミネーション_data.res" id="6_owlfk"]
 [ext_resource type="PackedScene" uid="uid://uknsp7tmjptt" path="res://街チャンク処理/パーツ/オクルージョンカリング.tscn" id="7_4drcf"]
 [ext_resource type="ArrayOccluder3D" uid="uid://byjorhshwneji" path="res://街チャンク処理/街オクルージョン/1056,-192.occ" id="8_r4xx5"]
 
@@ -49,11 +47,6 @@ transform = Transform3D(2.35, 0, 0, 0, 1.91, 0, 0, 0, 1, 4.0298157, 1.229187, -0
 
 [node name="透明壁3" parent="1056,-192,a/中心/当たり判定制御/壁" unique_id=1051127845 instance=ExtResource("5_rq40v")]
 transform = Transform3D(1.62, 0, 0, 0, 1.91, 0, 0, 0, 1, 3.6658897, -2.6698952, -0.33997083)
-
-[node name="グローバルイルミネーション" parent="1056,-192,a/中心" unique_id=754016580 instance=ExtResource("5_s0nr2")]
-transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0.56002426, 0, -0.048757553)
-size = Vector3(115.22937, 20, 3.09906)
-data = ExtResource("6_owlfk")
 
 [node name="1056,-192,a_oc" parent="1056,-192,a/中心" unique_id=1955116240 instance=ExtResource("7_4drcf")]
 occluder = ExtResource("8_r4xx5")

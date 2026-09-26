@@ -5,10 +5,12 @@ extends "res://エンティティ/プレイヤー/model/モデル.gd"
 @export var プレイヤーの見た目をジャック:bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	super()
 	if get_parent()is Node3D:
 		#print(get_parent())
+		await RenderingServer.frame_post_draw
+		await RenderingServer.frame_post_draw
 		$"R-G MC Rig MoCap v1_0".owner=null
-	super()
 	if プレイヤーの見た目をジャック:
 		プレイヤーにオーバーライド()
 	elif オーバーライド:

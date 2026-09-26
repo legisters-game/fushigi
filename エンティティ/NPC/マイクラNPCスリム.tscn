@@ -15,7 +15,7 @@
 [ext_resource type="Animation" uid="uid://c2uu8jq2swof8" path="res://エンティティ/プレイヤー/anim/歩き.res" id="10_c7pcn"]
 [ext_resource type="Animation" uid="uid://0l00ro4np6it" path="res://エンティティ/プレイヤー/anim/右.res" id="11_esw3w"]
 [ext_resource type="Animation" uid="uid://d2msrccklscxu" path="res://エンティティ/プレイヤー/anim/左.res" id="12_u3rek"]
-[ext_resource type="Animation" uid="uid://ibuirv37dihc" path="res://エンティティ/プレイヤー/anim/座る.res" id="13_ru8ly"]
+[ext_resource type="Animation" uid="uid://cum0i7u7pe0g8" path="res://エンティティ/プレイヤー/anim/座る.res" id="13_ru8ly"]
 [ext_resource type="Animation" uid="uid://c701vid3abyg7" path="res://エンティティ/プレイヤー/anim/後ろ.res" id="14_qbs6m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7wjq"]
@@ -87,27 +87,27 @@ transform = Transform3D(1.285, 0, 0, 0, 1.285, 0, 0, 0, 1.285, 0, -0.02, 0)
 "スキン" = ExtResource("5_n7wjq")
 
 [node name="GeneralSkeleton" parent="原点/slim/アーマチュア" parent_id_path=PackedInt32Array(1510505477, 2064962654) index="0" unique_id=1938702739]
-bones/0/rotation = Quaternion(-0.017651735, -0.13061465, 0.030750964, 0.990799)
-bones/1/rotation = Quaternion(0.000668408, -0.001164978, -0.00022285755, 0.9999991)
-bones/2/rotation = Quaternion(-0.035994817, -0.007901502, -0.01762638, 0.9991653)
-bones/3/rotation = Quaternion(0.5242161, 0.46283838, 0.5622323, -0.44144413)
-bones/4/rotation = Quaternion(-0.15098307, 0.8115216, -0.563164, -0.038513895)
-bones/5/rotation = Quaternion(0.14398105, -0.6922929, 0.14398088, 0.6922929)
-bones/6/rotation = Quaternion(0.061071567, 0.7772592, 0.02856037, 0.6255581)
-bones/8/rotation = Quaternion(0.52692807, -0.46615416, -0.5411935, -0.46060476)
-bones/9/rotation = Quaternion(0.09135625, 0.77591884, -0.6163794, 0.09838972)
-bones/10/rotation = Quaternion(0.18177241, 0.6833439, -0.18177217, 0.6833439)
-bones/11/rotation = Quaternion(0.010204343, -0.78370506, -0.030969791, 0.6202766)
-bones/13/rotation = Quaternion(0.06414942, 0.0019379004, 0.027981205, 0.99754614)
-bones/14/rotation = Quaternion(-0.04982857, 0.016215634, 0.008110017, 0.9985932)
-bones/16/rotation = Quaternion(0.016233929, 0.10177543, 0.9898432, 0.097921796)
-bones/17/rotation = Quaternion(-0.006275711, 0.9742796, -0.21151388, 0.077471465)
-bones/18/rotation = Quaternion(0.16030112, 0.6213999, -0.76301265, 0.07731388)
-bones/20/rotation = Quaternion(-0.00011242001, 0.999834, 0.010661029, 0.014778871)
-bones/21/rotation = Quaternion(-0.06611568, 0.1518215, 0.9826214, 0.08387077)
-bones/22/rotation = Quaternion(0.008185664, 0.9610343, -0.2703955, 0.056853402)
-bones/23/rotation = Quaternion(0.053863134, 0.6239991, -0.77953935, -0.006514045)
-bones/25/rotation = Quaternion(2.9726314e-08, 0.99997455, 0.007131708, -1.055383e-08)
+bones/0/rotation = Quaternion(-0.026975542, -0.026181879, -0.08410835, 0.99574727)
+bones/1/rotation = Quaternion(0.0004414014, -0.0014790202, -0.00025077414, 0.99999875)
+bones/2/rotation = Quaternion(-6.205049e-05, -0.006556658, 0.02294052, 0.9997153)
+bones/3/rotation = Quaternion(0.5167424, 0.4650519, 0.58307546, -0.42038918)
+bones/4/rotation = Quaternion(-0.056645337, 0.7923658, -0.6073731, -0.0067548435)
+bones/5/rotation = Quaternion(0.13246842, -0.69458777, 0.13246846, 0.69458777)
+bones/6/rotation = Quaternion(0.075910866, 0.807418, 0.0029910456, 0.5850681)
+bones/8/rotation = Quaternion(0.5301842, -0.45091128, -0.58334863, -0.41867423)
+bones/9/rotation = Quaternion(0.011763571, 0.8637607, -0.495131, 0.092867784)
+bones/10/rotation = Quaternion(0.17187265, 0.6859008, -0.17187245, 0.6859007)
+bones/11/rotation = Quaternion(0.015275865, -0.7936733, 0.0006287085, 0.6081522)
+bones/13/rotation = Quaternion(0.0453332, 0.0013121483, -0.04955558, 0.99774116)
+bones/14/rotation = Quaternion(-0.07816022, -0.0025917636, 0.0075358786, 0.99690896)
+bones/16/rotation = Quaternion(0.05919278, 0.13212264, 0.98423225, -0.101621024)
+bones/17/rotation = Quaternion(-0.013460385, 0.94951355, -0.30563495, 0.06949871)
+bones/18/rotation = Quaternion(-0.009310354, 0.59859705, -0.800745, 0.020062134)
+bones/20/rotation = Quaternion(4.4409703e-06, 0.9999593, -0.009026348, -2.4189289e-05)
+bones/21/rotation = Quaternion(-0.07032878, 0.03505146, 0.99322176, -0.08564961)
+bones/22/rotation = Quaternion(-0.0035501004, 0.9883558, -0.14562206, -0.04398163)
+bones/23/rotation = Quaternion(0.007870788, 0.64926785, -0.760012, 0.02776935)
+bones/25/rotation = Quaternion(-1.0806842e-08, 0.9999867, 0.0051565235, 8.579704e-09)
 
 [node name="Body" parent="原点/slim/アーマチュア/GeneralSkeleton" index="0" unique_id=1523429165]
 surface_material_override/0 = SubResource("StandardMaterial3D_n7wjq")

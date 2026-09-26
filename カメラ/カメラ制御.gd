@@ -4,6 +4,9 @@ class_name 追尾カメラクラス
 @export var 目標:エンティティ
 @export var 速さ:float=30
 @export var 感度:float=5
+var 目標オーバーライド:Node3D
+var 目標差分オーバーライド:Vector3
+var 角度オーバーライド:Vector2
 var 現在位置:Vector3
 var 視点回転:Vector2
 var 角最大変数:float=38
@@ -25,10 +28,15 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if not 目標:
 		return
-		
+	
+	rotation_degrees.y-=視点回転.x*delta*感度
+	
 	var local_current:Vector3 = 親.to_local(global_position)
 	var local_target:Vector3 = 親.to_local(目標.カメラ基準.global_position)
-	
+	if 目標オーバーライド:
+		local_target=親.to_local(目標オーバーライド.global_position+目標差分オーバーライド)
+		if 角度オーバーライド!=Vector2.ZERO:
+			rotation_degrees.y=clampf(rotation_degrees.y,角度オーバーライド.x,角度オーバーライド.y)
 	# ローカル空間の中でだけ、なめらかに追従させる
 	var local_next:Vector3 = lerp(local_current, local_target, delta * 速さ)
 	
@@ -38,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	
 	#現在位置=lerp(現在位置,目標.カメラ基準.global_position,delta*速さ)
 	#global_position=現在位置
-	rotation_degrees.y-=視点回転.x*delta*感度
+	
 	rotation_degrees.x=clampf(rotation_degrees.x-視点回転.y*delta*感度*0.7,角最小変数,角最大変数)
 	視点回転=Vector2.ZERO
 
@@ -51,7 +59,13 @@ func _input(event: InputEvent) -> void:
 		var イベント:InputEventKey=event
 		if イベント.keycode==4194305 and イベント.pressed:
 			マウスチェンジ()
-			
+
+func ターゲットオーバーライド(ターゲット:Node3D=null,距離差分:Vector3=Vector3.ZERO,距離:float=2.7,角度制限:Vector2=Vector2.ZERO)->void:
+	目標オーバーライド=ターゲット
+	目標差分オーバーライド=距離差分
+	$"SpringArm3D".spring_length=距離
+	角度オーバーライド=角度制限
+	
 func マウスチェンジ()->void:
 	if Input.mouse_mode==Input.MOUSE_MODE_VISIBLE:
 		Input.mouse_mode=Input.MOUSE_MODE_CAPTURED

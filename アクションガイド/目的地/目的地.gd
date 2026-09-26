@@ -60,3 +60,7 @@ func 近接表示切り替え(表示:bool=true)->void:
 	else:
 		マテリアル.distance_fade_mode=BaseMaterial3D.DISTANCE_FADE_PIXEL_ALPHA
 		
+
+
+func _on_ミッションマネージャー_hidden() -> void:
+	hide()

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bci5ib4p0xavb" path="res://シナリオ/演出基盤クラス.gd" id="1_r4pe8"]
 [ext_resource type="PackedScene" uid="uid://c0mhksd1gr5ic" path="res://シナリオ/演出カメラ.tscn" id="2_8tjtt"]
+[ext_resource type="Script" uid="uid://ojt13rbec056" path="res://シナリオ/スキップバー.gd" id="3_t0oqu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8tjtt"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -52,6 +53,19 @@ _data = {
 &"開始": SubResource("Animation_hsgxs")
 }
 
+[sub_resource type="Gradient" id="Gradient_8tjtt"]
+offsets = PackedFloat32Array(0.76704544, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.33, 0.33, 0.33, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_euwu4"]
+gradient = SubResource("Gradient_8tjtt")
+width = 20
+height = 20
+fill = 1
+fill_from = Vector2(0.5, 0.4871795)
+fill_to = Vector2(0.9059829, 0.52136755)
+repeat = 1
+
 [node name="演出基盤" type="Node3D" unique_id=854987473 node_paths=PackedStringArray("削除対象") groups=["演出ノード"]]
 script = ExtResource("1_r4pe8")
 "削除対象" = [NodePath("DirectionalLight3D"), NodePath("WorldEnvironment")]
@@ -84,3 +98,54 @@ transform = Transform3D(-0.9692643, 0.0009459974, -0.2460198, 0, 0.9999926, 0.00
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88856506, 2.4789362, 0.0019302368)
 
 [node name="プレイヤー終了位置" type="Marker3D" parent="オブジェクト中心" unique_id=1054089237]
+
+[node name="Control" type="Control" parent="." unique_id=982379414]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="スキップバー" type="TextureProgressBar" parent="Control" unique_id=1727584768]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = -46.0
+offset_right = -7.0
+offset_bottom = -6.0
+grow_horizontal = 0
+grow_vertical = 0
+value = 81.0
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture2D_euwu4")
+texture_progress = SubResource("GradientTexture2D_euwu4")
+tint_progress = Color(0, 1.753959, 1.753959, 1)
+script = ExtResource("3_t0oqu")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Control/スキップバー" unique_id=1216154656]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.5
+offset_top = -7.0
+offset_right = 10.5
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6901961)
+theme_override_font_sizes/font_size = 10
+text = "Skip"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="発火" from="Control/スキップバー" to="." method="_on_スキップバー_発火"]

@@ -28,7 +28,6 @@ metadata/_custom_type_script = "uid://d4j8xlv2dxato"
 [resource]
 script = ExtResource("1_x3aab")
 "ミッション名" = "ここはどこ？"
-"完了後フラグ" = "オープニング再生済"
 "条件フラグ" = "住人を見つける"
 "条件数" = 1
 "表示用条件" = "街の住人を見つける"

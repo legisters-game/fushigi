@@ -23,7 +23,6 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/no_focus=true
 window/hdr/request_hdr_output=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
