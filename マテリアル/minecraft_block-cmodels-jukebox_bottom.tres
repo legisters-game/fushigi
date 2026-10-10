@@ -6,3 +6,9 @@
 resource_name = "minecraft_block-cmodels-jukebox_bottom"
 transparency = 4
 albedo_texture = ExtResource("1_jk4mj")
+bent_normal_enabled = true
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+texture_filter = 2
