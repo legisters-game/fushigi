@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dxjegobmef35j"]
+
+[ext_resource type="Texture2D" uid="uid://i1n6tytkp0yw" path="res://街メッシュ/単体/ブロック単体_command_block_front.png" id="1_nl1f2"]
+
+[resource]
+resource_name = "minecraft_block-command_block_front"
+cull_mode = 2
+albedo_texture = ExtResource("1_nl1f2")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

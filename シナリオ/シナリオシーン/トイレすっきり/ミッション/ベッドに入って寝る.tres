@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ミッションデータ" format=3 uid="uid://cvxesm1a14g8a"]
+
+[ext_resource type="Script" uid="uid://bjjvp7rx64bcv" path="res://拡張リソース/ミッション.gd" id="1_ejmmr"]
+[ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="2_6wmj6"]
+
+[resource]
+script = ExtResource("1_ejmmr")
+"ミッション名" = "ベッドで寝る"
+"条件フラグ" = "ベッド寝る"
+"条件数" = 1
+"表示用条件" = "ベッドに入って寝る"
+"優先度" = 2
+metadata/_custom_type_script = "uid://bjjvp7rx64bcv"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://cn2va8qhgt8rg"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_2khxd"]
+[ext_resource type="AudioStream" uid="uid://dj5ncqbowc3va" path="res://レベル/銭湯/ミッション用セリフ(依存)/や、やばい.wav" id="2_bwpux"]
+
+[resource]
+script = ExtResource("1_2khxd")
+"セリフ" = "や、やばい"
+"ボイス" = ExtResource("2_bwpux")
+metadata/_custom_type_script = "uid://4uxnotone8su"

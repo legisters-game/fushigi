@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="2_2gisd"]
 [ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_u7psy"]
 [ext_resource type="Script" uid="uid://hoy7ntcb8lpl" path="res://拡張リソース/セリフ分岐オブジェクト.gd" id="4_rufmc"]
-[ext_resource type="Script" uid="uid://c63nudia22pk" path="res://拡張リソース/new_script.gd" id="5_tw4np"]
+[ext_resource type="Script" uid="uid://c63nudia22pk" path="res://拡張リソース/ファイナルセリフオブジェクト.gd" id="5_nc8lv"]
 
 [sub_resource type="Resource" id="Resource_2mu51"]
 script = ExtResource("3_u7psy")
@@ -41,7 +41,7 @@ script = ExtResource("3_u7psy")
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_pf4ct"]
-script = ExtResource("5_tw4np")
+script = ExtResource("5_nc8lv")
 "セリフ" = "まあ、いっか！"
 metadata/_custom_type_script = "uid://c63nudia22pk"
 
@@ -104,7 +104,7 @@ script = ExtResource("3_u7psy")
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_4yprr"]
-script = ExtResource("5_tw4np")
+script = ExtResource("5_nc8lv")
 "セリフ" = "（再び目をつむる）"
 "表情" = 9
 metadata/_custom_type_script = "uid://c63nudia22pk"
@@ -160,7 +160,7 @@ script = ExtResource("3_u7psy")
 metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="Resource" id="Resource_riyl1"]
-script = ExtResource("5_tw4np")
+script = ExtResource("5_nc8lv")
 "セリフ" = "まあ、いっか！"
 metadata/_custom_type_script = "uid://c63nudia22pk"
 

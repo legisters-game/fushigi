@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbkjcjhca7edo"]
+
+[ext_resource type="Texture2D" uid="uid://dcdw5kaxg4sni" path="res://エンティティ/プレイヤー/model/変身後リアル/仮面ライダー2026_green.png" id="1_p1yxt"]
+
+[resource]
+resource_name = "目"
+cull_mode = 2
+diffuse_mode = 3
+albedo_color = Color(1.5561339, 1.5561339, 1.5561339, 1)
+albedo_texture = ExtResource("1_p1yxt")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.42
+rim = 0.3
+rim_tint = 1.0
+disable_receive_shadows = true
+metadata/_gltf_primary_texture_coord = 0

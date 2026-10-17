@@ -1,8 +1,10 @@
 extends StaticBody3D
 
 @export var アクセスマーカー:Marker3D
+@export_group("システムオンオフ")
 @export var 有効化:Node3D
 @export var 無効化:Node3D
+@export_group("カメラ関係")
 @export var カメラジャック:Camera3D
 @export var カメラ戻す:bool=true
 signal プレイヤー入った

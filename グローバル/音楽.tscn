@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cfkp5arlh18qf"]
+
+[ext_resource type="AudioStream" uid="uid://bl1n4p5262d6c" path="res://シナリオ/シナリオシーン/プロローグ/オープニングフル尺.mp3" id="1_ytrct"]
+[ext_resource type="Script" uid="uid://dcwqw7blkuv2g" path="res://グローバル/音楽.gd" id="2_cnywc"]
+
+[node name="音楽" type="AudioStreamPlayer" unique_id=129040261]
+stream = ExtResource("1_ytrct")
+volume_db = -22.478
+bus = &"BGM"
+parameters/looping = true
+script = ExtResource("2_cnywc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=410615311]
+stream = ExtResource("1_ytrct")
+volume_db = -40.0

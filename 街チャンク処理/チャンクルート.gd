@@ -120,6 +120,7 @@ func _on_area_3d_body_exited(体: Node3D) -> void:
 ##街の表示と非表示を引数を用いて実装しています。
 func 真処理有無制御(有無:bool)->void:
 	if 起動直後:await get_tree().create_timer(0.5).timeout
+	var プレイヤー:プレイヤークラス=get_tree().get_first_node_in_group("プレイヤー")
 	if 有無:
 		#表示側
 		var ディレクトリシーンパス:String = "user://sen/"
@@ -174,7 +175,7 @@ func 真処理有無制御(有無:bool)->void:
 				ロード中パス = フルパス
 				ロード中 = true
 				# print("別スレッドでロード開始: ", name)
-	else:
+	elif not プレイヤー.街非表示防止:
 		#非表示側
 		if get_tree().get_first_node_in_group("全体制御") is レベル制御クラス:
 			get_tree().get_first_node_in_group("全体制御").読み込み完了(name)

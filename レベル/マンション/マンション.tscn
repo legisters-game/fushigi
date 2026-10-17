@@ -14,6 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://jq1vcfgqur21" path="res://街チャンク処理/パーツ/単純ワープゲート.tscn" id="11_vl8wc"]
 [ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="12_oojwp"]
 [ext_resource type="PackedScene" uid="uid://dwfulvaba84tc" path="res://レベル/ツール/椅子.tscn" id="12_rsn5i"]
+[ext_resource type="Resource" uid="uid://dydblkx53e6mm" path="res://レベル/マンション/セリフ/初めましてだな.tres" id="13_jvwxk"]
+[ext_resource type="Resource" uid="uid://y8jjdw3xplny" path="res://レベル/マンション/セリフ/とりあえず座れや.tres" id="14_asnxd"]
+[ext_resource type="Resource" uid="uid://wls4mxip1tdp" path="res://レベル/マンション/カメラオーバーライド/キール側向く.tres" id="15_asnxd"]
+[ext_resource type="PackedScene" uid="uid://ckdjjnoclho44" path="res://レベル/ツール/ベッド.tscn" id="18_knwh2"]
+[ext_resource type="Resource" uid="uid://ds6ru5ch73jjv" path="res://シナリオ/シナリオシーン/トイレすっきり/イベント/寝るイベント発生.tres" id="19_st7bg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yv2u3"]
 size = Vector3(1, 1.9438477, 0.41552734)
@@ -24,16 +29,6 @@ size = Vector3(0.24609375, 0.111206055, 0.27075195)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vl8wc"]
 size = Vector3(1.9782715, 0.53515625, 2.937378)
 
-[sub_resource type="Resource" id="Resource_r20ey"]
-script = ExtResource("12_oojwp")
-"セリフ" = "おう、初めましてだな。"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_cnvmy"]
-script = ExtResource("12_oojwp")
-"セリフ" = "とりあえず、座れや"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_b5jwi"]
 size = Vector3(1, 0.09246826, 1.5400391)
 
@@ -42,6 +37,9 @@ size = Vector3(0.072753906, 1.5688477, 0.8015137)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iyk0q"]
 size = Vector3(0.6374817, 1.0214844, 0.65234375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8445k"]
+size = Vector3(0.87194824, 0.74017334, 1)
 
 [node name="マンション" type="Node3D" unique_id=1557217192 node_paths=PackedStringArray("テレポート先", "階層処理切り替え用ノード", "NPC用オブジェクト")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
@@ -230,7 +228,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0312195, -7.6293945e-06)
 [node name="部屋" type="Node3D" parent="-112,176,a/中心/二階" unique_id=1937815635]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.943329, -5.397682, 0)
 script = ExtResource("11_asnxd")
-"セリフ" = Array[ExtResource("12_oojwp")]([SubResource("Resource_r20ey"), SubResource("Resource_cnvmy")])
+"セリフ" = Array[ExtResource("12_oojwp")]([ExtResource("13_jvwxk"), ExtResource("14_asnxd")])
+"カメラ上書きデータ" = ExtResource("15_asnxd")
 
 [node name="キール入口" parent="-112,176,a/中心/二階/部屋" unique_id=1811244377 node_paths=PackedStringArray("アクセスマーカー", "有効化", "無効化", "カメラジャック") instance=ExtResource("11_vl8wc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.346817, 4.4610977, -1.7678413)
@@ -372,5 +371,20 @@ shape = SubResource("BoxShape3D_iyk0q")
 process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49713326, 0.6735687)
 
+[node name="ベッド" parent="-112,176,a/中心/二階/部屋" unique_id=1080498093 node_paths=PackedStringArray("戻り位置マーカー") instance=ExtResource("18_knwh2")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4.486267, -2.1594086, -0.44583082)
+"実行オブジェクト" = ExtResource("19_st7bg")
+"条件発生ミッションフラグ" = "ベッドで寝る"
+"戻り位置マーカー" = NodePath("Marker3D")
+"回転上書き" = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/二階/部屋/ベッド" unique_id=1020275317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027770996, -0.12991333, -0.44841003)
+shape = SubResource("BoxShape3D_8445k")
+
+[node name="Marker3D" type="Marker3D" parent="-112,176,a/中心/二階/部屋/ベッド" unique_id=792917882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6717987, -0.44722986, -0.040756226)
+
 [connection signal="プレイヤー入った" from="-112,176,a/中心/二階/部屋/リビング入る用" to="-112,176,a/中心/二階/部屋" method="_on_リビング入る用_プレイヤー入った"]
 [connection signal="座られた" from="-112,176,a/中心/二階/部屋/椅子" to="-112,176,a/中心/二階/部屋" method="_on_椅子_座られた"]
+[connection signal="座られた" from="-112,176,a/中心/二階/部屋/ベッド" to="-112,176,a/中心/二階/部屋" method="_on_ベッド_座られた"]

@@ -60,11 +60,17 @@ func _input(event: InputEvent) -> void:
 		if イベント.keycode==4194305 and イベント.pressed:
 			マウスチェンジ()
 
-func ターゲットオーバーライド(ターゲット:Node3D=null,距離差分:Vector3=Vector3.ZERO,距離:float=2.7,角度制限:Vector2=Vector2.ZERO)->void:
+	
+func ターゲットオーバーライド(ターゲット:Node3D=null,オーバーライド:カメラオーバーライド=null)->void:
 	目標オーバーライド=ターゲット
-	目標差分オーバーライド=距離差分
-	$"SpringArm3D".spring_length=距離
-	角度オーバーライド=角度制限
+	if オーバーライド:
+		目標差分オーバーライド=オーバーライド.距離差分
+		$"SpringArm3D".spring_length=オーバーライド.距離
+		角度オーバーライド=オーバーライド.角度制限
+	else:
+		目標差分オーバーライド=Vector3.ZERO
+		$"SpringArm3D".spring_length=2.7
+		角度オーバーライド=Vector2.ZERO
 	
 func マウスチェンジ()->void:
 	if Input.mouse_mode==Input.MOUSE_MODE_VISIBLE:

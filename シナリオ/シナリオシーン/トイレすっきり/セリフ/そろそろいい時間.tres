@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://cgp4slnjbmkdk"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_uc5c3"]
+[ext_resource type="AudioStream" uid="uid://bjcuwlurfeqrp" path="res://シナリオ/シナリオシーン/トイレすっきり/セリフ/ボイス/そろそろいい時間だし寝るか.wav" id="2_rab41"]
+
+[resource]
+script = ExtResource("1_uc5c3")
+"セリフ" = "そろそろいい時間だし寝るか"
+"ボイス" = ExtResource("2_rab41")
+metadata/_custom_type_script = "uid://4uxnotone8su"

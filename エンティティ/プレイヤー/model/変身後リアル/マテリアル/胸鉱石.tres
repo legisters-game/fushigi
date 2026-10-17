@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bxy6qvnf0hoha"]
+
+[resource]
+resource_name = "胸鉱石"
+cull_mode = 2
+albedo_color = Color(0, 0.906438, 0.8776003, 1)
+metallic = 0.06802723
+roughness = 0.006802721
+emission = Color(0.4121528, 0.41215238, 0.41215247, 1)
+rim_enabled = true
+rim = 0.05
+rim_tint = 1.0

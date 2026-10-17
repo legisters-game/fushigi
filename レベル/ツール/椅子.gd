@@ -3,6 +3,7 @@ class_name 椅子アタッチクラス
 var ターゲット:エンティティ
 var 当たり判定:CollisionShape3D
 @export var 戻り位置マーカー:Marker3D
+@export_group("回関係")
 @export var 回転上書き:bool
 @export_range(0,360) var 初期回転:float
 signal 座られた
@@ -14,7 +15,7 @@ func 実行(生き物:エンティティ)->void:
 		ターゲット=生き物
 		生き物.座る($"マーカー".global_position)
 		if 当たり判定: 当たり判定.disabled=true
-		if 回転上書き: ターゲット.global_rotation_degrees.y=初期回転
+		ターゲット.global_rotation_degrees.y=初期回転
 		座られた.emit()
 		#await get_tree().create_timer(0.02).timeout
 		#ターゲット.global_position=$"マーカー".global_position

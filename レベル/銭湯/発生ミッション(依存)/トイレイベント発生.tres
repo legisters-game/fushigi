@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="イベント実行会話" format=3 uid="uid://ckxfh4rymhirt"]
+
+[ext_resource type="Script" uid="uid://g1hdoxupyo6q" path="res://拡張リソース/イベント実行会話.gd" id="1_lkb5h"]
+[ext_resource type="Resource" uid="uid://ceiw3g8fwpshm" path="res://レベル/銭湯/発生ミッション(依存)/急いでトイレ.tres" id="2_r2eo5"]
+[ext_resource type="Resource" uid="uid://cn2va8qhgt8rg" path="res://レベル/銭湯/ミッション用セリフ(依存)/や、やばい.tres" id="3_2srn7"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_r2eo5"]
+[ext_resource type="Resource" uid="uid://cqhm70mrhqya7" path="res://レベル/銭湯/ミッション用セリフ(依存)/も、漏れる.tres" id="4_acnwo"]
+
+[resource]
+script = ExtResource("1_lkb5h")
+"会話" = Array[ExtResource("3_r2eo5")]([ExtResource("3_2srn7"), ExtResource("4_acnwo")])
+"イベント発生後ミッション" = ExtResource("2_r2eo5")
+metadata/_custom_type_script = "uid://g1hdoxupyo6q"

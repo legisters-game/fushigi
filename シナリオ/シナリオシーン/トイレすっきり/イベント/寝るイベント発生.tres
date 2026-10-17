@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="イベント実行会話相手" format=3 uid="uid://ds6ru5ch73jjv"]
+
+[ext_resource type="Script" uid="uid://darx4bjw6s7tr" path="res://拡張リソース/イベント実行会話相手.gd" id="1_vias2"]
+[ext_resource type="Resource" uid="uid://cvxesm1a14g8a" path="res://シナリオ/シナリオシーン/トイレすっきり/ミッション/ベッドに入って寝る.tres" id="2_uti4q"]
+[ext_resource type="Script" uid="uid://bl08br4eab320" path="res://拡張リソース/カメラオーバーライド.gd" id="3_chx86"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="4_5r1rd"]
+[ext_resource type="Resource" uid="uid://cgp4slnjbmkdk" path="res://シナリオ/シナリオシーン/トイレすっきり/セリフ/そろそろいい時間.tres" id="5_uti4q"]
+
+[sub_resource type="Resource" id="Resource_b3bk4"]
+script = ExtResource("3_chx86")
+"距離差分" = Vector3(0, 0.2, 0)
+"距離" = 1.0
+"角度制限" = Vector2(80, 100)
+metadata/_custom_type_script = "uid://bl08br4eab320"
+
+[resource]
+script = ExtResource("1_vias2")
+"カメラ上書き" = SubResource("Resource_b3bk4")
+"キャラ指定有効" = true
+"会話" = Array[ExtResource("4_5r1rd")]([ExtResource("5_uti4q")])
+"イベント発生後ミッション" = ExtResource("2_uti4q")
+metadata/_custom_type_script = "uid://darx4bjw6s7tr"

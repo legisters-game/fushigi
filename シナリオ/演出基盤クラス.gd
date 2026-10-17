@@ -1,4 +1,5 @@
 @tool
+@icon("res://拡張リソース/アイコン/拡張ノード/演出基盤.png")
 extends Node3D
 
 class_name 演出基盤クラス
@@ -19,6 +20,10 @@ signal 演出開始シグナル
 @export var 再生後発生ミッション:Array[ミッションデータ]
 @export var プレイヤー再生前ワープ:bool
 @export var プレイヤー再生後ワープ:bool
+
+
+@export var 再生後イベント:イベント実行用オブジェクト
+
 
 @onready var アニメーション: AnimationPlayer = $AnimationPlayer
 @onready var カメラ: Camera3D = $"オブジェクト中心/演出カメラ"
@@ -83,7 +88,7 @@ func _ready() -> void:
 	print(表示リスト)
 	var 加速度:float=1
 	await 演出開始シグナル
-	while true and not Engine.is_editor_hint() and バー.value<=99:
+	while true and not Engine.is_editor_hint() and バー.value<=99 and is_inside_tree():
 		await get_tree().create_timer(0.05).timeout
 		if Input.is_action_pressed("アニメーションスキップ"):
 			バー.value+=5*加速度
@@ -135,7 +140,7 @@ func セリフ表示(誰: String, 内容: セリフオブジェクト)->void:
 	if 音声有効:
 		ボックス.get_node("AudioStreamPlayer").stream=内容.ボイス
 		ボックス.get_node("AudioStreamPlayer").play()
-		
+		ボックス.音声再生中=true
 	
 	var 対象:Node3D=エンティティ取得(誰)
 	if 対象:
@@ -166,17 +171,24 @@ func エンティティ取得(名前:String)->Node:
 
 # アニメーションの最後や、特定のタイミングで呼び出す
 func 演出終了(フェードアウト有効:bool=false)->void:
+	var レベル制御:レベル制御クラス= get_tree().get_first_node_in_group("全体制御")
+	if not レベル制御:return
+	if 再生後イベント:
+		レベル制御.移動後実行予約(再生後イベント)
+	if フェードアウト有効:
+		if get_tree().get_first_node_in_group("UI"):
+			var フェードアウト:画面フェードクラス = get_tree().get_first_node_in_group("UI").get_node("画面フェード")
+			フェードアウト.フェードアウト()
+			if レベル制御.GUI.メッセージボックス.音声再生中:
+				await レベル制御.GUI.メッセージボックス.音声単体再生完了
+				アニメーション.stop()
+			await get_tree().create_timer(1).timeout
+			フェードアウト.フェードイン()
 	if get_tree().get_first_node_in_group("UI"): get_tree().get_first_node_in_group("UI").get_node("メッセージボックス").強制終了()
 	データロガー.プレイヤーステート保存(データロガー.プレイヤーデータ.ムービーシーン,"")
 	if 再生後フラグ!="":
 		データロガー.フラグ追加(再生後フラグ)
 	データロガー.全保存()
-	if フェードアウト有効:
-		if get_tree().get_first_node_in_group("UI"):
-			var フェードアウト:画面フェードクラス = get_tree().get_first_node_in_group("UI").get_node("画面フェード")
-			フェードアウト.フェードアウト()
-			await get_tree().create_timer(1).timeout
-			フェードアウト.フェードイン()
 	if プレイヤー再生後ワープ and get_tree().get_first_node_in_group("プレイヤー"):
 		get_tree().get_first_node_in_group("プレイヤー").global_position=$"オブジェクト中心/プレイヤー終了位置".global_position
 	演出完了通知.emit()
@@ -239,4 +251,4 @@ func _exit_tree() -> void:
 
 func _on_スキップバー_発火() -> void:
 	await get_tree().create_timer(0.7).timeout
-	演出終了()
+	演出終了(true)

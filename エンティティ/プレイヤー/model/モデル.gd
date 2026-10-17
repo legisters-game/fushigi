@@ -3,8 +3,10 @@
 extends Node3D
 class_name モデルクラス
 @export var スキン:CompressedTexture2D
+@export_group("メッシの親ノード")
 @export var メッシュ親:Node3D
 @export var メッシュ親2:Node3D
+@export_group("顔関係")
 @export var 顔:MeshInstance3D
 @export var 表情データ:表情オブジェクト
 @export var 顔ボーン:LookAtModifier3D
@@ -13,6 +15,7 @@ func _ready() -> void:
 	if not スキン or スキン.get_size() == Vector2.ZERO:
 		return
 	await RenderingServer.frame_post_draw
+	if not メッシュ親:return
 	for 暫定メッシュ:Node in メッシュ親.get_children():
 		if 暫定メッシュ is MeshInstance3D:
 			for インデックス:int in range(暫定メッシュ.mesh.get_surface_count()):

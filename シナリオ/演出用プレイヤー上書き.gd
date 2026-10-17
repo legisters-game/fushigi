@@ -7,8 +7,9 @@ var 実行済:bool
 func _ready() -> void:
 	プレイヤー=get_tree().get_first_node_in_group("プレイヤー")
 	while プレイヤー:
-		await get_tree().create_timer(0.1).timeout 
-		if 実行済:プレイヤー.global_position=global_position
+		if is_inside_tree():
+			await get_tree().create_timer(0.1).timeout 
+			if 実行済:プレイヤー.global_position=global_position
 		
 ##trueでプレイヤーを表示する
 func プレイヤー位置上書き有効(プレイヤー非表示:bool=false)->void:

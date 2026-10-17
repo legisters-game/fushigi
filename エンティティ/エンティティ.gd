@@ -1,18 +1,26 @@
 extends CharacterBody3D
 class_name エンティティ
+@export_group("パラメータ関係")
 @export var 最大体力:int
 @export var SPEED = 7.0
 @export var rotation_speed: float = 10.0
+@export_group("登録必須プロパティ")
 @export var アニメツリー:AnimationTree
 #@export var 顔:MeshInstance3D
 #@export var 表情データ:表情オブジェクト
 @export var モデル:モデルクラス
+@export_group("エリア判定関係")
 @export var 攻撃判定:Area3D
 @export var 通常当たり判定:Array[CollisionShape3D]
 @export var 座り用当たり判定:Array[CollisionShape3D]
+@export var 寝用当たり判定:Array[CollisionShape3D]
+@export_group("会話用顔ノード")
 @export var 顔ノード:Node3D
 
+@export_group("追従関係")
 @export var ターゲットマーカー:Marker3D
+
+@export var クロックアップ:bool
 
 var アニメベクター:Vector2
 var カメラ基準:Marker3D
@@ -25,11 +33,14 @@ var 体力:int
 var 防御力:float
 
 var 座っている:bool
+var 寝ている:bool
 
 var 簡易目的地: Vector3 = Vector3.ZERO
 var 簡易移動中: bool = false
 var 簡易到着許容距離: float = 0.5
 var 簡易中強制歩き:bool
+
+signal 簡易移動完了
 
 
 
@@ -46,7 +57,7 @@ var move_direction: Vector3 = Vector3.ZERO
 func _physics_process(delta: float):
 	apply_movement(delta)
 	apply_rotation(delta)
-	if not 座っている:
+	if not 座っている and not 寝ている:
 		move_and_slide()
 	update_animations(move_direction,delta)
 
@@ -67,11 +78,16 @@ func apply_movement(delta:float)->void:
 			move_direction = (目標位置 - 現在位置).normalized()
 		else:
 			# 到着した場合
+			簡易移動完了.emit()
 			簡易移動停止()
 	
 	# move_direction（絶対座標系）に基づいて速度を設定
 	if 簡易中強制歩き:move_direction = move_direction/2.0
-	var 目標速度:Vector3 = move_direction * SPEED#*delta*30#*70
+	var 目標速度:Vector3 = move_direction * SPEED*データロガー.エンティティ移動速度
+	if クロックアップ:
+		pass
+		#move_direction * SPEED*データロガー.エンティティ移動速度
+		#目標速度=目標速度*delta*70
 	velocity.x = 目標速度.x
 	velocity.z = 目標速度.z
 	if 重力無効:
@@ -225,3 +241,42 @@ func 座る(座標:Vector3=Vector3.ZERO)->void:
 		
 		# 3. 親（自分自身）のグローバル座標に、そのズレを足して位置を補正する
 		global_position += ズレ
+
+func 寝る(座標:Vector3=Vector3.ZERO)->void:
+	var ステートマシーン:AnimationNodeStateMachinePlayback=アニメツリー.get("parameters/playback")
+	if 座標==Vector3.ZERO:
+		for i:CollisionShape3D in 通常当たり判定:
+			if i: i.disabled=false
+		for i:CollisionShape3D in 寝用当たり判定:
+			if i: i.disabled=true
+		ステートマシーン.travel("動き")
+		set_collision_mask_value(1, true)
+		重力無効=false
+		scale=Vector3.ONE
+		寝ている=false
+		#移動操作ロック=false
+	else:
+		set_collision_mask_value(1, false)
+		重力無効=true
+		scale=Vector3.ONE*0.9
+		#var マイマーカーの座標: Vector3 = $ケツ.global_position
+		
+		# 2. 「ターゲットの座標」と「自分のマーカー座標」の間のズレ（ベクトル）を計算
+		#var ズレ: Vector3 = 座標 - マイマーカーの座標
+		
+		# 3. 親（自分自身）のグローバル座標に、そのズレを足して位置を補正する
+		#global_position += ズレ
+		for i:CollisionShape3D in 通常当たり判定:
+			if i: i.disabled=true
+		for i:CollisionShape3D in 寝用当たり判定:
+			if i: i.disabled=false
+		ステートマシーン.travel("寝る")
+		寝ている=true
+		await get_tree().create_timer(0.03).timeout
+		#マイマーカーの座標= $ケツ.global_position
+		
+		# 2. 「ターゲットの座標」と「自分のマーカー座標」の間のズレ（ベクトル）を計算
+		#ズレ= 座標 - マイマーカーの座標
+		
+		# 3. 親（自分自身）のグローバル座標に、そのズレを足して位置を補正する
+		global_position =座標

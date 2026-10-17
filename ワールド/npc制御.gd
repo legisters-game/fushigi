@@ -7,7 +7,7 @@ class_name スケジュール管理クラス
 @export var 全体スケジュール:Dictionary[NPC,NPCスケジューラ]
 @export var NPCシーン:Dictionary[NPC,PackedScene]
 @export var 太陽:時間太陽
-@export var メッセージボックス:メッセージボックスクラス
+
 var ソート停止:Dictionary[NPC,Array]={}
 enum NPC{キール,リュー,キング,ヒジキ,リッド,すね,リウス,ちゃいにー,いるか,ななし,かるかん,いきぱら,タック,リッター,わでいど}
 

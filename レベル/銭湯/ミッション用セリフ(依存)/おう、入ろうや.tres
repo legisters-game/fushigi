@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://ce8d086hdj1pf"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_htodp"]
+[ext_resource type="AudioStream" uid="uid://cmsoc8o25scs0" path="res://レベル/銭湯/ミッション用セリフ(依存)/おう、はいろうや.wav" id="2_ev754"]
+
+[resource]
+script = ExtResource("1_htodp")
+"セリフ" = "おう、入ろうや"
+"ボイス" = ExtResource("2_ev754")
+metadata/_custom_type_script = "uid://4uxnotone8su"

@@ -5,12 +5,15 @@ class_name プレイヤークラス
 @export var アクセスNPCコライダー:Area3D
 @export var レベル制御:レベル制御クラス
 @export var メッセージボックス:メッセージボックスクラス
+@export var 追尾物:Node3D
+@export_file("*.tscn") var 変身後シーン:String
+@export_file("*.tscn") var 変身演出シーン:String
 
 var 戦闘モード:bool
 var 移動操作ロック:bool=true
 var 操作ロック前位置:Vector3
+var 街非表示防止:bool
 
-@export var 追尾物:Node3D
 
 #レベル制御で制御
 var レベル移動中:bool
@@ -30,8 +33,10 @@ func _ready() -> void:
 	await get_tree().create_timer(2).timeout
 	if 追尾物:
 		global_position=追尾物.global_position
+	#街非表示防止=false
 	#get_parent().force_update_cache()
 	操作ロック前位置=global_position
+	set_physics_process(true)
 	while true:
 		await get_tree().create_timer(2).timeout
 		if not 移動操作ロック:
@@ -77,7 +82,7 @@ func _process(_delta)->void:
 	cam_right.y = 0
 	cam_right = cam_right.normalized()
 	var キー入力済:bool
-	if Input.is_action_just_pressed("回転リセット"):
+	if Input.is_action_just_pressed("回転リセット") and not 寝ている:
 		var cam_z:Vector3 = camera_pivot.global_transform.basis.z
 		# 2. atan2にカメラのXZ平面の方向を渡して、Y軸まわりの角度（float）を計算
 		# ※前方向（-Z方向）を基準にするため、引数の符号を反転（-cam_z.x, -cam_z.z）させます
@@ -124,7 +129,7 @@ func _process(_delta)->void:
 				if 衝突物体.has_method("実行"):
 					衝突物体.実行()
 					break
-	elif Input.is_action_just_pressed("回転リセット"):
+	elif Input.is_action_just_pressed("回転リセット") and not 寝ている:
 		var cam_z:Vector3 = camera_pivot.global_transform.basis.z
 		# 2. atan2にカメラのXZ平面の方向を渡して、Y軸まわりの角度（float）を計算
 		# ※前方向（-Z方向）を基準にするため、引数の符号を反転（-cam_z.x, -cam_z.z）させます
@@ -135,7 +140,8 @@ func _process(_delta)->void:
 		if コライダー.name=="地形当たり判定":
 			print(コライダー.get_parent().get_parent().get_parent().get_parent().name)
 			breakpoint
-	
+	elif Input.is_action_just_pressed("変身"):
+		変身()
 func _on_timer_timeout() -> void:
 	if (1==randi_range(0,3)):
 		表情切り替え(表情オブジェクト.表情.閉)
@@ -143,6 +149,42 @@ func _on_timer_timeout() -> void:
 		表情切り替え(表情オブジェクト.表情.通常)
 
 	#戦闘切り替え(!戦闘モード)
+	
+func プレイヤーチェンジ(引き継ぎ元:プレイヤークラス)->void:
+	var 位置:Vector3= 引き継ぎ元.global_position
+	var 回転:Vector3= 引き継ぎ元.global_rotation_degrees
+	var 追従関係:Marker3D=引き継ぎ元.ターゲットマーカー
+	var toメッセージボックス:メッセージボックスクラス=引き継ぎ元.メッセージボックス
+	var toレベル制御:レベル制御クラス=引き継ぎ元.レベル制御
+	var to体力:int=引き継ぎ元.体力
+	var to防御力:float=引き継ぎ元.防御力
+	
+	var 親:Node3D=引き継ぎ元.get_parent()
+	 
+	var シナリオ:演出基盤クラス= await toレベル制御.シナリオ演出実行(引き継ぎ元.変身演出シーン)
+	await シナリオ.演出完了通知
+	
+	
+	引き継ぎ元.街非表示防止=true
+	親.remove_child(引き継ぎ元)
+	引き継ぎ元.queue_free()
+	
+	ターゲットマーカー=追従関係
+	メッセージボックス=toメッセージボックス
+	レベル制御=toレベル制御
+	体力=to体力
+	防御力=to防御力
+	
+	移動操作ロック=false
+	
+	
+	親.add_child(self)
+	global_position=位置
+	global_rotation_degrees=回転
+	
+	レベル制御.カメラ返し().目標=self
+	
+
 func アニメーション中に付き重力無効(する:bool=true)->void:
 	super(する)
 	移動操作ロック=する
@@ -175,12 +217,47 @@ func 戦闘切り替え(オン:bool)->void:
 			モデル.顔ボーン.target_node=NodePath()
 
 
+func 変身()->void:
+	if ResourceLoader.load_threaded_request(変身後シーン)!=OK:
+		return
+	while is_inside_tree():
+		await get_tree().create_timer(0.1).timeout
+		var 進捗:Array = []
+		var 状態 = ResourceLoader.load_threaded_get_status(変身後シーン,進捗)
+		match 状態:
+			ResourceLoader.THREAD_LOAD_LOADED:
+				break
+			ResourceLoader.THREAD_LOAD_FAILED:
+				return
+			ResourceLoader.THREAD_LOAD_INVALID_RESOURCE:
+				return
+	var 変身後:プレイヤークラス=ResourceLoader.load_threaded_get(変身後シーン).instantiate()
+	変身後.プレイヤーチェンジ(self)
+	街非表示防止=true
+	
+
 func 座る(座標:Vector3=Vector3.ZERO)->void:
 	super(座標)
 	if 座標==Vector3.ZERO:
 		移動操作ロック=false
 	else:
 		移動操作ロック=true
+
+func 寝る(座標:Vector3=Vector3.ZERO)->void:
+	super(座標)
+	if 座標==Vector3.ZERO:
+		移動操作ロック=false
+		レベル制御.GUI.フェードGUI.フェードイン()
+		
+	else:
+		移動操作ロック=true
+		await  get_tree().create_timer(0.2).timeout
+		レベル制御.GUI.フェードGUI.フェードアウト()
+		await  get_tree().create_timer(2).timeout
+		レベル制御.時間の太陽.現時間=レベル制御.時間の太陽.時間辞書[時間太陽.時間.朝]
+		レベル制御.時間の太陽.朝()
+		レベル制御.GUI.フェードGUI.フェードイン()
+
 
 func update_animations(velocitys: Vector3,デルタ:float)->void:
 	var local_vel:Vector3 = global_transform.basis.inverse() * velocitys*SPEED*2

@@ -3,6 +3,7 @@ extends Node
 const SAVE_PATH = "user://save_game.cfg"
 var config = ConfigFile.new()
 var ディメンションセーブロック:bool=false
+var エンティティ移動速度:float=1
 # 【ステータスの定義】
 # これにより、DataManager.P_HP のように数値（int）として扱える
 enum プレイヤーデータ {
@@ -90,7 +91,7 @@ func ミッションオブジェクト取得(ミッション用フラグ名:Stri
 	オブジェクト.初期化(ミッション用フラグ名,辞書)
 	return オブジェクト
 
-func ミッションフラグ追加(ミッションオブジェクト:ミッションデータ)->void:
+func ミッションフラグ追加(ミッションオブジェクト:ミッションデータ,遅延:bool=false)->void:
 	if config.has_section("ミッションフラグ")and config.has_section_key("ミッションフラグ",ミッションオブジェクト.ミッション名):
 		print("すでに追加済み")
 		return
@@ -107,7 +108,7 @@ func ミッションフラグ追加(ミッションオブジェクト:ミッシ�
 		辞書.set("スケジュール",ミッションオブジェクト.キャラセリフ上書きリスト)
 	#ミッションオブジェクト.
 	config.set_value("ミッションフラグ",ミッションオブジェクト.ミッション名,辞書)
-	if get_tree().get_first_node_in_group("UI"):
+	if not 遅延 and get_tree().get_first_node_in_group("UI"):
 		get_tree().get_first_node_in_group("UI").get_node("ミッションマネージャー").ミッション取得()
 	else:
 		print("ミッションをスクリプトで更新失敗")
