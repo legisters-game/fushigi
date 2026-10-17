@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dnilvjff6iq0q" path="res://icon.svg" id="2_kcuoe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_euwu4"]
-render_priority = 1
+render_priority = 3
 no_depth_test = true
+disable_fog = true
 albedo_color = Color(0, 0.5333333, 1, 1)
 metallic = 0.82
 roughness = 0.55
@@ -24,9 +25,8 @@ material = SubResource("StandardMaterial3D_euwu4")
 
 [node name="目的地" type="Node3D" unique_id=1789454795]
 script = ExtResource("1_qv2qe")
-"無効" = true
 
 [node name="メッシュ" type="MeshInstance3D" parent="." unique_id=1717023177]
-transform = Transform3D(-0.03842734, -0.011343066, 4.9584536e-10, 0, -1.7484555e-09, -0.04, 0.011343066, -0.03842734, 1.6797232e-09, 0, -1.0011386, 0)
+transform = Transform3D(0.01080137, 0.0385965, -1.6871644e-09, 0, -1.7484555e-09, -0.04, -0.0385965, 0.01080137, -4.721428e-10, 0, -0.030826492, 0)
 ignore_occlusion_culling = true
 mesh = SubResource("TorusMesh_b5jwi")

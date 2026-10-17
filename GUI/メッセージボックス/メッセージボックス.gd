@@ -6,12 +6,13 @@ class_name メッセージボックスクラス
 @export var 選択肢1:選択肢ボタンクラス
 @export var 選択肢2:選択肢ボタンクラス
 @export var 選択肢3:選択肢ボタンクラス
-@export var プレイヤー:プレイヤークラス
 @export var 追尾カメラ:追尾カメラクラス
 var 相手NPC:NPCクラス
 var 中断:bool
 var 選択肢中:bool
 var 音声有効:bool
+var 音声再生中:bool
+signal 音声単体再生完了
 signal ログ進行(int)
 signal 会話終了
 # Called when the node enters the scene tree for the first time.
@@ -41,6 +42,7 @@ func 表示(誰:String,メッセージ内容:Array[セリフオブジェクト])
 		if i.ボイス and 音声有効:
 			$AudioStreamPlayer.stream=i.ボイス
 			$AudioStreamPlayer.play()
+			音声再生中=true
 		if 相手NPC:
 			相手NPC.表情切り替え(i.表情)
 		
@@ -59,7 +61,7 @@ func 表示(誰:String,メッセージ内容:Array[セリフオブジェクト])
 		相手NPC.停止=false
 		相手NPC.モデル.顔ボーン.target_node=NodePath()
 	相手NPC=null
-	プレイヤー.移動操作ロック=false
+	get_tree().get_first_node_in_group("プレイヤー").移動操作ロック=false
 	if 追尾カメラ:
 		追尾カメラ.会話中視点角ロック(false)
 	hide()
@@ -106,6 +108,7 @@ func 分岐回帰ログ表示(分岐セリフ:セリフ分岐オブジェクト)
 				if i.ボイス and 音声有効:
 					$AudioStreamPlayer.stream=i.ボイス
 					$AudioStreamPlayer.play()
+					音声再生中=true
 				if 相手NPC:
 					相手NPC.表情切り替え(i.表情)
 				選択肢中=i is セリフ分岐オブジェクト
@@ -123,6 +126,7 @@ func 分岐回帰ログ表示(分岐セリフ:セリフ分岐オブジェクト)
 				if i.ボイス and 音声有効:
 					$AudioStreamPlayer.stream=i.ボイス
 					$AudioStreamPlayer.play()
+					音声再生中=true
 				if 相手NPC:
 					相手NPC.表情切り替え(i.表情)
 				選択肢中=i is セリフ分岐オブジェクト
@@ -140,6 +144,7 @@ func 分岐回帰ログ表示(分岐セリフ:セリフ分岐オブジェクト)
 				if i.ボイス and 音声有効:
 					$AudioStreamPlayer.stream=i.ボイス
 					$AudioStreamPlayer.play()
+					音声再生中=true
 				if 相手NPC:
 					相手NPC.表情切り替え(i.表情)
 				選択肢中=i is セリフ分岐オブジェクト
@@ -180,8 +185,11 @@ func _on_選択肢ボタン3_pressed() -> void:
 
 
 func _on_audio_stream_player_finished() -> void:
+	音声再生中=false
+	音声単体再生完了.emit()
 	if not 選択肢中:
 		if get_tree().get_first_node_in_group("演出ノード"): 
 				while get_tree().get_first_node_in_group("演出ノード") and not get_tree().get_first_node_in_group("演出ノード").停止準備完了:
 					await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.5).timeout
 		ログ進行.emit(0)

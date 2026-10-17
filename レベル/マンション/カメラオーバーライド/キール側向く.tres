@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="カメラオーバーライド" format=3 uid="uid://wls4mxip1tdp"]
+
+[ext_resource type="Script" uid="uid://bl08br4eab320" path="res://拡張リソース/カメラオーバーライド.gd" id="1_d7po2"]
+
+[resource]
+script = ExtResource("1_d7po2")
+"距離差分" = Vector3(0, 0.22, 0)
+"距離" = 1.0
+"角度制限" = Vector2(80, 100)
+metadata/_custom_type_script = "uid://bl08br4eab320"

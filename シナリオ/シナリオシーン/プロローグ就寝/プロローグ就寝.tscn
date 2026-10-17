@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dc72x56in1wex"]
+
+[ext_resource type="PackedScene" uid="uid://blg0wki80emvo" path="res://シナリオ/演出基盤.tscn" id="1_c3wtd"]
+[ext_resource type="PackedScene" uid="uid://dmbek8jwtnvaw" path="res://レベル/マンション/マンション.tscn" id="2_5ll1e"]
+
+[node name="演出基盤" unique_id=854987473 instance=ExtResource("1_c3wtd")]
+
+[node name="マンション" parent="." index="5" unique_id=1557217192 node_paths=PackedStringArray("NPC用オブジェクト") instance=ExtResource("2_5ll1e")]
+"NPC用オブジェクト" = [null, NodePath("-112,176,a/中心/二階/部屋/椅子キール")]

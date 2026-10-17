@@ -1,0 +1,348 @@
+[gd_scene format=4 uid="uid://deciibx8u6hla"]
+
+[ext_resource type="Script" uid="uid://cgchvyb6y0r2n" path="res://エンティティ/プレイヤー/model/モデル.gd" id="1_dk3va"]
+[ext_resource type="Material" uid="uid://ditngesu8x0x6" path="res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/マテリアル.tres" id="3_i8vad"]
+[ext_resource type="PackedScene" uid="uid://de73601748mjc" path="res://エンティティ/プレイヤー/model/ベルト/riderbelt.gltf" id="3_o2elx"]
+[ext_resource type="Animation" uid="uid://ou2sg38uggis" path="res://エンティティ/プレイヤー/anim/走り.res" id="4_8w2h7"]
+[ext_resource type="Animation" uid="uid://37dcd4apqt7p" path="res://エンティティ/プレイヤー/anim/走り左.res" id="5_lmc07"]
+[ext_resource type="Animation" uid="uid://r0p607btfpru" path="res://エンティティ/プレイヤー/anim/走り右.res" id="6_2ujm3"]
+[ext_resource type="Animation" uid="uid://ye114dj5140u" path="res://エンティティ/プレイヤー/anim/後ろ走り.res" id="7_a14f4"]
+[ext_resource type="Animation" uid="uid://de4s8hj4ykwcp" path="res://エンティティ/Take 001.res" id="8_8a67t"]
+[ext_resource type="Animation" uid="uid://bshs6g4o4jqxn" path="res://エンティティ/プレイヤー/anim/アイドル.res" id="9_xv7cm"]
+[ext_resource type="Animation" uid="uid://c2uu8jq2swof8" path="res://エンティティ/プレイヤー/anim/歩き.res" id="10_tufry"]
+[ext_resource type="Animation" uid="uid://d2msrccklscxu" path="res://エンティティ/プレイヤー/anim/左.res" id="11_0vgip"]
+[ext_resource type="Animation" uid="uid://ccyef8qiv2gss" path="res://エンティティ/プレイヤー/anim/寝る.res" id="12_agb27"]
+[ext_resource type="Animation" uid="uid://0l00ro4np6it" path="res://エンティティ/プレイヤー/anim/右.res" id="13_5jjcg"]
+[ext_resource type="Animation" uid="uid://cum0i7u7pe0g8" path="res://エンティティ/プレイヤー/anim/座る.res" id="14_20dtn"]
+[ext_resource type="Animation" uid="uid://c701vid3abyg7" path="res://エンティティ/プレイヤー/anim/後ろ.res" id="15_58klj"]
+[ext_resource type="Animation" uid="uid://c13kuj1lv4qdn" path="res://エンティティ/プレイヤー/anim/戦闘/戦闘_D左.res" id="16_7gqdh"]
+[ext_resource type="AnimationLibrary" uid="uid://dqa5m3a2m1kpe" path="res://シナリオ/変身用シーン/アニメーション/変身後側アニメーション.res" id="17_1qqr4"]
+[ext_resource type="Animation" uid="uid://rk2tixd61ts7" path="res://エンティティ/プレイヤー/anim/戦闘/戦闘_D右.res" id="17_hgkme"]
+[ext_resource type="Animation" uid="uid://c4l6tu1w4e5yv" path="res://エンティティ/プレイヤー/anim/戦闘/戦闘_D後ろ.res" id="18_u76fa"]
+[ext_resource type="Animation" uid="uid://dc7w3yk0xjnxp" path="res://エンティティ/プレイヤー/anim/戦闘/戦闘_アイドル.res" id="19_thocn"]
+[ext_resource type="Animation" uid="uid://dno5kfqsexlew" path="res://エンティティ/プレイヤー/anim/戦闘/戦闘_前.res" id="20_c63m8"]
+[ext_resource type="Animation" uid="uid://dagkv0x31vh2a" path="res://エンティティ/プレイヤー/anim/戦闘/戦闘_左.res" id="21_57b5h"]
+[ext_resource type="Animation" uid="uid://bftjjllgd35ia" path="res://エンティティ/プレイヤー/anim/戦闘/戦闘_右.res" id="22_gclls"]
+[ext_resource type="Animation" uid="uid://bghygdx1ciiko" path="res://エンティティ/プレイヤー/anim/戦闘/戦闘_後ろ.res" id="23_60pw7"]
+[ext_resource type="PackedScene" uid="uid://hqyxoewx8rd1" path="res://エンティティ/プレイヤー/model/変身後リアル/仮面ライダー2026.glb" id="24_i8vad"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h52rw"]
+resource_name = "仮面ライダー2026_平面_002"
+_surfaces = [{
+"aabb": AABB(0.13354596, 1.5568308, 0.032678857, 0.013831481, 0.02984798, 0.07717787),
+"attribute_data": PackedByteArray("AAAAAAAAQD8AAIA/AACAPwAAAAAAAIA/AACAPwAAAD8AAIA/AABAPwAAgD8AAAAAAACAPwAAgD4AAAAAAAAAPwAAAAAAAAAAAACAPwAAgD8AAAAAAABAPwAAAAAAAIA/AACAPwAAAD8AAIA/AABAPwAAAAAAAAAAAAAAAAAAAD8AAIA/AACAPgAAgD8AAAAAAAAAAAAAgD8AAAAAAABAPwAAAAAAAEA/AAAAAAAAgD8AAIA/AACAPwAAAAAAAIA/AAAAAAAAgD8AAIA/AACAPwAAgD8AAAAAAACAPwAAgD4AAIA/AACAPgAAgD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwAAgD8AAAA/AACAPwAAQD8AAIA/AABAPwAAgD8AAAA/AACAPwAAgD4AAIA/AAAAPwAAgD8AAAA/AACAPwAAgD4AAIA/AABAPwAAgD8AAIA/AACAPwAAgD8AAIA/AABAPwAAAAAAAEA/AAAAAAAAAD8AAAAAAAAAPwAAAAAAAEA/"),
+"bone_aabbs": [AABB(0, 0, 0, -1, -1, -1), AABB(0, 0, 0, -1, -1, -1), AABB(0, 0, 0, -1, -1, -1), AABB(0, 0, 0, -1, -1, -1), AABB(0, 0, 0, -1, -1, -1), AABB(0.13354596, 1.5568308, 0.032678857, 0.013831481, 0.02984798, 0.07717787)],
+"format": 34359745559,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAQADAAQAAwAAAAUAAwAFAAYABQAAAAcABQAHAAgACQAKAAsADAAKAAkADAAJAA0ACgAMAA4ACgAOAA8ADgAMABAADgAQABEAEgATABQAEgAVABMAFgAXABgAFgAZABcAGgAbABwAGgAdABsAHgAfACAAHgAhAB8AIgAjACQAIgAlACMAJgAnACgAJgApACcAKgArACwAKgAtACsALgAvADAALgAxAC8AMgAzADQAMgA1ADMA"),
+"material": ExtResource("3_i8vad"),
+"name": "マテリアル",
+"primitive": 3,
+"skin_data": PackedByteArray("BQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAABQAAAAAAAAD//wAAAAAAAAUAAAAAAAAA//8AAAAAAAAFAAAAAAAAAP//AAAAAAAA"),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 54,
+"vertex_data": PackedByteArray("Ou4RPov6yT+bHZs9oHYQPg4byj+mi9U9oHYQPkoYyz+Q/OA9WlgTPneeyD9ut4E9KcYRPjEZyT/jAKE9HeoWPremxz9E2gU92YkVPjtGxz/usj89xF0UPr9xyj91ZVk9tH4WPtDeyT/T5Qw9RsAIPg4byj+mi9U94DcKPov6yT+bHZs9RsAIPkoYyz+Q/OA9AKILPneeyD9ut4E9zw8KPjEZyT/kAKE9WcgOPtDeyT/U5Qw9aacMPr9xyj92ZVk9ftMNPjtGxz/vsj89wzMPPremxz9F2gU9oHYQPkoYyz+Q/OA94DcKPov6yT+bHZs9Ou4RPov6yT+bHZs9RsAIPkoYyz+Q/OA9oHYQPg4byj+mi9U9RsAIPkoYyz+Q/OA9oHYQPkoYyz+Q/OA9RsAIPg4byj+mi9U9HeoWPremxz9E2gU9ftMNPjtGxz/vsj892YkVPjtGxz/usj89wzMPPremxz9F2gU9tH4WPtDeyT/T5Qw9wzMPPremxz9F2gU9HeoWPremxz9E2gU9WcgOPtDeyT/U5Qw9xF0UPr9xyj91ZVk9WcgOPtDeyT/U5Qw9tH4WPtDeyT/T5Qw9aacMPr9xyj92ZVk9WlgTPneeyD9ut4E9zw8KPjEZyT/kAKE9KcYRPjEZyT/jAKE9AKILPneeyD9ut4E92YkVPjtGxz/usj89AKILPneeyD9ut4E9WlgTPneeyD9ut4E9ftMNPjtGxz/vsj89KcYRPjEZyT/jAKE9RsAIPg4byj+mi9U9oHYQPg4byj+mi9U9zw8KPjEZyT/kAKE9Ou4RPov6yT+bHZs9aacMPr9xyj92ZVk9xF0UPr9xyj91ZVk94DcKPov6yT+bHZs9L/TSgDl6iaMv9NKALbFggi/00oCHuKuCL/TSgH18WJcv9NKA////Py/00oBkfhiNL/TSgP///z8v9NKAG3xomS/00oBYjfKA0gAvdC2xnn3SAC90tHoKX9IAL3SHuFN90gAvdBF/h3bSAC90////v9IAL3SOiTN/0gAvdP///7/SAC9084/yftIAL3RYjQx/8WX+/////7/xZf7/////v/Fl/v////+/8WX+/////7//f0tK////P/9/S0r///8//39LSv///z//f0tK////P+lpAAD///+/6WkAAP///7/paQAA////v+lpAAD///+/jAv+/////7+MC/7/////v4wL/v////+/jAv+/////783Z/7/////vzdn/v////+/N2f+/////783Z/7/////v/9/Mxn///8//38zGf///z//fzMZ////P/9/Mxn///8//3+5Mf///z//f7kx////P/9/uTH///8//3+5Mf///z//fwse////P/9/Cx7///8//38LHv///z//fwse////P/9/S+7///8//39L7v///z//f0vu////P/9/S+7///8/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="Skin" id="Skin_qhldl"]
+resource_name = "Skin"
+bind_count = 61
+bind/0/name = &"Hips"
+bind/0/bone = -1
+bind/0/pose = Transform3D(-6.274597e-07, 2.1316282e-14, -1.3306785, 1.4901161e-07, 1.3306783, -9.947598e-14, 1.3306785, 5.9604645e-08, -6.274598e-07, 0.014128806, -1.1723462, 0.007935554)
+bind/1/name = &"Spine"
+bind/1/bone = -1
+bind/1/pose = Transform3D(-6.274597e-07, 3.1974423e-14, -1.3306785, 1.1920929e-07, 1.3306785, -9.947598e-14, 1.3306785, 8.940697e-08, -6.274599e-07, 0.014128808, -1.383082, -0.036430776)
+bind/2/name = &"Chest"
+bind/2/bone = -1
+bind/2/pose = Transform3D(-6.274597e-07, -1.7763568e-15, -1.3306785, 1.6763806e-07, 1.3306785, -1.2789769e-13, 1.3306786, 4.0978193e-08, -6.274599e-07, 0.014128809, -1.5688447, -0.05604534)
+bind/3/name = &"UpperChest"
+bind/3/bone = -1
+bind/3/pose = Transform3D(-6.274598e-07, -8.881784e-16, -1.3306783, 1.7136335e-07, 1.3306785, -1.3855583e-13, 1.3306785, 3.7252903e-08, -6.2746005e-07, 0.014128808, -1.7703093, -0.049623936)
+bind/4/name = &"Neck"
+bind/4/bone = -1
+bind/4/pose = Transform3D(-6.2745994e-07, 2.842171e-14, -1.3306783, 2.9802322e-08, 1.3306785, -2.842171e-14, 1.3306785, 2.0861626e-07, -6.274602e-07, 0.014128806, -1.9362952, -0.043202877)
+bind/5/name = &"Head"
+bind/5/bone = -1
+bind/5/pose = Transform3D(-6.274599e-07, 3.375078e-14, -1.3306782, 7.4505806e-08, 1.3306782, -6.084022e-14, 1.3306786, 1.5459955e-07, -6.274603e-07, 0.014128805, -2.0080984, -0.0716905)
+bind/6/name = &"LeftShoulder"
+bind/6/bone = -1
+bind/6/pose = Transform3D(1.3306787, 3.7252903e-08, -4.414469e-07, -5.532056e-07, -8.940697e-08, -1.3306783, 2.0116568e-07, 1.3306783, -1.4901161e-08, -0.13637178, -0.0072369277, -1.8742986)
+bind/7/name = &"LeftUpperArm"
+bind/7/bone = -1
+bind/7/pose = Transform3D(-1.330679, -1.4901161e-07, 4.172325e-07, -3.874302e-07, 5.5879354e-09, -1.3306785, -7.4505806e-08, -1.3306782, -4.656613e-08, 0.02533929, -0.22990267, 1.8162621)
+bind/8/name = &"LeftLowerArm"
+bind/8/bone = -1
+bind/8/pose = Transform3D(-1.0430813e-07, -1.3306781, -5.2896212e-08, -4.1758176e-07, -1.1190423e-08, -1.3306782, 1.3306788, 1.5646219e-07, -4.073372e-07, 1.7985626, -0.5351258, -0.051399887)
+bind/9/name = &"LeftHand"
+bind/9/bone = -1
+bind/9/pose = Transform3D(-1.3306788, -1.5646219e-07, 4.0233135e-07, -4.172325e-07, 1.8626451e-08, -1.3306783, -1.0803342e-07, -1.330678, -6.2864274e-08, 0.05226913, -0.81531805, 1.7843816)
+bind/10/name = &"hand.L.001"
+bind/10/bone = -1
+bind/10/pose = Transform3D(-0.11582541, -1.312769, -0.18419269, -0.81184214, 0.21641053, -1.0318842, 1.0479517, 0.022557769, -0.819753, 1.6354531, -1.0032282, -0.64090973)
+bind/11/name = &"hand.L.002"
+bind/11/bone = -1
+bind/11/pose = Transform3D(0.055327408, -1.3276669, -0.07031872, -0.10663285, 0.06572149, -1.3247703, 1.3252451, 0.06071684, -0.103659265, 1.7410246, -1.0897932, -0.14908074)
+bind/12/name = &"hand.L.003"
+bind/12/bone = -1
+bind/12/pose = Transform3D(0.048651565, -1.3297887, 5.5486403e-06, 1.9961585e-06, -5.5459395e-06, -1.330679, 1.329789, 0.048651744, 1.5600704e-06, 1.7987322, -1.0453371, -0.051779337)
+bind/13/name = &"hand.L.004"
+bind/13/bone = -1
+bind/13/pose = Transform3D(0.048637513, -1.3297894, -5.6555928e-06, -2.1447222e-06, 5.522004e-06, -1.3306793, 1.3297898, 0.0486377, -2.1636665e-06, 1.7987244, -1.07326, -0.051763363)
+bind/14/name = &"hand.L.005"
+bind/14/bone = -1
+bind/14/pose = Transform3D(0.0052936305, -1.3054417, -0.2578756, -0.12722425, 0.25619957, -1.2995702, 1.3245724, 0.029825171, -0.12379229, 1.570018, -1.2650791, -0.16297078)
+bind/15/name = &"hand.L.006"
+bind/15/bone = -1
+bind/15/pose = Transform3D(0.03955286, -1.3289485, -0.055105917, 0.006501811, 0.0553227, -1.3295127, 1.3300749, 0.03924914, 0.0081376275, 1.7527825, -1.082533, -0.074618205)
+bind/16/name = &"hand.L.007"
+bind/16/bone = -1
+bind/16/pose = Transform3D(0.03959493, -1.330089, 6.8634343e-09, 2.1912443e-07, -5.4858567e-08, -1.3306788, 1.3300896, 0.039595135, 1.1472241e-07, 1.7977891, -1.0579538, -0.08150482)
+bind/17/name = &"hand.L.008"
+bind/17/bone = -1
+bind/17/pose = Transform3D(0.039593775, -1.3300892, -3.854672e-06, 1.9502131e-08, 3.7931213e-06, -1.3306788, 1.3300896, 0.03959398, 2.9193119e-08, 1.7977862, -1.1112084, -0.081503324)
+bind/18/name = &"hand.L.009"
+bind/18/bone = -1
+bind/18/pose = Transform3D(0.15429415, -1.3114035, -0.16467862, 0.64799935, 0.21956046, -1.1413137, 1.1519532, 0.05214375, 0.6640714, 1.6403881, -1.123712, 0.37193823)
+bind/19/name = &"hand.L.010"
+bind/19/bone = -1
+bind/19/pose = Transform3D(0.028848108, -1.3295522, -0.04651369, 0.033310965, 0.04723188, -1.3294231, 1.3299488, 0.027656712, 0.034306664, 1.7593257, -1.0750408, -0.082547754)
+bind/20/name = &"hand.L.011"
+bind/20/bone = -1
+bind/20/pose = Transform3D(0.029011186, -1.3303621, -5.1594484e-06, -6.696841e-07, 5.1195025e-06, -1.3306788, 1.3303624, 0.029011387, -6.3161735e-07, 1.797407, -1.0667539, -0.11169073)
+bind/21/name = &"hand.L.012"
+bind/21/bone = -1
+bind/21/pose = Transform3D(0.029010892, -1.3303621, -3.2245898e-06, -7.0358254e-07, 3.1784039e-06, -1.3306788, 1.3303624, 0.029011093, -7.0771995e-07, 1.7974088, -1.1269546, -0.1116904)
+bind/22/name = &"hand.L.013"
+bind/22/bone = -1
+bind/22/pose = Transform3D(0.1558962, -1.3194695, -0.07349447, 1.0604808, 0.1690664, -0.78581357, 0.78853184, 0.033491217, 1.0713555, 1.716033, -0.81390226, 0.69622815)
+bind/23/name = &"hand.L.014"
+bind/23/bone = -1
+bind/23/pose = Transform3D(0.025705682, -1.3294739, -0.050433606, 0.080337115, 0.05190201, -1.3272375, 1.3280027, 0.022594579, 0.08126685, 1.7557718, -1.080261, -0.08209806)
+bind/24/name = &"hand.L.015"
+bind/24/bone = -1
+bind/24/pose = Transform3D(0.02287045, -1.3304816, 4.8763216e-12, -2.055314e-09, -4.12747e-08, -1.330679, 1.3304821, 0.022870637, -1.16889055e-07, 1.7971615, -1.0576898, -0.14678746)
+bind/25/name = &"hand.L.016"
+bind/25/bone = -1
+bind/25/pose = Transform3D(0.022883398, -1.3304815, 2.1512333e-05, 1.695309e-07, -2.1552822e-05, -1.330679, 1.3304819, 0.022883587, -3.2511815e-07, 1.7971783, -1.1073025, -0.14680514)
+bind/26/name = &"forearm.L.001"
+bind/26/bone = -1
+bind/26/pose = Transform3D(0.015986627, -1.3079237, 0.24451102, 0.61877495, -0.20917071, -1.1593411, 1.1779507, 0.12762769, 0.6056809, 1.9030555, -0.45415458, 0.15369307)
+bind/27/name = &"forearm.L.002"
+bind/27/bone = -1
+bind/27/pose = Transform3D(-0.04908807, -1.1965522, 0.5801362, 0.52871174, -0.5502347, -1.090143, 1.2201475, 0.19028783, 0.49571794, 2.0106819, -0.11715281, -0.013533554)
+bind/28/name = &"forearm.L.003"
+bind/28/bone = -1
+bind/28/pose = Transform3D(-0.0019677503, -1.2423598, 0.4767, 0.29960617, -0.4648741, -1.2103035, 1.2965097, 0.10554074, 0.28040814, 1.9880507, -0.33022892, -0.072151415)
+bind/29/name = &"RightShoulder"
+bind/29/bone = -1
+bind/29/pose = Transform3D(-1.3306786, -1.1920929e-07, 5.6810677e-07, 4.8056245e-07, 1.3411045e-07, 1.3306785, 1.4901161e-08, 1.3306786, -7.4505806e-08, 0.13637184, -0.035494864, -1.8742993)
+bind/30/name = &"RightUpperArm"
+bind/30/bone = -1
+bind/30/pose = Transform3D(1.3306786, 1.1920929e-07, -5.364418e-07, 4.0233135e-07, 1.1269003e-07, 1.3306783, 2.9802322e-08, -1.3306783, 2.7939677e-09, -0.02533938, -0.23894219, 1.8162614)
+bind/31/name = &"RightLowerArm"
+bind/31/bone = -1
+bind/31/pose = Transform3D(3.7252903e-08, 1.3306783, 1.891749e-09, 4.3096952e-07, 9.08185e-08, 1.3306785, 1.3306789, 1.6391277e-07, -5.2934047e-07, -1.7985618, -0.5480095, -0.05139996)
+bind/32/name = &"RightHand"
+bind/32/bone = -1
+bind/32/pose = Transform3D(1.3306792, 1.6763806e-07, -4.917383e-07, 4.4703484e-07, 9.872019e-08, 1.3306786, -2.9802322e-08, -1.3306783, -6.0535967e-09, -0.052269235, -0.82271767, 1.7843821)
+bind/33/name = &"hand.R.001"
+bind/33/bone = -1
+bind/33/pose = Transform3D(0.09512083, 1.3168141, -0.1663056, -0.6982787, 0.19144134, 1.1164513, 1.1287442, 0.00746235, 0.7046886, -1.6533514, -1.0308864, -0.5397015)
+bind/34/name = &"hand.R.002"
+bind/34/bone = -1
+bind/34/pose = Transform3D(-0.054737974, 1.3273095, -0.07718769, -0.11703807, 0.07214273, 1.3235571, 1.3243904, 0.06123412, 0.113774374, -1.7343794, -1.1128908, -0.16050543)
+bind/35/name = &"hand.R.003"
+bind/35/bone = -1
+bind/35/pose = Transform3D(-0.048645608, 1.3297892, -1.7140515e-07, -4.381643e-06, -2.683054e-08, 1.3306788, 1.3297887, 0.048645716, 4.465224e-06, -1.7986639, -1.0579183, -0.05354134)
+bind/36/name = &"hand.R.004"
+bind/36/bone = -1
+bind/36/pose = Transform3D(-0.048637673, 1.3297893, -4.7362614e-06, 1.0124513e-06, 4.7425806e-06, 1.330679, 1.329789, 0.048637792, -1.099641e-06, -1.79866, -1.0899845, -0.05352608)
+bind/37/name = &"hand.R.005"
+bind/37/bone = -1
+bind/37/pose = Transform3D(-0.012109924, 1.3148943, -0.20398875, -0.1425989, 0.2015398, 1.3075757, 1.3229598, 0.03375971, 0.13907345, -1.6212142, -1.1946776, -0.17884131)
+bind/38/name = &"hand.R.006"
+bind/38/bone = -1
+bind/38/pose = Transform3D(-0.039507497, 1.3289366, -0.05542116, 0.0065362165, 0.055638812, 1.3294994, 1.3300756, 0.03920036, -0.008179498, -1.7518446, -1.0993459, -0.074420445)
+bind/39/name = &"hand.R.007"
+bind/39/bone = -1
+bind/39/pose = Transform3D(-0.039603394, 1.330089, 1.1635074e-05, -8.185549e-08, -1.1696674e-05, 1.3306794, 1.330089, 0.03960351, 4.898784e-07, -1.797799, -1.074664, -0.08151751)
+bind/40/name = &"hand.R.008"
+bind/40/bone = -1
+bind/40/pose = Transform3D(-0.039596353, 1.3300891, 1.8671944e-08, 6.9146273e-07, -4.7162334e-08, 1.3306793, 1.330089, 0.039596464, -6.271818e-07, -1.7977892, -1.1297085, -0.08150702)
+bind/41/name = &"hand.R.009"
+bind/41/bone = -1
+bind/41/pose = Transform3D(-0.1381207, 1.3158908, -0.14163053, 0.5722196, 0.18777663, 1.1865964, 1.1933953, 0.062261403, -0.5853514, -1.6634786, -1.1091717, 0.30025384)
+bind/42/name = &"hand.R.010"
+bind/42/bone = -1
+bind/42/pose = Transform3D(-0.0288223, 1.3295615, -0.04626407, 0.033118878, 0.046977602, 1.3294368, 1.3299537, 0.027644068, -0.034108736, -1.7590815, -1.087557, -0.082351685)
+bind/43/name = &"hand.R.011"
+bind/43/bone = -1
+bind/43/pose = Transform3D(-0.029011173, 1.3303621, -5.14703e-06, 2.2655205e-07, 5.082996e-06, 1.3306788, 1.3303622, 0.02901129, -3.3574557e-07, -1.7974056, -1.0817002, -0.111690715)
+bind/44/name = &"hand.R.012"
+bind/44/bone = -1
+bind/44/pose = Transform3D(-0.029013941, 1.3303618, 3.645555e-09, 1.7016909e-07, -6.129788e-08, 1.3306787, 1.3303622, 0.029014057, -1.6714007e-07, -1.7974101, -1.1442692, -0.11169459)
+bind/45/name = &"hand.R.013"
+bind/45/bone = -1
+bind/45/pose = Transform3D(-0.14139129, 1.3214704, -0.06655231, 0.92150784, 0.14637773, 0.9487378, 0.9494931, 0.054720122, -0.930685, -1.7241546, -0.893998, 0.5618135)
+bind/46/name = &"hand.R.014"
+bind/46/bone = -1
+bind/46/pose = Transform3D(-0.025620207, 1.3295269, -0.049049627, 0.0781287, 0.050477512, 1.3274242, 1.3281356, 0.0226778, -0.07903293, -1.7567271, -1.082888, -0.083637945)
+bind/47/name = &"hand.R.015"
+bind/47/bone = -1
+bind/47/pose = Transform3D(-0.022876753, 1.3304814, 6.4426645e-06, -1.533667e-07, -6.4902033e-06, 1.3306789, 1.3304816, 0.022876881, 3.8556294e-07, -1.797165, -1.0655097, -0.14679696)
+bind/48/name = &"hand.R.016"
+bind/48/bone = -1
+bind/48/pose = Transform3D(-0.022870453, 1.3304815, 2.2991019e-10, 1.4965437e-07, -3.1688906e-08, 1.3306789, 1.3304819, 0.02287058, -1.3401345e-08, -1.7971603, -1.115753, -0.1467881)
+bind/49/name = &"forearm.R.001"
+bind/49/bone = -1
+bind/49/pose = Transform3D(-0.053466808, 1.3168807, 0.18349631, 0.54257447, -0.14604862, 1.2062292, 1.2138609, 0.12328579, -0.53108066, -1.8772299, -0.57124186, 0.11534915)
+bind/50/name = &"forearm.R.002"
+bind/50/bone = -1
+bind/50/pose = Transform3D(-0.03497766, 1.2840428, 0.34743986, 0.31664622, -0.3295321, 1.2497399, 1.2919813, 0.11552652, -0.29688716, -1.9518304, -0.5160623, -0.06772302)
+bind/51/name = &"forearm.R.003"
+bind/51/bone = -1
+bind/51/pose = Transform3D(0.001968901, 1.2423598, 0.47670028, 0.29960603, -0.46487436, 1.2103034, 1.2965094, 0.10553975, -0.28040883, -2.003859, -0.37127593, -0.06686855)
+bind/52/name = &"pelvis.L"
+bind/52/bone = -1
+bind/52/pose = Transform3D(0.92035156, -0.48637778, 0.82891196, 0.9258757, 0.14096439, -0.9452986, 0.2577073, 1.2305572, 0.43591475, 0.4251928, -0.1086331, -1.0872293)
+bind/53/name = &"pelvis.R"
+bind/53/bone = -1
+bind/53/pose = Transform3D(-0.97545636, 0.47798768, 0.7685816, 0.85848784, 0.13070443, 1.008276, 0.28668597, 1.2349694, -0.4041871, -0.4350915, -0.120738335, -1.082024)
+bind/54/name = &"LeftUpperLeg"
+bind/54/bone = -1
+bind/54/pose = Transform3D(-7.264316e-07, -8.7171793e-07, 1.3306781, -3.874302e-07, -1.3306787, 8.745119e-07, 1.3306785, 5.662441e-07, -1.8924475e-06, 0.1385153, 1.154293, -0.109639585)
+bind/55/name = &"LeftLowerLeg"
+bind/55/bone = -1
+bind/55/pose = Transform3D(7.376075e-07, 8.7264925e-07, -1.3306783, -3.874302e-07, -1.3306787, 8.7032095e-07, -1.3306786, -5.364418e-07, 1.8924475e-06, -0.22608612, 0.66878, -0.006836295)
+bind/56/name = &"LeftFoot"
+bind/56/bone = -1
+bind/56/pose = Transform3D(-7.7759614e-07, -8.6426735e-07, 1.3306785, 1.3306788, 6.4540654e-07, -1.8825522e-06, 2.6728958e-07, 1.3306789, -8.493662e-07, 0.31448352, 0.086729065, -0.07425408)
+bind/57/name = &"RightUpperLeg"
+bind/57/bone = -1
+bind/57/pose = Transform3D(6.2957406e-07, 1.3038516e-08, 1.3306783, -8.940697e-08, -1.3306786, 5.9604645e-08, 1.3306786, 8.940697e-08, -6.482005e-07, -0.15175845, 1.1542927, -0.10963902)
+bind/58/name = &"RightLowerLeg"
+bind/58/bone = -1
+bind/58/pose = Transform3D(-6.221235e-07, -3.3993274e-08, -1.3306786, -1.0430813e-07, -1.3306786, 3.282912e-08, -1.3306786, -1.1920929e-07, 6.556511e-07, 0.25439486, 0.66877955, -0.0068370253)
+bind/59/name = &"RightFoot"
+bind/59/bone = -1
+bind/59/pose = Transform3D(6.3562766e-07, 5.9604645e-08, 1.3306786, 1.3306786, -1.6205013e-07, -7.157214e-07, 2.8312206e-07, 1.3306786, -8.940697e-08, -0.34279284, 0.08673012, -0.07425372)
+bind/60/name = &"neutral_bone"
+bind/60/bone = -1
+bind/60/pose = Transform3D(-6.2745977e-07, 0, -1.3306785, -1.3306785, 0, 6.2745977e-07, 0, 1.3306785, 0, 0.014154423, 0.056300476, 0.0011514897)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gqebe"]
+_data = {
+&"D前": ExtResource("4_8w2h7"),
+&"D右": ExtResource("6_2ujm3"),
+&"D左": ExtResource("5_lmc07"),
+&"D後": ExtResource("7_a14f4"),
+&"Take 001": ExtResource("8_8a67t"),
+&"アイドル": ExtResource("9_xv7cm"),
+&"前": ExtResource("10_tufry"),
+&"右": ExtResource("13_5jjcg"),
+&"寝る": ExtResource("12_agb27"),
+&"左": ExtResource("11_0vgip"),
+&"座る": ExtResource("14_20dtn"),
+&"後": ExtResource("15_58klj")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_od17q"]
+_data = {
+&"戦闘_D右": ExtResource("17_hgkme"),
+&"戦闘_D左": ExtResource("16_7gqdh"),
+&"戦闘_D後ろ": ExtResource("18_u76fa"),
+&"戦闘_アイドル": ExtResource("19_thocn"),
+&"戦闘_前": ExtResource("20_c63m8"),
+&"戦闘_右": ExtResource("22_gclls"),
+&"戦闘_左": ExtResource("21_57b5h"),
+&"戦闘_後ろ": ExtResource("23_60pw7")
+}
+
+[node name="モデル変身後リアル" unique_id=1568459967 node_paths=PackedStringArray("メッシュ親", "顔ボーン") instance=ExtResource("24_i8vad")]
+script = ExtResource("1_dk3va")
+"メッシュ親" = NodePath("metarig/GeneralSkeleton")
+"顔ボーン" = NodePath("metarig/GeneralSkeleton/LookAtModifier3D")
+
+[node name="metarig" parent="." index="0" unique_id=1620602145]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.042309612, -0.00086534023, 0.010636978)
+
+[node name="GeneralSkeleton" parent="metarig" index="0" unique_id=1916792033]
+bones/0/rotation = Quaternion(0.016958147, 0.016764473, 0.0021230683, 0.9997134)
+bones/1/rotation = Quaternion(0.05381315, -0.011243737, -0.0034408523, 0.9984818)
+bones/2/rotation = Quaternion(0.021565797, -0.02134042, 0.010288945, 0.9994868)
+bones/3/rotation = Quaternion(0.021317374, -0.020972867, 0.011259144, 0.9994894)
+bones/4/rotation = Quaternion(-0.0041984925, 0.018570649, -0.0021493726, 0.9998165)
+bones/5/rotation = Quaternion(-0.028483147, 0.03905374, -0.017458739, 0.99867857)
+bones/6/rotation = Quaternion(0.510986, 0.4648943, 0.60295, -0.3990214)
+bones/7/rotation = Quaternion(0.14800467, 0.84598035, -0.4836193, -0.16889136)
+bones/8/rotation = Quaternion(0.0681502, -0.70381504, 0.068150155, 0.70381504)
+bones/9/rotation = Quaternion(0.04083146, 0.7215782, -0.08836271, 0.68545586)
+bones/12/rotation = Quaternion(0.039087962, 0.003568468, -0.026314082, 0.9988829)
+bones/15/rotation = Quaternion(0.04885726, -0.0093394695, -0.07721085, 0.9957732)
+bones/16/rotation = Quaternion(-0.0030597677, -6.64476e-05, -0.020710057, 0.9997809)
+bones/17/rotation = Quaternion(-1.1362227e-07, 4.1723226e-07, 2.5054908e-06, 1)
+bones/19/rotation = Quaternion(-0.24377063, 0.033598132, -0.055775195, 0.9676447)
+bones/20/rotation = Quaternion(-0.012898932, -0.00028012964, -0.017476527, 0.999764)
+bones/21/rotation = Quaternion(4.4703476e-08, 1.11758695e-07, 1.1944209e-07, 1)
+bones/22/rotation = Quaternion(0.17050242, -0.7138338, 0.3167556, 0.6008628)
+bones/23/rotation = Quaternion(-0.4218928, 0.038917184, -0.031108418, 0.9052759)
+bones/24/rotation = Quaternion(-0.030546356, 0.0004923354, -0.018977158, 0.99935305)
+bones/25/rotation = Quaternion(-2.0493226e-07, -4.8950296e-06, -8.455013e-06, 1)
+bones/27/rotation = Quaternion(-0.035388704, -0.035504628, -0.13035566, 0.9901992)
+bones/28/rotation = Quaternion(-0.09148872, -0.0035135644, 0.045912705, 0.99474096)
+bones/29/rotation = Quaternion(0.5409764, -0.43924618, -0.58576286, -0.41387105)
+bones/30/rotation = Quaternion(-0.21392567, 0.8779563, -0.41036853, 0.12258133)
+bones/31/rotation = Quaternion(0.14217618, 0.6926658, -0.14217597, 0.6926658)
+bones/32/rotation = Quaternion(0.04255506, -0.69795316, 0.03013144, 0.71424264)
+bones/34/rotation = Quaternion(0.23083381, 0.042752992, 0.049797114, 0.97077715)
+bones/35/rotation = Quaternion(0.042909652, -0.0035661168, 0.028888464, 0.9986549)
+bones/36/rotation = Quaternion(2.070297e-06, -3.0621914e-06, -1.4157932e-06, 1)
+bones/37/rotation = Quaternion(-0.19249023, 0.74973226, 0.028183663, 0.6324988)
+bones/38/rotation = Quaternion(0.054936633, 0.0073954067, 0.056528836, 0.996861)
+bones/39/rotation = Quaternion(-0.0030759277, 8.723156e-05, 0.020832228, 0.9997783)
+bones/40/rotation = Quaternion(3.838091e-07, -2.7269143e-06, -4.521017e-06, 1)
+bones/41/rotation = Quaternion(-0.0030947863, 0.76296103, -0.1771781, 0.62168235)
+bones/42/rotation = Quaternion(-0.21144706, -0.031533346, 0.044751927, 0.97585505)
+bones/43/rotation = Quaternion(-0.012824185, 0.0002874358, 0.01738228, 0.99976665)
+bones/44/rotation = Quaternion(6.123293e-08, 1.0132792e-06, 1.5762052e-06, 1)
+bones/45/rotation = Quaternion(0.11535311, 0.73584455, -0.28145838, 0.6049857)
+bones/46/rotation = Quaternion(-0.348436, -0.03719107, 0.023697581, 0.9362946)
+bones/47/rotation = Quaternion(-0.029705685, -0.0004887644, 0.018459156, 0.9993882)
+bones/48/rotation = Quaternion(-2.46869e-08, -2.3320315e-06, -2.9173675e-06, 1)
+bones/50/rotation = Quaternion(-0.09177603, 0.013816586, 0.061679248, 0.9937716)
+bones/51/rotation = Quaternion(-0.007247633, -0.0016682664, 0.052860044, 0.99857426)
+bones/52/rotation = Quaternion(0.139172, 0.6195148, 0.6539602, -0.4113012)
+bones/54/rotation = Quaternion(0.08791925, 0.254858, 0.962769, -0.019839078)
+bones/55/rotation = Quaternion(0.023826424, 0.8755697, -0.48134175, -0.0334711)
+bones/56/rotation = Quaternion(-0.009953821, 0.71408135, -0.69990844, 0.010818634)
+bones/57/rotation = Quaternion(-0.06211619, 0.11174273, 0.99162537, -0.018283362)
+bones/58/rotation = Quaternion(0.026668092, 0.98578733, -0.16318205, 0.029731296)
+bones/59/rotation = Quaternion(0.0014383497, 0.6499884, -0.75994164, -0.0013103988)
+
+[node name="涙ライン2" type="MeshInstance3D" parent="metarig/GeneralSkeleton" index="11" unique_id=606709789]
+transform = Transform3D(-0.98948646, 0.07787427, -0.12186945, 0.0784591, 0.9969173, 0, 0.121493764, -0.009561768, -0.99254614, -0.155, 0.01, 0.28)
+visible = false
+mesh = SubResource("ArrayMesh_h52rw")
+skin = SubResource("Skin_qhldl")
+skeleton = NodePath("..")
+
+[node name="LookAtModifier3D" type="LookAtModifier3D" parent="metarig/GeneralSkeleton" index="23" unique_id=362624224]
+bone_name = "Head"
+bone = 5
+
+[node name="ボーン追従" type="BoneAttachment3D" parent="metarig/GeneralSkeleton" index="24" unique_id=1050674264]
+transform = Transform3D(0.999924, 0.0056153713, 0.010972459, -0.004011666, 0.9899924, -0.14106351, -0.011654777, 0.14100876, 0.9899397, 0.0007412031, 1.3826094, -0.012759887)
+bone_name = "Spine"
+bone_idx = 1
+
+[node name="blockbench_export" parent="metarig/GeneralSkeleton/ボーン追従" index="0" unique_id=1897370691 instance=ExtResource("3_o2elx")]
+transform = Transform3D(-0.80934834, 0.009565478, -0.031045625, 0.011291732, 0.8086581, -0.04521542, 0.030460238, -0.04561183, -0.8081408, -0.006618809, -0.78701776, 0.21990544)
+
+[node name="モデルアニメーション" type="AnimationPlayer" parent="." index="1" unique_id=693588934]
+libraries/ = SubResource("AnimationLibrary_gqebe")
+"libraries/変身後側アニメーション" = ExtResource("17_1qqr4")
+"libraries/戦闘" = SubResource("AnimationLibrary_od17q")
+
+[editable path="metarig/GeneralSkeleton/ボーン追従/blockbench_export"]

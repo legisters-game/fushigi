@@ -9,6 +9,9 @@ extends Area3D
 @export var イベント発生後ミッション:ミッションデータ
 @export var ミッション条件更新フラグ名:String
 @export var ミッション条件更新値:int
+@export var イベント発生オブジェクト:イベント実行用オブジェクト
+
+signal 移動実行
 
 func _on_body_entered(body: Node3D) -> void:
 	if body is プレイヤークラス:
@@ -28,7 +31,9 @@ func _on_body_entered(body: Node3D) -> void:
 			#var 上書きプレイヤー復帰位置:Vector3
 			body.簡易目的地へ移動(位置マーカー.global_position,true)
 			if 0.02<移動時間:
-				await get_tree().create_timer(移動時間).timeout
+				get_tree().create_timer(移動時間).timeout.connect(移動実行シグナル発火)
+				body.簡易移動完了.connect(移動実行シグナル発火)
+				await 移動実行
 			body.レベル制御.都市戻り(脱出先アクセスマーカー)
 			#上書きプレイヤー復帰位置=body.操作ロック前位置
 			#body.レベル制御.都市プレイヤー座標=上書きプレイヤー復帰位置
@@ -38,4 +43,7 @@ func _on_body_entered(body: Node3D) -> void:
 		else:
 			body.レベル制御.都市戻り(脱出先アクセスマーカー)
 		if イベント用オブジェクト and イベント予約有効:
-			body.レベル制御.移動後実行予約(移動後イベント,イベント用オブジェクト,イベント発生後ミッション)
+			body.レベル制御.移動後実行予約(イベント発生オブジェクト)
+
+func 移動実行シグナル発火()->void:
+	移動実行.emit()

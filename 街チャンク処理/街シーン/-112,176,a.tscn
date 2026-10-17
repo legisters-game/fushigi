@@ -8,9 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://uknsp7tmjptt" path="res://街チャンク処理/パーツ/オクルージョンカリング.tscn" id="6_582ut"]
 [ext_resource type="PackedScene" uid="uid://dmgy0ytqbirrn" path="res://街チャンク処理/パーツ/レベルエリアゲート.tscn" id="6_sjyx0"]
 [ext_resource type="ArrayOccluder3D" uid="uid://dxoj4pkdc7kt3" path="res://街チャンク処理/街オクルージョン/-112,176.occ" id="7_582ut"]
+[ext_resource type="Script" uid="uid://bylt55licoope" path="res://拡張リソース/イベント実行ムービー.gd" id="7_sjyx0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f6gnh"]
 size = Vector3(4, 1.6209998, 2.9999998)
+
+[sub_resource type="Resource" id="Resource_f6gnh"]
+script = ExtResource("7_sjyx0")
+"ムービーシーン" = "uid://dba7qpldwerps"
+metadata/_custom_type_script = "uid://bylt55licoope"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iv1b6"]
 size = Vector3(0.24853516, 0.27923584, 0.25494385)
@@ -52,11 +58,10 @@ transform = Transform3D(0.155, 0, 0, 0, 0.365, 0, 0, 0, 1, 0.8985791, 0.60516787
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5585976, -0.7105179, 0.0802145)
 "アクセスレベル" = "res://レベル/マンション/マンション.tscn"
 "移動時間" = 0.8
-"イベント発生条件ミッションフラグ" = "急いでトイレに行く！"
-"イベント用オブジェクト" = ["res://シナリオ/シナリオシーン/トイレすっきり/トイレすっきり.tscn"]
-"移動後イベント" = 1
 "ミッション条件更新フラグ名" = "トイレGO"
 "ミッション条件更新値" = 1
+"イベント発生条件ミッションフラグ" = "急いでトイレに行く！"
+"イベント発生オブジェクト" = SubResource("Resource_f6gnh")
 "イベント発生時の階層" = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="-112,176,a/中心/当たり判定制御/レベルゲート" unique_id=245889610]

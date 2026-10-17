@@ -63,13 +63,27 @@ func 階層選択(階層インデックス:int)->void:
 		get_tree().get_first_node_in_group("UI").show()
 		return
 	
+	効果音再生(true)
 	if カメラ and カメラ.has_method("set_elevator_moving"):
 		カメラ.set_elevator_moving(true)
-	
 	await get_tree().create_timer(0.2+0.75*abs((階層インデックス+1-出口.階層))).timeout
+	効果音再生(false)
+	await get_tree().create_timer(0.2).timeout
 	if カメラ and カメラ.has_method("set_elevator_moving"):
 		カメラ.set_elevator_moving(false)
 	初期化(階層インデックス+1)
 	GUI.hide()
 	get_tree().get_first_node_in_group("UI").show()
 	
+
+func 効果音再生(再生:bool=true)->void:
+	var 音量:float=0
+	if 再生:
+		$AudioStreamPlayer.play()
+	else:
+		var アニメーション:Tween=get_tree().create_tween().bind_node(self)
+		アニメーション.tween_property($AudioStreamPlayer,"volume_db",-80,0.2)
+		await アニメーション.finished
+		$AudioStreamPlayer.stop()
+		$AudioStreamPlayer.volume_db=音量
+		$AudioStreamPlayer2.play()

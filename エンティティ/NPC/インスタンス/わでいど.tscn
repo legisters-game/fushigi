@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c55qafle272gq" path="res://エンティティ/表情管理/わでいど/わでいど.png" id="2_o67te"]
 [ext_resource type="Resource" uid="uid://nbbmunmsweld" path="res://エンティティ/表情管理/わでいど/わでいど.tres" id="3_o67te"]
 [ext_resource type="Script" uid="uid://hoy7ntcb8lpl" path="res://拡張リソース/セリフ分岐オブジェクト.gd" id="3_pja2d"]
-[ext_resource type="Script" uid="uid://c63nudia22pk" path="res://拡張リソース/new_script.gd" id="4_3aagx"]
+[ext_resource type="Script" uid="uid://c63nudia22pk" path="res://拡張リソース/ファイナルセリフオブジェクト.gd" id="4_3aagx"]
 
 [sub_resource type="Resource" id="Resource_o4spe"]
 script = ExtResource("2_i04yl")

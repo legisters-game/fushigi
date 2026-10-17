@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://dawfc5ss5t8l2" path="res://シナリオ/シナリオシーン/トイレすっきり/セリフ/すっきりした.tres" id="3_s7bev"]
 [ext_resource type="Resource" uid="uid://b672fpmjtcnbx" path="res://シナリオ/シナリオシーン/トイレすっきり/セリフ/トイレ音.tres" id="4_cm75h"]
 [ext_resource type="Resource" uid="uid://ba3hyoh0m2alq" path="res://シナリオ/シナリオシーン/トイレすっきり/セリフ/おう、よかったな.tres" id="5_cm75h"]
+[ext_resource type="Resource" uid="uid://ds6ru5ch73jjv" path="res://シナリオ/シナリオシーン/トイレすっきり/イベント/寝るイベント発生.tres" id="8_7yvbj"]
 
 [sub_resource type="Animation" id="Animation_s7bev"]
 length = 0.001
@@ -21,6 +22,7 @@ _data = {
 "セリフ集" = Array[ExtResource("2_rthek")]([ExtResource("3_s7bev"), ExtResource("4_cm75h"), ExtResource("5_cm75h")])
 "削除対象" = [NodePath("DirectionalLight3D"), NodePath("WorldEnvironment"), NodePath("マンション")]
 "プレイヤー再生後ワープ" = true
+"再生後イベント" = ExtResource("8_7yvbj")
 
 [node name="AnimationPlayer" parent="." index="2" unique_id=341811062]
 libraries/ = SubResource("AnimationLibrary_cm75h")

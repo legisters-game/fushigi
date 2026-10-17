@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://dydblkx53e6mm"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_8vbxb"]
+[ext_resource type="AudioStream" uid="uid://b4wh7u4t82qol" path="res://レベル/マンション/セリフ/ボイス/初めましてだな.wav" id="2_q7s0f"]
+
+[resource]
+script = ExtResource("1_8vbxb")
+"セリフ" = "おう、初めましてだな。"
+"ボイス" = ExtResource("2_q7s0f")
+metadata/_custom_type_script = "uid://4uxnotone8su"

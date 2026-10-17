@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7pgx6owqgkpe"]
+
+[resource]
+resource_name = "マテリアル.001"
+cull_mode = 2
+diffuse_mode = 2
+specular_mode = 2
+albedo_color = Color(0.82954717, 0.82954717, 0, 1)
+metallic = 0.2
+emission = Color(1, 1, 0, 1)
+emission_energy_multiplier = 0.1

@@ -1,0 +1,117 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://hqyxoewx8rd1"
+path="res://.godot/imported/仮面ライダー2026.glb-f116f8479606b4bc524c7dcf5075f62d.scn"
+
+[deps]
+
+source_file="res://エンティティ/プレイヤー/model/変身後リアル/仮面ライダー2026.glb"
+dest_files=["res://.godot/imported/仮面ライダー2026.glb-f116f8479606b4bc524c7dcf5075f62d.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"ブロック": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/ブロック.tres",
+"use_external/path": "uid://c7yhca0q7ahql"
+},
+"マテリアル": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/マテリアル.tres",
+"use_external/path": "uid://ditngesu8x0x6"
+},
+"マテリアル.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/マテリアル.001.tres",
+"use_external/path": "uid://b7pgx6owqgkpe"
+},
+"マテリアル.002": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/マテリアル.002.tres",
+"use_external/path": "uid://c1g0sj1wtqliq"
+},
+"マテリアル.003": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/マテリアル.003.tres",
+"use_external/path": "uid://dc838lj4qgyij"
+},
+"マテリアル.004": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/マテリアル.004.tres",
+"use_external/path": "uid://dvvso5jtjbmtr"
+},
+"マテリアル.005": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/マテリアル.005.tres",
+"use_external/path": "uid://dskctq7mjeg0k"
+},
+"生地": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/生地.tres",
+"use_external/path": "uid://c8v43by8qmyx8"
+},
+"目": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/目.tres",
+"use_external/path": "uid://dbkjcjhca7edo"
+},
+"目左": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/目左.tres",
+"use_external/path": "uid://bixytqhhp3uye"
+},
+"胸鉱石": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/胸鉱石.tres",
+"use_external/path": "uid://bxy6qvnf0hoha"
+},
+"頭": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://エンティティ/プレイヤー/model/変身後リアル/マテリアル/頭.tres",
+"use_external/path": "uid://d2vaqthnl7qq1"
+}
+},
+"nodes": {
+"PATH:metarig/Skeleton3D": {
+"rest_pose/external_animation_library": null,
+"rest_pose/selected_animation": "mixamo_com",
+"rest_pose/selected_timestamp": 0.07,
+"retarget/bone_map": Resource("uid://dokkvgwn3xr7p", "res://エンティティ/プレイヤー/リアル変身リボーン.tres"),
+"retarget/rest_fixer/apply_node_transforms": false
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

@@ -3,7 +3,7 @@ class_name 画面フェードクラス
 
 var 消え中:bool
 signal 画面消えた
-
+signal 画面現る
 
 
 func フェードイン待機(オープン:レベル制御クラス)->void:
@@ -24,3 +24,6 @@ func _on_animation_player_animation_finished(アニメーション名: StringNam
 	if アニメーション名=="フェードアウト":
 		画面消えた.emit()
 		消え中=false
+	elif アニメーション名=="フェードイン":
+		消え中=false
+		画面現る.emit()

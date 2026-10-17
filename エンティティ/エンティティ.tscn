@@ -70,6 +70,9 @@ blend_point_8/node = SubResource("AnimationNodeAnimation_kdmvu")
 blend_point_8/pos = Vector2(-2, 0)
 blend_point_8/name = &"8"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nk65a"]
+animation = &"寝る"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ye2gd"]
 animation = &"座る"
 
@@ -83,13 +86,21 @@ xfade_time = 0.3
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_h83x8"]
 xfade_time = 0.2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mndf2"]
+xfade_time = 0.3
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2rtk2"]
+xfade_time = 0.2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_bsp01"]
 "states/動き/node" = SubResource("AnimationNodeBlendSpace2D_o2cbv")
 "states/動き/position" = Vector2(546, 100)
+"states/寝る/node" = SubResource("AnimationNodeAnimation_nk65a")
+"states/寝る/position" = Vector2(652, 204)
 "states/座る/node" = SubResource("AnimationNodeAnimation_ye2gd")
 "states/座る/position" = Vector2(364, 240)
-transitions = ["Start", "動き", SubResource("AnimationNodeStateMachineTransition_ye2gd"), "動き", "座る", SubResource("AnimationNodeStateMachineTransition_nk65a"), "座る", "動き", SubResource("AnimationNodeStateMachineTransition_h83x8")]
-graph_offset = Vector2(17, 121)
+transitions = ["Start", "動き", SubResource("AnimationNodeStateMachineTransition_ye2gd"), "動き", "座る", SubResource("AnimationNodeStateMachineTransition_nk65a"), "座る", "動き", SubResource("AnimationNodeStateMachineTransition_h83x8"), "動き", "寝る", SubResource("AnimationNodeStateMachineTransition_mndf2"), "寝る", "動き", SubResource("AnimationNodeStateMachineTransition_2rtk2")]
+graph_offset = Vector2(18, 32)
 
 [sub_resource type="Animation" id="Animation_nk65a"]
 
@@ -104,6 +115,8 @@ graph_offset = Vector2(17, 121)
 [sub_resource type="Animation" id="Animation_1dlfw"]
 
 [sub_resource type="Animation" id="Animation_yk3c5"]
+
+[sub_resource type="Animation" id="Animation_ybvqq"]
 
 [sub_resource type="Animation" id="Animation_ua3nl"]
 
@@ -121,6 +134,7 @@ _data = {
 &"アイドル": SubResource("Animation_4i0bt"),
 &"前": SubResource("Animation_1dlfw"),
 &"右": SubResource("Animation_yk3c5"),
+&"寝る": SubResource("Animation_ybvqq"),
 &"左": SubResource("Animation_ua3nl"),
 &"座る": SubResource("Animation_3hx1a"),
 &"後": SubResource("Animation_pvq0m")

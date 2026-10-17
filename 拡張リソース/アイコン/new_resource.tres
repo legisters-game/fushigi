@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="イベント実行ムービー" format=3 uid="uid://c74kbp60mhm4t"]
+
+[ext_resource type="Script" uid="uid://bylt55licoope" path="res://拡張リソース/イベント実行ムービー.gd" id="1_xwyqs"]
+
+[resource]
+script = ExtResource("1_xwyqs")
+metadata/_custom_type_script = "uid://ca5hdh5igyvy"

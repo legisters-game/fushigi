@@ -1,0 +1,485 @@
+[gd_scene format=3 uid="uid://dpvp3xao3wbqm"]
+
+[ext_resource type="PackedScene" uid="uid://b6ilfpjvmgfjh" path="res://シナリオ/変身.tscn" id="1_q8hri"]
+[ext_resource type="Texture2D" uid="uid://diy1qbve8cgei" path="res://エンティティ/表情管理/レクレイス/レクレイス.png" id="2_6370l"]
+[ext_resource type="PackedScene" uid="uid://deciibx8u6hla" path="res://エンティティ/プレイヤー/model/変身後リアル/モデル変身後リアル.tscn" id="3_2jtr6"]
+[ext_resource type="Animation" uid="uid://b46a5jm1k5tbq" path="res://シナリオ/変身用シーン/アニメーション/変身モーション仮.tres" id="5_bw6qm"]
+
+[sub_resource type="Animation" id="Animation_q8hri"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("オブジェクト中心/演出カメラ:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.7211671, 1.37836, 2.125452)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("オブジェクト中心/モデル変身後リアル:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("オブジェクト中心/変身者:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_6370l"]
+resource_name = "開始"
+length = 10.0
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:セリフ管理")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(5, 10),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"演出終了"
+}, {
+"args": [true],
+"method": &"演出終了"
+}]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("オブジェクト中心/変身者/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("アイドル"),
+"times": PackedFloat32Array(0.05019301)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("オブジェクト中心/演出カメラ:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.7211671, 1.37836, 2.125452), Vector3(-0.421, 1.118, 1.225)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GPUParticles3D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.6116807),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"restart"
+}]
+}
+tracks/4/type = "animation"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("オブジェクト中心/モデル変身後リアル/モデルアニメーション")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": PackedStringArray("変身/変身モーション仮"),
+"times": PackedFloat32Array(0.13685694)
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("オブジェクト中心/モデル変身後リアル:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.9, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("オブジェクト中心/変身者:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2.9, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhkp5"]
+_data = {
+&"RESET": SubResource("Animation_q8hri"),
+&"開始": SubResource("Animation_6370l")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a38yt"]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_amfxh"]
+resource_name = "R_eye_color"
+cull_mode = 2
+albedo_texture = ExtResource("2_6370l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bw6qm"]
+resource_name = "L_eye_color"
+cull_mode = 2
+albedo_texture = ExtResource("2_6370l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30b0i"]
+resource_name = "material_0"
+transparency = 4
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 0
+texture_repeat = false
+grow_amount = 6.684
+proximity_fade_distance = 1925.62
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhn51"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 2
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0yo3q"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 2
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pj5uc"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 2
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbaxh"]
+resource_name = "Skin_Head_only"
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+roughness = 0.9
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1gh0n"]
+resource_name = "Mouse"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j32yf"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 2
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rtt0w"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 2
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u3nm3"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 2
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7y53u"]
+resource_name = "Pupils(左目)"
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("2_6370l")
+metallic = 1.0
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cp2k8"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 2
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oken5"]
+resource_name = "Skin.004"
+transparency = 4
+cull_mode = 2
+diffuse_mode = 2
+albedo_texture = ExtResource("2_6370l")
+roughness = 0.9
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncxv0"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 2
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7h2c"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 2
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3asmt"]
+resource_name = "Pupils(右目)"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("2_6370l")
+metallic = 1.0
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_67m3d"]
+resource_name = "Skin"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_6370l")
+metallic_specular = 0.0
+texture_filter = 2
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2pqb4"]
+resource_name = "Skin.003"
+transparency = 4
+albedo_texture = ExtResource("2_6370l")
+roughness = 0.9
+texture_filter = 2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vq6nh"]
+_data = {
+&"変身モーション仮": ExtResource("5_bw6qm")
+}
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6370l"]
+particle_flag_align_y = true
+emission_shape_offset = Vector3(0, -1.69, 0)
+emission_shape = 1
+emission_sphere_radius = 1.0
+angle_min = -19.99999
+angle_max = 390.00003
+inherit_velocity_ratio = 0.439
+velocity_pivot = Vector3(0.365, 0, 0.205)
+flatness = 0.364
+orbit_velocity_min = -0.05599991
+orbit_velocity_max = 0.0830001
+radial_velocity_min = -0.10002235
+radial_velocity_max = 0.09997764
+gravity = Vector3(0, 9.995, 0)
+linear_accel_min = -31.940002
+linear_accel_max = -8.330002
+radial_accel_min = -70.44
+radial_accel_max = 7.339998
+tangential_accel_min = -38.890003
+tangential_accel_max = 1.3799977
+attractor_interaction_enabled = false
+use_scale_3d = true
+scale_3d_min = Vector3(0.955, 0.955, 0.955)
+scale_3d_max = Vector3(2.54, 2.54, 2.54)
+scale_over_velocity_max = 125.0
+hue_variation_min = -0.36
+hue_variation_max = -2.2351742e-08
+anim_speed_min = 0.56
+anim_speed_max = 13.099999
+
+[node name="変身解除" unique_id=854987473 instance=ExtResource("1_q8hri")]
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=341811062]
+libraries/ = SubResource("AnimationLibrary_qhkp5")
+
+[node name="演出カメラ" parent="オブジェクト中心" parent_id_path=PackedInt32Array(610700827) index="0" unique_id=1454396540]
+transform = Transform3D(0.9457088, -0.017621903, -0.32453698, 0, 0.9985291, -0.05421873, 0.32501504, 0.051275134, 0.9443178, 1.7211671, 1.37836, 2.125452)
+
+[node name="変身者" parent="オブジェクト中心" parent_id_path=PackedInt32Array(610700827) index="3" unique_id=1106972114]
+visible = false
+"プレイヤーの見た目をジャック" = false
+
+[node name="GeneralSkeleton" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0" parent_id_path=PackedInt32Array(1106972114, 231553116) index="0" unique_id=1885119474]
+bones/11/rotation = Quaternion(-0.016712265, -0.03392071, -0.07466889, 0.99649125)
+bones/12/rotation = Quaternion(-0.008470342, -0.0062373388, 0.019603685, 0.9997525)
+bones/13/rotation = Quaternion(-0.076177835, -0.010125517, 0.008231212, 0.99700886)
+bones/41/rotation = Quaternion(-0.008281497, -0.0069584874, 0.019478893, 0.99975175)
+bones/42/rotation = Quaternion(0.53063047, -0.4587179, -0.5546126, -0.44767636)
+bones/43/rotation = Quaternion(0.04467307, 0.8371224, -0.53835696, 0.08603578)
+bones/44/rotation = Quaternion(0.16662566, 0.6871944, -0.1666253, 0.6871943)
+bones/45/rotation = Quaternion(0.010968623, -0.7997209, -0.01148668, 0.60016197)
+bones/46/rotation = Quaternion(0.519082, 0.46896237, 0.55964226, -0.44432953)
+bones/47/rotation = Quaternion(-0.097453006, 0.76518035, -0.63628733, -0.011851843)
+bones/48/rotation = Quaternion(0.12831953, -0.69536626, 0.12831935, 0.69536626)
+bones/49/rotation = Quaternion(0.07154252, 0.8023371, 0.017771726, 0.5923014)
+bones/51/rotation = Quaternion(-0.071123384, 0.03997227, 0.99374294, -0.07628066)
+bones/52/rotation = Quaternion(-0.00018080701, 0.98847353, -0.14591539, -0.040359255)
+bones/53/rotation = Quaternion(0.05519152, 0.13363044, 0.9853703, -0.09023538)
+bones/54/rotation = Quaternion(-0.01086745, 0.9542724, -0.28897262, 0.07576966)
+
+[node name="R_Pupils_001" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="0" unique_id=793088975]
+transform = Transform3D(-0.12547547, -0.07821059, -0.98900896, -0.9826578, 0.14698327, 0.11304629, 0.13652636, 0.98604196, -0.09529706, 0.04616057, 0.9933385, 0.21498044)
+
+[node name="L_Pupils_001" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="1" unique_id=718024765]
+transform = Transform3D(-0.12547547, -0.07821059, -0.98900896, -0.9826578, 0.14698327, 0.11304629, 0.13652636, 0.98604196, -0.09529706, 0.2271492, 0.972651, 0.23241979)
+
+[node name="head" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="2" unique_id=526805165]
+transform = Transform3D(0.98900896, 0.12547547, -0.07821059, -0.11304629, 0.9826578, 0.14698327, 0.09529706, -0.13652636, 0.98604196, 0.109093755, 0.7227767, 0.017413698)
+
+[node name="_設定" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="0" unique_id=2100519528]
+surface_material_override/0 = SubResource("StandardMaterial3D_a38yt")
+
+[node name="Eye_001" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="1" unique_id=536784393]
+surface_material_override/0 = SubResource("StandardMaterial3D_amfxh")
+surface_material_override/1 = SubResource("StandardMaterial3D_bw6qm")
+
+[node name="Head" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton/head" index="2" unique_id=1097678551]
+surface_material_override/0 = SubResource("StandardMaterial3D_30b0i")
+
+[node name="Body" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="3" unique_id=1191555467]
+surface_material_override/0 = SubResource("StandardMaterial3D_xhn51")
+
+[node name="Body_Layer" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="4" unique_id=288742404]
+surface_material_override/0 = SubResource("StandardMaterial3D_0yo3q")
+
+[node name="Face" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="5" unique_id=1155965203]
+surface_material_override/0 = SubResource("StandardMaterial3D_pj5uc")
+surface_material_override/1 = SubResource("StandardMaterial3D_tbaxh")
+surface_material_override/2 = SubResource("StandardMaterial3D_1gh0n")
+
+[node name="Head_Layer" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="6" unique_id=1719889094]
+surface_material_override/0 = SubResource("StandardMaterial3D_j32yf")
+
+[node name="L_Arm" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="7" unique_id=228398112]
+surface_material_override/0 = SubResource("StandardMaterial3D_rtt0w")
+
+[node name="L_Arm_Layer" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="8" unique_id=235349872]
+surface_material_override/0 = SubResource("StandardMaterial3D_u3nm3")
+
+[node name="L_Iris" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="9" unique_id=1755597838]
+surface_material_override/0 = SubResource("StandardMaterial3D_7y53u")
+
+[node name="L_Leg" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="10" unique_id=1969792067]
+surface_material_override/0 = SubResource("StandardMaterial3D_cp2k8")
+
+[node name="L_Leg_Layer" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="11" unique_id=1062506192]
+surface_material_override/0 = SubResource("StandardMaterial3D_oken5")
+
+[node name="R_Arm" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="12" unique_id=2115760600]
+surface_material_override/0 = SubResource("StandardMaterial3D_ncxv0")
+
+[node name="R_Arm_Layer" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="13" unique_id=64783215]
+surface_material_override/0 = SubResource("StandardMaterial3D_q7h2c")
+
+[node name="R_Iris" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="14" unique_id=958330044]
+surface_material_override/0 = SubResource("StandardMaterial3D_3asmt")
+
+[node name="R_Leg" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="15" unique_id=1542895517]
+surface_material_override/0 = SubResource("StandardMaterial3D_67m3d")
+
+[node name="R_Leg_Layer" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="16" unique_id=1783786112]
+surface_material_override/0 = SubResource("StandardMaterial3D_2pqb4")
+
+[node name="左" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="17" unique_id=1917175906]
+external_force = Vector3(-0.0023103303, -0.049238853, 0)
+
+[node name="右" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="18" unique_id=125639639]
+external_force = Vector3(0.0023103303, -0.049238853, 0)
+
+[node name="体" parent="オブジェクト中心/変身者/R-G MC Rig MoCap v1_0/GeneralSkeleton" index="19" unique_id=912893983]
+external_force = Vector3(0.008552982, 0.000924315, 0.019784555)
+
+[node name="モデル変身後リアル" parent="オブジェクト中心" parent_id_path=PackedInt32Array(610700827) index="4" unique_id=1568459967 instance=ExtResource("3_2jtr6")]
+
+[node name="GeneralSkeleton" parent="オブジェクト中心/モデル変身後リアル/metarig" parent_id_path=PackedInt32Array(1568459967, 1583837423) index="0" unique_id=811818373]
+bones/0/rotation = Quaternion(-0.025767764, -0.0974469, 0.003352992, 0.99490154)
+bones/1/rotation = Quaternion(0.046037883, -0.03185823, 0.0077311215, 0.99840164)
+bones/2/rotation = Quaternion(0.042966604, -0.028781466, -0.002896036, 0.99865776)
+bones/3/rotation = Quaternion(0.04300291, -0.028754706, -0.0026096925, 0.9986577)
+bones/4/rotation = Quaternion(-0.04278916, 0.06948653, -0.010217743, 0.9966124)
+bones/5/rotation = Quaternion(-0.029596964, 0.13886333, -0.0049265875, 0.98985696)
+bones/6/rotation = Quaternion(0.54924345, 0.45570636, 0.5176439, -0.47191978)
+bones/7/rotation = Quaternion(0.26275778, 0.8600036, -0.32568675, -0.2920282)
+bones/8/rotation = Quaternion(0.2849731, -0.64714026, 0.28497282, 0.64714026)
+bones/9/rotation = Quaternion(-0.0718904, 0.40202922, -0.21216574, 0.8878007)
+bones/29/rotation = Quaternion(0.4199514, -0.5344308, -0.572395, -0.4586814)
+bones/30/rotation = Quaternion(0.031952217, 0.84341437, -0.4190485, 0.3347084)
+bones/31/rotation = Quaternion(0.5195488, 0.4796553, -0.51954865, 0.4796553)
+bones/32/rotation = Quaternion(-0.2613194, -0.73085093, -0.007866562, 0.6304817)
+bones/52/rotation = Quaternion(0.13917209, 0.61951464, 0.6539603, -0.41130143)
+bones/54/rotation = Quaternion(0.06483356, 0.1418185, 0.98377824, -0.088682555)
+bones/55/rotation = Quaternion(-0.0121705495, 0.98670983, -0.1608426, 0.01963067)
+bones/56/rotation = Quaternion(-0.05163198, 0.7216777, -0.6874234, 0.062964514)
+bones/57/rotation = Quaternion(-0.08778733, 0.09483361, 0.9912801, -0.02576553)
+bones/58/rotation = Quaternion(0.044020418, 0.97206235, -0.22455311, -0.052278757)
+bones/59/rotation = Quaternion(-0.0007476458, 0.6231056, -0.78213656, -0.0011949841)
+
+[node name="ボーン追従" parent="オブジェクト中心/モデル変身後リアル/metarig/GeneralSkeleton" index="25" unique_id=1050674264]
+transform = Transform3D(0.9663725, -0.037409462, -0.2544105, 0.027412064, 0.9987105, -0.042729992, 0.25568098, 0.03431917, 0.96615183, -0.0089323595, 1.3861947, -0.03171399)
+
+[node name="モデルアニメーション" parent="オブジェクト中心/モデル変身後リアル" index="1" unique_id=693588934]
+"libraries/変身" = SubResource("AnimationLibrary_vq6nh")
+
+[node name="GPUParticles3D" parent="." index="5" unique_id=1362422536]
+interp_to_end = 0.05
+seed = 2587976305
+process_material = SubResource("ParticleProcessMaterial_6370l")
+
+[editable path="オブジェクト中心/変身者"]
+[editable path="オブジェクト中心/モデル変身後リアル"]
+[editable path="オブジェクト中心/モデル変身後リアル/metarig/GeneralSkeleton/ボーン追従/blockbench_export"]

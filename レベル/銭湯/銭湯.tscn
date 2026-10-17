@@ -6,24 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://dunmrlgfjvq0t" path="res://レベル/ツール/ライト.tscn" id="5_6xx3s"]
 [ext_resource type="PackedScene" uid="uid://dugv7335puobc" path="res://レベル/ツール/街レベルエリアゲート.tscn" id="6_gw68c"]
 [ext_resource type="PackedScene" uid="uid://bn0fvfm378fl0" path="res://街チャンク処理/パーツ/レベルゲート.tscn" id="7_s5tcf"]
+[ext_resource type="Resource" uid="uid://cn2va8qhgt8rg" path="res://レベル/銭湯/ミッション用セリフ(依存)/や、やばい.tres" id="8_1wit2"]
 [ext_resource type="Shape3D" uid="uid://dmj4372myrwyb" path="res://街チャンク処理/街コリジョン/80,-48.tres" id="8_bcwq7"]
 [ext_resource type="PackedScene" uid="uid://dmgy0ytqbirrn" path="res://街チャンク処理/パーツ/レベルエリアゲート.tscn" id="8_rs4s5"]
+[ext_resource type="Resource" uid="uid://cqhm70mrhqya7" path="res://レベル/銭湯/ミッション用セリフ(依存)/も、漏れる.tres" id="9_1suvq"]
 [ext_resource type="Resource" uid="uid://ceiw3g8fwpshm" path="res://レベル/銭湯/発生ミッション(依存)/急いでトイレ.tres" id="9_bcwq7"]
 [ext_resource type="PackedScene" uid="uid://wedomua7c4xx" path="res://エンティティ/NPC/インスタンス/キール.tscn" id="9_nrffm"]
 [ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="10_ehavt"]
 [ext_resource type="Script" uid="uid://ol7t1656sr3p" path="res://エンティティ/NPC/条件中のみ表示NPC.gd" id="10_nrffm"]
+[ext_resource type="Resource" uid="uid://ckxfh4rymhirt" path="res://レベル/銭湯/発生ミッション(依存)/トイレイベント発生.tres" id="11_1suvq"]
 [ext_resource type="Script" uid="uid://cuahbgb0310ua" path="res://レベル/銭湯/キール温泉イベント開始トリガー.gd" id="12_l52l0"]
-[ext_resource type="AudioStream" uid="uid://cmsoc8o25scs0" path="res://レベル/銭湯/ミッション用セリフ(依存)/おう、はいろうや.wav" id="15_lv620"]
-
-[sub_resource type="Resource" id="Resource_bcwq7"]
-script = ExtResource("10_ehavt")
-"セリフ" = "や、やばい"
-metadata/_custom_type_script = "uid://4uxnotone8su"
-
-[sub_resource type="Resource" id="Resource_lv620"]
-script = ExtResource("10_ehavt")
-"セリフ" = "も、漏れる…"
-metadata/_custom_type_script = "uid://4uxnotone8su"
+[ext_resource type="Resource" uid="uid://ce8d086hdj1pf" path="res://レベル/銭湯/ミッション用セリフ(依存)/おう、入ろうや.tres" id="16_1wit2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b5jwi"]
 size = Vector3(0.025, 0.155, 0.14978516)
@@ -39,12 +32,6 @@ size = Vector3(0.17590332, 0.12992859, 0.22937012)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s5tcf"]
 size = Vector3(1.4667053, 0.45166016, 1.5211182)
-
-[sub_resource type="Resource" id="Resource_ehavt"]
-script = ExtResource("10_ehavt")
-"セリフ" = "おう、入ろうや"
-"ボイス" = ExtResource("15_lv620")
-metadata/_custom_type_script = "uid://4uxnotone8su"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8445k"]
 size = Vector3(0.25097656, 0.029052734, 1)
@@ -245,10 +232,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24308705, 0, -0.057146505)
 "移動時間" = 0.8
 "脱出先アクセスマーカー" = NodePath("出口")
 "イベント発生条件ミッションフラグ" = "温泉から出る"
-"イベント用オブジェクト" = [SubResource("Resource_bcwq7"), SubResource("Resource_lv620")]
+"イベント用オブジェクト" = [ExtResource("8_1wit2"), ExtResource("9_1suvq")]
 "イベント発生後ミッション" = ExtResource("9_bcwq7")
 "ミッション条件更新フラグ名" = "温泉から出る"
 "ミッション条件更新値" = 1
+"イベント発生オブジェクト" = ExtResource("11_1suvq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/ロビー/街レベルエリアゲート" unique_id=970667776]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030404806, 0, -0.017392568)
@@ -259,13 +247,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1267941, 0, 0.055654228)
 
 [node name="街レベルエリアゲート裏口" parent="80,-48,a/80,-48,a/中心/ロビー" unique_id=1417585865 node_paths=PackedStringArray("脱出先アクセスマーカー") instance=ExtResource("6_gw68c")]
 transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 1, -4.3711385e-08, 4.371139e-08, -4.371139e-08, 4.371139e-08, 1, 0.5763736, -1.6590805, -0.057146426)
-"移動時間" = 10.0
+"移動時間" = 2.0
 "脱出先アクセスマーカー" = NodePath("出口裏")
 "イベント発生条件ミッションフラグ" = "温泉から出る"
-"イベント用オブジェクト" = [SubResource("Resource_bcwq7"), SubResource("Resource_lv620")]
+"イベント用オブジェクト" = [ExtResource("8_1wit2"), ExtResource("9_1suvq")]
 "イベント発生後ミッション" = ExtResource("9_bcwq7")
 "ミッション条件更新フラグ名" = "温泉から出る"
 "ミッション条件更新値" = 1
+"イベント発生オブジェクト" = ExtResource("11_1suvq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="80,-48,a/80,-48,a/中心/ロビー/街レベルエリアゲート裏口" unique_id=613007533]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030404806, 0, -0.017392568)
@@ -398,7 +387,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011956215, -0.15266323, 0.
 transform = Transform3D(-2.7319618e-09, 0, 0.0625, -0.0625, -2.7319615e-09, -2.7319618e-09, 2.7319618e-09, -0.0625, -1.02626763e-16, 0.4252603, 0.4254713, 0.014461037)
 script = ExtResource("10_nrffm")
 "表示中ミッションフラグ" = "温泉に行こう！"
-"デフォルトセリフ" = Array[ExtResource("10_ehavt")]([SubResource("Resource_ehavt")])
+"デフォルトセリフ" = Array[ExtResource("10_ehavt")]([ExtResource("16_1wit2")])
 
 [node name="女脱衣室" type="Node3D" parent="80,-48,a/80,-48,a/中心" unique_id=1269472511]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5648377, -0.9126787, 4.004687e-08)

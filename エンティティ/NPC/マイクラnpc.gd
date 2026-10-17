@@ -104,11 +104,11 @@ func メッセージ送信(向くターゲット:Node3D=null)->void:
 		var NPC管理: スケジュール管理クラス = get_parent()
 		move_direction = Vector3.ZERO
 		var メッセージリスト:Array[セリフオブジェクト]= NPC管理.メッセージ取得(キャラ)
-		NPC管理.メッセージボックス.相手NPC=self
+		NPC管理.レベル制御.GUI.メッセージボックス.相手NPC=self
 		if 到着 and メッセージリスト:
-			NPC管理.メッセージボックス.表示(NPC管理.NPC.find_key(キャラ),メッセージリスト)
+			NPC管理.レベル制御.GUI.メッセージボックス.表示(NPC管理.NPC.find_key(キャラ),メッセージリスト)
 		else:
-			NPC管理.メッセージボックス.表示(NPC管理.NPC.find_key(キャラ),デフォルトセリフ)
+			NPC管理.レベル制御.GUI.メッセージボックス.表示(NPC管理.NPC.find_key(キャラ),デフォルトセリフ)
 		if 向くターゲット and not 座っている:
 			var 距離差分:Vector3=向くターゲット.global_position - global_position
 			回転指定(atan2( 距離差分.x, 距離差分.z))
@@ -140,6 +140,9 @@ func ターゲッター返し()->Node3D:
 		return モデル.顔
 	else:
 		return self
+
+func 名前返し()->String:
+	return str((スケジュール管理クラス.NPC.find_key(キャラ)))
 
 ##到着位置を基準に移動する
 func _process(delta: float) -> void:

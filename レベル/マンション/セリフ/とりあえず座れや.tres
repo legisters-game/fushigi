@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="セリフオブジェクト" format=3 uid="uid://y8jjdw3xplny"]
+
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="1_lr5cv"]
+[ext_resource type="AudioStream" uid="uid://cvj7qx40qcm4c" path="res://レベル/マンション/セリフ/ボイス/とりあえず、座れや.wav" id="2_1prsr"]
+
+[resource]
+script = ExtResource("1_lr5cv")
+"セリフ" = "とりあえず、座れや"
+"ボイス" = ExtResource("2_1prsr")
+metadata/_custom_type_script = "uid://4uxnotone8su"

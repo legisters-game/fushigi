@@ -2,7 +2,22 @@
 
 [ext_resource type="Script" uid="uid://d4j8xlv2dxato" path="res://拡張リソース/NPCスケジューラ.gd" id="1_meg7n"]
 [ext_resource type="Script" uid="uid://2jb1vfql7n4p" path="res://拡張リソース/セルスケジュール.gd" id="2_wfl45"]
+[ext_resource type="Script" uid="uid://4uxnotone8su" path="res://拡張リソース/セリフオブジェクト.gd" id="3_wfl45"]
+
+[sub_resource type="Resource" id="Resource_vmvb8"]
+script = ExtResource("2_wfl45")
+"終了時間" = 0.1
+"目的置" = Vector3(-20.06, 0, 0)
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
+
+[sub_resource type="Resource" id="Resource_wfl45"]
+script = ExtResource("2_wfl45")
+"開始時間" = 0.5
+"終了時間" = 0.735
+"目的置" = Vector3(38.935, 0.255, 0)
+metadata/_custom_type_script = "uid://2jb1vfql7n4p"
 
 [resource]
 script = ExtResource("1_meg7n")
+"スケジュールリスト" = Array[ExtResource("2_wfl45")]([SubResource("Resource_vmvb8"), SubResource("Resource_wfl45")])
 metadata/_custom_type_script = "uid://d4j8xlv2dxato"

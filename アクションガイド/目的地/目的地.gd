@@ -12,6 +12,7 @@ func _ready() -> void:
 	if not Engine.is_editor_hint(): 
 		hide()
 		レベル制御=$"../../../"
+	無効=false
 
 func _physics_process(delta: float) -> void:
 	if !Engine.is_editor_hint() and レベル制御 and not(レベル制御.ディメンション返し()==""or レベル制御.ディメンション返し()=="オープンワールド"):
@@ -20,13 +21,13 @@ func _physics_process(delta: float) -> void:
 	モデル.rotate_y(delta)
 	if 無効:return
 	if ターン:
-		モデル.position.y=lerpf(モデル.position.y,1.2,delta*1.2)
-		if モデル.position.y>=1:
+		モデル.position.y=lerpf(モデル.position.y,0.11,delta*1.2)
+		if モデル.position.y>=0.1:
 			ターン=false
 			切り替え()
 	else:
-		モデル.position.y=lerpf(モデル.position.y,-1.2,delta*1.2)
-		if モデル.position.y<=-1:
+		モデル.position.y=lerpf(モデル.position.y,-0.14,delta*1.2)
+		if モデル.position.y<=-0.1:
 			ターン=true
 			切り替え()
 
