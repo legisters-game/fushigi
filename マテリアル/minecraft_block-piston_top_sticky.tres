@@ -4,5 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-piston_top_sticky"
-cull_mode = 2
 albedo_texture = ExtResource("1_jk6gs")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

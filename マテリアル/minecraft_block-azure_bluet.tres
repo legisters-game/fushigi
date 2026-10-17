@@ -4,9 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-azure_bluet"
-transparency = 3
-alpha_hash_scale = 0.0
-alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("1_k1xsd")
+metallic = 1.0
+roughness = 0.5
 texture_filter = 2

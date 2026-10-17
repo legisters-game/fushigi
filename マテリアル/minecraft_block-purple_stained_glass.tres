@@ -6,5 +6,7 @@
 resource_name = "minecraft_block-purple_stained_glass"
 render_priority = 2
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_pw15x")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

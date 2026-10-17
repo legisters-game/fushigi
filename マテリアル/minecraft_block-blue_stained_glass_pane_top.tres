@@ -7,4 +7,6 @@ resource_name = "minecraft_block-blue_stained_glass_pane_top"
 render_priority = 1
 transparency = 4
 albedo_texture = ExtResource("1_ehtrf")
+metallic = 1.0
+roughness = 0.5
 texture_filter = 2

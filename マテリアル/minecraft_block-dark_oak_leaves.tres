@@ -4,6 +4,11 @@
 
 [resource]
 resource_name = "minecraft_block-dark_oak_leaves"
-transparency = 4
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("1_n1via")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

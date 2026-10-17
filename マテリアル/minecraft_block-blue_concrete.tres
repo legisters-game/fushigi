@@ -6,4 +6,5 @@
 resource_name = "minecraft_block-blue_concrete"
 albedo_texture = ExtResource("1_hvon3")
 metallic = 1.0
+roughness = 0.5
 texture_filter = 2

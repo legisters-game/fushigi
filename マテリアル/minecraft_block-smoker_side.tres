@@ -4,5 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-smoker_side"
-cull_mode = 2
 albedo_texture = ExtResource("1_m3yxv")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

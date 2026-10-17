@@ -10,6 +10,7 @@ albedo_texture = ExtResource("1_lt0qi")
 metallic = 1.0
 metallic_texture = ExtResource("2_2dfds")
 metallic_texture_channel = 1
+roughness = 0.5
 bent_normal_enabled = true
 bent_normal_texture = ExtResource("3_cmk5o")
 ao_enabled = true

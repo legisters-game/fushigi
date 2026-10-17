@@ -4,6 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-fire_coral_fan"
-transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_n1uk7")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

@@ -4,6 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-cobweb"
-transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_vyr0d")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

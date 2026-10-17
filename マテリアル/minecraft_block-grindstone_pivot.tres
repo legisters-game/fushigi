@@ -4,6 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-grindstone_pivot"
-transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_tdqt2")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

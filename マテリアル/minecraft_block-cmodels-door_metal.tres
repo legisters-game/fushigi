@@ -6,6 +6,8 @@
 [resource]
 resource_name = "minecraft_block-cmodels-door_metal"
 albedo_texture = ExtResource("1_uqvkf")
+metallic = 1.0
+roughness = 0.5
 bent_normal_enabled = true
 bent_normal_texture = ExtResource("2_hb258")
 heightmap_enabled = true

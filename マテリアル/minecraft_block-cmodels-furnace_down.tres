@@ -6,6 +6,8 @@
 [resource]
 resource_name = "minecraft_block-cmodels-furnace_down"
 albedo_texture = ExtResource("1_m0ayg")
+metallic = 1.0
+roughness = 0.5
 bent_normal_enabled = true
 bent_normal_texture = ExtResource("2_5uq41")
 heightmap_enabled = true
@@ -13,3 +15,4 @@ heightmap_deep_parallax = true
 heightmap_min_layers = 1
 heightmap_max_layers = 64
 heightmap_texture = ExtResource("2_5uq41")
+texture_filter = 2

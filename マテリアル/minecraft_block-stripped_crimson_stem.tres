@@ -4,5 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-stripped_crimson_stem"
-cull_mode = 2
 albedo_texture = ExtResource("1_41u5m")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

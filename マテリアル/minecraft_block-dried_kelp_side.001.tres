@@ -4,5 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-dried_kelp_side.001"
-cull_mode = 2
 albedo_texture = ExtResource("1_c1eu2")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

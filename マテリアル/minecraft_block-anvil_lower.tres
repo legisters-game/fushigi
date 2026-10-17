@@ -7,6 +7,7 @@
 [resource]
 resource_name = "minecraft_block-anvil_lower"
 albedo_texture = ExtResource("1_0m7k8")
+metallic = 1.0
 roughness = 0.5
 roughness_texture = ExtResource("3_mfkke")
 ao_enabled = true

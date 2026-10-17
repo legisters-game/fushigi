@@ -6,12 +6,15 @@
 
 [resource]
 resource_name = "minecraft_block-birch_trapdoor"
-transparency = 4
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("1_1apyb")
 metallic = 1.0
 metallic_texture = ExtResource("2_v6btk")
 metallic_texture_channel = 1
+roughness = 0.5
 bent_normal_enabled = true
 bent_normal_texture = ExtResource("3_bhi4c")
 ao_enabled = true
