@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp1do6am77her"
-path.s3tc="res://.godot/imported/都市3d仮_oak_leaves1.png-0f61a6ee09903491a4e165f9168bdbe7.s3tc.ctex"
+path="res://.godot/imported/都市3d仮_oak_leaves1.png-0f61a6ee09903491a4e165f9168bdbe7.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "427a25acc373e3f4cec3108cea285b22"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://1/都市3d仮_oak_leaves1.png"
-dest_files=["res://.godot/imported/都市3d仮_oak_leaves1.png-0f61a6ee09903491a4e165f9168bdbe7.s3tc.ctex"]
+dest_files=["res://.godot/imported/都市3d仮_oak_leaves1.png-0f61a6ee09903491a4e165f9168bdbe7.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

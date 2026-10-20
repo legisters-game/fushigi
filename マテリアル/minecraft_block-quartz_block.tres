@@ -1,8 +1,18 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://df61x3gy2jgkj"]
 
 [ext_resource type="Texture2D" uid="uid://byj1onsjv445h" path="res://1/都市3d仮_quartz_block.png" id="1_fdjp8"]
+[ext_resource type="Texture2D" uid="uid://cexugbx8hk6rr" path="res://マテリアル/鏡面反射/quartz_block_n.png" id="2_mwub2"]
+[ext_resource type="Texture2D" uid="uid://dsudkalgdn35v" path="res://マテリアル/立体補間/quartz_block_a.png" id="3_254e5"]
 
 [resource]
 resource_name = "minecraft_block-quartz_block"
-cull_mode = 2
 albedo_texture = ExtResource("1_fdjp8")
+metallic = 1.0
+metallic_texture = ExtResource("3_254e5")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_254e5")
+normal_enabled = true
+normal_texture = ExtResource("2_mwub2")
+ao_enabled = true
+ao_texture = ExtResource("2_mwub2")
+ao_texture_channel = 2

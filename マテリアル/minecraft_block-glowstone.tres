@@ -1,8 +1,22 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://c151vst3tfsy1"]
 
 [ext_resource type="Texture2D" uid="uid://dehj7oj3b0pfl" path="res://1/都市3d仮_glowstone.png" id="1_60vel"]
+[ext_resource type="Texture2D" uid="uid://bna3m83lx4n2b" path="res://マテリアル/鏡面反射/glowstone_n.png" id="2_mtxcf"]
+[ext_resource type="Texture2D" uid="uid://46v51hc5ygcv" path="res://マテリアル/立体補間/glowstone_a.png" id="3_w3qfb"]
 
 [resource]
 resource_name = "minecraft_block-glowstone"
-cull_mode = 2
 albedo_texture = ExtResource("1_60vel")
+metallic = 1.0
+metallic_texture = ExtResource("3_w3qfb")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_w3qfb")
+emission_enabled = true
+emission_energy_multiplier = 0.5
+emission_texture = ExtResource("1_60vel")
+normal_enabled = true
+normal_texture = ExtResource("2_mtxcf")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_mtxcf")
+ao_texture_channel = 2

@@ -1,8 +1,12 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://c83odnhedor5k"]
 
 [ext_resource type="Texture2D" uid="uid://ctmc1nhm3qelr" path="res://1/都市3d仮_light_gray_concrete_powder.png" id="1_mt7dv"]
+[ext_resource type="Texture2D" uid="uid://twp1xjgfj8yn" path="res://マテリアル/立体補間/light_gray_concrete_powder_a.png" id="2_qjj37"]
 
 [resource]
 resource_name = "minecraft_block-light_gray_concrete_powder"
-cull_mode = 2
 albedo_texture = ExtResource("1_mt7dv")
+metallic = 1.0
+metallic_texture = ExtResource("2_qjj37")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_qjj37")

@@ -1,9 +1,22 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cmms4pwttgonv"]
 
 [ext_resource type="Texture2D" uid="uid://dahaujrav4ke4" path="res://1/都市3d仮_spruce_trapdoor.png" id="1_jah65"]
+[ext_resource type="Texture2D" uid="uid://c3p5pp5ei4ntu" path="res://マテリアル/鏡面反射/spruce_trapdoor_n.png" id="2_67q4j"]
+[ext_resource type="Texture2D" uid="uid://bn3sjk2ut0wra" path="res://マテリアル/立体補間/spruce_trapdoor_a.png" id="3_d2msc"]
 
 [resource]
 resource_name = "minecraft_block-spruce_trapdoor"
-transparency = 4
-cull_mode = 2
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_jah65")
+metallic = 1.0
+metallic_texture = ExtResource("3_d2msc")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_d2msc")
+normal_enabled = true
+normal_texture = ExtResource("2_67q4j")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_67q4j")
+ao_texture_channel = 2

@@ -1,8 +1,18 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bo5a1o7qraqk4"]
 
 [ext_resource type="Texture2D" uid="uid://dfu5heyvvvnbj" path="res://1/都市3d仮_lime_concrete.png" id="1_tfxnv"]
+[ext_resource type="Texture2D" uid="uid://c4ykppdxfpajf" path="res://マテリアル/鏡面反射/lime_concrete_n.png" id="2_86735"]
+[ext_resource type="Texture2D" uid="uid://dvllj6moj4e74" path="res://マテリアル/立体補間/lime_concrete_a.png" id="3_qowb8"]
 
 [resource]
 resource_name = "minecraft_block-lime_concrete"
-cull_mode = 2
 albedo_texture = ExtResource("1_tfxnv")
+metallic = 1.0
+metallic_texture = ExtResource("3_qowb8")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_qowb8")
+normal_enabled = true
+normal_texture = ExtResource("2_86735")
+ao_enabled = true
+ao_texture = ExtResource("2_86735")
+ao_texture_channel = 2

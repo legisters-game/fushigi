@@ -1,9 +1,14 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cbc4fumi2i0dt"]
 
 [ext_resource type="Texture2D" uid="uid://b4xv1qwsxyb1u" path="res://1/都市3d仮_warped_trapdoor.png" id="1_3nw71"]
+[ext_resource type="Texture2D" uid="uid://bmt2q46x4usov" path="res://マテリアル/立体補間/warped_trapdoor_a.png" id="2_sfpta"]
 
 [resource]
 resource_name = "minecraft_block-warped_trapdoor"
-transparency = 4
-cull_mode = 2
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_3nw71")
+metallic = 1.0
+metallic_texture = ExtResource("2_sfpta")
+roughness_texture = ExtResource("2_sfpta")

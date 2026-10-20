@@ -1,10 +1,11 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ce1mx8rpakm7m"]
 
 [ext_resource type="Texture2D" uid="uid://nrfombso73hi" path="res://1/都市3d仮_blackstone.png" id="1_mtxwm"]
+[ext_resource type="Texture2D" uid="uid://cfs7jv4khl6kt" path="res://マテリアル/鏡面反射/polished_blackstone_n.png" id="2_a0ghe"]
 
 [resource]
 resource_name = "minecraft_block-blackstone"
 albedo_texture = ExtResource("1_mtxwm")
 metallic = 1.0
-bent_normal_enabled = true
+bent_normal_texture = ExtResource("2_a0ghe")
 texture_filter = 2

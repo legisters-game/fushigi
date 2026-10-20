@@ -1,8 +1,13 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dctyyv3034tmq"]
 
 [ext_resource type="Texture2D" uid="uid://dxpm0eouf2f5i" path="res://1/都市3d仮_crimson_door.png" id="1_mkoox"]
+[ext_resource type="Texture2D" uid="uid://bxt1sgxrn5vd1" path="res://マテリアル/立体補間/crimson_door_a.png" id="2_i1fvo"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-crimson_door"
 albedo_texture = ExtResource("1_mkoox")
+metallic = 1.0
+metallic_texture = ExtResource("2_i1fvo")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_i1fvo")
 texture_filter = 2

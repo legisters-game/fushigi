@@ -1,8 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bxe14mqfeb3q4"]
 
 [ext_resource type="Texture2D" uid="uid://c82o324t5qmxk" path="res://1/都市3d仮_stone.png" id="1_qu25d"]
+[ext_resource type="Texture2D" uid="uid://br7p77xs7vrya" path="res://マテリアル/鏡面反射/stone_n.png" id="2_g4qdh"]
+[ext_resource type="Texture2D" uid="uid://dkhvcwakqlajv" path="res://マテリアル/立体補間/stone_a.png" id="3_yv8oi"]
 
 [resource]
 resource_name = "minecraft_block-stone"
-cull_mode = 2
 albedo_texture = ExtResource("1_qu25d")
+metallic = 1.0
+metallic_texture = ExtResource("3_yv8oi")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_yv8oi")
+normal_enabled = true
+normal_texture = ExtResource("2_g4qdh")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_g4qdh")
+ao_texture_channel = 2
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 64
+heightmap_texture = ExtResource("2_g4qdh")

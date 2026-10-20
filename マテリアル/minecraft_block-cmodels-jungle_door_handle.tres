@@ -1,9 +1,16 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://3usepo3ehjht"]
 
 [ext_resource type="Texture2D" uid="uid://ds0wbr0gebs5i" path="res://1/都市3d仮_jungle_door_handle.png" id="1_vbbgu"]
+[ext_resource type="Texture2D" uid="uid://cj14kk1fhjrcf" path="res://マテリアル/立体補間/jungle_door_handle_a.png" id="2_436s0"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-jungle_door_handle"
-transparency = 4
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("1_vbbgu")
+metallic = 1.0
+metallic_texture = ExtResource("2_436s0")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_436s0")

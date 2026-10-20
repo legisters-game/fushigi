@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bi5wiu478ww4x"]
 
 [ext_resource type="Texture2D" uid="uid://vrvfup84acnd" path="res://1/都市3d仮_crimson_planks.png" id="1_4p5du"]
+[ext_resource type="Texture2D" uid="uid://d2fyupa44eli0" path="res://マテリアル/鏡面反射/crimson_planks_n.png" id="2_iodeo"]
+[ext_resource type="Texture2D" uid="uid://ipugo0vkota2" path="res://マテリアル/立体補間/crimson_planks_a.png" id="3_tc2ng"]
 
 [resource]
 resource_name = "minecraft_block-crimson_planks"
-cull_mode = 2
 albedo_texture = ExtResource("1_4p5du")
+metallic = 1.0
+metallic_texture = ExtResource("3_tc2ng")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_tc2ng")
+normal_enabled = true
+normal_texture = ExtResource("2_iodeo")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_iodeo")
+ao_texture_channel = 2

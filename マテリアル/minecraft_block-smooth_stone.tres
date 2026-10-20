@@ -1,8 +1,17 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://5wmeg23vgt0u"]
 
 [ext_resource type="Texture2D" uid="uid://g4e4fx1qtgo0" path="res://1/都市3d仮_smooth_stone.png" id="1_bd1ft"]
+[ext_resource type="Texture2D" uid="uid://cgr2x13ndlyi5" path="res://マテリアル/鏡面反射/smooth_stone_n.png" id="2_adbjo"]
+[ext_resource type="Texture2D" uid="uid://usedoog5s0lc" path="res://マテリアル/立体補間/smooth_stone_a.png" id="3_86xil"]
 
 [resource]
 resource_name = "minecraft_block-smooth_stone"
-cull_mode = 2
 albedo_texture = ExtResource("1_bd1ft")
+metallic = 1.0
+metallic_texture = ExtResource("3_86xil")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_86xil")
+normal_enabled = true
+normal_texture = ExtResource("2_adbjo")
+ao_enabled = true
+ao_texture = ExtResource("2_adbjo")

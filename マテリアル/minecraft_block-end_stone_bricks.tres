@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://7cue66i2rts0"]
 
 [ext_resource type="Texture2D" uid="uid://cguuou4q110w2" path="res://1/都市3d仮_end_stone_bricks.png" id="1_arwl4"]
+[ext_resource type="Texture2D" uid="uid://cmg66ikeoeq1g" path="res://マテリアル/鏡面反射/end_stone_bricks_n.png" id="2_sihf3"]
+[ext_resource type="Texture2D" uid="uid://dfcbtd8enwk0" path="res://マテリアル/立体補間/end_stone_bricks_a.png" id="3_7skut"]
 
 [resource]
 resource_name = "minecraft_block-end_stone_bricks"
-cull_mode = 2
 albedo_texture = ExtResource("1_arwl4")
+metallic = 1.0
+metallic_texture = ExtResource("3_7skut")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_7skut")
+normal_enabled = true
+normal_texture = ExtResource("2_sihf3")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_sihf3")
+ao_texture_channel = 2

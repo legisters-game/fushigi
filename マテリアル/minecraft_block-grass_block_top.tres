@@ -1,8 +1,18 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b38blitsgp4we"]
 
 [ext_resource type="Texture2D" uid="uid://c0kh0xc11t3mh" path="res://1/都市3d仮_grass_block_top.png" id="1_r83g3"]
+[ext_resource type="Texture2D" uid="uid://va17000fmq08" path="res://マテリアル/鏡面反射/grass_block_top_n.png" id="2_ni8p6"]
+[ext_resource type="Texture2D" uid="uid://n6freta1hhy4" path="res://マテリアル/立体補間/grass_block_top_a.png" id="3_qjoef"]
 
 [resource]
 resource_name = "minecraft_block-grass_block_top"
-cull_mode = 2
 albedo_texture = ExtResource("1_r83g3")
+metallic = 1.0
+metallic_texture = ExtResource("3_qjoef")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_qjoef")
+normal_enabled = true
+normal_texture = ExtResource("2_ni8p6")
+ao_enabled = true
+ao_texture = ExtResource("2_ni8p6")
+ao_texture_channel = 2

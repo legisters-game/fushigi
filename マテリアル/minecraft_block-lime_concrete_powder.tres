@@ -1,8 +1,12 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bdiew4dwkpfcj"]
 
 [ext_resource type="Texture2D" uid="uid://b1w5khh2wsq22" path="res://1/都市3d仮_lime_concrete_powder.png" id="1_52yi7"]
+[ext_resource type="Texture2D" uid="uid://ifya2004j7p4" path="res://マテリアル/立体補間/lime_concrete_powder_a.png" id="2_ffv2m"]
 
 [resource]
 resource_name = "minecraft_block-lime_concrete_powder"
-cull_mode = 2
 albedo_texture = ExtResource("1_52yi7")
+metallic = 1.0
+metallic_texture = ExtResource("2_ffv2m")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_ffv2m")

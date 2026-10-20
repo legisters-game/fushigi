@@ -4,7 +4,13 @@
 
 [resource]
 resource_name = "minecraft_block-birch_leaves-birch_leaves1"
-transparency = 4
+render_priority = 3
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
 cull_mode = 2
+shading_mode = 2
+diffuse_mode = 2
+specular_mode = 2
 albedo_texture = ExtResource("1_roft0")
 texture_filter = 2

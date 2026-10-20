@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dcl00vcgmepry"]
 
 [ext_resource type="Texture2D" uid="uid://b5kmavmf3fcy6" path="res://1/都市3d仮_sandstone.png" id="1_3hmc6"]
+[ext_resource type="Texture2D" uid="uid://b5t4cy8d612mm" path="res://マテリアル/鏡面反射/sandstone_n.png" id="2_qp0fu"]
+[ext_resource type="Texture2D" uid="uid://oip4htuvdad4" path="res://マテリアル/立体補間/sandstone_a.png" id="3_by6ah"]
 
 [resource]
 resource_name = "minecraft_block-sandstone"
-cull_mode = 2
 albedo_texture = ExtResource("1_3hmc6")
+metallic = 1.0
+metallic_texture = ExtResource("3_by6ah")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_by6ah")
+normal_enabled = true
+normal_texture = ExtResource("2_qp0fu")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_qp0fu")
+ao_texture_channel = 2
