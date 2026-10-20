@@ -1,10 +1,12 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b35a5bmxoucjr"]
 
 [ext_resource type="Texture2D" uid="uid://8qwqfpmvwnxn" path="res://1/都市3d仮_orange_concrete.png" id="1_vhnc8"]
+[ext_resource type="Texture2D" uid="uid://c0w3o3nvxhhe7" path="res://マテリアル/立体補間/orange_concrete_a.png" id="2_1m4om"]
 
 [resource]
 resource_name = "minecraft_block-orange_concrete"
 albedo_texture = ExtResource("1_vhnc8")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("2_1m4om")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_1m4om")

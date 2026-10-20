@@ -1,10 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bnsym45xakub7"]
 
 [ext_resource type="Texture2D" uid="uid://dul74m3pm1yhr" path="res://1/都市3d仮_red_concrete.png" id="1_lfga8"]
+[ext_resource type="Texture2D" uid="uid://dyghkg3pxt27j" path="res://マテリアル/鏡面反射/red_concrete_n.png" id="2_f8n7r"]
+[ext_resource type="Texture2D" uid="uid://cib6kda271n01" path="res://マテリアル/立体補間/red_concrete_a.png" id="3_aljes"]
 
 [resource]
 resource_name = "minecraft_block-red_concrete"
 albedo_texture = ExtResource("1_lfga8")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("3_aljes")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_aljes")
+normal_enabled = true
+normal_texture = ExtResource("2_f8n7r")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_f8n7r")
+ao_texture_channel = 2

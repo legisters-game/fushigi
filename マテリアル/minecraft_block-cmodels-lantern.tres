@@ -1,10 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ciyigmkgt1uup"]
 
 [ext_resource type="Texture2D" uid="uid://ce7aqhtfc25t8" path="res://1/都市3d仮_lantern.png" id="1_g3a56"]
+[ext_resource type="Texture2D" uid="uid://c758wnxmbn5nc" path="res://マテリアル/立体補間/lantern_a.png" id="2_gimem"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-lantern"
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
+cull_mode = 2
+shading_mode = 2
+diffuse_mode = 2
+specular_mode = 2
 albedo_texture = ExtResource("1_g3a56")
 metallic = 1.0
-roughness = 0.5
+metallic_texture = ExtResource("2_gimem")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_gimem")
+emission_enabled = true
+emission_energy_multiplier = 0.5
+emission_texture = ExtResource("1_g3a56")
 texture_filter = 2

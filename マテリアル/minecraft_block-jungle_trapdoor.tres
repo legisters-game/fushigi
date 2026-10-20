@@ -1,14 +1,23 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cuyc0iyngqew4"]
 
 [ext_resource type="Texture2D" uid="uid://bj4w3agk5ghb8" path="res://1/都市3d仮_jungle_trapdoor.png" id="1_ydm6w"]
+[ext_resource type="Texture2D" uid="uid://bvslb227akvmt" path="res://マテリアル/鏡面反射/jungle_trapdoor_n.png" id="2_ajb74"]
+[ext_resource type="Texture2D" uid="uid://gtv462fxe0gk" path="res://マテリアル/立体補間/jungle_trapdoor_a.png" id="3_em80m"]
 
 [resource]
 resource_name = "minecraft_block-jungle_trapdoor"
 transparency = 3
-alpha_hash_scale = 1.0
+alpha_hash_scale = 0.0
 alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("1_ydm6w")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("3_em80m")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_em80m")
+normal_enabled = true
+normal_texture = ExtResource("2_ajb74")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_ajb74")
+ao_texture_channel = 2

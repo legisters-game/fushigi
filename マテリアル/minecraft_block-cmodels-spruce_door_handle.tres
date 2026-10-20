@@ -1,10 +1,16 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://vgjcbgfa7is"]
 
 [ext_resource type="Texture2D" uid="uid://biwu6ckvuohii" path="res://1/都市3d仮_spruce_door_handle.png" id="1_a4i1u"]
+[ext_resource type="Texture2D" uid="uid://be83rye2x6rmd" path="res://マテリアル/立体補間/spruce_door_handle_a.png" id="2_nu1af"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-spruce_door_handle"
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
+cull_mode = 2
 albedo_texture = ExtResource("1_a4i1u")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("2_nu1af")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_nu1af")

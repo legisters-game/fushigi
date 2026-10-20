@@ -1,14 +1,15 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b1patyk8j67ey"]
 
 [ext_resource type="Texture2D" uid="uid://b410tjynxn2qx" path="res://1/都市3d仮_crimson_trapdoor.png" id="1_1bq34"]
+[ext_resource type="Texture2D" uid="uid://bsd0hmt1443q7" path="res://マテリアル/立体補間/crimson_trapdoor_a.png" id="2_jf0js"]
 
 [resource]
 resource_name = "minecraft_block-crimson_trapdoor"
 transparency = 3
-alpha_hash_scale = 1.0
+alpha_hash_scale = 0.0
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("1_1bq34")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("2_jf0js")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_jf0js")

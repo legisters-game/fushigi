@@ -1,10 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://kkf2w3xatqd8"]
 
 [ext_resource type="Texture2D" uid="uid://b8ixwhwsaa2l6" path="res://1/都市3d仮_red_sandstone_bottom.png" id="1_erthd"]
+[ext_resource type="Texture2D" uid="uid://bvy74f86qky1j" path="res://マテリアル/鏡面反射/red_sandstone_bottom_n.png" id="2_t841k"]
+[ext_resource type="Texture2D" uid="uid://dtfcpe4w2eerl" path="res://マテリアル/立体補間/red_sandstone_bottom_a.png" id="3_ail0l"]
 
 [resource]
 resource_name = "minecraft_block-red_sandstone_bottom"
 albedo_texture = ExtResource("1_erthd")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("3_ail0l")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_ail0l")
+normal_enabled = true
+normal_texture = ExtResource("2_t841k")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_t841k")
+ao_texture_channel = 2

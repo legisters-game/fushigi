@@ -1,10 +1,13 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ceyjbeektpa4n"]
 
 [ext_resource type="Texture2D" uid="uid://dtuksdb2m0534" path="res://1/都市3d仮_green_concrete_powder.png" id="1_vy0ij"]
+[ext_resource type="Texture2D" uid="uid://cvhpiu6onykdb" path="res://マテリアル/立体補間/green_concrete_powder_a.png" id="2_k57fn"]
 
 [resource]
 resource_name = "minecraft_block-green_concrete_powder"
+cull_mode = 2
 albedo_texture = ExtResource("1_vy0ij")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("2_k57fn")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_k57fn")

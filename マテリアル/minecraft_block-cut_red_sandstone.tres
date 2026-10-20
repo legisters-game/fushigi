@@ -1,10 +1,18 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bm4ieqlsoggtw"]
 
 [ext_resource type="Texture2D" uid="uid://b2klfo33fusm6" path="res://1/都市3d仮_cut_red_sandstone.png" id="1_mad84"]
+[ext_resource type="Texture2D" uid="uid://jnmy85ekangk" path="res://マテリアル/鏡面反射/cut_red_sandstone_n.png" id="2_301ok"]
+[ext_resource type="Texture2D" uid="uid://duivi2kb14ndn" path="res://マテリアル/立体補間/cut_red_sandstone_a.png" id="3_k1110"]
 
 [resource]
 resource_name = "minecraft_block-cut_red_sandstone"
 albedo_texture = ExtResource("1_mad84")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("3_k1110")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_k1110")
+normal_enabled = true
+normal_texture = ExtResource("2_301ok")
+ao_enabled = true
+ao_texture = ExtResource("2_301ok")
+ao_texture_channel = 2

@@ -1,10 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cqw3uyrwtrg8e"]
 
 [ext_resource type="Texture2D" uid="uid://bp3sgg6i22rg5" path="res://1/都市3d仮_gray_concrete.png" id="1_lm10y"]
+[ext_resource type="Texture2D" uid="uid://dq6812x8m7pt" path="res://マテリアル/鏡面反射/gray_concrete_n.png" id="2_rn3t2"]
+[ext_resource type="Texture2D" uid="uid://dg8jagih503l8" path="res://マテリアル/立体補間/gray_concrete_a.png" id="3_bec5i"]
 
 [resource]
 resource_name = "minecraft_block-gray_concrete"
 albedo_texture = ExtResource("1_lm10y")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("3_bec5i")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_bec5i")
+normal_enabled = true
+normal_texture = ExtResource("2_rn3t2")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_rn3t2")
+ao_texture_channel = 2

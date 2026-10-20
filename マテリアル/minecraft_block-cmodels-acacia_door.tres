@@ -1,10 +1,13 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://d3j4mvserlnpg"]
 
 [ext_resource type="Texture2D" uid="uid://r6nctdx7w2op" path="res://1/都市3d仮_acacia_door.png" id="1_ldbj4"]
+[ext_resource type="Texture2D" uid="uid://pka0sgixpx50" path="res://マテリアル/立体補間/acacia_door_a.png" id="2_a8don"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-acacia_door"
 albedo_texture = ExtResource("1_ldbj4")
 metallic = 1.0
-roughness = 0.5
+metallic_texture = ExtResource("2_a8don")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_a8don")
 texture_filter = 2

@@ -4,7 +4,11 @@
 
 [resource]
 resource_name = "extlights_block-xmas-xmas_leaves"
-transparency = 4
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
+shading_mode = 2
+diffuse_mode = 2
 albedo_texture = ExtResource("1_py5lp")
 emission_enabled = true
 emission_texture = ExtResource("1_py5lp")

@@ -1,10 +1,18 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b444sqfnp5ctt"]
 
 [ext_resource type="Texture2D" uid="uid://cjt35ugaybpn3" path="res://1/都市3d仮_sand.png" id="1_yyfuh"]
+[ext_resource type="Texture2D" uid="uid://b175uf6qmbgs3" path="res://マテリアル/鏡面反射/sand_n.png" id="2_3sc5f"]
+[ext_resource type="Texture2D" uid="uid://rvwasr7mfsnm" path="res://マテリアル/立体補間/sand_a.png" id="3_v1fcb"]
 
 [resource]
 resource_name = "minecraft_block-sand"
 albedo_texture = ExtResource("1_yyfuh")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("3_v1fcb")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_v1fcb")
+normal_enabled = true
+normal_texture = ExtResource("2_3sc5f")
+ao_enabled = true
+ao_texture = ExtResource("2_3sc5f")
+ao_texture_channel = 2

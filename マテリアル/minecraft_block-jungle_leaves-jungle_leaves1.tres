@@ -4,11 +4,12 @@
 
 [resource]
 resource_name = "minecraft_block-jungle_leaves-jungle_leaves1"
+render_priority = 3
 transparency = 3
-alpha_hash_scale = 1.0
+alpha_hash_scale = 0.0
 alpha_antialiasing_mode = 0
 cull_mode = 2
+shading_mode = 2
+diffuse_mode = 2
+specular_mode = 2
 albedo_texture = ExtResource("1_q7p44")
-metallic = 1.0
-roughness = 0.5
-texture_filter = 2

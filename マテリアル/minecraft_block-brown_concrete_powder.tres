@@ -1,10 +1,13 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://clhqpa4dn5g5b"]
 
-[ext_resource type="Texture2D" uid="uid://dq5qpr8v8wif1" path="res://1/都市3d仮_brown_concrete_powder.png" id="1_j2i1x"]
+[ext_resource type="Texture2D" uid="uid://dq5qpr8v8wif1" path="res://1/都市3d仮_brown_concrete_powder.png" id="1_olsp7"]
+[ext_resource type="Texture2D" uid="uid://dvrfemmuv1uq7" path="res://マテリアル/立体補間/brown_concrete_powder_a.png" id="2_64pmh"]
 
 [resource]
-resource_name = "minecraft_block-brown_concrete_powder"
-albedo_texture = ExtResource("1_j2i1x")
+resource_name = "minecraft_block-brown_concrete_powder.001"
+albedo_texture = ExtResource("1_olsp7")
 metallic = 1.0
-roughness = 0.5
+metallic_texture = ExtResource("2_64pmh")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_64pmh")
 texture_filter = 2

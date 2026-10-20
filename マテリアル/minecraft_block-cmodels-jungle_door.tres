@@ -1,10 +1,12 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dasdfeoxtiava"]
 
 [ext_resource type="Texture2D" uid="uid://4bolohqnayps" path="res://1/都市3d仮_jungle_door.png" id="1_oowqx"]
+[ext_resource type="Texture2D" uid="uid://dova4q5k7ju6u" path="res://マテリアル/立体補間/jungle_door_a.png" id="2_4kq20"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-jungle_door"
 albedo_texture = ExtResource("1_oowqx")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("2_4kq20")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_4kq20")

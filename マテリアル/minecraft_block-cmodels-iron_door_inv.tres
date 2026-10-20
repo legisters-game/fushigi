@@ -1,10 +1,15 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ejqcbj3gwb0u"]
 
 [ext_resource type="Texture2D" uid="uid://dikeyh4gjlqq6" path="res://1/都市3d仮_iron_door_inv.png" id="1_tdldl"]
+[ext_resource type="Texture2D" uid="uid://b4f13587bv14i" path="res://マテリアル/立体補間/iron_door_inv_a.png" id="2_lucdq"]
 
 [resource]
 resource_name = "minecraft_block-cmodels-iron_door_inv"
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_tdldl")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("2_lucdq")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_lucdq")

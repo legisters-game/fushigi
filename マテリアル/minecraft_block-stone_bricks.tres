@@ -1,10 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://c8swhso8deomd"]
 
 [ext_resource type="Texture2D" uid="uid://bydyu2gnyvmo3" path="res://1/都市3d仮_stone_bricks.png" id="1_7k4ym"]
+[ext_resource type="Texture2D" uid="uid://d32n5tpv1upaq" path="res://マテリアル/鏡面反射/stone_bricks_n.png" id="2_ed77a"]
+[ext_resource type="Texture2D" uid="uid://cyuti1hp7lr5s" path="res://マテリアル/立体補間/stone_bricks_a.png" id="3_set5j"]
 
 [resource]
 resource_name = "minecraft_block-stone_bricks"
 albedo_texture = ExtResource("1_7k4ym")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("3_set5j")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_set5j")
+normal_enabled = true
+normal_texture = ExtResource("2_ed77a")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_ed77a")
+ao_texture_channel = 2

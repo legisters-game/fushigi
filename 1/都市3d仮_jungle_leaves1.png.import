@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://busmdm4xhh73e"
-path.s3tc="res://.godot/imported/都市3d仮_jungle_leaves1.png-a76ff0d46d429e59b1b89f5f1a4bdf99.s3tc.ctex"
+path="res://.godot/imported/都市3d仮_jungle_leaves1.png-a76ff0d46d429e59b1b89f5f1a4bdf99.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "21b526485a38116c292f54f11ccc4599"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://1/都市3d仮_jungle_leaves1.png"
-dest_files=["res://.godot/imported/都市3d仮_jungle_leaves1.png-a76ff0d46d429e59b1b89f5f1a4bdf99.s3tc.ctex"]
+dest_files=["res://.godot/imported/都市3d仮_jungle_leaves1.png-a76ff0d46d429e59b1b89f5f1a4bdf99.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

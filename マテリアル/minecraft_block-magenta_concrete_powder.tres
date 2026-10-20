@@ -1,10 +1,12 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b30fnd2mb2hhy"]
 
 [ext_resource type="Texture2D" uid="uid://fdphyeelqwvr" path="res://1/都市3d仮_magenta_concrete_powder.png" id="1_677qy"]
+[ext_resource type="Texture2D" uid="uid://cmkm05jpe0g4d" path="res://マテリアル/立体補間/magenta_concrete_powder_a.png" id="2_hdb5w"]
 
 [resource]
 resource_name = "minecraft_block-magenta_concrete_powder"
 albedo_texture = ExtResource("1_677qy")
 metallic = 1.0
-roughness = 0.5
-texture_filter = 2
+metallic_texture = ExtResource("2_hdb5w")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_hdb5w")
