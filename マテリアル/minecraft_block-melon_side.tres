@@ -2,4 +2,6 @@
 
 [resource]
 resource_name = "minecraft_block-melon_side"
-cull_mode = 2
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

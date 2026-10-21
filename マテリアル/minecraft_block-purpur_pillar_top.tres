@@ -5,3 +5,6 @@
 [resource]
 resource_name = "minecraft_block-purpur_pillar_top"
 albedo_texture = ExtResource("1_jcsr5")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

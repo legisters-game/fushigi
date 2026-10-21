@@ -7,6 +7,7 @@
 resource_name = "minecraft_block-cmodels-jukebox_back"
 albedo_texture = ExtResource("1_5lsx2")
 metallic = 1.0
+roughness = 0.5
 bent_normal_enabled = true
 bent_normal_texture = ExtResource("2_qqnno")
 heightmap_enabled = true

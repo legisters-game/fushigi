@@ -5,8 +5,8 @@
 
 [resource]
 resource_name = "minecraft_block-anvil_top"
-transparency = 4
 albedo_texture = ExtResource("1_5jote")
+metallic = 1.0
 roughness = 0.5
 ao_enabled = true
 ao_light_affect = 1.0

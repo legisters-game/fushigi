@@ -4,6 +4,7 @@
 
 [resource]
 resource_name = "minecraft_block-chipped_anvil_top"
-transparency = 4
 albedo_texture = ExtResource("1_1y8hq")
+metallic = 1.0
+roughness = 0.5
 texture_filter = 2

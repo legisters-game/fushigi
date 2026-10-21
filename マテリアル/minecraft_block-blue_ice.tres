@@ -8,6 +8,7 @@ resource_name = "minecraft_block-blue_ice"
 albedo_texture = ExtResource("1_jxo1m")
 metallic = 1.0
 metallic_texture = ExtResource("1_jxo1m")
+roughness = 0.5
 bent_normal_enabled = true
 bent_normal_texture = ExtResource("2_m45g7")
 ao_enabled = true

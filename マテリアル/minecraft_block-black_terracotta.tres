@@ -6,4 +6,5 @@
 resource_name = "minecraft_block-black_terracotta"
 albedo_texture = ExtResource("1_5jppk")
 metallic = 1.0
+roughness = 0.5
 texture_filter = 2

@@ -5,3 +5,6 @@
 [resource]
 resource_name = "minecraft_entity-bed-magenta"
 albedo_texture = ExtResource("1_qosrq")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

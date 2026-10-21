@@ -5,8 +5,8 @@
 
 [resource]
 resource_name = "minecraft_block-anvil_upper"
-cull_mode = 2
 albedo_texture = ExtResource("1_6oimk")
+metallic = 1.0
 roughness = 0.5
 roughness_texture = ExtResource("2_ayr8a")
 ao_enabled = true

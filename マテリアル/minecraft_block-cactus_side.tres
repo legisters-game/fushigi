@@ -6,11 +6,11 @@
 
 [resource]
 resource_name = "minecraft_block-cactus_side"
-transparency = 4
 albedo_texture = ExtResource("1_wgivf")
 metallic = 1.0
 metallic_texture = ExtResource("2_ts37q")
 metallic_texture_channel = 1
+roughness = 0.5
 bent_normal_enabled = true
 bent_normal_texture = ExtResource("3_hcqyx")
 ao_enabled = true

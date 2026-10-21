@@ -5,3 +5,6 @@
 [resource]
 resource_name = "minecraft_entity-bed-cyan"
 albedo_texture = ExtResource("1_5mvqr")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 2

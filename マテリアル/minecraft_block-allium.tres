@@ -4,8 +4,8 @@
 
 [resource]
 resource_name = "minecraft_block-allium"
-transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_62468")
+metallic = 1.0
+roughness = 0.5
 ao_light_affect = 1.0
 texture_filter = 2
