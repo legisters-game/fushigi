@@ -1,8 +1,13 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bwhfy2ge80xpu"]
 
 [ext_resource type="Texture2D" uid="uid://bk1cb2wijepot" path="res://1/都市3d仮_polished_blackstone_bricks.png" id="1_ptu6d"]
+[ext_resource type="Texture2D" uid="uid://drwwyb1y5vuph" path="res://マテリアル/立体補間/polished_blackstone_bricks_a.png" id="2_td00w"]
 
 [resource]
 resource_name = "minecraft_block-polished_blackstone_bricks"
 cull_mode = 2
 albedo_texture = ExtResource("1_ptu6d")
+metallic = 1.0
+metallic_texture = ExtResource("2_td00w")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_td00w")

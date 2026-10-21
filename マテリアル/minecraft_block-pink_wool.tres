@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://deqmubdcbmig1"]
 
 [ext_resource type="Texture2D" uid="uid://c3xw15ocp26by" path="res://1/都市3d仮_pink_wool.png" id="1_qolak"]
+[ext_resource type="Texture2D" uid="uid://rcty2rmwr01g" path="res://マテリアル/鏡面反射/pink_wool_n.png" id="2_xi50t"]
+[ext_resource type="Texture2D" uid="uid://byonhaoqyc6bq" path="res://マテリアル/立体補間/pink_wool_a.png" id="3_6ek7w"]
 
 [resource]
 resource_name = "minecraft_block-pink_wool"
-cull_mode = 2
 albedo_texture = ExtResource("1_qolak")
+metallic = 1.0
+metallic_texture = ExtResource("3_6ek7w")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_6ek7w")
+normal_enabled = true
+normal_texture = ExtResource("2_xi50t")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_xi50t")
+ao_texture_channel = 2

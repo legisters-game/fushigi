@@ -5,4 +5,4 @@ resource_name = "minecraft_block-glass_pane_top"
 transparency = 4
 albedo_color = Color(1, 1, 1, 0.047058824)
 metallic = 1.0
-roughness = 0.0
+roughness = 0.5

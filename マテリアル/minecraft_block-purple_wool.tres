@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b0q8g14gwll1c"]
 
 [ext_resource type="Texture2D" uid="uid://dr5qp3laj7cuo" path="res://1/都市3d仮_purple_wool.png" id="1_far70"]
+[ext_resource type="Texture2D" uid="uid://cvgc2rpn2e5wm" path="res://マテリアル/鏡面反射/purple_wool_n.png" id="2_pn3s8"]
+[ext_resource type="Texture2D" uid="uid://bvv6u7yjf0hk1" path="res://マテリアル/立体補間/purple_wool_a.png" id="3_bqa3g"]
 
 [resource]
 resource_name = "minecraft_block-purple_wool"
-cull_mode = 2
 albedo_texture = ExtResource("1_far70")
+metallic = 1.0
+metallic_texture = ExtResource("3_bqa3g")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_bqa3g")
+normal_enabled = true
+normal_texture = ExtResource("2_pn3s8")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_pn3s8")
+ao_texture_channel = 2

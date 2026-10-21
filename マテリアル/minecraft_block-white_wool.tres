@@ -1,8 +1,18 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dkw0ae1kdjc42"]
 
 [ext_resource type="Texture2D" uid="uid://dglybuguj1ppk" path="res://1/都市3d仮_white_wool.png" id="1_cpwm3"]
+[ext_resource type="Texture2D" uid="uid://bocp87mhue8hk" path="res://マテリアル/鏡面反射/white_wool_n.png" id="2_w4qhp"]
+[ext_resource type="Texture2D" uid="uid://chninwdrotyl" path="res://マテリアル/立体補間/white_wool_a.png" id="3_odvh0"]
 
 [resource]
 resource_name = "minecraft_block-white_wool"
-cull_mode = 2
 albedo_texture = ExtResource("1_cpwm3")
+metallic = 1.0
+metallic_texture = ExtResource("3_odvh0")
+roughness_texture = ExtResource("3_odvh0")
+normal_enabled = true
+normal_texture = ExtResource("2_w4qhp")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_w4qhp")
+ao_texture_channel = 2

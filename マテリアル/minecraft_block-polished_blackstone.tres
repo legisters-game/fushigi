@@ -17,4 +17,5 @@ ao_enabled = true
 ao_light_affect = 1.0
 ao_texture = ExtResource("2_sr552")
 ao_texture_channel = 2
+heightmap_enabled = true
 heightmap_texture = ExtResource("2_sr552")

@@ -1,9 +1,16 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://hcj1mbo34cxj"]
 
 [ext_resource type="Texture2D" uid="uid://dh2b0jaftd2nu" path="res://1/都市3d仮_tall_grass_top.png" id="1_h4bng"]
+[ext_resource type="Texture2D" uid="uid://bumncadpwnpcp" path="res://マテリアル/立体補間/tall_grass_top_a.png" id="2_0lu05"]
 
 [resource]
 resource_name = "minecraft_block-tall_grass_top"
-transparency = 4
+transparency = 3
+alpha_hash_scale = 0.0
+alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("1_h4bng")
+metallic = 1.0
+metallic_texture = ExtResource("2_0lu05")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("2_0lu05")

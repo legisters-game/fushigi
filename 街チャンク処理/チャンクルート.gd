@@ -167,7 +167,8 @@ func 真処理有無制御(有無:bool)->void:
 			if エラー == OK:
 				ロード中パス = 内部保存パス
 				ロード中 = true
-				get_tree().get_first_node_in_group("全体制御").読み込み追加(name)
+				if not Engine.is_editor_hint():
+					get_tree().get_first_node_in_group("全体制御").読み込み追加(name)
 				return
 		else:#ゲーム内部にシーンが保存されていない場合↓
 			var err:Error = ResourceLoader.load_threaded_request(フルパス,"",)
@@ -350,5 +351,5 @@ func セットアップ完了通知(_instance)->void:
 			アニメ.bind_node(メッシュノード)
 			アニメ.tween_property(メッシュノード,"transparency",0,1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
 			await アニメ.finished
-			if get_tree().get_first_node_in_group("全体制御") is レベル制御クラス:
+			if get_tree().get_first_node_in_group("全体制御") is レベル制御クラス and not Engine.is_editor_hint():
 				get_tree().get_first_node_in_group("全体制御").読み込み完了(name)

@@ -1,11 +1,20 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ce1mx8rpakm7m"]
 
 [ext_resource type="Texture2D" uid="uid://nrfombso73hi" path="res://1/都市3d仮_blackstone.png" id="1_mtxwm"]
-[ext_resource type="Texture2D" uid="uid://cfs7jv4khl6kt" path="res://マテリアル/鏡面反射/polished_blackstone_n.png" id="2_a0ghe"]
+[ext_resource type="Texture2D" uid="uid://b5axvobgst0gq" path="res://マテリアル/鏡面反射/blackstone_n.png" id="2_38e2o"]
+[ext_resource type="Texture2D" uid="uid://5xe4x8bm4thq" path="res://マテリアル/立体補間/blackstone_a.png" id="3_jibnh"]
 
 [resource]
 resource_name = "minecraft_block-blackstone"
 albedo_texture = ExtResource("1_mtxwm")
 metallic = 1.0
-bent_normal_texture = ExtResource("2_a0ghe")
+metallic_texture = ExtResource("3_jibnh")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_jibnh")
+normal_enabled = true
+normal_texture = ExtResource("2_38e2o")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_38e2o")
+ao_texture_channel = 2
 texture_filter = 2

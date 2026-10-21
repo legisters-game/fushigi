@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://7bscba76ue4r"]
 
 [ext_resource type="Texture2D" uid="uid://db36w1ybke18a" path="res://1/都市3d仮_grass_block_snow.png" id="1_bk355"]
+[ext_resource type="Texture2D" uid="uid://bjuh81q0yjkct" path="res://マテリアル/鏡面反射/grass_block_snow_n.png" id="2_et5ve"]
+[ext_resource type="Texture2D" uid="uid://bify8i5rj053r" path="res://マテリアル/立体補間/grass_block_snow_a.png" id="3_fykcj"]
 
 [resource]
 resource_name = "minecraft_block-grass_block_snow"
-cull_mode = 2
 albedo_texture = ExtResource("1_bk355")
+metallic = 1.0
+metallic_texture = ExtResource("3_fykcj")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_fykcj")
+normal_enabled = true
+normal_texture = ExtResource("2_et5ve")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_et5ve")
+ao_texture_channel = 2

@@ -4,6 +4,7 @@
 
 [resource]
 resource_name = "extlights_block-light_modern_ground_torch_black"
-transparency = 4
 albedo_texture = ExtResource("1_ivjf6")
+emission_enabled = true
+emission_texture = ExtResource("1_ivjf6")
 texture_filter = 2

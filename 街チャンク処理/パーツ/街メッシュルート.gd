@@ -43,6 +43,10 @@ func _ready() -> void:
 		視覚範囲制御.scale=scale
 		get_parent().add_child(視覚範囲制御)
 		視覚範囲制御.owner=$"../"
+	else:
+		for 子:Node in get_children():
+			子.get_parent().remove_child(子)
+			子.queue_free()
 	
 func 視覚有効()->void:
 	layers=1

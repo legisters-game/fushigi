@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://duetxg3dfohe7"]
 
 [ext_resource type="Texture2D" uid="uid://bth3v6jllx63s" path="res://1/都市3d仮_light_gray_wool.png" id="1_a2p7b"]
+[ext_resource type="Texture2D" uid="uid://diktkiui6l81h" path="res://マテリアル/鏡面反射/light_gray_wool_n.png" id="2_sf7hp"]
+[ext_resource type="Texture2D" uid="uid://d3rqnhq0yvox5" path="res://マテリアル/立体補間/light_gray_wool_a.png" id="3_2sqsc"]
 
 [resource]
 resource_name = "minecraft_block-light_gray_wool"
-cull_mode = 2
 albedo_texture = ExtResource("1_a2p7b")
+metallic = 1.0
+metallic_texture = ExtResource("3_2sqsc")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_2sqsc")
+normal_enabled = true
+normal_texture = ExtResource("2_sf7hp")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_sf7hp")
+ao_texture_channel = 2

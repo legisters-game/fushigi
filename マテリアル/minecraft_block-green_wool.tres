@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dr4bymb36uryx"]
 
 [ext_resource type="Texture2D" uid="uid://bcwfk0olq177w" path="res://1/都市3d仮_green_wool.png" id="1_kaatp"]
+[ext_resource type="Texture2D" uid="uid://ktxyd5qtpv74" path="res://マテリアル/鏡面反射/green_wool_n.png" id="2_bstp2"]
+[ext_resource type="Texture2D" uid="uid://bwygg60c405fc" path="res://マテリアル/立体補間/green_wool_a.png" id="3_vc5hg"]
 
 [resource]
 resource_name = "minecraft_block-green_wool"
-cull_mode = 2
 albedo_texture = ExtResource("1_kaatp")
+metallic = 1.0
+metallic_texture = ExtResource("3_vc5hg")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_vc5hg")
+normal_enabled = true
+normal_texture = ExtResource("2_bstp2")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_bstp2")
+ao_texture_channel = 2

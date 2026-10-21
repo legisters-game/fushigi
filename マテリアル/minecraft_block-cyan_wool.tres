@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dpxo4eokft4g"]
 
 [ext_resource type="Texture2D" uid="uid://bqndbf34cr8r5" path="res://1/都市3d仮_cyan_wool.png" id="1_6ejq7"]
+[ext_resource type="Texture2D" uid="uid://d3qxh0ik1lyps" path="res://マテリアル/鏡面反射/cyan_wool_n.png" id="2_rdduo"]
+[ext_resource type="Texture2D" uid="uid://xeej6q4b1hg1" path="res://マテリアル/立体補間/cyan_wool_a.png" id="3_5edaw"]
 
 [resource]
 resource_name = "minecraft_block-cyan_wool"
-cull_mode = 2
 albedo_texture = ExtResource("1_6ejq7")
+metallic = 1.0
+metallic_texture = ExtResource("3_5edaw")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_5edaw")
+normal_enabled = true
+normal_texture = ExtResource("2_rdduo")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_rdduo")
+ao_texture_channel = 2

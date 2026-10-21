@@ -3,6 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://dpsl02gj1mlpi" path="res://1/都市3d仮_terracotta.png" id="1_yt8yl"]
 
 [resource]
-resource_name = "minecraft_block-terracotta"
-cull_mode = 2
+resource_name = "minecraft_block-terracotta.001"
 albedo_texture = ExtResource("1_yt8yl")

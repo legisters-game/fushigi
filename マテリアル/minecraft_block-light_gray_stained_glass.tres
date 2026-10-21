@@ -1,10 +1,21 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://c0m8igtdbb6bh"]
 
 [ext_resource type="Texture2D" uid="uid://b8q7iy5p077nv" path="res://1/都市3d仮_light_gray_stained_glass.png" id="1_538xs"]
+[ext_resource type="Texture2D" uid="uid://ccxyd5y13rv8" path="res://マテリアル/鏡面反射/light_gray_stained_glass_n.png" id="2_s0i4x"]
+[ext_resource type="Texture2D" uid="uid://bd12r0211uwid" path="res://マテリアル/立体補間/light_gray_stained_glass_a.png" id="3_q4hxa"]
 
 [resource]
 resource_name = "minecraft_block-light_gray_stained_glass"
 render_priority = 2
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_538xs")
+metallic = 1.0
+metallic_texture = ExtResource("3_q4hxa")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_q4hxa")
+normal_enabled = true
+normal_texture = ExtResource("2_s0i4x")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_s0i4x")
+ao_texture_channel = 2

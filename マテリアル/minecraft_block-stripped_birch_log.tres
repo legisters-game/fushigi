@@ -1,8 +1,18 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://c8ni6k558b2gf"]
 
 [ext_resource type="Texture2D" uid="uid://corws0dpvwmyf" path="res://1/都市3d仮_stripped_birch_log.png" id="1_dnhh7"]
+[ext_resource type="Texture2D" uid="uid://cfgpbrdxpc1v8" path="res://マテリアル/鏡面反射/stripped_birch_log_n.png" id="2_mixu3"]
+[ext_resource type="Texture2D" uid="uid://cj22w8lv5xuxi" path="res://マテリアル/立体補間/stripped_birch_log_a.png" id="3_3tpem"]
 
 [resource]
 resource_name = "minecraft_block-stripped_birch_log"
 cull_mode = 2
 albedo_texture = ExtResource("1_dnhh7")
+metallic = 1.0
+metallic_texture = ExtResource("3_3tpem")
+roughness_texture = ExtResource("3_3tpem")
+normal_enabled = true
+normal_texture = ExtResource("2_mixu3")
+ao_enabled = true
+ao_texture = ExtResource("2_mixu3")
+ao_texture_channel = 2

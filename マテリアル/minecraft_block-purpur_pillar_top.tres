@@ -4,5 +4,4 @@
 
 [resource]
 resource_name = "minecraft_block-purpur_pillar_top"
-cull_mode = 2
 albedo_texture = ExtResource("1_jcsr5")

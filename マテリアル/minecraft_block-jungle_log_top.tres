@@ -1,8 +1,19 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://duex353v2uakp"]
 
 [ext_resource type="Texture2D" uid="uid://bk3j238pchwan" path="res://1/都市3d仮_jungle_log_top.png" id="1_ev753"]
+[ext_resource type="Texture2D" uid="uid://dykyk4q010s3c" path="res://マテリアル/鏡面反射/jungle_log_top_n.png" id="2_88w3j"]
+[ext_resource type="Texture2D" uid="uid://dgdkilv0pyhbs" path="res://マテリアル/立体補間/jungle_log_top_a.png" id="3_csl4b"]
 
 [resource]
 resource_name = "minecraft_block-jungle_log_top"
-cull_mode = 2
 albedo_texture = ExtResource("1_ev753")
+metallic = 1.0
+metallic_texture = ExtResource("3_csl4b")
+metallic_texture_channel = 1
+roughness_texture = ExtResource("3_csl4b")
+normal_enabled = true
+normal_texture = ExtResource("2_88w3j")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_88w3j")
+ao_texture_channel = 2

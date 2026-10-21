@@ -1,8 +1,7 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://dwrog7ai2sdxg"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dawq4xrdagbxn"]
 
 [ext_resource type="Texture2D" uid="uid://b025ur3gojks8" path="res://1/都市3d仮_purple_glazed_terracotta.png" id="1_gmv31"]
 
 [resource]
-resource_name = "minecraft_block-purple_glazed_terracotta"
-cull_mode = 2
+resource_name = "minecraft_block-purple_glazed_terracotta.001"
 albedo_texture = ExtResource("1_gmv31")

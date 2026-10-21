@@ -8,3 +8,5 @@ render_priority = 1
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_3qxs1")
+metallic = 1.0
+roughness = 0.5
